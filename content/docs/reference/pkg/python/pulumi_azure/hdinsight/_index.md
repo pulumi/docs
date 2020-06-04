@@ -104,7 +104,6 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
 <span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
 <span class="n">example_h_base_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">HBaseCluster</span><span class="p">(</span><span class="s2">&quot;exampleHBaseCluster&quot;</span><span class="p">,</span>
@@ -492,7 +491,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
 <span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
 <span class="n">example_hadoop_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">HadoopCluster</span><span class="p">(</span><span class="s2">&quot;exampleHadoopCluster&quot;</span><span class="p">,</span>
@@ -1391,7 +1389,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
 <span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
 <span class="n">example_kafka_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">KafkaCluster</span><span class="p">(</span><span class="s2">&quot;exampleKafkaCluster&quot;</span><span class="p">,</span>
@@ -1783,7 +1780,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
 <span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
 <span class="n">example_ml_services_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">MLServicesCluster</span><span class="p">(</span><span class="s2">&quot;exampleMLServicesCluster&quot;</span><span class="p">,</span>
@@ -2172,7 +2168,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
 <span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
 <span class="n">example_r_server_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">RServerCluster</span><span class="p">(</span><span class="s2">&quot;exampleRServerCluster&quot;</span><span class="p">,</span>
@@ -2561,7 +2556,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
 <span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
 <span class="n">example_spark_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">SparkCluster</span><span class="p">(</span><span class="s2">&quot;exampleSparkCluster&quot;</span><span class="p">,</span>
@@ -2949,7 +2943,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
 <span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
 <span class="n">example_storm_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">StormCluster</span><span class="p">(</span><span class="s2">&quot;exampleStormCluster&quot;</span><span class="p">,</span>

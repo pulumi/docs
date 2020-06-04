@@ -165,15 +165,13 @@ this resource applies only to standard VMs, not DevTest Lab VMs. To manage autom
     <span class="n">admin_password</span><span class="o">=</span><span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
     <span class="n">disable_password_authentication</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">example_global_vm_shutdown_schedule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">GlobalVMShutdownSchedule</span><span class="p">(</span><span class="s2">&quot;exampleGlobalVMShutdownSchedule&quot;</span><span class="p">,</span>
-    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">azurerm_virtual_machine</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">virtual_machine_id</span><span class="o">=</span><span class="n">azurerm_virtual_machine</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
-    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
-    <span class="n">daily_recurrence</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;1100&quot;</span><span class="p">,</span>
-    <span class="p">}],</span>
-    <span class="n">time_zone_id</span><span class="o">=</span><span class="s2">&quot;Pacific Standard Time&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">daily_recurrence_time</span><span class="o">=</span><span class="s2">&quot;1100&quot;</span><span class="p">,</span>
+    <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;Pacific Standard Time&quot;</span><span class="p">,</span>
     <span class="n">notification_settings</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;timeInMinutes&quot;</span><span class="p">:</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span>
         <span class="s2">&quot;webhookUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://sample-webhook-url.example.com&quot;</span><span class="p">,</span>
     <span class="p">})</span>

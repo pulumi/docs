@@ -27,7 +27,7 @@ Manages an EventGrid Event Subscription
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#EventSubscription">EventSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#EventSubscription">EventSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advanced_filter=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -208,6 +208,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advancedfilter_csharp">
+<a href="#advancedfilter_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -417,6 +428,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="advancedfilter_go">
+<a href="#advancedfilter_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventdeliveryschema_go">
 <a href="#eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span> 
@@ -622,6 +644,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="advancedfilter_nodejs">
+<a href="#advancedfilter_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventdeliveryschema_nodejs">
 <a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span> 
@@ -823,6 +856,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advanced_filter_python">
+<a href="#advanced_filter_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Dict[Event<wbr>Subscription<wbr>Advanced<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1110,7 +1154,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>advanced_filter=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1223,6 +1267,17 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedfilter_csharp">
+<a href="#state_advancedfilter_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1431,6 +1486,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_advancedfilter_go">
+<a href="#state_advancedfilter_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_eventdeliveryschema_go">
 <a href="#state_eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span> 
@@ -1636,6 +1702,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_advancedfilter_nodejs">
+<a href="#state_advancedfilter_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_eventdeliveryschema_nodejs">
 <a href="#state_eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span> 
@@ -1838,6 +1915,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_advanced_filter_python">
+<a href="#state_advanced_filter_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Dict[Event<wbr>Subscription<wbr>Advanced<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2050,6 +2138,2188 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilter">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="boolequals_csharp">
+<a href="#boolequals_csharp" style="color: inherit; text-decoration: inherit;">Bool<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single boolean value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbergreaterthanorequals_csharp">
+<a href="#numbergreaterthanorequals_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbergreaterthans_csharp">
+<a href="#numbergreaterthans_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Thans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberins_csharp">
+<a href="#numberins_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberlessthanorequals_csharp">
+<a href="#numberlessthanorequals_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberlessthans_csharp">
+<a href="#numberlessthans_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Thans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbernotins_csharp">
+<a href="#numbernotins_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Not<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringbeginswiths_csharp">
+<a href="#stringbeginswiths_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Begins<wbr>Withs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringcontains_csharp">
+<a href="#stringcontains_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Contains</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringendswiths_csharp">
+<a href="#stringendswiths_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Ends<wbr>Withs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringins_csharp">
+<a href="#stringins_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringnotins_csharp">
+<a href="#stringnotins_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">List&lt;Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="boolequals_go">
+<a href="#boolequals_go" style="color: inherit; text-decoration: inherit;">Bool<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single boolean value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbergreaterthanorequals_go">
+<a href="#numbergreaterthanorequals_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbergreaterthans_go">
+<a href="#numbergreaterthans_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Thans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberins_go">
+<a href="#numberins_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberlessthanorequals_go">
+<a href="#numberlessthanorequals_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberlessthans_go">
+<a href="#numberlessthans_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Thans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbernotins_go">
+<a href="#numbernotins_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Not<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringbeginswiths_go">
+<a href="#stringbeginswiths_go" style="color: inherit; text-decoration: inherit;">String<wbr>Begins<wbr>Withs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringcontains_go">
+<a href="#stringcontains_go" style="color: inherit; text-decoration: inherit;">String<wbr>Contains</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringendswiths_go">
+<a href="#stringendswiths_go" style="color: inherit; text-decoration: inherit;">String<wbr>Ends<wbr>Withs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringins_go">
+<a href="#stringins_go" style="color: inherit; text-decoration: inherit;">String<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringnotins_go">
+<a href="#stringnotins_go" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">[]Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="boolequals_nodejs">
+<a href="#boolequals_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single boolean value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbergreaterthanorequals_nodejs">
+<a href="#numbergreaterthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbergreaterthans_nodejs">
+<a href="#numbergreaterthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Thans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberins_nodejs">
+<a href="#numberins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberlessthanorequals_nodejs">
+<a href="#numberlessthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberlessthans_nodejs">
+<a href="#numberlessthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Thans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbernotins_nodejs">
+<a href="#numbernotins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Not<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringbeginswiths_nodejs">
+<a href="#stringbeginswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Begins<wbr>Withs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringcontains_nodejs">
+<a href="#stringcontains_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Contains</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringendswiths_nodejs">
+<a href="#stringendswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ends<wbr>Withs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringins_nodejs">
+<a href="#stringins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringnotins_nodejs">
+<a href="#stringnotins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="boolequals_python">
+<a href="#boolequals_python" style="color: inherit; text-decoration: inherit;">bool<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single boolean value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbergreaterthanorequals_python">
+<a href="#numbergreaterthanorequals_python" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbergreaterthans_python">
+<a href="#numbergreaterthans_python" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Thans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberins_python">
+<a href="#numberins_python" style="color: inherit; text-decoration: inherit;">number<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberlessthanorequals_python">
+<a href="#numberlessthanorequals_python" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberlessthans_python">
+<a href="#numberlessthans_python" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Thans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numbernotins_python">
+<a href="#numbernotins_python" style="color: inherit; text-decoration: inherit;">number<wbr>Not<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringbeginswiths_python">
+<a href="#stringbeginswiths_python" style="color: inherit; text-decoration: inherit;">string<wbr>Begins<wbr>Withs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringcontains_python">
+<a href="#stringcontains_python" style="color: inherit; text-decoration: inherit;">string<wbr>Contains</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringendswiths_python">
+<a href="#stringendswiths_python" style="color: inherit; text-decoration: inherit;">string<wbr>Ends<wbr>Withs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringins_python">
+<a href="#stringins_python" style="color: inherit; text-decoration: inherit;">string<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stringnotins_python">
+<a href="#stringnotins_python" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Ins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilterboolequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterBoolEqual">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterBoolEqual">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterBoolEqualArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterBoolEqualOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterBoolEqualArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterBoolEqual.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilternumbergreaterthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterNumberGreaterThan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterNumberGreaterThan">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberGreaterThanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberGreaterThanOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterNumberGreaterThanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterNumberGreaterThan.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilternumbergreaterthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterNumberGreaterThanOrEqual">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterNumberGreaterThanOrEqual">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberGreaterThanOrEqualArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberGreaterThanOrEqualOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterNumberGreaterThanOrEqualArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterNumberGreaterThanOrEqual.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilternumberin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterNumberIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterNumberIn">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberInOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterNumberInArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterNumberIn.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;double&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">[]float64</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilternumberlessthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterNumberLessThan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterNumberLessThan">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberLessThanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberLessThanOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterNumberLessThanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterNumberLessThan.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilternumberlessthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterNumberLessThanOrEqual">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterNumberLessThanOrEqual">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberLessThanOrEqualArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberLessThanOrEqualOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterNumberLessThanOrEqualArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterNumberLessThanOrEqual.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilternumbernotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterNumberNotIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterNumberNotIn">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberNotInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterNumberNotInOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterNumberNotInArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterNumberNotIn.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;double&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">[]float64</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilterstringbeginswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterStringBeginsWith">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterStringBeginsWith">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringBeginsWithArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringBeginsWithOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterStringBeginsWithArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterStringBeginsWith.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilterstringcontain">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterStringContain">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterStringContain">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringContainArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringContainOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterStringContainArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterStringContain.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilterstringendswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterStringEndsWith">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterStringEndsWith">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringEndsWithArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringEndsWithOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterStringEndsWithArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterStringEndsWith.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilterstringin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterStringIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterStringIn">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringInOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterStringInArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterStringIn.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionadvancedfilterstringnotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAdvancedFilterStringNotIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAdvancedFilterStringNotIn">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringNotInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAdvancedFilterStringNotInOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAdvancedFilterStringNotInArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAdvancedFilterStringNotIn.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</h4>

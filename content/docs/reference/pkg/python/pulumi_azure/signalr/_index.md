@@ -129,7 +129,7 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 <p>The <strong>features</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableMessagingLogs</span></code>, and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A value of a feature flag. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code> and <code class="docutils literal notranslate"><span class="pre">Serverless</span></code>.</p></li>
 </ul>
 <p>The <strong>sku</strong> object supports the following:</p>
@@ -151,7 +151,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">features</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.Service.features" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">features</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableMessagingLogs</span></code>, and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A value of a feature flag. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code> and <code class="docutils literal notranslate"><span class="pre">Serverless</span></code>.</p></li>
 </ul>
 </dd></dl>
@@ -273,7 +273,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>features</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableMessagingLogs</span></code>, and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A value of a feature flag. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code> and <code class="docutils literal notranslate"><span class="pre">Serverless</span></code>.</p></li>
 </ul>
 <p>The <strong>sku</strong> object supports the following:</p>

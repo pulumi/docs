@@ -84,7 +84,7 @@ const exampleWorkflow = new azure.logicapps.Workflow("exampleWorkflow", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/logicapps/#Workflow">Workflow</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>workflow_schema=None<span class="p">, </span>workflow_version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/logicapps/#Workflow">Workflow</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>logic_app_integration_account_id=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>workflow_schema=None<span class="p">, </span>workflow_version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -280,6 +280,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logicappintegrationaccountid_csharp">
+<a href="#logicappintegrationaccountid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -360,6 +371,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logicappintegrationaccountid_go">
+<a href="#logicappintegrationaccountid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -448,6 +470,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logicappintegrationaccountid_nodejs">
+<a href="#logicappintegrationaccountid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -528,6 +561,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logic_app_integration_account_id_python">
+<a href="#logic_app_integration_account_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>integration_<wbr>account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -903,7 +947,7 @@ Get an existing Workflow resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_endpoint=None<span class="p">, </span>connector_endpoint_ip_addresses=None<span class="p">, </span>connector_outbound_ip_addresses=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>workflow_endpoint_ip_addresses=None<span class="p">, </span>workflow_outbound_ip_addresses=None<span class="p">, </span>workflow_schema=None<span class="p">, </span>workflow_version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_endpoint=None<span class="p">, </span>connector_endpoint_ip_addresses=None<span class="p">, </span>connector_outbound_ip_addresses=None<span class="p">, </span>location=None<span class="p">, </span>logic_app_integration_account_id=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>workflow_endpoint_ip_addresses=None<span class="p">, </span>workflow_outbound_ip_addresses=None<span class="p">, </span>workflow_schema=None<span class="p">, </span>workflow_version=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1063,6 +1107,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logicappintegrationaccountid_csharp">
+<a href="#state_logicappintegrationaccountid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1198,6 +1253,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logicappintegrationaccountid_go">
+<a href="#state_logicappintegrationaccountid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1341,6 +1407,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logicappintegrationaccountid_nodejs">
+<a href="#state_logicappintegrationaccountid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1476,6 +1553,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logic_app_integration_account_id_python">
+<a href="#state_logic_app_integration_account_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>integration_<wbr>account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

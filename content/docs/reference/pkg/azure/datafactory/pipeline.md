@@ -13,6 +13,91 @@ meta_desc: "Explore the Pipeline resource of the datafactory module, including e
 Manages a Pipeline inside a Azure Data Factory.
 
 
+## Example Usage with Activities
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const test = new azure.datafactory.Pipeline("test", {
+    resourceGroupName: azurerm_resource_group.test.name,
+    dataFactoryName: azurerm_data_factory.test.name,
+    variables: {
+        bob: "item1",
+    },
+    activitiesJson: `[
+	{
+		"name": "Append variable1",
+		"type": "AppendVariable",
+		"dependsOn": [],
+		"userProperties": [],
+		"typeProperties": {
+			"variableName": "bob",
+			"value": "something"
+		}
+	}
+]
+`,
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+test = azure.datafactory.Pipeline("test",
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    data_factory_name=azurerm_data_factory["test"]["name"],
+    variables={
+        "bob": "item1",
+    },
+    activities_json="""[
+	{
+		"name": "Append variable1",
+		"type": "AppendVariable",
+		"dependsOn": [],
+		"userProperties": [],
+		"typeProperties": {
+			"variableName": "bob",
+			"value": "something"
+		}
+	}
+]
+""")
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Azure.DataFactory.Pipeline("test", new Azure.DataFactory.PipelineArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Test.Name,
+            DataFactoryName = azurerm_data_factory.Test.Name,
+            Variables = 
+            {
+                { "bob", "item1" },
+            },
+            ActivitiesJson = @"[
+	{
+		""name"": ""Append variable1"",
+		""type"": ""AppendVariable"",
+		""dependsOn"": [],
+		""userProperties"": [],
+		""typeProperties"": {
+			""variableName"": ""bob"",
+			""value"": ""something""
+		}
+	}
+]
+",
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -96,7 +181,7 @@ const examplePipeline = new azure.datafactory.Pipeline("examplePipeline", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#Pipeline">Pipeline</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>data_factory_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>variables=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#Pipeline">Pipeline</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>activities_json=None<span class="p">, </span>annotations=None<span class="p">, </span>data_factory_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>variables=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -292,6 +377,17 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="activitiesjson_csharp">
+<a href="#activitiesjson_csharp" style="color: inherit; text-decoration: inherit;">Activities<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON object that contains the activities that will be associated with the Data Factory Pipeline.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
@@ -372,6 +468,17 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Pipeline. Changing this forces a new resource
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activitiesjson_go">
+<a href="#activitiesjson_go" style="color: inherit; text-decoration: inherit;">Activities<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON object that contains the activities that will be associated with the Data Factory Pipeline.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -460,6 +567,17 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="activitiesjson_nodejs">
+<a href="#activitiesjson_nodejs" style="color: inherit; text-decoration: inherit;">activities<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON object that contains the activities that will be associated with the Data Factory Pipeline.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
@@ -540,6 +658,17 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Pipeline. Changing this forces a new resource
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activities_json_python">
+<a href="#activities_json_python" style="color: inherit; text-decoration: inherit;">activities_<wbr>json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON object that contains the activities that will be associated with the Data Factory Pipeline.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,7 +824,7 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>data_factory_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>variables=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>activities_json=None<span class="p">, </span>annotations=None<span class="p">, </span>data_factory_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>variables=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -811,6 +940,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_activitiesjson_csharp">
+<a href="#state_activitiesjson_csharp" style="color: inherit; text-decoration: inherit;">Activities<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON object that contains the activities that will be associated with the Data Factory Pipeline.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span> 
@@ -892,6 +1032,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_activitiesjson_go">
+<a href="#state_activitiesjson_go" style="color: inherit; text-decoration: inherit;">Activities<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON object that contains the activities that will be associated with the Data Factory Pipeline.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -979,6 +1130,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_activitiesjson_nodejs">
+<a href="#state_activitiesjson_nodejs" style="color: inherit; text-decoration: inherit;">activities<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON object that contains the activities that will be associated with the Data Factory Pipeline.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span> 
@@ -1060,6 +1222,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_activities_json_python">
+<a href="#state_activities_json_python" style="color: inherit; text-decoration: inherit;">activities_<wbr>json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON object that contains the activities that will be associated with the Data Factory Pipeline.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

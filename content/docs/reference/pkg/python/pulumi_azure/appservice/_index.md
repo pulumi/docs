@@ -1628,6 +1628,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">storage_connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus2&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;FunctionApp&quot;</span><span class="p">,</span>
+    <span class="n">reserved</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;Y1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_function_app</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">FunctionApp</span><span class="p">(</span><span class="s2">&quot;exampleFunctionApp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">storage_connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">,</span>
+    <span class="n">os_type</span><span class="o">=</span><span class="s2">&quot;linux&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
