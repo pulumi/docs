@@ -24,6 +24,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_digitalocean.AwaitableGetContainerRegistryResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetContainerRegistryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetContainerRegistryResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_digitalocean.AwaitableGetDatabaseClusterResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_network_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">urn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -298,17 +303,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.Certificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">leaf_certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Certificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Certificate resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] certificate_chain: The full PEM-formatted trust chain</p>
-<blockquote>
-<div><p>between the certificate authority’s certificate and your domain’s TLS
-certificate. Only valid when type is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
-</div></blockquote>
+<dd><p>Provides a DigitalOcean Certificate resource that allows you to manage
+certificates for configuring TLS termination in Load Balancers.
+Certificates created with this resource can be referenced in your
+Load Balancer configuration via their ID. The certificate can either
+be a custom one provided by you or automatically generated one with
+Let’s Encrypt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">cert</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;cert&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span>
+    <span class="n">private_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/Users/myuser/certs/privkey.pem&quot;</span><span class="p">),</span>
+    <span class="n">leaf_certificate</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/Users/myuser/certs/cert.pem&quot;</span><span class="p">),</span>
+    <span class="n">certificate_chain</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/Users/myuser/certs/fullchain.pem&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">cert</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;cert&quot;</span><span class="p">,</span>
+    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;example.com&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;lets_encrypt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">cert</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;cert&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;lets_encrypt&quot;</span><span class="p">,</span>
+    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;example.com&quot;</span><span class="p">])</span>
+<span class="c1"># Create a new Load Balancer with TLS termination</span>
+<span class="n">public</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;public&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">,</span>
+    <span class="n">droplet_tag</span><span class="o">=</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span>
+    <span class="n">forwarding_rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;entryPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;entryProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;targetPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;targetProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;certificate_id&quot;</span><span class="p">:</span> <span class="n">cert</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate_chain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full PEM-formatted trust chain
+between the certificate authority’s certificate and your domain’s TLS
+certificate. Only valid when type is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
 <li><p><strong>domains</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of fully qualified domain names (FQDNs) for
 which the certificate will be issued. The domains must be managed using
 DigitalOcean’s DNS. Only valid when type is <code class="docutils literal notranslate"><span class="pre">lets_encrypt</span></code>.</p></li>
@@ -429,6 +474,192 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_digitalocean.Certificate.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Certificate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_digitalocean.ContainerRegistry">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">ContainerRegistry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a DigitalOcean Container Registry resource. A Container Registry is
+a secure, private location to store your containers for rapid deployment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="c1"># Create a new container registry</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">ContainerRegistry</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container_registry</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.ContainerRegistry.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistry.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the container_registry</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ContainerRegistry.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistry.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ContainerRegistry resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container_registry</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ContainerRegistry.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistry.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ContainerRegistry.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistry.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_digitalocean.ContainerRegistryDockerCredentials">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">ContainerRegistryDockerCredentials</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiry_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistryDockerCredentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Docker credentials for your DigitalOcean container registry.</p>
+<p>An error is triggered if the provided container registry name does not exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">ContainerRegistryDockerCredentials</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">registry_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example_container_registry</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_container_registry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_container_registry_docker_credentials</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">ContainerRegistryDockerCredentials</span><span class="p">(</span><span class="s2">&quot;exampleContainerRegistryDockerCredentials&quot;</span><span class="p">,</span> <span class="n">registry_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>expiry_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.</p></li>
+<li><p><strong>registry_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container registry.</p></li>
+<li><p><strong>write</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow for write access to the container registry. Defaults to false.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.ContainerRegistryDockerCredentials.expiry_seconds">
+<code class="sig-name descname">expiry_seconds</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistryDockerCredentials.expiry_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.ContainerRegistryDockerCredentials.registry_name">
+<code class="sig-name descname">registry_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistryDockerCredentials.registry_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the container registry.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.ContainerRegistryDockerCredentials.write">
+<code class="sig-name descname">write</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistryDockerCredentials.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow for write access to the container registry. Defaults to false.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ContainerRegistryDockerCredentials.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credential_expiration_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_credentials</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiry_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistryDockerCredentials.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ContainerRegistryDockerCredentials resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>expiry_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.</p></li>
+<li><p><strong>registry_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container registry.</p></li>
+<li><p><strong>write</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow for write access to the container registry. Defaults to false.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ContainerRegistryDockerCredentials.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistryDockerCredentials.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ContainerRegistryDockerCredentials.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ContainerRegistryDockerCredentials.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1140,7 +1371,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_digitalocean.DatabaseReplica">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseReplica</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseReplica</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_network_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database replica resource.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
@@ -1243,7 +1474,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_digitalocean.DatabaseReplica.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_network_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatabaseReplica resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2709,6 +2940,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_digitalocean.GetContainerRegistryResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetContainerRegistryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetContainerRegistryResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getContainerRegistry.</p>
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetContainerRegistryResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetContainerRegistryResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetContainerRegistryResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetContainerRegistryResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the container registry</p>
+<ul class="simple">
+<li><p><cite>endpoint</cite>: The URL endpoint of the container registry. Ex: <code class="docutils literal notranslate"><span class="pre">registry.digitalocean.com/my_registry</span></code></p></li>
+<li><p><cite>server_url</cite>: The domain of the container registry. Ex: <code class="docutils literal notranslate"><span class="pre">registry.digitalocean.com</span></code></p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_network_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">urn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatabaseCluster.</p>
@@ -3808,7 +4061,7 @@ the following attributes:</p>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;worker-pool&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;node_count&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
         <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-2vcpu-2gb&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
@@ -3820,9 +4073,9 @@ the following attributes:</p>
 
 <span class="n">foo</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;autoScale&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;maxNodes&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;minNodes&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;auto_scale&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;max_nodes&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;min_nodes&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;autoscale-worker-pool&quot;</span><span class="p">,</span>
         <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-2vcpu-2gb&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -4183,7 +4436,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;front-end-pool&quot;</span><span class="p">,</span>
         <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-2vcpu-2gb&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;node_count&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">bar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesNodePool</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
     <span class="n">cluster_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -4669,14 +4922,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">purpose</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Project resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: the description of the project
-:param pulumi.Input[str] environment: the environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>)
-:param pulumi.Input[str] name: The name of the Project
-:param pulumi.Input[str] purpose: the purpose of the project, (Default: “Web Application”)
-:param pulumi.Input[list] resources: a list of uniform resource names (URNs) for the resources associated with the project</p>
+<dd><p>Provides a DigitalOcean Project resource.</p>
+<p>Projects allow you to organize your resources into groups that fit the way you work.
+You can group resources (like Droplets, Spaces, Load Balancers, domains, and Floating IPs)
+in ways that align with the applications you host on DigitalOcean.</p>
+<p>The following resource types can be associated with a project:</p>
+<ul class="simple">
+<li><p>Database Clusters</p></li>
+<li><p>Domains</p></li>
+<li><p>Droplets</p></li>
+<li><p>Floating IP</p></li>
+<li><p>Load Balancers</p></li>
+<li><p>Spaces Bucket</p></li>
+<li><p>Volume</p></li>
+</ul>
+<p><strong>Note:</strong> A managed project cannot be set as a default project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">playground</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;playground&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A project to represent development resources.&quot;</span><span class="p">,</span>
+    <span class="n">environment</span><span class="o">=</span><span class="s2">&quot;Development&quot;</span><span class="p">,</span>
+    <span class="n">purpose</span><span class="o">=</span><span class="s2">&quot;Web Application&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the description of the project</p></li>
+<li><p><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>)</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Project</p></li>
+<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the purpose of the project, (Default: “Web Application”)</p></li>
+<li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – a list of uniform resource names (URNs) for the resources associated with the project</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_digitalocean.Project.created_at">
 <code class="sig-name descname">created_at</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Project.created_at" title="Permalink to this definition">¶</a></dt>
@@ -4777,6 +5059,112 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_digitalocean.Project.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_digitalocean.ProjectResources">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">ProjectResources</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ProjectResources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign resources to a DigitalOcean Project. This is useful if you need to assign resources
+managed this provider to a DigitalOcean Project that is unmanaged by the provider.</p>
+<p>The following resource types can be associated with a project:</p>
+<ul class="simple">
+<li><p>Database Clusters</p></li>
+<li><p>Domains</p></li>
+<li><p>Droplets</p></li>
+<li><p>Floating IP</p></li>
+<li><p>Load Balancers</p></li>
+<li><p>Spaces Bucket</p></li>
+<li><p>Volume</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">playground</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;playground&quot;</span><span class="p">)</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;512mb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;centos-7-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+<span class="n">barfoo</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">ProjectResources</span><span class="p">(</span><span class="s2">&quot;barfoo&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">resources</span><span class="o">=</span><span class="p">[</span><span class="n">foobar</span><span class="o">.</span><span class="n">urn</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the ID of the project</p></li>
+<li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – a list of uniform resource names (URNs) for the resources associated with the project</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.ProjectResources.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.ProjectResources.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>the ID of the project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.ProjectResources.resources">
+<code class="sig-name descname">resources</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.ProjectResources.resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>a list of uniform resource names (URNs) for the resources associated with the project</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ProjectResources.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ProjectResources.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectResources resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the ID of the project</p></li>
+<li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – a list of uniform resource names (URNs) for the resources associated with the project</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ProjectResources.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ProjectResources.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.ProjectResources.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ProjectResources.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -5138,26 +5526,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.SpacesBucketObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SpacesBucketObject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_disposition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_language</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SpacesBucketObject resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] acl: The canned ACL to apply. DigitalOcean supports “private” and “public-read”. (Defaults to “private”.)
-:param pulumi.Input[str] bucket: The name of the bucket to put the file in.
-:param pulumi.Input[str] cache_control: Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.
-:param pulumi.Input[str] content: Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-:param pulumi.Input[str] content_base64: Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.
-:param pulumi.Input[str] content_disposition: Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.
-:param pulumi.Input[str] content_encoding: Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.
-:param pulumi.Input[str] content_language: The language the content is in e.g. en-US or en-GB.
-:param pulumi.Input[str] content_type: A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-:param pulumi.Input[str] etag: the ETag generated for the object (an MD5 sum of the object content). The hash is an MD5 digest of the</p>
-<blockquote>
-<div><p>object data. For objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5
-digest. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p>
-</div></blockquote>
+<dd><p>Provides a bucket object resource for Spaces, DigitalOcean’s object storage product.
+The <code class="docutils literal notranslate"><span class="pre">.SpacesBucketObject</span></code> resource allows this provider to upload content
+to Spaces.</p>
+<p>The <a class="reference external" href="https://developers.digitalocean.com/documentation/spaces/">Spaces API</a> was
+designed to be interoperable with Amazon’s AWS S3 API. This allows users to
+interact with the service while using the tools they already know. Spaces
+mirrors S3’s authentication framework and requests to Spaces require a key pair
+similar to Amazon’s Access ID and Secret Key.</p>
+<p>The authentication requirement can be met by either setting the
+<code class="docutils literal notranslate"><span class="pre">SPACES_ACCESS_KEY_ID</span></code> and <code class="docutils literal notranslate"><span class="pre">SPACES_SECRET_ACCESS_KEY</span></code> environment variables or
+the provider’s <code class="docutils literal notranslate"><span class="pre">spaces_access_id</span></code> and <code class="docutils literal notranslate"><span class="pre">spaces_secret_key</span></code> arguments to the
+access ID and secret you generate via the DigitalOcean control panel. For
+example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">static_assets</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SpacesBucket</span><span class="p">(</span><span class="s2">&quot;static-assets&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more information, See <a class="reference external" href="https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces">An Introduction to DigitalOcean Spaces</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SpacesBucket</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SpacesBucketObject</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="n">foobar</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">foobar</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;index.html&quot;</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&lt;html&gt;&lt;body&gt;&lt;p&gt;This page is empty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;text/html&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The canned ACL to apply. DigitalOcean supports “private” and “public-read”. (Defaults to “private”.)</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the file in.</p></li>
+<li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p></li>
+<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
+<li><p><strong>content_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p></li>
+<li><p><strong>content_disposition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.</p></li>
+<li><p><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.</p></li>
+<li><p><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The language the content is in e.g. en-US or en-GB.</p></li>
+<li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. The only meaningful value is <code class="docutils literal notranslate"><span class="pre">${filemd5(&quot;path/to/file&quot;)}</span></code>.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted by removing any legal hold on any object version.
 Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object once it is in the bucket.</p></li>
@@ -5225,9 +5640,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">false</s
 <dl class="py attribute">
 <dt id="pulumi_digitalocean.SpacesBucketObject.etag">
 <code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.etag" title="Permalink to this definition">¶</a></dt>
-<dd><p>the ETag generated for the object (an MD5 sum of the object content). The hash is an MD5 digest of the
-object data. For objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5
-digest. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p>
+<dd><p>Used to trigger updates. The only meaningful value is <code class="docutils literal notranslate"><span class="pre">${filemd5(&quot;path/to/file&quot;)}</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5296,10 +5709,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The language the content is in e.g. en-US or en-GB.</p></li>
 <li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p></li>
-<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>the ETag generated for the object (an MD5 sum of the object content). The hash is an MD5 digest of the
-object data. For objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5
-digest. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p>
-</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. The only meaningful value is <code class="docutils literal notranslate"><span class="pre">${filemd5(&quot;path/to/file&quot;)}</span></code>.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted by removing any legal hold on any object version.
 Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object once it is in the bucket.</p></li>
@@ -5355,14 +5765,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.SshKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SshKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SshKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SshKey resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the SSH key for identification
-:param pulumi.Input[str] public_key: The public key. If this is a file, it</p>
-<blockquote>
-<div><p>can be read using the file interpolation function</p>
-</div></blockquote>
+<dd><p>Provides a DigitalOcean SSH key resource to allow you to manage SSH
+keys for Droplet access. Keys created with this resource
+can be referenced in your Droplet configuration via their ID or
+fingerprint.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="c1"># Create a new SSH key</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SshKey</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">public_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/Users/myuser/.ssh/id_rsa.pub&quot;</span><span class="p">))</span>
+<span class="c1"># Create a new Droplet using the SSH key</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">ssh_keys</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">fingerprint</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSH key for identification</p></li>
+<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key. If this is a file, it
+can be read using the file interpolation function</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_digitalocean.SshKey.fingerprint">
 <code class="sig-name descname">fingerprint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SshKey.fingerprint" title="Permalink to this definition">¶</a></dt>
@@ -6091,10 +6521,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_certificate">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_certificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a certificate. This data source provides the name, type, state,
+domains, expiry date, and the sha1 fingerprint as configured on your DigitalOcean account.
+This is useful if the certificate in question is not managed by this provider or you need to utilize
+any of the certificates data.</p>
+<p>An error is triggered if the provided certificate name does not exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_certificate</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of certificate.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_digitalocean.get_container_registry">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_container_registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_container_registry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on a container registry. This data source provides the name as 
+configured on your DigitalOcean account. This is useful if the container 
+registry name in question is not managed by this provider or you need validate if 
+the container registry exists in the account.</p>
+<p>An error is triggered if the provided container registry name does not exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_container_registry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the container registry.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6120,7 +6581,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_domain">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_domain" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a domain. This data source provides the name, TTL, and zone
+file as configured on your DigitalOcean account. This is useful if the domain
+name in question is not managed by this provider or you need to utilize TTL or zone
+file data.</p>
+<p>An error is triggered if the provided domain name is not managed with your
+DigitalOcean account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;domainOutput&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">zone_file</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the domain.</p>
@@ -6131,7 +6604,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_droplet">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_droplet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_droplet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a Droplet for use in other resources. This data source provides
+all of the Droplet’s properties as configured on your DigitalOcean account. This
+is useful if the Droplet in question is not managed by this provider or you need to
+utilize any of the Droplet’s data.</p>
+<p><strong>Note:</strong> This data source returns a single Droplet. When specifying a <code class="docutils literal notranslate"><span class="pre">tag</span></code>, an
+error is triggered if more than one Droplet is found.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_droplet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;web&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;dropletOutput&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">ipv4_address</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6172,7 +6657,21 @@ resources.</p>
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_droplets">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_droplets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_droplets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on Droplets for use in other resources, with the ability to filter and sort the results.
+If no filters are specified, all Droplets will be returned.</p>
+<p>This data source is useful if the Droplets in question are not managed by this provider or you need to
+utilize any of the Droplets’ data.</p>
+<p>Note: You can use the <code class="docutils literal notranslate"><span class="pre">.Droplet</span></code> data source to obtain metadata
+about a single Droplet if you already know the <code class="docutils literal notranslate"><span class="pre">id</span></code>, unique <code class="docutils literal notranslate"><span class="pre">name</span></code>, or unique <code class="docutils literal notranslate"><span class="pre">tag</span></code> to retrieve.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">small</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_droplets</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;size&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6205,7 +6704,20 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_floating_ip">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_floating_ip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_floating_ip" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a floating ip. This data source provides the region and Droplet id
+as configured on your DigitalOcean account. This is useful if the floating IP
+in question is not managed by this provider or you need to find the Droplet the IP is
+attached to.</p>
+<p>An error is triggered if the provided floating IP does not exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">public_ip</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;publicIp&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_floating_ip</span><span class="p">(</span><span class="n">ip_address</span><span class="o">=</span><span class="n">public_ip</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;fipOutput&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">droplet_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ip_address</strong> (<em>str</em>) – The allocated IP address of the specific floating IP to retrieve.</p>
@@ -6216,7 +6728,17 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_image">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slug</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on an image for use in other resources (e.g. creating a Droplet
+based on snapshot). This data source provides all of the image properties as
+configured on your DigitalOcean account. This is useful if the image in question
+is not managed by this provider or you need to utilize any of the image’s data.</p>
+<p>An error is triggered if zero or more than one result is returned by the query.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example1</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_image</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-1.0.0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6238,7 +6760,22 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_images">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_images</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_images" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on images for use in other resources (e.g. creating a Droplet
+based on a snapshot), with the ability to filter and sort the results. If no filters are specified,
+all images will be returned.</p>
+<p>This data source is useful if the image in question is not managed by this provider or you need to utilize any
+of the image’s data.</p>
+<p>Note: You can use the <code class="docutils literal notranslate"><span class="pre">.getImage</span></code> data source to obtain metadata
+about a single image if you already know the <code class="docutils literal notranslate"><span class="pre">slug</span></code>, unique <code class="docutils literal notranslate"><span class="pre">name</span></code>, or <code class="docutils literal notranslate"><span class="pre">id</span></code> to retrieve.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">ubuntu</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_images</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;distribution&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ubuntu&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6268,7 +6805,7 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_kubernetes_cluster">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_kubernetes_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_kubernetes_cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Retrieves information about a DigitalOcean Kubernetes cluster for use in other resources. This data source provides all of the cluster’s properties as configured on your DigitalOcean account. This is useful if the cluster in question is not managed by this provider.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6300,7 +6837,7 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
     <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
         <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-1vcpu-2gb&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;node_count&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -6314,16 +6851,32 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
     <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
         <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-1vcpu-2gb&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;node_count&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>version_prefix</strong> (<em>str</em>) – If provided, this provider will only return versions that match the string prefix. For example, <code class="docutils literal notranslate"><span class="pre">1.15.</span></code> will match all 1.15.x series releases.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_load_balancer">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_load_balancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_load_balancer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a load balancer for use in other resources. This data source
+provides all of the load balancers properties as configured on your DigitalOcean
+account. This is useful if the load balancer in question is not managed by
+this provider or you need to utilize any of the load balancers data.</p>
+<p>An error is triggered if the provided load balancer name does not exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_load_balancer</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;lbOutput&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">ip</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of load balancer.</p>
@@ -6360,7 +6913,7 @@ one project has the provided name or if no project has that name.</p></li>
 <dd><p>Retrieve information about all DigitalOcean projects associated with an account, with
 the ability to filter and sort the results. If no filters are specified, all projects
 will be returned.</p>
-<p>Note: You can use the <cite>`</cite>.Project`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/project.html">https://www.terraform.io/docs/providers/do/d/project.html</a>&gt;`_ data source to
+<p>Note: You can use the <code class="docutils literal notranslate"><span class="pre">.Project</span></code> data source to
 obtain metadata about a single project if you already know the <code class="docutils literal notranslate"><span class="pre">id</span></code> to retrieve or the unique
 <code class="docutils literal notranslate"><span class="pre">name</span></code> of the project.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -6400,7 +6953,20 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_record">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_record</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_record" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a DNS record. This data source provides the name, TTL, and zone
+file as configured on your DigitalOcean account. This is useful if the record
+in question is not managed by this provider.</p>
+<p>An error is triggered if the provided domain name or record are not managed with
+your DigitalOcean account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_record</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;recordType&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;recordTtl&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">ttl</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6435,7 +7001,7 @@ what Droplet sizes and features are supported within a region.</p>
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_regions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about all supported DigitalOcean regions, with the ability to
 filter and sort the results. If no filters are specified, all regions will be returned.</p>
-<p>Note: You can use the <cite>`</cite>.getRegion`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/region.html">https://www.terraform.io/docs/providers/do/d/region.html</a>&gt;`_ data source
+<p>Note: You can use the <code class="docutils literal notranslate"><span class="pre">.getRegion</span></code> data source
 to obtain metadata about a single region if you already know the <code class="docutils literal notranslate"><span class="pre">slug</span></code> to retrieve.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
@@ -6519,7 +7085,16 @@ one of the values provided here.</p></li>
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_spaces_bucket">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_spaces_bucket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_spaces_bucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a Spaces bucket for use in other resources. This is useful if the Spaces bucket in question
+is not managed by this provider or you need to utilize any of the bucket’s data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_spaces_bucket</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-spaces-bucket&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;bucketDomainName&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">bucket_domain_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6568,7 +7143,20 @@ downloading large amount of data which would be thrown away in favor of metadata
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_spaces_bucket_objects">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_spaces_bucket_objects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delimiter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encoding_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_spaces_bucket_objects" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><blockquote>
+<div><p><strong>NOTE on ``max_keys``:</strong> Retrieving very large numbers of keys can adversely affect this provider’s performance.</p>
+</div></blockquote>
+<p>The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in a Spaces bucket.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">my_objects</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_spaces_bucket_objects</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;ourcorp&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+<span class="n">object_info</span> <span class="o">=</span> <span class="p">[</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">get_spaces_bucket_object</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">my_objects</span><span class="o">.</span><span class="n">keys</span><span class="p">[</span><span class="n">__index</span><span class="p">],</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="n">my_objects</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="n">my_objects</span><span class="o">.</span><span class="n">region</span><span class="p">)</span> <span class="k">for</span> <span class="n">__index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_objects</span><span class="o">.</span><span class="n">keys</span><span class="p">))]</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6588,7 +7176,7 @@ downloading large amount of data which would be thrown away in favor of metadata
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_spaces_buckets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_spaces_buckets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on Spaces buckets for use in other resources, with the ability to filter and sort the results.
 If no filters are specified, all Spaces buckets will be returned.</p>
-<p>Note: You can use the <cite>`</cite>.SpacesBucket`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/spaces_bucket.html">https://www.terraform.io/docs/providers/do/d/spaces_bucket.html</a>&gt;`_ data source to
+<p>Note: You can use the <code class="docutils literal notranslate"><span class="pre">.SpacesBucket</span></code> data source to
 obtain metadata about a single bucket if you already know its <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">region</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
@@ -6625,7 +7213,22 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_ssh_key">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_ssh_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_ssh_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a ssh key. This data source provides the name, public key,
+and fingerprint as configured on your DigitalOcean account. This is useful if
+the ssh key in question is not managed by this provider or you need to utilize any
+of the keys data.</p>
+<p>An error is triggered if the provided ssh key name does not exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example_ssh_key</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_ssh_key</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_droplet</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;exampleDroplet&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc2&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">ssh_keys</span><span class="o">=</span><span class="p">[</span><span class="n">example_ssh_key</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the ssh key.</p>
@@ -6636,7 +7239,21 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_tag">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_tag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_tag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a tag. This data source provides the name as configured on
+your DigitalOcean account. This is useful if the tag name in question is not
+managed by this provider or you need validate if the tag exists in the account.</p>
+<p>An error is triggered if the provided tag name does not exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example_tag</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_tag</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">example_droplet</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;exampleDroplet&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc2&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="n">example_tag</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the tag.</p>
@@ -6647,7 +7264,18 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_volume">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Get information on a volume for use in other resources. This data source provides
+all of the volumes properties as configured on your DigitalOcean account. This is
+useful if the volume in question is not managed by this provider or you need to utilize
+any of the volumes data.</p>
+<p>An error is triggered if the provided volume name does not exist.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_volume</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;app-data&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6688,7 +7316,18 @@ resources.</p>
 <dl class="py function">
 <dt id="pulumi_digitalocean.get_vpc">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_vpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_vpc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Retrieve information about a VPC for use in other resources.</p>
+<p>This data source provides all of the VPC’s properties as configured on your
+DigitalOcean account. This is useful if the VPC in question is not managed by
+this provider or you need to utilize any of the VPC’s data.</p>
+<p>VPCs may be looked up by <code class="docutils literal notranslate"><span class="pre">id</span></code> or <code class="docutils literal notranslate"><span class="pre">name</span></code>. Specifying a <code class="docutils literal notranslate"><span class="pre">region</span></code> will
+return that that region’s default VPC.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_vpc</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-network&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

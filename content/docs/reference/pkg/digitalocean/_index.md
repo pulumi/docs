@@ -16,6 +16,8 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 <ul class="api">
     <li><a href="cdn" title="Cdn"><span class="symbol resource"></span>Cdn</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="containerregistry" title="ContainerRegistry"><span class="symbol resource"></span>ContainerRegistry</a></li>
+    <li><a href="containerregistrydockercredentials" title="ContainerRegistryDockerCredentials"><span class="symbol resource"></span>ContainerRegistryDockerCredentials</a></li>
     <li><a href="databasecluster" title="DatabaseCluster"><span class="symbol resource"></span>DatabaseCluster</a></li>
     <li><a href="databaseconnectionpool" title="DatabaseConnectionPool"><span class="symbol resource"></span>DatabaseConnectionPool</a></li>
     <li><a href="databasedb" title="DatabaseDb"><span class="symbol resource"></span>DatabaseDb</a></li>
@@ -33,6 +35,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="kubernetesnodepool" title="KubernetesNodePool"><span class="symbol resource"></span>KubernetesNodePool</a></li>
     <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="projectresources" title="ProjectResources"><span class="symbol resource"></span>ProjectResources</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="spacesbucket" title="SpacesBucket"><span class="symbol resource"></span>SpacesBucket</a></li>
     <li><a href="spacesbucketobject" title="SpacesBucketObject"><span class="symbol resource"></span>SpacesBucketObject</a></li>
@@ -48,6 +51,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
+    <li><a href="getcontainerregistry" title="GetContainerRegistry"><span class="symbol function"></span>GetContainerRegistry</a></li>
     <li><a href="getdatabasecluster" title="GetDatabaseCluster"><span class="symbol function"></span>GetDatabaseCluster</a></li>
     <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
     <li><a href="getdroplet" title="GetDroplet"><span class="symbol function"></span>GetDroplet</a></li>
@@ -85,7 +89,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>2.4.2</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 

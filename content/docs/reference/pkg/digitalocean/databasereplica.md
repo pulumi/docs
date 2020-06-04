@@ -102,7 +102,7 @@ const read_replica = new digitalocean.DatabaseReplica("read-replica", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#DatabaseReplica">DatabaseReplica</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#DatabaseReplica">DatabaseReplica</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>name=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -298,6 +298,16 @@ The DatabaseReplica resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="privatenetworkuuid_csharp">
+<a href="#privatenetworkuuid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Network<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span> 
@@ -356,6 +366,16 @@ The DatabaseReplica resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The name for the database replica.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatenetworkuuid_go">
+<a href="#privatenetworkuuid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Network<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -420,6 +440,16 @@ The DatabaseReplica resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="privatenetworkuuid_nodejs">
+<a href="#privatenetworkuuid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Network<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span> 
@@ -478,6 +508,16 @@ The DatabaseReplica resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The name for the database replica.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_network_uuid_python">
+<a href="#private_network_uuid_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network_<wbr>uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -961,7 +1001,7 @@ Get an existing DatabaseReplica resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>database=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>private_host=None<span class="p">, </span>private_uri=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>uri=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>database=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>private_host=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>private_uri=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>uri=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1154,6 +1194,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_privatenetworkuuid_csharp">
+<a href="#state_privatenetworkuuid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Network<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_privateuri_csharp">
 <a href="#state_privateuri_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Uri</a>
 </span> 
@@ -1300,6 +1350,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Same as `host`, but only accessible from resources within the account and in the same region.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privatenetworkuuid_go">
+<a href="#state_privatenetworkuuid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Network<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1452,6 +1512,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_privatenetworkuuid_nodejs">
+<a href="#state_privatenetworkuuid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Network<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_privateuri_nodejs">
 <a href="#state_privateuri_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Uri</a>
 </span> 
@@ -1598,6 +1668,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Same as `host`, but only accessible from resources within the account and in the same region.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_private_network_uuid_python">
+<a href="#state_private_network_uuid_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network_<wbr>uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
