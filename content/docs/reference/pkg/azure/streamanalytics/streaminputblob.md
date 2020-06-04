@@ -12,9 +12,141 @@ meta_desc: "Explore the StreamInputBlob resource of the streamanalytics module, 
 
 Manages a Stream Analytics Stream Input Blob.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = Output.Create(Azure.Core.GetResourceGroup.InvokeAsync(new Azure.Core.GetResourceGroupArgs
+        {
+            Name = "example-resources",
+        }));
+        var exampleJob = Output.Create(Azure.StreamAnalytics.GetJob.InvokeAsync(new Azure.StreamAnalytics.GetJobArgs
+        {
+            Name = "example-job",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Location = azurerm_resource_group.Example.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleContainer = new Azure.Storage.Container("exampleContainer", new Azure.Storage.ContainerArgs
+        {
+            StorageAccountName = exampleAccount.Name,
+            ContainerAccessType = "private",
+        });
+        var exampleStreamInputBlob = new Azure.StreamAnalytics.StreamInputBlob("exampleStreamInputBlob", new Azure.StreamAnalytics.StreamInputBlobArgs
+        {
+            StreamAnalyticsJobName = exampleJob.Apply(exampleJob => exampleJob.Name),
+            ResourceGroupName = exampleJob.Apply(exampleJob => exampleJob.ResourceGroupName),
+            StorageAccountName = exampleAccount.Name,
+            StorageAccountKey = exampleAccount.PrimaryAccessKey,
+            StorageContainerName = exampleContainer.Name,
+            PathPattern = "some-random-pattern",
+            DateFormat = "yyyy/MM/dd",
+            TimeFormat = "HH",
+            Serialization = new Azure.StreamAnalytics.Inputs.StreamInputBlobSerializationArgs
+            {
+                Type = "Json",
+                Encoding = "UTF8",
+            },
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="example-resources")
+example_job = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    location=azurerm_resource_group["example"]["location"],
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_container = azure.storage.Container("exampleContainer",
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_stream_input_blob = azure.streamanalytics.StreamInputBlob("exampleStreamInputBlob",
+    stream_analytics_job_name=example_job.name,
+    resource_group_name=example_job.resource_group_name,
+    storage_account_name=example_account.name,
+    storage_account_key=example_account.primary_access_key,
+    storage_container_name=example_container.name,
+    path_pattern="some-random-pattern",
+    date_format="yyyy/MM/dd",
+    time_format="HH",
+    serialization={
+        "type": "Json",
+        "encoding": "UTF8",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "example-resources",
+});
+const exampleJob = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: azurerm_resource_group.example.name,
+    location: azurerm_resource_group.example.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleStreamInputBlob = new azure.streamanalytics.StreamInputBlob("exampleStreamInputBlob", {
+    streamAnalyticsJobName: exampleJob.then(exampleJob => exampleJob.name),
+    resourceGroupName: exampleJob.then(exampleJob => exampleJob.resourceGroupName),
+    storageAccountName: exampleAccount.name,
+    storageAccountKey: exampleAccount.primaryAccessKey,
+    storageContainerName: exampleContainer.name,
+    pathPattern: "some-random-pattern",
+    dateFormat: "yyyy/MM/dd",
+    timeFormat: "HH",
+    serialization: {
+        type: "Json",
+        encoding: "UTF8",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StreamInputBlob Resource {#create}

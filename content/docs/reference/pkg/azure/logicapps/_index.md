@@ -13,6 +13,7 @@ Explore the resources and functions of the logicapps module in the Azure package
 <ul class="api">
     <li><a href="actioncustom" title="ActionCustom"><span class="symbol resource"></span>ActionCustom</a></li>
     <li><a href="actionhttp" title="ActionHttp"><span class="symbol resource"></span>ActionHttp</a></li>
+    <li><a href="integrationaccount" title="IntegrationAccount"><span class="symbol resource"></span>IntegrationAccount</a></li>
     <li><a href="triggercustom" title="TriggerCustom"><span class="symbol resource"></span>TriggerCustom</a></li>
     <li><a href="triggerhttprequest" title="TriggerHttpRequest"><span class="symbol resource"></span>TriggerHttpRequest</a></li>
     <li><a href="triggerrecurrence" title="TriggerRecurrence"><span class="symbol resource"></span>TriggerRecurrence</a></li>
@@ -21,6 +22,7 @@ Explore the resources and functions of the logicapps module in the Azure package
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getintegrationaccount" title="GetIntegrationAccount"><span class="symbol function"></span>GetIntegrationAccount</a></li>
     <li><a href="getworkflow" title="GetWorkflow"><span class="symbol function"></span>GetWorkflow</a></li>
 </ul>
 
@@ -33,7 +35,7 @@ Explore the resources and functions of the logicapps module in the Azure package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.8.0</dd>
 </dl>
 
 

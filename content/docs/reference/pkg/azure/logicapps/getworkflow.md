@@ -297,6 +297,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="logicappintegrationaccountid_csharp">
+<a href="#logicappintegrationaccountid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -441,6 +452,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where the Logic App Workflow exists.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="logicappintegrationaccountid_go">
+<a href="#logicappintegrationaccountid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -593,6 +615,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="logicappintegrationaccountid_nodejs">
+<a href="#logicappintegrationaccountid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Integration<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -737,6 +770,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where the Logic App Workflow exists.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="logic_app_integration_account_id_python">
+<a href="#logic_app_integration_account_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>integration_<wbr>account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the integration account linked by this Logic App Workflow.
 {{% /md %}}</dd>
 
     <dt class="property-"

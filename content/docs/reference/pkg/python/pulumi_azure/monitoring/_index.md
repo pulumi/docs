@@ -467,6 +467,644 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActionRuleActionGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Monitor Action Rule which type is action group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_action_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">ActionGroup</span><span class="p">(</span><span class="s2">&quot;exampleActionGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">short_name</span><span class="o">=</span><span class="s2">&quot;exampleactiongroup&quot;</span><span class="p">)</span>
+<span class="n">example_action_rule_action_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">ActionRuleActionGroup</span><span class="p">(</span><span class="s2">&quot;exampleActionRuleActionGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">action_group_id</span><span class="o">=</span><span class="n">example_action_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ResourceGroup&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resourceIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource id of monitor action group.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">condition</span></code> block as defined below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a description for the Action Rule.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Action Rule enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">scope</span></code> block as defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertContext</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_context</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertRuleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_rule_id</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">description</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Fired</span></code> and <code class="docutils literal notranslate"><span class="pre">Resolved</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitorService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor_service</span></code> as block defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Security</span></code>, <code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Insights</span></code>, <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">Backup</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Edge</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Gateway</span></code>, <code class="docutils literal notranslate"><span class="pre">Health</span> <span class="pre">Platform</span></code>, <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">Analytics</span></code>, <code class="docutils literal notranslate"><span class="pre">Platform</span></code>, and <code class="docutils literal notranslate"><span class="pre">Resource</span> <span class="pre">Health</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">severity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">severity</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Sev0</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev1</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev2</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev3</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sev4</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetResourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">target_resource_type</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. The values should be valid resource types.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>scope</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of resource IDs of the given scope type which will be the target of action rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of target scope. Possible values are <code class="docutils literal notranslate"><span class="pre">ResourceGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">Resource</span></code>.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.action_group_id">
+<code class="sig-name descname">action_group_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.action_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the resource id of monitor action group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.condition">
+<code class="sig-name descname">condition</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">condition</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertContext</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_context</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertRuleId</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_rule_id</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">description</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitor</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Fired</span></code> and <code class="docutils literal notranslate"><span class="pre">Resolved</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitorService</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor_service</span></code> as block defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Security</span></code>, <code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Insights</span></code>, <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">Backup</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Edge</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Gateway</span></code>, <code class="docutils literal notranslate"><span class="pre">Health</span> <span class="pre">Platform</span></code>, <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">Analytics</span></code>, <code class="docutils literal notranslate"><span class="pre">Platform</span></code>, and <code class="docutils literal notranslate"><span class="pre">Resource</span> <span class="pre">Health</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">severity</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">severity</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Sev0</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev1</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev2</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev3</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sev4</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetResourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">target_resource_type</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition. The values should be valid resource types.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a description for the Action Rule.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.enabled">
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the Action Rule enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.scope">
+<code class="sig-name descname">scope</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">scope</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of resource IDs of the given scope type which will be the target of action rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of target scope. Possible values are <code class="docutils literal notranslate"><span class="pre">ResourceGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">Resource</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ActionRuleActionGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource id of monitor action group.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">condition</span></code> block as defined below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a description for the Action Rule.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Action Rule enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">scope</span></code> block as defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertContext</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_context</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertRuleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_rule_id</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">description</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Fired</span></code> and <code class="docutils literal notranslate"><span class="pre">Resolved</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitorService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor_service</span></code> as block defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Security</span></code>, <code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Insights</span></code>, <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">Backup</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Edge</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Gateway</span></code>, <code class="docutils literal notranslate"><span class="pre">Health</span> <span class="pre">Platform</span></code>, <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">Analytics</span></code>, <code class="docutils literal notranslate"><span class="pre">Platform</span></code>, and <code class="docutils literal notranslate"><span class="pre">Resource</span> <span class="pre">Health</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">severity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">severity</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Sev0</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev1</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev2</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev3</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sev4</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetResourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">target_resource_type</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. The values should be valid resource types.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>scope</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of resource IDs of the given scope type which will be the target of action rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of target scope. Possible values are <code class="docutils literal notranslate"><span class="pre">ResourceGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">Resource</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.monitoring.ActionRuleActionGroup.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleActionGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActionRuleSuppression</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">suppression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Monitor Action Rule which type is suppression.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_action_rule_suppression</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">ActionRuleSuppression</span><span class="p">(</span><span class="s2">&quot;exampleActionRuleSuppression&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ResourceGroup&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resourceIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">suppression</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;recurrence_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Weekly&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;startDateUtc&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-01-01T01:02:03Z&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;endDateUtc&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-01-03T15:02:07Z&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;recurrenceWeeklies&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Monday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Friday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">condition</span></code> block as defined below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a description for the Action Rule.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Action Rule enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">scope</span></code> block as defined below.</p></li>
+<li><p><strong>suppression</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">suppression</span></code> block as defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertContext</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_context</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertRuleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_rule_id</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">description</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Fired</span></code> and <code class="docutils literal notranslate"><span class="pre">Resolved</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitorService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor_service</span></code> as block defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Security</span></code>, <code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Insights</span></code>, <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">Backup</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Edge</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Gateway</span></code>, <code class="docutils literal notranslate"><span class="pre">Health</span> <span class="pre">Platform</span></code>, <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">Analytics</span></code>, <code class="docutils literal notranslate"><span class="pre">Platform</span></code>, and <code class="docutils literal notranslate"><span class="pre">Resource</span> <span class="pre">Health</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">severity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">severity</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Sev0</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev1</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev2</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev3</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sev4</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetResourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">target_resource_type</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. The values should be valid resource types.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>scope</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of resource IDs of the given scope type which will be the target of action rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of target scope. Possible values are <code class="docutils literal notranslate"><span class="pre">ResourceGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">Resource</span></code>.</p></li>
+</ul>
+<p>The <strong>suppression</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of suppression. Possible values are <code class="docutils literal notranslate"><span class="pre">Always</span></code>, <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>, <code class="docutils literal notranslate"><span class="pre">Once</span></code>, and <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">schedule</span></code> block as defined below. Required if <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> is <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>, <code class="docutils literal notranslate"><span class="pre">Once</span></code> or <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">endDateUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - specifies the recurrence UTC end datetime (Y-m-d’T’H:M:S’Z’).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrenceMonthlies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - specifies the list of dayOfMonth to recurrence. Possible values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">31</span></code>. Required if <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> is <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrenceWeeklies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - specifies the list of dayOfWeek to recurrence. Possible values are <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>, <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code> and  <code class="docutils literal notranslate"><span class="pre">Saturday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startDateUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - specifies the recurrence UTC start datetime (Y-m-d’T’H:M:S’Z’).</p></li>
+</ul>
+</li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.condition">
+<code class="sig-name descname">condition</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">condition</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertContext</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_context</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertRuleId</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_rule_id</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">description</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitor</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Fired</span></code> and <code class="docutils literal notranslate"><span class="pre">Resolved</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitorService</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor_service</span></code> as block defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Security</span></code>, <code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Insights</span></code>, <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">Backup</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Edge</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Gateway</span></code>, <code class="docutils literal notranslate"><span class="pre">Health</span> <span class="pre">Platform</span></code>, <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">Analytics</span></code>, <code class="docutils literal notranslate"><span class="pre">Platform</span></code>, and <code class="docutils literal notranslate"><span class="pre">Resource</span> <span class="pre">Health</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">severity</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">severity</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Sev0</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev1</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev2</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev3</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sev4</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetResourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">target_resource_type</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match for a given condition. The values should be valid resource types.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a description for the Action Rule.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.enabled">
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the Action Rule enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.scope">
+<code class="sig-name descname">scope</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">scope</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of resource IDs of the given scope type which will be the target of action rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of target scope. Possible values are <code class="docutils literal notranslate"><span class="pre">ResourceGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">Resource</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.suppression">
+<code class="sig-name descname">suppression</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.suppression" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">suppression</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of suppression. Possible values are <code class="docutils literal notranslate"><span class="pre">Always</span></code>, <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>, <code class="docutils literal notranslate"><span class="pre">Once</span></code>, and <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">schedule</span></code> block as defined below. Required if <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> is <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>, <code class="docutils literal notranslate"><span class="pre">Once</span></code> or <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">endDateUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - specifies the recurrence UTC end datetime (Y-m-d’T’H:M:S’Z’).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrenceMonthlies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - specifies the list of dayOfMonth to recurrence. Possible values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">31</span></code>. Required if <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> is <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrenceWeeklies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - specifies the list of dayOfWeek to recurrence. Possible values are <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>, <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code> and  <code class="docutils literal notranslate"><span class="pre">Saturday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startDateUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - specifies the recurrence UTC start datetime (Y-m-d’T’H:M:S’Z’).</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">suppression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ActionRuleSuppression resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">condition</span></code> block as defined below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a description for the Action Rule.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Action Rule enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">scope</span></code> block as defined below.</p></li>
+<li><p><strong>suppression</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">suppression</span></code> block as defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertContext</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_context</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertRuleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">alert_rule_id</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">description</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>, and <code class="docutils literal notranslate"><span class="pre">DoesNotContain</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Fired</span></code> and <code class="docutils literal notranslate"><span class="pre">Resolved</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitorService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">monitor_service</span></code> as block defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ActivityLog</span> <span class="pre">Security</span></code>, <code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Insights</span></code>, <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">Backup</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Edge</span></code>, <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Box</span> <span class="pre">Gateway</span></code>, <code class="docutils literal notranslate"><span class="pre">Health</span> <span class="pre">Platform</span></code>, <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">Analytics</span></code>, <code class="docutils literal notranslate"><span class="pre">Platform</span></code>, and <code class="docutils literal notranslate"><span class="pre">Resource</span> <span class="pre">Health</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">severity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">severity</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Sev0</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev1</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev2</span></code>, <code class="docutils literal notranslate"><span class="pre">Sev3</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sev4</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetResourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">target_resource_type</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operator for a given condition. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values to match for a given condition. The values should be valid resource types.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>scope</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of resource IDs of the given scope type which will be the target of action rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of target scope. Possible values are <code class="docutils literal notranslate"><span class="pre">ResourceGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">Resource</span></code>.</p></li>
+</ul>
+<p>The <strong>suppression</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of suppression. Possible values are <code class="docutils literal notranslate"><span class="pre">Always</span></code>, <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>, <code class="docutils literal notranslate"><span class="pre">Once</span></code>, and <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">schedule</span></code> block as defined below. Required if <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> is <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>, <code class="docutils literal notranslate"><span class="pre">Once</span></code> or <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">endDateUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - specifies the recurrence UTC end datetime (Y-m-d’T’H:M:S’Z’).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrenceMonthlies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - specifies the list of dayOfMonth to recurrence. Possible values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">31</span></code>. Required if <code class="docutils literal notranslate"><span class="pre">recurrence_type</span></code> is <code class="docutils literal notranslate"><span class="pre">Monthly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrenceWeeklies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - specifies the list of dayOfWeek to recurrence. Possible values are <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>, <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code> and  <code class="docutils literal notranslate"><span class="pre">Saturday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startDateUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - specifies the recurrence UTC start datetime (Y-m-d’T’H:M:S’Z’).</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.monitoring.ActionRuleSuppression.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionRuleSuppression.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.monitoring.ActivityLogAlert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActivityLogAlert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">criteria</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Activity Log Alert within Azure Monitor.</p>
@@ -496,7 +1134,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Recommendation&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">action</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;actionGroupId&quot;</span><span class="p">:</span> <span class="n">main_action_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;action_group_id&quot;</span><span class="p">:</span> <span class="n">main_action_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;webhookProperties&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -521,7 +1159,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 <p>The <strong>criteria</strong> object supports the following:</p>
@@ -542,7 +1180,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">actions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert.actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">action</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 </dd></dl>
@@ -625,7 +1263,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 <p>The <strong>criteria</strong> object supports the following:</p>
@@ -1944,7 +2582,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">}],</span>
     <span class="p">}],</span>
     <span class="n">action</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;actionGroupId&quot;</span><span class="p">:</span> <span class="n">main_action_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;action_group_id&quot;</span><span class="p">:</span> <span class="n">main_action_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -1970,7 +2608,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 <p>The <strong>criterias</strong> object supports the following:</p>
@@ -1993,7 +2631,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">actions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert.actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">action</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 </dd></dl>
@@ -2106,7 +2744,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 <p>The <strong>criterias</strong> object supports the following:</p>

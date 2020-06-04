@@ -86,8 +86,8 @@ anything, please consult the source <a class="reference external" href="https://
             <span class="p">},</span>
         <span class="p">],</span>
         <span class="s2">&quot;managed_rule_set&quot;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="s2">&quot;ruleSetType&quot;</span><span class="p">:</span> <span class="s2">&quot;OWASP&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;ruleSetVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;3.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;OWASP&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.1&quot;</span><span class="p">,</span>
             <span class="s2">&quot;rule_group_override&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;ruleGroupName&quot;</span><span class="p">:</span> <span class="s2">&quot;REQUEST-920-PROTOCOL-ENFORCEMENT&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;disabledRules&quot;</span><span class="p">:</span> <span class="p">[</span>
