@@ -4,7 +4,7 @@ title: "Devopsdays Los Angeles"
 
 # Events with external registrations should not be indexed
 # and have redirect to the external registration page.
-block_from_external_search: true
+block_external_search_index: true
 redirect_to: "https://devopsdays.org/events/2019-los-angeles/registration"
 
 # Event information

@@ -4,7 +4,7 @@ title: "Dutch .NET Group"
 
 # Events with external registrations should not be indexed
 # and have redirect to the external registration page.
-block_from_external_search: true
+block_external_search_index: true
 redirect_to: "https://www.meetup.com/dutchdotnet/events/267776963"
 
 # Event information
