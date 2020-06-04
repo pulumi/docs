@@ -74,10 +74,7 @@ SDK reference documentation, organized by language.
     <dt>Pulumi SDK</dt>
     <dd><a href="{{< relref "/docs/reference/pkg/python/pulumi" >}}">pulumi</a></dd>
     <dt>Pulumi Policy</dt>
-    <dd>
-        <a href="{{< relref "/docs/reference/pkg/python/pulumi_policy" >}}">pulumi_policy</a>
-        <span class="ml-2 badge badge-preview">PREVIEW</span>
-    </dd>
+    <dd><a href="{{< relref "/docs/reference/pkg/python/pulumi_policy" >}}">pulumi_policy</a></dd>
     <dt>Pulumi Terraform</dt>
     <dd><a href="{{< relref "/docs/reference/pkg/python/pulumi_terraform" >}}">pulumi_terraform</a></dd>
 </dl>
