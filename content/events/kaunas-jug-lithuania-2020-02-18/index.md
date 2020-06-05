@@ -4,7 +4,7 @@ title: "Kaunas Java User Group MeetUp #52"
 
 # Events with external registrations should not be indexed
 # and have redirect to the external registration page.
-block_from_external_search: true
+block_external_search_index: true
 redirect_to: "https://www.eventbrite.com/e/kaunas-jug-52-meetup-tickets-92338126823"
 
 # Event information
