@@ -32,8 +32,7 @@ phase because a modification has not yet taken place. You can use the
 <blockquote>
 <div><p><strong>Note:</strong> using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a
 brief downtime as the broker reboots.</p>
-<p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>

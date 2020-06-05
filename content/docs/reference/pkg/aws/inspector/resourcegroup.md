@@ -264,7 +264,7 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an [Amazon Inspector assessment target](https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html).
+    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -282,7 +282,7 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an [Amazon Inspector assessment target](https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html).
+    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -300,7 +300,7 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an [Amazon Inspector assessment target](https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html).
+    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -318,7 +318,7 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an [Amazon Inspector assessment target](https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html).
+    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -596,7 +596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an [Amazon Inspector assessment target](https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html).
+    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -625,7 +625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an [Amazon Inspector assessment target](https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html).
+    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -654,7 +654,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an [Amazon Inspector assessment target](https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html).
+    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -683,7 +683,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an [Amazon Inspector assessment target](https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html).
+    <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
 
 </dl>

@@ -655,7 +655,7 @@ block with a /56 prefix length for the VPC was assigned
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html)
+`aws.ec2.MainRouteTableAssociation`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -806,7 +806,7 @@ block with a /56 prefix length for the VPC was assigned
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html)
+`aws.ec2.MainRouteTableAssociation`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -957,7 +957,7 @@ block with a /56 prefix length for the VPC was assigned
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html)
+`aws.ec2.MainRouteTableAssociation`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1108,7 +1108,7 @@ block with a /56 prefix length for the VPC was assigned
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html)
+`aws.ec2.MainRouteTableAssociation`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1420,7 +1420,7 @@ See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/Us
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html)
+`aws.ec2.MainRouteTableAssociation`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1617,7 +1617,7 @@ See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/Us
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html)
+`aws.ec2.MainRouteTableAssociation`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1814,7 +1814,7 @@ See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/Us
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html)
+`aws.ec2.MainRouteTableAssociation`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2011,7 +2011,7 @@ See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/Us
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html)
+`aws.ec2.MainRouteTableAssociation`
 {{% /md %}}</dd>
 
     <dt class="property-optional"

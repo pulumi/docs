@@ -255,7 +255,7 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The placement strategy.
+    <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -295,7 +295,7 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The placement strategy.
+    <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -335,7 +335,7 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Placement<wbr>Strategy</span>
     </dt>
-    <dd>{{% md %}}The placement strategy.
+    <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -375,7 +375,7 @@ The PlacementGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The placement strategy.
+    <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -686,7 +686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The placement strategy.
+    <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -737,7 +737,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The placement strategy.
+    <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -788,7 +788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Placement<wbr>Strategy</span>
     </dt>
-    <dd>{{% md %}}The placement strategy.
+    <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,7 +839,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The placement strategy.
+    <dd>{{% md %}}The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -267,7 +267,7 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
-Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html) resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -289,7 +289,7 @@ Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the [`aws.apigateway.ClientCertificate`](https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html) resource to configure a client certificate.
+    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
 {{% /md %}}</dd>
 
@@ -397,7 +397,7 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
-Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html) resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,7 +419,7 @@ Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the [`aws.apigateway.ClientCertificate`](https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html) resource to configure a client certificate.
+    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
 {{% /md %}}</dd>
 
@@ -527,7 +527,7 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
-Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html) resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -549,7 +549,7 @@ Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the [`aws.apigateway.ClientCertificate`](https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html) resource to configure a client certificate.
+    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
 {{% /md %}}</dd>
 
@@ -657,7 +657,7 @@ Supported only for WebSocket APIs.
         <span class="property-type"><a href="#stageaccesslogsettings">Dict[Stage<wbr>Access<wbr>Log<wbr>Settings]</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
-Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html) resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -679,7 +679,7 @@ Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the [`aws.apigateway.ClientCertificate`](https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html) resource to configure a client certificate.
+    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
 {{% /md %}}</dd>
 
@@ -797,9 +797,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
-or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+Set only for WebSocket APIs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -821,7 +822,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
+e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 {{% /md %}}</dd>
 
 </dl>
@@ -850,9 +851,10 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
-or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+Set only for WebSocket APIs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -874,7 +876,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
+e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 {{% /md %}}</dd>
 
 </dl>
@@ -903,9 +905,10 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
-or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+Set only for WebSocket APIs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -927,7 +930,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
+e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 {{% /md %}}</dd>
 
 </dl>
@@ -956,9 +959,10 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
-or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+Set only for WebSocket APIs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -980,7 +984,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
+e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 {{% /md %}}</dd>
 
 </dl>
@@ -1125,7 +1129,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
-Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html) resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1169,7 +1173,7 @@ Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the [`aws.apigateway.ClientCertificate`](https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html) resource to configure a client certificate.
+    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
 {{% /md %}}</dd>
 
@@ -1214,9 +1218,10 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
-or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+Set only for WebSocket APIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1228,7 +1233,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
+e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1291,7 +1296,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
-Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html) resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1335,7 +1340,7 @@ Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the [`aws.apigateway.ClientCertificate`](https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html) resource to configure a client certificate.
+    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
 {{% /md %}}</dd>
 
@@ -1380,9 +1385,10 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
-or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+Set only for WebSocket APIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1394,7 +1400,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
+e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1457,7 +1463,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
-Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html) resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1501,7 +1507,7 @@ Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the [`aws.apigateway.ClientCertificate`](https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html) resource to configure a client certificate.
+    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
 {{% /md %}}</dd>
 
@@ -1546,9 +1552,10 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
-or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+Set only for WebSocket APIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1560,7 +1567,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
+e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1623,7 +1630,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-type"><a href="#stageaccesslogsettings">Dict[Stage<wbr>Access<wbr>Log<wbr>Settings]</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
-Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html) resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
+Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1667,7 +1674,7 @@ Use the [`aws.apigateway.Account`](https://www.terraform.io/docs/providers/aws/r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the [`aws.apigateway.ClientCertificate`](https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html) resource to configure a client certificate.
+    <dd>{{% md %}}The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
 Supported only for WebSocket APIs.
 {{% /md %}}</dd>
 
@@ -1712,9 +1719,10 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
-or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    <dd>{{% md %}}The ARN prefix to be used in an `aws.lambda.Permission`'s `source_arn` attribute
+or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
+Set only for WebSocket APIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1726,7 +1734,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
+e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 {{% /md %}}</dd>
 
     <dt class="property-optional"

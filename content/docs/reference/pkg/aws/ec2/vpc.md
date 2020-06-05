@@ -753,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html).
+`aws.ec2.MainRouteTableAssociation`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -870,7 +870,7 @@ this VPC. Note that you can change a VPC's main route table by using an
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html).
+`aws.ec2.MainRouteTableAssociation`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -987,7 +987,7 @@ this VPC. Note that you can change a VPC's main route table by using an
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html).
+`aws.ec2.MainRouteTableAssociation`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1104,7 +1104,7 @@ this VPC. Note that you can change a VPC's main route table by using an
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html).
+`aws.ec2.MainRouteTableAssociation`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1419,7 +1419,7 @@ Only valid in regions and accounts that support EC2 Classic.
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html).
+`aws.ec2.MainRouteTableAssociation`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1619,7 +1619,7 @@ Only valid in regions and accounts that support EC2 Classic.
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html).
+`aws.ec2.MainRouteTableAssociation`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1819,7 +1819,7 @@ Only valid in regions and accounts that support EC2 Classic.
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html).
+`aws.ec2.MainRouteTableAssociation`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2019,7 +2019,7 @@ Only valid in regions and accounts that support EC2 Classic.
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with
 this VPC. Note that you can change a VPC's main route table by using an
-[`aws.ec2.MainRouteTableAssociation`](https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html).
+`aws.ec2.MainRouteTableAssociation`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

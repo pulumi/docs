@@ -13,7 +13,6 @@ meta_desc: "Explore the ApnsChannel resource of the pinpoint module, including e
 Provides a Pinpoint APNs Channel resource.
 
 > **Note:** All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 
 

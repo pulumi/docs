@@ -13,7 +13,7 @@ meta_desc: "Explore the GetSnapshot function of the rds module, including exampl
 Use this data source to get information about a DB Snapshot for use when provisioning DB instances
 
 > **NOTE:** This data source does not apply to snapshots created on Aurora DB clusters.
-See the [`aws.rds.ClusterSnapshot` data source](https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html) for DB Cluster snapshots.
+See the `aws.rds.ClusterSnapshot` data source for DB Cluster snapshots.
 
 {{% examples %}}
 {{% /examples %}}

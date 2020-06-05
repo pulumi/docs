@@ -581,7 +581,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Group>]</span>
+        <span class="property-type">List[Group, Default=>]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -603,7 +603,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role>]</span>
+        <span class="property-type">List[Role, Default=>]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[User>]</span>
+        <span class="property-type">List[User, Default=>]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Group>]</span>
+        <span class="property-type">List[Group, Default=>]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -1056,7 +1056,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role>]</span>
+        <span class="property-type">List[Role, Default=>]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -1067,7 +1067,7 @@ The following state arguments are supported:
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[User>]</span>
+        <span class="property-type">List[User, Default=>]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>

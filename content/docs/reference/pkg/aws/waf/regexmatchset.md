@@ -868,7 +868,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of a [Regex Pattern Set](https://www.terraform.io/docs/providers/aws/r/waf_regex_pattern_set.html).
+    <dd>{{% md %}}The ID of a `WAF Regex Pattern Set`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -911,7 +911,7 @@ for all supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of a [Regex Pattern Set](https://www.terraform.io/docs/providers/aws/r/waf_regex_pattern_set.html).
+    <dd>{{% md %}}The ID of a `WAF Regex Pattern Set`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -954,7 +954,7 @@ for all supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of a [Regex Pattern Set](https://www.terraform.io/docs/providers/aws/r/waf_regex_pattern_set.html).
+    <dd>{{% md %}}The ID of a `WAF Regex Pattern Set`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -997,7 +997,7 @@ for all supported values.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of a [Regex Pattern Set](https://www.terraform.io/docs/providers/aws/r/waf_regex_pattern_set.html).
+    <dd>{{% md %}}The ID of a `WAF Regex Pattern Set`.
 {{% /md %}}</dd>
 
     <dt class="property-required"

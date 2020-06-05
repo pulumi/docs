@@ -3056,7 +3056,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
+Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3067,7 +3067,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3097,7 +3097,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
+Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3108,7 +3108,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3138,7 +3138,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
+Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3149,7 +3149,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3179,7 +3179,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
+Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3190,7 +3190,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

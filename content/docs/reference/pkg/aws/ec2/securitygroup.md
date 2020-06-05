@@ -87,7 +87,10 @@ class MyStack : Stack
                     FromPort = 443,
                     ToPort = 443,
                     Protocol = "tcp",
-                    CidrBlocks = aws_vpc.Main.Cidr_block,
+                    CidrBlocks = 
+                    {
+                        aws_vpc.Main.Cidr_block,
+                    },
                 },
             },
             Egress = 
@@ -131,7 +134,7 @@ allow_tls = aws.ec2.SecurityGroup("allowTls",
         "from_port": 443,
         "to_port": 443,
         "protocol": "tcp",
-        "cidr_blocks": aws_vpc["main"]["cidr_block"],
+        "cidr_blocks": [aws_vpc["main"]["cidr_block"]],
     }],
     egress=[{
         "from_port": 0,
@@ -158,7 +161,7 @@ const allowTls = new aws.ec2.SecurityGroup("allowTls", {
         fromPort: 443,
         toPort: 443,
         protocol: "tcp",
-        cidrBlocks: aws_vpc.main.cidr_block,
+        cidrBlocks: [aws_vpc.main.cidr_block],
     }],
     egress: [{
         fromPort: 0,

@@ -116,8 +116,8 @@ Applicable for WebSocket APIs.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.Api.execution_arn">
 <code class="sig-name descname">execution_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Api.execution_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN prefix to be used in an <cite>``lambda.Permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
-or in an <cite>``iam.Policy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_policy.html">https://www.terraform.io/docs/providers/aws/r/iam_policy.html</a>&gt;`_ to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
+<dd><p>The ARN prefix to be used in an <code class="docutils literal notranslate"><span class="pre">lambda.Permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
+or in an <code class="docutils literal notranslate"><span class="pre">iam.Policy</span></code> to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
 See the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html">Amazon API Gateway Developer Guide</a> for details.</p>
 </dd></dl>
 
@@ -187,8 +187,8 @@ Applicable for WebSocket APIs.</p>
 </p></li>
 <li><p><strong>credentials_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Part of <em>quick create</em>. Specifies any credentials required for the integration. Applicable for HTTP APIs.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the API.</p></li>
-<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN prefix to be used in an <cite>``lambda.Permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
-or in an <cite>``iam.Policy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_policy.html">https://www.terraform.io/docs/providers/aws/r/iam_policy.html</a>&gt;`_ to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
+<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN prefix to be used in an <code class="docutils literal notranslate"><span class="pre">lambda.Permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
+or in an <code class="docutils literal notranslate"><span class="pre">iam.Policy</span></code> to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
 See the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html">Amazon API Gateway Developer Guide</a> for details.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API.</p></li>
@@ -276,8 +276,8 @@ More information can be found in the <a class="reference external" href="https:/
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
 <li><p><strong>api_mapping_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html">API mapping key</a>.</p></li>
-<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain name. Use the <cite>``apigatewayv2.DomainName`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_domain_name.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_domain_name.html</a>&gt;`_ resource to configure a domain name.</p></li>
-<li><p><strong>stage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API stage. Use the <cite>``apigatewayv2.Stage`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_stage.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_stage.html</a>&gt;`_ resource to configure an API stage.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain name. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.DomainName</span></code> resource to configure a domain name.</p></li>
+<li><p><strong>stage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API stage. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Stage</span></code> resource to configure an API stage.</p></li>
 </ul>
 </dd>
 </dl>
@@ -296,13 +296,13 @@ More information can be found in the <a class="reference external" href="https:/
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.ApiMapping.domain_name">
 <code class="sig-name descname">domain_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.ApiMapping.domain_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The domain name. Use the <cite>``apigatewayv2.DomainName`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_domain_name.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_domain_name.html</a>&gt;`_ resource to configure a domain name.</p>
+<dd><p>The domain name. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.DomainName</span></code> resource to configure a domain name.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.ApiMapping.stage">
 <code class="sig-name descname">stage</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.ApiMapping.stage" title="Permalink to this definition">¶</a></dt>
-<dd><p>The API stage. Use the <cite>``apigatewayv2.Stage`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_stage.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_stage.html</a>&gt;`_ resource to configure an API stage.</p>
+<dd><p>The API stage. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Stage</span></code> resource to configure an API stage.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -319,8 +319,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
 <li><p><strong>api_mapping_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html">API mapping key</a>.</p>
 </p></li>
-<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain name. Use the <cite>``apigatewayv2.DomainName`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_domain_name.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_domain_name.html</a>&gt;`_ resource to configure a domain name.</p></li>
-<li><p><strong>stage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API stage. Use the <cite>``apigatewayv2.Stage`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_stage.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_stage.html</a>&gt;`_ resource to configure an API stage.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain name. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.DomainName</span></code> resource to configure a domain name.</p></li>
+<li><p><strong>stage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API stage. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Stage</span></code> resource to configure an API stage.</p></li>
 </ul>
 </dd>
 </dl>
@@ -404,7 +404,7 @@ Supported only for <code class="docutils literal notranslate"><span class="pre">
 For WebSocket APIs, specify <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> for a Lambda function using incoming request parameters.
 For HTTP APIs, specify <code class="docutils literal notranslate"><span class="pre">JWT</span></code> to use JSON Web Tokens.</p></li>
 <li><p><strong>authorizer_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authorizer’s Uniform Resource Identifier (URI).
-For <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers this must be a well-formed Lambda function URI, such as the <code class="docutils literal notranslate"><span class="pre">invoke_arn</span></code> attribute of the <cite>``lambda.Function`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_function.html">https://www.terraform.io/docs/providers/aws/r/lambda_function.html</a>&gt;`_ resource.
+For <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers this must be a well-formed Lambda function URI, such as the <code class="docutils literal notranslate"><span class="pre">invoke_arn</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">lambda.Function</span></code> resource.
 Supported only for <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers.</p></li>
 <li><p><strong>identity_sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The identity sources for which authorization is requested.
 For <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers the value is a list of one or more mapping expressions of the specified request parameters.
@@ -418,7 +418,7 @@ Supported only for HTTP APIs.</p></li>
 <p>The <strong>jwt_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audiences</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base domain of the identity provider that issues JSON Web Tokens, such as the <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> attribute of the <cite>``cognito.UserPool`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/cognito_user_pool.html">https://www.terraform.io/docs/providers/aws/r/cognito_user_pool.html</a>&gt;`_ resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base domain of the identity provider that issues JSON Web Tokens, such as the <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">cognito.UserPool</span></code> resource.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.Authorizer.api_id">
@@ -445,7 +445,7 @@ For HTTP APIs, specify <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_aws.apigatewayv2.Authorizer.authorizer_uri">
 <code class="sig-name descname">authorizer_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Authorizer.authorizer_uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>The authorizer’s Uniform Resource Identifier (URI).
-For <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers this must be a well-formed Lambda function URI, such as the <code class="docutils literal notranslate"><span class="pre">invoke_arn</span></code> attribute of the <cite>``lambda.Function`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_function.html">https://www.terraform.io/docs/providers/aws/r/lambda_function.html</a>&gt;`_ resource.
+For <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers this must be a well-formed Lambda function URI, such as the <code class="docutils literal notranslate"><span class="pre">invoke_arn</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">lambda.Function</span></code> resource.
 Supported only for <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers.</p>
 </dd></dl>
 
@@ -464,7 +464,7 @@ For <code class="docutils literal notranslate"><span class="pre">JWT</span></cod
 Supported only for HTTP APIs.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audiences</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The base domain of the identity provider that issues JSON Web Tokens, such as the <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> attribute of the <cite>``cognito.UserPool`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/cognito_user_pool.html">https://www.terraform.io/docs/providers/aws/r/cognito_user_pool.html</a>&gt;`_ resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The base domain of the identity provider that issues JSON Web Tokens, such as the <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">cognito.UserPool</span></code> resource.</p></li>
 </ul>
 </dd></dl>
 
@@ -492,7 +492,7 @@ Supported only for <code class="docutils literal notranslate"><span class="pre">
 For WebSocket APIs, specify <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> for a Lambda function using incoming request parameters.
 For HTTP APIs, specify <code class="docutils literal notranslate"><span class="pre">JWT</span></code> to use JSON Web Tokens.</p></li>
 <li><p><strong>authorizer_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authorizer’s Uniform Resource Identifier (URI).
-For <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers this must be a well-formed Lambda function URI, such as the <code class="docutils literal notranslate"><span class="pre">invoke_arn</span></code> attribute of the <cite>``lambda.Function`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_function.html">https://www.terraform.io/docs/providers/aws/r/lambda_function.html</a>&gt;`_ resource.
+For <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers this must be a well-formed Lambda function URI, such as the <code class="docutils literal notranslate"><span class="pre">invoke_arn</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">lambda.Function</span></code> resource.
 Supported only for <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers.</p></li>
 <li><p><strong>identity_sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The identity sources for which authorization is requested.
 For <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code> authorizers the value is a list of one or more mapping expressions of the specified request parameters.
@@ -506,7 +506,7 @@ Supported only for HTTP APIs.</p></li>
 <p>The <strong>jwt_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audiences</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base domain of the identity provider that issues JSON Web Tokens, such as the <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> attribute of the <cite>``cognito.UserPool`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/cognito_user_pool.html">https://www.terraform.io/docs/providers/aws/r/cognito_user_pool.html</a>&gt;`_ resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base domain of the identity provider that issues JSON Web Tokens, such as the <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">cognito.UserPool</span></code> resource.</p></li>
 </ul>
 </dd></dl>
 
@@ -692,7 +692,7 @@ a particular domain name. An API stage can be associated with the domain name us
 <p>The <strong>domain_name_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-Use the <cite>``acm.Certificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>&gt;`_ resource to configure an ACM certificate.</p></li>
+Use the <code class="docutils literal notranslate"><span class="pre">acm.Certificate</span></code> resource to configure an ACM certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The endpoint type. Valid values: <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Route 53 Hosted Zone ID of the endpoint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">security_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Transport Layer Security (TLS) version of the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html">security policy</a> for the domain name. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.</p></li>
@@ -722,7 +722,7 @@ Use the <cite>``acm.Certificate`</cite> &lt;<a class="reference external" href="
 <dd><p>The domain name configuration.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-Use the <cite>``acm.Certificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>&gt;`_ resource to configure an ACM certificate.</p></li>
+Use the <code class="docutils literal notranslate"><span class="pre">acm.Certificate</span></code> resource to configure an ACM certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The endpoint type. Valid values: <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon Route 53 Hosted Zone ID of the endpoint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">security_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Transport Layer Security (TLS) version of the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html">security policy</a> for the domain name. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.</p></li>
@@ -759,7 +759,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>domain_name_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-Use the <cite>``acm.Certificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>&gt;`_ resource to configure an ACM certificate.</p></li>
+Use the <code class="docutils literal notranslate"><span class="pre">acm.Certificate</span></code> resource to configure an ACM certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The endpoint type. Valid values: <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Route 53 Hosted Zone ID of the endpoint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">security_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Transport Layer Security (TLS) version of the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html">security policy</a> for the domain name. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.</p></li>
@@ -1051,7 +1051,7 @@ More information can be found in the <a class="reference external" href="https:/
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
 <li><p><strong>content_handling_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to handle response payload content type conversions. Valid values: <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_BINARY</span></code>, <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_TEXT</span></code>.</p></li>
-<li><p><strong>integration_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Integration`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html</a>&gt;`_.</p></li>
+<li><p><strong>integration_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Integration</span></code>.</p></li>
 <li><p><strong>integration_response_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The integration response key.</p></li>
 <li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.</p></li>
 <li><p><strong>template_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions">template selection expression</a> for the integration response.</p>
@@ -1074,7 +1074,7 @@ More information can be found in the <a class="reference external" href="https:/
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.IntegrationResponse.integration_id">
 <code class="sig-name descname">integration_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.integration_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identifier of the <cite>``apigatewayv2.Integration`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html</a>&gt;`_.</p>
+<dd><p>The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Integration</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1108,7 +1108,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
 <li><p><strong>content_handling_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to handle response payload content type conversions. Valid values: <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_BINARY</span></code>, <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_TEXT</span></code>.</p></li>
-<li><p><strong>integration_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Integration`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html</a>&gt;`_.</p></li>
+<li><p><strong>integration_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Integration</span></code>.</p></li>
 <li><p><strong>integration_response_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The integration response key.</p></li>
 <li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.</p></li>
 <li><p><strong>template_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions">template selection expression</a> for the integration response.</p>
@@ -1306,7 +1306,7 @@ More information can be found in the <a class="reference external" href="https:/
 For WebSocket APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, <code class="docutils literal notranslate"><span class="pre">AWS_IAM</span></code> for using AWS IAM permissions, and <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> for using a Lambda authorizer.
 For HTTP APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, or <code class="docutils literal notranslate"><span class="pre">JWT</span></code> for using JSON Web Tokens.
 Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
-<li><p><strong>authorizer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Authorizer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html</a>&gt;`_ resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p></li>
+<li><p><strong>authorizer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Authorizer</span></code> resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p></li>
 <li><p><strong>model_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route.</p></li>
 <li><p><strong>operation_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operation name for the route.</p></li>
 <li><p><strong>request_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The request models for the route.</p></li>
@@ -1346,7 +1346,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</s
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.Route.authorizer_id">
 <code class="sig-name descname">authorizer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.authorizer_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identifier of the <cite>``apigatewayv2.Authorizer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html</a>&gt;`_ resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p>
+<dd><p>The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Authorizer</span></code> resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1403,7 +1403,7 @@ properties used to qualify the lookup.</p>
 For WebSocket APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, <code class="docutils literal notranslate"><span class="pre">AWS_IAM</span></code> for using AWS IAM permissions, and <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> for using a Lambda authorizer.
 For HTTP APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, or <code class="docutils literal notranslate"><span class="pre">JWT</span></code> for using JSON Web Tokens.
 Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
-<li><p><strong>authorizer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Authorizer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html</a>&gt;`_ resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p></li>
+<li><p><strong>authorizer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Authorizer</span></code> resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p></li>
 <li><p><strong>model_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route.</p>
 </p></li>
 <li><p><strong>operation_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operation name for the route.</p></li>
@@ -1478,7 +1478,7 @@ More information can be found in the <a class="reference external" href="https:/
 <li><p><strong>model_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route response.</p>
 </p></li>
 <li><p><strong>response_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The response models for the route response.</p></li>
-<li><p><strong>route_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Route`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html</a>&gt;`_.</p></li>
+<li><p><strong>route_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Route</span></code>.</p></li>
 <li><p><strong>route_response_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route response key.</p></li>
 </ul>
 </dd>
@@ -1504,7 +1504,7 @@ More information can be found in the <a class="reference external" href="https:/
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.RouteResponse.route_id">
 <code class="sig-name descname">route_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.route_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identifier of the <cite>``apigatewayv2.Route`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html</a>&gt;`_.</p>
+<dd><p>The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Route</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1528,7 +1528,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>model_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route response.</p>
 </p></li>
 <li><p><strong>response_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The response models for the route response.</p></li>
-<li><p><strong>route_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Route`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html</a>&gt;`_.</p></li>
+<li><p><strong>route_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Route</span></code>.</p></li>
 <li><p><strong>route_response_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route response key.</p></li>
 </ul>
 </dd>
@@ -1590,10 +1590,10 @@ More information can be found in the <a class="reference external" href="https:/
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>access_log_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for logging access in this stage.
-Use the <cite>``apigateway.Account`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html</a>&gt;`_ resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p></li>
+Use the <code class="docutils literal notranslate"><span class="pre">apigateway.Account</span></code> resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p></li>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
 <li><p><strong>auto_deploy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether updates to an API automatically trigger a new deployment. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>client_certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of a client certificate for the stage. Use the <cite>``apigateway.ClientCertificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html</a>&gt;`_ resource to configure a client certificate.
+<li><p><strong>client_certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of a client certificate for the stage. Use the <code class="docutils literal notranslate"><span class="pre">apigateway.ClientCertificate</span></code> resource to configure a client certificate.
 Supported only for WebSocket APIs.</p></li>
 <li><p><strong>default_route_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default route settings for the stage.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment identifier of the stage. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Deployment</span></code> resource to configure a deployment.</p></li>
@@ -1635,7 +1635,7 @@ Valid values: <code class="docutils literal notranslate"><span class="pre">ERROR
 <dt id="pulumi_aws.apigatewayv2.Stage.access_log_settings">
 <code class="sig-name descname">access_log_settings</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.access_log_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Settings for logging access in this stage.
-Use the <cite>``apigateway.Account`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html</a>&gt;`_ resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p>
+Use the <code class="docutils literal notranslate"><span class="pre">apigateway.Account</span></code> resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the CloudWatch Logs log group to receive access logs. Any trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> is trimmed from the ARN.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A single line <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats">format</a> of the access logs of data, as specified by <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html">selected $context variables</a>.</p></li>
@@ -1663,7 +1663,7 @@ Use the <cite>``apigateway.Account`</cite> &lt;<a class="reference external" hre
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.Stage.client_certificate_id">
 <code class="sig-name descname">client_certificate_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.client_certificate_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identifier of a client certificate for the stage. Use the <cite>``apigateway.ClientCertificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html</a>&gt;`_ resource to configure a client certificate.
+<dd><p>The identifier of a client certificate for the stage. Use the <code class="docutils literal notranslate"><span class="pre">apigateway.ClientCertificate</span></code> resource to configure a client certificate.
 Supported only for WebSocket APIs.</p>
 </dd></dl>
 
@@ -1697,16 +1697,17 @@ Valid values: <code class="docutils literal notranslate"><span class="pre">ERROR
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.Stage.execution_arn">
 <code class="sig-name descname">execution_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.execution_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN prefix to be used in an <cite>``lambda.Permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
-or in an <cite>``iam.Policy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_policy.html">https://www.terraform.io/docs/providers/aws/r/iam_policy.html</a>&gt;`_ to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
-See the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html">Amazon API Gateway Developer Guide</a> for details.</p>
+<dd><p>The ARN prefix to be used in an <code class="docutils literal notranslate"><span class="pre">lambda.Permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
+or in an <code class="docutils literal notranslate"><span class="pre">iam.Policy</span></code> to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
+See the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html">Amazon API Gateway Developer Guide</a> for details.
+Set only for WebSocket APIs.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_aws.apigatewayv2.Stage.invoke_url">
 <code class="sig-name descname">invoke_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.invoke_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URL to invoke the API pointing to the stage,
-e.g. <code class="docutils literal notranslate"><span class="pre">wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage</span></code></p>
+e.g. <code class="docutils literal notranslate"><span class="pre">wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage</span></code>, or <code class="docutils literal notranslate"><span class="pre">https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1755,22 +1756,23 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>access_log_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Settings for logging access in this stage.
-Use the <cite>``apigateway.Account`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html</a>&gt;`_ resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p>
+Use the <code class="docutils literal notranslate"><span class="pre">apigateway.Account</span></code> resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p>
 </p></li>
 <li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the stage.</p></li>
 <li><p><strong>auto_deploy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether updates to an API automatically trigger a new deployment. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>client_certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of a client certificate for the stage. Use the <cite>``apigateway.ClientCertificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html</a>&gt;`_ resource to configure a client certificate.
+<li><p><strong>client_certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of a client certificate for the stage. Use the <code class="docutils literal notranslate"><span class="pre">apigateway.ClientCertificate</span></code> resource to configure a client certificate.
 Supported only for WebSocket APIs.</p></li>
 <li><p><strong>default_route_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default route settings for the stage.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment identifier of the stage. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Deployment</span></code> resource to configure a deployment.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the stage.</p></li>
-<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN prefix to be used in an <cite>``lambda.Permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
-or in an <cite>``iam.Policy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_policy.html">https://www.terraform.io/docs/providers/aws/r/iam_policy.html</a>&gt;`_ to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
-See the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html">Amazon API Gateway Developer Guide</a> for details.</p>
+<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN prefix to be used in an <code class="docutils literal notranslate"><span class="pre">lambda.Permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
+or in an <code class="docutils literal notranslate"><span class="pre">iam.Policy</span></code> to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
+See the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html">Amazon API Gateway Developer Guide</a> for details.
+Set only for WebSocket APIs.</p>
 </p></li>
 <li><p><strong>invoke_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to invoke the API pointing to the stage,
-e.g. <code class="docutils literal notranslate"><span class="pre">wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage</span></code></p></li>
+e.g. <code class="docutils literal notranslate"><span class="pre">wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage</span></code>, or <code class="docutils literal notranslate"><span class="pre">https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/</span></code></p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage.</p></li>
 <li><p><strong>route_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Route settings for the stage.</p></li>
 <li><p><strong>stage_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines the stage variables for the stage.</p></li>
@@ -1850,7 +1852,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an Amazon API Gateway Version 2 VPC Link.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Amazon API Gateway Version 2 VPC Links enable private integrations that connect HTTP APIs to private resources in a VPC.
-To enable private integration for REST APIs, use the Amazon API Gateway Version 1 VPC Link <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_vpc_link.html">resource</a>.</p>
+To enable private integration for REST APIs, use the <code class="docutils literal notranslate"><span class="pre">Amazon</span> <span class="pre">API</span> <span class="pre">Gateway</span> <span class="pre">Version</span> <span class="pre">1</span> <span class="pre">VPC</span> <span class="pre">Link</span></code> resource.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
