@@ -363,7 +363,7 @@ def create_markdown_file(input: CreateMarkdownInput):
         f.write(body)
 
 def get_resource_docs_alert(provider_name):
-    return "{{{{< api-docs-alert \"{0}\" >}}}}".format(provider_name)
+    return "{{{{< resource-docs-alert \"{0}\" >}}}}".format(provider_name)
 
 def main():
     if len(sys.argv) > 3:
