@@ -25,8 +25,7 @@ phase because a modification has not yet taken place. You can use the
 (see documentation below).</p>
 <blockquote>
 <div><p><strong>Note:</strong> using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as the server reboots.
-<strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
@@ -389,7 +388,7 @@ are applied immediately, or during the next maintenance window. Default is<code 
 <li><p><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html">docs</a> about the details.</p></li>
 <li><p><strong>ca_cert_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional) The identifier of the CA certificate for the DB instance.</p></li>
-<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``docdb.Cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html">https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html</a>&gt;`_ in which to launch this instance.</p></li>
+<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <code class="docutils literal notranslate"><span class="pre">docdb.Cluster</span></code> in which to launch this instance.</p></li>
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for the DocDB instance. Defaults to <code class="docutils literal notranslate"><span class="pre">docdb</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">docdb</span></code>.</p></li>
 <li><p><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.</p></li>
 <li><p><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifer</span></code>.</p></li>
@@ -450,7 +449,7 @@ are applied immediately, or during the next maintenance window. Default is<code 
 <dl class="py attribute">
 <dt id="pulumi_aws.docdb.ClusterInstance.cluster_identifier">
 <code class="sig-name descname">cluster_identifier</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.cluster_identifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identifier of the <cite>``docdb.Cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html">https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html</a>&gt;`_ in which to launch this instance.</p>
+<dd><p>The identifier of the <code class="docutils literal notranslate"><span class="pre">docdb.Cluster</span></code> in which to launch this instance.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -577,7 +576,7 @@ are applied immediately, or during the next maintenance window. Default is<code 
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html">docs</a> about the details.</p>
 </p></li>
 <li><p><strong>ca_cert_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional) The identifier of the CA certificate for the DB instance.</p></li>
-<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``docdb.Cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html">https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html</a>&gt;`_ in which to launch this instance.</p></li>
+<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <code class="docutils literal notranslate"><span class="pre">docdb.Cluster</span></code> in which to launch this instance.</p></li>
 <li><p><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB subnet group to associate with this DB instance.</p></li>
 <li><p><strong>dbi_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region-unique, immutable identifier for the DB instance.</p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS address for this instance. May not be writable</p></li>

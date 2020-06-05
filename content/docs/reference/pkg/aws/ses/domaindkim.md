@@ -12,7 +12,7 @@ meta_desc: "Explore the DomainDkim resource of the ses module, including example
 
 Provides an SES domain DKIM generation resource.
 
-Domain ownership needs to be confirmed first using [ses_domain_identity Resource](https://www.terraform.io/docs/providers/aws/r/ses_domain_identity.html)
+Domain ownership needs to be confirmed first using `aws.ses.DomainIdentity` resource.
 
 
 

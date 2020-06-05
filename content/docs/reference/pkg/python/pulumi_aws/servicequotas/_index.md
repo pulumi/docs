@@ -263,7 +263,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </p></li>
 <li><p><strong>quota_name</strong> (<em>str</em>) – <p>Quota name within the service. When configured, the data source searches through all service quotas to find the matching quota name. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html">AWS CLI service-quotas list-service-quotas command</a>.</p>
 </p></li>
-<li><p><strong>service_code</strong> (<em>str</em>) – <p>Service code for the quota. Available values can be found with the <cite>``servicequotas.getService`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/servicequotas_service.html">https://www.terraform.io/docs/providers/aws/d/servicequotas_service.html</a>&gt;`_ or <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
+<li><p><strong>service_code</strong> (<em>str</em>) – <p>Service code for the quota. Available values can be found with the <code class="docutils literal notranslate"><span class="pre">servicequotas.getService</span></code> data source or <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
 </p></li>
 </ul>
 </dd>

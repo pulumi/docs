@@ -767,7 +767,7 @@ behavior and potentially leaves resources dangling.
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws.autoscaling.LifecycleHook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html)
+`aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
 {{% /md %}}</dd>
@@ -1133,7 +1133,7 @@ behavior and potentially leaves resources dangling.
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws.autoscaling.LifecycleHook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html)
+`aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
 {{% /md %}}</dd>
@@ -1499,7 +1499,7 @@ behavior and potentially leaves resources dangling.
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws.autoscaling.LifecycleHook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html)
+`aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
 {{% /md %}}</dd>
@@ -1865,7 +1865,7 @@ behavior and potentially leaves resources dangling.
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws.autoscaling.LifecycleHook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html)
+`aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
 {{% /md %}}</dd>
@@ -2468,7 +2468,7 @@ behavior and potentially leaves resources dangling.
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws.autoscaling.LifecycleHook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html)
+`aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
 {{% /md %}}</dd>
@@ -2845,7 +2845,7 @@ behavior and potentially leaves resources dangling.
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws.autoscaling.LifecycleHook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html)
+`aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
 {{% /md %}}</dd>
@@ -3222,7 +3222,7 @@ behavior and potentially leaves resources dangling.
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws.autoscaling.LifecycleHook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html)
+`aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
 {{% /md %}}</dd>
@@ -3599,7 +3599,7 @@ behavior and potentially leaves resources dangling.
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws.autoscaling.LifecycleHook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html)
+`aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
 {{% /md %}}</dd>

@@ -273,7 +273,7 @@ The RouteResponse resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.apigatewayv2.Route`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html).
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Route`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -335,7 +335,7 @@ The RouteResponse resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.apigatewayv2.Route`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html).
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Route`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -397,7 +397,7 @@ The RouteResponse resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.apigatewayv2.Route`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html).
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Route`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -459,7 +459,7 @@ The RouteResponse resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.apigatewayv2.Route`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html).
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Route`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -748,7 +748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.apigatewayv2.Route`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html).
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Route`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -810,7 +810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.apigatewayv2.Route`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html).
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Route`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -872,7 +872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.apigatewayv2.Route`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html).
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Route`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -934,7 +934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.apigatewayv2.Route`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html).
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Route`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

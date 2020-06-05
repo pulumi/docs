@@ -1139,14 +1139,13 @@ a distribution can be created if needed. In either case, it is necessary to crea
 given domain name which is an alias (either Route53 alias or traditional CNAME) to the regional domain name exported in
 the <code class="docutils literal notranslate"><span class="pre">regional_domain_name</span></code> attribute.</p>
 <blockquote>
-<div><p><strong>Note:</strong> API Gateway requires the use of AWS Certificate Manager (ACM) certificates instead of Identity and Access Management (IAM) certificates in regions that support ACM. Regions that support ACM can be found in the <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#acm_region">Regions and Endpoints Documentation</a>. To import an existing private key and certificate into ACM or request an ACM certificate, see the <cite>``acm.Certificate`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>&gt;`_.</p>
+<div><p><strong>Note:</strong> API Gateway requires the use of AWS Certificate Manager (ACM) certificates instead of Identity and Access Management (IAM) certificates in regions that support ACM. Regions that support ACM can be found in the <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#acm_region">Regions and Endpoints Documentation</a>. To import an existing private key and certificate into ACM or request an ACM certificate, see the <code class="docutils literal notranslate"><span class="pre">acm.Certificate</span></code> resource.</p>
 <p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">apigateway.DomainName</span></code> resource expects dependency on the <code class="docutils literal notranslate"><span class="pre">acm.CertificateValidation</span></code> as 
 only verified certificates can be used. This can be made either explicitly by adding the 
 <code class="docutils literal notranslate"><span class="pre">depends_on</span> <span class="pre">=</span> <span class="pre">[aws_acm_certificate_validation.cert]</span></code> attribute. Or implicitly by referring certificate ARN 
 from the validation resource where it will be available after the resource creation: 
 <code class="docutils literal notranslate"><span class="pre">regional_certificate_arn</span> <span class="pre">=</span> <span class="pre">aws_acm_certificate_validation.cert.certificate_arn</span></code>.</p>
-<p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
@@ -1586,7 +1585,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.apigateway.GetRestApiResult.execution_arn">
 <code class="sig-name descname">execution_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult.execution_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The execution ARN part to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> when allowing API Gateway to invoke a Lambda function, e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</span></code>, which can be concatenated with allowed stage, method and resource path.</p>
+<dd><p>The execution ARN part to be used in <code class="docutils literal notranslate"><span class="pre">lambda_permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> when allowing API Gateway to invoke a Lambda function, e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</span></code>, which can be concatenated with allowed stage, method and resource path.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1775,7 +1774,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">reques
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The integration input’s <a class="reference external" href="https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/">type</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> (for HTTP backends), <code class="docutils literal notranslate"><span class="pre">MOCK</span></code> (not calling any real backend), <code class="docutils literal notranslate"><span class="pre">AWS</span></code> (for AWS services), <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code> (for Lambda proxy integration) and <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> (for HTTP proxy integration). An <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> integration with a <code class="docutils literal notranslate"><span class="pre">connection_type</span></code> of <code class="docutils literal notranslate"><span class="pre">VPC_LINK</span></code> is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The input’s URI. <strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code>.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}</span></code>. <code class="docutils literal notranslate"><span class="pre">region</span></code>, <code class="docutils literal notranslate"><span class="pre">subdomain</span></code> and <code class="docutils literal notranslate"><span class="pre">service</span></code> are used to determine the right endpoint.
-e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</span></code></p></li>
+e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</span></code>. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1880,7 +1879,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">reques
 <code class="sig-name descname">uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Integration.uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>The input’s URI. <strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code>.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}</span></code>. <code class="docutils literal notranslate"><span class="pre">region</span></code>, <code class="docutils literal notranslate"><span class="pre">subdomain</span></code> and <code class="docutils literal notranslate"><span class="pre">service</span></code> are used to determine the right endpoint.
-e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</span></code></p>
+e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</span></code>. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1920,7 +1919,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">reques
 </p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The input’s URI. <strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code>.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}</span></code>. <code class="docutils literal notranslate"><span class="pre">region</span></code>, <code class="docutils literal notranslate"><span class="pre">subdomain</span></code> and <code class="docutils literal notranslate"><span class="pre">service</span></code> are used to determine the right endpoint.
-e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</span></code></p></li>
+e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</span></code>. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3217,7 +3216,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.apigateway.RestApi.execution_arn">
 <code class="sig-name descname">execution_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.RestApi.execution_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The execution ARN part to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
+<dd><p>The execution ARN part to be used in <code class="docutils literal notranslate"><span class="pre">lambda_permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
 when allowing API Gateway to invoke a Lambda function,
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</span></code>, which can be concatenated with allowed stage, method and resource path.</p>
 </dd></dl>
@@ -3270,7 +3269,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the REST API</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the REST API</p></li>
 <li><p><strong>endpoint_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument defining API endpoint configuration including endpoint type. Defined below.</p></li>
-<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The execution ARN part to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
+<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The execution ARN part to be used in <code class="docutils literal notranslate"><span class="pre">lambda_permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
 when allowing API Gateway to invoke a Lambda function,
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</span></code>, which can be concatenated with allowed stage, method and resource path.</p></li>
 <li><p><strong>minimum_compression_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).</p></li>
@@ -3461,7 +3460,7 @@ Allowed values include <code class="docutils literal notranslate"><span class="p
 <dl class="py attribute">
 <dt id="pulumi_aws.apigateway.Stage.execution_arn">
 <code class="sig-name descname">execution_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Stage.execution_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The execution ARN to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
+<dd><p>The execution ARN to be used in <code class="docutils literal notranslate"><span class="pre">lambda_permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
 when allowing API Gateway to invoke a Lambda function,
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</span></code></p>
 </dd></dl>
@@ -3523,7 +3522,7 @@ Allowed values include <code class="docutils literal notranslate"><span class="p
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ID of the deployment that the stage points to</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the stage</p></li>
 <li><p><strong>documentation_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the associated API documentation</p></li>
-<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The execution ARN to be used in <cite>``lambda_permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
+<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The execution ARN to be used in <code class="docutils literal notranslate"><span class="pre">lambda_permission</span></code>’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code>
 when allowing API Gateway to invoke a Lambda function,
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</span></code></p></li>
 <li><p><strong>invoke_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to invoke the API pointing to the stage,
@@ -3915,7 +3914,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an API Gateway VPC Link.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Amazon API Gateway Version 1 VPC Links enable private integrations that connect REST APIs to private resources in a VPC.
-To enable private integration for HTTP APIs, use the Amazon API Gateway Version 2 VPC Link <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_vpc_link.html">resource</a>.</p>
+To enable private integration for HTTP APIs, use the <code class="docutils literal notranslate"><span class="pre">Amazon</span> <span class="pre">API</span> <span class="pre">Gateway</span> <span class="pre">Version</span> <span class="pre">2</span> <span class="pre">VPC</span> <span class="pre">Link</span></code> resource.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>

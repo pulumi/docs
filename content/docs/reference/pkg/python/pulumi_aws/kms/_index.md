@@ -160,10 +160,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The KMS ciphertext resource allows you to encrypt plaintext into ciphertext
 by using an AWS KMS customer master key. The value returned by this resource
 is stable across every apply. For a changing ciphertext value each apply, see
-the <cite>``kms.Ciphertext`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html</a>&gt;`_.</p>
+the <code class="docutils literal notranslate"><span class="pre">kms.Ciphertext</span></code> data source.</p>
 <blockquote>
-<div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
@@ -277,9 +276,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.kms.ExternalKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">ExternalKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_material_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.ExternalKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a KMS Customer Master Key that uses external key material. To instead manage a KMS Customer Master Key where AWS automatically generates and potentially rotates key material, see the <cite>``kms.Key`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_key.html">https://www.terraform.io/docs/providers/aws/r/kms_key.html</a>&gt;`_.</p>
+<dd><p>Manages a KMS Customer Master Key that uses external key material. To instead manage a KMS Customer Master Key where AWS automatically generates and potentially rotates key material, see the <code class="docutils literal notranslate"><span class="pre">kms.Key</span></code> resource.</p>
 <blockquote>
-<div><p><strong>Note:</strong> All arguments including the key material will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<div><p><strong>Note:</strong> All arguments including the key material will be stored in the raw state as plain-text.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
@@ -913,8 +912,8 @@ without having to hard code the ARN as input.</p>
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_cipher_text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plaintext</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_cipher_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>The KMS ciphertext data source allows you to encrypt plaintext into ciphertext
 by using an AWS KMS customer master key. The value returned by this data source
-changes every apply. For a stable ciphertext value, see the <cite>``kms.Ciphertext`</cite>
-resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html">https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html</a>&gt;`_.</p>
+changes every apply. For a stable ciphertext value, see the <code class="docutils literal notranslate"><span class="pre">kms.Ciphertext</span></code>
+resource.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
@@ -973,7 +972,7 @@ without having to hard code the ARN as input.</p>
 <dl class="py function">
 <dt id="pulumi_aws.kms.get_secret">
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">secrets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>!&gt; <strong>WARNING:</strong> This data source was removed in version 2.0.0 of the AWS Provider. You can migrate existing configurations to the <cite>``kms.getSecrets`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>&gt;`_ following instructions available in the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">Version 2 Upgrade Guide</a>.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">context</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>

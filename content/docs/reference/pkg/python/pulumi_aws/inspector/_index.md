@@ -280,7 +280,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags that are used to select the EC2 instances to be included in an <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html">Amazon Inspector assessment target</a>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags that are used to select the EC2 instances to be included in an <code class="docutils literal notranslate"><span class="pre">Amazon</span> <span class="pre">Inspector</span> <span class="pre">assessment</span> <span class="pre">target</span></code> resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -293,7 +293,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.inspector.ResourceGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value map of tags that are used to select the EC2 instances to be included in an <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html">Amazon Inspector assessment target</a>.</p>
+<dd><p>Key-value map of tags that are used to select the EC2 instances to be included in an <code class="docutils literal notranslate"><span class="pre">Amazon</span> <span class="pre">Inspector</span> <span class="pre">assessment</span> <span class="pre">target</span></code> resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -308,8 +308,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource group ARN.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Key-value map of tags that are used to select the EC2 instances to be included in an <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/inspector_assessment_target.html">Amazon Inspector assessment target</a>.</p>
-</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags that are used to select the EC2 instances to be included in an <code class="docutils literal notranslate"><span class="pre">Amazon</span> <span class="pre">Inspector</span> <span class="pre">assessment</span> <span class="pre">target</span></code> resource.</p></li>
 </ul>
 </dd>
 </dl>

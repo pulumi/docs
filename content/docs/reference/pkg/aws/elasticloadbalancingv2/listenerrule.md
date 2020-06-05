@@ -78,6 +78,58 @@ class MyStack : Stack
             {
                 new Aws.LB.Inputs.ListenerRuleActionArgs
                 {
+                    Forward = 
+                    {
+                        
+                        {
+                            { "stickiness", 
+                            {
+                                
+                                {
+                                    { "duration", 600 },
+                                    { "enabled", true },
+                                },
+                            } },
+                            { "targetGroup", 
+                            {
+                                
+                                {
+                                    { "arn", aws_lb_target_group.Main.Arn },
+                                    { "weight", 80 },
+                                },
+                                
+                                {
+                                    { "arn", aws_lb_target_group.Canary.Arn },
+                                    { "weight", 20 },
+                                },
+                            } },
+                        },
+                    },
+                    Type = "forward",
+                },
+            },
+            Conditions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleConditionArgs
+                {
+                    HostHeader = new Aws.LB.Inputs.ListenerRuleConditionHostHeaderArgs
+                    {
+                        Values = 
+                        {
+                            "my-service.*.mycompany.io",
+                        },
+                    },
+                },
+            },
+            ListenerArn = frontEndListener.Arn,
+            Priority = 99,
+        });
+        var hostBasedWeightedRouting = new Aws.LB.ListenerRule("hostBasedWeightedRouting", new Aws.LB.ListenerRuleArgs
+        {
+            Actions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
                     TargetGroupArn = aws_lb_target_group.Static.Arn,
                     Type = "forward",
                 },
@@ -236,6 +288,33 @@ static = aws.lb.ListenerRule("static",
     priority=100)
 host_based_routing = aws.lb.ListenerRule("hostBasedRouting",
     actions=[{
+        "forward": [{
+            "stickiness": [{
+                "duration": 600,
+                "enabled": True,
+            }],
+            "targetGroup": [
+                {
+                    "arn": aws_lb_target_group["main"]["arn"],
+                    "weight": 80,
+                },
+                {
+                    "arn": aws_lb_target_group["canary"]["arn"],
+                    "weight": 20,
+                },
+            ],
+        }],
+        "type": "forward",
+    }],
+    conditions=[{
+        "hostHeader": {
+            "values": ["my-service.*.mycompany.io"],
+        },
+    }],
+    listener_arn=front_end_listener.arn,
+    priority=99)
+host_based_weighted_routing = aws.lb.ListenerRule("hostBasedWeightedRouting",
+    actions=[{
         "target_group_arn": aws_lb_target_group["static"]["arn"],
         "type": "forward",
     }],
@@ -336,6 +415,34 @@ const static = new aws.lb.ListenerRule("static", {
     priority: 100,
 });
 const hostBasedRouting = new aws.lb.ListenerRule("host_based_routing", {
+    actions: [{
+        forward: [{
+            stickiness: [{
+                duration: 600,
+                enabled: true,
+            }],
+            targetGroup: [
+                {
+                    arn: aws_lb_target_group_main.arn,
+                    weight: 80,
+                },
+                {
+                    arn: aws_lb_target_group_canary.arn,
+                    weight: 20,
+                },
+            ],
+        }],
+        type: "forward",
+    }],
+    conditions: [{
+        hostHeader: {
+            values: ["my-service.*.mycompany.io"],
+        },
+    }],
+    listenerArn: frontEndListener.arn,
+    priority: 99,
+});
+const hostBasedWeightedRouting = new aws.lb.ListenerRule("host_based_weighted_routing", {
     actions: [{
         targetGroupArn: aws_lb_target_group_static.arn,
         type: "forward",
@@ -821,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the rule (matches `id`)
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -849,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the rule (matches `id`)
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -877,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the rule (matches `id`)
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -905,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the rule (matches `id`)
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1070,7 +1177,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the rule (matches `id`)
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1132,7 +1239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the rule (matches `id`)
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1194,7 +1301,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the rule (matches `id`)
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1256,7 +1363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the rule (matches `id`)
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1371,6 +1478,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="forward_csharp">
+<a href="#forward_csharp" style="color: inherit; text-decoration: inherit;">Forward</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforward">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
 </span> 
@@ -1398,7 +1516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Required if `type` is `forward`.
+    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd>
 
 </dl>
@@ -1454,6 +1572,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="forward_go">
+<a href="#forward_go" style="color: inherit; text-decoration: inherit;">Forward</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforward">Listener<wbr>Rule<wbr>Action<wbr>Forward</a></span>
+    </dt>
+    <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
 </span> 
@@ -1481,7 +1610,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Required if `type` is `forward`.
+    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd>
 
 </dl>
@@ -1537,6 +1666,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="forward_nodejs">
+<a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforward">Listener<wbr>Rule<wbr>Action<wbr>Forward</a></span>
+    </dt>
+    <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span> 
@@ -1564,7 +1704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Required if `type` is `forward`.
+    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd>
 
 </dl>
@@ -1620,6 +1760,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="forward_python">
+<a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforward">Dict[Listener<wbr>Rule<wbr>Action<wbr>Forward]</a></span>
+    </dt>
+    <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span> 
@@ -1647,7 +1798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Required if `type` is `forward`.
+    <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd>
 
 </dl>
@@ -2754,6 +2905,408 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="listenerruleactionforward">Listener<wbr>Rule<wbr>Action<wbr>Forward</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleActionForward">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionForward">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionForwardArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionForward.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_csharp">
+<a href="#targetgroups_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">List&lt;Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more target groups block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stickiness_csharp">
+<a href="#stickiness_csharp" style="color: inherit; text-decoration: inherit;">Stickiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The target group stickiness for the rule.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_go">
+<a href="#targetgroups_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">[]Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}One or more target groups block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stickiness_go">
+<a href="#stickiness_go" style="color: inherit; text-decoration: inherit;">Stickiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
+    </dt>
+    <dd>{{% md %}}The target group stickiness for the rule.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_nodejs">
+<a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more target groups block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stickiness_nodejs">
+<a href="#stickiness_nodejs" style="color: inherit; text-decoration: inherit;">stickiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
+    </dt>
+    <dd>{{% md %}}The target group stickiness for the rule.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_python">
+<a href="#targetgroups_python" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">List[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more target groups block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stickiness_python">
+<a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Dict[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness]</a></span>
+    </dt>
+    <dd>{{% md %}}The target group stickiness for the rule.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="listenerruleactionforwardstickiness">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleActionForwardStickiness">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionForwardStickiness">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardStickinessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardStickinessOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionForwardStickinessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionForwardStickiness.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_csharp">
+<a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether target group stickiness is enabled.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_go">
+<a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether target group stickiness is enabled.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_nodejs">
+<a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether target group stickiness is enabled.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_python">
+<a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether target group stickiness is enabled.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="listenerruleactionforwardtargetgroup">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleActionForwardTargetGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionForwardTargetGroup">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardTargetGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardTargetGroupOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionForwardTargetGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionForwardTargetGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The weight. The range is 0 to 999.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The weight. The range is 0 to 999.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The weight. The range is 0 to 999.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The weight. The range is 0 to 999.
 {{% /md %}}</dd>
 
 </dl>

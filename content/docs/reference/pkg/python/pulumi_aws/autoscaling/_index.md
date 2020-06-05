@@ -395,7 +395,7 @@ behavior and potentially leaves resources dangling.</p></li>
 <a class="reference external" href="http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html">Lifecycle Hooks</a>
 to attach to the autoscaling group <strong>before</strong> instances are launched. The
 syntax is exactly the same as the separate
-<cite>``autoscaling.LifecycleHook`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html</a>&gt;`_
+<code class="docutils literal notranslate"><span class="pre">autoscaling.LifecycleHook</span></code>
 resource, without the <code class="docutils literal notranslate"><span class="pre">autoscaling_group_name</span></code> attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use <code class="docutils literal notranslate"><span class="pre">autoscaling.LifecycleHook</span></code> resource.</p></li>
 <li><p><strong>launch_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name of the launch configuration to use.</p></li>
@@ -554,7 +554,7 @@ behavior and potentially leaves resources dangling.</p>
 <a class="reference external" href="http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html">Lifecycle Hooks</a>
 to attach to the autoscaling group <strong>before</strong> instances are launched. The
 syntax is exactly the same as the separate
-<cite>``autoscaling.LifecycleHook`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html</a>&gt;`_
+<code class="docutils literal notranslate"><span class="pre">autoscaling.LifecycleHook</span></code>
 resource, without the <code class="docutils literal notranslate"><span class="pre">autoscaling_group_name</span></code> attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use <code class="docutils literal notranslate"><span class="pre">autoscaling.LifecycleHook</span></code> resource.</p>
 <ul class="simple">
@@ -786,7 +786,7 @@ behavior and potentially leaves resources dangling.</p></li>
 <a class="reference external" href="http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html">Lifecycle Hooks</a>
 to attach to the autoscaling group <strong>before</strong> instances are launched. The
 syntax is exactly the same as the separate
-<cite>``autoscaling.LifecycleHook`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hook.html</a>&gt;`_
+<code class="docutils literal notranslate"><span class="pre">autoscaling.LifecycleHook</span></code>
 resource, without the <code class="docutils literal notranslate"><span class="pre">autoscaling_group_name</span></code> attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use <code class="docutils literal notranslate"><span class="pre">autoscaling.LifecycleHook</span></code> resource.</p>
 </p></li>
@@ -933,14 +933,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This provider has two types of ways you can add lifecycle hooks - via
 the <code class="docutils literal notranslate"><span class="pre">initial_lifecycle_hook</span></code> attribute from the
-<cite>``autoscaling.Group`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html</a>&gt;`_
+<code class="docutils literal notranslate"><span class="pre">autoscaling.Group</span></code>
 resource, or via this one. Hooks added via this resource will not be added
 until the autoscaling group has been created, and depending on your
-<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#waiting-for-capacity">capacity</a>
+<code class="docutils literal notranslate"><span class="pre">capacity</span></code>
 settings, after the initial instances have been launched, creating unintended
 behavior. If you need hooks to run on all instances, add them with
 <code class="docutils literal notranslate"><span class="pre">initial_lifecycle_hook</span></code> in
-<cite>``autoscaling.Group`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html</a>&gt;`_,
+<code class="docutils literal notranslate"><span class="pre">autoscaling.Group</span></code>,
 but take care to not duplicate those hooks with this resource.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>

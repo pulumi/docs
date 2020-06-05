@@ -28,8 +28,7 @@ must be set to `true`.
 server reboots. See the AWS Docs on [RDS Maintenance][2] for more information.
 
 > **Note:** All arguments including the username and password will be stored in
-the raw state as plain-text. [Read more about sensitive data in
-state](https://www.terraform.io/docs/state/sensitive-data.html).
+the raw state as plain-text.
 
 ## RDS Instance Class Types
 
@@ -486,7 +485,7 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of [DB subnet group](https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html). DB instance will
+    <dd>{{% md %}}Name of `DB subnet group`. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the `default` VPC, or in EC2 Classic, if available. When working
 with read replicas, it should be specified only if the source database
@@ -560,7 +559,7 @@ for additional read replica contraints.
     </dt>
     <dd>{{% md %}}(Required unless a `snapshot_identifier` or `replicate_source_db`
 is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine'.
+Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
@@ -578,7 +577,7 @@ in the Amazon RDS User Guide.
 is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
 this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
+Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1133,7 +1132,7 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of [DB subnet group](https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html). DB instance will
+    <dd>{{% md %}}Name of `DB subnet group`. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the `default` VPC, or in EC2 Classic, if available. When working
 with read replicas, it should be specified only if the source database
@@ -1207,7 +1206,7 @@ for additional read replica contraints.
     </dt>
     <dd>{{% md %}}(Required unless a `snapshot_identifier` or `replicate_source_db`
 is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine'.
+Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
@@ -1225,7 +1224,7 @@ in the Amazon RDS User Guide.
 is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
 this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
+Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1780,7 +1779,7 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of [DB subnet group](https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html). DB instance will
+    <dd>{{% md %}}Name of `DB subnet group`. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the `default` VPC, or in EC2 Classic, if available. When working
 with read replicas, it should be specified only if the source database
@@ -1854,7 +1853,7 @@ for additional read replica contraints.
     </dt>
     <dd>{{% md %}}(Required unless a `snapshot_identifier` or `replicate_source_db`
 is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine'.
+Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
@@ -1872,7 +1871,7 @@ in the Amazon RDS User Guide.
 is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
 this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
+Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2427,7 +2426,7 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of [DB subnet group](https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html). DB instance will
+    <dd>{{% md %}}Name of `DB subnet group`. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the `default` VPC, or in EC2 Classic, if available. When working
 with read replicas, it should be specified only if the source database
@@ -2501,7 +2500,7 @@ for additional read replica contraints.
     </dt>
     <dd>{{% md %}}(Required unless a `snapshot_identifier` or `replicate_source_db`
 is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine'.
+Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
@@ -2519,7 +2518,7 @@ in the Amazon RDS User Guide.
 is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
 this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
+Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3598,7 +3597,7 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of [DB subnet group](https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html). DB instance will
+    <dd>{{% md %}}Name of `DB subnet group`. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the `default` VPC, or in EC2 Classic, if available. When working
 with read replicas, it should be specified only if the source database
@@ -3683,7 +3682,7 @@ for additional read replica contraints.
     </dt>
     <dd>{{% md %}}(Required unless a `snapshot_identifier` or `replicate_source_db`
 is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine'.
+Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
@@ -3701,7 +3700,7 @@ in the Amazon RDS User Guide.
 is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
 this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
+Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4322,7 +4321,7 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of [DB subnet group](https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html). DB instance will
+    <dd>{{% md %}}Name of `DB subnet group`. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the `default` VPC, or in EC2 Classic, if available. When working
 with read replicas, it should be specified only if the source database
@@ -4407,7 +4406,7 @@ for additional read replica contraints.
     </dt>
     <dd>{{% md %}}(Required unless a `snapshot_identifier` or `replicate_source_db`
 is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine'.
+Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
@@ -4425,7 +4424,7 @@ in the Amazon RDS User Guide.
 is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
 this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
+Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5046,7 +5045,7 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of [DB subnet group](https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html). DB instance will
+    <dd>{{% md %}}Name of `DB subnet group`. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the `default` VPC, or in EC2 Classic, if available. When working
 with read replicas, it should be specified only if the source database
@@ -5131,7 +5130,7 @@ for additional read replica contraints.
     </dt>
     <dd>{{% md %}}(Required unless a `snapshot_identifier` or `replicate_source_db`
 is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine'.
+Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
@@ -5149,7 +5148,7 @@ in the Amazon RDS User Guide.
 is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
 this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
+Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5770,7 +5769,7 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of [DB subnet group](https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html). DB instance will
+    <dd>{{% md %}}Name of `DB subnet group`. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the `default` VPC, or in EC2 Classic, if available. When working
 with read replicas, it should be specified only if the source database
@@ -5855,7 +5854,7 @@ for additional read replica contraints.
     </dt>
     <dd>{{% md %}}(Required unless a `snapshot_identifier` or `replicate_source_db`
 is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine'.
+Note that for Amazon Aurora instances the engine must match the `DB cluster`'s engine'.
 For information on the difference between the available Aurora MySQL engines
 see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html)
 in the Amazon RDS User Guide.
@@ -5873,7 +5872,7 @@ in the Amazon RDS User Guide.
 is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
 this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
+Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

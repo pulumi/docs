@@ -538,7 +538,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role>]</span>
+        <span class="property-type">List[Role, Default=>]</span>
     </dt>
     <dd>{{% md %}}
 A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
@@ -1248,7 +1248,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role>]</span>
+        <span class="property-type">List[Role, Default=>]</span>
     </dt>
     <dd>{{% md %}}
 A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.

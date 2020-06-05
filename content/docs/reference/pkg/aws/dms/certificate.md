@@ -13,7 +13,6 @@ meta_desc: "Explore the Certificate resource of the dms module, including exampl
 Provides a DMS (Data Migration Service) certificate resource. DMS certificates can be created, deleted, and imported.
 
 > **Note:** All arguments including the PEM encoded certificate will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 
 

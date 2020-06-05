@@ -453,7 +453,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonevpc">List&lt;Zone<wbr>Vpc<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -526,7 +526,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonevpc">[]Zone<wbr>Vpc</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -599,7 +599,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonevpc">Zone<wbr>Vpc[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -672,7 +672,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonevpc">List[Zone<wbr>Vpc]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1054,7 +1054,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonevpc">List&lt;Zone<wbr>Vpc<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1150,7 +1150,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonevpc">[]Zone<wbr>Vpc</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,7 +1246,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonevpc">Zone<wbr>Vpc[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1342,7 +1342,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonevpc">List[Zone<wbr>Vpc]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

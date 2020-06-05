@@ -310,7 +310,7 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+    <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -458,7 +458,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+    <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -606,7 +606,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+    <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -754,7 +754,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+    <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1643,7 +1643,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+    <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1911,7 +1911,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+    <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2179,7 +2179,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+    <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2447,7 +2447,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identifier of the [`aws.docdb.Cluster`](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html) in which to launch this instance.
+    <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

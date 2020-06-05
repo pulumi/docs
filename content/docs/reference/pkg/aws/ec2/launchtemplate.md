@@ -3699,7 +3699,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed on instance termination (Default: `false`). See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3787,7 +3787,7 @@ This must be set with a `volume_type` of `"io1"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed on instance termination (Default: `false`). See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3875,7 +3875,7 @@ This must be set with a `volume_type` of `"io1"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed on instance termination (Default: `false`). See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3963,7 +3963,7 @@ This must be set with a `volume_type` of `"io1"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed on instance termination (Default: `false`). See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5698,7 +5698,7 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the network interface should be destroyed on instance termination.
+    <dd>{{% md %}}Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5837,7 +5837,7 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the network interface should be destroyed on instance termination.
+    <dd>{{% md %}}Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5976,7 +5976,7 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether the network interface should be destroyed on instance termination.
+    <dd>{{% md %}}Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6115,7 +6115,7 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the network interface should be destroyed on instance termination.
+    <dd>{{% md %}}Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
