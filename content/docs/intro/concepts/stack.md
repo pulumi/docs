@@ -123,9 +123,9 @@ A stack can be exported to see the raw data associated with the stack.  This is 
 > **Note:** This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments.  Importing an incorrect stack specification could lead to orphaning of cloud resources or the inability to make future updates to the stack.  Use care when using the import and export capabilities.
 
 ```bash
-$ pulumi stack export > stack.json
+$ pulumi stack export --file stack.json
 
-$ pulumi stack import < stack.json
+$ pulumi stack import --file stack.json
 ```
 
 ## Delete a stack
