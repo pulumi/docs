@@ -824,6 +824,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="loadbalancerurn_csharp">
+<a href="#loadbalancerurn_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
@@ -831,17 +842,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="urn_csharp">
-<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -872,6 +872,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="loadbalancerurn_go">
+<a href="#loadbalancerurn_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
@@ -879,17 +890,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="urn_go">
-<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -920,6 +920,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="loadbalancerurn_nodejs">
+<a href="#loadbalancerurn_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
@@ -927,17 +938,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="urn_nodejs">
-<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -968,6 +968,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="load_balancer_urn_python">
+<a href="#load_balancer_urn_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
@@ -975,17 +986,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="urn_python">
-<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1006,7 +1006,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>urn=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>load_balancer_urn=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1215,6 +1215,17 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loadbalancerurn_csharp">
+<a href="#state_loadbalancerurn_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1268,17 +1279,6 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_csharp">
-<a href="#state_urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1394,6 +1394,17 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loadbalancerurn_go">
+<a href="#state_loadbalancerurn_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1447,17 +1458,6 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_go">
-<a href="#state_urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1573,6 +1573,17 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loadbalancerurn_nodejs">
+<a href="#state_loadbalancerurn_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1626,17 +1637,6 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_nodejs">
-<a href="#state_urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1752,6 +1752,17 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_load_balancer_urn_python">
+<a href="#state_load_balancer_urn_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1805,17 +1816,6 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_python">
-<a href="#state_urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd>
 
     <dt class="property-optional"

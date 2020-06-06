@@ -5,6 +5,8 @@ linktitle: pulumi_digitalocean
 notitle: true
 ---
 
+{{< resource-docs-alert "digitalocean" >}}
+
 <div class="section" id="pulumi-digitalocean">
 <h1>Pulumi DigitalOcean<a class="headerlink" href="#pulumi-digitalocean" title="Permalink to this headline">¶</a></h1>
 <blockquote>

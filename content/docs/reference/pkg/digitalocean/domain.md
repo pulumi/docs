@@ -386,6 +386,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="domainurn_csharp">
+<a href="#domainurn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -394,23 +405,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="urn_csharp">
-<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="domainurn_go">
+<a href="#domainurn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -422,23 +433,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="urn_go">
-<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="domainurn_nodejs">
+<a href="#domainurn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -450,23 +461,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="urn_nodejs">
-<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="domain_urn_python">
+<a href="#domain_urn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -477,17 +488,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="urn_python">
-<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -508,7 +508,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ip_address=None<span class="p">, </span>name=None<span class="p">, </span>urn=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>domain_urn=None<span class="p">, </span>ip_address=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -624,6 +624,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_domainurn_csharp">
+<a href="#state_domainurn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span> 
@@ -645,23 +656,23 @@ is used to created an initial A record for the domain.
     <dd>{{% md %}}The name of the domain
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_csharp">
-<a href="#state_urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_domainurn_go">
+<a href="#state_domainurn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -686,23 +697,23 @@ is used to created an initial A record for the domain.
     <dd>{{% md %}}The name of the domain
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_go">
-<a href="#state_urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_domainurn_nodejs">
+<a href="#state_domainurn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -727,23 +738,23 @@ is used to created an initial A record for the domain.
     <dd>{{% md %}}The name of the domain
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_nodejs">
-<a href="#state_urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_domain_urn_python">
+<a href="#state_domain_urn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -766,17 +777,6 @@ is used to created an initial A record for the domain.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_python">
-<a href="#state_urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
 {{% /md %}}</dd>
 
 </dl>

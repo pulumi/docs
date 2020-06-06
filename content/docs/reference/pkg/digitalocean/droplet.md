@@ -980,6 +980,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="dropleturn_csharp">
+<a href="#dropleturn_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+* `name`- The name of the Droplet
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -1077,18 +1089,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="urn_csharp">
-<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the Droplet
-* `name`- The name of the Droplet
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="vcpus_csharp">
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
 </span> 
@@ -1124,6 +1124,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dropleturn_go">
+<a href="#dropleturn_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+* `name`- The name of the Droplet
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1225,18 +1237,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="urn_go">
-<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the Droplet
-* `name`- The name of the Droplet
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="vcpus_go">
 <a href="#vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
 </span> 
@@ -1272,6 +1272,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="dropleturn_nodejs">
+<a href="#dropleturn_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+* `name`- The name of the Droplet
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1373,18 +1385,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="urn_nodejs">
-<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the Droplet
-* `name`- The name of the Droplet
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="vcpus_nodejs">
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
 </span> 
@@ -1420,6 +1420,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="droplet_urn_python">
+<a href="#droplet_urn_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+* `name`- The name of the Droplet
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1521,18 +1533,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="urn_python">
-<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the Droplet
-* `name`- The name of the Droplet
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="vcpus_python">
 <a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
 </span> 
@@ -1561,7 +1561,7 @@ Get an existing Droplet resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backups=None<span class="p">, </span>created_at=None<span class="p">, </span>disk=None<span class="p">, </span>image=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>ipv4_address_private=None<span class="p">, </span>ipv6=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>locked=None<span class="p">, </span>memory=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>price_hourly=None<span class="p">, </span>price_monthly=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>urn=None<span class="p">, </span>user_data=None<span class="p">, </span>vcpus=None<span class="p">, </span>volume_ids=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backups=None<span class="p">, </span>created_at=None<span class="p">, </span>disk=None<span class="p">, </span>droplet_urn=None<span class="p">, </span>image=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>ipv4_address_private=None<span class="p">, </span>ipv6=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>locked=None<span class="p">, </span>memory=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>price_hourly=None<span class="p">, </span>price_monthly=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vcpus=None<span class="p">, </span>volume_ids=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1706,6 +1706,18 @@ false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dropleturn_csharp">
+<a href="#state_dropleturn_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+* `name`- The name of the Droplet
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1917,18 +1929,6 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_urn_csharp">
-<a href="#state_urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the Droplet
-* `name`- The name of the Droplet
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_userdata_csharp">
 <a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span> 
@@ -2009,6 +2009,18 @@ false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dropleturn_go">
+<a href="#state_dropleturn_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+* `name`- The name of the Droplet
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2220,18 +2232,6 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_urn_go">
-<a href="#state_urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the Droplet
-* `name`- The name of the Droplet
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_userdata_go">
 <a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
 </span> 
@@ -2312,6 +2312,18 @@ false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dropleturn_nodejs">
+<a href="#state_dropleturn_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+* `name`- The name of the Droplet
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2523,18 +2535,6 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_urn_nodejs">
-<a href="#state_urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the Droplet
-* `name`- The name of the Droplet
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_userdata_nodejs">
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span> 
@@ -2615,6 +2615,18 @@ false.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_droplet_urn_python">
+<a href="#state_droplet_urn_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the Droplet
+* `name`- The name of the Droplet
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2822,18 +2834,6 @@ to retrieve them.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_python">
-<a href="#state_urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the Droplet
-* `name`- The name of the Droplet
 {{% /md %}}</dd>
 
     <dt class="property-optional"

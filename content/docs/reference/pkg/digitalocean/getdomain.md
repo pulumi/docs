@@ -201,6 +201,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="domainurn_csharp">
+<a href="#domainurn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+* `zone_file`: The zone file of the domain.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -232,18 +244,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="urn_csharp">
-<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-* `zone_file`: The zone file of the domain.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="zonefile_csharp">
 <a href="#zonefile_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>File</a>
 </span> 
@@ -258,6 +258,18 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="domainurn_go">
+<a href="#domainurn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+* `zone_file`: The zone file of the domain.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -292,18 +304,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="urn_go">
-<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-* `zone_file`: The zone file of the domain.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="zonefile_go">
 <a href="#zonefile_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>File</a>
 </span> 
@@ -318,6 +318,18 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="domainurn_nodejs">
+<a href="#domainurn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+* `zone_file`: The zone file of the domain.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -352,18 +364,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="urn_nodejs">
-<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-* `zone_file`: The zone file of the domain.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="zonefile_nodejs">
 <a href="#zonefile_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>File</a>
 </span> 
@@ -378,6 +378,18 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="domain_urn_python">
+<a href="#domain_urn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the domain
+* `zone_file`: The zone file of the domain.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -409,18 +421,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="urn_python">
-<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the domain
-* `zone_file`: The zone file of the domain.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
