@@ -5,6 +5,8 @@ linktitle: synthetics
 notitle: true
 ---
 
+{{< resource-docs-alert "newrelic" >}}
+
 <div class="section" id="synthetics">
 <h1>synthetics<a class="headerlink" href="#synthetics" title="Permalink to this headline">¶</a></h1>
 <blockquote>

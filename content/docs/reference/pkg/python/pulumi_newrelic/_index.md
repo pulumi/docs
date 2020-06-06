@@ -5,6 +5,8 @@ linktitle: pulumi_newrelic
 notitle: true
 ---
 
+{{< resource-docs-alert "newrelic" >}}
+
 <div class="section" id="pulumi-newrelic">
 <h1>Pulumi NewRelic<a class="headerlink" href="#pulumi-newrelic" title="Permalink to this headline">¶</a></h1>
 <blockquote>
