@@ -5,6 +5,8 @@ linktitle: vpc
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="vpc">
 <h1>vpc<a class="headerlink" href="#vpc" title="Permalink to this headline">¶</a></h1>
 <blockquote>

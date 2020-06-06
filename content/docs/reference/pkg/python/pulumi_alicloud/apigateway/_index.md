@@ -5,6 +5,8 @@ linktitle: apigateway
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="apigateway">
 <h1>apigateway<a class="headerlink" href="#apigateway" title="Permalink to this headline">¶</a></h1>
 <blockquote>

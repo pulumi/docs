@@ -5,6 +5,8 @@ linktitle: alikafka
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="alikafka">
 <h1>alikafka<a class="headerlink" href="#alikafka" title="Permalink to this headline">¶</a></h1>
 <blockquote>

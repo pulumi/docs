@@ -5,6 +5,8 @@ linktitle: cen
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="cen">
 <h1>cen<a class="headerlink" href="#cen" title="Permalink to this headline">¶</a></h1>
 <blockquote>

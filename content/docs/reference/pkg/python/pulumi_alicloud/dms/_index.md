@@ -5,6 +5,8 @@ linktitle: dms
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="dms">
 <h1>dms<a class="headerlink" href="#dms" title="Permalink to this headline">¶</a></h1>
 <blockquote>

@@ -5,6 +5,8 @@ linktitle: marketplace
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="marketplace">
 <h1>marketplace<a class="headerlink" href="#marketplace" title="Permalink to this headline">¶</a></h1>
 <blockquote>

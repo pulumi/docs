@@ -5,6 +5,8 @@ linktitle: cs
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="cs">
 <h1>cs<a class="headerlink" href="#cs" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -211,6 +213,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.cs.AwaitableGetRegistryEnterpriseInstancesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetRegistryEnterpriseInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetRegistryEnterpriseInstancesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.cs.AwaitableGetRegistryEnterpriseNamespacesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetRegistryEnterpriseNamespacesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetRegistryEnterpriseNamespacesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.cs.AwaitableGetServerlessKubernetesClustersResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">AwaitableGetServerlessKubernetesClustersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">clusters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.AwaitableGetServerlessKubernetesClustersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -339,6 +351,72 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.cs.GetManagedKubernetesClustersResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetManagedKubernetesClustersResult.names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of matched Kubernetes clusters’ names.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetRegistryEnterpriseInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRegistryEnterpriseInstances.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of matched Container Registry Enterprise Edition instances. Its element is an instance uuid.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult.instances">
+<code class="sig-name descname">instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult.instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of matched Container Registry Enterprise Editioninstances. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseInstancesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of instance names.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">GetRegistryEnterpriseNamespacesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRegistryEnterpriseNamespaces.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of matched Container Registry Enterprise Edition namespaces. Its element is a namespace uuid.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.instance_id">
+<code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of Container Registry Enterprise Edition instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of namespace names.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.namespaces">
+<code class="sig-name descname">namespaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.GetRegistryEnterpriseNamespacesResult.namespaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of matched Container Registry Enterprise Edition namespaces. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
@@ -1427,6 +1505,259 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseNamespace">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">RegistryEnterpriseNamespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_create</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseNamespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource will help you to manager Container Registry Enterprise Edition namespaces.</p>
+<p>For information about Container Registry Enterprise Edition namespaces and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/145483.htm">Create a Namespace</a></p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.86.0+.</p>
+<p><strong>NOTE:</strong> You need to set your registry password in Container Registry Enterprise Edition console before use this resource.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_namespace</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">RegistryEnterpriseNamespace</span><span class="p">(</span><span class="s2">&quot;my-namespace&quot;</span><span class="p">,</span>
+    <span class="n">auto_create</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">default_visibility</span><span class="o">=</span><span class="s2">&quot;PUBLIC&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;cri-xxx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.</p></li>
+<li><p><strong>default_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>, default repository visibility in this namespace.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Container Registry Enterprise Edition instance.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition namespace. It can contain 2 to 30 characters.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseNamespace.auto_create">
+<code class="sig-name descname">auto_create</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseNamespace.auto_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseNamespace.default_visibility">
+<code class="sig-name descname">default_visibility</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseNamespace.default_visibility" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>, default repository visibility in this namespace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseNamespace.instance_id">
+<code class="sig-name descname">instance_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseNamespace.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of Container Registry Enterprise Edition instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseNamespace.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseNamespace.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Container Registry Enterprise Edition namespace. It can contain 2 to 30 characters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseNamespace.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_create</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseNamespace.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RegistryEnterpriseNamespace resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.</p></li>
+<li><p><strong>default_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>, default repository visibility in this namespace.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Container Registry Enterprise Edition instance.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition namespace. It can contain 2 to 30 characters.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseNamespace.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseNamespace.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseNamespace.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseNamespace.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">RegistryEnterpriseRepo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">detail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repo_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">summary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource will help you to manager Container Registry Enterprise Edition repositories.</p>
+<p>For information about Container Registry Enterprise Edition repository and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/145291.htm">Create a Repository</a></p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.86.0+.</p>
+<p><strong>NOTE:</strong> You need to set your registry password in Container Registry Enterprise Edition console before use this resource.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_namespace</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">RegistryEnterpriseNamespace</span><span class="p">(</span><span class="s2">&quot;my-namespace&quot;</span><span class="p">,</span>
+    <span class="n">auto_create</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">default_visibility</span><span class="o">=</span><span class="s2">&quot;PUBLIC&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;cri-xxx&quot;</span><span class="p">)</span>
+<span class="n">my_repo</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">RegistryEnterpriseRepo</span><span class="p">(</span><span class="s2">&quot;my-repo&quot;</span><span class="p">,</span>
+    <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;this is a public repo&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">my_namespace</span><span class="o">.</span><span class="n">instance_id</span><span class="p">,</span>
+    <span class="n">namespace</span><span class="o">=</span><span class="n">my_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">repo_type</span><span class="o">=</span><span class="s2">&quot;PUBLIC&quot;</span><span class="p">,</span>
+    <span class="n">summary</span><span class="o">=</span><span class="s2">&quot;this is summary of my new repo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>detail</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository specific information. MarkDown format is supported, and the length limit is 2000.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Container Registry Enterprise Edition instance.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition repository. It can contain 2 to 64 characters.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition namespace where repository is located. It can contain 2 to 30 characters.</p></li>
+<li><p><strong>repo_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>, repo’s visibility.</p></li>
+<li><p><strong>summary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository general information. It can contain 1 to 100 characters.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.detail">
+<code class="sig-name descname">detail</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.detail" title="Permalink to this definition">¶</a></dt>
+<dd><p>The repository specific information. MarkDown format is supported, and the length limit is 2000.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.instance_id">
+<code class="sig-name descname">instance_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of Container Registry Enterprise Edition instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Container Registry Enterprise Edition repository. It can contain 2 to 64 characters.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.namespace">
+<code class="sig-name descname">namespace</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Container Registry Enterprise Edition namespace where repository is located. It can contain 2 to 30 characters.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.repo_id">
+<code class="sig-name descname">repo_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.repo_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uuid of Container Registry Enterprise Edition repository.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.repo_type">
+<code class="sig-name descname">repo_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.repo_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>, repo’s visibility.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.summary">
+<code class="sig-name descname">summary</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>The repository general information. It can contain 1 to 100 characters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">detail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repo_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repo_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">summary</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RegistryEnterpriseRepo resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>detail</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository specific information. MarkDown format is supported, and the length limit is 2000.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Container Registry Enterprise Edition instance.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition repository. It can contain 2 to 64 characters.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Container Registry Enterprise Edition namespace where repository is located. It can contain 2 to 30 characters.</p></li>
+<li><p><strong>repo_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uuid of Container Registry Enterprise Edition repository.</p></li>
+<li><p><strong>repo_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>, repo’s visibility.</p></li>
+<li><p><strong>summary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository general information. It can contain 1 to 100 characters.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cs.RegistryEnterpriseRepo.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.RegistryEnterpriseRepo.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.cs.ServerlessKubernetes">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">ServerlessKubernetes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_public_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_nat_gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.ServerlessKubernetes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ServerlessKubernetes resource with the given unique name, props, and options.
@@ -1936,6 +2267,58 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ids</strong> (<em>list</em>) – Cluster IDs to filter.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by cluster name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.cs.get_registry_enterprise_instances">
+<code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">get_registry_enterprise_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.get_registry_enterprise_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list Container Registry Enterprise Edition instances on Alibaba Cloud.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.86.0+</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_instances</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_registry_enterprise_instances</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;my-instances&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;my-instances-json&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">my_instances</span><span class="o">.</span><span class="n">instances</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of ids to filter results by instance id.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by instance name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.cs.get_registry_enterprise_namespaces">
+<code class="sig-prename descclassname">pulumi_alicloud.cs.</code><code class="sig-name descname">get_registry_enterprise_namespaces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cs.get_registry_enterprise_namespaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list Container Registry Enterprise Edition namespaces on Alibaba Cloud.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.86.0+</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">my_namespaces</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">get_registry_enterprise_namespaces</span><span class="p">(</span><span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;cri-xxx&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;my-namespace&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;my-namespace-json&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">my_namespaces</span><span class="o">.</span><span class="n">namespaces</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of ids to filter results by namespace id.</p></li>
+<li><p><strong>instance_id</strong> (<em>str</em>) – ID of Container Registry Enterprise Edition instance.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by namespace name.</p></li>
 </ul>
 </dd>
 </dl>

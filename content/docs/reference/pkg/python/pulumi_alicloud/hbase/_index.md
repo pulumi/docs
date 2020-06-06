@@ -5,6 +5,8 @@ linktitle: hbase
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="hbase">
 <h1>hbase<a class="headerlink" href="#hbase" title="Permalink to this headline">¶</a></h1>
 <blockquote>

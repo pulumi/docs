@@ -5,6 +5,8 @@ linktitle: waf
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="waf">
 <h1>waf<a class="headerlink" href="#waf" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -14,6 +16,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.waf"></span><dl class="py class">
+<dt id="pulumi_alicloud.waf.AwaitableGetDomainsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">AwaitableGetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.AwaitableGetDomainsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.waf.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http2_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_to_user_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_access_product</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Domain resource to create domain in the Web Application Firewall.</p>
@@ -277,6 +284,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.waf.GetDomainsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">GetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.GetDomainsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDomains.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.waf.GetDomainsResult.domains">
+<code class="sig-name descname">domains</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.waf.GetDomainsResult.domains" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Domains. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.waf.GetDomainsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.waf.GetDomainsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.waf.GetDomainsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.waf.GetDomainsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) A list of WAF domain names. Each item is domain name.</p>
 </dd></dl>
 
 </dd></dl>
@@ -548,6 +579,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.waf.get_domains">
+<code class="sig-prename descclassname">pulumi_alicloud.waf.</code><code class="sig-name descname">get_domains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.waf.get_domains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a WAF datasource to retrieve domains.</p>
+<p>For information about WAF and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28517.htm">What is Alibaba Cloud WAF</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.86.0+ .</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">waf</span><span class="o">.</span><span class="n">get_domains</span><span class="p">(</span><span class="n">instance_id</span><span class="o">=</span><span class="s2">&quot;waf-cf-xxxxx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of WAF domain names. Each item is domain name.</p></li>
+<li><p><strong>instance_id</strong> (<em>str</em>) – The Id of waf instance to which waf domain belongs.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

@@ -143,7 +143,7 @@ const defaultInstance = new alicloud.rds.Instance("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rds/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>db_instance_storage_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_restart=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_storage=None<span class="p">, </span>instance_type=None<span class="p">, </span>maintain_time=None<span class="p">, </span>monitoring_period=None<span class="p">, </span>parameters=None<span class="p">, </span>period=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_ip_mode=None<span class="p">, </span>security_ips=None<span class="p">, </span>sql_collector_config_value=None<span class="p">, </span>sql_collector_status=None<span class="p">, </span>tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rds/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>db_instance_storage_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_restart=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_storage=None<span class="p">, </span>instance_type=None<span class="p">, </span>maintain_time=None<span class="p">, </span>monitoring_period=None<span class="p">, </span>parameters=None<span class="p">, </span>period=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_ip_mode=None<span class="p">, </span>security_ips=None<span class="p">, </span>sql_collector_config_value=None<span class="p">, </span>sql_collector_status=None<span class="p">, </span>tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -493,6 +493,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of resource group which the DB instance belongs.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="securitygroupid_csharp">
@@ -779,6 +790,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of resource group which the DB instance belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1069,6 +1091,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of resource group which the DB instance belongs.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="securitygroupid_nodejs">
@@ -1355,6 +1388,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of resource group which the DB instance belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1646,7 +1690,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>connection_string=None<span class="p">, </span>db_instance_storage_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_restart=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_storage=None<span class="p">, </span>instance_type=None<span class="p">, </span>maintain_time=None<span class="p">, </span>monitoring_period=None<span class="p">, </span>parameters=None<span class="p">, </span>period=None<span class="p">, </span>port=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_ip_mode=None<span class="p">, </span>security_ips=None<span class="p">, </span>sql_collector_config_value=None<span class="p">, </span>sql_collector_status=None<span class="p">, </span>tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_renew=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>connection_string=None<span class="p">, </span>db_instance_storage_type=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_restart=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_storage=None<span class="p">, </span>instance_type=None<span class="p">, </span>maintain_time=None<span class="p">, </span>monitoring_period=None<span class="p">, </span>parameters=None<span class="p">, </span>period=None<span class="p">, </span>port=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_ip_mode=None<span class="p">, </span>security_ips=None<span class="p">, </span>sql_collector_config_value=None<span class="p">, </span>sql_collector_status=None<span class="p">, </span>tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1960,6 +2004,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}RDS database connection port.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcegroupid_csharp">
+<a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of resource group which the DB instance belongs.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_securitygroupid_csharp">
@@ -2268,6 +2323,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcegroupid_go">
+<a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of resource group which the DB instance belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -2580,6 +2646,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}RDS database connection port.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcegroupid_nodejs">
+<a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of resource group which the DB instance belongs.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_securitygroupid_nodejs">
@@ -2888,6 +2965,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}RDS database connection port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_group_id_python">
+<a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of resource group which the DB instance belongs.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"

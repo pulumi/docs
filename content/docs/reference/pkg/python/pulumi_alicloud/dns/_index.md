@@ -5,6 +5,8 @@ linktitle: dns
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="dns">
 <h1>dns<a class="headerlink" href="#dns" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -188,6 +190,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.dns.AwaitableGetAlidnsDomainGroupsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetAlidnsDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetAlidnsDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.dns.AwaitableGetAlidnsRecordsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetAlidnsRecordsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">direction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">line</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">order_by</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rr_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rr_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_regex</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetAlidnsRecordsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -949,6 +956,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.dns.GetAlidnsRecordsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetAlidnsRecordsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">direction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">line</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">order_by</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rr_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rr_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_regex</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsRecordsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAlidnsRecords.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsRecordsResult.domain_name">
+<code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsRecordsResult.domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the domain record belongs to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsRecordsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsRecordsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsRecordsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsRecordsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of record IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsRecordsResult.line">
+<code class="sig-name descname">line</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsRecordsResult.line" title="Permalink to this definition">¶</a></dt>
+<dd><p>ISP line of the record.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsRecordsResult.records">
+<code class="sig-name descname">records</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsRecordsResult.records" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of records. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsRecordsResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsRecordsResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the record.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dns.GetAlidnsRecordsResult.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetAlidnsRecordsResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of the record.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.dns.GetDomainGroupsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomainGroups.</p>
@@ -1535,6 +1590,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ids</strong> (<em>list</em>) – A list of instance IDs.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by the domain group name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.dns.get_alidns_records">
+<code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_alidns_records</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">direction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">line</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">order_by</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rr_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rr_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_key_word</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_alidns_records" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of Alidns Domain Records in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.86.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>direction</strong> (<em>str</em>) – Sorting direction. Valid values: <code class="docutils literal notranslate"><span class="pre">DESC</span></code>,<code class="docutils literal notranslate"><span class="pre">ASC</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">AESC</span></code>.</p></li>
+<li><p><strong>domain_name</strong> (<em>str</em>) – The domain name associated to the records.</p></li>
+<li><p><strong>group_id</strong> (<em>float</em>) – Domain name group ID.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of record IDs.</p></li>
+<li><p><strong>key_word</strong> (<em>str</em>) – Keywords.</p></li>
+<li><p><strong>lang</strong> (<em>str</em>) – User language.</p></li>
+<li><p><strong>line</strong> (<em>str</em>) – <p>ISP line. Valid values: <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">telecom</span></code>, <code class="docutils literal notranslate"><span class="pre">unicom</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile</span></code>, <code class="docutils literal notranslate"><span class="pre">oversea</span></code>, <code class="docutils literal notranslate"><span class="pre">edu</span></code>, <code class="docutils literal notranslate"><span class="pre">drpeng</span></code>, <code class="docutils literal notranslate"><span class="pre">btvn</span></code>, .etc. For checking all resolution lines enumeration please visit <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/34339.htm">Alibaba Cloud DNS doc</a></p>
+</p></li>
+<li><p><strong>order_by</strong> (<em>str</em>) – Sort by. Sort from newest to oldest according to the time added by resolution.</p></li>
+<li><p><strong>rr_key_word</strong> (<em>str</em>) – The keywords recorded by the host are searched according to the <code class="docutils literal notranslate"><span class="pre">%RRKeyWord%</span></code> mode, and are not case sensitive.</p></li>
+<li><p><strong>rr_regex</strong> (<em>str</em>) – Host record regex.</p></li>
+<li><p><strong>search_mode</strong> (<em>str</em>) – Search mode, Valid values: <code class="docutils literal notranslate"><span class="pre">LIKE</span></code>, <code class="docutils literal notranslate"><span class="pre">EXACT</span></code>, <code class="docutils literal notranslate"><span class="pre">ADVANCED</span></code>, <code class="docutils literal notranslate"><span class="pre">LIKE</span></code> (fuzzy), <code class="docutils literal notranslate"><span class="pre">EXACT</span></code> (accurate) search supports KeyWord field, <code class="docutils literal notranslate"><span class="pre">ADVANCED</span></code> (advanced) mode supports other fields.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – Record status. Valid values: <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – Record type. Valid values: <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">NS</span></code>, <code class="docutils literal notranslate"><span class="pre">MX</span></code>, <code class="docutils literal notranslate"><span class="pre">TXT</span></code>, <code class="docutils literal notranslate"><span class="pre">CNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">SRV</span></code>, <code class="docutils literal notranslate"><span class="pre">AAAA</span></code>, <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code>, <code class="docutils literal notranslate"><span class="pre">FORWORD_URL</span></code> .</p></li>
+<li><p><strong>type_key_word</strong> (<em>str</em>) – Analyze type keywords, search by full match, not case sensitive.</p></li>
+<li><p><strong>value_key_word</strong> (<em>str</em>) – The keywords of the recorded value are searched according to the <code class="docutils literal notranslate"><span class="pre">%ValueKeyWord%</span></code> mode, and are not case sensitive.</p></li>
+<li><p><strong>value_regex</strong> (<em>str</em>) – Host record value regex.</p></li>
 </ul>
 </dd>
 </dl>

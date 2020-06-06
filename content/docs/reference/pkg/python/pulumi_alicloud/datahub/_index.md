@@ -5,6 +5,8 @@ linktitle: datahub
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="datahub">
 <h1>datahub<a class="headerlink" href="#datahub" title="Permalink to this headline">¶</a></h1>
 <blockquote>

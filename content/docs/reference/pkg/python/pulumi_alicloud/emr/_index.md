@@ -5,6 +5,8 @@ linktitle: emr
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="emr">
 <h1>emr<a class="headerlink" href="#emr" title="Permalink to this headline">¶</a></h1>
 <blockquote>

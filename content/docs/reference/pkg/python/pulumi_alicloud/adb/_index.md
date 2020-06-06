@@ -5,6 +5,8 @@ linktitle: adb
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="adb">
 <h1>adb<a class="headerlink" href="#adb" title="Permalink to this headline">¶</a></h1>
 <blockquote>

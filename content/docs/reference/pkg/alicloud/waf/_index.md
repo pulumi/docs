@@ -15,6 +15,11 @@ Explore the resources and functions of the waf module in the AliCloud package.
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -24,7 +29,7 @@ Explore the resources and functions of the waf module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.7.0</dd>
+	<dd>2.8.0</dd>
 </dl>
 
 

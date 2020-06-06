@@ -5,6 +5,8 @@ linktitle: cloudconnect
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="cloudconnect">
 <h1>cloudconnect<a class="headerlink" href="#cloudconnect" title="Permalink to this headline">¶</a></h1>
 <blockquote>

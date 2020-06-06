@@ -5,6 +5,8 @@ linktitle: oss
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="oss">
 <h1>oss<a class="headerlink" href="#oss" title="Permalink to this headline">¶</a></h1>
 <blockquote>

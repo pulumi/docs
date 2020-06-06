@@ -5,6 +5,8 @@ linktitle: kms
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="kms">
 <h1>kms<a class="headerlink" href="#kms" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -130,6 +132,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.kms.AwaitableGetPlaintextResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetPlaintextResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ciphertext_blob</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plaintext</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetPlaintextResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.kms.AwaitableGetSecretsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetSecretsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fetch_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secrets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetSecretsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -367,6 +374,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.kms.GetPlaintextResult.plaintext">
 <code class="sig-name descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetPlaintextResult.plaintext" title="Permalink to this definition">¶</a></dt>
 <dd><p>The decrypted plaintext.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.kms.GetSecretsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetSecretsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fetch_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secrets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSecrets.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Kms Secret ids. The value is same as KMS secret_name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretsResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretsResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KMS Secret names.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretsResult.secrets">
+<code class="sig-name descname">secrets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretsResult.secrets" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KMS Secrets. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretsResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretsResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -945,6 +988,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>(Optional) The Encryption context. If you specify this parameter in the Encrypt or GenerateDataKey API operation, it is also required when you call the Decrypt API operation. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>.</p>
 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.kms.get_secrets">
+<code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">get_secrets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fetch_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.get_secrets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of KMS Secrets in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.86.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fetch_tags</strong> (<em>bool</em>) – Whether to include the predetermined resource tag in the return value. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of KMS Secret ids. The value is same as KMS secret_name.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter the results by the KMS secret_name.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>

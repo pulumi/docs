@@ -5,6 +5,8 @@ linktitle: actiontrail
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="actiontrail">
 <h1>actiontrail<a class="headerlink" href="#actiontrail" title="Permalink to this headline">¶</a></h1>
 <blockquote>

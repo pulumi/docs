@@ -14,60 +14,9 @@ Provides a Alikms Key Version resource. For information about Alikms Key Version
 
 > **NOTE:** Available in v1.85.0+.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @this = new AliCloud.Kms.Key("this", new AliCloud.Kms.KeyArgs
-        {
-        });
-        var keyversion = new AliCloud.Kms.KeyVersion("keyversion", new AliCloud.Kms.KeyVersionArgs
-        {
-            KeyId = @this.Id,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-this = alicloud.kms.Key("this")
-keyversion = alicloud.kms.KeyVersion("keyversion", key_id=this.id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const _this = new alicloud.kms.Key("this", {});
-const keyversion = new alicloud.kms.KeyVersion("keyversion", {keyId: _this.id});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a KeyVersion Resource {#create}

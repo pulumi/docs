@@ -5,6 +5,8 @@ linktitle: maxcompute
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="maxcompute">
 <h1>maxcompute<a class="headerlink" href="#maxcompute" title="Permalink to this headline">¶</a></h1>
 <blockquote>

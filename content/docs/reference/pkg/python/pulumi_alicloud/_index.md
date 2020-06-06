@@ -5,6 +5,8 @@ linktitle: pulumi_alicloud
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="pulumi-alicloud">
 <h1>Pulumi Alicloud<a class="headerlink" href="#pulumi-alicloud" title="Permalink to this headline">¶</a></h1>
 <blockquote>

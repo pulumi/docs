@@ -5,6 +5,8 @@ linktitle: dds
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="dds">
 <h1>dds<a class="headerlink" href="#dds" title="Permalink to this headline">¶</a></h1>
 <blockquote>

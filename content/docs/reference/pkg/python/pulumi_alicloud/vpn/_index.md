@@ -5,6 +5,8 @@ linktitle: vpn
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="vpn">
 <h1>vpn<a class="headerlink" href="#vpn" title="Permalink to this headline">¶</a></h1>
 <blockquote>

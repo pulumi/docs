@@ -5,6 +5,8 @@ linktitle: gpdb
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="gpdb">
 <h1>gpdb<a class="headerlink" href="#gpdb" title="Permalink to this headline">¶</a></h1>
 <blockquote>
