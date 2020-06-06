@@ -5,6 +5,8 @@ linktitle: pulumi_linode
 notitle: true
 ---
 
+{{< resource-docs-alert "linode" >}}
+
 <div class="section" id="pulumi-linode">
 <h1>Pulumi Linode<a class="headerlink" href="#pulumi-linode" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -81,22 +83,48 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py class">
 <dt id="pulumi_linode.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">axfr_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expire_sec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">refresh_sec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry_sec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">soa_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl_sec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Domain" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Domain resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] axfr_ips: The list of IPs that may perform a zone transfer for this Domain. This is potentially dangerous, and should be set to an empty list unless you intend to use it.
-:param pulumi.Input[str] description: A description for this Domain. This is for display purposes only.
-:param pulumi.Input[str] domain: The domain this Domain represents. These must be unique in our system; you cannot have two Domains representing the same domain.
-:param pulumi.Input[float] expire_sec: The amount of time in seconds that may pass before this Domain is no longer authoritative. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
-:param pulumi.Input[str] group: The group this Domain belongs to. This is for display purposes only.
-:param pulumi.Input[list] master_ips: The IP addresses representing the master DNS for this Domain.
-:param pulumi.Input[float] refresh_sec: The amount of time in seconds before this Domain should be refreshed. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
-:param pulumi.Input[float] retry_sec: The interval, in seconds, at which a failed refresh should be retried. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
-:param pulumi.Input[str] soa_email: Start of Authority email address. This is required for master Domains.
-:param pulumi.Input[str] status: Used to control whether this Domain is currently being rendered (defaults to “active”).
-:param pulumi.Input[list] tags: A list of tags applied to this object. Tags are for organizational purposes only.
-:param pulumi.Input[float] ttl_sec: ‘Time to Live’ - the amount of time in seconds that this Domain’s records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
-:param pulumi.Input[str] type: If this Domain represents the authoritative source of information for the domain it describes, or if it is a read-only copy of a master (also called a slave).</p>
+<dd><p>Provides a Linode Domain resource.  This can be used to create, modify, and delete Linode Domains through Linode’s managed DNS service.
+For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/manager/dns-manager/">DNS Manager</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createDomain">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foobar_domain</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;foobarDomain&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;foobar.example&quot;</span><span class="p">,</span>
+    <span class="n">soa_email</span><span class="o">=</span><span class="s2">&quot;example@foobar.example&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;master&quot;</span><span class="p">)</span>
+<span class="n">foobar_domain_record</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">DomainRecord</span><span class="p">(</span><span class="s2">&quot;foobarDomainRecord&quot;</span><span class="p">,</span>
+    <span class="n">domain_id</span><span class="o">=</span><span class="n">foobar_domain</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
+    <span class="n">record_type</span><span class="o">=</span><span class="s2">&quot;CNAME&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="s2">&quot;foobar.example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This resource exports no additional attributes, however <code class="docutils literal notranslate"><span class="pre">status</span></code> may reflect degraded states.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>axfr_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of IPs that may perform a zone transfer for this Domain. This is potentially dangerous, and should be set to an empty list unless you intend to use it.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for this Domain. This is for display purposes only.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain this Domain represents. These must be unique in our system; you cannot have two Domains representing the same domain.</p></li>
+<li><p><strong>expire_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time in seconds that may pass before this Domain is no longer authoritative. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group this Domain belongs to. This is for display purposes only.</p></li>
+<li><p><strong>master_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IP addresses representing the master DNS for this Domain.</p></li>
+<li><p><strong>refresh_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time in seconds before this Domain should be refreshed. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.</p></li>
+<li><p><strong>retry_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval, in seconds, at which a failed refresh should be retried. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.</p></li>
+<li><p><strong>soa_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Start of Authority email address. This is required for master Domains.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to control whether this Domain is currently being rendered (defaults to “active”).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tags applied to this object. Tags are for organizational purposes only.</p></li>
+<li><p><strong>ttl_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – ‘Time to Live’ - the amount of time in seconds that this Domain’s records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If this Domain represents the authoritative source of information for the domain it describes, or if it is a read-only copy of a master (also called a slave).</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_linode.Domain.axfr_ips">
 <code class="sig-name descname">axfr_ips</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Domain.axfr_ips" title="Permalink to this definition">¶</a></dt>
@@ -415,7 +443,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_linode.Firewall">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Firewall</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inbounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outbounds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Firewall" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a Linode Firewall.</p>
+<dd><blockquote>
+<div><p><strong>NOTICE:</strong> The Firewall feature is currently available through early access.</p>
+</div></blockquote>
+<p>Manages a Linode Firewall.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
 
@@ -912,27 +943,114 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_linode.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alerts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorized_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorized_users</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backups_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_config_label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_pass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stackscript_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stackscript_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">swap_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">watchdog_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Instance resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] authorized_keys: A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if <code class="docutils literal notranslate"><span class="pre">image</span></code> is provided. <em>This value can not be imported.</em> <em>Changing ``authorized_keys`` forces the creation of a new Linode Instance.</em>
-:param pulumi.Input[list] authorized_users: A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the <code class="docutils literal notranslate"><span class="pre">root</span></code> user’s <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> file automatically. <em>This value can not be imported.</em> <em>Changing ``authorized_users`` forces the creation of a new Linode Instance.</em>
-:param pulumi.Input[float] backup_id: A Backup ID from another Linode’s available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode’s available backups. This field and the image field are mutually exclusive. <em>This value can not be imported.</em> <em>Changing ``backup_id`` forces the creation of a new Linode Instance.</em>
-:param pulumi.Input[bool] backups_enabled: If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
-:param pulumi.Input[str] boot_config_label: The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one <code class="docutils literal notranslate"><span class="pre">config</span></code>, the <code class="docutils literal notranslate"><span class="pre">label</span></code> of that <code class="docutils literal notranslate"><span class="pre">config</span></code> will be used as the <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>. <em>This value can not be imported.</em>
-:param pulumi.Input[list] configs: Configuration profiles define the VM settings and boot behavior of the Linode Instance.
-:param pulumi.Input[str] group: The display group of the Linode instance.
-:param pulumi.Input[str] image: An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are <code class="docutils literal notranslate"><span class="pre">linode/debian9</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/fedora28</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/ubuntu16.04lts</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/arch</span></code>, and <code class="docutils literal notranslate"><span class="pre">private/12345</span></code>. See all images <a class="reference external" href="https://api.linode.com/v4/linode/kernels">here</a>. <em>Changing ``image`` forces the creation of a new Linode Instance.</em>
-:param pulumi.Input[str] label: The Config’s label for display purposes.  Also used by <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>.
-:param pulumi.Input[bool] private_ip: If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode’s region. It can be enabled on an existing Linode but it can’t be disabled.
-:param pulumi.Input[str] region: This is the location where the Linode is deployed. Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc. See all regions <a class="reference external" href="https://api.linode.com/v4/regions">here</a>. <em>Changing ``region`` forces the creation of a new Linode Instance.</em>.
-:param pulumi.Input[str] root_pass: The password that will be initialially assigned to the ‘root’ user account.
-:param pulumi.Input[dict] stackscript_data: An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if ‘stackscript_id’ is given. The required values depend on the StackScript being deployed.  <em>This value can not be imported.</em> <em>Changing ``stackscript_data`` forces the creation of a new Linode Instance.</em>
-:param pulumi.Input[float] stackscript_id: The StackScript to deploy to the newly created Linode. If provided, ‘image’ must also be provided, and must be an Image that is compatible with this StackScript. <em>This value can not be imported.</em> <em>Changing ``stackscript_id`` forces the creation of a new Linode Instance.</em>
-:param pulumi.Input[float] swap_size: When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
-:param pulumi.Input[list] tags: A list of tags applied to this object. Tags are for organizational purposes only.
-:param pulumi.Input[str] type: The Linode type defines the pricing, CPU, disk, and RAM specs of the instance. Examples are <code class="docutils literal notranslate"><span class="pre">&quot;g6-nanode-1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-standard-2&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-highmem-16&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-dedicated-16&quot;</span></code>, etc. See all types <a class="reference external" href="https://api.linode.com/v4/linode/types">here</a>.
-:param pulumi.Input[bool] watchdog_enabled: The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.</p>
+<dd><p>Provides a Linode Instance resource.  This can be used to create, modify, and delete Linodes.
+For more information, see <a class="reference external" href="https://linode.com/docs/getting-started/">Getting Started with Linode</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createLinodeInstance">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">web</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">authorized_keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ssh-rsa AAAA...Gw== user@example.local&quot;</span><span class="p">],</span>
+    <span class="n">group</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;linode/ubuntu18.04&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;simple_instance&quot;</span><span class="p">,</span>
+    <span class="n">private_ip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central&quot;</span><span class="p">,</span>
+    <span class="n">root_pass</span><span class="o">=</span><span class="s2">&quot;terr4form-test&quot;</span><span class="p">,</span>
+    <span class="n">swap_size</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;g6-standard-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">me</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_profile</span><span class="p">()</span>
+<span class="n">web_volume</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;webVolume&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;web_volume&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">boot_config_label</span><span class="o">=</span><span class="s2">&quot;boot_config&quot;</span><span class="p">,</span>
+    <span class="n">configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;devices&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sda&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;diskLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;boot&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;sdb&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;volumeId&quot;</span><span class="p">:</span> <span class="n">web_volume</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;kernel&quot;</span><span class="p">:</span> <span class="s2">&quot;linode/latest-64bit&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;boot_config&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rootDevice&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/sda&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">disks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;authorized_keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ssh-rsa AAAA...Gw== user@example.local&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;authorized_users&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">me</span><span class="o">.</span><span class="n">username</span><span class="p">],</span>
+        <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;linode/ubuntu18.04&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;boot&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;root_pass&quot;</span><span class="p">:</span> <span class="s2">&quot;terr4form-test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">group</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;complex_instance&quot;</span><span class="p">,</span>
+    <span class="n">private_ip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;g6-nanode-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This Linode Instance resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - The status of the instance, indicating the current readiness state. (<code class="docutils literal notranslate"><span class="pre">running</span></code>, <code class="docutils literal notranslate"><span class="pre">offline</span></code>, …)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> - A string containing the Linode’s public IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> - This Linode’s Private IPv4 Address, if enabled.  The regional private IP address range, 192.168.128.0/17, is shared by all Linode Instances in a region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6</span></code> - This Linode’s IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.  The prefix (<code class="docutils literal notranslate"><span class="pre">/64</span></code>) is included in this attribute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4</span></code> - This Linode’s IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">specs.0.disk</span></code> -  The amount of storage space, in GB. this Linode has access to. A typical Linode will divide this space between a primary disk with an image deployed to it, and a swap disk, usually 512 MB. This is the default configuration created when deploying a Linode with an image through POST /linode/instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">specs.0.memory</span></code> - The amount of RAM, in MB, this Linode has access to. Typically a Linode will choose to boot with all of its available RAM, but this can be configured in a Config profile.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">specs.0.vcpus</span></code> - The number of vcpus this Linode has access to. Typically a Linode will choose to boot with all of its available vcpus, but this can be configured in a Config Profile.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">specs.0.transfer</span></code> - The amount of network transfer this Linode is allotted each month.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backups</span></code> - Information about this Linode’s backups status.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> - If this Linode has the Backup service enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedule</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> -  The day of the week that your Linode’s weekly Backup is taken. If not set manually, a day will be chosen for you. Backups are taken every day, but backups taken on this day are preferred when selecting backups to retain for a longer period.  If not set manually, then when backups are initially enabled, this may come back as “Scheduling” until the day is automatically selected.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> - The window (‘W0’-‘W22’) in which your backups will be taken, in UTC. A backups window is a two-hour span of time in which the backup may occur. For example, ‘W10’ indicates that your backups should be taken between 10:00 and 12:00. If you do not choose a backup window, one will be selected for you automatically.  If not set manually, when backups are initially enabled this may come back as Scheduling until the window is automatically selected.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>authorized_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if <code class="docutils literal notranslate"><span class="pre">image</span></code> is provided. <em>This value can not be imported.</em> <em>Changing ``authorized_keys`` forces the creation of a new Linode Instance.</em></p></li>
+<li><p><strong>authorized_users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the <code class="docutils literal notranslate"><span class="pre">root</span></code> user’s <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> file automatically. <em>This value can not be imported.</em> <em>Changing ``authorized_users`` forces the creation of a new Linode Instance.</em></p></li>
+<li><p><strong>backup_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A Backup ID from another Linode’s available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode’s available backups. This field and the image field are mutually exclusive. <em>This value can not be imported.</em> <em>Changing ``backup_id`` forces the creation of a new Linode Instance.</em></p></li>
+<li><p><strong>backups_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.</p></li>
+<li><p><strong>boot_config_label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one <code class="docutils literal notranslate"><span class="pre">config</span></code>, the <code class="docutils literal notranslate"><span class="pre">label</span></code> of that <code class="docutils literal notranslate"><span class="pre">config</span></code> will be used as the <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>. <em>This value can not be imported.</em></p></li>
+<li><p><strong>configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration profiles define the VM settings and boot behavior of the Linode Instance.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display group of the Linode instance.</p></li>
+<li><p><strong>image</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are <code class="docutils literal notranslate"><span class="pre">linode/debian9</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/fedora28</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/ubuntu16.04lts</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/arch</span></code>, and <code class="docutils literal notranslate"><span class="pre">private/12345</span></code>. See all images <a class="reference external" href="https://api.linode.com/v4/linode/kernels">here</a>. <em>Changing ``image`` forces the creation of a new Linode Instance.</em></p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Config’s label for display purposes.  Also used by <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>.</p></li>
+<li><p><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode’s region. It can be enabled on an existing Linode but it can’t be disabled.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>This is the location where the Linode is deployed. Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc. See all regions <a class="reference external" href="https://api.linode.com/v4/regions">here</a>. <em>Changing ``region`` forces the creation of a new Linode Instance.</em>.</p>
+</p></li>
+<li><p><strong>root_pass</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The initial password for the <code class="docutils literal notranslate"><span class="pre">root</span></code> user account. <em>This value can not be imported.</em> <em>Changing ``root_pass`` forces the creation of a new Linode Instance.</em> <em>If omitted, a random password will be generated but will not be stored in state.</em></p></li>
+<li><p><strong>stackscript_data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if ‘stackscript_id’ is given. The required values depend on the StackScript being deployed.  <em>This value can not be imported.</em> <em>Changing ``stackscript_data`` forces the creation of a new Linode Instance.</em></p></li>
+<li><p><strong>stackscript_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The StackScript to deploy to the newly created Linode. If provided, ‘image’ must also be provided, and must be an Image that is compatible with this StackScript. <em>This value can not be imported.</em> <em>Changing ``stackscript_id`` forces the creation of a new Linode Instance.</em></p></li>
+<li><p><strong>swap_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tags applied to this object. Tags are for organizational purposes only.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The Linode type defines the pricing, CPU, disk, and RAM specs of the instance. Examples are <code class="docutils literal notranslate"><span class="pre">&quot;g6-nanode-1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-standard-2&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-highmem-16&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g6-dedicated-16&quot;</span></code>, etc. See all types <a class="reference external" href="https://api.linode.com/v4/linode/types">here</a>.</p>
+</p></li>
+<li><p><strong>watchdog_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>alerts</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -1024,12 +1142,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authorized_keys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if <code class="docutils literal notranslate"><span class="pre">image</span></code> is provided. <em>This value can not be imported.</em> <em>Changing ``authorized_keys`` forces the creation of a new Linode Instance.</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorized_users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the <code class="docutils literal notranslate"><span class="pre">root</span></code> user’s <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> file automatically. <em>This value can not be imported.</em> <em>Changing ``authorized_users`` forces the creation of a new Linode Instance.</em></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">filesystem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filesystem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Disk filesystem can be one of: <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;swap&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ext3&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ext4&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;initrd&quot;</span></code> which has a max size of 32mb and can be used in the config <code class="docutils literal notranslate"><span class="pre">initrd</span></code> (not currently supported in this provider).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the disk in the Linode API.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are <code class="docutils literal notranslate"><span class="pre">linode/debian9</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/fedora28</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/ubuntu16.04lts</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/arch</span></code>, and <code class="docutils literal notranslate"><span class="pre">private/12345</span></code>. See all images <a class="reference external" href="https://api.linode.com/v4/linode/kernels">here</a>. <em>Changing ``image`` forces the creation of a new Linode Instance.</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Config’s label for display purposes.  Also used by <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">root_pass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">root_pass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The initial password for the <code class="docutils literal notranslate"><span class="pre">root</span></code> user account. <em>This value can not be imported.</em> <em>Changing ``root_pass`` forces the creation of a new Linode Instance.</em> <em>If omitted, a random password will be generated but will not be stored in state.</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Disk in MB.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stackscript_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if ‘stackscript_id’ is given. The required values depend on the StackScript being deployed.  <em>This value can not be imported.</em> <em>Changing ``stackscript_data`` forces the creation of a new Linode Instance.</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stackscript_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The StackScript to deploy to the newly created Linode. If provided, ‘image’ must also be provided, and must be an Image that is compatible with this StackScript. <em>This value can not be imported.</em> <em>Changing ``stackscript_id`` forces the creation of a new Linode Instance.</em></p></li>
@@ -1223,7 +1341,7 @@ Instances in a region.</p>
 <dl class="py attribute">
 <dt id="pulumi_linode.Instance.root_pass">
 <code class="sig-name descname">root_pass</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Instance.root_pass" title="Permalink to this definition">¶</a></dt>
-<dd><p>The password that will be initialially assigned to the ‘root’ user account.</p>
+<dd><p>The initial password for the <code class="docutils literal notranslate"><span class="pre">root</span></code> user account. <em>This value can not be imported.</em> <em>Changing ``root_pass`` forces the creation of a new Linode Instance.</em> <em>If omitted, a random password will be generated but will not be stored in state.</em></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1300,7 +1418,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 Instances in a region.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>This is the location where the Linode is deployed. Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc. See all regions <a class="reference external" href="https://api.linode.com/v4/regions">here</a>. <em>Changing ``region`` forces the creation of a new Linode Instance.</em>.</p>
 </p></li>
-<li><p><strong>root_pass</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password that will be initialially assigned to the ‘root’ user account.</p></li>
+<li><p><strong>root_pass</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The initial password for the <code class="docutils literal notranslate"><span class="pre">root</span></code> user account. <em>This value can not be imported.</em> <em>Changing ``root_pass`` forces the creation of a new Linode Instance.</em> <em>If omitted, a random password will be generated but will not be stored in state.</em></p></li>
 <li><p><strong>stackscript_data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if ‘stackscript_id’ is given. The required values depend on the StackScript being deployed.  <em>This value can not be imported.</em> <em>Changing ``stackscript_data`` forces the creation of a new Linode Instance.</em></p></li>
 <li><p><strong>stackscript_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The StackScript to deploy to the newly created Linode. If provided, ‘image’ must also be provided, and must be an Image that is compatible with this StackScript. <em>This value can not be imported.</em> <em>Changing ``stackscript_id`` forces the creation of a new Linode Instance.</em></p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the instance, indicating the current readiness state.</p></li>
@@ -1413,12 +1531,12 @@ Instances in a region.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">authorized_keys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if <code class="docutils literal notranslate"><span class="pre">image</span></code> is provided. <em>This value can not be imported.</em> <em>Changing ``authorized_keys`` forces the creation of a new Linode Instance.</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorized_users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the <code class="docutils literal notranslate"><span class="pre">root</span></code> user’s <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> file automatically. <em>This value can not be imported.</em> <em>Changing ``authorized_users`` forces the creation of a new Linode Instance.</em></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">filesystem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filesystem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Disk filesystem can be one of: <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;swap&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ext3&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ext4&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;initrd&quot;</span></code> which has a max size of 32mb and can be used in the config <code class="docutils literal notranslate"><span class="pre">initrd</span></code> (not currently supported in this provider).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the disk in the Linode API.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are <code class="docutils literal notranslate"><span class="pre">linode/debian9</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/fedora28</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/ubuntu16.04lts</span></code>, <code class="docutils literal notranslate"><span class="pre">linode/arch</span></code>, and <code class="docutils literal notranslate"><span class="pre">private/12345</span></code>. See all images <a class="reference external" href="https://api.linode.com/v4/linode/kernels">here</a>. <em>Changing ``image`` forces the creation of a new Linode Instance.</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Config’s label for display purposes.  Also used by <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">root_pass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">root_pass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The initial password for the <code class="docutils literal notranslate"><span class="pre">root</span></code> user account. <em>This value can not be imported.</em> <em>Changing ``root_pass`` forces the creation of a new Linode Instance.</em> <em>If omitted, a random password will be generated but will not be stored in state.</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Disk in MB.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stackscript_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if ‘stackscript_id’ is given. The required values depend on the StackScript being deployed.  <em>This value can not be imported.</em> <em>Changing ``stackscript_data`` forces the creation of a new Linode Instance.</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stackscript_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The StackScript to deploy to the newly created Linode. If provided, ‘image’ must also be provided, and must be an Image that is compatible with this StackScript. <em>This value can not be imported.</em> <em>Changing ``stackscript_id`` forces the creation of a new Linode Instance.</em></p></li>
@@ -1652,13 +1770,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_linode.NodeBalancer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">NodeBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_conn_throttle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a NodeBalancer resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] client_conn_throttle: Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
-:param pulumi.Input[str] label: The label of the Linode NodeBalancer
-:param pulumi.Input[str] region: The region where this NodeBalancer will be deployed.  Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode NodeBalancer.</em>.
-:param pulumi.Input[list] tags: A list of tags applied to this object. Tags are for organizational purposes only.</p>
+<dd><p>Provides a Linode NodeBalancer resource.  This can be used to create, modify, and delete Linodes NodeBalancers in Linode’s managed load balancer service.
+For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createNodeBalancer">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">NodeBalancer</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">client_conn_throttle</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;mynodebalancer&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;foobar&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> - This NodeBalancer’s hostname, ending with .nodebalancer.linode.com</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4</span></code> - The Public IPv4 Address of this NodeBalancer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6</span></code> - The Public IPv6 Address of this NodeBalancer</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_conn_throttle</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Throttle connections per second (0-20). Set to 0 (default) to disable throttling.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label of the Linode NodeBalancer</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where this NodeBalancer will be deployed.  Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode NodeBalancer.</em>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tags applied to this object. Tags are for organizational purposes only.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_linode.NodeBalancer.client_conn_throttle">
 <code class="sig-name descname">client_conn_throttle</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.NodeBalancer.client_conn_throttle" title="Permalink to this definition">¶</a></dt>
@@ -1771,19 +1912,44 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_linode.NodeBalancerConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">NodeBalancerConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_attempts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_passive</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cipher_suite</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nodebalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stickiness</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a NodeBalancerConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] algorithm: What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-:param pulumi.Input[str] check: The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-:param pulumi.Input[float] check_attempts: How many times to attempt a check before considering a backend to be down. (1-30)
-:param pulumi.Input[str] check_body: This value must be present in the response body of the check in order for it to pass. If this value is not present in</p>
-<blockquote>
-<div><p>the response body of a check request, the backend is considered to be down</p>
-</div></blockquote>
+<dd><p>Provides a Linode NodeBalancer Config resource.  This can be used to create, modify, and delete Linodes NodeBalancer Configs.
+For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createNodeBalancerConfig">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">NodeBalancer</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">client_conn_throttle</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;mynodebalancer&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east&quot;</span><span class="p">)</span>
+<span class="n">foofig</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">NodeBalancerConfig</span><span class="p">(</span><span class="s2">&quot;foofig&quot;</span><span class="p">,</span>
+    <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;source&quot;</span><span class="p">,</span>
+    <span class="n">check</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">check_attempts</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">check_path</span><span class="o">=</span><span class="s2">&quot;/foo&quot;</span><span class="p">,</span>
+    <span class="n">check_timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">nodebalancer_id</span><span class="o">=</span><span class="n">foobar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">8088</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">stickiness</span><span class="o">=</span><span class="s2">&quot;http_cookie&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl_commonname</span></code> - The common name for the SSL certification this port is serving if this port is not configured to use SSL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl_fingerprint</span></code> - The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_status_up</span></code> - The number of backends considered to be ‘UP’ and healthy, and that are serving requests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_status_down</span></code> - The number of backends considered to be ‘DOWN’ and unhealthy. These are not in rotation, and not serving requests.</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source</p></li>
+<li><p><strong>check</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.</p></li>
+<li><p><strong>check_attempts</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How many times to attempt a check before considering a backend to be down. (1-30)</p></li>
+<li><p><strong>check_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This value must be present in the response body of the check in order for it to pass. If this value is not present in
+the response body of a check request, the backend is considered to be down</p></li>
 <li><p><strong>check_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How often, in seconds, to check that backends are up and serving requests.</p></li>
 <li><p><strong>check_passive</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.</p></li>
 <li><p><strong>check_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.</p></li>
@@ -1981,15 +2147,65 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_linode.NodeBalancerNode">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">NodeBalancerNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nodebalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a NodeBalancerNode resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] address: The private IP Address where this backend can be reached. This must be a private IP address.
-:param pulumi.Input[float] config_id: The ID of the NodeBalancerConfig to access.
-:param pulumi.Input[str] label: The label of the Linode NodeBalancer Node. This is for display purposes only.
-:param pulumi.Input[str] mode: The mode this NodeBalancer should use when sending traffic to this backend. If set to <code class="docutils literal notranslate"><span class="pre">accept</span></code> this backend is accepting traffic. If set to <code class="docutils literal notranslate"><span class="pre">reject</span></code> this backend will not receive traffic. If set to <code class="docutils literal notranslate"><span class="pre">drain</span></code> this backend will not receive new traffic, but connections already pinned to it will continue to be routed to it
-:param pulumi.Input[float] nodebalancer_id: The ID of the NodeBalancer to access.
-:param pulumi.Input[float] weight: Used when picking a backend to serve a request and is not pinned to a single backend yet. Nodes with a higher weight will receive more traffic. (1-255).</p>
+<dd><p>Provides a Linode NodeBalancer Node resource.  This can be used to create, modify, and delete Linodes NodeBalancer Nodes.
+For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createNodeBalancerNode">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">web</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]:</span>
+    <span class="n">web</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;web-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">authorized_keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ssh-rsa AAAA...Gw== user@example.local&quot;</span><span class="p">],</span>
+        <span class="n">image</span><span class="o">=</span><span class="s2">&quot;linode/ubuntu18.04&quot;</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;web-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">private_ip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east&quot;</span><span class="p">,</span>
+        <span class="n">root_pass</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;g6-standard-1&quot;</span><span class="p">))</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">NodeBalancer</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">client_conn_throttle</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;mynodebalancer&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east&quot;</span><span class="p">)</span>
+<span class="n">foofig</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">NodeBalancerConfig</span><span class="p">(</span><span class="s2">&quot;foofig&quot;</span><span class="p">,</span>
+    <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;source&quot;</span><span class="p">,</span>
+    <span class="n">check</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">check_attempts</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">check_path</span><span class="o">=</span><span class="s2">&quot;/foo&quot;</span><span class="p">,</span>
+    <span class="n">check_timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">nodebalancer_id</span><span class="o">=</span><span class="n">foobar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="n">stickiness</span><span class="o">=</span><span class="s2">&quot;http_cookie&quot;</span><span class="p">)</span>
+<span class="n">foonode</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="nb">range</span> <span class="ow">in</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]:</span>
+    <span class="n">foonode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">linode</span><span class="o">.</span><span class="n">NodeBalancerNode</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;foonode-</span><span class="si">{</span><span class="nb">range</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">address</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">private_ip_address</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">web</span><span class="p">][</span><span class="nb">range</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">private_ip_addresses</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">private_ip_addresses</span><span class="si">}</span><span class="s2">:80&quot;</span><span class="p">),</span>
+        <span class="n">config_id</span><span class="o">=</span><span class="n">foofig</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;mynodebalancernode&quot;</span><span class="p">,</span>
+        <span class="n">nodebalancer_id</span><span class="o">=</span><span class="n">foobar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">weight</span><span class="o">=</span><span class="mi">50</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - The current status of this node, based on the configured checks of its NodeBalancer Config. (unknown, UP, DOWN).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config_id</span></code> - The ID of the NodeBalancerConfig this NodeBalancerNode is attached to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodebalancer_id</span></code> - The ID of the NodeBalancer this NodeBalancerNode is attached to.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private IP Address where this backend can be reached. This must be a private IP address.</p></li>
+<li><p><strong>config_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the NodeBalancerConfig to access.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label of the Linode NodeBalancer Node. This is for display purposes only.</p></li>
+<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mode this NodeBalancer should use when sending traffic to this backend. If set to <code class="docutils literal notranslate"><span class="pre">accept</span></code> this backend is accepting traffic. If set to <code class="docutils literal notranslate"><span class="pre">reject</span></code> this backend will not receive traffic. If set to <code class="docutils literal notranslate"><span class="pre">drain</span></code> this backend will not receive new traffic, but connections already pinned to it will continue to be routed to it</p></li>
+<li><p><strong>nodebalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the NodeBalancer to access.</p></li>
+<li><p><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Used when picking a backend to serve a request and is not pinned to a single backend yet. Nodes with a higher weight will receive more traffic. (1-255).</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_linode.NodeBalancerNode.address">
 <code class="sig-name descname">address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.NodeBalancerNode.address" title="Permalink to this definition">¶</a></dt>
@@ -2345,7 +2561,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Rdns</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rdns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Rdns" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode RDNS resource.  This can be used to create and modify RDNS records.</p>
 <p>Linode RDNS names must have a matching address value in an A or AAAA record.  This A or AAAA name must be resolvable at the time the RDNS resource is being associated.</p>
-<p>For more information, see the <a class="reference external" href="https://developers.linode.com/api/docs/v4#operation/updateIP">Linode APIv4 docs</a> and the <a class="reference external" href="https://www.linode.com/docs/networking/dns/configure-your-linode-for-reverse-dns-classic-manager/">Configure your Linode for Reverse DNS</a> guide.</p>
+<p>For more information, see the <a class="reference external" href="https://developers.linode.com/api/v4/networking-ips-address/#put">Linode APIv4 docs</a> and the <a class="reference external" href="https://www.linode.com/docs/networking/dns/configure-your-linode-for-reverse-dns-classic-manager/">Configure your Linode for Reverse DNS</a> guide.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2521,19 +2737,72 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_linode.StackScript">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">StackScript</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_public</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rev_note</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_defined_fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.StackScript" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a StackScript resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A description for the StackScript.
-:param pulumi.Input[list] images: An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
-:param pulumi.Input[bool] is_public: This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. <em>Changing ``is_public`` forces the creation of a new StackScript</em>
-:param pulumi.Input[str] label: The StackScript’s label is for display purposes only.
-:param pulumi.Input[str] rev_note: This field allows you to add notes for the set of revisions made to this StackScript.
-:param pulumi.Input[str] script: The script to execute when provisioning a new Linode with this StackScript.
-:param pulumi.Input[list] user_defined_fields: This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized</p>
-<blockquote>
-<div><p>parameters during deployment.</p>
-</div></blockquote>
+<dd><p>Provides a Linode StackScript resource.  This can be used to create, modify, and delete Linode StackScripts.  StackScripts are private or public managed scripts which run within an instance during startup.  StackScripts can include variables whose values are specified when the Instance is created.</p>
+<p>For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/stackscripts/">Automate Deployment with StackScripts</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#tag/StackScripts">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foo_stack_script</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">StackScript</span><span class="p">(</span><span class="s2">&quot;fooStackScript&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Installs a Package&quot;</span><span class="p">,</span>
+    <span class="n">images</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;linode/ubuntu18.04&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;linode/ubuntu16.04lts&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">rev_note</span><span class="o">=</span><span class="s2">&quot;initial version&quot;</span><span class="p">,</span>
+    <span class="n">script</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;#!/bin/bash</span>
+<span class="s2"># &lt;UDF name=&quot;package&quot; label=&quot;System Package to Install&quot; example=&quot;nginx&quot; default=&quot;&quot;&gt;</span>
+<span class="s2">apt-get -q update &amp;&amp; apt-get -q -y install $$PACKAGE</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">foo_instance</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;fooInstance&quot;</span><span class="p">,</span>
+    <span class="n">authorized_keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;...&quot;</span><span class="p">],</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;linode/ubuntu18.04&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east&quot;</span><span class="p">,</span>
+    <span class="n">root_pass</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+    <span class="n">stackscript_data</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;package&quot;</span><span class="p">:</span> <span class="s2">&quot;nginx&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">stackscript_id</span><span class="o">=</span><span class="n">linode_stackscript</span><span class="p">[</span><span class="s2">&quot;install-nginx&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;g6-nanode-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deployments_active</span></code> - Count of currently active, deployed Linodes created from this StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_gravatar_id</span></code> - The Gravatar ID for the User who created the StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deployments_total</span></code> - The total number of times this StackScript has been deployed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> - The User who created the StackScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - The date this StackScript was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated</span></code> - The date this StackScript was updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_defined_fields</span></code> - This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized parameters during deployment.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> - A human-readable label for the field that will serve as the input prompt for entering the value during deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The name of the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">example</span></code> - An example value for the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">one_of</span></code> - A list of acceptable single values for the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">many_of</span></code> - A list of acceptable values for the field in any quantity, combination or order.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> - The default value. If not specified, this value will be used.</p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the StackScript.</p></li>
+<li><p><strong>images</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of Image IDs representing the Images that this StackScript is compatible for deploying with.</p></li>
+<li><p><strong>is_public</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. <em>Changing ``is_public`` forces the creation of a new StackScript</em></p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The StackScript’s label is for display purposes only.</p></li>
+<li><p><strong>rev_note</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field allows you to add notes for the set of revisions made to this StackScript.</p></li>
+<li><p><strong>script</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The script to execute when provisioning a new Linode with this StackScript.</p></li>
+<li><p><strong>user_defined_fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
+parameters during deployment.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>user_defined_fields</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2710,12 +2979,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_linode.Token">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Token" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Token resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] expiry: When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with ‘null’ as their expiry and will never expire unless revoked.
-:param pulumi.Input[str] label: A label for the Token.
-:param pulumi.Input[str] scopes: The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id17"><span class="problematic" id="id18">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
+<dd><p>Provides a Linode Token resource.  This can be used to create, modify, and delete Linode API Personal Access Tokens.  Personal Access Tokens proxy user credentials for Linode API access.  This is necessary for tools, to interact with Linode services on a user’s behalf.</p>
+<p>It is common for the provider itself to be configured with broadly scoped Personal Access Tokens.  Provisioning scripts or tools configured within a Linode Instance should follow the principle of least privilege to afford only the required roles for tools to perform their necessary tasks.  The <code class="docutils literal notranslate"><span class="pre">.Token</span></code> resource allows for the management of Personal Access Tokens with scopes mirroring or narrowing the scope of the parent token.</p>
+<p>For more information, see the <a class="reference external" href="https://developers.linode.com/api/v4#operation/getTokens">Linode APIv4 docs</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">foo_token</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Token</span><span class="p">(</span><span class="s2">&quot;fooToken&quot;</span><span class="p">,</span>
+    <span class="n">expiry</span><span class="o">=</span><span class="s2">&quot;2100-01-02T03:04:05Z&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;token&quot;</span><span class="p">,</span>
+    <span class="n">scopes</span><span class="o">=</span><span class="s2">&quot;linodes:read_only&quot;</span><span class="p">)</span>
+<span class="n">foo_instance</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;fooInstance&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> - The token used to access the API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - The date this Token was created.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>expiry</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with ‘null’ as their expiry and will never expire unless revoked.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A label for the Token.</p></li>
+<li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id27"><span class="problematic" id="id28">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_linode.Token.created">
 <code class="sig-name descname">created</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Token.created" title="Permalink to this definition">¶</a></dt>
@@ -2737,7 +3029,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_linode.Token.scopes">
 <code class="sig-name descname">scopes</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Token.scopes" title="Permalink to this definition">¶</a></dt>
-<dd><p>The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id19"><span class="problematic" id="id20">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
+<dd><p>The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id29"><span class="problematic" id="id30">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2760,7 +3052,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time this token was created.</p></li>
 <li><p><strong>expiry</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with ‘null’ as their expiry and will never expire unless revoked.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A label for the Token.</p></li>
-<li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id21"><span class="problematic" id="id22">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p></li>
+<li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id31"><span class="problematic" id="id32">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p></li>
 <li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token used to access the API.</p></li>
 </ul>
 </dd>
