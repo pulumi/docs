@@ -14,66 +14,9 @@ This data source provides a list of DNS instances in an Alibaba Cloud account ac
 
 > **NOTE:**  Available in 1.84.0+.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = Output.Create(AliCloud.Dns.GetInstances.InvokeAsync(new AliCloud.Dns.GetInstancesArgs
-        {
-            Ids = 
-            {
-                "dns-cn-oew1npk****",
-            },
-        }));
-        this.FirstInstanceId = example.Apply(example => example.Instances[0].Id);
-    }
-
-    [Output("firstInstanceId")]
-    public Output<string> FirstInstanceId { get; set; }
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-example = alicloud.dns.get_instances(ids=["dns-cn-oew1npk****"])
-pulumi.export("firstInstanceId", example.instances[0]["id"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const example = pulumi.output(alicloud.dns.getInstances({
-    ids: ["dns-cn-oew1npk****"],
-}, { async: true }));
-
-export const firstInstanceId = example.instances[0].id;
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetInstances {#using}

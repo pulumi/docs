@@ -22,7 +22,7 @@ meta_desc: "Explore the Instance resource of the ecs module, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocate_public_ip=None<span class="p">, </span>auto_release_time=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>availability_zone=None<span class="p">, </span>credit_specification=None<span class="p">, </span>data_disks=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>description=None<span class="p">, </span>dry_run=None<span class="p">, </span>force_delete=None<span class="p">, </span>host_name=None<span class="p">, </span>image_id=None<span class="p">, </span>include_data_disks=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>is_outdated=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>password=None<span class="p">, </span>period=None<span class="p">, </span>period_unit=None<span class="p">, </span>private_ip=None<span class="p">, </span>renewal_status=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>role_name=None<span class="p">, </span>security_enhancement_strategy=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_price_limit=None<span class="p">, </span>spot_strategy=None<span class="p">, </span>subnet_id=None<span class="p">, </span>system_disk_auto_snapshot_policy_id=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>volume_tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocate_public_ip=None<span class="p">, </span>auto_release_time=None<span class="p">, </span>auto_renew_period=None<span class="p">, </span>availability_zone=None<span class="p">, </span>credit_specification=None<span class="p">, </span>data_disks=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>description=None<span class="p">, </span>dry_run=None<span class="p">, </span>force_delete=None<span class="p">, </span>host_name=None<span class="p">, </span>image_id=None<span class="p">, </span>include_data_disks=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>is_outdated=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>password=None<span class="p">, </span>period=None<span class="p">, </span>period_unit=None<span class="p">, </span>private_ip=None<span class="p">, </span>renewal_status=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>role_name=None<span class="p">, </span>security_enhancement_strategy=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_price_limit=None<span class="p">, </span>spot_strategy=None<span class="p">, </span>status=None<span class="p">, </span>subnet_id=None<span class="p">, </span>system_disk_auto_snapshot_policy_id=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>volume_tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -600,6 +600,17 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance status. Valid values: ["Running", "Stopped"]. You can control the instance start and stop through this parameter. Default to `Running`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span> 
@@ -1098,6 +1109,17 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 - NoSpot: A regular Pay-As-You-Go instance.
 - SpotWithPriceLimit: A price threshold for a spot instance
 - SpotAsPriceGo: A price that is based on the highest Pay-As-You-Go instance
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance status. Valid values: ["Running", "Stopped"]. You can control the instance start and stop through this parameter. Default to `Running`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1604,6 +1626,17 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance status. Valid values: ["Running", "Stopped"]. You can control the instance start and stop through this parameter. Default to `Running`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span> 
@@ -2106,6 +2139,17 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The instance status. Valid values: ["Running", "Stopped"]. You can control the instance start and stop through this parameter. Default to `Running`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span> 
@@ -2234,17 +2278,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance public ip.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The instance status.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2271,17 +2304,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance public ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The instance status.
 {{% /md %}}</dd>
 
 </dl>
@@ -2312,17 +2334,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance public ip.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The instance status.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2349,17 +2360,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The instance public ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The instance status.
 {{% /md %}}</dd>
 
 </dl>
@@ -2918,7 +2918,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance status.
+    <dd>{{% md %}}The instance status. Valid values: ["Running", "Stopped"]. You can control the instance start and stop through this parameter. Default to `Running`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3442,7 +3442,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance status.
+    <dd>{{% md %}}The instance status. Valid values: ["Running", "Stopped"]. You can control the instance start and stop through this parameter. Default to `Running`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3966,7 +3966,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance status.
+    <dd>{{% md %}}The instance status. Valid values: ["Running", "Stopped"]. You can control the instance start and stop through this parameter. Default to `Running`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4490,7 +4490,7 @@ On other OSs such as Linux, the host name can contain a maximum of 64 characters
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The instance status.
+    <dd>{{% md %}}The instance status. Valid values: ["Running", "Stopped"]. You can control the instance start and stop through this parameter. Default to `Running`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

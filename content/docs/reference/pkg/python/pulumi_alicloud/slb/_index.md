@@ -5,6 +5,8 @@ linktitle: slb
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="slb">
 <h1>slb<a class="headerlink" href="#slb" title="Permalink to this headline">¶</a></h1>
 <blockquote>

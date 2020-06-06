@@ -5,6 +5,8 @@ linktitle: mns
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="mns">
 <h1>mns<a class="headerlink" href="#mns" title="Permalink to this headline">¶</a></h1>
 <blockquote>

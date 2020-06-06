@@ -5,6 +5,8 @@ linktitle: cms
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="cms">
 <h1>cms<a class="headerlink" href="#cms" title="Permalink to this headline">¶</a></h1>
 <blockquote>

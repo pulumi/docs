@@ -5,6 +5,8 @@ linktitle: cas
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="cas">
 <h1>cas<a class="headerlink" href="#cas" title="Permalink to this headline">¶</a></h1>
 <blockquote>

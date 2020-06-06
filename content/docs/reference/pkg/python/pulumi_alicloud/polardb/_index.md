@@ -5,6 +5,8 @@ linktitle: polardb
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="polardb">
 <h1>polardb<a class="headerlink" href="#polardb" title="Permalink to this headline">¶</a></h1>
 <blockquote>

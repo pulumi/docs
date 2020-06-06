@@ -5,6 +5,8 @@ linktitle: cdn
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="cdn">
 <h1>cdn<a class="headerlink" href="#cdn" title="Permalink to this headline">¶</a></h1>
 <blockquote>

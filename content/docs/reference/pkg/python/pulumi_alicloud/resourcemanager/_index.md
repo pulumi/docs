@@ -5,6 +5,8 @@ linktitle: resourcemanager
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="resourcemanager">
 <h1>resourcemanager<a class="headerlink" href="#resourcemanager" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -162,8 +164,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.AwaitableGetAccountsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetAccountsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetAccountsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.resourcemanager.AwaitableGetFoldersResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetFoldersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">folders</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_folder_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetFoldersResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.AwaitableGetHandshakesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetHandshakesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handshakes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetHandshakesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.AwaitableGetPoliciesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetPoliciesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetPoliciesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -172,8 +189,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.AwaitableGetResourceDirectoriesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetResourceDirectoriesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetResourceDirectoriesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.resourcemanager.AwaitableGetResourceGroupsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetResourceGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetResourceGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.AwaitableGetRolesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetRolesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetRolesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -272,6 +299,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.GetAccountsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">GetAccountsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetAccountsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccounts.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetAccountsResult.accounts">
+<code class="sig-name descname">accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetAccountsResult.accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of accounts. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetAccountsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetAccountsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetAccountsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetAccountsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of account IDs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.resourcemanager.GetFoldersResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">GetFoldersResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">folders</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_folder_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetFoldersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFolders.</p>
@@ -302,6 +353,60 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.GetHandshakesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">GetHandshakesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handshakes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetHandshakesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getHandshakes.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetHandshakesResult.handshakes">
+<code class="sig-name descname">handshakes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetHandshakesResult.handshakes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Resource Manager Handshakes. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetHandshakesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetHandshakesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetHandshakesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetHandshakesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Resource Manager Handshake IDs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.GetPoliciesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">GetPoliciesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPoliciesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPolicies.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetPoliciesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPoliciesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetPoliciesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPoliciesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of policy IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetPoliciesResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPoliciesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of policy names.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetPoliciesResult.policies">
+<code class="sig-name descname">policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPoliciesResult.policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of policies. Each element contains the following attributes:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.resourcemanager.GetPolicyVersionsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">GetPolicyVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPolicyVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicyVersions.</p>
@@ -321,6 +426,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.resourcemanager.GetPolicyVersionsResult.versions">
 <code class="sig-name descname">versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPolicyVersionsResult.versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of policy versions. Each element contains the following attributes:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.GetResourceDirectoriesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">GetResourceDirectoriesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetResourceDirectoriesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getResourceDirectories.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetResourceDirectoriesResult.directories">
+<code class="sig-name descname">directories</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetResourceDirectoriesResult.directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of resource directories. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetResourceDirectoriesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetResourceDirectoriesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -357,6 +480,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.resourcemanager.GetResourceGroupsResult.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetResourceGroupsResult.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The status of the resource group. Possible values:<code class="docutils literal notranslate"><span class="pre">Creating</span></code>,<code class="docutils literal notranslate"><span class="pre">Deleted</span></code>,<code class="docutils literal notranslate"><span class="pre">OK</span></code> and <code class="docutils literal notranslate"><span class="pre">PendingDelete</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.GetRolesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">GetRolesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetRolesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRoles.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetRolesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetRolesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetRolesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetRolesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of role IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetRolesResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetRolesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of role names.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetRolesResult.roles">
+<code class="sig-name descname">roles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetRolesResult.roles" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of roles. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
@@ -1160,6 +1313,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_alicloud.resourcemanager.get_accounts">
+<code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">get_accounts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.get_accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides the Resource Manager Accounts of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.86.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">resourcemanager</span><span class="o">.</span><span class="n">get_accounts</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstAccountId&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ids</strong> (<em>list</em>) – A list of account IDs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_alicloud.resourcemanager.get_folders">
 <code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">get_folders</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_folder_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.get_folders" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the resource manager folders of the current Alibaba Cloud user.</p>
@@ -1180,6 +1354,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ids</strong> (<em>list</em>) – A list of resource manager folders IDs.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by folder name.</p></li>
 <li><p><strong>parent_folder_id</strong> (<em>str</em>) – The ID of the parent folder.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.resourcemanager.get_handshakes">
+<code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">get_handshakes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.get_handshakes" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides the Resource Manager Handshakes of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.86.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">resourcemanager</span><span class="o">.</span><span class="n">get_handshakes</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstHandshakeId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">handshakes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ids</strong> (<em>list</em>) – A list of Resource Manager Handshake IDs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.resourcemanager.get_policies">
+<code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">get_policies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.get_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides the Resource Manager Policies of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.86.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">resourcemanager</span><span class="o">.</span><span class="n">get_policies</span><span class="p">(</span><span class="n">description_regex</span><span class="o">=</span><span class="s2">&quot;tftest_policy&quot;</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;tftest&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;Custom&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstPolicyId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">policies</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of Resource Manager Policy IDs.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by policy name.</p></li>
+<li><p><strong>policy_type</strong> (<em>str</em>) – The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values: <code class="docutils literal notranslate"><span class="pre">Custom</span></code> and <code class="docutils literal notranslate"><span class="pre">System</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1212,6 +1434,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_alicloud.resourcemanager.get_resource_directories">
+<code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">get_resource_directories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.get_resource_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides the Resource Manager Resource Directories of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.86.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">defaule</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">resourcemanager</span><span class="o">.</span><span class="n">get_resource_directories</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;resourceDirectoryId&quot;</span><span class="p">,</span> <span class="n">defaule</span><span class="o">.</span><span class="n">directories</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_alicloud.resourcemanager.get_resource_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">get_resource_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.get_resource_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides resource groups of the current Alibaba Cloud user.</p>
@@ -1231,6 +1469,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ids</strong> (<em>list</em>) – A list of resource group IDs.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by resource group name.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – The status of the resource group. Possible values:<cite>Creating</cite>,<code class="docutils literal notranslate"><span class="pre">Deleted</span></code>,<code class="docutils literal notranslate"><span class="pre">OK</span></code> and <code class="docutils literal notranslate"><span class="pre">PendingDelete</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.resourcemanager.get_roles">
+<code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">get_roles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.get_roles" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides the Resource Manager Roles of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.86.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">resourcemanager</span><span class="o">.</span><span class="n">get_roles</span><span class="p">(</span><span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;tftest&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstRoleId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">roles</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of Resource Manager Role IDs.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by role name.</p></li>
 </ul>
 </dd>
 </dl>

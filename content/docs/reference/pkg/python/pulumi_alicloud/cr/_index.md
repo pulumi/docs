@@ -5,6 +5,8 @@ linktitle: cr
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="cr">
 <h1>cr<a class="headerlink" href="#cr" title="Permalink to this headline">¶</a></h1>
 <blockquote>

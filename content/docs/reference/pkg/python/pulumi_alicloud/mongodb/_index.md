@@ -5,6 +5,8 @@ linktitle: mongodb
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="mongodb">
 <h1>mongodb<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h1>
 <blockquote>

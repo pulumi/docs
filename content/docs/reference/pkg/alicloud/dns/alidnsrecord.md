@@ -16,76 +16,9 @@ Provides a Alidns Record resource. For information about Alidns Domain Record an
 
 > **NOTE:** When the site is an international site, the `type` neither supports `REDIRECT_URL` nor `REDIRECT_URL`
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // Create a new Domain Record
-        var record = new AliCloud.Dns.AlidnsRecord("record", new AliCloud.Dns.AlidnsRecordArgs
-        {
-            DomainName = "domainname",
-            Remark = "Test new alidns record.",
-            Rr = "@",
-            Status = "ENABLE",
-            Type = "A",
-            Value = "192.168.99.99",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-# Create a new Domain Record
-record = alicloud.dns.AlidnsRecord("record",
-    domain_name="domainname",
-    remark="Test new alidns record.",
-    rr="@",
-    status="ENABLE",
-    type="A",
-    value="192.168.99.99")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-// Create a new Domain Record
-const record = new alicloud.dns.AlidnsRecord("record", {
-    domainName: "domainname",
-    remark: "Test new alidns record.",
-    rr: "@",
-    status: "ENABLE",
-    type: "A",
-    value: "192.168.99.99",
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a AlidnsRecord Resource {#create}

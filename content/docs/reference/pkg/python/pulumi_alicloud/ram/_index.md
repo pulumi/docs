@@ -5,6 +5,8 @@ linktitle: ram
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="ram">
 <h1>ram<a class="headerlink" href="#ram" title="Permalink to this headline">¶</a></h1>
 <blockquote>

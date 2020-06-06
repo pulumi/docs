@@ -5,6 +5,8 @@ linktitle: rocketmq
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="rocketmq">
 <h1>rocketmq<a class="headerlink" href="#rocketmq" title="Permalink to this headline">¶</a></h1>
 <blockquote>

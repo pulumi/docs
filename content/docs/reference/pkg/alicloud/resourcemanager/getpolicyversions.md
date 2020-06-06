@@ -14,66 +14,9 @@ This data source provides the Resource Manager Policy Versions of the current Al
 
 > **NOTE:**  Available in 1.85.0+.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = Output.Create(AliCloud.ResourceManager.GetPolicyVersions.InvokeAsync(new AliCloud.ResourceManager.GetPolicyVersionsArgs
-        {
-            PolicyName = "tftest",
-            PolicyType = "Custom",
-        }));
-        this.FirstPolicyVersionId = @default.Apply(@default => @default.Versions[0].Id);
-    }
-
-    [Output("firstPolicyVersionId")]
-    public Output<string> FirstPolicyVersionId { get; set; }
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-default = alicloud.resourcemanager.get_policy_versions(policy_name="tftest",
-    policy_type="Custom")
-pulumi.export("firstPolicyVersionId", default.versions[0]["id"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const defaultPolicyVersions = pulumi.output(alicloud.resourcemanager.getPolicyVersions({
-    policyName: "tftest",
-    policyType: "Custom",
-}, { async: true }));
-
-export const firstPolicyVersionId = defaultPolicyVersions.versions[0].id;
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetPolicyVersions {#using}

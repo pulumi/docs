@@ -309,10 +309,10 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:
-- OldestInstance: removes the first ECS instance attached to the scaling group.
-- NewestInstance: removes the first ECS instance attached to the scaling group.
-- OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.
-- Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.
+- OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.
+- NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.
+- OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.
+- Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -492,10 +492,10 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:
-- OldestInstance: removes the first ECS instance attached to the scaling group.
-- NewestInstance: removes the first ECS instance attached to the scaling group.
-- OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.
-- Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.
+- OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.
+- NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.
+- OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.
+- Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -675,10 +675,10 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:
-- OldestInstance: removes the first ECS instance attached to the scaling group.
-- NewestInstance: removes the first ECS instance attached to the scaling group.
-- OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.
-- Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.
+- OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.
+- NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.
+- OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.
+- Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -858,10 +858,10 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:
-- OldestInstance: removes the first ECS instance attached to the scaling group.
-- NewestInstance: removes the first ECS instance attached to the scaling group.
-- OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.
-- Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.
+- OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.
+- NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.
+- OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.
+- Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,10 +1246,10 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:
-- OldestInstance: removes the first ECS instance attached to the scaling group.
-- NewestInstance: removes the first ECS instance attached to the scaling group.
-- OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.
-- Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.
+- OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.
+- NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.
+- OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.
+- Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1429,10 +1429,10 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:
-- OldestInstance: removes the first ECS instance attached to the scaling group.
-- NewestInstance: removes the first ECS instance attached to the scaling group.
-- OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.
-- Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.
+- OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.
+- NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.
+- OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.
+- Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1612,10 +1612,10 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:
-- OldestInstance: removes the first ECS instance attached to the scaling group.
-- NewestInstance: removes the first ECS instance attached to the scaling group.
-- OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.
-- Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.
+- OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.
+- NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.
+- OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.
+- Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1795,10 +1795,10 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:
-- OldestInstance: removes the first ECS instance attached to the scaling group.
-- NewestInstance: removes the first ECS instance attached to the scaling group.
-- OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.
-- Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.
+- OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.
+- NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.
+- OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.
+- Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -5,6 +5,8 @@ linktitle: ess
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="ess">
 <h1>ess<a class="headerlink" href="#ess" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -1269,10 +1271,10 @@ targeting your `slb.Listener` in order to make sure the listener with its Health
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">OldestInstance</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">first</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">attached</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scaling</span> <span class="n">group</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">NewestInstance</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">first</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">attached</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scaling</span> <span class="n">group</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">OldestScalingConfiguration</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="k">with</span> <span class="n">the</span> <span class="n">oldest</span> <span class="n">scaling</span> <span class="n">configuration</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">Default</span> <span class="n">values</span><span class="p">:</span> <span class="n">OldestScalingConfiguration</span> <span class="ow">and</span> <span class="n">OldestInstance</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">enter</span> <span class="n">up</span> <span class="n">to</span> <span class="n">two</span> <span class="n">removal</span> <span class="n">policies</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">OldestInstance</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">added</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scaling</span> <span class="n">group</span> <span class="n">at</span> <span class="n">the</span> <span class="n">earliest</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">time</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">NewestInstance</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">added</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scaling</span> <span class="n">group</span> <span class="n">at</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">time</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">OldestScalingConfiguration</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">created</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">earliest</span> <span class="n">scaling</span> <span class="n">configuration</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">Default</span> <span class="n">values</span><span class="p">:</span> <span class="n">Default</span> <span class="n">value</span> <span class="n">of</span> <span class="n">RemovalPolicy</span><span class="o">.</span><span class="mi">1</span><span class="p">:</span> <span class="n">OldestScalingConfiguration</span><span class="o">.</span> <span class="n">Default</span> <span class="n">value</span> <span class="n">of</span> <span class="n">RemovalPolicy</span><span class="o">.</span><span class="mi">2</span><span class="p">:</span> <span class="n">OldestInstance</span><span class="o">.</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1357,10 +1359,10 @@ targeting your <code class="docutils literal notranslate"><span class="pre">slb.
 <code class="sig-name descname">removal_policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ess.ScalingGroup.removal_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>RemovalPolicy is used to select the ECS instances you want to remove from the scaling group when multiple candidates for removal exist. Optional values:</p>
 <ul class="simple">
-<li><p>OldestInstance: removes the first ECS instance attached to the scaling group.</p></li>
-<li><p>NewestInstance: removes the first ECS instance attached to the scaling group.</p></li>
-<li><p>OldestScalingConfiguration: removes the ECS instance with the oldest scaling configuration.</p></li>
-<li><p>Default values: OldestScalingConfiguration and OldestInstance. You can enter up to two removal policies.</p></li>
+<li><p>OldestInstance: removes the ECS instance that is added to the scaling group at the earliest point in time.</p></li>
+<li><p>NewestInstance: removes the ECS instance that is added to the scaling group at the latest point in time.</p></li>
+<li><p>OldestScalingConfiguration: removes the ECS instance that is created based on the earliest scaling configuration.</p></li>
+<li><p>Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.</p></li>
 </ul>
 </dd></dl>
 
@@ -1441,10 +1443,10 @@ targeting your `slb.Listener` in order to make sure the listener with its Health
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">OldestInstance</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">first</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">attached</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scaling</span> <span class="n">group</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">NewestInstance</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">first</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">attached</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scaling</span> <span class="n">group</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">OldestScalingConfiguration</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="k">with</span> <span class="n">the</span> <span class="n">oldest</span> <span class="n">scaling</span> <span class="n">configuration</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">Default</span> <span class="n">values</span><span class="p">:</span> <span class="n">OldestScalingConfiguration</span> <span class="ow">and</span> <span class="n">OldestInstance</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">enter</span> <span class="n">up</span> <span class="n">to</span> <span class="n">two</span> <span class="n">removal</span> <span class="n">policies</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">OldestInstance</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">added</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scaling</span> <span class="n">group</span> <span class="n">at</span> <span class="n">the</span> <span class="n">earliest</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">time</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">NewestInstance</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">added</span> <span class="n">to</span> <span class="n">the</span> <span class="n">scaling</span> <span class="n">group</span> <span class="n">at</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">time</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">OldestScalingConfiguration</span><span class="p">:</span> <span class="n">removes</span> <span class="n">the</span> <span class="n">ECS</span> <span class="n">instance</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">created</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">earliest</span> <span class="n">scaling</span> <span class="n">configuration</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">Default</span> <span class="n">values</span><span class="p">:</span> <span class="n">Default</span> <span class="n">value</span> <span class="n">of</span> <span class="n">RemovalPolicy</span><span class="o">.</span><span class="mi">1</span><span class="p">:</span> <span class="n">OldestScalingConfiguration</span><span class="o">.</span> <span class="n">Default</span> <span class="n">value</span> <span class="n">of</span> <span class="n">RemovalPolicy</span><span class="o">.</span><span class="mi">2</span><span class="p">:</span> <span class="n">OldestInstance</span><span class="o">.</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

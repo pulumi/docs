@@ -5,6 +5,8 @@ linktitle: nas
 notitle: true
 ---
 
+{{< resource-docs-alert "alicloud" >}}
+
 <div class="section" id="nas">
 <h1>nas<a class="headerlink" href="#nas" title="Permalink to this headline">¶</a></h1>
 <blockquote>

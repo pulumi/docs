@@ -14,66 +14,9 @@ This data source provides a list of Alidns Domain Groups in an Alibaba Cloud acc
 
 > **NOTE:**  Available in 1.85.0+.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = Output.Create(AliCloud.Dns.GetAlidnsDomainGroups.InvokeAsync(new AliCloud.Dns.GetAlidnsDomainGroupsArgs
-        {
-            Ids = 
-            {
-                "c5ef2bc43064445787adf182af2****",
-            },
-        }));
-        this.FirstDomainGroupId = example.Apply(example => example.Groups[0].Id);
-    }
-
-    [Output("firstDomainGroupId")]
-    public Output<string> FirstDomainGroupId { get; set; }
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-example = alicloud.dns.get_alidns_domain_groups(ids=["c5ef2bc43064445787adf182af2****"])
-pulumi.export("firstDomainGroupId", example.groups[0]["id"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const example = pulumi.output(alicloud.dns.getAlidnsDomainGroups({
-    ids: ["c5ef2bc43064445787adf182af2****"],
-}, { async: true }));
-
-export const firstDomainGroupId = example.groups[0].id;
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetAlidnsDomainGroups {#using}

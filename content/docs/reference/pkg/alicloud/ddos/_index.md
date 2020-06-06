@@ -13,6 +13,7 @@ Explore the resources and functions of the ddos module in the AliCloud package.
 <ul class="api">
     <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
     <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
+    <li><a href="schedulerrule" title="SchedulerRule"><span class="symbol resource"></span>SchedulerRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -30,7 +31,7 @@ Explore the resources and functions of the ddos module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.7.0</dd>
+	<dd>2.8.0</dd>
 </dl>
 
 
