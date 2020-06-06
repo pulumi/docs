@@ -125,19 +125,23 @@ A stack can be exported to see the raw data associated with the stack.  This is 
 {{< chooser os "macos,windows,linux" >}}
 
 {{% choosable os "macos,linux" %}}
+
 ```bash
 $ pulumi stack export > stack.json
 
 $ pulumi stack import < stack.json
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 > pulumi stack export > stack.json
 
 > Get-Content stack.json | pulumi stack import
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
