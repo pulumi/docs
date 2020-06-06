@@ -5,6 +5,8 @@ linktitle: insights
 notitle: true
 ---
 
+{{< resource-docs-alert "newrelic" >}}
+
 <div class="section" id="insights">
 <h1>insights<a class="headerlink" href="#insights" title="Permalink to this headline">¶</a></h1>
 <blockquote>
