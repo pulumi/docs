@@ -210,7 +210,9 @@ func emitMarkdownDocs(srcdir, pkgname string, doc *typeDocNode, outdir, outdatad
 		k8s = true
 	}
 
-	e := newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir, pkgRepoDir, k8s)
+	blocked := blockExternalSearchIndex(pkgname)
+
+	e := newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir, pkgRepoDir, k8s, blocked)
 
 	// Gather modules.
 	root, err := e.gatherModules(doc, rootModule)
@@ -223,6 +225,18 @@ func emitMarkdownDocs(srcdir, pkgname string, doc *typeDocNode, outdir, outdatad
 	return e.emitMarkdownModule(rootModule, root, gitSha, true)
 }
 
+// blockExternalSearchIndex returns whether the given provider should be blocked from
+// search-engine indexing. Should be true for all packages that have resource docs.
+func blockExternalSearchIndex(pkgname string) bool {
+	indexables := []string{"awsx", "cloud", "eks", "kubernetesx", "policy", "pulumi", "terraform"}
+	for _, p := range indexables {
+		if p == pkgname {
+			return false
+		}
+	}
+	return true
+}
+
 type emitter struct {
 	pkg        string  // the NPM package name.
 	pkgname    string  // the simple name of the package.
@@ -233,9 +247,10 @@ type emitter struct {
 	pkgrepodir string  // the package repo directory.
 	root       *module // the root module.
 	k8s        bool    // whether this is the kubernetes module.
+	blocked    bool    // whether the package should be blocked from search-engine indexing
 }
 
-func newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir, pkgRepoDir string, k8s bool) *emitter {
+func newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir, pkgRepoDir string, k8s bool, blocked bool) *emitter {
 	return &emitter{
 		pkg:        pkg,
 		pkgname:    pkgname,
@@ -245,6 +260,7 @@ func newEmitter(pkg, pkgname, srcdir, repoURL, outdir, outdatadir, pkgRepoDir st
 		outdatadir: outdatadir,
 		pkgrepodir: pkgRepoDir,
 		k8s:        k8s,
+		blocked:    blocked,
 	}
 }
 
@@ -528,6 +544,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 		"HasResourcesOrFunctions": hasResources || hasFunctions,
 		"Others":                  others,
 		"HasOthers":               len(others) > 0,
+		"BlockFromExternalSearch": e.blocked,
 	}); err != nil {
 		return err
 	}

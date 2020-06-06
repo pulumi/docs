@@ -354,6 +354,8 @@ def create_markdown_file(input: CreateMarkdownInput):
         f.write(f"title_tag: {input.title_tag} | Python SDK\n")
         f.write(f"linktitle: {input.linktitle}\n")
         f.write(f"notitle: true\n")
+        if block_external_search_index(input.provider_name):
+            f.write(f"block_external_search_index: true\n")
         f.write("---\n\n")
         f.write(get_resource_docs_alert(input.provider_name) + "\n\n")
         # The "body" property of Sphinx's JSON is basically the rendered HTML of the documentation on this page. We're
@@ -364,6 +366,14 @@ def create_markdown_file(input: CreateMarkdownInput):
 
 def get_resource_docs_alert(provider_name):
     return "{{{{< resource-docs-alert \"{0}\" >}}}}".format(provider_name)
+
+def block_external_search_index(provider: str):
+    """
+    Returns whether the given provider should be blocked from search-engine indexing.
+    Should be true for all packages that have resource docs.
+    """
+    indexables = ["pulumi", "policy", "terraform"]
+    return provider not in indexables
 
 def main():
     if len(sys.argv) > 3:
