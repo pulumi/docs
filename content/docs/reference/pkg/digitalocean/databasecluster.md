@@ -898,6 +898,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="clusterurn_csharp">
+<a href="#clusterurn_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the database cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
 </span> 
@@ -985,17 +996,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="urn_csharp">
-<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the database cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
 </span> 
@@ -1011,6 +1011,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="clusterurn_go">
+<a href="#clusterurn_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1101,17 +1112,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="urn_go">
-<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the database cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
 </span> 
@@ -1127,6 +1127,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="clusterurn_nodejs">
+<a href="#clusterurn_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1217,17 +1228,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="urn_nodejs">
-<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the database cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
@@ -1243,6 +1243,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="cluster_urn_python">
+<a href="#cluster_urn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1333,17 +1344,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="urn_python">
-<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the database cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
@@ -1372,7 +1372,7 @@ Get an existing DatabaseCluster resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>database=None<span class="p">, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>host=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>private_host=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>private_uri=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>uri=None<span class="p">, </span>urn=None<span class="p">, </span>user=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_urn=None<span class="p">, </span>database=None<span class="p">, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>host=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>private_host=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>private_uri=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>uri=None<span class="p">, </span>user=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1485,6 +1485,17 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clusterurn_csharp">
+<a href="#state_clusterurn_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1675,17 +1686,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_urn_csharp">
-<a href="#state_urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the database cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_user_csharp">
 <a href="#state_user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
 </span> 
@@ -1712,6 +1712,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clusterurn_go">
+<a href="#state_clusterurn_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1902,17 +1913,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_urn_go">
-<a href="#state_urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the database cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_user_go">
 <a href="#state_user_go" style="color: inherit; text-decoration: inherit;">User</a>
 </span> 
@@ -1939,6 +1939,17 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clusterurn_nodejs">
+<a href="#state_clusterurn_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2129,17 +2140,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_urn_nodejs">
-<a href="#state_urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the database cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_user_nodejs">
 <a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span> 
@@ -2166,6 +2166,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cluster_urn_python">
+<a href="#state_cluster_urn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the database cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2352,17 +2363,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The full URI for connecting to the database cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_python">
-<a href="#state_urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the database cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

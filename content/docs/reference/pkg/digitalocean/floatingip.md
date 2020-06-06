@@ -446,6 +446,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="floatingipurn_csharp">
+<a href="#floatingipurn_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the floating ip
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -454,23 +465,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="urn_csharp">
-<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the floating ip
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="floatingipurn_go">
+<a href="#floatingipurn_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the floating ip
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -482,23 +493,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="urn_go">
-<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the floating ip
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="floatingipurn_nodejs">
+<a href="#floatingipurn_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the floating ip
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -510,23 +521,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="urn_nodejs">
-<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the floating ip
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="floating_ip_urn_python">
+<a href="#floating_ip_urn_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the floating ip
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -537,17 +548,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="urn_python">
-<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the floating ip
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -568,7 +568,7 @@ Get an existing FloatingIp resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>droplet_id=None<span class="p">, </span>ip_address=None<span class="p">, </span>region=None<span class="p">, </span>urn=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>droplet_id=None<span class="p">, </span>floating_ip_urn=None<span class="p">, </span>ip_address=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -695,6 +695,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_floatingipurn_csharp">
+<a href="#state_floatingipurn_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the floating ip
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span> 
@@ -715,17 +726,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The region that the Floating IP is reserved to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_csharp">
-<a href="#state_urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the floating ip
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -742,6 +742,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of Droplet that the Floating IP will be assigned to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_floatingipurn_go">
+<a href="#state_floatingipurn_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the floating ip
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -766,17 +777,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The region that the Floating IP is reserved to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_go">
-<a href="#state_urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the floating ip
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -793,6 +793,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The ID of Droplet that the Floating IP will be assigned to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_floatingipurn_nodejs">
+<a href="#state_floatingipurn_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the floating ip
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -817,17 +828,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The region that the Floating IP is reserved to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_nodejs">
-<a href="#state_urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the floating ip
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -844,6 +844,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The ID of Droplet that the Floating IP will be assigned to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_floating_ip_urn_python">
+<a href="#state_floating_ip_urn_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>urn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name of the floating ip
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -866,17 +877,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region that the Floating IP is reserved to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_urn_python">
-<a href="#state_urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The uniform resource name of the floating ip
 {{% /md %}}</dd>
 
 </dl>
