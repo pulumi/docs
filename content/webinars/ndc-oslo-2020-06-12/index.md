@@ -13,7 +13,7 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/ndc-oslo.png"
+preview_image: "/images/webinar/ndc-oslo.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
