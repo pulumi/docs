@@ -12,6 +12,7 @@ jobs:
         with:
           repository: ${{ github.event.client_payload.repo }}
           ref: ${{ github.event.client_payload.ref }}
+          path: .
       - uses: actions/setup-go@v2
       - uses: actions/setup-node@v2-beta
       - uses: actions/setup-python@v2
