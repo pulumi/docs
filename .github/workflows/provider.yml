@@ -24,11 +24,16 @@ jobs:
       - uses: actions/setup-python@v2
       - uses: actions/setup-dotnet@v1
       - run: make ensure ensure_tools
+        working-directory: docs
       - name: run typedoc
         run: PKGS=${{ github.event.client_payload.repo }} NOBUILD=true ./scripts/run_typedoc.sh
+        working-directory: docs
       - name: generate resource docs
         run: ./scripts/gen_resource_docs.sh "${{ github.event.client_payload.repo }}" true "${{ github.event.client_payload.ref }}"
+        working-directory: docs
       - name: generate python docs
         run: ./scripts/generate_python_docs.sh "${{ github.event.client_payload.repo }}"
+        working-directory: docs
       - name: git status
         run: git status && git diff
+        working-directory: docs
