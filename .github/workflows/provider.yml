@@ -21,7 +21,7 @@ jobs:
         run: PKGS=${{ github.event.client_payload.repo }} NOBUILD=true ./scripts/run_typedoc.sh
       - name: generate resource docs
         run: ./scripts/gen_resource_docs.sh "${{ github.event.client_payload.repo }}" true "${{ github.event.client_payload.ref }}"
-      - name: generate python docs:
+      - name: generate python docs
         run: ./scripts/generate_python_docs.sh "${{ github.event.client_payload.repo }}"
       - name: git status
         run: git status && git diff
