@@ -8,10 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          path: docs
       - uses: actions/checkout@v2
         with:
           repository: pulumi/pulumi
-          path: ../pulumi
+          path: pulumi
       - uses: actions/checkout@v2
         with:
           repository: ${{ github.event.client_payload.repo }}
