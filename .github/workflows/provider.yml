@@ -14,8 +14,8 @@ jobs:
           ref: ${{ github.event.client_payload.ref }}
       - uses: actions/setup-go@v2
       - uses: actions/setup-node@v2-beta
-      - uses: actions/setup-python
-      - uses: actions/setup-dotnet
+      - uses: actions/setup-python@v2
+      - uses: actions/setup-dotnet@v1
       - run: make ensure ensure_tools
       - name: run typedoc
         run: PKGS=${{ github.event.client_payload.repo }} NOBUILD=true ./scripts/run_typedoc.sh
