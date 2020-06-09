@@ -5,6 +5,8 @@ linktitle: runtimeconfig
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="runtimeconfig">
 <h1>runtimeconfig<a class="headerlink" href="#runtimeconfig" title="Permalink to this headline">¶</a></h1>
 <blockquote>

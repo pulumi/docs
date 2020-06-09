@@ -5,6 +5,8 @@ linktitle: iot
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="iot">
 <h1>iot<a class="headerlink" href="#iot" title="Permalink to this headline">¶</a></h1>
 <blockquote>

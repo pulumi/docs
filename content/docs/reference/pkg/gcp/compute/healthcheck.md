@@ -68,7 +68,7 @@ class MyStack : Stack
             CheckIntervalSec = 1,
             TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
             {
-                Port = "80",
+                Port = 80,
             },
             TimeoutSec = 1,
         });
@@ -183,7 +183,7 @@ class MyStack : Stack
             CheckIntervalSec = 1,
             SslHealthCheck = new Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs
             {
-                Port = "443",
+                Port = 443,
             },
             TimeoutSec = 1,
         });
@@ -416,7 +416,7 @@ class MyStack : Stack
             CheckIntervalSec = 1,
             HttpsHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs
             {
-                Port = "443",
+                Port = 443,
             },
             TimeoutSec = 1,
         });
@@ -534,7 +534,7 @@ class MyStack : Stack
             CheckIntervalSec = 1,
             Http2HealthCheck = new Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs
             {
-                Port = "443",
+                Port = 443,
             },
             TimeoutSec = 1,
         });

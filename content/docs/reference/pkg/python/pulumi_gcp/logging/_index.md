@@ -5,6 +5,8 @@ linktitle: logging
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="logging">
 <h1>logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
 <blockquote>

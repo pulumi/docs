@@ -180,7 +180,7 @@ class MyStack : Stack
                     },
                     Condition = new Gcp.Storage.Inputs.BucketLifecycleRuleConditionArgs
                     {
-                        Age = "3",
+                        Age = 3,
                     },
                 },
             },

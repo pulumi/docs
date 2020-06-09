@@ -5,6 +5,8 @@ linktitle: service_account
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="service-account">
 <h1>service_account<a class="headerlink" href="#service-account" title="Permalink to this headline">¶</a></h1>
 <blockquote>

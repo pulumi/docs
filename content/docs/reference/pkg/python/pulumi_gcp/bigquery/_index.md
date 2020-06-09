@@ -5,6 +5,8 @@ linktitle: bigquery
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="bigquery">
 <h1>bigquery<a class="headerlink" href="#bigquery" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -1712,7 +1714,7 @@ The default value is true.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">inlineCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
@@ -1991,7 +1993,7 @@ The default value is true.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">inlineCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
@@ -2250,7 +2252,7 @@ The default value is true.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">inlineCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
@@ -2590,6 +2592,32 @@ that BigQuery will skip when reading the data. At least one of <code class="docu
 <code class="docutils literal notranslate"><span class="pre">skip_leading_rows</span></code> must be set.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hivePartitioningOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When set, configures hive partitioning
+support. Not all storage formats support hive partitioning – requesting hive
+partitioning on an unsupported format will lead to an error, as will providing
+an invalid specification.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When set, what mode of hive partitioning to use when
+reading data. The following modes are supported.</p>
+<ul>
+<li><p>AUTO: automatically infer partition key name(s) and type(s).</p></li>
+<li><p>STRINGS: automatically infer partition key name(s). All types are
+Not all storage formats support hive partitioning. Requesting hive
+partitioning on an unsupported format will lead to an error.
+Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.</p></li>
+<li><p>CUSTOM: when set to <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>, you must encode the partition key schema within the <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> by setting <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> to <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceUriPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When hive partition detection is requested,
+a common for all source uris must be required. The prefix must end immediately
+before the partition key encoding begins. For example, consider files following
+this data layout. <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro</span></code>
+<code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro</span></code> When hive
+partitioning is requested with either AUTO or STRINGS detection, the common prefix
+can be either of <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table</span></code> or <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/</span></code>.
+Note that when <code class="docutils literal notranslate"><span class="pre">mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>, you must encode the partition key schema within the <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> by setting <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> to <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}</span></code>.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreUnknownValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if BigQuery should
 allow extra values that are not represented in the table schema.
 If true, the extra values are ignored. If false, records with
@@ -2738,6 +2766,32 @@ Structure is documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">skipLeadingRows</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of <code class="docutils literal notranslate"><span class="pre">range</span></code> or
 <code class="docutils literal notranslate"><span class="pre">skip_leading_rows</span></code> must be set.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hivePartitioningOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - When set, configures hive partitioning
+support. Not all storage formats support hive partitioning – requesting hive
+partitioning on an unsupported format will lead to an error, as will providing
+an invalid specification.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When set, what mode of hive partitioning to use when
+reading data. The following modes are supported.</p>
+<ul>
+<li><p>AUTO: automatically infer partition key name(s) and type(s).</p></li>
+<li><p>STRINGS: automatically infer partition key name(s). All types are
+Not all storage formats support hive partitioning. Requesting hive
+partitioning on an unsupported format will lead to an error.
+Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.</p></li>
+<li><p>CUSTOM: when set to <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>, you must encode the partition key schema within the <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> by setting <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> to <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceUriPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When hive partition detection is requested,
+a common for all source uris must be required. The prefix must end immediately
+before the partition key encoding begins. For example, consider files following
+this data layout. <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro</span></code>
+<code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro</span></code> When hive
+partitioning is requested with either AUTO or STRINGS detection, the common prefix
+can be either of <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table</span></code> or <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/</span></code>.
+Note that when <code class="docutils literal notranslate"><span class="pre">mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>, you must encode the partition key schema within the <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> by setting <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> to <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreUnknownValues</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates if BigQuery should
@@ -3003,6 +3057,32 @@ Structure is documented below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">skipLeadingRows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of <code class="docutils literal notranslate"><span class="pre">range</span></code> or
 <code class="docutils literal notranslate"><span class="pre">skip_leading_rows</span></code> must be set.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hivePartitioningOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When set, configures hive partitioning
+support. Not all storage formats support hive partitioning – requesting hive
+partitioning on an unsupported format will lead to an error, as will providing
+an invalid specification.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When set, what mode of hive partitioning to use when
+reading data. The following modes are supported.</p>
+<ul>
+<li><p>AUTO: automatically infer partition key name(s) and type(s).</p></li>
+<li><p>STRINGS: automatically infer partition key name(s). All types are
+Not all storage formats support hive partitioning. Requesting hive
+partitioning on an unsupported format will lead to an error.
+Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.</p></li>
+<li><p>CUSTOM: when set to <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>, you must encode the partition key schema within the <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> by setting <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> to <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceUriPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When hive partition detection is requested,
+a common for all source uris must be required. The prefix must end immediately
+before the partition key encoding begins. For example, consider files following
+this data layout. <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro</span></code>
+<code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro</span></code> When hive
+partitioning is requested with either AUTO or STRINGS detection, the common prefix
+can be either of <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table</span></code> or <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/</span></code>.
+Note that when <code class="docutils literal notranslate"><span class="pre">mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>, you must encode the partition key schema within the <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> by setting <code class="docutils literal notranslate"><span class="pre">source_uri_prefix</span></code> to <code class="docutils literal notranslate"><span class="pre">gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignoreUnknownValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if BigQuery should

@@ -5,6 +5,8 @@ linktitle: cloudrun
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="cloudrun">
 <h1>cloudrun<a class="headerlink" href="#cloudrun" title="Permalink to this headline">¶</a></h1>
 <blockquote>

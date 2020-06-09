@@ -5,6 +5,8 @@ linktitle: artifactregistry
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="artifactregistry">
 <h1>artifactregistry<a class="headerlink" href="#artifactregistry" title="Permalink to this headline">¶</a></h1>
 <blockquote>

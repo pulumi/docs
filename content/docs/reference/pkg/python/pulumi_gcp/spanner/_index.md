@@ -5,6 +5,8 @@ linktitle: spanner
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="spanner">
 <h1>spanner<a class="headerlink" href="#spanner" title="Permalink to this headline">¶</a></h1>
 <blockquote>

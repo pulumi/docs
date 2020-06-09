@@ -5,6 +5,8 @@ linktitle: firebase
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="firebase">
 <h1>firebase<a class="headerlink" href="#firebase" title="Permalink to this headline">¶</a></h1>
 <blockquote>

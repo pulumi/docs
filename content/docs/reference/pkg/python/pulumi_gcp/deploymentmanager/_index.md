@@ -5,6 +5,8 @@ linktitle: deploymentmanager
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="deploymentmanager">
 <h1>deploymentmanager<a class="headerlink" href="#deploymentmanager" title="Permalink to this headline">¶</a></h1>
 <blockquote>

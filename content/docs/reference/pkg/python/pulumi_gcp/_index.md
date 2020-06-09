@@ -5,6 +5,8 @@ linktitle: pulumi_gcp
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="pulumi-gcp">
 <h1>Pulumi GCP<a class="headerlink" href="#pulumi-gcp" title="Permalink to this headline">¶</a></h1>
 <blockquote>

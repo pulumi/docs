@@ -5,6 +5,8 @@ linktitle: accesscontextmanager
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="accesscontextmanager">
 <h1>accesscontextmanager<a class="headerlink" href="#accesscontextmanager" title="Permalink to this headline">¶</a></h1>
 <blockquote>

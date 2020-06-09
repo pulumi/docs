@@ -5,6 +5,8 @@ linktitle: endpoints
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="endpoints">
 <h1>endpoints<a class="headerlink" href="#endpoints" title="Permalink to this headline">¶</a></h1>
 <blockquote>

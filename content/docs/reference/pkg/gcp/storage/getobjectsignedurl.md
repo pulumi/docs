@@ -67,7 +67,7 @@ class MyStack : Stack
             Credentials = File.ReadAllText("path/to/credentials.json"),
             ExtensionHeaders = 
             {
-                { "x-goog-if-generation-match", 1 },
+                { "x-goog-if-generation-match", "1" },
             },
         }));
     }

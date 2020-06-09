@@ -5,6 +5,8 @@ linktitle: billing
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="billing">
 <h1>billing<a class="headerlink" href="#billing" title="Permalink to this headline">¶</a></h1>
 <blockquote>

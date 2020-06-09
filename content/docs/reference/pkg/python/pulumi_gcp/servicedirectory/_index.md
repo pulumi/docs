@@ -5,6 +5,8 @@ linktitle: servicedirectory
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="servicedirectory">
 <h1>servicedirectory<a class="headerlink" href="#servicedirectory" title="Permalink to this headline">¶</a></h1>
 <blockquote>

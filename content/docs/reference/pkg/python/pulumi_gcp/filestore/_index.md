@@ -5,6 +5,8 @@ linktitle: filestore
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="filestore">
 <h1>filestore<a class="headerlink" href="#filestore" title="Permalink to this headline">¶</a></h1>
 <blockquote>

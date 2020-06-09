@@ -5,6 +5,8 @@ linktitle: storage
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="storage">
 <h1>storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h1>
 <blockquote>

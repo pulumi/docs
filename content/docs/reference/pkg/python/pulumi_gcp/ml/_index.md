@@ -5,6 +5,8 @@ linktitle: ml
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="ml">
 <h1>ml<a class="headerlink" href="#ml" title="Permalink to this headline">¶</a></h1>
 <blockquote>

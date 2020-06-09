@@ -5,6 +5,8 @@ linktitle: healthcare
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="healthcare">
 <h1>healthcare<a class="headerlink" href="#healthcare" title="Permalink to this headline">¶</a></h1>
 <blockquote>

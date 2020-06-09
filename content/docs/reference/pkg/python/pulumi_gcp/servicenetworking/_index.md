@@ -5,6 +5,8 @@ linktitle: servicenetworking
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="servicenetworking">
 <h1>servicenetworking<a class="headerlink" href="#servicenetworking" title="Permalink to this headline">¶</a></h1>
 <blockquote>

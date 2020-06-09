@@ -5,6 +5,8 @@ linktitle: datafusion
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="datafusion">
 <h1>datafusion<a class="headerlink" href="#datafusion" title="Permalink to this headline">¶</a></h1>
 <blockquote>

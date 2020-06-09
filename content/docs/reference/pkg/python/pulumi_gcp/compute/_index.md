@@ -5,6 +5,8 @@ linktitle: compute
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="compute">
 <h1>compute<a class="headerlink" href="#compute" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -4009,7 +4011,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">auto_create_subnetworks</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ha_gateway</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">HaVpnGateway</span><span class="p">(</span><span class="s2">&quot;haGateway&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">external_gateway</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ExternalVpnGateway</span><span class="p">(</span><span class="s2">&quot;externalGateway&quot;</span><span class="p">,</span>
     <span class="n">redundancy_type</span><span class="o">=</span><span class="s2">&quot;SINGLE_IP_INTERNALLY_REDUNDANT&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;An externally managed VPN gateway&quot;</span><span class="p">,</span>
@@ -4020,11 +4022,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">network_subnet1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;networkSubnet1&quot;</span><span class="p">,</span>
     <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">network_subnet2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Subnetwork</span><span class="p">(</span><span class="s2">&quot;networkSubnet2&quot;</span><span class="p">,</span>
     <span class="n">ip_cidr_range</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west1&quot;</span><span class="p">,</span>
-    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+    <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">router1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Router</span><span class="p">(</span><span class="s2">&quot;router1&quot;</span><span class="p">,</span>
     <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">bgp</span><span class="o">=</span><span class="p">{</span>
@@ -4032,19 +4034,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 <span class="n">tunnel1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel1&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
-    <span class="n">peer_external_gateway</span><span class="o">=</span><span class="n">external_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">peer_external_gateway</span><span class="o">=</span><span class="n">external_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">peer_external_gateway_interface</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
-    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">vpn_gateway_interface</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">tunnel2</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VPNTunnel</span><span class="p">(</span><span class="s2">&quot;tunnel2&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
-    <span class="n">peer_external_gateway</span><span class="o">=</span><span class="n">external_gateway</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+    <span class="n">vpn_gateway</span><span class="o">=</span><span class="n">ha_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">peer_external_gateway</span><span class="o">=</span><span class="n">external_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">peer_external_gateway_interface</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">shared_secret</span><span class="o">=</span><span class="s2">&quot;a secret message&quot;</span><span class="p">,</span>
-    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">self_link</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">self_link</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">self_link</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
     <span class="n">vpn_gateway_interface</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">router1_interface1</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RouterInterface</span><span class="p">(</span><span class="s2">&quot;router1Interface1&quot;</span><span class="p">,</span>
     <span class="n">router</span><span class="o">=</span><span class="n">router1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -24918,7 +24920,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">nat_ips</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">address</span><span class="p">],</span>
     <span class="n">source_subnetwork_ip_ranges_to_nat</span><span class="o">=</span><span class="s2">&quot;LIST_OF_SUBNETWORKS&quot;</span><span class="p">,</span>
     <span class="n">subnetwork</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">google_compute_subnetwork</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;sourceIpRangesToNats&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ALL_IP_RANGES&quot;</span><span class="p">],</span>
     <span class="p">}])</span>
 </pre></div>

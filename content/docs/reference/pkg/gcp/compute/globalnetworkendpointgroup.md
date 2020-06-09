@@ -50,7 +50,7 @@ class MyStack : Stack
     {
         var neg = new Gcp.Compute.GlobalNetworkEndpointGroup("neg", new Gcp.Compute.GlobalNetworkEndpointGroupArgs
         {
-            DefaultPort = "90",
+            DefaultPort = 90,
             NetworkEndpointType = "INTERNET_FQDN_PORT",
         });
     }

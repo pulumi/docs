@@ -2912,6 +2912,20 @@ documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hivepartitioningoptions_csharp">
+<a href="#hivepartitioningoptions_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Partitioning<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}When set, configures hive partitioning
+support. Not all storage formats support hive partitioning -- requesting hive
+partitioning on an unsupported format will lead to an error, as will providing
+an invalid specification.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignoreunknownvalues_csharp">
 <a href="#ignoreunknownvalues_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Unknown<wbr>Values</a>
 </span> 
@@ -3019,6 +3033,20 @@ Valid values are "NONE" or "GZIP".
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
 documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hivepartitioningoptions_go">
+<a href="#hivepartitioningoptions_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Partitioning<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}When set, configures hive partitioning
+support. Not all storage formats support hive partitioning -- requesting hive
+partitioning on an unsupported format will lead to an error, as will providing
+an invalid specification.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3134,6 +3162,20 @@ documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hivepartitioningoptions_nodejs">
+<a href="#hivepartitioningoptions_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Partitioning<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}When set, configures hive partitioning
+support. Not all storage formats support hive partitioning -- requesting hive
+partitioning on an unsupported format will lead to an error, as will providing
+an invalid specification.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignoreunknownvalues_nodejs">
 <a href="#ignoreunknownvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
 </span> 
@@ -3241,6 +3283,20 @@ Valid values are "NONE" or "GZIP".
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
 documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hivepartitioningoptions_python">
+<a href="#hivepartitioningoptions_python" style="color: inherit; text-decoration: inherit;">hive<wbr>Partitioning<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Dict[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}When set, configures hive partitioning
+support. Not all storage formats support hive partitioning -- requesting hive
+partitioning on an unsupported format will lead to an error, as will providing
+an invalid specification.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3773,6 +3829,196 @@ Structure is documented below.
     <dd>{{% md %}}The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of `range` or
 `skip_leading_rows` must be set.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfigurationHivePartitioningOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableExternalDataConfigurationHivePartitioningOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationHivePartitioningOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationHivePartitioningOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationHivePartitioningOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfigurationHivePartitioningOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}When set, what mode of hive partitioning to use when
+reading data. The following modes are supported.
+* AUTO: automatically infer partition key name(s) and type(s).
+* STRINGS: automatically infer partition key name(s). All types are
+Not all storage formats support hive partitioning. Requesting hive
+partitioning on an unsupported format will lead to an error.
+Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
+* CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceuriprefix_csharp">
+<a href="#sourceuriprefix_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}When hive partition detection is requested,
+a common for all source uris must be required. The prefix must end immediately
+before the partition key encoding begins. For example, consider files following
+this data layout. `gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro`
+`gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro` When hive
+partitioning is requested with either AUTO or STRINGS detection, the common prefix
+can be either of `gs://bucket/path_to_table` or `gs://bucket/path_to_table/`.
+Note that when `mode` is set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When set, what mode of hive partitioning to use when
+reading data. The following modes are supported.
+* AUTO: automatically infer partition key name(s) and type(s).
+* STRINGS: automatically infer partition key name(s). All types are
+Not all storage formats support hive partitioning. Requesting hive
+partitioning on an unsupported format will lead to an error.
+Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
+* CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceuriprefix_go">
+<a href="#sourceuriprefix_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When hive partition detection is requested,
+a common for all source uris must be required. The prefix must end immediately
+before the partition key encoding begins. For example, consider files following
+this data layout. `gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro`
+`gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro` When hive
+partitioning is requested with either AUTO or STRINGS detection, the common prefix
+can be either of `gs://bucket/path_to_table` or `gs://bucket/path_to_table/`.
+Note that when `mode` is set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When set, what mode of hive partitioning to use when
+reading data. The following modes are supported.
+* AUTO: automatically infer partition key name(s) and type(s).
+* STRINGS: automatically infer partition key name(s). All types are
+Not all storage formats support hive partitioning. Requesting hive
+partitioning on an unsupported format will lead to an error.
+Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
+* CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceuriprefix_nodejs">
+<a href="#sourceuriprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When hive partition detection is requested,
+a common for all source uris must be required. The prefix must end immediately
+before the partition key encoding begins. For example, consider files following
+this data layout. `gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro`
+`gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro` When hive
+partitioning is requested with either AUTO or STRINGS detection, the common prefix
+can be either of `gs://bucket/path_to_table` or `gs://bucket/path_to_table/`.
+Note that when `mode` is set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}When set, what mode of hive partitioning to use when
+reading data. The following modes are supported.
+* AUTO: automatically infer partition key name(s) and type(s).
+* STRINGS: automatically infer partition key name(s). All types are
+Not all storage formats support hive partitioning. Requesting hive
+partitioning on an unsupported format will lead to an error.
+Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
+* CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceuriprefix_python">
+<a href="#sourceuriprefix_python" style="color: inherit; text-decoration: inherit;">source<wbr>Uri<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}When hive partition detection is requested,
+a common for all source uris must be required. The prefix must end immediately
+before the partition key encoding begins. For example, consider files following
+this data layout. `gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro`
+`gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro` When hive
+partitioning is requested with either AUTO or STRINGS detection, the common prefix
+can be either of `gs://bucket/path_to_table` or `gs://bucket/path_to_table/`.
+Note that when `mode` is set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
 {{% /md %}}</dd>
 
 </dl>

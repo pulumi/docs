@@ -78,11 +78,11 @@ class MyStack : Stack
     {
         var networkPrimary = new Gcp.Compute.Network("networkPrimary", new Gcp.Compute.NetworkArgs
         {
-            AutoCreateSubnetworks = "false",
+            AutoCreateSubnetworks = false,
         });
         var networkSecondary = new Gcp.Compute.Network("networkSecondary", new Gcp.Compute.NetworkArgs
         {
-            AutoCreateSubnetworks = "false",
+            AutoCreateSubnetworks = false,
         });
         var peeringPrimary = new Gcp.Compute.NetworkPeering("peeringPrimary", new Gcp.Compute.NetworkPeeringArgs
         {
