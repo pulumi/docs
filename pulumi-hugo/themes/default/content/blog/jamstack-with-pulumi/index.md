@@ -69,7 +69,7 @@ Now it’s time to add content to your site. You can use your favorite editor to
 ![platypus](https://static01.nyt.com/images/2017/08/01/science/29TB-PLATYPUS1/29TB-PLATYPUS1-superJumbo.jpg)
 ```
 
-Finally, we can build the static site with hugo in the container command line.
+Finally, we can build the static site with Hugo in the container command line.
 
 ```bash
 $ hugo -D
