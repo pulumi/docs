@@ -264,7 +264,7 @@ We also create a bucket to hold the CDN logs for the website.
 logs_bucket = pulumi_aws.s3.Bucket('requestLogs', bucket=f'{target_domain}-logs', acl='private')
 ```
 
-Now that we have an SSL certificate and a S3 bucket to store logs, we can create the CDN. In the CDN resource definition, `origin` sets the S3 bucket as the content source, the domain name, and the ports for serving content. We can also set the cache_behavior, the price class, access restrictions, the logging configuration, and other parameters.
+Now that we have an SSL/TLS certificate and a S3 bucket to store logs, we can create the CDN. In the CDN resource definition, `origin` sets the S3 bucket as the content source, the domain name, and the ports for serving content. We can also set the cache_behavior, the price class, access restrictions, the logging configuration, and other parameters.
 
 ```python
 # Create the CloudFront distribution
