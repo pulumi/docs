@@ -32,7 +32,7 @@ jobs:
         run: ./scripts/gen_resource_docs.sh "${{ github.event.client_payload.project }}" true "${{ github.event.client_payload.ref }}"
         working-directory: docs
       - name: generate python docs
-        run: ./scripts/generate_python_docs.sh "${{ github.event.client_payload.project }}"
+        run: ./scripts/generate_python_docs.sh "${{ github.event.client_payload.project-shortname }}"
         working-directory: docs
       - name: git status
         run: git status && git diff
