@@ -23,7 +23,7 @@ There are many static site generators, but we’ll use Hugo to build the site fo
 ```bash
 $ mkdir hugo
 $ cd hugo
-$ docker run --rm -it -v $(pwd):/src   klakegg/hugo:0.72.0-alpine shell
+$ docker run --rm -it -v $(pwd):/src klakegg/hugo:0.72.0-alpine shell
 ```
 
 The `docker run` command will fetch the container (klakegg/hugo:0.72.0-alpine), map the current directory to the `src` directory in the container, and open a shell.
@@ -86,13 +86,15 @@ Configuring a static website can be complicated when using either the AWS web in
 - [Amazon Route53](https://aws.amazon.com/route53/) to set up the DNS for the website
 - [Amazon Certificate Manager](https://aws.amazon.com/certificate-manager/) for securing the site via HTTPS
 
-Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using Python or your favorite programming language. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide]({{< relref "/docs/get-started/aws" >}}).
+Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using either TypeScript or Python. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide]({{< relref "/docs/get-started/aws" >}}).
 
 To get started building our infrastructure, we’ll download the Python example for setting up a static website with AWS. There are many [examples on our GitHub repository](https://github.com/pulumi/), but we can clone just the AWS Static Website example using a [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) which clones only the directory we specify,
 
 {{< chooser language "typescript,python" >}}
 {{% choosable language typescript %}}
+
 ```bash
+$ cd hugo
 $ mkdir aws-website
 $ cd aws-website
 
@@ -102,9 +104,12 @@ $ git config core.sparseCheckout true
 $ echo aws-ts-static-website >> .git/info/sparse-checkout
 $ git pull origin master
 ```
+
 {{% /choosable %}}
 {{% choosable language python %}}
+
 ```bash
+$cd hugo
 $ mkdir aws-website
 $ cd aws-website
 
@@ -114,10 +119,17 @@ $ git config core.sparseCheckout true
 $ echo aws-py-static-website >> .git/info/sparse-checkout
 $ git pull origin master
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 
-</pulumi-chooser>
+Your project directory should look like this:
+
+```bash
+./ hugo
+|_ playtpus
+|_ aws-<language>-static-website
+```
 
 ## Configuring and Deploying the Website
 
@@ -125,11 +137,27 @@ Now that we have a project to build the website, we will need to configure it so
 
 1. Create a new stack or instance for testing:
 
-    ```bash
-    $ pulumi stack init website-testing
-    ```
+    {{< chooser language "typescript,python" >}}
+    {{% choosable language typescript %}}
 
-2. Set the AWS region:
+```bash
+$ cd aws-ts-static-website
+$ pulumi stack init website-testing
+```
+
+    {{% /choosable %}}
+    {{% choosable language python %}}
+
+```bash
+$ cd aws-py-static-website
+$ pulumi stack init website-testing
+```
+
+    {{% /choosable %}}
+    {{< /chooser >}}
+
+
+2. Set the AWS region, you can use any region:
 
     ```bash
     $ pulumi config set aws:region us-east-1
@@ -139,16 +167,20 @@ Now that we have a project to build the website, we will need to configure it so
 
     {{< chooser language "typescript,python" >}}
     {{% choosable language typescript %}}
-        ```bash
-        $ npm install
-        ```
+
+```bash
+$ npm install
+```
+
     {{% /choosable %}}
     {{% choosable language python %}}
-        ```bash
-        $ python3 -m venv venv
-        $ source venv/bin/activate
-        $ pip3 install -r requirements.txt
-        ```
+
+```bash
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip3 install -r requirements.txt
+```
+
     {{% /choosable %}}
     {{< /chooser >}}
 
@@ -158,16 +190,11 @@ Now that we have a project to build the website, we will need to configure it so
     config:
     aws:region: us-east-1
     static-website:targetDomain: www.<your_domain>.com
-    static-website:pathToWebsiteContents: public
+    static-website:pathToWebsiteContents: ../public
     ```
 
-5. The example copies the site content from a directory in the same directory as the Pulumi project. To keep this example simple, copy the `public` directory in your Hugo installation to the `aws-py-static-website` directory.
 
-    ```bash
-    $ cp -rf <path_to>/hugo/public <path_to>/aws-py-static-website
-    ```
-
-6. Run `pulumi up` to preview and deploy changes.  After the preview is displayed, you will be prompted if you want to continue and deploy the website. When all the resources have been created, you will see a listing of the resources similar to this:
+5. Run `pulumi up` to preview and deploy changes.  After the preview is displayed, you will be prompted if you want to continue and deploy the website. When all the resources have been created, you will see a listing of the resources similar to this:
 
 ```bash
 Updating (website-testing):
@@ -177,23 +204,7 @@ Updating (website-testing):
  +   ├─ aws:acm:Certificate            certificate                                        created
  +   ├─ aws:s3:Bucket                  contentBucket                                      created
  +   │  ├─ aws:s3:BucketObject         posts/page/1/index.html                            created
- +   │  ├─ aws:s3:BucketObject         index.html                                         created
- +   │  ├─ aws:s3:BucketObject         posts/platypus/index.html                          created
- +   │  ├─ aws:s3:BucketObject         posts/index.html                                   created
- +   │  ├─ aws:s3:BucketObject         posts/index.xml                                    created
- +   │  ├─ aws:s3:BucketObject         index.xml                                          created
- +   │  ├─ aws:s3:BucketObject         dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css  created
- +   │  ├─ aws:s3:BucketObject         dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css  created
- +   │  ├─ aws:s3:BucketObject         dist/css/app.7e7787cc1402d7de28bc90f7e65adf96.css  created
- +   │  ├─ aws:s3:BucketObject         dist/js/app.3fc0f988d21662902933.js                created
- +   │  ├─ aws:s3:BucketObject         dist/css/app.e6e75cdafe2e909dacfabeb26857f994.css  created
- +   │  ├─ aws:s3:BucketObject         404.html                                           created
- +   │  ├─ aws:s3:BucketObject         tags/index.html                                    created
- +   │  ├─ aws:s3:BucketObject         images/gohugo-default-sample-hero-image.jpg        created
- +   │  ├─ aws:s3:BucketObject         tags/index.xml                                     created
- +   │  ├─ aws:s3:BucketObject         sitemap.xml                                        created
- +   │  ├─ aws:s3:BucketObject         categories/index.html                              created
- +   │  └─ aws:s3:BucketObject         categories/index.xml                               created
+ ...
  +   ├─ aws:s3:Bucket                  requestLogs                                        created
  +   ├─ aws:route53:Record             www.sophiaparafina.com-validation                  created
  +   ├─ aws:acm:CertificateValidation  certificateValidation                              created
@@ -220,6 +231,27 @@ The website has been deployed, and you can browse it with your domain URL. Since
 
 Let's take a look at how the cloud resources are created, configured, and populated. First up is the S3 bucket where the static website is stored.
 
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
+
+```typescript
+// contentBucket is the S3 bucket that the website's contents will be stored in.
+const contentBucket = new aws.s3.Bucket("contentBucket",
+    {
+        bucket: config.targetDomain,
+        acl: "public-read",
+        // Configure S3 to serve bucket contents as a website. This way S3 will automatically convert
+        // requests for "foo/" to "foo/index.html".
+        website: {
+            indexDocument: "index.html",
+            errorDocument: "404.html",
+        },
+    });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
 ```python
 # Create an S3 bucket configured as a website bucket.
 content_bucket = pulumi_aws.s3.Bucket('contentBucket',
@@ -231,7 +263,56 @@ content_bucket = pulumi_aws.s3.Bucket('contentBucket',
     })
 ```
 
+{{% /choosable %}}
+{{< /chooser >}}
+
 We add the website content by crawling the `public` directory and converting the files to S3 objects.
+
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
+
+```typescript
+// crawlDirectory recursive crawls the provided directory, applying the provided function
+// to every file it contains. Doesn't handle cycles from symlinks.
+function crawlDirectory(dir: string, f: (_: string) => void) {
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+        const filePath = `${dir}/${file}`;
+        const stat = fs.statSync(filePath);
+        if (stat.isDirectory()) {
+            crawlDirectory(filePath, f);
+        }
+        if (stat.isFile()) {
+            f(filePath);
+        }
+    }
+}
+
+// Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
+const webContentsRootPath = path.join(process.cwd(), config.pathToWebsiteContents);
+console.log("Syncing contents from local disk at", webContentsRootPath);
+crawlDirectory(
+    webContentsRootPath,
+    (filePath: string) => {
+        const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
+        const contentFile = new aws.s3.BucketObject(
+            relativeFilePath,
+            {
+                key: relativeFilePath,
+
+                acl: "public-read",
+                bucket: contentBucket,
+                contentType: mime.getType(filePath) || undefined,
+                source: new pulumi.asset.FileAsset(filePath),
+            },
+            {
+                parent: contentBucket,
+            });
+    });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 def crawl_directory(content_dir, f):
@@ -268,7 +349,35 @@ def bucket_object_converter(filepath):
 crawl_directory(web_contents_root_path, bucket_object_converter)
 ```
 
+{{% /choosable %}}
+{{< /chooser >}}
+
 Now that we have our content in an S3 bucket, we turn to configure and create the CDN that serves the website. The first task is to create an SSL/TLS certificate based on the domain name hosted on Route 53 DNS if we didn't specify the optional `certificateArn` config value of an existing certificate.
+
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
+
+```typescript
+let certificateArn: pulumi.Input<string> = config.certificateArn!;
+
+/**
+ * Only provision a certificate (and related resources) if a certificateArn is _not_ provided via configuration.
+ */
+if (config.certificateArn === undefined) {
+
+    const eastRegion = new aws.Provider("east", {
+        profile: aws.config.profile,
+        region: "us-east-1", // Per AWS, ACM certificate must be in the us-east-1 region.
+    });
+
+    const certificate = new aws.acm.Certificate("certificate", {
+        domainName: config.targetDomain,
+        validationMethod: "DNS",
+    }, { provider: eastRegion });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 if certificate_arn is None:
@@ -279,17 +388,122 @@ if certificate_arn is None:
     # Get a certificate for our website domain name.
     certificate = pulumi_aws.acm.Certificate('certificate',
         domain_name=target_domain, validation_method='DNS', opts=ResourceOptions(provider=east_region))
-
 ```
 
+{{% /choosable %}}
+{{< /chooser >}}
+
 We also create a bucket to hold the CDN logs for the website.
+
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
+
+```typescript
+// logsBucket is an S3 bucket that will contain the CDN's request logs.
+const logsBucket = new aws.s3.Bucket("requestLogs",
+    {
+        bucket: `${config.targetDomain}-logs`,
+        acl: "private",
+    });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 # Create a logs bucket for the CloudFront logs
 logs_bucket = pulumi_aws.s3.Bucket('requestLogs', bucket=f'{target_domain}-logs', acl='private')
 ```
 
+{{% /choosable %}}
+{{< /chooser >}}
+
+
 Now that we have an SSL/TLS certificate and a S3 bucket to store logs, we can create the CDN. In the CDN resource definition, `origin` sets the S3 bucket as the content source, the domain name, and the ports for serving content. We can also set the cache_behavior, the price class, access restrictions, the logging configuration, and other parameters.
+
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
+
+```typescript
+// distributionArgs configures the CloudFront distribution. Relevant documentation:
+// https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html
+// https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
+const distributionArgs: aws.cloudfront.DistributionArgs = {
+    enabled: true,
+    // Alternate aliases the CloudFront distribution can be reached at, in addition to https://xxxx.cloudfront.net.
+    // Required if you want to access the distribution via config.targetDomain as well.
+    aliases: [ config.targetDomain ],
+
+    // We only specify one origin for this distribution, the S3 content bucket.
+    origins: [
+        {
+            originId: contentBucket.arn,
+            domainName: contentBucket.websiteEndpoint,
+            customOriginConfig: {
+                // Amazon S3 doesn't support HTTPS connections when using an S3 bucket configured as a website endpoint.
+                // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginProtocolPolicy
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
+        },
+    ],
+
+    defaultRootObject: "index.html",
+
+    // A CloudFront distribution can configure different cache behaviors based on the request path.
+    // Here we just specify a single, default cache behavior which is just read-only requests to S3.
+    defaultCacheBehavior: {
+        targetOriginId: contentBucket.arn,
+
+        viewerProtocolPolicy: "redirect-to-https",
+        allowedMethods: ["GET", "HEAD", "OPTIONS"],
+        cachedMethods: ["GET", "HEAD", "OPTIONS"],
+
+        forwardedValues: {
+            cookies: { forward: "none" },
+            queryString: false,
+        },
+
+        minTtl: 0,
+        defaultTtl: tenMinutes,
+        maxTtl: tenMinutes,
+    },
+
+    // "All" is the most broad distribution, and also the most expensive.
+    // "100" is the least broad, and also the least expensive.
+    priceClass: "PriceClass_100",
+
+    // You can customize error responses. When CloudFront receives an error from the origin (e.g. S3 or some other
+    // web service) it can return a different error code, and return the response for a different resource.
+    customErrorResponses: [
+        { errorCode: 404, responseCode: 404, responsePagePath: "/404.html" },
+    ],
+
+    restrictions: {
+        geoRestriction: {
+            restrictionType: "none",
+        },
+    },
+
+    viewerCertificate: {
+        acmCertificateArn: certificateArn,  // Per AWS, ACM certificate must be in the us-east-1 region.
+        sslSupportMethod: "sni-only",
+    },
+
+    loggingConfig: {
+        bucket: logsBucket.bucketDomainName,
+        includeCookies: false,
+        prefix: `${config.targetDomain}/`,
+    },
+};
+
+const cdn = new aws.cloudfront.Distribution("cdn", distributionArgs);
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 # Create the CloudFront distribution
@@ -350,7 +564,41 @@ cdn = pulumi_aws.cloudfront.Distribution('cdn',
     wait_for_deployment=False)
 ```
 
+{{% /choosable %}}
+{{< /chooser >}}
+
 To complete the deployment, we set the `alias_a_record` to point the CDN to our domain name in Route 53.
+
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
+
+```typescript
+// Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
+function createAliasRecord(
+    targetDomain: string, distribution: aws.cloudfront.Distribution): aws.route53.Record {
+    const domainParts = getDomainAndSubdomain(targetDomain);
+    const hostedZoneId = aws.route53.getZone({ name: domainParts.parentDomain }, { async: true }).then(zone => zone.zoneId);
+    return new aws.route53.Record(
+        targetDomain,
+        {
+            name: domainParts.subdomain,
+            zoneId: hostedZoneId,
+            type: "A",
+            aliases: [
+                {
+                    name: distribution.domainName,
+                    zoneId: distribution.hostedZoneId,
+                    evaluateTargetHealth: true,
+                },
+            ],
+        });
+}
+
+const aRecord = createAliasRecord(config.targetDomain, cdn);
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 def create_alias_record(target_domain, distribution):
@@ -375,7 +623,11 @@ def create_alias_record(target_domain, distribution):
 alias_a_record = create_alias_record(target_domain, cdn)
 ```
 
-In a single Python script, we've created all the cloud resources to deploy our content and served it via a CDN.
+{{% /choosable %}}
+{{< /chooser >}}
+
+
+In a single program, we've created all the cloud resources to deploy our content and served it via a CDN.
 
 ## Conclusion
 
