@@ -53,7 +53,7 @@ title = "Platypus"
 theme = "ananke"
 ```
 
-Use hugo to create a new markdown page in the posts directory.
+Use `hugo` to create a new markdown page in the posts directory.
 
 ```bash
 $ hugo new posts/platypus.md
