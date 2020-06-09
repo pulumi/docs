@@ -18,7 +18,7 @@ While build tools have simplified the process of creating content ready for depl
 
 ## Creating Your Website with Hugo
 
-There are many static site generators, but we’ll use hugo to build the site for this example. Instead of installing hugo, we’ll use [Docker](https://docs.docker.com/get-docker/) to run hugo in a [container](https://hub.docker.com/r/klakegg/hugo/). If you have Docker installed, create a directory to hold the website and change into that directory.
+There are many static site generators, but we’ll use Hugo to build the site for this example. We’ll use [Docker](https://docs.docker.com/get-docker/) to run Hugo in a [container](https://hub.docker.com/r/klakegg/hugo/). If you have Docker installed, create a directory to hold the website and change into that directory.
 
 ```bash
 $ mkdir hugo
