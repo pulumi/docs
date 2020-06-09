@@ -39,9 +39,10 @@ jobs:
         run: git status && git diff
         working-directory: docs
       - uses: EndBug/add-and-commit@v4
-        ref: "${{ github.event.client_payload.project-shortname }}/${{ github.run_id }}-${{ github.run_number }}"
-        author_name: pulumi-bot
-        author_email: "bot@pulumi.com"
-        cwd: docs
+        with:
+          ref: "${{ github.event.client_payload.project-shortname }}/${{ github.run_id }}-${{ github.run_number }}"
+          author_name: pulumi-bot
+          author_email: "bot@pulumi.com"
+          cwd: docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
