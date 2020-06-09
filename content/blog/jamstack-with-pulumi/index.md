@@ -193,7 +193,7 @@ The website has been deployed, and you can browse it with your domain URL. Since
 
 ## Examine the Code
 
-Let's take a look at how the cloud resources are created, configured, and populated. First up is the S3 bucket where the static website is store.
+Let's take a look at how the cloud resources are created, configured, and populated. First up is the S3 bucket where the static website is stored.
 
 ```python
 # Create an S3 bucket configured as a website bucket.
