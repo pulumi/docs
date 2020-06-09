@@ -5,6 +5,8 @@ linktitle: authentication
 notitle: true
 ---
 
+{{< resource-docs-alert "keycloak" >}}
+
 <div class="section" id="module-pulumi_keycloak.authentication">
 <span id="authentication"></span><h1>authentication<a class="headerlink" href="#module-pulumi_keycloak.authentication" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
