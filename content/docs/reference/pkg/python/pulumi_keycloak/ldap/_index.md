@@ -5,6 +5,8 @@ linktitle: ldap
 notitle: true
 ---
 
+{{< resource-docs-alert "keycloak" >}}
+
 <div class="section" id="module-pulumi_keycloak.ldap">
 <span id="ldap"></span><h1>ldap<a class="headerlink" href="#module-pulumi_keycloak.ldap" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">

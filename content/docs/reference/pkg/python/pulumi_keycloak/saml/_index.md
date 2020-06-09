@@ -5,6 +5,8 @@ linktitle: saml
 notitle: true
 ---
 
+{{< resource-docs-alert "keycloak" >}}
+
 <div class="section" id="module-pulumi_keycloak.saml">
 <span id="saml"></span><h1>saml<a class="headerlink" href="#module-pulumi_keycloak.saml" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
