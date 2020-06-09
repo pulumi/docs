@@ -88,8 +88,22 @@ Configuring a static website can be complicated when using either the AWS web in
 
 Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using Python or your favorite programming language. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide]({{< relref "/docs/get-started/aws">}}).
 
-To get started building our infrastructure, we’ll download the Python example for setting up a static website with AWS. There are many [examples on our GitHub repository](https://github.com/pulumi/), but we can clone just the [AWS Python Static Website example](https://github.com/pulumi/examples/tree/master/aws-py-static-website) using a sparse clone:
+To get started building our infrastructure, we’ll download the Python example for setting up a static website with AWS. There are many [examples on our GitHub repository](https://github.com/pulumi/), but we can clone just the AWS Static Website example using a [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) which clones only the directory we specify,
 
+{{< chooser language "typescript,python" >}}
+{{% choosable language typescript %}}
+```bash
+$ mkdir aws-website
+$ cd aws-website
+
+$ git init
+$ git remote add origin -f https://github.com/pulumi/examples/
+$ git config core.sparseCheckout true
+$ echo aws-ts-static-website >> .git/info/sparse-checkout
+$ git pull origin master
+```
+{{% /choosable %}}
+{{% choosable language python %}}
 ```bash
 $ mkdir aws-website
 $ cd aws-website
@@ -100,6 +114,10 @@ $ git config core.sparseCheckout true
 $ echo aws-py-static-website >> .git/info/sparse-checkout
 $ git pull origin master
 ```
+{{% /choosable %}}
+{{< /chooser >}}
+
+</pulumi-chooser>
 
 ## Configuring and Deploying the Website
 
@@ -117,15 +135,22 @@ Now that we have a project to build the website, we will need to configure it so
     $ pulumi config set aws:region us-east-1
     ```
 
-3. Create a Python virtualenv, activate it, and install dependencies:
+3. Install [dependencies](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
 
-    This installs the dependent packages [needed](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
-
-    ```bash
-    $ python3 -m venv venv
-    $ source venv/bin/activate
-    $ pip3 install -r requirements.txt
-    ```
+    {{< chooser language "typescript,python" >}}
+    {{% choosable language typescript %}}
+        ```bash
+        $ npm install
+        ```
+    {{% /choosable %}}
+    {{% choosable language python %}}
+        ```bash
+        $ python3 -m venv venv
+        $ source venv/bin/activate
+        $ pip3 install -r requirements.txt
+        ```
+    {{% /choosable %}}
+    {{< /chooser >}}
 
 4. Edit `Pulumi.website-testing.yaml` to set the configuration parameters. The first parameter is the `targetDomain`, which is the domain for the website (e.g., www.example.com).  The parent domain must be a [Route53 Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html) in the same AWS account as where the Pulumi program is running. The second parameter is `pathToWebsiteContents`, the relative path to the website’s contents created in Hugo.
 
@@ -136,7 +161,7 @@ Now that we have a project to build the website, we will need to configure it so
     static-website:pathToWebsiteContents: public
     ```
 
-5. The example copies the site content from a directory in the same directory as the Pulumi project. To keep this example simple, copy the `public` directory in your hugo installation to the `aws-py-static-website` directory.
+5. The example copies the site content from a directory in the same directory as the Pulumi project. To keep this example simple, copy the `public` directory in your Hugo installation to the `aws-py-static-website` directory.
 
     ```bash
     $ cp -rf <path_to>/hugo/public <path_to>/aws-py-static-website
