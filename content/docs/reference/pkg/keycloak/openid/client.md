@@ -126,7 +126,7 @@ In addition to the arguments listed above, the following computed attributes are
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>login_theme=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -460,6 +460,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logintheme_csharp">
+<a href="#logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -692,6 +702,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logintheme_go">
+<a href="#logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -934,6 +954,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="logintheme_nodejs">
+<a href="#logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1166,6 +1196,16 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="login_theme_python">
+<a href="#login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1417,7 +1457,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>resource_server_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_account_user_id=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_token_lifespan=None<span class="p">, </span>access_type=None<span class="p">, </span>admin_url=None<span class="p">, </span>authentication_flow_binding_overrides=None<span class="p">, </span>authorization=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>consent_required=None<span class="p">, </span>description=None<span class="p">, </span>direct_access_grants_enabled=None<span class="p">, </span>enabled=None<span class="p">, </span>exclude_session_state_from_auth_response=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>implicit_flow_enabled=None<span class="p">, </span>login_theme=None<span class="p">, </span>name=None<span class="p">, </span>pkce_code_challenge_method=None<span class="p">, </span>realm_id=None<span class="p">, </span>resource_server_id=None<span class="p">, </span>root_url=None<span class="p">, </span>service_account_user_id=None<span class="p">, </span>service_accounts_enabled=None<span class="p">, </span>standard_flow_enabled=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, </span>web_origins=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1683,6 +1723,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logintheme_csharp">
+<a href="#state_logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1935,6 +1985,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logintheme_go">
+<a href="#state_logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2197,6 +2257,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_logintheme_nodejs">
+<a href="#state_logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -2449,6 +2519,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_login_theme_python">
+<a href="#state_login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

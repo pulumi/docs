@@ -5,6 +5,8 @@ linktitle: openid
 notitle: true
 ---
 
+{{< resource-docs-alert "keycloak" >}}
+
 <div class="section" id="module-pulumi_keycloak.openid">
 <span id="openid"></span><h1>openid<a class="headerlink" href="#module-pulumi_keycloak.openid" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">

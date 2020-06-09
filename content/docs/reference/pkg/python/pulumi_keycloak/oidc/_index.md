@@ -5,6 +5,8 @@ linktitle: oidc
 notitle: true
 ---
 
+{{< resource-docs-alert "keycloak" >}}
+
 <div class="section" id="module-pulumi_keycloak.oidc">
 <span id="oidc"></span><h1>oidc<a class="headerlink" href="#module-pulumi_keycloak.oidc" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">

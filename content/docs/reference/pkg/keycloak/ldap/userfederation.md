@@ -156,7 +156,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap/#UserFederation">UserFederation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>batch_size_for_sync=None<span class="p">, </span>bind_credential=None<span class="p">, </span>bind_dn=None<span class="p">, </span>cache_policy=None<span class="p">, </span>changed_sync_period=None<span class="p">, </span>connection_timeout=None<span class="p">, </span>connection_url=None<span class="p">, </span>custom_user_search_filter=None<span class="p">, </span>edit_mode=None<span class="p">, </span>enabled=None<span class="p">, </span>full_sync_period=None<span class="p">, </span>import_enabled=None<span class="p">, </span>name=None<span class="p">, </span>pagination=None<span class="p">, </span>priority=None<span class="p">, </span>rdn_ldap_attribute=None<span class="p">, </span>read_timeout=None<span class="p">, </span>realm_id=None<span class="p">, </span>search_scope=None<span class="p">, </span>sync_registrations=None<span class="p">, </span>use_truststore_spi=None<span class="p">, </span>user_object_classes=None<span class="p">, </span>username_ldap_attribute=None<span class="p">, </span>users_dn=None<span class="p">, </span>uuid_ldap_attribute=None<span class="p">, </span>validate_password_policy=None<span class="p">, </span>vendor=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/ldap/#UserFederation">UserFederation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>batch_size_for_sync=None<span class="p">, </span>bind_credential=None<span class="p">, </span>bind_dn=None<span class="p">, </span>cache_policy=None<span class="p">, </span>changed_sync_period=None<span class="p">, </span>connection_timeout=None<span class="p">, </span>connection_url=None<span class="p">, </span>custom_user_search_filter=None<span class="p">, </span>edit_mode=None<span class="p">, </span>enabled=None<span class="p">, </span>full_sync_period=None<span class="p">, </span>import_enabled=None<span class="p">, </span>kerberos=None<span class="p">, </span>name=None<span class="p">, </span>pagination=None<span class="p">, </span>priority=None<span class="p">, </span>rdn_ldap_attribute=None<span class="p">, </span>read_timeout=None<span class="p">, </span>realm_id=None<span class="p">, </span>search_scope=None<span class="p">, </span>sync_registrations=None<span class="p">, </span>use_truststore_spi=None<span class="p">, </span>user_object_classes=None<span class="p">, </span>username_ldap_attribute=None<span class="p">, </span>users_dn=None<span class="p">, </span>uuid_ldap_attribute=None<span class="p">, </span>validate_password_policy=None<span class="p">, </span>vendor=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -528,6 +528,17 @@ sync.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kerberos_csharp">
+<a href="#kerberos_csharp" style="color: inherit; text-decoration: inherit;">Kerberos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings regarding kerberos authentication for this realm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -827,6 +838,17 @@ sync.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kerberos_go">
+<a href="#kerberos_go" style="color: inherit; text-decoration: inherit;">Kerberos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos</a></span>
+    </dt>
+    <dd>{{% md %}}Settings regarding kerberos authentication for this realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1134,6 +1156,17 @@ sync.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kerberos_nodejs">
+<a href="#kerberos_nodejs" style="color: inherit; text-decoration: inherit;">kerberos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos</a></span>
+    </dt>
+    <dd>{{% md %}}Settings regarding kerberos authentication for this realm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1437,6 +1470,17 @@ sync.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kerberos_python">
+<a href="#kerberos_python" style="color: inherit; text-decoration: inherit;">kerberos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfederationkerberos">Dict[User<wbr>Federation<wbr>Kerberos]</a></span>
+    </dt>
+    <dd>{{% md %}}Settings regarding kerberos authentication for this realm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1631,7 +1675,7 @@ Get an existing UserFederation resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>batch_size_for_sync=None<span class="p">, </span>bind_credential=None<span class="p">, </span>bind_dn=None<span class="p">, </span>cache_policy=None<span class="p">, </span>changed_sync_period=None<span class="p">, </span>connection_timeout=None<span class="p">, </span>connection_url=None<span class="p">, </span>custom_user_search_filter=None<span class="p">, </span>edit_mode=None<span class="p">, </span>enabled=None<span class="p">, </span>full_sync_period=None<span class="p">, </span>import_enabled=None<span class="p">, </span>name=None<span class="p">, </span>pagination=None<span class="p">, </span>priority=None<span class="p">, </span>rdn_ldap_attribute=None<span class="p">, </span>read_timeout=None<span class="p">, </span>realm_id=None<span class="p">, </span>search_scope=None<span class="p">, </span>sync_registrations=None<span class="p">, </span>use_truststore_spi=None<span class="p">, </span>user_object_classes=None<span class="p">, </span>username_ldap_attribute=None<span class="p">, </span>users_dn=None<span class="p">, </span>uuid_ldap_attribute=None<span class="p">, </span>validate_password_policy=None<span class="p">, </span>vendor=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>batch_size_for_sync=None<span class="p">, </span>bind_credential=None<span class="p">, </span>bind_dn=None<span class="p">, </span>cache_policy=None<span class="p">, </span>changed_sync_period=None<span class="p">, </span>connection_timeout=None<span class="p">, </span>connection_url=None<span class="p">, </span>custom_user_search_filter=None<span class="p">, </span>edit_mode=None<span class="p">, </span>enabled=None<span class="p">, </span>full_sync_period=None<span class="p">, </span>import_enabled=None<span class="p">, </span>kerberos=None<span class="p">, </span>name=None<span class="p">, </span>pagination=None<span class="p">, </span>priority=None<span class="p">, </span>rdn_ldap_attribute=None<span class="p">, </span>read_timeout=None<span class="p">, </span>realm_id=None<span class="p">, </span>search_scope=None<span class="p">, </span>sync_registrations=None<span class="p">, </span>use_truststore_spi=None<span class="p">, </span>user_object_classes=None<span class="p">, </span>username_ldap_attribute=None<span class="p">, </span>users_dn=None<span class="p">, </span>uuid_ldap_attribute=None<span class="p">, </span>validate_password_policy=None<span class="p">, </span>vendor=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1875,6 +1919,17 @@ sync.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kerberos_csharp">
+<a href="#state_kerberos_csharp" style="color: inherit; text-decoration: inherit;">Kerberos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings regarding kerberos authentication for this realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2182,6 +2237,17 @@ sync.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_kerberos_go">
+<a href="#state_kerberos_go" style="color: inherit; text-decoration: inherit;">Kerberos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos</a></span>
+    </dt>
+    <dd>{{% md %}}Settings regarding kerberos authentication for this realm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -2481,6 +2547,17 @@ sync.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kerberos_nodejs">
+<a href="#state_kerberos_nodejs" style="color: inherit; text-decoration: inherit;">kerberos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos</a></span>
+    </dt>
+    <dd>{{% md %}}Settings regarding kerberos authentication for this realm.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2788,6 +2865,17 @@ sync.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_kerberos_python">
+<a href="#state_kerberos_python" style="color: inherit; text-decoration: inherit;">kerberos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfederationkerberos">Dict[User<wbr>Federation<wbr>Kerberos]</a></span>
+    </dt>
+    <dd>{{% md %}}Settings regarding kerberos authentication for this realm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -2954,6 +3042,218 @@ sync.
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="userfederationkerberos">User<wbr>Federation<wbr>Kerberos</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#UserFederationKerberos">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#UserFederationKerberos">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/ldap?tab=doc#UserFederationKerberosArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/ldap?tab=doc#UserFederationKerberosOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Ldap.Inputs.UserFederationKerberosArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Ldap.Outputs.UserFederationKerberos.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kerberosrealm_csharp">
+<a href="#kerberosrealm_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Realm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keytab_csharp">
+<a href="#keytab_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Tab</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serverprincipal_csharp">
+<a href="#serverprincipal_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Principal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usekerberosforpasswordauthentication_csharp">
+<a href="#usekerberosforpasswordauthentication_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Kerberos<wbr>For<wbr>Password<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kerberosrealm_go">
+<a href="#kerberosrealm_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Realm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keytab_go">
+<a href="#keytab_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Tab</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serverprincipal_go">
+<a href="#serverprincipal_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Principal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usekerberosforpasswordauthentication_go">
+<a href="#usekerberosforpasswordauthentication_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Kerberos<wbr>For<wbr>Password<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kerberosrealm_nodejs">
+<a href="#kerberosrealm_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Realm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keytab_nodejs">
+<a href="#keytab_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Tab</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serverprincipal_nodejs">
+<a href="#serverprincipal_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Principal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usekerberosforpasswordauthentication_nodejs">
+<a href="#usekerberosforpasswordauthentication_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Kerberos<wbr>For<wbr>Password<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kerberosrealm_python">
+<a href="#kerberosrealm_python" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Realm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keytab_python">
+<a href="#keytab_python" style="color: inherit; text-decoration: inherit;">key<wbr>Tab</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serverprincipal_python">
+<a href="#serverprincipal_python" style="color: inherit; text-decoration: inherit;">server<wbr>Principal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usekerberosforpasswordauthentication_python">
+<a href="#usekerberosforpasswordauthentication_python" style="color: inherit; text-decoration: inherit;">use<wbr>Kerberos<wbr>For<wbr>Password<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 
