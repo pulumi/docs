@@ -12,6 +12,7 @@ Explore the resources and functions of the containeranalysis module in the GCP p
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="note" title="Note"><span class="symbol resource"></span>Note</a></li>
+    <li><a href="occurence" title="Occurence"><span class="symbol resource"></span>Occurence</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,7 +24,7 @@ Explore the resources and functions of the containeranalysis module in the GCP p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.8.0</dd>
+	<dd>3.9.0</dd>
 </dl>
 
 

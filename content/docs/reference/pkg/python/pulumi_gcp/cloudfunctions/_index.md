@@ -5,6 +5,8 @@ linktitle: cloudfunctions
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="cloudfunctions">
 <h1>cloudfunctions<a class="headerlink" href="#cloudfunctions" title="Permalink to this headline">¶</a></h1>
 <blockquote>

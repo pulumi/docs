@@ -5,6 +5,8 @@ linktitle: secretmanager
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="secretmanager">
 <h1>secretmanager<a class="headerlink" href="#secretmanager" title="Permalink to this headline">¶</a></h1>
 <blockquote>

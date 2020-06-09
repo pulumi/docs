@@ -5,6 +5,8 @@ linktitle: iap
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="iap">
 <h1>iap<a class="headerlink" href="#iap" title="Permalink to this headline">¶</a></h1>
 <blockquote>

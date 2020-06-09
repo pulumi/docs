@@ -5,6 +5,8 @@ linktitle: container
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="container">
 <h1>container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h1>
 <blockquote>

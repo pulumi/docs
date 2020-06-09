@@ -5,6 +5,8 @@ linktitle: cloudscheduler
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="cloudscheduler">
 <h1>cloudscheduler<a class="headerlink" href="#cloudscheduler" title="Permalink to this headline">¶</a></h1>
 <blockquote>

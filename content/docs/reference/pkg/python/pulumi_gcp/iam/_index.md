@@ -5,6 +5,8 @@ linktitle: iam
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="iam">
 <h1>iam<a class="headerlink" href="#iam" title="Permalink to this headline">¶</a></h1>
 <blockquote>

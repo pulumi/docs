@@ -5,6 +5,8 @@ linktitle: datastore
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="datastore">
 <h1>datastore<a class="headerlink" href="#datastore" title="Permalink to this headline">¶</a></h1>
 <blockquote>

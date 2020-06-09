@@ -5,6 +5,8 @@ linktitle: identityplatform
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="identityplatform">
 <h1>identityplatform<a class="headerlink" href="#identityplatform" title="Permalink to this headline">¶</a></h1>
 <blockquote>

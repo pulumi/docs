@@ -5,6 +5,8 @@ linktitle: dataflow
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="dataflow">
 <h1>dataflow<a class="headerlink" href="#dataflow" title="Permalink to this headline">¶</a></h1>
 <blockquote>

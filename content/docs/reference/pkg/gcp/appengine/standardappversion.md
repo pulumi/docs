@@ -33,7 +33,7 @@ To get more information about StandardAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#StandardAppVersion">StandardAppVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>basic_scaling=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#StandardAppVersion">StandardAppVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>basic_scaling=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -296,6 +296,17 @@ The first matching URL handles the request and other request handlers are not at
 
     <dt class="property-optional"
             title="Optional">
+        <span id="inboundservices_csharp">
+<a href="#inboundservices_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="instanceclass_csharp">
 <a href="#instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
 </span> 
@@ -492,6 +503,17 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inboundservices_go">
+<a href="#inboundservices_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -696,6 +718,17 @@ The first matching URL handles the request and other request handlers are not at
 
     <dt class="property-optional"
             title="Optional">
+        <span id="inboundservices_nodejs">
+<a href="#inboundservices_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="instanceclass_nodejs">
 <a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
 </span> 
@@ -892,6 +925,17 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inbound_services_python">
+<a href="#inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1140,7 +1184,7 @@ Get an existing StandardAppVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automatic_scaling=None<span class="p">, </span>basic_scaling=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>name=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automatic_scaling=None<span class="p">, </span>basic_scaling=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>name=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1330,6 +1374,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inboundservices_csharp">
+<a href="#state_inboundservices_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1545,6 +1600,17 @@ The first matching URL handles the request and other request handlers are not at
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_inboundservices_go">
+<a href="#state_inboundservices_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_instanceclass_go">
 <a href="#state_instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
 </span> 
@@ -1756,6 +1822,17 @@ The first matching URL handles the request and other request handlers are not at
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_inboundservices_nodejs">
+<a href="#state_inboundservices_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_instanceclass_nodejs">
 <a href="#state_instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
 </span> 
@@ -1963,6 +2040,17 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inbound_services_python">
+<a href="#state_inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

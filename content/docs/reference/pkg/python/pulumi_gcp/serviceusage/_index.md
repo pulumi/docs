@@ -5,6 +5,8 @@ linktitle: serviceusage
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="serviceusage">
 <h1>serviceusage<a class="headerlink" href="#serviceusage" title="Permalink to this headline">¶</a></h1>
 <blockquote>

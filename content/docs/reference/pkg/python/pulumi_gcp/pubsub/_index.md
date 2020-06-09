@@ -5,6 +5,8 @@ linktitle: pubsub
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="pubsub">
 <h1>pubsub<a class="headerlink" href="#pubsub" title="Permalink to this headline">¶</a></h1>
 <blockquote>

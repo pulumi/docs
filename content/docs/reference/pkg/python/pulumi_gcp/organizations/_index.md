@@ -5,6 +5,8 @@ linktitle: organizations
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="organizations">
 <h1>organizations<a class="headerlink" href="#organizations" title="Permalink to this headline">¶</a></h1>
 <blockquote>

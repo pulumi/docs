@@ -5,6 +5,8 @@ linktitle: bigtable
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="bigtable">
 <h1>bigtable<a class="headerlink" href="#bigtable" title="Permalink to this headline">¶</a></h1>
 <blockquote>

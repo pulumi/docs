@@ -5,6 +5,8 @@ linktitle: dns
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="dns">
 <h1>dns<a class="headerlink" href="#dns" title="Permalink to this headline">¶</a></h1>
 <blockquote>

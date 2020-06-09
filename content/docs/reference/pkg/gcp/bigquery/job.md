@@ -6622,8 +6622,8 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourceuri_python">
-<a href="#resourceuri_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
+        <span id="resource_uri_python">
+<a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

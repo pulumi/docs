@@ -5,6 +5,8 @@ linktitle: folder
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="folder">
 <h1>folder<a class="headerlink" href="#folder" title="Permalink to this headline">¶</a></h1>
 <blockquote>

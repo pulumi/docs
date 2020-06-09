@@ -5,6 +5,8 @@ linktitle: securitycenter
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="securitycenter">
 <h1>securitycenter<a class="headerlink" href="#securitycenter" title="Permalink to this headline">¶</a></h1>
 <blockquote>

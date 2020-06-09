@@ -5,6 +5,8 @@ linktitle: resourcemanager
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="resourcemanager">
 <h1>resourcemanager<a class="headerlink" href="#resourcemanager" title="Permalink to this headline">¶</a></h1>
 <blockquote>

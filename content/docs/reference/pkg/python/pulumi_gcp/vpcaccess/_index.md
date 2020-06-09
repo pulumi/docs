@@ -5,6 +5,8 @@ linktitle: vpcaccess
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="vpcaccess">
 <h1>vpcaccess<a class="headerlink" href="#vpcaccess" title="Permalink to this headline">¶</a></h1>
 <blockquote>

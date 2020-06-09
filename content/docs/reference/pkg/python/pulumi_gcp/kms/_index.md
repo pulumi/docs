@@ -5,6 +5,8 @@ linktitle: kms
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="kms">
 <h1>kms<a class="headerlink" href="#kms" title="Permalink to this headline">¶</a></h1>
 <blockquote>

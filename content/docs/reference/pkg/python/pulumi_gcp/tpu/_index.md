@@ -5,6 +5,8 @@ linktitle: tpu
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="tpu">
 <h1>tpu<a class="headerlink" href="#tpu" title="Permalink to this headline">¶</a></h1>
 <blockquote>

@@ -5,6 +5,8 @@ linktitle: monitoring
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="monitoring">
 <h1>monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h1>
 <blockquote>

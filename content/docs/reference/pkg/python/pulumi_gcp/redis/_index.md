@@ -5,6 +5,8 @@ linktitle: redis
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="redis">
 <h1>redis<a class="headerlink" href="#redis" title="Permalink to this headline">¶</a></h1>
 <blockquote>

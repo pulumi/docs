@@ -12,30 +12,14 @@ meta_desc: "Explore the GetTestablePermissions function of the iam module, inclu
 
 Retrieve a list of testable permissions for a resource. Testable permissions mean the permissions that user can add or remove in a role at a given resource. The resource can be referenced either via the full resource name or via a URI.
 
-## Example Usage - searching for projects about to be deleted in an org
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
 
-const perms = pulumi.output(gcp.iam.getTestablePermissions({
-    fullResourceName: "//cloudresourcemanager.googleapis.com/projects/my-project",
-    stages: [
-        "GA",
-        "BETA",
-    ],
-}, { async: true }));
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
+{{% examples %}}
+## Example Usage
 
-perms = gcp.iam.get_testable_permissions(full_resource_name="//cloudresourcemanager.googleapis.com/projects/my-project",
-    stages=[
-        "GA",
-        "BETA",
-    ])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -57,7 +41,41 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+perms = gcp.iam.get_testable_permissions(full_resource_name="//cloudresourcemanager.googleapis.com/projects/my-project",
+    stages=[
+        "GA",
+        "BETA",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const perms = pulumi.output(gcp.iam.getTestablePermissions({
+    fullResourceName: "//cloudresourcemanager.googleapis.com/projects/my-project",
+    stages: [
+        "GA",
+        "BETA",
+    ],
+}, { async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetTestablePermissions {#using}

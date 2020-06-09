@@ -5,6 +5,8 @@ linktitle: gameservices
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="gameservices">
 <h1>gameservices<a class="headerlink" href="#gameservices" title="Permalink to this headline">¶</a></h1>
 <blockquote>

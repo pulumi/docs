@@ -5,6 +5,8 @@ linktitle: datacatalog
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="datacatalog">
 <h1>datacatalog<a class="headerlink" href="#datacatalog" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -1006,6 +1008,285 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_gcp.datacatalog.EntryGroupIamPolicy.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.EntryGroupIamPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_gcp.datacatalog.TagTemplate">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.datacatalog.</code><code class="sig-name descname">TagTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>A tag template defines a tag, which can have one or more typed fields.
+The template is used to create and attach the tag to GCP resources.</p>
+<p>To get more information about TagTemplate, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/data-catalog/docs">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic_tag_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">TagTemplate</span><span class="p">(</span><span class="s2">&quot;basicTagTemplate&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Demo Tag Template&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Source of data asset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;primitiveType&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of rows in the data asset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;num_rows&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;primitiveType&quot;</span><span class="p">:</span> <span class="s2">&quot;DOUBLE&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;PII type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;pii_type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enumType&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;allowedValues&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SOCIAL SECURITY NUMBER&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                    <span class="p">],</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">force_delete</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">tag_template_id</span><span class="o">=</span><span class="s2">&quot;my_template&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for this template.</p></li>
+<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.</p></li>
+<li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Template location region.</p></li>
+<li><p><strong>tag_template_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the tag template to create.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>fields</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name for this template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether this is a required field. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The order of this field with respect to other fields in this tag template.
+A higher value indicates a more important field. The value can be negative.
+Multiple fields can have the same order, and field orders within a tag do not have to be sequential.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The type of value this tag field can contain.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enumType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Represents an enum type.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">primitive_type</span></code> or <code class="docutils literal notranslate"><span class="pre">enum_type</span></code> must be set  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of allowed values for this enum. The display names of the
+values must be case-insensitively unique within this set. Currently,
+enum values can only be added to the list of allowed values. Deletion
+and renaming of enum values are not supported.
+Can have up to 500 allowed values.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name for this template.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primitiveType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Represents primitive types - string, bool etc.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">primitive_type</span></code> or <code class="docutils literal notranslate"><span class="pre">enum_type</span></code> must be set</p></li>
+</ul>
+</li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.display_name">
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display name for this template.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.fields">
+<code class="sig-name descname">fields</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name for this template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether this is a required field. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
+The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The order of this field with respect to other fields in this tag template.
+A higher value indicates a more important field. The value can be negative.
+Multiple fields can have the same order, and field orders within a tag do not have to be sequential.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The type of value this tag field can contain.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enumType</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Represents an enum type.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">primitive_type</span></code> or <code class="docutils literal notranslate"><span class="pre">enum_type</span></code> must be set  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The set of allowed values for this enum. The display names of the
+values must be case-insensitively unique within this set. Currently,
+enum values can only be added to the list of allowed values. Deletion
+and renaming of enum values are not supported.
+Can have up to 500 allowed values.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name for this template.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primitiveType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Represents primitive types - string, bool etc.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">primitive_type</span></code> or <code class="docutils literal notranslate"><span class="pre">enum_type</span></code> must be set</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.force_delete">
+<code class="sig-name descname">force_delete</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.force_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.name" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li></li>
+</ul>
+<p>The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.region">
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Template location region.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.tag_template_id">
+<code class="sig-name descname">tag_template_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.tag_template_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the tag template to create.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_template_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TagTemplate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for this template.</p></li>
+<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.  Structure is documented below.</p></li>
+<li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li></li>
+</ul>
+<p>The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}</p>
+</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Template location region.</p></li>
+<li><p><strong>tag_template_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the tag template to create.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>fields</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name for this template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether this is a required field. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The order of this field with respect to other fields in this tag template.
+A higher value indicates a more important field. The value can be negative.
+Multiple fields can have the same order, and field orders within a tag do not have to be sequential.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The type of value this tag field can contain.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enumType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Represents an enum type.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">primitive_type</span></code> or <code class="docutils literal notranslate"><span class="pre">enum_type</span></code> must be set  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of allowed values for this enum. The display names of the
+values must be case-insensitively unique within this set. Currently,
+enum values can only be added to the list of allowed values. Deletion
+and renaming of enum values are not supported.
+Can have up to 500 allowed values.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name for this template.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primitiveType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Represents primitive types - string, bool etc.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">primitive_type</span></code> or <code class="docutils literal notranslate"><span class="pre">enum_type</span></code> must be set</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.datacatalog.TagTemplate.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.TagTemplate.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

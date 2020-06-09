@@ -5,6 +5,8 @@ linktitle: sourcerepo
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="sourcerepo">
 <h1>sourcerepo<a class="headerlink" href="#sourcerepo" title="Permalink to this headline">¶</a></h1>
 <blockquote>

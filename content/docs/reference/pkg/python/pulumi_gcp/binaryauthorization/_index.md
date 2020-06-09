@@ -5,6 +5,8 @@ linktitle: binaryauthorization
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="binaryauthorization">
 <h1>binaryauthorization<a class="headerlink" href="#binaryauthorization" title="Permalink to this headline">¶</a></h1>
 <blockquote>

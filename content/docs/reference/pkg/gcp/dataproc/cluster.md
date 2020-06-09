@@ -308,7 +308,7 @@ class MyStack : Stack
                     {
                         new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs
                         {
-                            AcceleratorCount = "1",
+                            AcceleratorCount = 1,
                             AcceleratorType = "nvidia-tesla-k80",
                         },
                     },

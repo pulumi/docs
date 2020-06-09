@@ -5,6 +5,8 @@ linktitle: oslogin
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="oslogin">
 <h1>oslogin<a class="headerlink" href="#oslogin" title="Permalink to this headline">¶</a></h1>
 <blockquote>

@@ -5,6 +5,8 @@ linktitle: dataproc
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="dataproc">
 <h1>dataproc<a class="headerlink" href="#dataproc" title="Permalink to this headline">¶</a></h1>
 <blockquote>

@@ -5,6 +5,8 @@ linktitle: composer
 notitle: true
 ---
 
+{{< resource-docs-alert "gcp" >}}
+
 <div class="section" id="composer">
 <h1>composer<a class="headerlink" href="#composer" title="Permalink to this headline">¶</a></h1>
 <blockquote>
