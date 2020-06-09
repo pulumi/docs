@@ -156,14 +156,13 @@ $ pulumi stack init website-testing
     {{% /choosable %}}
     {{< /chooser >}}
 
-
-2. Set the AWS region, you can use any region:
+1. Set the AWS region, you can use any region:
 
     ```bash
     $ pulumi config set aws:region us-east-1
     ```
 
-3. Install [dependencies](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
+1. Install [dependencies](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
 
     {{< chooser language "typescript,python" >}}
     {{% choosable language typescript %}}
@@ -184,7 +183,7 @@ $ pip3 install -r requirements.txt
     {{% /choosable %}}
     {{< /chooser >}}
 
-4. Edit `Pulumi.website-testing.yaml` to set the configuration parameters. The first parameter is the `targetDomain`, which is the domain for the website (e.g., www.example.com).  The parent domain must be a [Route53 Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html) in the same AWS account as where the Pulumi program is running. The second parameter is `pathToWebsiteContents`, the relative path to the website’s contents created in Hugo.
+1. Edit `Pulumi.website-testing.yaml` to set the configuration parameters. The first parameter is the `targetDomain`, which is the domain for the website (e.g., www.example.com).  The parent domain must be a [Route53 Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html) in the same AWS account as where the Pulumi program is running. The second parameter is `pathToWebsiteContents`, the relative path to the website’s contents created in Hugo.
 
     ```yaml
     config:
@@ -193,8 +192,7 @@ $ pip3 install -r requirements.txt
     static-website:pathToWebsiteContents: ../public
     ```
 
-
-5. Run `pulumi up` to preview and deploy changes.  After the preview is displayed, you will be prompted if you want to continue and deploy the website. When all the resources have been created, you will see a listing of the resources similar to this:
+1. Run `pulumi up` to preview and deploy changes.  After the preview is displayed, you will be prompted if you want to continue and deploy the website. When all the resources have been created, you will see a listing of the resources similar to this:
 
 ```bash
 Updating (website-testing):
@@ -418,7 +416,6 @@ logs_bucket = pulumi_aws.s3.Bucket('requestLogs', bucket=f'{target_domain}-logs'
 {{% /choosable %}}
 {{< /chooser >}}
 
-
 Now that we have an SSL/TLS certificate and a S3 bucket to store logs, we can create the CDN. In the CDN resource definition, `origin` sets the S3 bucket as the content source, the domain name, and the ports for serving content. We can also set the cache_behavior, the price class, access restrictions, the logging configuration, and other parameters.
 
 {{< chooser language "typescript,python" >}}
@@ -625,7 +622,6 @@ alias_a_record = create_alias_record(target_domain, cdn)
 
 {{% /choosable %}}
 {{< /chooser >}}
-
 
 In a single program, we've created all the cloud resources to deploy our content and served it via a CDN.
 
