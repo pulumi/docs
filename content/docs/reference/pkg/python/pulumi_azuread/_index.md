@@ -5,6 +5,8 @@ linktitle: pulumi_azuread
 notitle: true
 ---
 
+{{< resource-docs-alert "azuread" >}}
+
 <div class="section" id="pulumi-azure-active-directory">
 <h1>Pulumi Azure Active Directory<a class="headerlink" href="#pulumi-azure-active-directory" title="Permalink to this headline">¶</a></h1>
 <blockquote>
@@ -15,7 +17,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azuread"></span><dl class="py class">
 <dt id="pulumi_azuread.Application">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_to_other_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_membership_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_client</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reply_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_resource_accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_to_other_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_membership_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">optional_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_client</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reply_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_resource_accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">owned</span> <span class="pre">by</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -38,6 +40,40 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">homepage</span><span class="o">=</span><span class="s2">&quot;https://homepage&quot;</span><span class="p">,</span>
     <span class="n">identifier_uris</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;https://uri&quot;</span><span class="p">],</span>
     <span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">oauth2_permissions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;adminConsentDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow the application to access example on behalf of the signed-in user.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;adminConsentDisplayName&quot;</span><span class="p">:</span> <span class="s2">&quot;Access example&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;isEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;User&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;userConsentDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow the application to access example on your behalf.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;userConsentDisplayName&quot;</span><span class="p">:</span> <span class="s2">&quot;Access example&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;user_impersonation&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;adminConsentDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Administer the example application&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;adminConsentDisplayName&quot;</span><span class="p">:</span> <span class="s2">&quot;Administer&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;isEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;administer&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">optional_claims</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;accessToken&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myclaim&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;otherclaim&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;idToken&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;emit_as_roles&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;essential&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;userclaim&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
     <span class="n">owners</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;00000004-0000-0000-c000-000000000000&quot;</span><span class="p">],</span>
     <span class="n">reply_urls</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;https://replyurl&quot;</span><span class="p">],</span>
     <span class="n">required_resource_accesses</span><span class="o">=</span><span class="p">[</span>
@@ -82,7 +118,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>logout_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the logout page.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the application.</p></li>
 <li><p><strong>oauth2_allow_implicit_flow</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>oauth2_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a <code class="docutils literal notranslate"><span class="pre">oauth2_permission</span></code> block as documented below.</p></li>
+<li><p><strong>oauth2_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by <code class="docutils literal notranslate"><span class="pre">oauth2_permissions</span></code> blocks as documented below.</p></li>
+<li><p><strong>optional_claims</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A collection of <code class="docutils literal notranslate"><span class="pre">access_token</span></code> or <code class="docutils literal notranslate"><span class="pre">id_token</span></code> blocks as documented below which list the optional claims configured for each token type. For more information see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims</a></p></li>
 <li><p><strong>owners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.</p></li>
 <li><p><strong>public_client</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Azure AD Application a public client? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>reply_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.</p></li>
@@ -97,19 +134,38 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission help text that appears in the admin app assignment and consent experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Display name for the permission that appears in the admin consent and app assignment experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Determines if the permission is enabled: defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.</p></li>
 </ul>
 <p>The <strong>oauth2_permissions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the admin consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the admin consent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission help text that appears in the admin consent and app assignment experiences.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Display name for the permission that appears in the admin consent and app assignment experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the user consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the user consent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission help text that appears in the end user consent experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Display name for the permission that appears in the end user consent experience.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
+</ul>
+<p>The <strong>optional_claims</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accessTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">essential</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the claim specified by the client is necessary to ensure a smooth authorization experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source of the claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is absent, the claim is a predefined optional claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is <code class="docutils literal notranslate"><span class="pre">user</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> is the extension property from the user object.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">essential</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the claim specified by the client is necessary to ensure a smooth authorization experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name for the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source of the claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is absent, the claim is a predefined optional claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is <code class="docutils literal notranslate"><span class="pre">user</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> is the extension property from the user object.</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>required_resource_accesses</strong> object supports the following:</p>
 <ul class="simple">
@@ -130,8 +186,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Permission help text that appears in the admin app assignment and consent experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Display name for the permission that appears in the admin consent and app assignment experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Determines if the permission is enabled: defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.</p></li>
 </ul>
 </dd></dl>
 
@@ -186,15 +242,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_azuread.Application.oauth2_permissions">
 <code class="sig-name descname">oauth2_permissions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.Application.oauth2_permissions" title="Permalink to this definition">¶</a></dt>
-<dd><p>A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a <code class="docutils literal notranslate"><span class="pre">oauth2_permission</span></code> block as documented below.</p>
+<dd><p>A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by <code class="docutils literal notranslate"><span class="pre">oauth2_permissions</span></code> blocks as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the admin consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name of the admin consent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Permission help text that appears in the admin consent and app assignment experiences.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Display name for the permission that appears in the admin consent and app assignment experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the user consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name of the user consent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Permission help text that appears in the end user consent experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Display name for the permission that appears in the end user consent experience.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
 </ul>
 </dd></dl>
@@ -203,6 +259,30 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azuread.Application.object_id">
 <code class="sig-name descname">object_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.Application.object_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Application’s Object ID.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.Application.optional_claims">
+<code class="sig-name descname">optional_claims</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.Application.optional_claims" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of <code class="docutils literal notranslate"><span class="pre">access_token</span></code> or <code class="docutils literal notranslate"><span class="pre">id_token</span></code> blocks as documented below which list the optional claims configured for each token type. For more information see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accessTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">essential</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the claim specified by the client is necessary to ensure a smooth authorization experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The source of the claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is absent, the claim is a predefined optional claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is <code class="docutils literal notranslate"><span class="pre">user</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> is the extension property from the user object.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">essential</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the claim specified by the client is necessary to ensure a smooth authorization experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name for the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The source of the claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is absent, the claim is a predefined optional claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is <code class="docutils literal notranslate"><span class="pre">user</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> is the extension property from the user object.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -246,7 +326,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py method">
 <dt id="pulumi_azuread.Application.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_to_other_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_membership_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_client</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reply_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_resource_accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_to_other_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_membership_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">optional_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_client</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reply_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_resource_accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Application resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -264,8 +344,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>logout_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the logout page.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the application.</p></li>
 <li><p><strong>oauth2_allow_implicit_flow</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>oauth2_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a <code class="docutils literal notranslate"><span class="pre">oauth2_permission</span></code> block as documented below.</p></li>
+<li><p><strong>oauth2_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by <code class="docutils literal notranslate"><span class="pre">oauth2_permissions</span></code> blocks as documented below.</p></li>
 <li><p><strong>object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s Object ID.</p></li>
+<li><p><strong>optional_claims</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A collection of <code class="docutils literal notranslate"><span class="pre">access_token</span></code> or <code class="docutils literal notranslate"><span class="pre">id_token</span></code> blocks as documented below which list the optional claims configured for each token type. For more information see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims</a></p></li>
 <li><p><strong>owners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.</p></li>
 <li><p><strong>public_client</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Azure AD Application a public client? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>reply_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.</p></li>
@@ -280,19 +361,38 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission help text that appears in the admin app assignment and consent experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Display name for the permission that appears in the admin consent and app assignment experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Determines if the permission is enabled: defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.</p></li>
 </ul>
 <p>The <strong>oauth2_permissions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the admin consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the admin consent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission help text that appears in the admin consent and app assignment experiences.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Display name for the permission that appears in the admin consent and app assignment experiences.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the user consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the user consent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission help text that appears in the end user consent experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Display name for the permission that appears in the end user consent experience.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
+</ul>
+<p>The <strong>optional_claims</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accessTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">essential</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the claim specified by the client is necessary to ensure a smooth authorization experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source of the claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is absent, the claim is a predefined optional claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is <code class="docutils literal notranslate"><span class="pre">user</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> is the extension property from the user object.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">essential</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the claim specified by the client is necessary to ensure a smooth authorization experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name for the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source of the claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is absent, the claim is a predefined optional claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is <code class="docutils literal notranslate"><span class="pre">user</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> is the extension property from the user object.</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>required_resource_accesses</strong> object supports the following:</p>
 <ul class="simple">
@@ -345,8 +445,144 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azuread.ApplicationCertificate">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">ApplicationCertificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Certificate associated with an Application within Azure Active Directory.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azuread</span> <span class="k">as</span> <span class="nn">azuread</span>
+
+<span class="n">example_application</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;exampleApplication&quot;</span><span class="p">)</span>
+<span class="n">example_application_certificate</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">ApplicationCertificate</span><span class="p">(</span><span class="s2">&quot;exampleApplicationCertificate&quot;</span><span class="p">,</span>
+    <span class="n">application_object_id</span><span class="o">=</span><span class="n">example_application</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2021-05-01T01:02:03Z&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;AsymmetricX509Cert&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;cert.pem&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Object ID of the Application for which this Certificate should be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Certificate is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Certificate is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Certificate. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Certificate is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of key/certificate. Must be one of <code class="docutils literal notranslate"><span class="pre">AsymmetricX509Cert</span></code> or <code class="docutils literal notranslate"><span class="pre">Symmetric</span></code>. Changing this fields forces a new resource to be created.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Certificate for this Service Principal.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_azuread.ApplicationCertificate.application_object_id">
+<code class="sig-name descname">application_object_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.application_object_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Object ID of the Application for which this Certificate should be created. Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ApplicationCertificate.end_date">
+<code class="sig-name descname">end_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.end_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The End Date which the Certificate is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ApplicationCertificate.end_date_relative">
+<code class="sig-name descname">end_date_relative</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.end_date_relative" title="Permalink to this definition">¶</a></dt>
+<dd><p>A relative duration for which the Certificate is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ApplicationCertificate.key_id">
+<code class="sig-name descname">key_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A GUID used to uniquely identify this Certificate. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ApplicationCertificate.start_date">
+<code class="sig-name descname">start_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.start_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Start Date which the Certificate is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ApplicationCertificate.type">
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of key/certificate. Must be one of <code class="docutils literal notranslate"><span class="pre">AsymmetricX509Cert</span></code> or <code class="docutils literal notranslate"><span class="pre">Symmetric</span></code>. Changing this fields forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ApplicationCertificate.value">
+<code class="sig-name descname">value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Certificate for this Service Principal.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.ApplicationCertificate.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApplicationCertificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Object ID of the Application for which this Certificate should be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Certificate is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Certificate is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Certificate. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Certificate is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of key/certificate. Must be one of <code class="docutils literal notranslate"><span class="pre">AsymmetricX509Cert</span></code> or <code class="docutils literal notranslate"><span class="pre">Symmetric</span></code>. Changing this fields forces a new resource to be created.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Certificate for this Service Principal.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.ApplicationCertificate.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.ApplicationCertificate.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ApplicationCertificate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azuread.ApplicationPassword">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">ApplicationPassword</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ApplicationPassword" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">ApplicationPassword</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ApplicationPassword" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Password associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -361,7 +597,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">reply_urls</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://replyurl&quot;</span><span class="p">])</span>
 <span class="n">example_application_password</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">ApplicationPassword</span><span class="p">(</span><span class="s2">&quot;exampleApplicationPassword&quot;</span><span class="p">,</span>
-    <span class="n">application_id</span><span class="o">=</span><span class="n">example_application</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">application_object_id</span><span class="o">=</span><span class="n">example_application</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My managed password&quot;</span><span class="p">,</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2099-01-01T01:02:03Z&quot;</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#&quot;</span><span class="p">)</span>
 </pre></div>
@@ -372,11 +609,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>application_object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the Password.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p></li>
-<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password for this Application .</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password for this Application.</p></li>
 </ul>
 </dd>
 </dl>
@@ -384,6 +622,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azuread.ApplicationPassword.application_object_id">
 <code class="sig-name descname">application_object_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationPassword.application_object_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ApplicationPassword.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationPassword.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description for the Password.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -413,12 +657,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azuread.ApplicationPassword.value">
 <code class="sig-name descname">value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ApplicationPassword.value" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Password for this Application .</p>
+<dd><p>The Password for this Application.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_azuread.ApplicationPassword.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ApplicationPassword.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ApplicationPassword.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApplicationPassword resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -428,11 +672,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>application_object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the Password.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p></li>
-<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password for this Application .</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password for this Application.</p></li>
 </ul>
 </dd>
 </dl>
@@ -478,7 +723,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azuread.AwaitableGetApplicationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_to_other_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_membership_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reply_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_resource_accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_to_other_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_membership_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">optional_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reply_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_resource_accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -518,7 +763,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azuread.GetApplicationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_to_other_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_membership_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reply_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_resource_accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_to_other_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_membership_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">homepage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logout_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_allow_implicit_flow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">optional_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owners</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reply_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_resource_accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getApplication.</p>
 <dl class="py attribute">
 <dt id="pulumi_azuread.GetApplicationResult.app_roles">
@@ -563,6 +808,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_azuread.GetApplicationResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetApplicationResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the optional claim.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_azuread.GetApplicationResult.oauth2_allow_implicit_flow">
 <code class="sig-name descname">oauth2_allow_implicit_flow</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetApplicationResult.oauth2_allow_implicit_flow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Does this Azure AD Application allow OAuth2.0 implicit flow tokens?</p>
@@ -578,6 +829,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azuread.GetApplicationResult.object_id">
 <code class="sig-name descname">object_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetApplicationResult.object_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>the Object ID of the Azure Active Directory Application.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.GetApplicationResult.optional_claims">
+<code class="sig-name descname">optional_claims</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetApplicationResult.optional_claims" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of <code class="docutils literal notranslate"><span class="pre">access_token</span></code> or <code class="docutils literal notranslate"><span class="pre">id_token</span></code> blocks as documented below which list the optional claims configured for each token type. For more information see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims</a></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1217,8 +1474,145 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azuread.ServicePrincipalCertificate">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">ServicePrincipalCertificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Certificate associated with a Service Principal within Azure Active Directory.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azuread</span> <span class="k">as</span> <span class="nn">azuread</span>
+
+<span class="n">example_application</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;exampleApplication&quot;</span><span class="p">)</span>
+<span class="n">example_service_principal</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">ServicePrincipal</span><span class="p">(</span><span class="s2">&quot;exampleServicePrincipal&quot;</span><span class="p">,</span> <span class="n">application_id</span><span class="o">=</span><span class="n">example_application</span><span class="o">.</span><span class="n">application_id</span><span class="p">)</span>
+<span class="n">example_service_principal_certificate</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">ServicePrincipalCertificate</span><span class="p">(</span><span class="s2">&quot;exampleServicePrincipalCertificate&quot;</span><span class="p">,</span>
+    <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2021-05-01T01:02:03Z&quot;</span><span class="p">,</span>
+    <span class="n">service_principal_id</span><span class="o">=</span><span class="n">example_service_principal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;AsymmetricX509Cert&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;cert.pem&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Certificate is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Certificate is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Certificate. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>service_principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Service Principal for which this certificate should be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Certificate is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of key/certificate. Must be one of <code class="docutils literal notranslate"><span class="pre">AsymmetricX509Cert</span></code> or <code class="docutils literal notranslate"><span class="pre">Symmetric</span></code>. Changing this fields forces a new resource to be created.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Certificate for this Service Principal.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.end_date">
+<code class="sig-name descname">end_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.end_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The End Date which the Certificate is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.end_date_relative">
+<code class="sig-name descname">end_date_relative</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.end_date_relative" title="Permalink to this definition">¶</a></dt>
+<dd><p>A relative duration for which the Certificate is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.key_id">
+<code class="sig-name descname">key_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A GUID used to uniquely identify this Certificate. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.service_principal_id">
+<code class="sig-name descname">service_principal_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.service_principal_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Service Principal for which this certificate should be created. Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.start_date">
+<code class="sig-name descname">start_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.start_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Start Date which the Certificate is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.type">
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of key/certificate. Must be one of <code class="docutils literal notranslate"><span class="pre">AsymmetricX509Cert</span></code> or <code class="docutils literal notranslate"><span class="pre">Symmetric</span></code>. Changing this fields forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.value">
+<code class="sig-name descname">value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Certificate for this Service Principal.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ServicePrincipalCertificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Certificate is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Certificate is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Certificate. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>service_principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Service Principal for which this certificate should be created. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Certificate is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of key/certificate. Must be one of <code class="docutils literal notranslate"><span class="pre">AsymmetricX509Cert</span></code> or <code class="docutils literal notranslate"><span class="pre">Symmetric</span></code>. Changing this fields forces a new resource to be created.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Certificate for this Service Principal.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.ServicePrincipalCertificate.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ServicePrincipalCertificate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azuread.ServicePrincipalPassword">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">ServicePrincipalPassword</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ServicePrincipalPassword" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">ServicePrincipalPassword</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ServicePrincipalPassword" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Password associated with a Service Principal within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -1234,6 +1628,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">reply_urls</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;http://replyurl&quot;</span><span class="p">])</span>
 <span class="n">example_service_principal</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">ServicePrincipal</span><span class="p">(</span><span class="s2">&quot;exampleServicePrincipal&quot;</span><span class="p">,</span> <span class="n">application_id</span><span class="o">=</span><span class="n">example_application</span><span class="o">.</span><span class="n">application_id</span><span class="p">)</span>
 <span class="n">example_service_principal_password</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">ServicePrincipalPassword</span><span class="p">(</span><span class="s2">&quot;exampleServicePrincipalPassword&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My managed password&quot;</span><span class="p">,</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2099-01-01T01:02:03Z&quot;</span><span class="p">,</span>
     <span class="n">service_principal_id</span><span class="o">=</span><span class="n">example_service_principal</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="s2">&quot;VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#&quot;</span><span class="p">)</span>
@@ -1244,6 +1639,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the Password.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Key. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
@@ -1253,6 +1649,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<dl class="py attribute">
+<dt id="pulumi_azuread.ServicePrincipalPassword.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalPassword.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description for the Password.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_azuread.ServicePrincipalPassword.end_date">
 <code class="sig-name descname">end_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalPassword.end_date" title="Permalink to this definition">¶</a></dt>
@@ -1291,7 +1693,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_azuread.ServicePrincipalPassword.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ServicePrincipalPassword.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_relative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.ServicePrincipalPassword.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ServicePrincipalPassword resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1300,6 +1702,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the Password.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Key. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
@@ -1522,7 +1925,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_azuread.get_application">
-<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_application" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oauth2_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">optional_claims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">(or</span> <span class="pre">owned</span> <span class="pre">by)</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -1540,6 +1943,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Application within Azure Active Directory.</p></li>
 <li><p><strong>oauth2_permissions</strong> (<em>list</em>) – A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a <code class="docutils literal notranslate"><span class="pre">oauth2_permission</span></code> block as documented below.</p></li>
 <li><p><strong>object_id</strong> (<em>str</em>) – Specifies the Object ID of the Application within Azure Active Directory.</p></li>
+<li><p><strong>optional_claims</strong> (<em>dict</em>) – A collection of <code class="docutils literal notranslate"><span class="pre">access_token</span></code> or <code class="docutils literal notranslate"><span class="pre">id_token</span></code> blocks as documented below which list the optional claims configured for each token type. For more information see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -1553,6 +1957,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the user consent</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name of the user consent</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
+</ul>
+<p>The <strong>optional_claims</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accessTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">essential</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the claim specified by the client is necessary to ensure a smooth authorization experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Application within Azure Active Directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The source of the claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is absent, the claim is a predefined optional claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is <code class="docutils literal notranslate"><span class="pre">user</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> is the extension property from the user object.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">essential</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the claim specified by the client is necessary to ensure a smooth authorization experience.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Application within Azure Active Directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The source of the claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is absent, the claim is a predefined optional claim. If <code class="docutils literal notranslate"><span class="pre">source</span></code> is <code class="docutils literal notranslate"><span class="pre">user</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">name</span></code> is the extension property from the user object.</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 

@@ -84,7 +84,7 @@ export const azureAdObjectId = example.id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_application(</span>name=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_application(</span>name=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>optional_claims=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -144,6 +144,17 @@ The following arguments are supported:
     <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="optionalclaims_csharp">
+<a href="#optionalclaims_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -182,6 +193,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="optionalclaims_go">
+<a href="#optionalclaims_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
 
 </dl>
@@ -224,6 +246,17 @@ The following arguments are supported:
     <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="optionalclaims_nodejs">
+<a href="#optionalclaims_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -262,6 +295,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="optional_claims_python">
+<a href="#optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Dict[Get<wbr>Application<wbr>Optional<wbr>Claims]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
 
 </dl>
@@ -379,7 +423,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -456,6 +501,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="optionalclaims_csharp">
+<a href="#optionalclaims_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
 
 </dl>
@@ -560,7 +616,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -637,6 +694,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="optionalclaims_go">
+<a href="#optionalclaims_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
 
 </dl>
@@ -741,7 +809,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -818,6 +887,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="optionalclaims_nodejs">
+<a href="#optionalclaims_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
 
 </dl>
@@ -922,7 +1002,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -999,6 +1080,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the permission
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="optional_claims_python">
+<a href="#optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Dict[Get<wbr>Application<wbr>Optional<wbr>Claims]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
 
 </dl>
@@ -1713,6 +1805,576 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOptionalClaims">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOptionalClaims">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetApplicationOptionalClaimsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetApplicationOptionalClaims">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.GetApplicationOptionalClaimsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.GetApplicationOptionalClaims.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstokens_csharp">
+<a href="#accesstokens_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tokens</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idtokens_csharp">
+<a href="#idtokens_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Tokens</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstokens_go">
+<a href="#accesstokens_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tokens</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">[]Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idtokens_go">
+<a href="#idtokens_go" style="color: inherit; text-decoration: inherit;">Id<wbr>Tokens</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">[]Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstokens_nodejs">
+<a href="#accesstokens_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tokens</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idtokens_nodejs">
+<a href="#idtokens_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Tokens</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstokens_python">
+<a href="#accesstokens_python" style="color: inherit; text-decoration: inherit;">access<wbr>Tokens</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">List[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idtokens_python">
+<a href="#idtokens_python" style="color: inherit; text-decoration: inherit;">id<wbr>Tokens</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">List[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getapplicationoptionalclaimsaccesstoken">Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOptionalClaimsAccessToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOptionalClaimsAccessToken">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetApplicationOptionalClaimsAccessTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetApplicationOptionalClaimsAccessToken">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.GetApplicationOptionalClaimsAccessTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.GetApplicationOptionalClaimsAccessToken.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_csharp">
+<a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="essential_csharp">
+<a href="#essential_csharp" style="color: inherit; text-decoration: inherit;">Essential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_go">
+<a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="essential_go">
+<a href="#essential_go" style="color: inherit; text-decoration: inherit;">Essential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_nodejs">
+<a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="essential_nodejs">
+<a href="#essential_nodejs" style="color: inherit; text-decoration: inherit;">essential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_python">
+<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="essential_python">
+<a href="#essential_python" style="color: inherit; text-decoration: inherit;">essential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getapplicationoptionalclaimsidtoken">Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOptionalClaimsIdToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOptionalClaimsIdToken">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetApplicationOptionalClaimsIdTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetApplicationOptionalClaimsIdToken">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.GetApplicationOptionalClaimsIdTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.GetApplicationOptionalClaimsIdToken.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_csharp">
+<a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="essential_csharp">
+<a href="#essential_csharp" style="color: inherit; text-decoration: inherit;">Essential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_go">
+<a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="essential_go">
+<a href="#essential_go" style="color: inherit; text-decoration: inherit;">Essential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_nodejs">
+<a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="essential_nodejs">
+<a href="#essential_nodejs" style="color: inherit; text-decoration: inherit;">essential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalproperties_python">
+<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="essential_python">
+<a href="#essential_python" style="color: inherit; text-decoration: inherit;">essential</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
 
 </dl>

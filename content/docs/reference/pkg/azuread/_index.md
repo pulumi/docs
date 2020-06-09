@@ -15,11 +15,13 @@ A Pulumi package for creating and managing azuread cloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="applicationcertificate" title="ApplicationCertificate"><span class="symbol resource"></span>ApplicationCertificate</a></li>
     <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupmember" title="GroupMember"><span class="symbol resource"></span>GroupMember</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="serviceprincipal" title="ServicePrincipal"><span class="symbol resource"></span>ServicePrincipal</a></li>
+    <li><a href="serviceprincipalcertificate" title="ServicePrincipalCertificate"><span class="symbol resource"></span>ServicePrincipalCertificate</a></li>
     <li><a href="serviceprincipalpassword" title="ServicePrincipalPassword"><span class="symbol resource"></span>ServicePrincipalPassword</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
@@ -45,7 +47,7 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
 	<dt>Version</dt>
-	<dd>2.2.1</dd>
+	<dd>2.3.0</dd>
 </dl>
 
 
