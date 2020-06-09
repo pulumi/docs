@@ -224,7 +224,7 @@ def crawl_directory(content_dir, f):
 web_contents_root_path = os.path.join(os.getcwd(), path_to_website_contents)
 def bucket_object_converter(filepath):
     """
-    Takes a file path and returns an bucket object managed by Pulumi
+    Takes a file path and returns a bucket object managed by Pulumi
     """
     relative_path = filepath.replace(web_contents_root_path + '/', '')
     # Determine the mimetype using the `mimetypes` module.
