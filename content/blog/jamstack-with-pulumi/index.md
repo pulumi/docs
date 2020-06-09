@@ -12,7 +12,7 @@ tags:
 
 A Jamstack is a modern architecture for building websites; JAM stands for JavaScript, APIs, and Markup. Jamstacks are deployed on a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network), and content is stored on a cloud services provider. In addition to the speed and simplicity of deploying static content served from a CDN, there are other advantages such as maintaining content with git, modern build tools to generate the static content, automated builds, atomic deploys, and instant cache validation.
 
-While build tools have simplified the process of creating content ready for deployment on a CDN, creating the infrastructure to serve the content remains complicated. . You can use a cloud provider’s web interface or script the build using a CLI tool if you want to manage your infrastructure instead of using a hosted solution. The alternative is to use infrastructure as code tool to automate building and deploying cloud resources. This article demonstrates how to create a jamstack website and deploy it on AWS using Pulumi.
+While build tools have simplified the process of creating content ready for deployment on a CDN, creating the infrastructure to serve the content remains complicated. You can use a cloud provider’s web interface or script the build using a CLI tool if you want to manage your infrastructure instead of using a hosted solution. The alternative is to use infrastructure as code tool to automate building and deploying cloud resources. This article demonstrates how to create a jamstack website and deploy it on AWS using Pulumi.
 
 <!--more-->
 
