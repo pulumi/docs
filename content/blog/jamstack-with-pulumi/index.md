@@ -12,13 +12,13 @@ tags:
 
 A Jamstack is a modern architecture for building websites; JAM stands for JavaScript, APIs, and Markup. Jamstacks are deployed on a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network), and content is stored on a cloud services provider. In addition to the speed and simplicity of deploying static content served from a CDN, there are other advantages such as maintaining content with git, modern build tools to generate the static content, automated builds, atomic deploys, and instant cache validation.
 
-While build tools have simplified the process of creating content ready for deployment on a CDN, creating the infrastructure to serve the content remains complicated. . You can use a cloud provider’s web interface or script the build using a CLI tool if you want to manage your infrastructure instead of using a hosted solution. The alternative is to use infrastructure as code tool to automate building and deploying cloud resources. This article demonstrates how to create a jamstack website and deploy it on AWS using Pulumi.
+While build tools have simplified the process of creating content ready for deployment on a CDN, creating the infrastructure to serve the content remains complicated. You can use a cloud provider’s web interface or script the build using a CLI tool if you want to manage your infrastructure instead of using a hosted solution. The alternative is to use infrastructure as code tool to automate building and deploying cloud resources. This article demonstrates how to create a jamstack website and deploy it on AWS using Pulumi.
 
 <!--more-->
 
 ## Creating Your Website with Hugo
 
-There are many static site generators, but we’ll use hugo to build the site for this example. Instead of installing hugo, we’ll use [Docker](https://docs.docker.com/get-docker/) to run hugo in a [container](https://hub.docker.com/r/klakegg/hugo/). If you have Docker installed, create a directory to hold the website and change into that directory.
+There are many static site generators, but we’ll use Hugo to build the site for this example. We’ll use [Docker](https://docs.docker.com/get-docker/) to run Hugo in a [container](https://hub.docker.com/r/klakegg/hugo/). If you have Docker installed, create a directory to hold the website and change into that directory.
 
 ```bash
 $ mkdir hugo
@@ -28,7 +28,7 @@ $ docker run --rm -it -v $(pwd):/src   klakegg/hugo:0.72.0-alpine shell
 
 The `docker run` command will fetch the container (klakegg/hugo:0.72.0-alpine), map the current directory to the `src` directory in the container, and open a shell.
 
-In the container command line, we will use hugo to create a new site called *platypus*.
+In the container command line, we will use `hugo` to create a new site called *platypus*.
 
 ```bash
 $ hugo new site platypus
@@ -53,7 +53,7 @@ title = "Platypus"
 theme = "ananke"
 ```
 
-Use hugo to create a new markdown page in the posts directory.
+Use `hugo` to create a new markdown page in the posts directory.
 
 ```bash
 $ hugo new posts/platypus.md
@@ -69,7 +69,7 @@ Now it’s time to add content to your site. You can use your favorite editor to
 ![platypus](https://static01.nyt.com/images/2017/08/01/science/29TB-PLATYPUS1/29TB-PLATYPUS1-superJumbo.jpg)
 ```
 
-Finally, we can build the static site with hugo in the container command line.
+Finally, we can build the static site with Hugo in the container command line.
 
 ```bash
 $ hugo -D
@@ -86,7 +86,7 @@ Configuring a static website can be complicated when using either the AWS web in
 - [Amazon Route53](https://aws.amazon.com/route53/) to set up the DNS for the website
 - [Amazon Certificate Manager](https://aws.amazon.com/certificate-manager/) for securing the site via HTTPS
 
-Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using Python or your favorite programming language. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide]({{< relref "/docs/get-started/aws">}}).
+Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using Python or your favorite programming language. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide]({{< relref "/docs/get-started/aws" >}}).
 
 To get started building our infrastructure, we’ll download the Python example for setting up a static website with AWS. There are many [examples on our GitHub repository](https://github.com/pulumi/), but we can clone just the AWS Static Website example using a [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) which clones only the directory we specify,
 
@@ -218,7 +218,7 @@ The website has been deployed, and you can browse it with your domain URL. Since
 
 ## Examine the Code
 
-Let's take a look at how the cloud resources are created, configured, and populated. First up is the S3 bucket where the static website is store.
+Let's take a look at how the cloud resources are created, configured, and populated. First up is the S3 bucket where the static website is stored.
 
 ```python
 # Create an S3 bucket configured as a website bucket.
@@ -249,7 +249,7 @@ def crawl_directory(content_dir, f):
 web_contents_root_path = os.path.join(os.getcwd(), path_to_website_contents)
 def bucket_object_converter(filepath):
     """
-    Takes a file path and returns an bucket object managed by Pulumi
+    Takes a file path and returns a bucket object managed by Pulumi
     """
     relative_path = filepath.replace(web_contents_root_path + '/', '')
     # Determine the mimetype using the `mimetypes` module.
@@ -268,7 +268,7 @@ def bucket_object_converter(filepath):
 crawl_directory(web_contents_root_path, bucket_object_converter)
 ```
 
-Now that we have our content in an S3 bucket, we turn to configure and create the CDN that serves the website. The first task is to create an SSL certificate based on the domain name hosted on Route 53 DNS if we didn't add one in the Pulumi.website-testing.yaml configuration file.
+Now that we have our content in an S3 bucket, we turn to configure and create the CDN that serves the website. The first task is to create an SSL/TLS certificate based on the domain name hosted on Route 53 DNS if we didn't specify the optional `certificateArn` config value of an existing certificate.
 
 ```python
 if certificate_arn is None:
@@ -289,7 +289,7 @@ We also create a bucket to hold the CDN logs for the website.
 logs_bucket = pulumi_aws.s3.Bucket('requestLogs', bucket=f'{target_domain}-logs', acl='private')
 ```
 
-Now that we have an SSL certificate and a S3 bucket to store logs, we can create the CDN. In the CDN resource definition, `origin` sets the S3 bucket as the content source, the domain name, and the ports for serving content. We can also set the cache_behavior, the price class, access restrictions, the logging configuration, and other parameters.
+Now that we have an SSL/TLS certificate and a S3 bucket to store logs, we can create the CDN. In the CDN resource definition, `origin` sets the S3 bucket as the content source, the domain name, and the ports for serving content. We can also set the cache_behavior, the price class, access restrictions, the logging configuration, and other parameters.
 
 ```python
 # Create the CloudFront distribution
@@ -381,4 +381,4 @@ In a single Python script, we've created all the cloud resources to deploy our c
 
 Building modern websites is evolving from provider-managed Content Management Systems or user-managed [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) stacks. Static websites deployed in the cloud are popular because they separate content generation from the infrastructure that serves content. However, building and maintaining cloud infrastructure can be complicated and require multiple steps when using web client for configuration. A website using inexpensive storage such as S3 and serving content via Cloudfront can be deployed, versioned, and maintained using your favorite programming language. The Pulumi [examples repository](https://github.com/pulumi/examples) has many more code samples that demonstrate how to build and deploy cloud infrastructure across different cloud providers, using your favorite programming language.
 
-Learn how to automate your cloud infrastructure with Pulumi's [Getting Started tutorials]({{< relref "/docs/get-started">}}) and [User Guides]({{< relref "/docs/guides">}}), or join us on [Slack](https://slack.pulumi.com/) if you have questions.
+Learn how to automate your cloud infrastructure with Pulumi's [Getting Started tutorials]({{< relref "/docs/get-started" >}}) and [User Guides]({{< relref "/docs/guides" >}}), or join us on [Slack](https://slack.pulumi.com/) if you have questions.
