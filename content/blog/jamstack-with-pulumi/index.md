@@ -28,7 +28,7 @@ $ docker run --rm -it -v $(pwd):/src   klakegg/hugo:0.72.0-alpine shell
 
 The `docker run` command will fetch the container (klakegg/hugo:0.72.0-alpine), map the current directory to the `src` directory in the container, and open a shell.
 
-In the container command line, we will use hugo to create a new site called *platypus*.
+In the container command line, we will use `hugo` to create a new site called *platypus*.
 
 ```bash
 $ hugo new site platypus
