@@ -5,6 +5,8 @@ linktitle: authorization
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="authorization">
 <h1>authorization<a class="headerlink" href="#authorization" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

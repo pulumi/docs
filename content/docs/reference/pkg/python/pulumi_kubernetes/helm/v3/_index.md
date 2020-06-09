@@ -5,6 +5,8 @@ linktitle: v3
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="module-pulumi_kubernetes.helm.v3">
 <span id="v3"></span><h1>v3<a class="headerlink" href="#module-pulumi_kubernetes.helm.v3" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">

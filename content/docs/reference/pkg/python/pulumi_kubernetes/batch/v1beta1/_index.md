@@ -5,6 +5,8 @@ linktitle: v1beta1
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="module-pulumi_kubernetes.batch.v1beta1">
 <span id="v1beta1"></span><h1>v1beta1<a class="headerlink" href="#module-pulumi_kubernetes.batch.v1beta1" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">

@@ -5,6 +5,8 @@ linktitle: yaml
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="module-pulumi_kubernetes.yaml">
 <span id="yaml"></span><h1>yaml<a class="headerlink" href="#module-pulumi_kubernetes.yaml" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">

@@ -5,6 +5,8 @@ linktitle: meta
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="meta">
 <h1>meta<a class="headerlink" href="#meta" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

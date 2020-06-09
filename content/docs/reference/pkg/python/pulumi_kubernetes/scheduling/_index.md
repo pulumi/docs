@@ -5,6 +5,8 @@ linktitle: scheduling
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="scheduling">
 <h1>scheduling<a class="headerlink" href="#scheduling" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
