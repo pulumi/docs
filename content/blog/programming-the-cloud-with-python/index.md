@@ -9,7 +9,7 @@ tags: ["Serverless","AWS","Python"]
 Across the industry, the popularity of Python is exploding. Amongst our
 own customers at Pulumi, who automate their infrastructure using Python,
 we've seen the same. Stack Overflow wrote about the astounding growth
-of Python in 2017:
+of Python:
 
 > The term "fastest-growing" can be [hard to define
 > precisely](https://xkcd.com/1102/), but we make the case that **Python
@@ -18,10 +18,7 @@ of Python in 2017:
 >
 > -- [David Robinson, Stack Overflow](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
 
-TIOBE, the maintainers of a popular index of programming language
-popularity, crowned Python as "[Programming Language of the Year](https://www.tiobe.com/tiobe-index/)" for 2018, based on its
-meteoric rise in its index. Since Python is not a new language, what
-could be driving this incredible adoption curve?
+Since Python is not a new language, what could be driving this incredible adoption curve?
 
 Python is, and always has been, particularly amenable to the automation
 of previously-manual tasks. So much so, in fact, that books have been
@@ -34,7 +31,7 @@ tools now ubiquitous in the DevOps space: tools like
 Python. It would not be a stretch to claim that Python is the language
 of automation.
 
-At Pulumi we are passionate about automating cloud infrastructure.
+At [Pulumi](https://pulumi.com) we are passionate about automating cloud infrastructure.
 However, we see a major open opportunity to leverage our most powerful,
 fundamental tool - the programming language - to automate our
 infrastructure tasks. We love the idea of "infrastructure of code", but
@@ -81,7 +78,7 @@ code with a full general-purpose programming language at your disposal.
 Below is a code snippet of a Pulumi program, written in Python, that
 deploys a static website to S3:
 
-```typescript
+```python
 import mimetypes
 import os
 
@@ -130,12 +127,13 @@ the other already existing bucket objects!
 
 ## Where can I learn more?
 
-If you'd like to try the above example out for yourself, we've put the [full code on GitHub](https://github.com/pulumi/examples/tree/master/aws-py-s3-folder).
-Full instructions for installing Pulumi and deploying your own static website on S3 are in the `README`.
 Don't take our word for it, though! We'd love for you to check it out and see for yourself how
-great it is to reclaim the “code” in “infrastructure as code”. If you want to know more about
-Pulumi and the things it can do for you, check out our [Getting Started]({{< relref "/docs/get-started" >}}) page and our Documentation for more information.
+great it is to reclaim the “code” in “infrastructure as code”.
 
-Python is the language of automation today and the future. Pulumi is the infrastructure as
+If you want to know more about Pulumi and the things it can do for you, check out the [Getting Started]({{< relref "/docs/get-started" >}}) page and [Documentation]({{< relref "/docs" >}}) for more information.
+
+If you'd like to try the above example out for yourself, we've put the [full code on GitHub](https://github.com/pulumi/examples/tree/master/aws-py-s3-folder). There are also [dozens of other Python examples](https://github.com/pulumi/examples) across AWS, Azure, GCP, Kubernetes and more you can explore.
+
+Python is the language of automation today and for the future. Pulumi is the infrastructure as
 code automation tool of the future. Using them both together is an incredible way to automate a
 crucial job while staying entirely within a language you already know and love!
