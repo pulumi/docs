@@ -243,7 +243,7 @@ def bucket_object_converter(filepath):
 crawl_directory(web_contents_root_path, bucket_object_converter)
 ```
 
-Now that we have our content in an S3 bucket, we turn to configure and create the CDN that serves the website. The first task is to create an SSL certificate based on the domain name hosted on Route 53 DNS if we didn't add one in the Pulumi.website-testing.yaml configuration file.
+Now that we have our content in an S3 bucket, we turn to configure and create the CDN that serves the website. The first task is to create an SSL/TLS certificate based on the domain name hosted on Route 53 DNS if we didn't specify the optional `certificateArn` config value of an existing certificate.
 
 ```python
 if certificate_arn is None:
