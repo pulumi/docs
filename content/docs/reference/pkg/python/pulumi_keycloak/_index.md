@@ -5,6 +5,8 @@ linktitle: pulumi_keycloak
 notitle: true
 ---
 
+{{< resource-docs-alert "keycloak" >}}
+
 <div class="section" id="pulumi-keycloak">
 <h1>Pulumi Keycloak<a class="headerlink" href="#pulumi-keycloak" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

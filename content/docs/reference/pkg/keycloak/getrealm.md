@@ -588,6 +588,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="internalid_csharp">
+<a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="internationalizations_csharp">
 <a href="#internationalizations_csharp" style="color: inherit; text-decoration: inherit;">Internationalizations</a>
 </span> 
@@ -773,6 +783,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="usermanagedaccess_csharp">
+<a href="#usermanagedaccess_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1006,6 +1026,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="internalid_go">
+<a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="internationalizations_go">
 <a href="#internationalizations_go" style="color: inherit; text-decoration: inherit;">Internationalizations</a>
 </span> 
@@ -1191,6 +1221,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="usermanagedaccess_go">
+<a href="#usermanagedaccess_go" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1424,6 +1464,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="internalid_nodejs">
+<a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="internationalizations_nodejs">
 <a href="#internationalizations_nodejs" style="color: inherit; text-decoration: inherit;">internationalizations</a>
 </span> 
@@ -1609,6 +1659,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="usermanagedaccess_nodejs">
+<a href="#usermanagedaccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1842,6 +1902,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="internal_id_python">
+<a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="internationalizations_python">
 <a href="#internationalizations_python" style="color: inherit; text-decoration: inherit;">internationalizations</a>
 </span> 
@@ -2027,6 +2097,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="user_managed_access_python">
+<a href="#user_managed_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
