@@ -5,6 +5,8 @@ linktitle: discovery
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="discovery">
 <h1>discovery<a class="headerlink" href="#discovery" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

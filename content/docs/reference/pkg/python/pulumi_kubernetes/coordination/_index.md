@@ -5,6 +5,8 @@ linktitle: coordination
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="coordination">
 <h1>coordination<a class="headerlink" href="#coordination" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

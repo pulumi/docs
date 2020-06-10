@@ -5,6 +5,8 @@ linktitle: helm
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="helm">
 <h1>helm<a class="headerlink" href="#helm" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

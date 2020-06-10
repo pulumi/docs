@@ -5,6 +5,8 @@ linktitle: batch
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="batch">
 <h1>batch<a class="headerlink" href="#batch" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

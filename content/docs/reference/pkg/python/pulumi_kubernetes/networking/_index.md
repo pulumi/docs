@@ -5,6 +5,8 @@ linktitle: networking
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="networking">
 <h1>networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

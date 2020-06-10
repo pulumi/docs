@@ -5,6 +5,8 @@ linktitle: flowcontrol
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="flowcontrol">
 <h1>flowcontrol<a class="headerlink" href="#flowcontrol" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

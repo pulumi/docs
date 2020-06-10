@@ -5,6 +5,8 @@ linktitle: rbac
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="rbac">
 <h1>rbac<a class="headerlink" href="#rbac" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

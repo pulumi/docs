@@ -5,6 +5,8 @@ linktitle: autoscaling
 notitle: true
 ---
 
+{{< resource-docs-alert "kubernetes" >}}
+
 <div class="section" id="autoscaling">
 <h1>autoscaling<a class="headerlink" href="#autoscaling" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
