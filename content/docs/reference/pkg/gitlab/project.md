@@ -22,7 +22,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#Project">Project</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>wiki_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#Project">Project</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>remove_source_branch_after_merge=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>wiki_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -375,6 +375,17 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="removesourcebranchaftermerge_csharp">
+<a href="#removesourcebranchaftermerge_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Source<wbr>Branch<wbr>After<wbr>Merge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="requestaccessenabled_csharp">
 <a href="#requestaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
 </span> 
@@ -636,6 +647,17 @@ See `gitlab..Group` for an example.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="removesourcebranchaftermerge_go">
+<a href="#removesourcebranchaftermerge_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Source<wbr>Branch<wbr>After<wbr>Merge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,6 +927,17 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="removesourcebranchaftermerge_nodejs">
+<a href="#removesourcebranchaftermerge_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Source<wbr>Branch<wbr>After<wbr>Merge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="requestaccessenabled_nodejs">
 <a href="#requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
 </span> 
@@ -1166,6 +1199,17 @@ See `gitlab..Group` for an example.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remove_source_branch_after_merge_python">
+<a href="#remove_source_branch_after_merge_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>source_<wbr>branch_<wbr>after_<wbr>merge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1529,7 +1573,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>http_url_to_repo=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>runners_token=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>ssh_url_to_repo=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>web_url=None<span class="p">, </span>wiki_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>http_url_to_repo=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>remove_source_branch_after_merge=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>runners_token=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>ssh_url_to_repo=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>web_url=None<span class="p">, </span>wiki_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1832,6 +1876,17 @@ See `gitlab..Group` for an example.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_removesourcebranchaftermerge_csharp">
+<a href="#state_removesourcebranchaftermerge_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Source<wbr>Branch<wbr>After<wbr>Merge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2147,6 +2202,17 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_removesourcebranchaftermerge_go">
+<a href="#state_removesourcebranchaftermerge_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Source<wbr>Branch<wbr>After<wbr>Merge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_requestaccessenabled_go">
 <a href="#state_requestaccessenabled_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
 </span> 
@@ -2458,6 +2524,17 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_removesourcebranchaftermerge_nodejs">
+<a href="#state_removesourcebranchaftermerge_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Source<wbr>Branch<wbr>After<wbr>Merge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_requestaccessenabled_nodejs">
 <a href="#state_requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
 </span> 
@@ -2765,6 +2842,17 @@ See `gitlab..Group` for an example.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remove_source_branch_after_merge_python">
+<a href="#state_remove_source_branch_after_merge_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>source_<wbr>branch_<wbr>after_<wbr>merge</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable `Delete source branch` option by default for all new merge requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
