@@ -3,7 +3,10 @@ title: Package pulumi_auth0
 title_tag: Package pulumi_auth0 | Python SDK
 linktitle: pulumi_auth0
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "auth0" >}}
 
 <div class="section" id="pulumi-auth0">
 <h1>Pulumi Auth0<a class="headerlink" href="#pulumi-auth0" title="Permalink to this headline">¶</a></h1>

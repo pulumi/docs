@@ -32,7 +32,7 @@ class MyStack : Stack
         {
             Options = new Auth0.Inputs.ConnectionOptionsArgs
             {
-                BruteForceProtection = "true",
+                BruteForceProtection = true,
                 Configuration = 
                 {
                     { "bar", "baz" },
@@ -46,7 +46,7 @@ class MyStack : Stack
 
 " },
                 },
-                EnabledDatabaseCustomization = "true",
+                EnabledDatabaseCustomization = true,
                 PasswordHistory = 
                 {
                     
