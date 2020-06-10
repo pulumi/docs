@@ -54,7 +54,7 @@ class MyStack : Stack
             Project = data.Digitalocean_project.Foo.Id,
             Resources = 
             {
-                foobar.Urn,
+                foobar.DropletUrn,
             },
         });
     }
@@ -79,7 +79,7 @@ foobar = digitalocean.Droplet("foobar",
     region="nyc3")
 barfoo = digitalocean.ProjectResources("barfoo",
     project=data["digitalocean..Project"]["foo"]["id"],
-    resources=[foobar.urn])
+    resources=[foobar.droplet_urn])
 ```
 {{% /example %}}
 
@@ -98,7 +98,7 @@ const foobar = new digitalocean.Droplet("foobar", {
 });
 const barfoo = new digitalocean.ProjectResources("barfoo", {
     project: data.digitalocean_project.foo.id,
-    resources: [foobar.urn],
+    resources: [foobar.dropletUrn],
 });
 ```
 {{% /example %}}
