@@ -184,7 +184,7 @@ secret_password_v1 = aws.secretsmanager.SecretVersion('example-secret-version',
     secret_string='example-string')
 ```
 
-If we change `secret_string='example-string'` to `secret_string=pulumi.Output.secret('example-string-to-protect')`
+If we change `secret_string='example-string'` to `secret_string=pulumi.Output.secret('example-string')`
 our test will pass.
 
 ## Conclusion
