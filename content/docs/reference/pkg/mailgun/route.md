@@ -38,7 +38,7 @@ class MyStack : Stack
             },
             Description = "inbound",
             Expression = "match_recipient('.*@foo.example.com')",
-            Priority = "0",
+            Priority = 0,
         });
     }
 
