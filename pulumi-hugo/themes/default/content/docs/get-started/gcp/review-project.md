@@ -122,12 +122,6 @@ class MyStack : Stack
 
 This Pulumi program creates a storage bucket and exports the bucket URL.
 
-{{% choosable language python %}}
-
-{{< python-venv >}}
-
-{{% /choosable %}}
-
 Next, we'll deploy the stack.
 
 {{< get-started-stepper >}}
