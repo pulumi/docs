@@ -194,7 +194,6 @@ Now let's take a look at how to run the Policy Pack locally against a Pulumi pro
 {{% /choosable %}}
 {{% choosable language python %}}
 
-
 1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your Policy Pack when previewing/updating a Pulumi program.
 
     If you don’t have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-python` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
