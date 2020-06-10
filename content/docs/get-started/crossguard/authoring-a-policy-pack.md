@@ -22,12 +22,6 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
    - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
    - [Install Node.js](https://nodejs.org/en/download/)
 
-1. Verify your version of Pulumi.
-
-    ```sh
-    $ pulumi version # should be v1.14.0 or later
-    ```
-
 1. Create a directory for your new Policy Pack, and change into it.
 
     ```sh
@@ -80,12 +74,6 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
    - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
    - [Install Python](https://www.python.org/downloads/)
-
-1. Verify your version of Pulumi.
-
-    ```sh
-    $ pulumi version # should be v1.14.0 or later
-    ```
 
 1. Create a directory for your new Policy Pack, and change into it.
 
@@ -155,8 +143,6 @@ Now let's take a look at how to run the Policy Pack locally against a Pulumi pro
 
 {{% choosable language typescript %}}
 
-1. Run `npm install` in the Policy Pack directory.
-
 1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your Policy Pack when previewing/updating a Pulumi program.
 
     If you don’t have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-typescript` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
@@ -208,55 +194,12 @@ Now let's take a look at how to run the Policy Pack locally against a Pulumi pro
 {{% /choosable %}}
 {{% choosable language python %}}
 
-1. Install dependencies for the Policy Pack.
-
-    **macOS or Linux:**
-
-    Create a virtual environment:
-
-    ```sh
-    $ python3 -m venv venv
-    ```
-
-    Activate the environment:
-
-    ```sh
-    $ source venv/bin/activate
-    ```
-
-    Install dependencies:
-
-    ```sh
-    $ pip3 install -r requirements.txt
-    ```
-
-    **Windows:**
-
-    Create a virtual environment:
-
-    ```bat
-    > python -m venv venv
-    ```
-
-    Activate the environment:
-
-    ```bat
-    > venv\Scripts\activate
-    ```
-
-    Install dependencies:
-
-    ```bat
-    > pip3 install -r requirements.txt
-    ```
 
 1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your Policy Pack when previewing/updating a Pulumi program.
 
     If you don’t have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-python` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
 
-    > Note: We recommend installing dependencies in a virtual environment. If the Pulumi program is also Python, both the Policy Pack and Pulumi program can use the same virtual environment.
-
-    In the Pulumi program's directory, from an activated virtual environment shell, run:
+    In the Pulumi program's directory, run:
 
     ```sh
     $ pulumi preview --policy-pack <path-to-policy-pack-directory>

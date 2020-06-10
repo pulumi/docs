@@ -50,8 +50,8 @@ Similarly, as soon as someone loses access to the GitHub organization, they will
 longer have access to the Pulumi organization it is backing.
 
 {{% notes %}}
-See <a href="{{< relref "organization-roles" >}}">Organization Roles</a> or
-<a href="{{< relref "accounts#adding-new-identities" >}}">Adding New Identities</a>
+See [Organization Roles]({{< relref "organization-roles" >}}) or
+[Adding New Identities]({{< relref "accounts#adding-new-identities" >}})
 for more information.
 {{% /notes %}}
 

@@ -8,8 +8,7 @@ meta_image: "InfraTesting.png"
 ---
 
 {{% notes type="warning" %}}
-    Some parts of this blog post are out-of-date. Please refer to our
-    <a href="{{< relref "/docs/guides/testing" >}}">Testing Guide</a> for the updated overview and tutorials.
+Some parts of this blog post are out-of-date. Please refer to our [Testing Guide]({{< relref "/docs/guides/testing" >}}) for the updated overview and tutorials.
 {{% /notes %}}
 
 Using Pulumi and general purpose languages for infrastructure as code

@@ -4,7 +4,7 @@
 <div class="note note-{{ $class }}" role="alert">
     <p>
         <i class="fas fa-{{ $icon }} pr-2"></i>
-        {{ .Inner }}
+        {{- .Inner | markdownify -}}
     </p>
 </div>
 
