@@ -14,7 +14,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/random" >}}) fo
 
 ## Example
 
-{{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
 
