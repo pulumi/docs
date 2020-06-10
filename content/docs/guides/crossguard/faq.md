@@ -55,8 +55,105 @@ Policy Packs that are published to the service require a version. The Policy Pac
 }
 ```
 
+For Python Policy Packs, the version is specified in the `PulumiPolicy.yaml` file.
+
+```yaml
+version: 0.1.0
+```
+
 A version can only be used one time and once published the version can never be used by that Policy Pack again.
 
 ## How are secrets handled in policies?
 
 Encrypted [secrets]({{< relref "/docs/intro/concepts/programming-model#secrets" >}}) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
+
+## How are dependencies managed with Python Policy Packs?
+
+As of Pulumi 2.4.0, new Python Policy Packs created with `pulumi policy new` will have a virtual environment created in a `venv` directory with required dependencies from `requirements.txt` installed in it, and Pulumi will automatically use this virtual environment when running the program.
+
+This behavior is controlled by the following `virtualenv` `runtime` option in `PulumiPolicy.yaml`:
+
+```yaml
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+```
+
+`virtualenv` is the path to a virtual environment to use.
+
+Existing Python Policy Packs can opt-in to using the built-in virtual environment support by setting the `virtualenv` option. To manually create a virtual environment and install dependencies, run the following commands in your Policy Pack directory:
+
+{{< chooser os "macos,windows,linux" >}}
+
+{{% choosable os macos %}}
+
+```bash
+$ python3 -m venv venv
+$ venv/bin/pip install -r requirements.txt
+```
+
+{{% /choosable %}}
+
+{{% choosable os linux %}}
+
+```bash
+$ python3 -m venv venv
+$ venv/bin/pip install -r requirements.txt
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+```bat
+> python -m venv venv
+> venv\Scripts\pip install -r requirements.txt
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+If you prefer to manage the virtual environment on your own (for example, using tools like [Pipenv](https://github.com/pypa/pipenv)), you can delete the local `venv` directory and unset the `virtualenv` option in `PulumiPolicy.yaml`:
+
+```yaml
+runtime: python
+```
+
+When managing the virtual environment on your own and [running the Policy Pack locally]({{< relref "/docs/get-started/crossguard/authoring-a-policy-pack#running-locally" >}}) against a Pulumi program, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`). If the Pulumi program is also Python, both the Policy Pack and Pulumi program can use the same virtual environment.
+
+Enforced Policy Packs that are published to the Pulumi Console will automatically create a virtual environment, install dependencies in the virtual environment, and use the virtual environment when running against a Pulumi stack.
+
+### Adding a new dependency
+
+To install a new dependency in the virtual environment, add an entry to `requirements.txt`, and run the following in your Policy Pack directory:
+
+{{< chooser os "macos,windows,linux" >}}
+
+{{% choosable os macos %}}
+
+```bash
+$ venv/bin/pip install -r requirements.txt
+```
+
+{{% /choosable %}}
+
+{{% choosable os linux %}}
+
+```bash
+$ venv/bin/pip install -r requirements.txt
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+```bat
+> python -m venv venv
+> venv\Scripts\pip install -r requirements.txt
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}

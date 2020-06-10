@@ -128,12 +128,6 @@ class MyStack : Stack
 
 This Pulumi program creates an S3 bucket and exports the name of the bucket.
 
-{{% choosable language python %}}
-
-{{% python-venv %}}
-
-{{% /choosable %}}
-
 Next, we'll deploy the stack.
 
 {{< get-started-stepper >}}

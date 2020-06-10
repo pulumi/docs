@@ -211,12 +211,6 @@ class MyStack : Stack
 
 This Pulumi program creates an NGINX deployment and exports the name of the deployment.
 
-{{% choosable language python %}}
-
-{{< python-venv >}}
-
-{{% /choosable %}}
-
 Next, we'll deploy the stack.
 
 {{< get-started-stepper >}}
