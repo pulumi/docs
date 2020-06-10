@@ -3,7 +3,10 @@ title: Package pulumi_mongodbatlas
 title_tag: Package pulumi_mongodbatlas | Python SDK
 linktitle: pulumi_mongodbatlas
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "mongodbatlas" >}}
 
 <div class="section" id="pulumi-mongodb-atlas">
 <h1>Pulumi MongoDB Atlas<a class="headerlink" href="#pulumi-mongodb-atlas" title="Permalink to this headline">¶</a></h1>
