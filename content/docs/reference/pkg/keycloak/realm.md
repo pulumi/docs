@@ -22,7 +22,7 @@ meta_desc: "Explore the Realm resource of the Keycloak package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/keycloak/#Realm">Realm</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_code_lifespan=None<span class="p">, </span>access_code_lifespan_login=None<span class="p">, </span>access_code_lifespan_user_action=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_token_lifespan_for_implicit_flow=None<span class="p">, </span>account_theme=None<span class="p">, </span>action_token_generated_by_admin_lifespan=None<span class="p">, </span>action_token_generated_by_user_lifespan=None<span class="p">, </span>admin_theme=None<span class="p">, </span>attributes=None<span class="p">, </span>browser_flow=None<span class="p">, </span>client_authentication_flow=None<span class="p">, </span>direct_grant_flow=None<span class="p">, </span>display_name=None<span class="p">, </span>display_name_html=None<span class="p">, </span>docker_authentication_flow=None<span class="p">, </span>duplicate_emails_allowed=None<span class="p">, </span>edit_username_allowed=None<span class="p">, </span>email_theme=None<span class="p">, </span>enabled=None<span class="p">, </span>internationalization=None<span class="p">, </span>login_theme=None<span class="p">, </span>login_with_email_allowed=None<span class="p">, </span>offline_session_idle_timeout=None<span class="p">, </span>offline_session_max_lifespan=None<span class="p">, </span>password_policy=None<span class="p">, </span>realm=None<span class="p">, </span>refresh_token_max_reuse=None<span class="p">, </span>registration_allowed=None<span class="p">, </span>registration_email_as_username=None<span class="p">, </span>registration_flow=None<span class="p">, </span>remember_me=None<span class="p">, </span>reset_credentials_flow=None<span class="p">, </span>reset_password_allowed=None<span class="p">, </span>revoke_refresh_token=None<span class="p">, </span>security_defenses=None<span class="p">, </span>smtp_server=None<span class="p">, </span>ssl_required=None<span class="p">, </span>sso_session_idle_timeout=None<span class="p">, </span>sso_session_max_lifespan=None<span class="p">, </span>verify_email=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/keycloak/#Realm">Realm</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_code_lifespan=None<span class="p">, </span>access_code_lifespan_login=None<span class="p">, </span>access_code_lifespan_user_action=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_token_lifespan_for_implicit_flow=None<span class="p">, </span>account_theme=None<span class="p">, </span>action_token_generated_by_admin_lifespan=None<span class="p">, </span>action_token_generated_by_user_lifespan=None<span class="p">, </span>admin_theme=None<span class="p">, </span>attributes=None<span class="p">, </span>browser_flow=None<span class="p">, </span>client_authentication_flow=None<span class="p">, </span>direct_grant_flow=None<span class="p">, </span>display_name=None<span class="p">, </span>display_name_html=None<span class="p">, </span>docker_authentication_flow=None<span class="p">, </span>duplicate_emails_allowed=None<span class="p">, </span>edit_username_allowed=None<span class="p">, </span>email_theme=None<span class="p">, </span>enabled=None<span class="p">, </span>internationalization=None<span class="p">, </span>login_theme=None<span class="p">, </span>login_with_email_allowed=None<span class="p">, </span>offline_session_idle_timeout=None<span class="p">, </span>offline_session_max_lifespan=None<span class="p">, </span>password_policy=None<span class="p">, </span>realm=None<span class="p">, </span>refresh_token_max_reuse=None<span class="p">, </span>registration_allowed=None<span class="p">, </span>registration_email_as_username=None<span class="p">, </span>registration_flow=None<span class="p">, </span>remember_me=None<span class="p">, </span>reset_credentials_flow=None<span class="p">, </span>reset_password_allowed=None<span class="p">, </span>revoke_refresh_token=None<span class="p">, </span>security_defenses=None<span class="p">, </span>smtp_server=None<span class="p">, </span>ssl_required=None<span class="p">, </span>sso_session_idle_timeout=None<span class="p">, </span>sso_session_max_lifespan=None<span class="p">, </span>user_managed_access=None<span class="p">, </span>verify_email=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -606,6 +606,16 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
+        <span id="usermanagedaccess_csharp">
+<a href="#usermanagedaccess_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="verifyemail_csharp">
 <a href="#verifyemail_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Email</a>
 </span> 
@@ -1028,6 +1038,16 @@ and notUsername(undefined)"
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usermanagedaccess_go">
+<a href="#usermanagedaccess_go" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1460,6 +1480,16 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
+        <span id="usermanagedaccess_nodejs">
+<a href="#usermanagedaccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="verifyemail_nodejs">
 <a href="#verifyemail_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Email</a>
 </span> 
@@ -1887,6 +1917,16 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
+        <span id="user_managed_access_python">
+<a href="#user_managed_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="verify_email_python">
 <a href="#verify_email_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>email</a>
 </span> 
@@ -1923,6 +1963,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="internalid_csharp">
+<a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1939,6 +1989,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="internalid_go">
+<a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1957,6 +2017,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="internalid_nodejs">
+<a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1973,6 +2043,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="internal_id_python">
+<a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1993,7 +2073,7 @@ Get an existing Realm resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_code_lifespan=None<span class="p">, </span>access_code_lifespan_login=None<span class="p">, </span>access_code_lifespan_user_action=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_token_lifespan_for_implicit_flow=None<span class="p">, </span>account_theme=None<span class="p">, </span>action_token_generated_by_admin_lifespan=None<span class="p">, </span>action_token_generated_by_user_lifespan=None<span class="p">, </span>admin_theme=None<span class="p">, </span>attributes=None<span class="p">, </span>browser_flow=None<span class="p">, </span>client_authentication_flow=None<span class="p">, </span>direct_grant_flow=None<span class="p">, </span>display_name=None<span class="p">, </span>display_name_html=None<span class="p">, </span>docker_authentication_flow=None<span class="p">, </span>duplicate_emails_allowed=None<span class="p">, </span>edit_username_allowed=None<span class="p">, </span>email_theme=None<span class="p">, </span>enabled=None<span class="p">, </span>internationalization=None<span class="p">, </span>login_theme=None<span class="p">, </span>login_with_email_allowed=None<span class="p">, </span>offline_session_idle_timeout=None<span class="p">, </span>offline_session_max_lifespan=None<span class="p">, </span>password_policy=None<span class="p">, </span>realm=None<span class="p">, </span>refresh_token_max_reuse=None<span class="p">, </span>registration_allowed=None<span class="p">, </span>registration_email_as_username=None<span class="p">, </span>registration_flow=None<span class="p">, </span>remember_me=None<span class="p">, </span>reset_credentials_flow=None<span class="p">, </span>reset_password_allowed=None<span class="p">, </span>revoke_refresh_token=None<span class="p">, </span>security_defenses=None<span class="p">, </span>smtp_server=None<span class="p">, </span>ssl_required=None<span class="p">, </span>sso_session_idle_timeout=None<span class="p">, </span>sso_session_max_lifespan=None<span class="p">, </span>verify_email=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_code_lifespan=None<span class="p">, </span>access_code_lifespan_login=None<span class="p">, </span>access_code_lifespan_user_action=None<span class="p">, </span>access_token_lifespan=None<span class="p">, </span>access_token_lifespan_for_implicit_flow=None<span class="p">, </span>account_theme=None<span class="p">, </span>action_token_generated_by_admin_lifespan=None<span class="p">, </span>action_token_generated_by_user_lifespan=None<span class="p">, </span>admin_theme=None<span class="p">, </span>attributes=None<span class="p">, </span>browser_flow=None<span class="p">, </span>client_authentication_flow=None<span class="p">, </span>direct_grant_flow=None<span class="p">, </span>display_name=None<span class="p">, </span>display_name_html=None<span class="p">, </span>docker_authentication_flow=None<span class="p">, </span>duplicate_emails_allowed=None<span class="p">, </span>edit_username_allowed=None<span class="p">, </span>email_theme=None<span class="p">, </span>enabled=None<span class="p">, </span>internal_id=None<span class="p">, </span>internationalization=None<span class="p">, </span>login_theme=None<span class="p">, </span>login_with_email_allowed=None<span class="p">, </span>offline_session_idle_timeout=None<span class="p">, </span>offline_session_max_lifespan=None<span class="p">, </span>password_policy=None<span class="p">, </span>realm=None<span class="p">, </span>refresh_token_max_reuse=None<span class="p">, </span>registration_allowed=None<span class="p">, </span>registration_email_as_username=None<span class="p">, </span>registration_flow=None<span class="p">, </span>remember_me=None<span class="p">, </span>reset_credentials_flow=None<span class="p">, </span>reset_password_allowed=None<span class="p">, </span>revoke_refresh_token=None<span class="p">, </span>security_defenses=None<span class="p">, </span>smtp_server=None<span class="p">, </span>ssl_required=None<span class="p">, </span>sso_session_idle_timeout=None<span class="p">, </span>sso_session_max_lifespan=None<span class="p">, </span>user_managed_access=None<span class="p">, </span>verify_email=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2313,6 +2393,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_internalid_csharp">
+<a href="#state_internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_internationalization_csharp">
 <a href="#state_internationalization_csharp" style="color: inherit; text-decoration: inherit;">Internationalization</a>
 </span> 
@@ -2514,6 +2604,16 @@ and notUsername(undefined)"
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usermanagedaccess_csharp">
+<a href="#state_usermanagedaccess_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2740,6 +2840,16 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_internalid_go">
+<a href="#state_internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_internationalization_go">
 <a href="#state_internationalization_go" style="color: inherit; text-decoration: inherit;">Internationalization</a>
 </span> 
@@ -2941,6 +3051,16 @@ and notUsername(undefined)"
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usermanagedaccess_go">
+<a href="#state_usermanagedaccess_go" style="color: inherit; text-decoration: inherit;">User<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3167,6 +3287,16 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_internalid_nodejs">
+<a href="#state_internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_internationalization_nodejs">
 <a href="#state_internationalization_nodejs" style="color: inherit; text-decoration: inherit;">internationalization</a>
 </span> 
@@ -3368,6 +3498,16 @@ and notUsername(undefined)"
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usermanagedaccess_nodejs">
+<a href="#state_usermanagedaccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3594,6 +3734,16 @@ and notUsername(undefined)"
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_internal_id_python">
+<a href="#state_internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_internationalization_python">
 <a href="#state_internationalization_python" style="color: inherit; text-decoration: inherit;">internationalization</a>
 </span> 
@@ -3795,6 +3945,16 @@ and notUsername(undefined)"
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_user_managed_access_python">
+<a href="#state_user_managed_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

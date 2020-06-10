@@ -33,8 +33,10 @@ Explore the resources and functions of the openid module in the Keycloak package
     <li><a href="hardcodedclaimprotocolmapper" title="HardcodedClaimProtocolMapper"><span class="symbol resource"></span>HardcodedClaimProtocolMapper</a></li>
     <li><a href="hardcodedroleprotocolmapper" title="HardcodedRoleProtocolMapper"><span class="symbol resource"></span>HardcodedRoleProtocolMapper</a></li>
     <li><a href="userattributeprotocolmapper" title="UserAttributeProtocolMapper"><span class="symbol resource"></span>UserAttributeProtocolMapper</a></li>
+    <li><a href="userclientroleprotocolmapper" title="UserClientRoleProtocolMapper"><span class="symbol resource"></span>UserClientRoleProtocolMapper</a></li>
     <li><a href="userpropertyprotocolmapper" title="UserPropertyProtocolMapper"><span class="symbol resource"></span>UserPropertyProtocolMapper</a></li>
     <li><a href="userrealmroleprotocolmapper" title="UserRealmRoleProtocolMapper"><span class="symbol resource"></span>UserRealmRoleProtocolMapper</a></li>
+    <li><a href="usersessionnoteprotocolmapper" title="UserSessionNoteProtocolMapper"><span class="symbol resource"></span>UserSessionNoteProtocolMapper</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -53,7 +55,7 @@ Explore the resources and functions of the openid module in the Keycloak package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.2.2</dd>
+	<dd>2.3.2</dd>
 </dl>
 
 

@@ -5,6 +5,8 @@ linktitle: openid
 notitle: true
 ---
 
+{{< resource-docs-alert "keycloak" >}}
+
 <div class="section" id="module-pulumi_keycloak.openid">
 <span id="openid"></span><h1>openid<a class="headerlink" href="#module-pulumi_keycloak.openid" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
@@ -190,7 +192,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.openid.AwaitableGetClientResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">AwaitableGetClientResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_flow_binding_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consent_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_access_grants_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_scope_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">implicit_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standard_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_redirect_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_origins</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AwaitableGetClientResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">AwaitableGetClientResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_flow_binding_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consent_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_access_grants_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_scope_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">implicit_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standard_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_redirect_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_origins</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.AwaitableGetClientResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -200,7 +202,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.openid.Client">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_flow_binding_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consent_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_access_grants_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_session_state_from_auth_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_scope_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">implicit_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pkce_code_challenge_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standard_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_redirect_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_origins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.Client" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_flow_binding_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consent_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_access_grants_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_session_state_from_auth_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_scope_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">implicit_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pkce_code_challenge_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standard_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_redirect_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_origins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.Client" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing Keycloak clients that use the OpenID Connect protocol.</p>
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
@@ -275,7 +277,7 @@ is set to <code class="docutils literal notranslate"><span class="pre">true</spa
 </ul>
 <dl class="py method">
 <dt id="pulumi_keycloak.openid.Client.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_flow_binding_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consent_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_access_grants_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_session_state_from_auth_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_scope_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">implicit_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pkce_code_challenge_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standard_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_redirect_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_origins</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.Client.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_token_lifespan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_flow_binding_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consent_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_access_grants_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">exclude_session_state_from_auth_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_scope_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">implicit_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pkce_code_challenge_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standard_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_redirect_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_origins</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.Client.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Client resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1446,7 +1448,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.openid.GetClientResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">GetClientResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_flow_binding_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consent_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_access_grants_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_scope_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">implicit_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standard_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_redirect_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_origins</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GetClientResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">GetClientResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authentication_flow_binding_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consent_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">direct_access_grants_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_scope_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">implicit_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_theme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account_user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standard_flow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_redirect_uris</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_origins</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.GetClientResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClient.</p>
 <dl class="py attribute">
 <dt id="pulumi_keycloak.openid.GetClientResult.id">
@@ -1942,7 +1944,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">UserAttributeProtocolMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_id_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_userinfo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multivalued</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">UserAttributeProtocolMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_id_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_userinfo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aggregate_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multivalued</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing user attribute protocol mappers within
 Keycloak.</p>
 <p>User attribute protocol mappers allow you to map custom attributes defined
@@ -2004,6 +2006,7 @@ can be shared between multiple different clients.</p>
 <li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
 <li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
 <li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>aggregate_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if attribute values should be aggregated within the group attributes</p></li>
 <li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
 <li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
@@ -2029,6 +2032,12 @@ can be shared between multiple different clients.</p>
 <dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.add_to_userinfo">
 <code class="sig-name descname">add_to_userinfo</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.add_to_userinfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates if the attribute should appear in the userinfo response body.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.aggregate_attributes">
+<code class="sig-name descname">aggregate_attributes</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.aggregate_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if attribute values should be aggregated within the group attributes</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2069,7 +2078,7 @@ can be shared between multiple different clients.</p>
 
 <dl class="py method">
 <dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_id_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_userinfo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multivalued</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_attribute</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_id_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_userinfo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aggregate_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multivalued</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_attribute</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserAttributeProtocolMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2081,6 +2090,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
 <li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
 <li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>aggregate_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if attribute values should be aggregated within the group attributes</p></li>
 <li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
 <li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
@@ -2113,6 +2123,154 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_keycloak.openid.UserAttributeProtocolMapper.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserAttributeProtocolMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">UserClientRoleProtocolMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_id_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_userinfo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id_for_role_mappings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_role_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multivalued</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a UserClientRoleProtocolMapper resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] add_to_access_token: Indicates if the attribute should be a claim in the access token.
+:param pulumi.Input[bool] add_to_id_token: Indicates if the attribute should be a claim in the id token.
+:param pulumi.Input[bool] add_to_userinfo: Indicates if the attribute should appear in the userinfo response body.
+:param pulumi.Input[str] claim_value_type: Claim type used when serializing tokens.
+:param pulumi.Input[str] client_id: The mapper’s associated client. Cannot be used at the same time as client_scope_id.
+:param pulumi.Input[str] client_id_for_role_mappings: Client ID for role mappings.
+:param pulumi.Input[str] client_role_prefix: Prefix that will be added to each client role.
+:param pulumi.Input[str] client_scope_id: The mapper’s associated client scope. Cannot be used at the same time as client_id.
+:param pulumi.Input[bool] multivalued: Indicates whether this attribute is a single value or an array of values.
+:param pulumi.Input[str] name: A human-friendly name that will appear in the Keycloak console.
+:param pulumi.Input[str] realm_id: The realm id where the associated client or client scope exists.</p>
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.add_to_access_token">
+<code class="sig-name descname">add_to_access_token</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.add_to_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the access token.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.add_to_id_token">
+<code class="sig-name descname">add_to_id_token</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.add_to_id_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the id token.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.add_to_userinfo">
+<code class="sig-name descname">add_to_userinfo</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.add_to_userinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should appear in the userinfo response body.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.claim_value_type">
+<code class="sig-name descname">claim_value_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.claim_value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Claim type used when serializing tokens.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.client_id_for_role_mappings">
+<code class="sig-name descname">client_id_for_role_mappings</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.client_id_for_role_mappings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Client ID for role mappings.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.client_role_prefix">
+<code class="sig-name descname">client_role_prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.client_role_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prefix that will be added to each client role.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.multivalued">
+<code class="sig-name descname">multivalued</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.multivalued" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether this attribute is a single value or an array of values.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_id_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_userinfo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id_for_role_mappings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_role_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multivalued</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing UserClientRoleProtocolMapper resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
+<li><p><strong>add_to_userinfo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should appear in the userinfo response body.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_id_for_role_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client ID for role mappings.</p></li>
+<li><p><strong>client_role_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix that will be added to each client role.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>multivalued</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this attribute is a single value or an array of values.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.openid.UserClientRoleProtocolMapper.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserClientRoleProtocolMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2490,6 +2648,130 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_keycloak.openid.UserRealmRoleProtocolMapper.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserRealmRoleProtocolMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.openid.</code><code class="sig-name descname">UserSessionNoteProtocolMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_id_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_note_label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a UserSessionNoteProtocolMapper resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] add_to_access_token: Indicates if the attribute should be a claim in the access token.
+:param pulumi.Input[bool] add_to_id_token: Indicates if the attribute should be a claim in the id token.
+:param pulumi.Input[str] claim_value_type: Claim type used when serializing tokens.
+:param pulumi.Input[str] client_id: The mapper’s associated client. Cannot be used at the same time as client_scope_id.
+:param pulumi.Input[str] client_scope_id: The mapper’s associated client scope. Cannot be used at the same time as client_id.
+:param pulumi.Input[str] name: A human-friendly name that will appear in the Keycloak console.
+:param pulumi.Input[str] realm_id: The realm id where the associated client or client scope exists.
+:param pulumi.Input[str] session_note_label: String value being the name of stored user session note within the UserSessionModel.note map.</p>
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.add_to_access_token">
+<code class="sig-name descname">add_to_access_token</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.add_to_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the access token.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.add_to_id_token">
+<code class="sig-name descname">add_to_id_token</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.add_to_id_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the attribute should be a claim in the id token.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.claim_value_type">
+<code class="sig-name descname">claim_value_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.claim_value_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Claim type used when serializing tokens.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.client_id">
+<code class="sig-name descname">client_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.client_scope_id">
+<code class="sig-name descname">client_scope_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.client_scope_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mapper’s associated client scope. Cannot be used at the same time as client_id.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-friendly name that will appear in the Keycloak console.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm id where the associated client or client scope exists.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.session_note_label">
+<code class="sig-name descname">session_note_label</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.session_note_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>String value being the name of stored user session note within the UserSessionModel.note map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_to_id_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">claim_value_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_scope_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_note_label</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing UserSessionNoteProtocolMapper resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_to_access_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the access token.</p></li>
+<li><p><strong>add_to_id_token</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the attribute should be a claim in the id token.</p></li>
+<li><p><strong>claim_value_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Claim type used when serializing tokens.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client. Cannot be used at the same time as client_scope_id.</p></li>
+<li><p><strong>client_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mapper’s associated client scope. Cannot be used at the same time as client_id.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-friendly name that will appear in the Keycloak console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id where the associated client or client scope exists.</p></li>
+<li><p><strong>session_note_label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String value being the name of stored user session note within the UserSessionModel.note map.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.openid.UserSessionNoteProtocolMapper.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.openid.UserSessionNoteProtocolMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
