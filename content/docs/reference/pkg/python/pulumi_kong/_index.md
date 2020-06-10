@@ -3,7 +3,10 @@ title: Package pulumi_kong
 title_tag: Package pulumi_kong | Python SDK
 linktitle: pulumi_kong
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "kong" >}}
 
 <div class="section" id="module-pulumi_kong">
 <span id="pulumi-kong"></span><h1>Pulumi Kong<a class="headerlink" href="#module-pulumi_kong" title="Permalink to this headline">¶</a></h1>
