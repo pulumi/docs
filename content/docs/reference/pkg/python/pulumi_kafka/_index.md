@@ -3,7 +3,10 @@ title: Package pulumi_kafka
 title_tag: Package pulumi_kafka | Python SDK
 linktitle: pulumi_kafka
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "kafka" >}}
 
 <div class="section" id="module-pulumi_kafka">
 <span id="pulumi-kafka"></span><h1>Pulumi Kafka<a class="headerlink" href="#module-pulumi_kafka" title="Permalink to this headline">¶</a></h1>
