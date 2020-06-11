@@ -3,7 +3,10 @@ title: Package pulumi_rabbitmq
 title_tag: Package pulumi_rabbitmq | Python SDK
 linktitle: pulumi_rabbitmq
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "rabbitmq" >}}
 
 <div class="section" id="pulumi-rabbitmq">
 <h1>Pulumi RabbitMQ<a class="headerlink" href="#pulumi-rabbitmq" title="Permalink to this headline">¶</a></h1>
