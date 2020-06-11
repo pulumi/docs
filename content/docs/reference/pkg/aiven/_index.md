@@ -69,7 +69,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
+	<dd>2.1.3</dd>
 </dl>
 
 
