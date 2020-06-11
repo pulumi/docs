@@ -3,7 +3,10 @@ title: Package pulumi_vsphere
 title_tag: Package pulumi_vsphere | Python SDK
 linktitle: pulumi_vsphere
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vsphere" >}}
 
 <div class="section" id="pulumi-vsphere">
 <h1>Pulumi vSphere<a class="headerlink" href="#pulumi-vsphere" title="Permalink to this headline">¶</a></h1>

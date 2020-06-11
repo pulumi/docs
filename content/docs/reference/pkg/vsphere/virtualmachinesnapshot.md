@@ -50,11 +50,11 @@ class MyStack : Stack
     {
         var demo1 = new VSphere.VirtualMachineSnapshot("demo1", new VSphere.VirtualMachineSnapshotArgs
         {
-            Consolidate = "true",
+            Consolidate = true,
             Description = "This is Demo Snapshot",
-            Memory = "true",
-            Quiesce = "true",
-            RemoveChildren = "false",
+            Memory = true,
+            Quiesce = true,
+            RemoveChildren = false,
             SnapshotName = "Snapshot Name",
             VirtualMachineUuid = "9aac5551-a351-4158-8c5c-15a71e8ec5c9",
         });

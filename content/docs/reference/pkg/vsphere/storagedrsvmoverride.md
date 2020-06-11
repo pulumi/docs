@@ -87,7 +87,7 @@ class MyStack : Stack
         var drsVmOverride = new VSphere.StorageDrsVmOverride("drsVmOverride", new VSphere.StorageDrsVmOverrideArgs
         {
             DatastoreClusterId = datastoreCluster.Apply(datastoreCluster => datastoreCluster.Id),
-            SdrsEnabled = false,
+            SdrsEnabled = "false",
             VirtualMachineId = vm.Id,
         });
     }
