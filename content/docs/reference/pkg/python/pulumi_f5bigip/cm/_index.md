@@ -3,7 +3,10 @@ title: Module cm
 title_tag: Module cm | Package pulumi_f5bigip | Python SDK
 linktitle: cm
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "f5bigip" >}}
 
 <div class="section" id="cm">
 <h1>cm<a class="headerlink" href="#cm" title="Permalink to this headline">¶</a></h1>
