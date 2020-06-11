@@ -2,7 +2,7 @@
 title: "Unit Testing Assets"
 date: 2020-06-10T11:08:26-07:00
 draft: false
-meta_desc: "Learn how unit testing your infrastructure assets can ensure help correctness of your deployments."
+meta_desc: "Learn how unit testing your infrastructure assets can help ensure correctness of your deployments."
 meta_image: meta.png
 authors:
     - lee-zen
@@ -13,8 +13,8 @@ tags:
 
 When deploying infrastructure, we want to ensure that what we're deploying matches our expectations.
 One way to do so is via [unit testing]({{< relref "/docs/guides/testing/unit" >}}).
-We've talked about this concept in previous posts such as [in this overview]({{< relref "unit-test-infrastructure" >}})
-and [in this post on deployments with .NET]({{< relref "unit-testing-cloud-deployments-with-dotnet" >}}).
+We've talked about this concept in previous posts such as [in this overview]({{< relref "/blog/unit-test-infrastructure" >}})
+and [in this post on deployments with .NET]({{< relref "/blog/unit-testing-cloud-deployments-with-dotnet" >}}).
 
 Often, when we're creating cloud resources, we want to ensure that a resource's underlying assets match certain properties.
 For example, the entrypoint or handler for a cloud function should be an executable function.
@@ -168,9 +168,9 @@ to check this:
 
 ```python
 # Test that the secret input is marked as secret
-    @pulumi.runtime.test
-    def test_secret_input_and_output(self):
-        self.assertTrue(infra.secret_password_v1.secret_string.is_secret().result())
+@pulumi.runtime.test
+def test_secret_input_and_output(self):
+    self.assertTrue(infra.secret_password_v1.secret_string.is_secret().result())
 ```
 
 If we try to write something like the following in our code, it'll fail this test:
