@@ -145,7 +145,7 @@ def test_bucket_object_content_type(self):
 Here, we use the `filetype` module to guess at the type based on reading the file itself.
 We then check that the mime type specified on the bucket object matches.
 
-For example, if the file represented by `image.png` isn't a PNG this test would fail:
+For example, if the file represented by `image.png` isn't a PNG, this test would fail:
 
 **infra.py**:
 
@@ -193,3 +193,4 @@ There are many other examples of resources where it's useful to check the underl
 For example, checking the validity of certificates, keys, files, and container images are all assets
 that benefit from making sure we're wiring in resources correctly to our cloud infrastructure.
 We hope you take this opportunity to use Pulumi's unit testing framework to check your infrastructure's underlying assets for correctness.
+Please visit the [unit testing guide]({{< relref "/docs/guides/testing/unit" >}}) to learn more.
