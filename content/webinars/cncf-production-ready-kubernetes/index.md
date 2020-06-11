@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Production-ready Services with Kubernetes and Serverless"
+title: "Production-ready Services with Kubernetes & Serverless"
 meta_desc: "Mike Metral and Jay Smith (Google Cloud) demonstrate production-ready Kubernetes and serverless architectures in this CNCF-sponsored webinar."
 
 # A featured webinar will display first in the list.
