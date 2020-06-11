@@ -13,8 +13,8 @@ tags:
 
 When deploying infrastructure, we want to ensure that what we're deploying matches our expectations.
 One way to do so is via [unit testing]({{< relref "/docs/guides/testing/unit" >}}).
-We've talked about this concept in previous posts such as [in this overview]({{< relref "/blog/unit-test-infrastructure" >}})
-and [in this post on deployments with .NET]({{< relref "/blog/unit-testing-cloud-deployments-with-dotnet" >}}).
+We've talked about this concept in previous posts, such as [in this overview]({{< relref "/blog/unit-test-infrastructure" >}})
+and [this post on deployments with .NET]({{< relref "/blog/unit-testing-cloud-deployments-with-dotnet" >}}).
 
 Often, when we're creating cloud resources, we want to ensure that a resource's underlying assets match certain properties.
 For example, the entrypoint or handler for a cloud function should be an executable function.
@@ -29,8 +29,8 @@ The examples below are in Python, but you can easily achieve the same types of t
 ## Check that Functions are Executable
 
 When creating a Lambda function, we're expected to pass in a function handler that gets called upon invocation.
-Typically, the value is something like `mod.handler` where `mod` is the module name and `handler` is a function.
-A basic check would be to make sure that the module actually exists and that the function is callable.
+Typically, the value is something like `mod.handler`, where `mod` is the module name and `handler` is a function.
+A basic check would be to make sure that the module exists and that the function is callable.
 
 We can easily construct this unit test like so:
 
@@ -80,11 +80,11 @@ class TestInfrastructure(unittest.TestCase):
 
 Here, we use Python's introspection capabilities to import a module based on a string that we obtain from the Lambda function definition.
 Similarly, after we import the module, we can verify that the function is callable and has the appropriate arguments for a Lambda function.
-At this point, we've verified that we've correctly "wired in" a function handler.
+At this point, we've confirmed that we've correctly "wired in" a function handler.
 Separately, we would expect another set of unit tests that verifies the correctness of the handler itself.
 
 Here's the corresponding infrastructure code to make the test pass,
-assuming there's also a file called `lambda_function.py` which contains a function `handler(event, context)`.:
+assuming there's also a file called `lambda_function.py`, which contains a function `handler(event, context)`.
 
 **infra.py**:
 
@@ -120,12 +120,12 @@ lambda_function = aws.lambda_.Function('example-function',
 )
 ```
 
-If for whatever reason `lambda_function.py` doesn't exist or there's no function `handler` within that module, the test will fail.
+If `lambda_function.py` doesn't exist or there's no function `handler` within that module, the test will fail.
 
 ## File Assets
 
 Another example of checking for underlying asset correctness is when providing files to a resource.
-For example, we might want to check that the content type we provide to an object actually matches that of the resource:
+For example, we might want to check that the content type we provide to an object matches that of the resource:
 
 **test_infra.py**:
 
@@ -143,9 +143,9 @@ def test_bucket_object_content_type(self):
 ```
 
 Here, we use the `filetype` module to guess at the type based on reading the file itself.
-We then check that the mime type specified on the bucket object actually matches.
+We then check that the mime type specified on the bucket object matches.
 
-For example, if the file represented by `image.png` isn't actually a PNG, then this test would fail:
+For example, if the file represented by `image.png` isn't a PNG this test would fail:
 
 **infra.py**:
 
@@ -161,7 +161,7 @@ bucket_obj = aws.s3.BucketObject('my-bucket-obj',
 ## Secrets
 
 When working with secrets, we want to ensure that provided values are secret and that corresponding outputs are secret.
-This helps ensure that our state never contains plaintext values that are meant to be secret. We can write a simple test
+This helps ensure that our state never contains secrets as plaintext values. We can write a simple test
 to check this:
 
 **test_infra.py**:
