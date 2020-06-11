@@ -106,7 +106,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     checkAttempts: 3,
     checkPath: "/foo",
     checkTimeout: 30,
-    nodebalancerId: foobar.id,
+    nodebalancerId: foobar.id.apply(id => Number.parseFloat(id)),
     port: 8088,
     protocol: "http",
     stickiness: "http_cookie",

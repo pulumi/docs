@@ -83,7 +83,7 @@ const foobarDomain = new linode.Domain("foobar", {
     type: "master",
 });
 const foobarDomainRecord = new linode.DomainRecord("foobar", {
-    domainId: foobarDomain.id,
+    domainId: foobarDomain.id.apply(id => Number.parseFloat(id)),
     name: "www",
     recordType: "CNAME",
     target: "foobar.example",
