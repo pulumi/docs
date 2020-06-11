@@ -3,7 +3,10 @@ title: Module generic
 title_tag: Module generic | Package pulumi_vault | Python SDK
 linktitle: generic
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="generic">
 <h1>generic<a class="headerlink" href="#generic" title="Permalink to this headline">¶</a></h1>

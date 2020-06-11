@@ -3,7 +3,10 @@ title: Module alicloud
 title_tag: Module alicloud | Package pulumi_vault | Python SDK
 linktitle: alicloud
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="alicloud">
 <h1>alicloud<a class="headerlink" href="#alicloud" title="Permalink to this headline">¶</a></h1>

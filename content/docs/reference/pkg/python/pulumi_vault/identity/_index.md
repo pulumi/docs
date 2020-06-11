@@ -3,7 +3,10 @@ title: Module identity
 title_tag: Module identity | Package pulumi_vault | Python SDK
 linktitle: identity
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="identity">
 <h1>identity<a class="headerlink" href="#identity" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module jwt
 title_tag: Module jwt | Package pulumi_vault | Python SDK
 linktitle: jwt
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="jwt">
 <h1>jwt<a class="headerlink" href="#jwt" title="Permalink to this headline">¶</a></h1>

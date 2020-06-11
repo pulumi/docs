@@ -3,7 +3,10 @@ title: Module kubernetes
 title_tag: Module kubernetes | Package pulumi_vault | Python SDK
 linktitle: kubernetes
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="kubernetes">
 <h1>kubernetes<a class="headerlink" href="#kubernetes" title="Permalink to this headline">¶</a></h1>

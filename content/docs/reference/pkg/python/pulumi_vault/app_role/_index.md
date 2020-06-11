@@ -3,7 +3,10 @@ title: Module app_role
 title_tag: Module app_role | Package pulumi_vault | Python SDK
 linktitle: app_role
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="app-role">
 <h1>app_role<a class="headerlink" href="#app-role" title="Permalink to this headline">¶</a></h1>

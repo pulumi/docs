@@ -3,7 +3,10 @@ title: Module transit
 title_tag: Module transit | Package pulumi_vault | Python SDK
 linktitle: transit
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="transit">
 <h1>transit<a class="headerlink" href="#transit" title="Permalink to this headline">¶</a></h1>
