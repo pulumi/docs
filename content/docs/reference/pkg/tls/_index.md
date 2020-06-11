@@ -35,7 +35,7 @@ A Pulumi package to create TLS resources in Pulumi programs.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
+	<dd>2.1.3</dd>
 </dl>
 
 

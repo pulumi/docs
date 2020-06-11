@@ -3,7 +3,10 @@ title: Package pulumi_tls
 title_tag: Package pulumi_tls | Python SDK
 linktitle: pulumi_tls
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "tls" >}}
 
 <div class="section" id="pulumi-tls">
 <h1>Pulumi TLS<a class="headerlink" href="#pulumi-tls" title="Permalink to this headline">¶</a></h1>
