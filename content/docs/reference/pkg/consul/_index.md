@@ -68,7 +68,7 @@ A Pulumi package for creating and managing consul resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.2.1</dd>
 </dl>
 
 
