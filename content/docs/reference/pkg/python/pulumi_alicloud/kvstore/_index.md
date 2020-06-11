@@ -3,6 +3,7 @@ title: Module kvstore
 title_tag: Module kvstore | Package pulumi_alicloud | Python SDK
 linktitle: kvstore
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

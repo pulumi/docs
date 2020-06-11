@@ -48,11 +48,11 @@ class MyStack : Stack
         });
         var defaultInstance = new AliCloud.AliKafka.Instance("defaultInstance", new AliCloud.AliKafka.InstanceArgs
         {
-            DeployType = "4",
-            DiskSize = "500",
-            DiskType = "1",
-            IoMax = "20",
-            TopicQuota = "50",
+            DeployType = 4,
+            DiskSize = 500,
+            DiskType = 1,
+            IoMax = 20,
+            TopicQuota = 50,
             VswitchId = defaultSwitch.Id,
         });
         var instancesDs = Output.Create(AliCloud.ActionTrail.GetInstances.InvokeAsync(new AliCloud.ActionTrail.GetInstancesArgs

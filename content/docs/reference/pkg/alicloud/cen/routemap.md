@@ -86,7 +86,7 @@ class MyStack : Stack
             {
                 vpc01.Id,
             },
-            DestinationInstanceIdsReverseMatch = "false",
+            DestinationInstanceIdsReverseMatch = false,
             DestinationRouteTableIds = 
             {
                 vpc01.RouteTableId,
@@ -100,17 +100,17 @@ class MyStack : Stack
             {
                 "65501:1",
             },
-            NextPriority = "1",
+            NextPriority = 1,
             OperateCommunitySets = 
             {
                 "65501:1",
             },
-            Preference = "20",
+            Preference = 20,
             PrependAsPaths = 
             {
                 "65501",
             },
-            Priority = "1",
+            Priority = 1,
             RouteTypes = 
             {
                 "System",
@@ -123,7 +123,7 @@ class MyStack : Stack
             {
                 vpc00.Id,
             },
-            SourceInstanceIdsReverseMatch = "false",
+            SourceInstanceIdsReverseMatch = false,
             SourceRegionIds = 
             {
                 "cn-hangzhou",

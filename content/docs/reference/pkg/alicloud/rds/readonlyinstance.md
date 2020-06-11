@@ -51,7 +51,7 @@ class MyStack : Stack
             EngineVersion = "5.6",
             InstanceChargeType = "Postpaid",
             InstanceName = name,
-            InstanceStorage = "20",
+            InstanceStorage = 20,
             InstanceType = "rds.mysql.t1.small",
             SecurityIps = 
             {
@@ -64,7 +64,7 @@ class MyStack : Stack
         {
             EngineVersion = defaultInstance.EngineVersion,
             InstanceName = $"{name}ro",
-            InstanceStorage = "30",
+            InstanceStorage = 30,
             InstanceType = defaultInstance.InstanceType,
             MasterDbInstanceId = defaultInstance.Id,
             VswitchId = defaultSwitch.Id,

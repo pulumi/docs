@@ -3,6 +3,7 @@ title: Module pvtz
 title_tag: Module pvtz | Package pulumi_alicloud | Python SDK
 linktitle: pvtz
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

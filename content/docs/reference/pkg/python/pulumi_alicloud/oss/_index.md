@@ -3,6 +3,7 @@ title: Module oss
 title_tag: Module oss | Package pulumi_alicloud | Python SDK
 linktitle: oss
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

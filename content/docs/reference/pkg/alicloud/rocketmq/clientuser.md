@@ -36,7 +36,7 @@ class MyStack : Stack
     {
         var @default = new AliCloud.RocketMQ.ClientUser("default", new AliCloud.RocketMQ.ClientUserArgs
         {
-            Bandwidth = "20",
+            Bandwidth = 20,
             ClientIp = "192.1.10.0",
             Password = "xxxxxxx",
             SagId = "sag-xxxxx",

@@ -3,6 +3,7 @@ title: Module apigateway
 title_tag: Module apigateway | Package pulumi_alicloud | Python SDK
 linktitle: apigateway
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

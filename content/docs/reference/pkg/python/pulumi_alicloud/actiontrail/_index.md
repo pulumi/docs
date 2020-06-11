@@ -3,6 +3,7 @@ title: Module actiontrail
 title_tag: Module actiontrail | Package pulumi_alicloud | Python SDK
 linktitle: actiontrail
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

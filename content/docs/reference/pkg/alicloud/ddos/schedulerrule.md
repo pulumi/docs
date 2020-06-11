@@ -14,9 +14,112 @@ Provides a DdosCoo Scheduler Rule resource. For information about DdosCoo Schedu
 
 > **NOTE:** Available in 1.86.0+
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new AliCloud.Ddos.SchedulerRule("example", new AliCloud.Ddos.SchedulerRuleArgs
+        {
+            RuleName = "tf-testacc7929727******",
+            RuleType = 3,
+            Rules = 
+            {
+                new AliCloud.Ddos.Inputs.SchedulerRuleRuleArgs
+                {
+                    Priority = 100,
+                    RegionId = "cn-hangzhou",
+                    Type = "A",
+                    Value = "170.33.2.125",
+                    ValueType = 3,
+                },
+                new AliCloud.Ddos.Inputs.SchedulerRuleRuleArgs
+                {
+                    Priority = 50,
+                    RegionId = "cn-hangzhou",
+                    Type = "A",
+                    Value = "170.33.14.193",
+                    ValueType = 1,
+                },
+            },
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.ddos.SchedulerRule("example",
+    rule_name="tf-testacc7929727******",
+    rule_type=3,
+    rules=[
+        {
+            "priority": "100",
+            "regionId": "cn-hangzhou",
+            "type": "A",
+            "value": "170.33.2.125",
+            "valueType": "3",
+        },
+        {
+            "priority": "50",
+            "regionId": "cn-hangzhou",
+            "type": "A",
+            "value": "170.33.14.193",
+            "valueType": "1",
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = new alicloud.ddos.SchedulerRule("example", {
+    ruleName: "tf-testacc7929727******",
+    ruleType: 3,
+    rules: [
+        {
+            priority: 100,
+            regionId: "cn-hangzhou",
+            type: "A",
+            value: "170.33.2.125",
+            valueType: 3,
+        },
+        {
+            priority: 50,
+            regionId: "cn-hangzhou",
+            type: "A",
+            value: "170.33.14.193",
+            valueType: 1,
+        },
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SchedulerRule Resource {#create}

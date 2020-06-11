@@ -3,6 +3,7 @@ title: Module cen
 title_tag: Module cen | Package pulumi_alicloud | Python SDK
 linktitle: cen
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

@@ -3,6 +3,7 @@ title: Module resourcemanager
 title_tag: Module resourcemanager | Package pulumi_alicloud | Python SDK
 linktitle: resourcemanager
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

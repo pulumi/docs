@@ -49,21 +49,21 @@ class MyStack : Stack
         });
         var defaultInstance = new AliCloud.AliKafka.Instance("defaultInstance", new AliCloud.AliKafka.InstanceArgs
         {
-            DeployType = "5",
-            DiskSize = "500",
-            DiskType = "1",
-            IoMax = "20",
-            TopicQuota = "50",
+            DeployType = 5,
+            DiskSize = 500,
+            DiskType = 1,
+            IoMax = 20,
+            TopicQuota = 50,
             VswitchId = defaultSwitch.Id,
         });
         var config = new Config();
         var topic = config.Get("topic") ?? "alikafkaTopicName";
         var defaultTopic = new AliCloud.AliKafka.Topic("defaultTopic", new AliCloud.AliKafka.TopicArgs
         {
-            CompactTopic = "false",
+            CompactTopic = false,
             InstanceId = defaultInstance.Id,
-            LocalTopic = "false",
-            PartitionNum = "12",
+            LocalTopic = false,
+            PartitionNum = 12,
             Remark = "dafault_kafka_topic_remark",
             Topic = topic,
         });

@@ -3,6 +3,7 @@ title: Module rocketmq
 title_tag: Module rocketmq | Package pulumi_alicloud | Python SDK
 linktitle: rocketmq
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

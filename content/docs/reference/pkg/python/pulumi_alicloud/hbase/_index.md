@@ -3,6 +3,7 @@ title: Module hbase
 title_tag: Module hbase | Package pulumi_alicloud | Python SDK
 linktitle: hbase
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

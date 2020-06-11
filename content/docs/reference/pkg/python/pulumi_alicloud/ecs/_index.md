@@ -3,6 +3,7 @@ title: Module ecs
 title_tag: Module ecs | Package pulumi_alicloud | Python SDK
 linktitle: ecs
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

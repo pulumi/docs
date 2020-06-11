@@ -81,7 +81,7 @@ class MyStack : Stack
             InstanceName = name,
             InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
             InternetChargeType = "PayByTraffic",
-            InternetMaxBandwidthOut = "10",
+            InternetMaxBandwidthOut = 10,
             SecurityGroups = 
             {
                 defaultSecurityGroup,
@@ -98,7 +98,7 @@ class MyStack : Stack
             BackendPort = 22,
             Bandwidth = 5,
             FrontendPort = 22,
-            HealthCheckConnectPort = "20",
+            HealthCheckConnectPort = 20,
             LoadBalancerId = defaultLoadBalancer.Id,
             Protocol = "http",
         });

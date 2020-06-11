@@ -3,6 +3,7 @@ title: Module maxcompute
 title_tag: Module maxcompute | Package pulumi_alicloud | Python SDK
 linktitle: maxcompute
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

@@ -91,9 +91,9 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             defaultListener.Add(new AliCloud.Slb.Listener($"defaultListener-{range.Value}", new AliCloud.Slb.ListenerArgs
             {
-                BackendPort = "22",
-                Bandwidth = "10",
-                FrontendPort = "22",
+                BackendPort = 22,
+                Bandwidth = 10,
+                FrontendPort = 22,
                 HealthCheckType = "tcp",
                 LoadBalancerId = 
                 {
@@ -104,8 +104,8 @@ class MyStack : Stack
         }
         var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
         {
-            MaxSize = "2",
-            MinSize = "2",
+            MaxSize = 2,
+            MinSize = 2,
             ScalingGroupName = name,
             VswitchIds = 
             {
@@ -124,9 +124,9 @@ class MyStack : Stack
                     {
                         new AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs
                         {
-                            Port = "100",
+                            Port = 100,
                             VserverGroupId = defaultServerGroup.Id,
-                            Weight = "60",
+                            Weight = 60,
                         },
                     },
                 },

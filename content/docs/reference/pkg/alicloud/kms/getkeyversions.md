@@ -14,9 +14,70 @@ This data source provides a list of KMS KeyVersions in an Alibaba Cloud account 
 
 > NOTE: Available in v1.85.0+
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var alicloudKmsKeyVersionsDs = Output.Create(AliCloud.Kms.GetKeyVersions.InvokeAsync(new AliCloud.Kms.GetKeyVersionsArgs
+        {
+            Ids = 
+            {
+                "d89e8a53-b708-41aa-8c67-6873axxx",
+            },
+            KeyId = "08438c-b4d5-4d05-928c-07b7xxxx",
+        }));
+        this.AllVersions = alicloudKmsKeyVersionsDs.Apply(alicloudKmsKeyVersionsDs => alicloudKmsKeyVersionsDs.Versions);
+    }
+
+    [Output("allVersions")]
+    public Output<string> AllVersions { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+alicloud_kms_key_versions_ds = alicloud.kms.get_key_versions(ids=["d89e8a53-b708-41aa-8c67-6873axxx"],
+    key_id="08438c-b4d5-4d05-928c-07b7xxxx")
+pulumi.export("allVersions", alicloud_kms_key_versions_ds.versions)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const alicloudKmsKeyVersionsDs = pulumi.output(alicloud.kms.getKeyVersions({
+    ids: ["d89e8a53-b708-41aa-8c67-6873axxx"],
+    keyId: "08438c-b4d5-4d05-928c-07b7xxxx",
+}, { async: true }));
+
+export const allVersions = alicloudKmsKeyVersionsDs.versions;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetKeyVersions {#using}

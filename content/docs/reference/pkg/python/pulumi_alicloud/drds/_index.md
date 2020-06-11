@@ -3,6 +3,7 @@ title: Module drds
 title_tag: Module drds | Package pulumi_alicloud | Python SDK
 linktitle: drds
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

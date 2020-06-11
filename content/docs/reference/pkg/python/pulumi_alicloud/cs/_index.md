@@ -3,6 +3,7 @@ title: Module cs
 title_tag: Module cs | Package pulumi_alicloud | Python SDK
 linktitle: cs
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

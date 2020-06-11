@@ -14,9 +14,64 @@ A kms key can help user to protect data security in the transmission process. Fo
 
 > **NOTE:** Available in v1.85.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var key = new AliCloud.Kms.Key("key", new AliCloud.Kms.KeyArgs
+        {
+            Description = "Hello KMS",
+            KeyState = "Enabled",
+            PendingWindowInDays = 7,
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+key = alicloud.kms.Key("key",
+    description="Hello KMS",
+    key_state="Enabled",
+    pending_window_in_days="7")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const key = new alicloud.kms.Key("key", {
+    description: "Hello KMS",
+    keyState: "Enabled",
+    pendingWindowInDays: 7,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Key Resource {#create}

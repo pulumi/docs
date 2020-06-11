@@ -3,6 +3,7 @@ title: Module yundun
 title_tag: Module yundun | Package pulumi_alicloud | Python SDK
 linktitle: yundun
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

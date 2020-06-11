@@ -3,6 +3,7 @@ title: Module slb
 title_tag: Module slb | Package pulumi_alicloud | Python SDK
 linktitle: slb
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

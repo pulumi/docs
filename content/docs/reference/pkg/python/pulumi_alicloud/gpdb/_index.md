@@ -3,6 +3,7 @@ title: Module gpdb
 title_tag: Module gpdb | Package pulumi_alicloud | Python SDK
 linktitle: gpdb
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

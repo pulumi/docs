@@ -35,15 +35,15 @@ class MyStack : Stack
         var instance = new AliCloud.ElasticSearch.Instance("instance", new AliCloud.ElasticSearch.InstanceArgs
         {
             InstanceChargeType = "PostPaid",
-            DataNodeAmount = "2",
+            DataNodeAmount = 2,
             DataNodeSpec = "elasticsearch.sn2ne.large",
-            DataNodeDiskSize = "20",
+            DataNodeDiskSize = 20,
             DataNodeDiskType = "cloud_ssd",
             VswitchId = "some vswitch id",
             Password = "Your password",
             Version = "5.5.3_with_X-Pack",
             Description = "description",
-            ZoneCount = "2",
+            ZoneCount = 2,
             Tags = 
             {
                 { "key1", "value1" },

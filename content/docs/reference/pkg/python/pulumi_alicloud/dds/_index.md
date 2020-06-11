@@ -3,6 +3,7 @@ title: Module dds
 title_tag: Module dds | Package pulumi_alicloud | Python SDK
 linktitle: dds
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

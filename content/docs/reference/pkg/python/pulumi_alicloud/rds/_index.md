@@ -3,6 +3,7 @@ title: Module rds
 title_tag: Module rds | Package pulumi_alicloud | Python SDK
 linktitle: rds
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

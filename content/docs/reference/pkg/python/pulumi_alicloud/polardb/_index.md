@@ -3,6 +3,7 @@ title: Module polardb
 title_tag: Module polardb | Package pulumi_alicloud | Python SDK
 linktitle: polardb
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

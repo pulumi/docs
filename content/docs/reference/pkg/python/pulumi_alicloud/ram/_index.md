@@ -3,6 +3,7 @@ title: Module ram
 title_tag: Module ram | Package pulumi_alicloud | Python SDK
 linktitle: ram
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

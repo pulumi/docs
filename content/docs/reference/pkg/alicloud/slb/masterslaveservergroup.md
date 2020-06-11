@@ -99,7 +99,7 @@ class MyStack : Stack
                 InstanceName = name,
                 InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
                 InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = "10",
+                InternetMaxBandwidthOut = 10,
                 SecurityGroups = 
                 {
                     groupSecurityGroup.Id,
@@ -159,9 +159,9 @@ class MyStack : Stack
         });
         var tcp = new AliCloud.Slb.Listener("tcp", new AliCloud.Slb.ListenerArgs
         {
-            Bandwidth = "10",
+            Bandwidth = 10,
             EstablishedTimeout = 600,
-            FrontendPort = "22",
+            FrontendPort = 22,
             HealthCheckConnectPort = 20,
             HealthCheckHttpCode = "http_2xx",
             HealthCheckInterval = 5,

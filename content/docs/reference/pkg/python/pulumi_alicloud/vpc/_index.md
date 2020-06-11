@@ -3,6 +3,7 @@ title: Module vpc
 title_tag: Module vpc | Package pulumi_alicloud | Python SDK
 linktitle: vpc
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

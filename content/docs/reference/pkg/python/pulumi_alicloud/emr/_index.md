@@ -3,6 +3,7 @@ title: Module emr
 title_tag: Module emr | Package pulumi_alicloud | Python SDK
 linktitle: emr
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

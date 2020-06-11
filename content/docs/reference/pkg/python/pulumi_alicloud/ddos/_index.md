@@ -3,6 +3,7 @@ title: Module ddos
 title_tag: Module ddos | Package pulumi_alicloud | Python SDK
 linktitle: ddos
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}
