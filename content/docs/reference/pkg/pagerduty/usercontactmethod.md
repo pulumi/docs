@@ -47,7 +47,7 @@ class MyStack : Stack
         var phone = new Pagerduty.UserContactMethod("phone", new Pagerduty.UserContactMethodArgs
         {
             Address = "2025550199",
-            CountryCode = "+1",
+            CountryCode = 1,
             Label = "Work",
             Type = "phone_contact_method",
             UserId = example.Id,
@@ -55,7 +55,7 @@ class MyStack : Stack
         var sms = new Pagerduty.UserContactMethod("sms", new Pagerduty.UserContactMethodArgs
         {
             Address = "2025550199",
-            CountryCode = "+1",
+            CountryCode = 1,
             Label = "Work",
             Type = "sms_contact_method",
             UserId = example.Id,

@@ -34,8 +34,8 @@ class MyStack : Stack
         }));
         var testService = new Pagerduty.Service("testService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = 600,
-            AutoResolveTimeout = 14400,
+            AcknowledgementTimeout = "600",
+            AutoResolveTimeout = "14400",
             EscalationPolicy = testEscalationPolicy.Apply(testEscalationPolicy => testEscalationPolicy.Id),
         });
     }

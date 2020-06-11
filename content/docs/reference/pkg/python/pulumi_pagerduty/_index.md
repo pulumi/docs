@@ -3,7 +3,10 @@ title: Package pulumi_pagerduty
 title_tag: Package pulumi_pagerduty | Python SDK
 linktitle: pulumi_pagerduty
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "pagerduty" >}}
 
 <div class="section" id="pulumi-pagerduty">
 <h1>Pulumi Pagerduty<a class="headerlink" href="#pulumi-pagerduty" title="Permalink to this headline">¶</a></h1>

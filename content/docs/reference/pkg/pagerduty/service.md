@@ -58,9 +58,9 @@ class MyStack : Stack
         });
         var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = 600,
+            AcknowledgementTimeout = "600",
             AlertCreation = "create_incidents",
-            AutoResolveTimeout = 14400,
+            AutoResolveTimeout = "14400",
             EscalationPolicy = pagerduty_escalation_policy.Example.Id,
         });
     }

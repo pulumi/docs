@@ -39,7 +39,7 @@ class MyStack : Stack
         {
             Ruleset = fooRuleset.Id,
             Position = 0,
-            Disabled = "false",
+            Disabled = false,
             Conditions = new Pagerduty.Inputs.RulesetRuleConditionsArgs
             {
                 Operator = "and",
