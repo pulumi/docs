@@ -3,7 +3,10 @@ title: Module slack
 title_tag: Module slack | Package pulumi_signalfx | Python SDK
 linktitle: slack
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "signalfx" >}}
 
 <div class="section" id="slack">
 <h1>slack<a class="headerlink" href="#slack" title="Permalink to this headline">¶</a></h1>

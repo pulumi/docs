@@ -3,7 +3,10 @@ title: Module aws
 title_tag: Module aws | Package pulumi_signalfx | Python SDK
 linktitle: aws
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "signalfx" >}}
 
 <div class="section" id="aws">
 <h1>aws<a class="headerlink" href="#aws" title="Permalink to this headline">¶</a></h1>

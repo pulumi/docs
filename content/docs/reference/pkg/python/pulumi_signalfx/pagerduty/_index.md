@@ -3,7 +3,10 @@ title: Module pagerduty
 title_tag: Module pagerduty | Package pulumi_signalfx | Python SDK
 linktitle: pagerduty
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "signalfx" >}}
 
 <div class="section" id="pagerduty">
 <h1>pagerduty<a class="headerlink" href="#pagerduty" title="Permalink to this headline">¶</a></h1>

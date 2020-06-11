@@ -3,7 +3,10 @@ title: Module opsgenie
 title_tag: Module opsgenie | Package pulumi_signalfx | Python SDK
 linktitle: opsgenie
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "signalfx" >}}
 
 <div class="section" id="opsgenie">
 <h1>opsgenie<a class="headerlink" href="#opsgenie" title="Permalink to this headline">¶</a></h1>
