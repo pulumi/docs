@@ -3,7 +3,10 @@ title: Module bot
 title_tag: Module bot | Package pulumi_azure | Python SDK
 linktitle: bot
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="bot">
 <h1>bot<a class="headerlink" href="#bot" title="Permalink to this headline">¶</a></h1>

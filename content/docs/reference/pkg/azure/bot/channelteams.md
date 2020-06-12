@@ -47,8 +47,6 @@ class MyStack : Stack
             BotName = exampleChannelsRegistration.Name,
             Location = exampleChannelsRegistration.Location,
             ResourceGroupName = exampleResourceGroup.Name,
-            CallingWebHook = "https://example2.com/",
-            EnableCalling = false,
         });
     }
 
@@ -75,9 +73,7 @@ example_channels_registration = azure.bot.ChannelsRegistration("exampleChannelsR
 example_channel_teams = azure.bot.ChannelTeams("exampleChannelTeams",
     bot_name=example_channels_registration.name,
     location=example_channels_registration.location,
-    resource_group_name=example_resource_group.name,
-    calling_web_hook="https://example2.com/",
-    enable_calling=False)
+    resource_group_name=example_resource_group.name)
 ```
 {{% /example %}}
 
@@ -98,8 +94,6 @@ const exampleChannelTeams = new azure.bot.ChannelTeams("exampleChannelTeams", {
     botName: exampleChannelsRegistration.name,
     location: exampleChannelsRegistration.location,
     resourceGroupName: exampleResourceGroup.name,
-    callingWebHook: "https://example2.com/",
-    enableCalling: false,
 });
 ```
 {{% /example %}}

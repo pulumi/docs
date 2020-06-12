@@ -3,7 +3,10 @@ title: Module backup
 title_tag: Module backup | Package pulumi_azure | Python SDK
 linktitle: backup
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="backup">
 <h1>backup<a class="headerlink" href="#backup" title="Permalink to this headline">¶</a></h1>

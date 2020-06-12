@@ -3,7 +3,10 @@ title: Module msi
 title_tag: Module msi | Package pulumi_azure | Python SDK
 linktitle: msi
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="msi">
 <h1>msi<a class="headerlink" href="#msi" title="Permalink to this headline">¶</a></h1>

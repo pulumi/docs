@@ -3,7 +3,10 @@ title: Module privatedns
 title_tag: Module privatedns | Package pulumi_azure | Python SDK
 linktitle: privatedns
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="privatedns">
 <h1>privatedns<a class="headerlink" href="#privatedns" title="Permalink to this headline">¶</a></h1>

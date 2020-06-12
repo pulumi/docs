@@ -3,7 +3,10 @@ title: Module mariadb
 title_tag: Module mariadb | Package pulumi_azure | Python SDK
 linktitle: mariadb
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="mariadb">
 <h1>mariadb<a class="headerlink" href="#mariadb" title="Permalink to this headline">¶</a></h1>

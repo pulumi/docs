@@ -3,7 +3,10 @@ title: Module datalake
 title_tag: Module datalake | Package pulumi_azure | Python SDK
 linktitle: datalake
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="datalake">
 <h1>datalake<a class="headerlink" href="#datalake" title="Permalink to this headline">¶</a></h1>

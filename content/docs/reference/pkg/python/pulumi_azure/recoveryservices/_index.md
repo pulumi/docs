@@ -3,7 +3,10 @@ title: Module recoveryservices
 title_tag: Module recoveryservices | Package pulumi_azure | Python SDK
 linktitle: recoveryservices
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="recoveryservices">
 <h1>recoveryservices<a class="headerlink" href="#recoveryservices" title="Permalink to this headline">¶</a></h1>

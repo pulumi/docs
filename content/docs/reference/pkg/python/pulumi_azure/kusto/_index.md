@@ -3,7 +3,10 @@ title: Module kusto
 title_tag: Module kusto | Package pulumi_azure | Python SDK
 linktitle: kusto
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="kusto">
 <h1>kusto<a class="headerlink" href="#kusto" title="Permalink to this headline">¶</a></h1>

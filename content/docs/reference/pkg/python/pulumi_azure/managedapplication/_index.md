@@ -3,7 +3,10 @@ title: Module managedapplication
 title_tag: Module managedapplication | Package pulumi_azure | Python SDK
 linktitle: managedapplication
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="managedapplication">
 <h1>managedapplication<a class="headerlink" href="#managedapplication" title="Permalink to this headline">¶</a></h1>

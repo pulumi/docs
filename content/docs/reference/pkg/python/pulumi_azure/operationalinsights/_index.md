@@ -3,7 +3,10 @@ title: Module operationalinsights
 title_tag: Module operationalinsights | Package pulumi_azure | Python SDK
 linktitle: operationalinsights
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="operationalinsights">
 <h1>operationalinsights<a class="headerlink" href="#operationalinsights" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module dns
 title_tag: Module dns | Package pulumi_azure | Python SDK
 linktitle: dns
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="dns">
 <h1>dns<a class="headerlink" href="#dns" title="Permalink to this headline">¶</a></h1>

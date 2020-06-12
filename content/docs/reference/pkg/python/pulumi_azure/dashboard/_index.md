@@ -3,7 +3,10 @@ title: Module dashboard
 title_tag: Module dashboard | Package pulumi_azure | Python SDK
 linktitle: dashboard
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="dashboard">
 <h1>dashboard<a class="headerlink" href="#dashboard" title="Permalink to this headline">¶</a></h1>

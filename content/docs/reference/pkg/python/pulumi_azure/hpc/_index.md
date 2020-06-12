@@ -3,7 +3,10 @@ title: Module hpc
 title_tag: Module hpc | Package pulumi_azure | Python SDK
 linktitle: hpc
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="hpc">
 <h1>hpc<a class="headerlink" href="#hpc" title="Permalink to this headline">¶</a></h1>

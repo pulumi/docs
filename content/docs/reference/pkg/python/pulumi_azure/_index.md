@@ -3,7 +3,10 @@ title: Package pulumi_azure
 title_tag: Package pulumi_azure | Python SDK
 linktitle: pulumi_azure
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="pulumi-azure">
 <h1>Pulumi Azure<a class="headerlink" href="#pulumi-azure" title="Permalink to this headline">¶</a></h1>

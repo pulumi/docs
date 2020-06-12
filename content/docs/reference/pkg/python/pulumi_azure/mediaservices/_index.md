@@ -3,7 +3,10 @@ title: Module mediaservices
 title_tag: Module mediaservices | Package pulumi_azure | Python SDK
 linktitle: mediaservices
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="mediaservices">
 <h1>mediaservices<a class="headerlink" href="#mediaservices" title="Permalink to this headline">¶</a></h1>

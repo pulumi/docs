@@ -38,7 +38,7 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             StorageAccountType = "Standard_LRS",
             CreateOption = "Empty",
-            DiskSizeGb = "10",
+            DiskSizeGb = 10,
         });
         var exampleSnapshot = new Azure.Compute.Snapshot("exampleSnapshot", new Azure.Compute.SnapshotArgs
         {

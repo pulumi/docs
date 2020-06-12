@@ -3,7 +3,10 @@ title: Module sql
 title_tag: Module sql | Package pulumi_azure | Python SDK
 linktitle: sql
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="sql">
 <h1>sql<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module mixedreality
 title_tag: Module mixedreality | Package pulumi_azure | Python SDK
 linktitle: mixedreality
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="mixedreality">
 <h1>mixedreality<a class="headerlink" href="#mixedreality" title="Permalink to this headline">¶</a></h1>

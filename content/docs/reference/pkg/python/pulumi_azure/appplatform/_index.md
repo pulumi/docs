@@ -3,7 +3,10 @@ title: Module appplatform
 title_tag: Module appplatform | Package pulumi_azure | Python SDK
 linktitle: appplatform
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="appplatform">
 <h1>appplatform<a class="headerlink" href="#appplatform" title="Permalink to this headline">¶</a></h1>

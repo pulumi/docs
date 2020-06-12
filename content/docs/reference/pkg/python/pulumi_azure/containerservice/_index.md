@@ -3,7 +3,10 @@ title: Module containerservice
 title_tag: Module containerservice | Package pulumi_azure | Python SDK
 linktitle: containerservice
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="containerservice">
 <h1>containerservice<a class="headerlink" href="#containerservice" title="Permalink to this headline">¶</a></h1>

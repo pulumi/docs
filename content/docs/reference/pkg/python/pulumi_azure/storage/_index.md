@@ -3,7 +3,10 @@ title: Module storage
 title_tag: Module storage | Package pulumi_azure | Python SDK
 linktitle: storage
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="storage">
 <h1>storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h1>

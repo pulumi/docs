@@ -3,7 +3,10 @@ title: Module network
 title_tag: Module network | Package pulumi_azure | Python SDK
 linktitle: network
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="network">
 <h1>network<a class="headerlink" href="#network" title="Permalink to this headline">¶</a></h1>

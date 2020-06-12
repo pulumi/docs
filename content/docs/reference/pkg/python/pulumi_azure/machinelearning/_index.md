@@ -3,7 +3,10 @@ title: Module machinelearning
 title_tag: Module machinelearning | Package pulumi_azure | Python SDK
 linktitle: machinelearning
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="machinelearning">
 <h1>machinelearning<a class="headerlink" href="#machinelearning" title="Permalink to this headline">¶</a></h1>

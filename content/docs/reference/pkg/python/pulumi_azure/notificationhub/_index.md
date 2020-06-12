@@ -3,7 +3,10 @@ title: Module notificationhub
 title_tag: Module notificationhub | Package pulumi_azure | Python SDK
 linktitle: notificationhub
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="notificationhub">
 <h1>notificationhub<a class="headerlink" href="#notificationhub" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module waf
 title_tag: Module waf | Package pulumi_azure | Python SDK
 linktitle: waf
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="waf">
 <h1>waf<a class="headerlink" href="#waf" title="Permalink to this headline">¶</a></h1>

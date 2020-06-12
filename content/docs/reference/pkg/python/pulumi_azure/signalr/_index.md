@@ -3,7 +3,10 @@ title: Module signalr
 title_tag: Module signalr | Package pulumi_azure | Python SDK
 linktitle: signalr
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="signalr">
 <h1>signalr<a class="headerlink" href="#signalr" title="Permalink to this headline">¶</a></h1>

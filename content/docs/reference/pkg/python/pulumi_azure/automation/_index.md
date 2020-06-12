@@ -3,7 +3,10 @@ title: Module automation
 title_tag: Module automation | Package pulumi_azure | Python SDK
 linktitle: automation
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="automation">
 <h1>automation<a class="headerlink" href="#automation" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module managementresource
 title_tag: Module managementresource | Package pulumi_azure | Python SDK
 linktitle: managementresource
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="managementresource">
 <h1>managementresource<a class="headerlink" href="#managementresource" title="Permalink to this headline">¶</a></h1>

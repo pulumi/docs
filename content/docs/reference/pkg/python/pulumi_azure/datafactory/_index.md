@@ -3,7 +3,10 @@ title: Module datafactory
 title_tag: Module datafactory | Package pulumi_azure | Python SDK
 linktitle: datafactory
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="datafactory">
 <h1>datafactory<a class="headerlink" href="#datafactory" title="Permalink to this headline">¶</a></h1>

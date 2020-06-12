@@ -3,7 +3,10 @@ title: Module core
 title_tag: Module core | Package pulumi_azure | Python SDK
 linktitle: core
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="core">
 <h1>core<a class="headerlink" href="#core" title="Permalink to this headline">¶</a></h1>

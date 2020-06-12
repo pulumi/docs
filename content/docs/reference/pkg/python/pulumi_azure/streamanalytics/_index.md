@@ -3,7 +3,10 @@ title: Module streamanalytics
 title_tag: Module streamanalytics | Package pulumi_azure | Python SDK
 linktitle: streamanalytics
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="streamanalytics">
 <h1>streamanalytics<a class="headerlink" href="#streamanalytics" title="Permalink to this headline">¶</a></h1>

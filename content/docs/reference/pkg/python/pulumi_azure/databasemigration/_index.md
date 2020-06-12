@@ -3,7 +3,10 @@ title: Module databasemigration
 title_tag: Module databasemigration | Package pulumi_azure | Python SDK
 linktitle: databasemigration
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="databasemigration">
 <h1>databasemigration<a class="headerlink" href="#databasemigration" title="Permalink to this headline">¶</a></h1>

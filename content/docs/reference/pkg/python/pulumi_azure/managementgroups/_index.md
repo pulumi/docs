@@ -3,7 +3,10 @@ title: Module managementgroups
 title_tag: Module managementgroups | Package pulumi_azure | Python SDK
 linktitle: managementgroups
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="managementgroups">
 <h1>managementgroups<a class="headerlink" href="#managementgroups" title="Permalink to this headline">¶</a></h1>

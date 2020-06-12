@@ -3,7 +3,10 @@ title: Module search
 title_tag: Module search | Package pulumi_azure | Python SDK
 linktitle: search
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="search">
 <h1>search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h1>

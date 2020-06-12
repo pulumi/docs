@@ -3,7 +3,10 @@ title: Module sentinel
 title_tag: Module sentinel | Package pulumi_azure | Python SDK
 linktitle: sentinel
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="sentinel">
 <h1>sentinel<a class="headerlink" href="#sentinel" title="Permalink to this headline">¶</a></h1>

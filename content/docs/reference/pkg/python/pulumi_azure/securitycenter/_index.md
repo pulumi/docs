@@ -3,7 +3,10 @@ title: Module securitycenter
 title_tag: Module securitycenter | Package pulumi_azure | Python SDK
 linktitle: securitycenter
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="securitycenter">
 <h1>securitycenter<a class="headerlink" href="#securitycenter" title="Permalink to this headline">¶</a></h1>

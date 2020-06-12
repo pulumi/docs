@@ -3,7 +3,10 @@ title: Module relay
 title_tag: Module relay | Package pulumi_azure | Python SDK
 linktitle: relay
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="relay">
 <h1>relay<a class="headerlink" href="#relay" title="Permalink to this headline">¶</a></h1>

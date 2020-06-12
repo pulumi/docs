@@ -3,7 +3,10 @@ title: Module mssql
 title_tag: Module mssql | Package pulumi_azure | Python SDK
 linktitle: mssql
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="mssql">
 <h1>mssql<a class="headerlink" href="#mssql" title="Permalink to this headline">¶</a></h1>

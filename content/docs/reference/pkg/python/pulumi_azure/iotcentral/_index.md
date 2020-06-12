@@ -3,7 +3,10 @@ title: Module iotcentral
 title_tag: Module iotcentral | Package pulumi_azure | Python SDK
 linktitle: iotcentral
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="iotcentral">
 <h1>iotcentral<a class="headerlink" href="#iotcentral" title="Permalink to this headline">¶</a></h1>

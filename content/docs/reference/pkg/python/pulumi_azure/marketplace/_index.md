@@ -3,7 +3,10 @@ title: Module marketplace
 title_tag: Module marketplace | Package pulumi_azure | Python SDK
 linktitle: marketplace
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="marketplace">
 <h1>marketplace<a class="headerlink" href="#marketplace" title="Permalink to this headline">¶</a></h1>

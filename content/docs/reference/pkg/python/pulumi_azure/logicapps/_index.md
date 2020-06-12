@@ -3,7 +3,10 @@ title: Module logicapps
 title_tag: Module logicapps | Package pulumi_azure | Python SDK
 linktitle: logicapps
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="logicapps">
 <h1>logicapps<a class="headerlink" href="#logicapps" title="Permalink to this headline">¶</a></h1>

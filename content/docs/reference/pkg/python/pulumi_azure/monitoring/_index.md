@@ -3,7 +3,10 @@ title: Module monitoring
 title_tag: Module monitoring | Package pulumi_azure | Python SDK
 linktitle: monitoring
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="monitoring">
 <h1>monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h1>

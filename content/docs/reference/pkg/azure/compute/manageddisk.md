@@ -63,7 +63,7 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             StorageAccountType = "Standard_LRS",
             CreateOption = "Empty",
-            DiskSizeGb = "1",
+            DiskSizeGb = 1,
             Tags = 
             {
                 { "environment", "staging" },
@@ -146,7 +146,7 @@ class MyStack : Stack
             ResourceGroupName = example.Name,
             StorageAccountType = "Standard_LRS",
             CreateOption = "Empty",
-            DiskSizeGb = "1",
+            DiskSizeGb = 1,
             Tags = 
             {
                 { "environment", "staging" },
@@ -159,7 +159,7 @@ class MyStack : Stack
             StorageAccountType = "Standard_LRS",
             CreateOption = "Copy",
             SourceResourceId = source.Id,
-            DiskSizeGb = "1",
+            DiskSizeGb = 1,
             Tags = 
             {
                 { "environment", "staging" },

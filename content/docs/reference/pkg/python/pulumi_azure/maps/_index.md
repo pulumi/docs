@@ -3,7 +3,10 @@ title: Module maps
 title_tag: Module maps | Package pulumi_azure | Python SDK
 linktitle: maps
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="maps">
 <h1>maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h1>
