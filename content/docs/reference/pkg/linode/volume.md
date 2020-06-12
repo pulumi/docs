@@ -93,7 +93,7 @@ const foobaz = new linode.Instance("foobaz", {
 });
 const foobar = new linode.Volume("foobar", {
     label: "foo-volume",
-    linodeId: foobaz.id,
+    linodeId: foobaz.id.apply(id => Number.parseFloat(id)),
     region: foobaz.region,
 });
 ```

@@ -3,6 +3,7 @@ title: Package pulumi_linode
 title_tag: Package pulumi_linode | Python SDK
 linktitle: pulumi_linode
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "linode" >}}

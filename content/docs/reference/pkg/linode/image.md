@@ -112,7 +112,7 @@ const bar = new linode.Image("bar", {
     description: "Image taken from foo",
     diskId: foo.disks.apply(disks => disks[0].id),
     label: "foo-sda-image",
-    linodeId: foo.id,
+    linodeId: foo.id.apply(id => Number.parseFloat(id)),
 });
 const barBased = new linode.Instance("bar_based", {
     image: bar.id,
