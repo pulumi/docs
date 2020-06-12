@@ -114,8 +114,8 @@ class MyStack : Stack
                             Name = "http",
                             Ports = 
                             {
-                                80,
-                                8080,
+                                "80",
+                                "8080",
                             },
                         },
                     },
@@ -1817,8 +1817,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcelimits_python">
-<a href="#resourcelimits_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
+        <span id="resource_limits_python">
+<a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Dict[Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits]</a></span>

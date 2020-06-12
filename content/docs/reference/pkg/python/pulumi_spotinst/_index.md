@@ -3,7 +3,10 @@ title: Package pulumi_spotinst
 title_tag: Package pulumi_spotinst | Python SDK
 linktitle: pulumi_spotinst
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "spotinst" >}}
 
 <div class="section" id="pulumi-spotinst">
 <h1>Pulumi SpotInst<a class="headerlink" href="#pulumi-spotinst" title="Permalink to this headline">¶</a></h1>

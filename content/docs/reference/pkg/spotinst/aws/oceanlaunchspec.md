@@ -62,6 +62,13 @@ class MyStack : Stack
                 },
             },
             OceanId = "o-123456",
+            ResourceLimits = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecResourceLimitArgs
+                {
+                    MaxInstanceCount = 4,
+                },
+            },
             RootVolumeSize = 30,
             SecurityGroups = 
             {
@@ -125,6 +132,9 @@ example = spotinst.aws.OceanLaunchSpec("example",
         "value": "fakeValue",
     }],
     ocean_id="o-123456",
+    resource_limits=[{
+        "maxInstanceCount": 4,
+    }],
     root_volume_size=30,
     security_groups=["sg-987654321"],
     subnet_ids=["subnet-1234"],
@@ -166,6 +176,9 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         value: "fakeValue",
     }],
     oceanId: "o-123456",
+    resourceLimits: [{
+        maxInstanceCount: 4,
+    }],
     rootVolumeSize: 30,
     securityGroups: ["sg-987654321"],
     subnetIds: ["subnet-1234"],
@@ -195,7 +208,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -446,6 +459,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resourcelimits_csharp">
+<a href="#resourcelimits_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="rootvolumesize_csharp">
 <a href="#rootvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Size</a>
 </span> 
@@ -593,6 +616,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Set Launch Specification name 
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcelimits_go">
+<a href="#resourcelimits_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">[]Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -746,6 +779,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="resourcelimits_nodejs">
+<a href="#resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="rootvolumesize_nodejs">
 <a href="#rootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Size</a>
 </span> 
@@ -893,6 +936,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Set Launch Specification name 
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_limits_python">
+<a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">List[Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1058,7 +1111,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1251,6 +1304,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_resourcelimits_csharp">
+<a href="#state_resourcelimits_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_rootvolumesize_csharp">
 <a href="#state_rootvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Size</a>
 </span> 
@@ -1398,6 +1461,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The ocean cluster you wish to 
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcelimits_go">
+<a href="#state_resourcelimits_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">[]Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1551,6 +1624,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_resourcelimits_nodejs">
+<a href="#state_resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_rootvolumesize_nodejs">
 <a href="#state_rootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Size</a>
 </span> 
@@ -1698,6 +1781,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The ocean cluster you wish to 
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_limits_python">
+<a href="#state_resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimit">List[Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2351,6 +2444,96 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The tag value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanlaunchspecresourcelimit">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limit</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecResourceLimit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecResourceLimit">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecResourceLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecResourceLimitOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecResourceLimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.OceanLaunchSpecResourceLimit.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxinstancecount_csharp">
+<a href="#maxinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}set a maximum number of instances per launch specification. Can be null. If set, value must be greater than or equal to 0.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxinstancecount_go">
+<a href="#maxinstancecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}set a maximum number of instances per launch specification. Can be null. If set, value must be greater than or equal to 0.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxinstancecount_nodejs">
+<a href="#maxinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}set a maximum number of instances per launch specification. Can be null. If set, value must be greater than or equal to 0.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxinstancecount_python">
+<a href="#maxinstancecount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}set a maximum number of instances per launch specification. Can be null. If set, value must be greater than or equal to 0.
 {{% /md %}}</dd>
 
 </dl>
