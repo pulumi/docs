@@ -3,7 +3,10 @@ title: Module compute
 title_tag: Module compute | Package pulumi_openstack | Python SDK
 linktitle: compute
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="compute">
 <h1>compute<a class="headerlink" href="#compute" title="Permalink to this headline">¶</a></h1>

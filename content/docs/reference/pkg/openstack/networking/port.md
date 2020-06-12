@@ -37,11 +37,11 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             NetworkId = network1.Id,
         });
     }
@@ -93,11 +93,11 @@ class MyStack : Stack
     {
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
             Binding = new OpenStack.Networking.Inputs.PortBindingArgs
             {
                 HostId = "b080b9cf-46e0-4ce8-ad47-0fd4accc872b",

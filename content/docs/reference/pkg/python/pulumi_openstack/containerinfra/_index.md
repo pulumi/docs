@@ -3,7 +3,10 @@ title: Module containerinfra
 title_tag: Module containerinfra | Package pulumi_openstack | Python SDK
 linktitle: containerinfra
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="containerinfra">
 <h1>containerinfra<a class="headerlink" href="#containerinfra" title="Permalink to this headline">¶</a></h1>

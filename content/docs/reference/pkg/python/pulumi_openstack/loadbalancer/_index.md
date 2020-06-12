@@ -3,7 +3,10 @@ title: Module loadbalancer
 title_tag: Module loadbalancer | Package pulumi_openstack | Python SDK
 linktitle: loadbalancer
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="loadbalancer">
 <h1>loadbalancer<a class="headerlink" href="#loadbalancer" title="Permalink to this headline">¶</a></h1>
@@ -1267,11 +1270,11 @@ loadbalancer.Member resource.</p>
     <span class="n">members</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.23&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;protocolPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+            <span class="s2">&quot;protocol_port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.24&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;protocolPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+            <span class="s2">&quot;protocol_port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">pool_id</span><span class="o">=</span><span class="s2">&quot;935685fb-a896-40f9-9ff4-ae531a3a00fe&quot;</span><span class="p">)</span>

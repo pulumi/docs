@@ -33,7 +33,7 @@ class MyStack : Stack
             Action = "deny",
             Description = "drop TELNET traffic",
             DestinationPort = "23",
-            Enabled = "true",
+            Enabled = true,
             Protocol = "tcp",
         });
     }

@@ -3,7 +3,10 @@ title: Module networking
 title_tag: Module networking | Package pulumi_openstack | Python SDK
 linktitle: networking
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="networking">
 <h1>networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h1>
@@ -1330,8 +1333,8 @@ described below.</p>
 <span class="n">port1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Port</span><span class="p">(</span><span class="s2">&quot;port1&quot;</span><span class="p">,</span>
     <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
     <span class="n">fixed_ips</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;ipAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.10&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;ip_address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.10&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">network_id</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="n">secgroup1</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
@@ -5029,8 +5032,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
     <span class="n">port_id</span><span class="o">=</span><span class="n">parent_port1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">sub_ports</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;portId&quot;</span><span class="p">:</span> <span class="n">subport1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;segmentationId&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;port_id&quot;</span><span class="p">:</span> <span class="n">subport1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;segmentation_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;segmentationType&quot;</span><span class="p">:</span> <span class="s2">&quot;vlan&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span>

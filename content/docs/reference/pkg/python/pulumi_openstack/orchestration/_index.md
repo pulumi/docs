@@ -3,7 +3,10 @@ title: Module orchestration
 title_tag: Module orchestration | Package pulumi_openstack | Python SDK
 linktitle: orchestration
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "openstack" >}}
 
 <div class="section" id="orchestration">
 <h1>orchestration<a class="headerlink" href="#orchestration" title="Permalink to this headline">¶</a></h1>

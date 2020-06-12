@@ -30,14 +30,14 @@ class MyStack : Stack
     {
         var test_flavor = new OpenStack.Compute.Flavor("test-flavor", new OpenStack.Compute.FlavorArgs
         {
-            Disk = "20",
+            Disk = 20,
             ExtraSpecs = 
             {
                 { "hw:cpu_policy", "CPU-POLICY" },
                 { "hw:cpu_thread_policy", "CPU-THREAD-POLICY" },
             },
-            Ram = "8096",
-            Vcpus = "2",
+            Ram = 8096,
+            Vcpus = 2,
         });
     }
 

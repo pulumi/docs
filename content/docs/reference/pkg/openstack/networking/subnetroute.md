@@ -30,11 +30,11 @@ class MyStack : Stack
     {
         var router1 = new OpenStack.Networking.Router("router1", new OpenStack.Networking.RouterArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
         {
-            AdminStateUp = "true",
+            AdminStateUp = true,
         });
         var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
         {
