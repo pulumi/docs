@@ -3,7 +3,10 @@ title: Module mysql
 title_tag: Module mysql | Package pulumi_azure | Python SDK
 linktitle: mysql
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="mysql">
 <h1>mysql<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h1>

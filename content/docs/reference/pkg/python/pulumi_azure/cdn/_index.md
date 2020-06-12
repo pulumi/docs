@@ -3,7 +3,10 @@ title: Module cdn
 title_tag: Module cdn | Package pulumi_azure | Python SDK
 linktitle: cdn
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="cdn">
 <h1>cdn<a class="headerlink" href="#cdn" title="Permalink to this headline">¶</a></h1>

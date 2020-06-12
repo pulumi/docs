@@ -3,7 +3,10 @@ title: Module advisor
 title_tag: Module advisor | Package pulumi_azure | Python SDK
 linktitle: advisor
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="advisor">
 <h1>advisor<a class="headerlink" href="#advisor" title="Permalink to this headline">¶</a></h1>

@@ -43,7 +43,7 @@ class MyStack : Stack
             ResourceGroupName = exampleAccount.Apply(exampleAccount => exampleAccount.ResourceGroupName),
             AccountName = exampleAccount.Apply(exampleAccount => exampleAccount.Name),
             DatabaseName = exampleMongoDatabase.Name,
-            DefaultTtlSeconds = "777",
+            DefaultTtlSeconds = 777,
             ShardKey = "uniqueKey",
             Throughput = 400,
         });

@@ -3,7 +3,10 @@ title: Module privatelink
 title_tag: Module privatelink | Package pulumi_azure | Python SDK
 linktitle: privatelink
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="privatelink">
 <h1>privatelink<a class="headerlink" href="#privatelink" title="Permalink to this headline">¶</a></h1>

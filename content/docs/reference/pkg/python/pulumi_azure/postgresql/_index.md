@@ -3,7 +3,10 @@ title: Module postgresql
 title_tag: Module postgresql | Package pulumi_azure | Python SDK
 linktitle: postgresql
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="postgresql">
 <h1>postgresql<a class="headerlink" href="#postgresql" title="Permalink to this headline">¶</a></h1>

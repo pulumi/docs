@@ -3,7 +3,10 @@ title: Module authorization
 title_tag: Module authorization | Package pulumi_azure | Python SDK
 linktitle: authorization
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="authorization">
 <h1>authorization<a class="headerlink" href="#authorization" title="Permalink to this headline">¶</a></h1>

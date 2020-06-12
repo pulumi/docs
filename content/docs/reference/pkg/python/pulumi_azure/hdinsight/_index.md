@@ -3,7 +3,10 @@ title: Module hdinsight
 title_tag: Module hdinsight | Package pulumi_azure | Python SDK
 linktitle: hdinsight
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="hdinsight">
 <h1>hdinsight<a class="headerlink" href="#hdinsight" title="Permalink to this headline">¶</a></h1>

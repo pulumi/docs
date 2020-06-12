@@ -3,7 +3,10 @@ title: Module devspace
 title_tag: Module devspace | Package pulumi_azure | Python SDK
 linktitle: devspace
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="devspace">
 <h1>devspace<a class="headerlink" href="#devspace" title="Permalink to this headline">¶</a></h1>

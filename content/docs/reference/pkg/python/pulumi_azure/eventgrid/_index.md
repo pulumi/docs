@@ -3,7 +3,10 @@ title: Module eventgrid
 title_tag: Module eventgrid | Package pulumi_azure | Python SDK
 linktitle: eventgrid
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="eventgrid">
 <h1>eventgrid<a class="headerlink" href="#eventgrid" title="Permalink to this headline">¶</a></h1>

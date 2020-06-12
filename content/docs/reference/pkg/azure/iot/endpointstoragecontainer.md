@@ -53,7 +53,7 @@ class MyStack : Stack
             Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
             {
                 Name = "S1",
-                Capacity = "1",
+                Capacity = 1,
             },
         });
         var exampleEndpointStorageContainer = new Azure.Iot.EndpointStorageContainer("exampleEndpointStorageContainer", new Azure.Iot.EndpointStorageContainerArgs

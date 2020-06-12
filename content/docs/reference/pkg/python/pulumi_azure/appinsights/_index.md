@@ -3,7 +3,10 @@ title: Module appinsights
 title_tag: Module appinsights | Package pulumi_azure | Python SDK
 linktitle: appinsights
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="appinsights">
 <h1>appinsights<a class="headerlink" href="#appinsights" title="Permalink to this headline">¶</a></h1>

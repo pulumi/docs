@@ -3,7 +3,10 @@ title: Module apimanagement
 title_tag: Module apimanagement | Package pulumi_azure | Python SDK
 linktitle: apimanagement
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="apimanagement">
 <h1>apimanagement<a class="headerlink" href="#apimanagement" title="Permalink to this headline">¶</a></h1>

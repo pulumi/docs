@@ -3,7 +3,10 @@ title: Module eventhub
 title_tag: Module eventhub | Package pulumi_azure | Python SDK
 linktitle: eventhub
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="eventhub">
 <h1>eventhub<a class="headerlink" href="#eventhub" title="Permalink to this headline">¶</a></h1>

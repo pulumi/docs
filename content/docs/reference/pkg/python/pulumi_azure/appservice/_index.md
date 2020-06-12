@@ -3,7 +3,10 @@ title: Module appservice
 title_tag: Module appservice | Package pulumi_azure | Python SDK
 linktitle: appservice
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="appservice">
 <h1>appservice<a class="headerlink" href="#appservice" title="Permalink to this headline">¶</a></h1>

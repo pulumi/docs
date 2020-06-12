@@ -27,7 +27,7 @@ Manages an EventGrid Event Subscription
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#EventSubscription">EventSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advanced_filter=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#EventSubscription">EventSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advanced_filter=None<span class="p">, </span>azure_function_endpoint=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -219,6 +219,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azurefunctionendpoint_csharp">
+<a href="#azurefunctionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -439,6 +450,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="azurefunctionendpoint_go">
+<a href="#azurefunctionendpoint_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventdeliveryschema_go">
 <a href="#eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span> 
@@ -655,6 +677,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="azurefunctionendpoint_nodejs">
+<a href="#azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventdeliveryschema_nodejs">
 <a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span> 
@@ -867,6 +900,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Dict[Event<wbr>Subscription<wbr>Advanced<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azure_function_endpoint_python">
+<a href="#azure_function_endpoint_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Dict[Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint]</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1154,7 +1198,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>advanced_filter=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>advanced_filter=None<span class="p">, </span>azure_function_endpoint=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1277,6 +1321,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azurefunctionendpoint_csharp">
+<a href="#state_azurefunctionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1497,6 +1552,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_azurefunctionendpoint_go">
+<a href="#state_azurefunctionendpoint_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_eventdeliveryschema_go">
 <a href="#state_eventdeliveryschema_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Schema</a>
 </span> 
@@ -1713,6 +1779,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_azurefunctionendpoint_nodejs">
+<a href="#state_azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_eventdeliveryschema_nodejs">
 <a href="#state_eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span> 
@@ -1925,6 +2002,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Dict[Event<wbr>Subscription<wbr>Advanced<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azure_function_endpoint_python">
+<a href="#state_azure_function_endpoint_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Dict[Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint]</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4322,6 +4410,184 @@ The following state arguments are supported:
 
 
 
+<h4 id="eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionAzureFunctionEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionAzureFunctionEndpoint">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAzureFunctionEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventSubscriptionAzureFunctionEndpointOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventSubscriptionAzureFunctionEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventSubscriptionAzureFunctionEndpoint.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="functionid_csharp">
+<a href="#functionid_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_csharp">
+<a href="#maxeventsperbatch_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_csharp">
+<a href="#preferredbatchsizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="functionid_go">
+<a href="#functionid_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_go">
+<a href="#maxeventsperbatch_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_go">
+<a href="#preferredbatchsizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="functionid_nodejs">
+<a href="#functionid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_nodejs">
+<a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_nodejs">
+<a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="functionid_python">
+<a href="#functionid_python" style="color: inherit; text-decoration: inherit;">function<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_python">
+<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_python">
+<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionEventhubEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionEventhubEndpoint">output</a> API doc for this type.
@@ -5111,6 +5377,61 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryappidoruri_csharp">
+<a href="#activedirectoryappidoruri_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>App<wbr>Id<wbr>Or<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorytenantid_csharp">
+<a href="#activedirectorytenantid_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="baseurl_csharp">
+<a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_csharp">
+<a href="#maxeventsperbatch_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_csharp">
+<a href="#preferredbatchsizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -5127,6 +5448,61 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryappidoruri_go">
+<a href="#activedirectoryappidoruri_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>App<wbr>Id<wbr>Or<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorytenantid_go">
+<a href="#activedirectorytenantid_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="baseurl_go">
+<a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_go">
+<a href="#maxeventsperbatch_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_go">
+<a href="#preferredbatchsizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.
 {{% /md %}}</dd>
 
 </dl>
@@ -5147,6 +5523,61 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryappidoruri_nodejs">
+<a href="#activedirectoryappidoruri_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>App<wbr>Id<wbr>Or<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorytenantid_nodejs">
+<a href="#activedirectorytenantid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="baseurl_nodejs">
+<a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_nodejs">
+<a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_nodejs">
+<a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -5163,6 +5594,61 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryappidoruri_python">
+<a href="#activedirectoryappidoruri_python" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>App<wbr>Id<wbr>Or<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorytenantid_python">
+<a href="#activedirectorytenantid_python" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="baseurl_python">
+<a href="#baseurl_python" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_python">
+<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_python">
+<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.
 {{% /md %}}</dd>
 
 </dl>

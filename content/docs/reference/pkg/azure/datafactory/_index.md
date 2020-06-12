@@ -17,6 +17,7 @@ Explore the resources and functions of the datafactory module in the Azure packa
     <li><a href="factory" title="Factory"><span class="symbol resource"></span>Factory</a></li>
     <li><a href="integrationruntimemanaged" title="IntegrationRuntimeManaged"><span class="symbol resource"></span>IntegrationRuntimeManaged</a></li>
     <li><a href="linkedservicedatalakestoragegen2" title="LinkedServiceDataLakeStorageGen2"><span class="symbol resource"></span>LinkedServiceDataLakeStorageGen2</a></li>
+    <li><a href="linkedservicekeyvault" title="LinkedServiceKeyVault"><span class="symbol resource"></span>LinkedServiceKeyVault</a></li>
     <li><a href="linkedservicemysql" title="LinkedServiceMysql"><span class="symbol resource"></span>LinkedServiceMysql</a></li>
     <li><a href="linkedservicepostgresql" title="LinkedServicePostgresql"><span class="symbol resource"></span>LinkedServicePostgresql</a></li>
     <li><a href="linkedservicesqlserver" title="LinkedServiceSqlServer"><span class="symbol resource"></span>LinkedServiceSqlServer</a></li>
@@ -38,7 +39,7 @@ Explore the resources and functions of the datafactory module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.8.0</dd>
+	<dd>3.9.0</dd>
 </dl>
 
 

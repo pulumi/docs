@@ -3,7 +3,10 @@ title: Module role
 title_tag: Module role | Package pulumi_azure | Python SDK
 linktitle: role
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="role">
 <h1>role<a class="headerlink" href="#role" title="Permalink to this headline">¶</a></h1>

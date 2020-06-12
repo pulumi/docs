@@ -3,7 +3,10 @@ title: Module datashare
 title_tag: Module datashare | Package pulumi_azure | Python SDK
 linktitle: datashare
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="datashare">
 <h1>datashare<a class="headerlink" href="#datashare" title="Permalink to this headline">¶</a></h1>

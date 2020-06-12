@@ -3,7 +3,10 @@ title: Module keyvault
 title_tag: Module keyvault | Package pulumi_azure | Python SDK
 linktitle: keyvault
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="keyvault">
 <h1>keyvault<a class="headerlink" href="#keyvault" title="Permalink to this headline">¶</a></h1>

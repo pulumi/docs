@@ -3,7 +3,10 @@ title: Module siterecovery
 title_tag: Module siterecovery | Package pulumi_azure | Python SDK
 linktitle: siterecovery
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="siterecovery">
 <h1>siterecovery<a class="headerlink" href="#siterecovery" title="Permalink to this headline">¶</a></h1>

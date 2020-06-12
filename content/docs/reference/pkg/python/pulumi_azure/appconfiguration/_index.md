@@ -3,7 +3,10 @@ title: Module appconfiguration
 title_tag: Module appconfiguration | Package pulumi_azure | Python SDK
 linktitle: appconfiguration
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="appconfiguration">
 <h1>appconfiguration<a class="headerlink" href="#appconfiguration" title="Permalink to this headline">¶</a></h1>

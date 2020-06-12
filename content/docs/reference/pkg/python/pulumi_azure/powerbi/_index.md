@@ -3,7 +3,10 @@ title: Module powerbi
 title_tag: Module powerbi | Package pulumi_azure | Python SDK
 linktitle: powerbi
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="powerbi">
 <h1>powerbi<a class="headerlink" href="#powerbi" title="Permalink to this headline">¶</a></h1>

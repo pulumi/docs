@@ -3,7 +3,10 @@ title: Module frontdoor
 title_tag: Module frontdoor | Package pulumi_azure | Python SDK
 linktitle: frontdoor
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="frontdoor">
 <h1>frontdoor<a class="headerlink" href="#frontdoor" title="Permalink to this headline">¶</a></h1>

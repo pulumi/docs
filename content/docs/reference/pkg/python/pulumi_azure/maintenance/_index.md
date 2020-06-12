@@ -3,7 +3,10 @@ title: Module maintenance
 title_tag: Module maintenance | Package pulumi_azure | Python SDK
 linktitle: maintenance
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="maintenance">
 <h1>maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module batch
 title_tag: Module batch | Package pulumi_azure | Python SDK
 linktitle: batch
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="batch">
 <h1>batch<a class="headerlink" href="#batch" title="Permalink to this headline">¶</a></h1>

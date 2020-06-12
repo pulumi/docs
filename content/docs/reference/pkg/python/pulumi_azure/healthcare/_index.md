@@ -3,7 +3,10 @@ title: Module healthcare
 title_tag: Module healthcare | Package pulumi_azure | Python SDK
 linktitle: healthcare
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="healthcare">
 <h1>healthcare<a class="headerlink" href="#healthcare" title="Permalink to this headline">¶</a></h1>

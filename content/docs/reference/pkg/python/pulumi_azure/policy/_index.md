@@ -3,7 +3,10 @@ title: Module policy
 title_tag: Module policy | Package pulumi_azure | Python SDK
 linktitle: policy
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="policy">
 <h1>policy<a class="headerlink" href="#policy" title="Permalink to this headline">¶</a></h1>

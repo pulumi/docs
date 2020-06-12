@@ -3,7 +3,10 @@ title: Module loganalytics
 title_tag: Module loganalytics | Package pulumi_azure | Python SDK
 linktitle: loganalytics
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="loganalytics">
 <h1>loganalytics<a class="headerlink" href="#loganalytics" title="Permalink to this headline">¶</a></h1>

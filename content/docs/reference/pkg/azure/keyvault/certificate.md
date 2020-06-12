@@ -1460,7 +1460,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `x509_certificate_properties` block as defined below.
+    <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -1522,7 +1522,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}A `x509_certificate_properties` block as defined below.
+    <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -1584,7 +1584,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}A `x509_certificate_properties` block as defined below.
+    <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -1607,8 +1607,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyproperties_python">
-<a href="#keyproperties_python" style="color: inherit; text-decoration: inherit;">key<wbr>Properties</a>
+        <span id="key_properties_python">
+<a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties]</a></span>
@@ -1646,7 +1646,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Dict[Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties]</a></span>
     </dt>
-    <dd>{{% md %}}A `x509_certificate_properties` block as defined below.
+    <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd>
 
 </dl>

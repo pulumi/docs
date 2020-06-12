@@ -3,7 +3,10 @@ title: Module redis
 title_tag: Module redis | Package pulumi_azure | Python SDK
 linktitle: redis
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="redis">
 <h1>redis<a class="headerlink" href="#redis" title="Permalink to this headline">¶</a></h1>

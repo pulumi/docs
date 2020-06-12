@@ -3,7 +3,10 @@ title: Module analysisservices
 title_tag: Module analysisservices | Package pulumi_azure | Python SDK
 linktitle: analysisservices
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="analysisservices">
 <h1>analysisservices<a class="headerlink" href="#analysisservices" title="Permalink to this headline">¶</a></h1>

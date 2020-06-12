@@ -3,7 +3,10 @@ title: Module cosmosdb
 title_tag: Module cosmosdb | Package pulumi_azure | Python SDK
 linktitle: cosmosdb
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="cosmosdb">
 <h1>cosmosdb<a class="headerlink" href="#cosmosdb" title="Permalink to this headline">¶</a></h1>

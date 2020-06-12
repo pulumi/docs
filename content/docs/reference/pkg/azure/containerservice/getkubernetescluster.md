@@ -79,7 +79,7 @@ const example = pulumi.output(azure.containerservice.getKubernetesCluster({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kubernetes_cluster(</span>name=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kubernetes_cluster(</span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -128,27 +128,6 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="privateclusterenabled_csharp">
-<a href="#privateclusterenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="privatelinkenabled_csharp">
-<a href="#privatelinkenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -177,27 +156,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="privateclusterenabled_go">
-<a href="#privateclusterenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="privatelinkenabled_go">
-<a href="#privatelinkenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -228,27 +186,6 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="privateclusterenabled_nodejs">
-<a href="#privateclusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="privatelinkenabled_nodejs">
-<a href="#privatelinkenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -277,27 +214,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="private_cluster_enabled_python">
-<a href="#private_cluster_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="private_link_enabled_python">
-<a href="#private_link_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>enabled</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -350,6 +266,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="diskencryptionsetid_csharp">
+<a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set used for the Nodes and Volumes.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -448,7 +375,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as documented below.  
+    <dd>{{% md %}}A `kubelet_identity` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -645,6 +572,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="diskencryptionsetid_go">
+<a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set used for the Nodes and Volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
 </span> 
@@ -739,7 +677,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as documented below.  
+    <dd>{{% md %}}A `kubelet_identity` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -936,6 +874,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="diskencryptionsetid_nodejs">
+<a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set used for the Nodes and Volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
 </span> 
@@ -1030,7 +979,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as documented below.  
+    <dd>{{% md %}}A `kubelet_identity` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1227,6 +1176,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="disk_encryption_set_id_python">
+<a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set used for the Nodes and Volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
 </span> 
@@ -1321,7 +1281,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as documented below.  
+    <dd>{{% md %}}A `kubelet_identity` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2434,6 +2394,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="enablenodepublicip_csharp">
+<a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="maxcount_csharp">
 <a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
 </span> 
@@ -2485,6 +2455,28 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodetaints_csharp">
+<a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="orchestratorversion_csharp">
+<a href="#orchestratorversion_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kubernetes version used for the Agents.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2552,27 +2544,6 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablenodepublicip_csharp">
-<a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="nodetaints_csharp">
-<a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2612,6 +2583,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablenodepublicip_go">
+<a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2666,6 +2647,28 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodetaints_go">
+<a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="orchestratorversion_go">
+<a href="#orchestratorversion_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kubernetes version used for the Agents.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2733,27 +2736,6 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablenodepublicip_go">
-<a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="nodetaints_go">
-<a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2793,6 +2775,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablenodepublicip_nodejs">
+<a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2847,6 +2839,28 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodetaints_nodejs">
+<a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="orchestratorversion_nodejs">
+<a href="#orchestratorversion_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kubernetes version used for the Agents.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2914,27 +2928,6 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enablenodepublicip_nodejs">
-<a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="nodetaints_nodejs">
-<a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2974,6 +2967,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_node_public_ip_python">
+<a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3028,6 +3031,28 @@ The following output properties are available:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="node_taints_python">
+<a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="orchestrator_version_python">
+<a href="#orchestrator_version_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Kubernetes version used for the Agents.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3093,27 +3118,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enable_node_public_ip_python">
-<a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="node_taints_python">
-<a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
 {{% /md %}}</dd>
 
 </dl>
@@ -4827,6 +4831,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="admingroupobjectids_csharp">
+<a href="#admingroupobjectids_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Group<wbr>Object<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="clientappid_csharp">
 <a href="#clientappid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
 </span> 
@@ -4834,6 +4849,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="managed_csharp">
+<a href="#managed_csharp" style="color: inherit; text-decoration: inherit;">Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Active Directory Integration managed (also known as AAD Integration V2)?
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4867,6 +4893,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="admingroupobjectids_go">
+<a href="#admingroupobjectids_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Group<wbr>Object<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="clientappid_go">
 <a href="#clientappid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
 </span> 
@@ -4874,6 +4911,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="managed_go">
+<a href="#managed_go" style="color: inherit; text-decoration: inherit;">Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Active Directory Integration managed (also known as AAD Integration V2)?
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4907,6 +4955,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="admingroupobjectids_nodejs">
+<a href="#admingroupobjectids_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Group<wbr>Object<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="clientappid_nodejs">
 <a href="#clientappid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
 </span> 
@@ -4914,6 +4973,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="managed_nodejs">
+<a href="#managed_nodejs" style="color: inherit; text-decoration: inherit;">managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Active Directory Integration managed (also known as AAD Integration V2)?
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4947,6 +5017,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="admingroupobjectids_python">
+<a href="#admingroupobjectids_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Group<wbr>Object<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="clientappid_python">
 <a href="#clientappid_python" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
 </span> 
@@ -4954,6 +5035,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="managed_python">
+<a href="#managed_python" style="color: inherit; text-decoration: inherit;">managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Active Directory Integration managed (also known as AAD Integration V2)?
 {{% /md %}}</dd>
 
     <dt class="property-required"

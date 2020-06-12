@@ -3,7 +3,10 @@ title: Module netapp
 title_tag: Module netapp | Package pulumi_azure | Python SDK
 linktitle: netapp
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="netapp">
 <h1>netapp<a class="headerlink" href="#netapp" title="Permalink to this headline">¶</a></h1>

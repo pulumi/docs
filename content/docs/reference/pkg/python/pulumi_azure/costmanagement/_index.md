@@ -3,7 +3,10 @@ title: Module costmanagement
 title_tag: Module costmanagement | Package pulumi_azure | Python SDK
 linktitle: costmanagement
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="costmanagement">
 <h1>costmanagement<a class="headerlink" href="#costmanagement" title="Permalink to this headline">¶</a></h1>

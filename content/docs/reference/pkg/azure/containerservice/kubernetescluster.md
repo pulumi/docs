@@ -26,7 +26,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#KubernetesCluster">KubernetesCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>identity=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#KubernetesCluster">KubernetesCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>auto_scaler_profile=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>disk_encryption_set_id=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>identity=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>sku_tier=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -255,6 +255,28 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autoscalerprofile_csharp">
+<a href="#autoscalerprofile_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_csharp">
+<a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablepodsecuritypolicy_csharp">
 <a href="#enablepodsecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Security<wbr>Policy</a>
 </span> 
@@ -386,6 +408,17 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skutier_csharp">
+<a href="#skutier_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for this Kubernetes Cluster. Changing this forces a new resource to be created. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -466,6 +499,28 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscalerprofile_go">
+<a href="#autoscalerprofile_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_go">
+<a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,6 +656,17 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skutier_go">
+<a href="#skutier_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for this Kubernetes Cluster. Changing this forces a new resource to be created. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -681,6 +747,28 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscalerprofile_nodejs">
+<a href="#autoscalerprofile_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaler<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_nodejs">
+<a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -816,6 +904,17 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skutier_nodejs">
+<a href="#skutier_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for this Kubernetes Cluster. Changing this forces a new resource to be created. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -896,6 +995,28 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_scaler_profile_python">
+<a href="#auto_scaler_profile_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Dict[Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile]</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_encryption_set_id_python">
+<a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,6 +1148,17 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Dict[Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_tier_python">
+<a href="#sku_tier_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for this Kubernetes Cluster. Changing this forces a new resource to be created. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1457,7 +1589,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>fqdn=None<span class="p">, </span>identity=None<span class="p">, </span>kube_admin_config_raw=None<span class="p">, </span>kube_admin_configs=None<span class="p">, </span>kube_config_raw=None<span class="p">, </span>kube_configs=None<span class="p">, </span>kubelet_identities=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_fqdn=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>auto_scaler_profile=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>disk_encryption_set_id=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>fqdn=None<span class="p">, </span>identity=None<span class="p">, </span>kube_admin_config_raw=None<span class="p">, </span>kube_admin_configs=None<span class="p">, </span>kube_config_raw=None<span class="p">, </span>kube_configs=None<span class="p">, </span>kubelet_identities=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_fqdn=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>sku_tier=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1595,6 +1727,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_autoscalerprofile_csharp">
+<a href="#state_autoscalerprofile_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultnodepool_csharp">
 <a href="#state_defaultnodepool_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
 </span> 
@@ -1602,6 +1745,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_diskencryptionsetid_csharp">
+<a href="#state_diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1836,6 +1990,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skutier_csharp">
+<a href="#state_skutier_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for this Kubernetes Cluster. Changing this forces a new resource to be created. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -1887,6 +2052,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_autoscalerprofile_go">
+<a href="#state_autoscalerprofile_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultnodepool_go">
 <a href="#state_defaultnodepool_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
 </span> 
@@ -1894,6 +2070,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_diskencryptionsetid_go">
+<a href="#state_diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2128,6 +2315,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skutier_go">
+<a href="#state_skutier_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for this Kubernetes Cluster. Changing this forces a new resource to be created. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -2179,6 +2377,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_autoscalerprofile_nodejs">
+<a href="#state_autoscalerprofile_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaler<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultnodepool_nodejs">
 <a href="#state_defaultnodepool_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Node<wbr>Pool</a>
 </span> 
@@ -2186,6 +2395,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_diskencryptionsetid_nodejs">
+<a href="#state_diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2420,6 +2640,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skutier_nodejs">
+<a href="#state_skutier_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for this Kubernetes Cluster. Changing this forces a new resource to be created. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -2471,6 +2702,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_auto_scaler_profile_python">
+<a href="#state_auto_scaler_profile_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Dict[Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile]</a></span>
+    </dt>
+    <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_default_node_pool_python">
 <a href="#state_default_node_pool_python" style="color: inherit; text-decoration: inherit;">default_<wbr>node_<wbr>pool</a>
 </span> 
@@ -2478,6 +2720,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Dict[Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool]</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_disk_encryption_set_id_python">
+<a href="#state_disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2708,6 +2961,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Dict[Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sku_tier_python">
+<a href="#state_sku_tier_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for this Kubernetes Cluster. Changing this forces a new resource to be created. Possible values are `Free` and `Paid` (which includes the Uptime SLA). Defaults to `Free`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3817,6 +4081,448 @@ The following state arguments are supported:
 
 
 
+<h4 id="kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAutoScalerProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAutoScalerProfile">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#KubernetesClusterAutoScalerProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#KubernetesClusterAutoScalerProfileOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Inputs.KubernetesClusterAutoScalerProfileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.KubernetesClusterAutoScalerProfile.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="balancesimilarnodegroups_csharp">
+<a href="#balancesimilarnodegroups_csharp" style="color: inherit; text-decoration: inherit;">Balance<wbr>Similar<wbr>Node<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxgracefulterminationsec_csharp">
+<a href="#maxgracefulterminationsec_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafteradd_csharp">
+<a href="#scaledowndelayafteradd_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after the scale up of AKS nodes the scale down evaluation resumes. Defaults to `10m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafterdelete_csharp">
+<a href="#scaledowndelayafterdelete_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Delete</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after node deletion that scale down evaluation resumes. Defaults to the value used for `scan_interval`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafterfailure_csharp">
+<a href="#scaledowndelayafterfailure_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Failure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after scale down failure that scale down evaluation resumes. Defaults to `3m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownunneeded_csharp">
+<a href="#scaledownunneeded_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Unneeded</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long a node should be unneeded before it is eligible for scale down. Defaults to `10m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownunready_csharp">
+<a href="#scaledownunready_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Unready</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long an unready node should be unneeded before it is eligible for scale down. Defaults to `20m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownutilizationthreshold_csharp">
+<a href="#scaledownutilizationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Utilization<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Node utilization level, defined as sum of requested resources divided by capacity, below which a node can be considered for scale down. Defaults to `0.5`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaninterval_csharp">
+<a href="#scaninterval_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How often the AKS Cluster should be re-evaluated for scale up/down. Defaults to `10s`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="balancesimilarnodegroups_go">
+<a href="#balancesimilarnodegroups_go" style="color: inherit; text-decoration: inherit;">Balance<wbr>Similar<wbr>Node<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxgracefulterminationsec_go">
+<a href="#maxgracefulterminationsec_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafteradd_go">
+<a href="#scaledowndelayafteradd_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after the scale up of AKS nodes the scale down evaluation resumes. Defaults to `10m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafterdelete_go">
+<a href="#scaledowndelayafterdelete_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Delete</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after node deletion that scale down evaluation resumes. Defaults to the value used for `scan_interval`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafterfailure_go">
+<a href="#scaledowndelayafterfailure_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Failure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after scale down failure that scale down evaluation resumes. Defaults to `3m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownunneeded_go">
+<a href="#scaledownunneeded_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Unneeded</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long a node should be unneeded before it is eligible for scale down. Defaults to `10m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownunready_go">
+<a href="#scaledownunready_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Unready</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long an unready node should be unneeded before it is eligible for scale down. Defaults to `20m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownutilizationthreshold_go">
+<a href="#scaledownutilizationthreshold_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Utilization<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Node utilization level, defined as sum of requested resources divided by capacity, below which a node can be considered for scale down. Defaults to `0.5`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaninterval_go">
+<a href="#scaninterval_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How often the AKS Cluster should be re-evaluated for scale up/down. Defaults to `10s`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="balancesimilarnodegroups_nodejs">
+<a href="#balancesimilarnodegroups_nodejs" style="color: inherit; text-decoration: inherit;">balance<wbr>Similar<wbr>Node<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxgracefulterminationsec_nodejs">
+<a href="#maxgracefulterminationsec_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafteradd_nodejs">
+<a href="#scaledowndelayafteradd_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after the scale up of AKS nodes the scale down evaluation resumes. Defaults to `10m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafterdelete_nodejs">
+<a href="#scaledowndelayafterdelete_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Delete</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after node deletion that scale down evaluation resumes. Defaults to the value used for `scan_interval`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafterfailure_nodejs">
+<a href="#scaledowndelayafterfailure_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Failure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long after scale down failure that scale down evaluation resumes. Defaults to `3m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownunneeded_nodejs">
+<a href="#scaledownunneeded_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Unneeded</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long a node should be unneeded before it is eligible for scale down. Defaults to `10m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownunready_nodejs">
+<a href="#scaledownunready_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Unready</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How long an unready node should be unneeded before it is eligible for scale down. Defaults to `20m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownutilizationthreshold_nodejs">
+<a href="#scaledownutilizationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Utilization<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Node utilization level, defined as sum of requested resources divided by capacity, below which a node can be considered for scale down. Defaults to `0.5`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaninterval_nodejs">
+<a href="#scaninterval_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How often the AKS Cluster should be re-evaluated for scale up/down. Defaults to `10s`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="balancesimilarnodegroups_python">
+<a href="#balancesimilarnodegroups_python" style="color: inherit; text-decoration: inherit;">balance<wbr>Similar<wbr>Node<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxgracefulterminationsec_python">
+<a href="#maxgracefulterminationsec_python" style="color: inherit; text-decoration: inherit;">max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafteradd_python">
+<a href="#scaledowndelayafteradd_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How long after the scale up of AKS nodes the scale down evaluation resumes. Defaults to `10m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafterdelete_python">
+<a href="#scaledowndelayafterdelete_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Delete</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How long after node deletion that scale down evaluation resumes. Defaults to the value used for `scan_interval`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledowndelayafterfailure_python">
+<a href="#scaledowndelayafterfailure_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Failure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How long after scale down failure that scale down evaluation resumes. Defaults to `3m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownunneeded_python">
+<a href="#scaledownunneeded_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Unneeded</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How long a node should be unneeded before it is eligible for scale down. Defaults to `10m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownunready_python">
+<a href="#scaledownunready_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Unready</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How long an unready node should be unneeded before it is eligible for scale down. Defaults to `20m`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaledownutilizationthreshold_python">
+<a href="#scaledownutilizationthreshold_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Utilization<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Node utilization level, defined as sum of requested resources divided by capacity, below which a node can be considered for scale down. Defaults to `0.5`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaninterval_python">
+<a href="#scaninterval_python" style="color: inherit; text-decoration: inherit;">scan<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How often the AKS Cluster should be re-evaluated for scale up/down. Defaults to `10s`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterDefaultNodePool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterDefaultNodePool">output</a> API doc for this type.
@@ -3942,7 +4648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool.
+    <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3953,7 +4659,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`).
+    <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="orchestratorversion_csharp">
+<a href="#orchestratorversion_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4114,7 +4831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool.
+    <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4125,7 +4842,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`).
+    <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="orchestratorversion_go">
+<a href="#orchestratorversion_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4286,7 +5014,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool.
+    <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4297,7 +5025,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`).
+    <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="orchestratorversion_nodejs">
+<a href="#orchestratorversion_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4458,7 +5197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool.
+    <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4469,7 +5208,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`).
+    <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="orchestrator_version_python">
+<a href="#orchestrator_version_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6196,13 +6946,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idletimeoutinminutes_csharp">
+<a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between `4` and `120` inclusive. Defaults to `30`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedoutboundipcount_csharp">
 <a href="#managedoutboundipcount_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Count of desired managed outbound IPs for the cluster load balancer. Must be in the range of [1, 100].
+    <dd>{{% md %}}Count of desired managed outbound IPs for the cluster load balancer. Must be between `1` and `100` inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6227,6 +6988,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outboundportsallocated_csharp">
+<a href="#outboundportsallocated_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ports<wbr>Allocated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of desired SNAT port for each VM in the clusters load balancer. Must be between `0` and `64000` inclusive. Defaults to `0`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6247,13 +7019,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idletimeoutinminutes_go">
+<a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between `4` and `120` inclusive. Defaults to `30`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedoutboundipcount_go">
 <a href="#managedoutboundipcount_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Count of desired managed outbound IPs for the cluster load balancer. Must be in the range of [1, 100].
+    <dd>{{% md %}}Count of desired managed outbound IPs for the cluster load balancer. Must be between `1` and `100` inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6278,6 +7061,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outboundportsallocated_go">
+<a href="#outboundportsallocated_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ports<wbr>Allocated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of desired SNAT port for each VM in the clusters load balancer. Must be between `0` and `64000` inclusive. Defaults to `0`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6298,13 +7092,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idletimeoutinminutes_nodejs">
+<a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between `4` and `120` inclusive. Defaults to `30`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedoutboundipcount_nodejs">
 <a href="#managedoutboundipcount_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Count of desired managed outbound IPs for the cluster load balancer. Must be in the range of [1, 100].
+    <dd>{{% md %}}Count of desired managed outbound IPs for the cluster load balancer. Must be between `1` and `100` inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6329,6 +7134,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outboundportsallocated_nodejs">
+<a href="#outboundportsallocated_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ports<wbr>Allocated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of desired SNAT port for each VM in the clusters load balancer. Must be between `0` and `64000` inclusive. Defaults to `0`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6349,13 +7165,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="idle_timeout_in_minutes_python">
+<a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between `4` and `120` inclusive. Defaults to `30`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedoutboundipcount_python">
 <a href="#managedoutboundipcount_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>Ip<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Count of desired managed outbound IPs for the cluster load balancer. Must be in the range of [1, 100].
+    <dd>{{% md %}}Count of desired managed outbound IPs for the cluster load balancer. Must be between `1` and `100` inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6378,6 +7205,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outboundportsallocated_python">
+<a href="#outboundportsallocated_python" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ports<wbr>Allocated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Number of desired SNAT port for each VM in the clusters load balancer. Must be between `0` and `64000` inclusive. Defaults to `0`.
 {{% /md %}}</dd>
 
 </dl>
@@ -6539,8 +7377,19 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="admingroupobjectids_csharp">
+<a href="#admingroupobjectids_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Group<wbr>Object<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="clientappid_csharp">
 <a href="#clientappid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
 </span> 
@@ -6550,8 +7399,19 @@ The following state arguments are supported:
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managed_csharp">
+<a href="#managed_csharp" style="color: inherit; text-decoration: inherit;">Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Active Directory integration Managed, meaning that Azure will create/manage the Service Principal used for integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="serverappid_csharp">
 <a href="#serverappid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Id</a>
 </span> 
@@ -6561,8 +7421,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="serverappsecret_csharp">
 <a href="#serverappsecret_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Secret</a>
 </span> 
@@ -6590,8 +7450,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="admingroupobjectids_go">
+<a href="#admingroupobjectids_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Group<wbr>Object<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="clientappid_go">
 <a href="#clientappid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
 </span> 
@@ -6601,8 +7472,19 @@ The following state arguments are supported:
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managed_go">
+<a href="#managed_go" style="color: inherit; text-decoration: inherit;">Managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Active Directory integration Managed, meaning that Azure will create/manage the Service Principal used for integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="serverappid_go">
 <a href="#serverappid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Id</a>
 </span> 
@@ -6612,8 +7494,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="serverappsecret_go">
 <a href="#serverappsecret_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Secret</a>
 </span> 
@@ -6641,8 +7523,19 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="admingroupobjectids_nodejs">
+<a href="#admingroupobjectids_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Group<wbr>Object<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="clientappid_nodejs">
 <a href="#clientappid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
 </span> 
@@ -6652,8 +7545,19 @@ The following state arguments are supported:
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managed_nodejs">
+<a href="#managed_nodejs" style="color: inherit; text-decoration: inherit;">managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Active Directory integration Managed, meaning that Azure will create/manage the Service Principal used for integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="serverappid_nodejs">
 <a href="#serverappid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Id</a>
 </span> 
@@ -6663,8 +7567,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="serverappsecret_nodejs">
 <a href="#serverappsecret_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Secret</a>
 </span> 
@@ -6692,8 +7596,19 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="admingroupobjectids_python">
+<a href="#admingroupobjectids_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Group<wbr>Object<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="clientappid_python">
 <a href="#clientappid_python" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
 </span> 
@@ -6703,8 +7618,19 @@ The following state arguments are supported:
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managed_python">
+<a href="#managed_python" style="color: inherit; text-decoration: inherit;">managed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the Azure Active Directory integration Managed, meaning that Azure will create/manage the Service Principal used for integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="serverappid_python">
 <a href="#serverappid_python" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Id</a>
 </span> 
@@ -6714,8 +7640,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="serverappsecret_python">
 <a href="#serverappsecret_python" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Secret</a>
 </span> 

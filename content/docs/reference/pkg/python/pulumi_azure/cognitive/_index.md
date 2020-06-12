@@ -3,7 +3,10 @@ title: Module cognitive
 title_tag: Module cognitive | Package pulumi_azure | Python SDK
 linktitle: cognitive
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="cognitive">
 <h1>cognitive<a class="headerlink" href="#cognitive" title="Permalink to this headline">¶</a></h1>

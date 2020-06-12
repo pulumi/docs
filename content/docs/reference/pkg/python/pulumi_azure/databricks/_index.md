@@ -3,7 +3,10 @@ title: Module databricks
 title_tag: Module databricks | Package pulumi_azure | Python SDK
 linktitle: databricks
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="databricks">
 <h1>databricks<a class="headerlink" href="#databricks" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module trafficmanager
 title_tag: Module trafficmanager | Package pulumi_azure | Python SDK
 linktitle: trafficmanager
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "azure" >}}
 
 <div class="section" id="trafficmanager">
 <h1>trafficmanager<a class="headerlink" href="#trafficmanager" title="Permalink to this headline">¶</a></h1>

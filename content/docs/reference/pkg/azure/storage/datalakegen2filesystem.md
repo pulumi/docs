@@ -41,7 +41,7 @@ class MyStack : Stack
             AccountTier = "Standard",
             AccountReplicationType = "LRS",
             AccountKind = "StorageV2",
-            IsHnsEnabled = "true",
+            IsHnsEnabled = true,
         });
         var exampleDataLakeGen2Filesystem = new Azure.Storage.DataLakeGen2Filesystem("exampleDataLakeGen2Filesystem", new Azure.Storage.DataLakeGen2FilesystemArgs
         {
