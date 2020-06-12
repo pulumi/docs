@@ -3,7 +3,10 @@ title: Package pulumi_rancher2
 title_tag: Package pulumi_rancher2 | Python SDK
 linktitle: pulumi_rancher2
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "rancher2" >}}
 
 <div class="section" id="pulumi-rancher2">
 <h1>Pulumi Rancher2<a class="headerlink" href="#pulumi-rancher2" title="Permalink to this headline">¶</a></h1>
