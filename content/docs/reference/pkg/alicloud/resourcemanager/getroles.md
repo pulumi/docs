@@ -14,9 +14,63 @@ This data source provides the Resource Manager Roles of the current Alibaba Clou
 
 > **NOTE:**  Available in 1.86.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(AliCloud.ResourceManager.GetRoles.InvokeAsync(new AliCloud.ResourceManager.GetRolesArgs
+        {
+            NameRegex = "tftest",
+        }));
+        this.FirstRoleId = example.Apply(example => example.Roles[0].Id);
+    }
+
+    [Output("firstRoleId")]
+    public Output<string> FirstRoleId { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.resourcemanager.get_roles(name_regex="tftest")
+pulumi.export("firstRoleId", example.roles[0]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = pulumi.output(alicloud.resourcemanager.getRoles({
+    nameRegex: "tftest",
+}, { async: true }));
+
+export const firstRoleId = example.roles[0].id;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetRoles {#using}

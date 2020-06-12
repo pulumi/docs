@@ -3,6 +3,7 @@ title: Module cas
 title_tag: Module cas | Package pulumi_alicloud | Python SDK
 linktitle: cas
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

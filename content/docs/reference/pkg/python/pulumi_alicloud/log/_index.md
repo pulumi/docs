@@ -3,6 +3,7 @@ title: Module log
 title_tag: Module log | Package pulumi_alicloud | Python SDK
 linktitle: log
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

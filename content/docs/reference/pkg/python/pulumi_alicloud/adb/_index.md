@@ -3,6 +3,7 @@ title: Module adb
 title_tag: Module adb | Package pulumi_alicloud | Python SDK
 linktitle: adb
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

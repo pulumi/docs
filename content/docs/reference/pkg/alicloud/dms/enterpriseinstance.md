@@ -47,7 +47,7 @@ class MyStack : Stack
             Port = 3306,
             QueryTimeout = 60,
             SafeRule = "自由操作",
-            Tid = "12345",
+            Tid = 12345,
         });
     }
 

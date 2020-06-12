@@ -3,6 +3,7 @@ title: Package pulumi_alicloud
 title_tag: Package pulumi_alicloud | Python SDK
 linktitle: pulumi_alicloud
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

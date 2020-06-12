@@ -3,6 +3,7 @@ title: Module marketplace
 title_tag: Module marketplace | Package pulumi_alicloud | Python SDK
 linktitle: marketplace
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

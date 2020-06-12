@@ -3,6 +3,7 @@ title: Module cloudconnect
 title_tag: Module cloudconnect | Package pulumi_alicloud | Python SDK
 linktitle: cloudconnect
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

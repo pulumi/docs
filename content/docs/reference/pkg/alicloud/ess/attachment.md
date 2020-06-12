@@ -113,7 +113,7 @@ class MyStack : Stack
                 InstanceName = name,
                 InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
                 InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = "10",
+                InternetMaxBandwidthOut = 10,
                 SecurityGroups = 
                 {
                     defaultSecurityGroup.Id,

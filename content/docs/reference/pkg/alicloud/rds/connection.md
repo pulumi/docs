@@ -53,7 +53,7 @@ class MyStack : Stack
             Engine = "MySQL",
             EngineVersion = "5.6",
             InstanceName = name,
-            InstanceStorage = "10",
+            InstanceStorage = 10,
             InstanceType = "rds.mysql.t1.small",
             VswitchId = defaultSwitch.Id,
         });

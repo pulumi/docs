@@ -3,6 +3,7 @@ title: Module alikafka
 title_tag: Module alikafka | Package pulumi_alicloud | Python SDK
 linktitle: alikafka
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

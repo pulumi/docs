@@ -3,6 +3,7 @@ title: Module dns
 title_tag: Module dns | Package pulumi_alicloud | Python SDK
 linktitle: dns
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

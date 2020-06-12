@@ -3,6 +3,7 @@ title: Module nas
 title_tag: Module nas | Package pulumi_alicloud | Python SDK
 linktitle: nas
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

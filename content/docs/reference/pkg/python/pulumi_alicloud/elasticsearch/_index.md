@@ -3,6 +3,7 @@ title: Module elasticsearch
 title_tag: Module elasticsearch | Package pulumi_alicloud | Python SDK
 linktitle: elasticsearch
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

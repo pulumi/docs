@@ -3,6 +3,7 @@ title: Module mongodb
 title_tag: Module mongodb | Package pulumi_alicloud | Python SDK
 linktitle: mongodb
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

@@ -52,11 +52,11 @@ class MyStack : Stack
         });
         var defaultInstance = new AliCloud.AliKafka.Instance("defaultInstance", new AliCloud.AliKafka.InstanceArgs
         {
-            DeployType = "5",
-            DiskSize = "500",
-            DiskType = "1",
-            IoMax = "20",
-            TopicQuota = "50",
+            DeployType = 5,
+            DiskSize = 500,
+            DiskType = 1,
+            IoMax = 20,
+            TopicQuota = 50,
             VswitchId = defaultSwitch.Id,
         });
         var defaultTopic = new AliCloud.AliKafka.Topic("defaultTopic", new AliCloud.AliKafka.TopicArgs

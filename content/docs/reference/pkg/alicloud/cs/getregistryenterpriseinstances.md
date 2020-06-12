@@ -14,9 +14,67 @@ This data source provides a list Container Registry Enterprise Edition instances
 
 > **NOTE:** Available in v1.86.0+
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myInstances = Output.Create(AliCloud.CS.GetRegistryEnterpriseInstances.InvokeAsync(new AliCloud.CS.GetRegistryEnterpriseInstancesArgs
+        {
+            NameRegex = "my-instances",
+            OutputFile = "my-instances-json",
+        }));
+        this.Output = myInstances.Apply(myInstances => myInstances.Instances);
+    }
+
+    [Output("output")]
+    public Output<string> Output { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+my_instances = alicloud.cs.get_registry_enterprise_instances(name_regex="my-instances",
+    output_file="my-instances-json")
+pulumi.export("output", my_instances.instances)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const myInstances = pulumi.output(alicloud.cs.getRegistryEnterpriseInstances({
+    nameRegex: "my-instances",
+    outputFile: "my-instances-json",
+}, { async: true }));
+
+export const output = myInstances.instances;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetRegistryEnterpriseInstances {#using}

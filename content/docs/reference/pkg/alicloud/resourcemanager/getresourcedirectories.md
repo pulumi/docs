@@ -14,9 +14,58 @@ This data source provides the Resource Manager Resource Directories of the curre
 
 > **NOTE:**  Available in 1.86.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaule = Output.Create(AliCloud.ResourceManager.GetResourceDirectories.InvokeAsync());
+        this.ResourceDirectoryId = defaule.Apply(defaule => defaule.Directories[0].Id);
+    }
+
+    [Output("resourceDirectoryId")]
+    public Output<string> ResourceDirectoryId { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+defaule = alicloud.resourcemanager.get_resource_directories()
+pulumi.export("resourceDirectoryId", defaule.directories[0]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaule = pulumi.output(alicloud.resourcemanager.getResourceDirectories({ async: true }));
+
+export const resourceDirectoryId = defaule.directories[0].id;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetResourceDirectories {#using}

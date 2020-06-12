@@ -3,6 +3,7 @@ title: Module dms
 title_tag: Module dms | Package pulumi_alicloud | Python SDK
 linktitle: dms
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

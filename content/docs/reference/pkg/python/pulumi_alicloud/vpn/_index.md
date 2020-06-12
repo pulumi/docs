@@ -3,6 +3,7 @@ title: Module vpn
 title_tag: Module vpn | Package pulumi_alicloud | Python SDK
 linktitle: vpn
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

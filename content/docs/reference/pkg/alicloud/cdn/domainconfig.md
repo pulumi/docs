@@ -42,9 +42,9 @@ class MyStack : Stack
             {
                 Content = "1.1.1.1",
                 Port = 80,
-                Priority = "20",
+                Priority = 20,
                 Type = "ipaddr",
-                Weight = "15",
+                Weight = 15,
             },
         });
         var config = new AliCloud.Cdn.DomainConfig("config", new AliCloud.Cdn.DomainConfigArgs

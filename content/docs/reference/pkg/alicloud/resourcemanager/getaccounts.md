@@ -14,9 +14,58 @@ This data source provides the Resource Manager Accounts of the current Alibaba C
 
 > **NOTE:**  Available in 1.86.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(AliCloud.ResourceManager.GetAccounts.InvokeAsync());
+        this.FirstAccountId = @default.Apply(@default => @default.Accounts[0].Id);
+    }
+
+    [Output("firstAccountId")]
+    public Output<string> FirstAccountId { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+default = alicloud.resourcemanager.get_accounts()
+pulumi.export("firstAccountId", default.accounts[0]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultAccounts = pulumi.output(alicloud.resourcemanager.getAccounts({ async: true }));
+
+export const firstAccountId = defaultAccounts.accounts[0].id;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccounts {#using}

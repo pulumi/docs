@@ -3,6 +3,7 @@ title: Module edas
 title_tag: Module edas | Package pulumi_alicloud | Python SDK
 linktitle: edas
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

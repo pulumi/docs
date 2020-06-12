@@ -14,9 +14,69 @@ This data source provides the Resource Manager Policies of the current Alibaba C
 
 > **NOTE:**  Available in 1.86.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(AliCloud.ResourceManager.GetPolicies.InvokeAsync(new AliCloud.ResourceManager.GetPoliciesArgs
+        {
+            DescriptionRegex = "tftest_policy",
+            NameRegex = "tftest",
+            PolicyType = "Custom",
+        }));
+        this.FirstPolicyId = example.Apply(example => example.Policies[0].Id);
+    }
+
+    [Output("firstPolicyId")]
+    public Output<string> FirstPolicyId { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.resourcemanager.get_policies(description_regex="tftest_policy",
+    name_regex="tftest",
+    policy_type="Custom")
+pulumi.export("firstPolicyId", example.policies[0]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = pulumi.output(alicloud.resourcemanager.getPolicies({
+    descriptionRegex: "tftest_policy",
+    nameRegex: "tftest",
+    policyType: "Custom",
+}, { async: true }));
+
+export const firstPolicyId = example.policies[0].id;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPolicies {#using}

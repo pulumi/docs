@@ -3,6 +3,7 @@ title: Module sag
 title_tag: Module sag | Package pulumi_alicloud | Python SDK
 linktitle: sag
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

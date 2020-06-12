@@ -18,9 +18,85 @@ For information about Container Registry Enterprise Edition repository and how t
 
 > **NOTE:** You need to set your registry password in Container Registry Enterprise Edition console before use this resource.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_namespace = new AliCloud.CS.RegistryEnterpriseNamespace("my-namespace", new AliCloud.CS.RegistryEnterpriseNamespaceArgs
+        {
+            AutoCreate = false,
+            DefaultVisibility = "PUBLIC",
+            InstanceId = "cri-xxx",
+        });
+        var my_repo = new AliCloud.CS.RegistryEnterpriseRepo("my-repo", new AliCloud.CS.RegistryEnterpriseRepoArgs
+        {
+            Detail = "this is a public repo",
+            InstanceId = my_namespace.InstanceId,
+            Namespace = my_namespace.Name,
+            RepoType = "PUBLIC",
+            Summary = "this is summary of my new repo",
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+my_namespace = alicloud.cs.RegistryEnterpriseNamespace("my-namespace",
+    auto_create=False,
+    default_visibility="PUBLIC",
+    instance_id="cri-xxx")
+my_repo = alicloud.cs.RegistryEnterpriseRepo("my-repo",
+    detail="this is a public repo",
+    instance_id=my_namespace.instance_id,
+    namespace=my_namespace.name,
+    repo_type="PUBLIC",
+    summary="this is summary of my new repo")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const my_namespace = new alicloud.cs.RegistryEnterpriseNamespace("my-namespace", {
+    autoCreate: false,
+    defaultVisibility: "PUBLIC",
+    instanceId: "cri-xxx",
+});
+const my_repo = new alicloud.cs.RegistryEnterpriseRepo("my-repo", {
+    detail: "this is a public repo",
+    instanceId: my_namespace.instanceId,
+    namespace: my_namespace.name,
+    repoType: "PUBLIC",
+    summary: "this is summary of my new repo",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegistryEnterpriseRepo Resource {#create}

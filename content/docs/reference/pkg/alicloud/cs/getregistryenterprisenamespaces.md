@@ -14,9 +14,70 @@ This data source provides a list Container Registry Enterprise Edition namespace
 
 > **NOTE:** Available in v1.86.0+
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myNamespaces = Output.Create(AliCloud.CS.GetRegistryEnterpriseNamespaces.InvokeAsync(new AliCloud.CS.GetRegistryEnterpriseNamespacesArgs
+        {
+            InstanceId = "cri-xxx",
+            NameRegex = "my-namespace",
+            OutputFile = "my-namespace-json",
+        }));
+        this.Output = myNamespaces.Apply(myNamespaces => myNamespaces.Namespaces);
+    }
+
+    [Output("output")]
+    public Output<string> Output { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+my_namespaces = alicloud.cs.get_registry_enterprise_namespaces(instance_id="cri-xxx",
+    name_regex="my-namespace",
+    output_file="my-namespace-json")
+pulumi.export("output", my_namespaces.namespaces)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const myNamespaces = pulumi.output(alicloud.cs.getRegistryEnterpriseNamespaces({
+    instanceId: "cri-xxx",
+    nameRegex: "my-namespace",
+    outputFile: "my-namespace-json",
+}, { async: true }));
+
+export const output = myNamespaces.namespaces;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetRegistryEnterpriseNamespaces {#using}

@@ -3,6 +3,7 @@ title: Module cdn
 title_tag: Module cdn | Package pulumi_alicloud | Python SDK
 linktitle: cdn
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

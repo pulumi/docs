@@ -3,6 +3,7 @@ title: Module datahub
 title_tag: Module datahub | Package pulumi_alicloud | Python SDK
 linktitle: datahub
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

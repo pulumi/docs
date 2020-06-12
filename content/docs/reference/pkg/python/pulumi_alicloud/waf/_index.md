@@ -3,6 +3,7 @@ title: Module waf
 title_tag: Module waf | Package pulumi_alicloud | Python SDK
 linktitle: waf
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "alicloud" >}}

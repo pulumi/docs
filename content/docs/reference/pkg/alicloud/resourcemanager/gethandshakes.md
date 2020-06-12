@@ -14,9 +14,58 @@ This data source provides the Resource Manager Handshakes of the current Alibaba
 
 > **NOTE:**  Available in 1.86.0+.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(AliCloud.ResourceManager.GetHandshakes.InvokeAsync());
+        this.FirstHandshakeId = example.Apply(example => example.Handshakes[0].Id);
+    }
+
+    [Output("firstHandshakeId")]
+    public Output<string> FirstHandshakeId { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.resourcemanager.get_handshakes()
+pulumi.export("firstHandshakeId", example.handshakes[0]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = pulumi.output(alicloud.resourcemanager.getHandshakes({ async: true }));
+
+export const firstHandshakeId = example.handshakes[0].id;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetHandshakes {#using}
