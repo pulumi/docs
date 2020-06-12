@@ -3,7 +3,10 @@ title: Package pulumi_signalfx
 title_tag: Package pulumi_signalfx | Python SDK
 linktitle: pulumi_signalfx
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "signalfx" >}}
 
 <div class="section" id="pulumi-signalfx">
 <h1>Pulumi SignalFX<a class="headerlink" href="#pulumi-signalfx" title="Permalink to this headline">¶</a></h1>

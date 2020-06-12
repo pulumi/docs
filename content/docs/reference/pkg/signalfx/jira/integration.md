@@ -32,16 +32,14 @@ class MyStack : Stack
     {
         var jiraMyteamXX = new SignalFx.Jira.Integration("jiraMyteamXX", new SignalFx.Jira.IntegrationArgs
         {
-            ApiToken = "abc123",
             AssigneeDisplayName = "Testy Testerson",
             AssigneeName = "testytesterson",
-            AuthMethod = "EmailAndToken",
+            AuthMethod = "UsernameAndPassword",
             BaseUrl = "https://www.example.com",
             Enabled = false,
             IssueType = "Story",
             Password = "paasword",
             ProjectKey = "TEST",
-            UserEmail = "yoosername@example.com",
             Username = "yoosername",
         });
     }
@@ -60,16 +58,14 @@ import pulumi
 import pulumi_signalfx as signalfx
 
 jira_myteam_xx = signalfx.jira.Integration("jiraMyteamXX",
-    api_token="abc123",
     assignee_display_name="Testy Testerson",
     assignee_name="testytesterson",
-    auth_method="EmailAndToken",
+    auth_method="UsernameAndPassword",
     base_url="https://www.example.com",
     enabled=False,
     issue_type="Story",
     password="paasword",
     project_key="TEST",
-    user_email="yoosername@example.com",
     username="yoosername")
 ```
 {{% /example %}}
@@ -80,16 +76,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
 
 const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
-    apiToken: "abc123",
     assigneeDisplayName: "Testy Testerson",
     assigneeName: "testytesterson",
-    authMethod: "EmailAndToken",
+    authMethod: "UsernameAndPassword",
     baseUrl: "https://www.example.com",
     enabled: false,
     issueType: "Story",
     password: "paasword",
     projectKey: "TEST",
-    userEmail: "yoosername@example.com",
     username: "yoosername",
 });
 ```

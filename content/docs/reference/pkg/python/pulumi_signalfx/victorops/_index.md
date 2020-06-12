@@ -3,7 +3,10 @@ title: Module victorops
 title_tag: Module victorops | Package pulumi_signalfx | Python SDK
 linktitle: victorops
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "signalfx" >}}
 
 <div class="section" id="victorops">
 <h1>victorops<a class="headerlink" href="#victorops" title="Permalink to this headline">¶</a></h1>
