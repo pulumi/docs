@@ -36,6 +36,7 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="projectsharegroup" title="ProjectShareGroup"><span class="symbol resource"></span>ProjectShareGroup</a></li>
     <li><a href="projectvariable" title="ProjectVariable"><span class="symbol resource"></span>ProjectVariable</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="servicegithub" title="ServiceGithub"><span class="symbol resource"></span>ServiceGithub</a></li>
     <li><a href="servicejira" title="ServiceJira"><span class="symbol resource"></span>ServiceJira</a></li>
     <li><a href="serviceslack" title="ServiceSlack"><span class="symbol resource"></span>ServiceSlack</a></li>
     <li><a href="tagprotection" title="TagProtection"><span class="symbol resource"></span>TagProtection</a></li>
@@ -60,7 +61,7 @@ A Pulumi package for creating and managing GitLab resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/terraform-providers/terraform-provider-gitlab).</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 
