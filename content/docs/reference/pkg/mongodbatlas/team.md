@@ -39,9 +39,9 @@ class MyStack : Stack
             OrgId = "<ORGANIZATION-ID>",
             Usernames = 
             {
-                "user1",
-                "user2",
-                "user3",
+                "user1@email.com",
+                "user2@email.com",
+                "user3@email.com",
             },
         });
     }
@@ -62,9 +62,9 @@ import pulumi_mongodbatlas as mongodbatlas
 test = mongodbatlas.Teams("test",
     org_id="<ORGANIZATION-ID>",
     usernames=[
-        "user1",
-        "user2",
-        "user3",
+        "user1@email.com",
+        "user2@email.com",
+        "user3@email.com",
     ])
 ```
 {{% /example %}}
@@ -77,9 +77,9 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 const test = new mongodbatlas.Teams("test", {
     orgId: "<ORGANIZATION-ID>",
     usernames: [
-        "user1",
-        "user2",
-        "user3",
+        "user1@email.com",
+        "user2@email.com",
+        "user3@email.com",
     ],
 });
 ```
@@ -288,7 +288,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.
+    <dd>{{% md %}}The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -328,7 +328,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.
+    <dd>{{% md %}}The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -368,7 +368,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.
+    <dd>{{% md %}}The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -408,7 +408,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.
+    <dd>{{% md %}}The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -719,7 +719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.
+    <dd>{{% md %}}The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team. 
 {{% /md %}}</dd>
 
 </dl>
@@ -770,7 +770,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.
+    <dd>{{% md %}}The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team. 
 {{% /md %}}</dd>
 
 </dl>
@@ -821,7 +821,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.
+    <dd>{{% md %}}The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team. 
 {{% /md %}}</dd>
 
 </dl>
@@ -872,7 +872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team.
+    <dd>{{% md %}}The Atlas usernames (email address). You can only add Atlas users who are part of the organization. Users who have not accepted an invitation to join the organization cannot be added as team members. There is a maximum of 250 Atlas users per team. 
 {{% /md %}}</dd>
 
 </dl>

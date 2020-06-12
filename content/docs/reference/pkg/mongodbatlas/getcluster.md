@@ -213,6 +213,28 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="autoscalingcomputeenabled_csharp">
+<a href="#autoscalingcomputeenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether cluster tier auto-scaling is enabled. The default is false.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="autoscalingcomputescaledownenabled_csharp">
+<a href="#autoscalingcomputescaledownenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Set to `true` to enable the cluster tier to scale down.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="autoscalingdiskgbenabled_csharp">
 <a href="#autoscalingdiskgbenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
 </span> 
@@ -281,6 +303,17 @@ The following output properties are available:
 - `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
 - `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="containerid_csharp">
+<a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -422,7 +455,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag that indicates if the cluster uses Point-in-Time backups.
+    <dd>{{% md %}}Flag that indicates if the cluster uses Continuous Cloud Backup.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -437,13 +470,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="providerautoscalingcomputemaxinstancesize_csharp">
+<a href="#providerautoscalingcomputemaxinstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Maximum instance size to which your cluster can automatically scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="providerautoscalingcomputemininstancesize_csharp">
+<a href="#providerautoscalingcomputemininstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Minimum instance size to which your cluster can automatically scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="providerbackupenabled_csharp">
 <a href="#providerbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup Snapshots for backups.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -593,6 +648,28 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="autoscalingcomputeenabled_go">
+<a href="#autoscalingcomputeenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether cluster tier auto-scaling is enabled. The default is false.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="autoscalingcomputescaledownenabled_go">
+<a href="#autoscalingcomputescaledownenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Set to `true` to enable the cluster tier to scale down.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="autoscalingdiskgbenabled_go">
 <a href="#autoscalingdiskgbenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
 </span> 
@@ -661,6 +738,17 @@ The following output properties are available:
 - `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
 - `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="containerid_go">
+<a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -802,7 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag that indicates if the cluster uses Point-in-Time backups.
+    <dd>{{% md %}}Flag that indicates if the cluster uses Continuous Cloud Backup.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -817,13 +905,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="providerautoscalingcomputemaxinstancesize_go">
+<a href="#providerautoscalingcomputemaxinstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Maximum instance size to which your cluster can automatically scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="providerautoscalingcomputemininstancesize_go">
+<a href="#providerautoscalingcomputemininstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Minimum instance size to which your cluster can automatically scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="providerbackupenabled_go">
 <a href="#providerbackupenabled_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup Snapshots for backups.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -973,6 +1083,28 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="autoscalingcomputeenabled_nodejs">
+<a href="#autoscalingcomputeenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether cluster tier auto-scaling is enabled. The default is false.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="autoscalingcomputescaledownenabled_nodejs">
+<a href="#autoscalingcomputescaledownenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Set to `true` to enable the cluster tier to scale down.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="autoscalingdiskgbenabled_nodejs">
 <a href="#autoscalingdiskgbenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
 </span> 
@@ -1041,6 +1173,17 @@ The following output properties are available:
 - `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
 - `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="containerid_nodejs">
+<a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1182,7 +1325,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Flag that indicates if the cluster uses Point-in-Time backups.
+    <dd>{{% md %}}Flag that indicates if the cluster uses Continuous Cloud Backup.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1197,13 +1340,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="providerautoscalingcomputemaxinstancesize_nodejs">
+<a href="#providerautoscalingcomputemaxinstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Maximum instance size to which your cluster can automatically scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="providerautoscalingcomputemininstancesize_nodejs">
+<a href="#providerautoscalingcomputemininstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Minimum instance size to which your cluster can automatically scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="providerbackupenabled_nodejs">
 <a href="#providerbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Backup<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup Snapshots for backups.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1353,6 +1518,28 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="auto_scaling_compute_enabled_python">
+<a href="#auto_scaling_compute_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies whether cluster tier auto-scaling is enabled. The default is false.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="auto_scaling_compute_scale_down_enabled_python">
+<a href="#auto_scaling_compute_scale_down_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>scale_<wbr>down_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Set to `true` to enable the cluster tier to scale down.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="auto_scaling_disk_gb_enabled_python">
 <a href="#auto_scaling_disk_gb_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>disk_<wbr>gb_<wbr>enabled</a>
 </span> 
@@ -1421,6 +1608,17 @@ The following output properties are available:
 - `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
 - `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="container_id_python">
+<a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1562,7 +1760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag that indicates if the cluster uses Point-in-Time backups.
+    <dd>{{% md %}}Flag that indicates if the cluster uses Continuous Cloud Backup.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1577,13 +1775,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="provider_auto_scaling_compute_max_instance_size_python">
+<a href="#provider_auto_scaling_compute_max_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>max_<wbr>instance_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Maximum instance size to which your cluster can automatically scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="provider_auto_scaling_compute_min_instance_size_python">
+<a href="#provider_auto_scaling_compute_min_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>min_<wbr>instance_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Minimum instance size to which your cluster can automatically scale.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="provider_backup_enabled_python">
 <a href="#provider_backup_enabled_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>backup_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup Snapshots for backups.
 {{% /md %}}</dd>
 
     <dt class="property-"

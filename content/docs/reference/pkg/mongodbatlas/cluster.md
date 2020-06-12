@@ -40,7 +40,7 @@ class MyStack : Stack
         {
             AutoScalingDiskGbEnabled = true,
             DiskSizeGb = 100,
-            MongoDbMajorVersion = "4.0",
+            MongoDbMajorVersion = "4.2",
             NumShards = 1,
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
@@ -70,7 +70,7 @@ import pulumi_mongodbatlas as mongodbatlas
 cluster_test = mongodbatlas.Cluster("cluster-test",
     auto_scaling_disk_gb_enabled=True,
     disk_size_gb=100,
-    mongo_db_major_version="4.0",
+    mongo_db_major_version="4.2",
     num_shards=1,
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
@@ -92,7 +92,7 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     autoScalingDiskGbEnabled: true,
     diskSizeGb: 100,
-    mongoDbMajorVersion: "4.0",
+    mongoDbMajorVersion: "4.2",
     numShards: 1,
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
@@ -121,7 +121,7 @@ class MyStack : Stack
         var test = new Mongodbatlas.Cluster("test", new Mongodbatlas.ClusterArgs
         {
             AutoScalingDiskGbEnabled = true,
-            MongoDbMajorVersion = "4.0",
+            MongoDbMajorVersion = "4.2",
             NumShards = 1,
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
@@ -148,7 +148,7 @@ import pulumi_mongodbatlas as mongodbatlas
 
 test = mongodbatlas.Cluster("test",
     auto_scaling_disk_gb_enabled=True,
-    mongo_db_major_version="4.0",
+    mongo_db_major_version="4.2",
     num_shards=1,
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
@@ -167,7 +167,7 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 
 const test = new mongodbatlas.Cluster("test", {
     autoScalingDiskGbEnabled: true,
-    mongoDbMajorVersion: "4.0",
+    mongoDbMajorVersion: "4.2",
     numShards: 1,
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
@@ -195,7 +195,7 @@ class MyStack : Stack
         {
             AutoScalingDiskGbEnabled = true,
             DiskSizeGb = 40,
-            MongoDbMajorVersion = "4.0",
+            MongoDbMajorVersion = "4.2",
             NumShards = 1,
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
@@ -222,7 +222,7 @@ import pulumi_mongodbatlas as mongodbatlas
 test = mongodbatlas.Cluster("test",
     auto_scaling_disk_gb_enabled=True,
     disk_size_gb=40,
-    mongo_db_major_version="4.0",
+    mongo_db_major_version="4.2",
     num_shards=1,
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
@@ -241,7 +241,7 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 const test = new mongodbatlas.Cluster("test", {
     autoScalingDiskGbEnabled: true,
     diskSizeGb: 40,
-    mongoDbMajorVersion: "4.0",
+    mongoDbMajorVersion: "4.2",
     numShards: 1,
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
@@ -560,9 +560,9 @@ class MyStack : Stack
     {
         var cluster_test = new Mongodbatlas.Cluster("cluster-test", new Mongodbatlas.ClusterArgs
         {
-            AutoScalingDiskGbEnabled = "false",
+            AutoScalingDiskGbEnabled = false,
             BackingProviderName = "AWS",
-            DiskSizeGb = "2",
+            DiskSizeGb = 2,
             MongoDbMajorVersion = "4.2",
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderInstanceSizeName = "M2",
@@ -628,7 +628,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/mongodbatlas/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advanced_configuration=None<span class="p">, </span>auto_scaling_disk_gb_enabled=None<span class="p">, </span>backing_provider_name=None<span class="p">, </span>backup_enabled=None<span class="p">, </span>bi_connector=None<span class="p">, </span>cluster_type=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>encryption_at_rest_provider=None<span class="p">, </span>labels=None<span class="p">, </span>mongo_db_major_version=None<span class="p">, </span>name=None<span class="p">, </span>num_shards=None<span class="p">, </span>pit_enabled=None<span class="p">, </span>project_id=None<span class="p">, </span>provider_backup_enabled=None<span class="p">, </span>provider_disk_iops=None<span class="p">, </span>provider_disk_type_name=None<span class="p">, </span>provider_encrypt_ebs_volume=None<span class="p">, </span>provider_instance_size_name=None<span class="p">, </span>provider_name=None<span class="p">, </span>provider_region_name=None<span class="p">, </span>provider_volume_type=None<span class="p">, </span>replication_factor=None<span class="p">, </span>replication_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/mongodbatlas/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advanced_configuration=None<span class="p">, </span>auto_scaling_compute_enabled=None<span class="p">, </span>auto_scaling_compute_scale_down_enabled=None<span class="p">, </span>auto_scaling_disk_gb_enabled=None<span class="p">, </span>backing_provider_name=None<span class="p">, </span>backup_enabled=None<span class="p">, </span>bi_connector=None<span class="p">, </span>cluster_type=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>encryption_at_rest_provider=None<span class="p">, </span>labels=None<span class="p">, </span>mongo_db_major_version=None<span class="p">, </span>name=None<span class="p">, </span>num_shards=None<span class="p">, </span>pit_enabled=None<span class="p">, </span>project_id=None<span class="p">, </span>provider_auto_scaling_compute_max_instance_size=None<span class="p">, </span>provider_auto_scaling_compute_min_instance_size=None<span class="p">, </span>provider_backup_enabled=None<span class="p">, </span>provider_disk_iops=None<span class="p">, </span>provider_disk_type_name=None<span class="p">, </span>provider_encrypt_ebs_volume=None<span class="p">, </span>provider_instance_size_name=None<span class="p">, </span>provider_name=None<span class="p">, </span>provider_region_name=None<span class="p">, </span>provider_volume_type=None<span class="p">, </span>replication_factor=None<span class="p">, </span>replication_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -819,7 +819,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
+**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -842,6 +843,31 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscalingcomputeenabled_csharp">
+<a href="#autoscalingcomputeenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
+- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscalingcomputescaledownenabled_csharp">
+<a href="#autoscalingcomputescaledownenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
+- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -875,7 +901,11 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Legacy Option - Set to true to enable Atlas continuous backups for the cluster.
+    <dd>{{% md %}}Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+**Important** - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using [Cloud Backups](https://docs.atlas.mongodb.com/backup/cloud-backup/overview/).
+* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -908,7 +938,11 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+    <dd>{{% md %}}Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+* The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.
+* Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
+* Cannot be used with clusters with local NVMe SSDs
+* Cannot be used with Azure clusters
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -919,7 +953,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.
+    <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.   
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +997,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +1008,29 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}- Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.
+    <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerautoscalingcomputemaxinstancesize_csharp">
+<a href="#providerautoscalingcomputemaxinstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerautoscalingcomputemininstancesize_csharp">
+<a href="#providerautoscalingcomputemininstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,7 +1041,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -996,7 +1052,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1018,7 +1074,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.
+    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1029,7 +1085,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
 {{% /md %}}</dd>
 
@@ -1092,7 +1148,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
+**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1115,6 +1172,31 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscalingcomputeenabled_go">
+<a href="#autoscalingcomputeenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
+- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscalingcomputescaledownenabled_go">
+<a href="#autoscalingcomputescaledownenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
+- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1148,7 +1230,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Legacy Option - Set to true to enable Atlas continuous backups for the cluster.
+    <dd>{{% md %}}Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+**Important** - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using [Cloud Backups](https://docs.atlas.mongodb.com/backup/cloud-backup/overview/).
+* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1181,7 +1267,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+    <dd>{{% md %}}Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+* The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.
+* Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
+* Cannot be used with clusters with local NVMe SSDs
+* Cannot be used with Azure clusters
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1192,7 +1282,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.
+    <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.   
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1236,7 +1326,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1247,7 +1337,29 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}- Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.
+    <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerautoscalingcomputemaxinstancesize_go">
+<a href="#providerautoscalingcomputemaxinstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerautoscalingcomputemininstancesize_go">
+<a href="#providerautoscalingcomputemininstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1258,7 +1370,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1269,7 +1381,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1291,7 +1403,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.
+    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1302,7 +1414,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
 {{% /md %}}</dd>
 
@@ -1365,7 +1477,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
+**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1388,6 +1501,31 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscalingcomputeenabled_nodejs">
+<a href="#autoscalingcomputeenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
+- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscalingcomputescaledownenabled_nodejs">
+<a href="#autoscalingcomputescaledownenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
+- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1421,7 +1559,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Legacy Option - Set to true to enable Atlas continuous backups for the cluster.
+    <dd>{{% md %}}Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+**Important** - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using [Cloud Backups](https://docs.atlas.mongodb.com/backup/cloud-backup/overview/).
+* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1454,7 +1596,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+    <dd>{{% md %}}Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+* The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.
+* Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
+* Cannot be used with clusters with local NVMe SSDs
+* Cannot be used with Azure clusters
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1465,7 +1611,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.
+    <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.   
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1509,7 +1655,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1520,7 +1666,29 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}- Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.
+    <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerautoscalingcomputemaxinstancesize_nodejs">
+<a href="#providerautoscalingcomputemaxinstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerautoscalingcomputemininstancesize_nodejs">
+<a href="#providerautoscalingcomputemininstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1531,7 +1699,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1542,7 +1710,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1564,7 +1732,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.
+    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1575,7 +1743,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
 {{% /md %}}</dd>
 
@@ -1638,7 +1806,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
+**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1661,6 +1830,31 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusteradvancedconfiguration">Dict[Cluster<wbr>Advanced<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_scaling_compute_enabled_python">
+<a href="#auto_scaling_compute_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
+- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_scaling_compute_scale_down_enabled_python">
+<a href="#auto_scaling_compute_scale_down_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>scale_<wbr>down_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
+- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1694,7 +1888,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Legacy Option - Set to true to enable Atlas continuous backups for the cluster.
+    <dd>{{% md %}}Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+**Important** - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using [Cloud Backups](https://docs.atlas.mongodb.com/backup/cloud-backup/overview/).
+* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1727,7 +1925,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+    <dd>{{% md %}}Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+* The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.
+* Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
+* Cannot be used with clusters with local NVMe SSDs
+* Cannot be used with Azure clusters
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1738,7 +1940,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.
+    <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.   
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1782,7 +1984,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1793,7 +1995,29 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}- Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.
+    <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provider_auto_scaling_compute_max_instance_size_python">
+<a href="#provider_auto_scaling_compute_max_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>max_<wbr>instance_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provider_auto_scaling_compute_min_instance_size_python">
+<a href="#provider_auto_scaling_compute_min_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>min_<wbr>instance_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1804,7 +2028,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1815,7 +2039,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1837,7 +2061,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.
+    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1848,7 +2072,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
 {{% /md %}}</dd>
 
@@ -1923,12 +2147,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="containerid_csharp">
+<a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2062,12 +2291,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="containerid_go">
+<a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2201,12 +2435,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="containerid_nodejs">
+<a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2340,12 +2579,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clusterconnectionstrings">Dict[Cluster<wbr>Connection<wbr>Strings]</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="container_id_python">
+<a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2471,7 +2715,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>advanced_configuration=None<span class="p">, </span>auto_scaling_disk_gb_enabled=None<span class="p">, </span>backing_provider_name=None<span class="p">, </span>backup_enabled=None<span class="p">, </span>bi_connector=None<span class="p">, </span>cluster_id=None<span class="p">, </span>cluster_type=None<span class="p">, </span>connection_strings=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>encryption_at_rest_provider=None<span class="p">, </span>labels=None<span class="p">, </span>mongo_db_major_version=None<span class="p">, </span>mongo_db_version=None<span class="p">, </span>mongo_uri=None<span class="p">, </span>mongo_uri_updated=None<span class="p">, </span>mongo_uri_with_options=None<span class="p">, </span>name=None<span class="p">, </span>num_shards=None<span class="p">, </span>paused=None<span class="p">, </span>pit_enabled=None<span class="p">, </span>project_id=None<span class="p">, </span>provider_backup_enabled=None<span class="p">, </span>provider_disk_iops=None<span class="p">, </span>provider_disk_type_name=None<span class="p">, </span>provider_encrypt_ebs_volume=None<span class="p">, </span>provider_instance_size_name=None<span class="p">, </span>provider_name=None<span class="p">, </span>provider_region_name=None<span class="p">, </span>provider_volume_type=None<span class="p">, </span>replication_factor=None<span class="p">, </span>replication_specs=None<span class="p">, </span>snapshot_backup_policies=None<span class="p">, </span>srv_address=None<span class="p">, </span>state_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>advanced_configuration=None<span class="p">, </span>auto_scaling_compute_enabled=None<span class="p">, </span>auto_scaling_compute_scale_down_enabled=None<span class="p">, </span>auto_scaling_disk_gb_enabled=None<span class="p">, </span>backing_provider_name=None<span class="p">, </span>backup_enabled=None<span class="p">, </span>bi_connector=None<span class="p">, </span>cluster_id=None<span class="p">, </span>cluster_type=None<span class="p">, </span>connection_strings=None<span class="p">, </span>container_id=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>encryption_at_rest_provider=None<span class="p">, </span>labels=None<span class="p">, </span>mongo_db_major_version=None<span class="p">, </span>mongo_db_version=None<span class="p">, </span>mongo_uri=None<span class="p">, </span>mongo_uri_updated=None<span class="p">, </span>mongo_uri_with_options=None<span class="p">, </span>name=None<span class="p">, </span>num_shards=None<span class="p">, </span>paused=None<span class="p">, </span>pit_enabled=None<span class="p">, </span>project_id=None<span class="p">, </span>provider_auto_scaling_compute_max_instance_size=None<span class="p">, </span>provider_auto_scaling_compute_min_instance_size=None<span class="p">, </span>provider_backup_enabled=None<span class="p">, </span>provider_disk_iops=None<span class="p">, </span>provider_disk_type_name=None<span class="p">, </span>provider_encrypt_ebs_volume=None<span class="p">, </span>provider_instance_size_name=None<span class="p">, </span>provider_name=None<span class="p">, </span>provider_region_name=None<span class="p">, </span>provider_volume_type=None<span class="p">, </span>replication_factor=None<span class="p">, </span>replication_specs=None<span class="p">, </span>snapshot_backup_policies=None<span class="p">, </span>srv_address=None<span class="p">, </span>state_name=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2597,6 +2841,31 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_autoscalingcomputeenabled_csharp">
+<a href="#state_autoscalingcomputeenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
+- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_autoscalingcomputescaledownenabled_csharp">
+<a href="#state_autoscalingcomputescaledownenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
+- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_autoscalingdiskgbenabled_csharp">
 <a href="#state_autoscalingdiskgbenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
 </span> 
@@ -2627,7 +2896,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Legacy Option - Set to true to enable Atlas continuous backups for the cluster.
+    <dd>{{% md %}}Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+**Important** - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using [Cloud Backups](https://docs.atlas.mongodb.com/backup/cloud-backup/overview/).
+* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2672,12 +2945,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_containerid_csharp">
+<a href="#state_containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2688,7 +2966,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+    <dd>{{% md %}}Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+* The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.
+* Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
+* Cannot be used with clusters with local NVMe SSDs
+* Cannot be used with Azure clusters
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2699,7 +2981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.
+    <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.   
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2787,7 +3069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2809,7 +3091,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}- Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.
+    <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2825,13 +3107,35 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_providerautoscalingcomputemaxinstancesize_csharp">
+<a href="#state_providerautoscalingcomputemaxinstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_providerautoscalingcomputemininstancesize_csharp">
+<a href="#state_providerautoscalingcomputemininstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_providerbackupenabled_csharp">
 <a href="#state_providerbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2842,7 +3146,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2864,7 +3168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.
+    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2875,7 +3179,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
+**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2897,7 +3202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
 {{% /md %}}</dd>
 
@@ -2992,6 +3297,31 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_autoscalingcomputeenabled_go">
+<a href="#state_autoscalingcomputeenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
+- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_autoscalingcomputescaledownenabled_go">
+<a href="#state_autoscalingcomputescaledownenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
+- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_autoscalingdiskgbenabled_go">
 <a href="#state_autoscalingdiskgbenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
 </span> 
@@ -3022,7 +3352,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Legacy Option - Set to true to enable Atlas continuous backups for the cluster.
+    <dd>{{% md %}}Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+**Important** - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using [Cloud Backups](https://docs.atlas.mongodb.com/backup/cloud-backup/overview/).
+* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3067,12 +3401,17 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_containerid_go">
+<a href="#state_containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3083,7 +3422,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+    <dd>{{% md %}}Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+* The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.
+* Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
+* Cannot be used with clusters with local NVMe SSDs
+* Cannot be used with Azure clusters
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3094,7 +3437,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.
+    <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.   
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3182,7 +3525,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3204,7 +3547,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}- Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.
+    <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3220,13 +3563,35 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_providerautoscalingcomputemaxinstancesize_go">
+<a href="#state_providerautoscalingcomputemaxinstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_providerautoscalingcomputemininstancesize_go">
+<a href="#state_providerautoscalingcomputemininstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_providerbackupenabled_go">
 <a href="#state_providerbackupenabled_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3237,7 +3602,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3259,7 +3624,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.
+    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3270,7 +3635,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
+**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3292,7 +3658,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
 {{% /md %}}</dd>
 
@@ -3387,6 +3753,31 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_autoscalingcomputeenabled_nodejs">
+<a href="#state_autoscalingcomputeenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
+- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_autoscalingcomputescaledownenabled_nodejs">
+<a href="#state_autoscalingcomputescaledownenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
+- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_autoscalingdiskgbenabled_nodejs">
 <a href="#state_autoscalingdiskgbenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
 </span> 
@@ -3417,7 +3808,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Legacy Option - Set to true to enable Atlas continuous backups for the cluster.
+    <dd>{{% md %}}Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+**Important** - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using [Cloud Backups](https://docs.atlas.mongodb.com/backup/cloud-backup/overview/).
+* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3462,12 +3857,17 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_containerid_nodejs">
+<a href="#state_containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3478,7 +3878,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+    <dd>{{% md %}}Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+* The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.
+* Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
+* Cannot be used with clusters with local NVMe SSDs
+* Cannot be used with Azure clusters
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3489,7 +3893,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.
+    <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.   
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3577,7 +3981,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3599,7 +4003,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}- Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.
+    <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3615,13 +4019,35 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_providerautoscalingcomputemaxinstancesize_nodejs">
+<a href="#state_providerautoscalingcomputemaxinstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_providerautoscalingcomputemininstancesize_nodejs">
+<a href="#state_providerautoscalingcomputemininstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_providerbackupenabled_nodejs">
 <a href="#state_providerbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Backup<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3632,7 +4058,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3654,7 +4080,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.
+    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3665,7 +4091,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
+**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3687,7 +4114,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
 {{% /md %}}</dd>
 
@@ -3782,6 +4209,31 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_auto_scaling_compute_enabled_python">
+<a href="#state_auto_scaling_compute_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
+- Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
+- Set to `false` to disable cluster tier auto-scaling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_auto_scaling_compute_scale_down_enabled_python">
+<a href="#state_auto_scaling_compute_scale_down_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>scale_<wbr>down_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
+- If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_auto_scaling_disk_gb_enabled_python">
 <a href="#state_auto_scaling_disk_gb_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>disk_<wbr>gb_<wbr>enabled</a>
 </span> 
@@ -3812,7 +4264,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Legacy Option - Set to true to enable Atlas continuous backups for the cluster.
+    <dd>{{% md %}}Legacy Backup - Set to true to enable Atlas legacy backups for the cluster.
+**Important** - MongoDB deprecated the Legacy Backup feature. Clusters that use Legacy Backup can continue to use it. MongoDB recommends using [Cloud Backups](https://docs.atlas.mongodb.com/backup/cloud-backup/overview/).
+* Any net new Atlas clusters of any type do not support this parameter. These clusters must use Cloud Backup, `provider_backup_enabled`, to enable Cloud Backup.  If you create a new Atlas cluster and set `backup_enabled` to true, the Provider will respond with an error.  This change doesn’t affect existing clusters that use legacy backups.
+* Set to false to disable legacy backups for the cluster. Atlas deletes any stored snapshots.
+* The default value is false.  M10 and above only.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3857,12 +4313,17 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterconnectionstrings">Dict[Cluster<wbr>Connection<wbr>Strings]</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-- `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
-- `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
-- `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
-- `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_container_id_python">
+<a href="#state_container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3873,7 +4334,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The size in gigabytes of the server’s root volume. You can add capacity by increasing this number, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+    <dd>{{% md %}}Capacity, in gigabytes, of the host’s root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
+* The minimum disk size for dedicated clusters is 10GB for AWS and GCP. If you specify diskSizeGB with a lower disk size, Atlas defaults to the minimum disk size value.
+* Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
+* Cannot be used with clusters with local NVMe SSDs
+* Cannot be used with Azure clusters
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3884,7 +4349,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set the Encryption at Rest parameter.  Possible values are AWS, GCP, AZURE or NONE.  Requires M10 or greater and for backup_enabled to be false or omitted.
+    <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.   
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3972,7 +4437,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3994,7 +4459,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}- Flag that indicates if the cluster uses Point-in-Time backups. If set to true, provider_backup_enabled must also be set to true.
+    <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4010,13 +4475,35 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_provider_auto_scaling_compute_max_instance_size_python">
+<a href="#state_provider_auto_scaling_compute_max_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>max_<wbr>instance_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_provider_auto_scaling_compute_min_instance_size_python">
+<a href="#state_provider_auto_scaling_compute_min_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>min_<wbr>instance_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_provider_backup_enabled_python">
 <a href="#state_provider_backup_enabled_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>backup_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Provider Snapshots for backups.
+    <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4027,7 +4514,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
+    <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4049,7 +4536,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the instance.
+    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4060,7 +4547,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
+**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4082,7 +4570,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the Atlas Region name, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
 {{% /md %}}</dd>
 
@@ -4445,8 +4933,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fail_index_key_too_long_python">
-<a href="#fail_index_key_too_long_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>index_<wbr>key_<wbr>too_<wbr>long</a>
+        <span id="failindexkeytoolong_python">
+<a href="#failindexkeytoolong_python" style="color: inherit; text-decoration: inherit;">fail<wbr>Index<wbr>Key<wbr>Too<wbr>Long</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4456,8 +4944,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="javascript_enabled_python">
-<a href="#javascript_enabled_python" style="color: inherit; text-decoration: inherit;">javascript_<wbr>enabled</a>
+        <span id="javascriptenabled_python">
+<a href="#javascriptenabled_python" style="color: inherit; text-decoration: inherit;">javascript<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4467,8 +4955,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimum_enabled_tls_protocol_python">
-<a href="#minimum_enabled_tls_protocol_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>enabled_<wbr>tls_<wbr>protocol</a>
+        <span id="minimumenabledtlsprotocol_python">
+<a href="#minimumenabledtlsprotocol_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Enabled<wbr>Tls<wbr>Protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4478,8 +4966,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="no_table_scan_python">
-<a href="#no_table_scan_python" style="color: inherit; text-decoration: inherit;">no_<wbr>table_<wbr>scan</a>
+        <span id="notablescan_python">
+<a href="#notablescan_python" style="color: inherit; text-decoration: inherit;">no<wbr>Table<wbr>Scan</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4489,8 +4977,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oplog_size_mb_python">
-<a href="#oplog_size_mb_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>size_<wbr>mb</a>
+        <span id="oplogsizemb_python">
+<a href="#oplogsizemb_python" style="color: inherit; text-decoration: inherit;">oplog<wbr>Size<wbr>Mb</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4500,8 +4988,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sample_refresh_interval_bi_connector_python">
-<a href="#sample_refresh_interval_bi_connector_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>refresh_<wbr>interval_<wbr>bi_<wbr>connector</a>
+        <span id="samplerefreshintervalbiconnector_python">
+<a href="#samplerefreshintervalbiconnector_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Refresh<wbr>Interval<wbr>Bi<wbr>Connector</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4511,8 +4999,8 @@ Do not specify this field when creating a multi-region cluster using the replica
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sample_size_bi_connector_python">
-<a href="#sample_size_bi_connector_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size_<wbr>bi_<wbr>connector</a>
+        <span id="samplesizebiconnector_python">
+<a href="#samplesizebiconnector_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size<wbr>Bi<wbr>Connector</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4553,7 +5041,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.
+    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*
 - Set to `true` to enable BI Connector for Atlas.
 - Set to `false` to disable BI Connector for Atlas.
 {{% /md %}}</dd>
@@ -4584,7 +5073,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.
+    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*
 - Set to `true` to enable BI Connector for Atlas.
 - Set to `false` to disable BI Connector for Atlas.
 {{% /md %}}</dd>
@@ -4615,7 +5105,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.
+    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*
 - Set to `true` to enable BI Connector for Atlas.
 - Set to `false` to disable BI Connector for Atlas.
 {{% /md %}}</dd>
@@ -4646,7 +5137,8 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.
+    <dd>{{% md %}}Specifies whether or not BI Connector for Atlas is enabled on the cluster.l
+*
 - Set to `true` to enable BI Connector for Atlas.
 - Set to `false` to disable BI Connector for Atlas.
 {{% /md %}}</dd>
@@ -5115,7 +5607,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5166,7 +5658,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5217,7 +5709,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5268,7 +5760,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of shards to deploy in the specified zone.
+    <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5337,7 +5829,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.
+    <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5349,6 +5841,9 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.
+* The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.
+* Specify 0 if you do not want any electable nodes in the region.
+* You cannot create electable nodes in a region if `priority` is 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5360,6 +5855,9 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Election priority of the region. For regions with only read-only nodes, set this value to 0.
+* For regions where `electable_nodes` is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.
+* The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.
+* Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5381,7 +5879,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name for the region specified.
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 {{% /md %}}</dd>
 
 </dl>
@@ -5399,7 +5897,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.
+    <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5411,6 +5909,9 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.
+* The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.
+* Specify 0 if you do not want any electable nodes in the region.
+* You cannot create electable nodes in a region if `priority` is 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5422,6 +5923,9 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Election priority of the region. For regions with only read-only nodes, set this value to 0.
+* For regions where `electable_nodes` is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.
+* The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.
+* Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5443,7 +5947,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name for the region specified.
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 {{% /md %}}</dd>
 
 </dl>
@@ -5461,7 +5965,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.
+    <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5473,6 +5977,9 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.
+* The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.
+* Specify 0 if you do not want any electable nodes in the region.
+* You cannot create electable nodes in a region if `priority` is 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5484,6 +5991,9 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Election priority of the region. For regions with only read-only nodes, set this value to 0.
+* For regions where `electable_nodes` is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.
+* The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.
+* Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5505,7 +6015,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name for the region specified.
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 {{% /md %}}</dd>
 
 </dl>
@@ -5523,7 +6033,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.
+    <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5535,6 +6045,9 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of electable nodes for Atlas to deploy to the region. Electable nodes can become the primary and can facilitate local reads.
+* The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.
+* Specify 0 if you do not want any electable nodes in the region.
+* You cannot create electable nodes in a region if `priority` is 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5546,6 +6059,9 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Election priority of the region. For regions with only read-only nodes, set this value to 0.
+* For regions where `electable_nodes` is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.
+* The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.
+* Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5567,7 +6083,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name for the region specified.
+    <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 {{% /md %}}</dd>
 
 </dl>
