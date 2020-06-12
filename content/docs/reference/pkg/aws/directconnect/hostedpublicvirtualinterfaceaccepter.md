@@ -14,7 +14,6 @@ Provides a resource to manage the accepter's side of a Direct Connect hosted pub
 This resource accepts ownership of a public virtual interface created by another AWS account.
 
 
-
 {{% examples %}}
 ## Example Usage
 

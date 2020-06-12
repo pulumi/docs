@@ -18,22 +18,13 @@ this parameter to manage the DNS records for that domain.
 
 > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
 
-## Example Usage, creating a new domain
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+{{% examples %}}
+## Example Usage
 
-const domainTest = new aws.lightsail.Domain("domain_test", {
-    domainName: "mydomain.com",
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-domain_test = aws.lightsail.Domain("domainTest", domain_name="mydomain.com")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creating A New Domain
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -50,7 +41,52 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lightsail"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		domainTest, err := lightsail.NewDomain(ctx, "domainTest", &lightsail.DomainArgs{
+			DomainName: pulumi.String("mydomain.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+domain_test = aws.lightsail.Domain("domainTest", domain_name="mydomain.com")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const domainTest = new aws.lightsail.Domain("domain_test", {
+    domainName: "mydomain.com",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Domain Resource {#create}

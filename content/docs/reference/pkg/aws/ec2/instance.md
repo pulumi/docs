@@ -14,7 +14,6 @@ Provides an EC2 instance resource. This allows instances to be created, updated,
 and deleted.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -3,7 +3,10 @@ title: Module mediaconvert
 title_tag: Module mediaconvert | Package pulumi_aws | Python SDK
 linktitle: mediaconvert
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="mediaconvert">
 <h1>mediaconvert<a class="headerlink" href="#mediaconvert" title="Permalink to this headline">¶</a></h1>

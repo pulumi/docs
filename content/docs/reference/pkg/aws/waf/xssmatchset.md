@@ -13,7 +13,6 @@ meta_desc: "Explore the XssMatchSet resource of the waf module, including exampl
 Provides a WAF XSS Match Set Resource
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,7 +56,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		xssMatchSet, err := waf.NewXssMatchSet(ctx, "xssMatchSet", &waf.XssMatchSetArgs{
+			XssMatchTuples: waf.XssMatchSetXssMatchTupleArray{
+				&waf.XssMatchSetXssMatchTupleArgs{
+					FieldToMatch: &waf.XssMatchSetXssMatchTupleFieldToMatchArgs{
+						Type: pulumi.String("URI"),
+					},
+					TextTransformation: pulumi.String("NONE"),
+				},
+				&waf.XssMatchSetXssMatchTupleArgs{
+					FieldToMatch: &waf.XssMatchSetXssMatchTupleFieldToMatchArgs{
+						Type: pulumi.String("QUERY_STRING"),
+					},
+					TextTransformation: pulumi.String("NONE"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

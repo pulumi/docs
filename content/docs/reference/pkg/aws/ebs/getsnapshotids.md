@@ -14,7 +14,6 @@ Use this data source to get a list of EBS Snapshot IDs matching the specified
 criteria.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,7 +61,41 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ebsVolumes, err := ebs.LookupSnapshotIds(ctx, &ebs.LookupSnapshotIdsArgs{
+			Filters: ebs.getSnapshotIdsFilterArray{
+				&ebs.LookupSnapshotIdsFilter{
+					Name: "volume-size",
+					Values: []string{
+						"40",
+					},
+				},
+				&ebs.LookupSnapshotIdsFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"Example",
+					},
+				},
+			},
+			Owners: []string{
+				"self",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

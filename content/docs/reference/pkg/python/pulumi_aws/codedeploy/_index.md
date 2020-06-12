@@ -3,7 +3,10 @@ title: Module codedeploy
 title_tag: Module codedeploy | Package pulumi_aws | Python SDK
 linktitle: codedeploy
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="codedeploy">
 <h1>codedeploy<a class="headerlink" href="#codedeploy" title="Permalink to this headline">¶</a></h1>

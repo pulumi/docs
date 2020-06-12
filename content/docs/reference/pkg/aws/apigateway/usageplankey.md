@@ -13,7 +13,6 @@ meta_desc: "Explore the UsagePlanKey resource of the apigateway module, includin
 Provides an API Gateway Usage Plan Key.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,7 +57,47 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := apigateway.NewRestApi(ctx, "test", nil)
+		if err != nil {
+			return err
+		}
+		myusageplan, err := apigateway.NewUsagePlan(ctx, "myusageplan", &apigateway.UsagePlanArgs{
+			ApiStages: apigateway.UsagePlanApiStageArray{
+				&apigateway.UsagePlanApiStageArgs{
+					ApiId: test.ID(),
+					Stage: pulumi.String(aws_api_gateway_deployment.Foo.Stage_name),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		mykey, err := apigateway.NewApiKey(ctx, "mykey", nil)
+		if err != nil {
+			return err
+		}
+		main, err := apigateway.NewUsagePlanKey(ctx, "main", &apigateway.UsagePlanKeyArgs{
+			KeyId:       mykey.ID(),
+			KeyType:     pulumi.String("API_KEY"),
+			UsagePlanId: myusageplan.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

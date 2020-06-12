@@ -13,7 +13,6 @@ meta_desc: "Explore the GetUserPools function of the cognito module, including e
 Use this data source to get a list of cognito user pools.
 
 
-
 {{% examples %}}
 ## Example Usage
 

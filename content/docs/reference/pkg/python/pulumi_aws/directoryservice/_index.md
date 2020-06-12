@@ -3,7 +3,10 @@ title: Module directoryservice
 title_tag: Module directoryservice | Package pulumi_aws | Python SDK
 linktitle: directoryservice
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="directoryservice">
 <h1>directoryservice<a class="headerlink" href="#directoryservice" title="Permalink to this headline">¶</a></h1>

@@ -13,7 +13,6 @@ meta_desc: "Explore the DelegationSet resource of the route53 module, including 
 Provides a [Route53 Delegation Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API-actions-by-function.html#actions-by-function-reusable-delegation-sets) resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,7 +46,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		main, err := route53.NewDelegationSet(ctx, "main", &route53.DelegationSetArgs{
+			ReferenceName: pulumi.String("DynDNS"),
+		})
+		if err != nil {
+			return err
+		}
+		primary, err := route53.NewZone(ctx, "primary", &route53.ZoneArgs{
+			DelegationSetId: main.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		secondary, err := route53.NewZone(ctx, "secondary", &route53.ZoneArgs{
+			DelegationSetId: main.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

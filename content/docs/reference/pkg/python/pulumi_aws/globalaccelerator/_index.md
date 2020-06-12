@@ -3,7 +3,10 @@ title: Module globalaccelerator
 title_tag: Module globalaccelerator | Package pulumi_aws | Python SDK
 linktitle: globalaccelerator
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="globalaccelerator">
 <h1>globalaccelerator<a class="headerlink" href="#globalaccelerator" title="Permalink to this headline">¶</a></h1>

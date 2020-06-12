@@ -3,7 +3,10 @@ title: Module cloudfront
 title_tag: Module cloudfront | Package pulumi_aws | Python SDK
 linktitle: cloudfront
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cloudfront">
 <h1>cloudfront<a class="headerlink" href="#cloudfront" title="Permalink to this headline">¶</a></h1>

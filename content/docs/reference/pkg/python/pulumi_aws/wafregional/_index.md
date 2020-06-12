@@ -3,7 +3,10 @@ title: Module wafregional
 title_tag: Module wafregional | Package pulumi_aws | Python SDK
 linktitle: wafregional
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="wafregional">
 <h1>wafregional<a class="headerlink" href="#wafregional" title="Permalink to this headline">¶</a></h1>

@@ -14,99 +14,6 @@ Provides a Resource Group.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test = new Aws.ResourceGroups.Group("test", new Aws.ResourceGroups.GroupArgs
-        {
-            ResourceQuery = new Aws.ResourceGroups.Inputs.GroupResourceQueryArgs
-            {
-                Query = @"{
-  ""ResourceTypeFilters"": [
-    ""AWS::EC2::Instance""
-  ],
-  ""TagFilters"": [
-    {
-      ""Key"": ""Stage"",
-      ""Values"": [""Test""]
-    }
-  ]
-}
-
-",
-            },
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-test = aws.resourcegroups.Group("test", resource_query={
-    "query": """{
-  "ResourceTypeFilters": [
-    "AWS::EC2::Instance"
-  ],
-  "TagFilters": [
-    {
-      "Key": "Stage",
-      "Values": ["Test"]
-    }
-  ]
-}
-
-""",
-})
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = new aws.resourcegroups.Group("test", {
-    resourceQuery: {
-        query: `{
-  "ResourceTypeFilters": [
-    "AWS::EC2::Instance"
-  ],
-  "TagFilters": [
-    {
-      "Key": "Stage",
-      "Values": ["Test"]
-    }
-  ]
-}
-`,
-    },
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a Group Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1034,7 +941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource query. Defaults to `TAG_FILTERS_1_0`. 
+    <dd>{{% md %}}The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1063,7 +970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource query. Defaults to `TAG_FILTERS_1_0`. 
+    <dd>{{% md %}}The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1092,7 +999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource query. Defaults to `TAG_FILTERS_1_0`. 
+    <dd>{{% md %}}The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1121,7 +1028,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the resource query. Defaults to `TAG_FILTERS_1_0`. 
+    <dd>{{% md %}}The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
 {{% /md %}}</dd>
 
 </dl>

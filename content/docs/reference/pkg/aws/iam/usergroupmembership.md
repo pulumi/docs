@@ -17,46 +17,13 @@ groups.
 To exclusively manage the users in a group, see the
 [`aws.iam.GroupMembership` resource][3].
 
-## Example usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+{{% examples %}}
+## Example Usage
 
-const user1 = new aws.iam.User("user1", {});
-const group1 = new aws.iam.Group("group1", {});
-const group2 = new aws.iam.Group("group2", {});
-const example1 = new aws.iam.UserGroupMembership("example1", {
-    groups: [
-        group1.name,
-        group2.name,
-    ],
-    user: user1.name,
-});
-const group3 = new aws.iam.Group("group3", {});
-const example2 = new aws.iam.UserGroupMembership("example2", {
-    groups: [group3.name],
-    user: user1.name,
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-user1 = aws.iam.User("user1")
-group1 = aws.iam.Group("group1")
-group2 = aws.iam.Group("group2")
-example1 = aws.iam.UserGroupMembership("example1",
-    groups=[
-        group1.name,
-        group2.name,
-    ],
-    user=user1.name)
-group3 = aws.iam.Group("group3")
-example2 = aws.iam.UserGroupMembership("example2",
-    groups=[group3.name],
-    user=user1.name)
-```
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -98,7 +65,105 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		user1, err := iam.NewUser(ctx, "user1", nil)
+		if err != nil {
+			return err
+		}
+		group1, err := iam.NewGroup(ctx, "group1", nil)
+		if err != nil {
+			return err
+		}
+		group2, err := iam.NewGroup(ctx, "group2", nil)
+		if err != nil {
+			return err
+		}
+		example1, err := iam.NewUserGroupMembership(ctx, "example1", &iam.UserGroupMembershipArgs{
+			Groups: pulumi.StringArray{
+				group1.Name,
+				group2.Name,
+			},
+			User: user1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		group3, err := iam.NewGroup(ctx, "group3", nil)
+		if err != nil {
+			return err
+		}
+		example2, err := iam.NewUserGroupMembership(ctx, "example2", &iam.UserGroupMembershipArgs{
+			Groups: pulumi.StringArray{
+				group3.Name,
+			},
+			User: user1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+user1 = aws.iam.User("user1")
+group1 = aws.iam.Group("group1")
+group2 = aws.iam.Group("group2")
+example1 = aws.iam.UserGroupMembership("example1",
+    groups=[
+        group1.name,
+        group2.name,
+    ],
+    user=user1.name)
+group3 = aws.iam.Group("group3")
+example2 = aws.iam.UserGroupMembership("example2",
+    groups=[group3.name],
+    user=user1.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const user1 = new aws.iam.User("user1", {});
+const group1 = new aws.iam.Group("group1", {});
+const group2 = new aws.iam.Group("group2", {});
+const example1 = new aws.iam.UserGroupMembership("example1", {
+    groups: [
+        group1.name,
+        group2.name,
+    ],
+    user: user1.name,
+});
+const group3 = new aws.iam.Group("group3", {});
+const example2 = new aws.iam.UserGroupMembership("example2", {
+    groups: [group3.name],
+    user: user1.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UserGroupMembership Resource {#create}

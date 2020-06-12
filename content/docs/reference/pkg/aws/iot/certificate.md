@@ -13,61 +13,10 @@ meta_desc: "Explore the Certificate resource of the iot module, including exampl
 Creates and manages an AWS IoT certificate.
 
 
-
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### With CSR
-{{% example csharp %}}
-```csharp
-using System.IO;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
-        {
-            Active = true,
-            Csr = File.ReadAllText("/my/csr.pem"),
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-cert = aws.iot.Certificate("cert",
-    active=True,
-    csr=(lambda path: open(path).read())("/my/csr.pem"))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fs from "fs";
-
-const cert = new aws.iot.Certificate("cert", {
-    active: true,
-    csr: fs.readFileSync("/my/csr.pem", "utf-8"),
-});
-```
-{{% /example %}}
-
 ### Without CSR
 {{% example csharp %}}
 ```csharp
@@ -89,7 +38,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cert, err := iot.NewCertificate(ctx, "cert", &iot.CertificateArgs{
+			Active: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

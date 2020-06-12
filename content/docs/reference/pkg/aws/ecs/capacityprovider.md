@@ -14,9 +14,6 @@ Provides an ECS cluster capacity provider. More information can be found on the 
 
 > **NOTE:** The AWS API does not currently support deleting ECS cluster capacity providers. Removing this resource will only remove the state for it.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a CapacityProvider Resource {#create}

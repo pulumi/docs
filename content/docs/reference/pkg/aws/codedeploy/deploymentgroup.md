@@ -15,236 +15,10 @@ Provides a CodeDeploy Deployment Group for a CodeDeploy Application
 > **NOTE on blue/green deployments:** When using `green_fleet_provisioning_option` with the `COPY_AUTO_SCALING_GROUP` action, CodeDeploy will create a new ASG with a different name. This ASG is _not_ managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as `DISCOVER_EXISTING` with separate blue and green ASG.
 
 
-
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
-        {
-            AssumeRolePolicy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Sid"": """",
-      ""Effect"": ""Allow"",
-      ""Principal"": {
-        ""Service"": ""codedeploy.amazonaws.com""
-      },
-      ""Action"": ""sts:AssumeRole""
-    }
-  ]
-}
-
-",
-        });
-        var aWSCodeDeployRole = new Aws.Iam.RolePolicyAttachment("aWSCodeDeployRole", new Aws.Iam.RolePolicyAttachmentArgs
-        {
-            PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole",
-            Role = exampleRole.Name,
-        });
-        var exampleApplication = new Aws.CodeDeploy.Application("exampleApplication", new Aws.CodeDeploy.ApplicationArgs
-        {
-        });
-        var exampleTopic = new Aws.Sns.Topic("exampleTopic", new Aws.Sns.TopicArgs
-        {
-        });
-        var exampleDeploymentGroup = new Aws.CodeDeploy.DeploymentGroup("exampleDeploymentGroup", new Aws.CodeDeploy.DeploymentGroupArgs
-        {
-            AlarmConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAlarmConfigurationArgs
-            {
-                Alarms = 
-                {
-                    "my-alarm-name",
-                },
-                Enabled = true,
-            },
-            AppName = exampleApplication.Name,
-            AutoRollbackConfiguration = new Aws.CodeDeploy.Inputs.DeploymentGroupAutoRollbackConfigurationArgs
-            {
-                Enabled = true,
-                Events = 
-                {
-                    "DEPLOYMENT_FAILURE",
-                },
-            },
-            DeploymentGroupName = "example-group",
-            Ec2TagSets = 
-            {
-                new Aws.CodeDeploy.Inputs.DeploymentGroupEc2TagSetArgs
-                {
-                    Ec2TagFilter = 
-                    {
-                        
-                        {
-                            { "key", "filterkey1" },
-                            { "type", "KEY_AND_VALUE" },
-                            { "value", "filtervalue" },
-                        },
-                        
-                        {
-                            { "key", "filterkey2" },
-                            { "type", "KEY_AND_VALUE" },
-                            { "value", "filtervalue" },
-                        },
-                    },
-                },
-            },
-            ServiceRoleArn = exampleRole.Arn,
-            TriggerConfigurations = 
-            {
-                new Aws.CodeDeploy.Inputs.DeploymentGroupTriggerConfigurationArgs
-                {
-                    TriggerEvents = 
-                    {
-                        "DeploymentFailure",
-                    },
-                    TriggerName = "example-trigger",
-                    TriggerTargetArn = exampleTopic.Arn,
-                },
-            },
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "codedeploy.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-
-""")
-a_ws_code_deploy_role = aws.iam.RolePolicyAttachment("aWSCodeDeployRole",
-    policy_arn="arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole",
-    role=example_role.name)
-example_application = aws.codedeploy.Application("exampleApplication")
-example_topic = aws.sns.Topic("exampleTopic")
-example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGroup",
-    alarm_configuration={
-        "alarms": ["my-alarm-name"],
-        "enabled": True,
-    },
-    app_name=example_application.name,
-    auto_rollback_configuration={
-        "enabled": True,
-        "events": ["DEPLOYMENT_FAILURE"],
-    },
-    deployment_group_name="example-group",
-    ec2_tag_sets=[{
-        "ec2TagFilter": [
-            {
-                "key": "filterkey1",
-                "type": "KEY_AND_VALUE",
-                "value": "filtervalue",
-            },
-            {
-                "key": "filterkey2",
-                "type": "KEY_AND_VALUE",
-                "value": "filtervalue",
-            },
-        ],
-    }],
-    service_role_arn=example_role.arn,
-    trigger_configurations=[{
-        "triggerEvents": ["DeploymentFailure"],
-        "triggerName": "example-trigger",
-        "triggerTargetArn": example_topic.arn,
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleRole = new aws.iam.Role("example", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "codedeploy.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-`,
-});
-const aWSCodeDeployRole = new aws.iam.RolePolicyAttachment("AWSCodeDeployRole", {
-    policyArn: "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole",
-    role: exampleRole.name,
-});
-const exampleApplication = new aws.codedeploy.Application("example", {});
-const exampleTopic = new aws.sns.Topic("example", {});
-const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
-    alarmConfiguration: {
-        alarms: ["my-alarm-name"],
-        enabled: true,
-    },
-    appName: exampleApplication.name,
-    autoRollbackConfiguration: {
-        enabled: true,
-        events: ["DEPLOYMENT_FAILURE"],
-    },
-    deploymentGroupName: "example-group",
-    ec2TagSets: [{
-        ec2TagFilters: [
-            {
-                key: "filterkey1",
-                type: "KEY_AND_VALUE",
-                value: "filtervalue",
-            },
-            {
-                key: "filterkey2",
-                type: "KEY_AND_VALUE",
-                value: "filtervalue",
-            },
-        ],
-    }],
-    serviceRoleArn: exampleRole.arn,
-    triggerConfigurations: [{
-        triggerEvents: ["DeploymentFailure"],
-        triggerName: "example-trigger",
-        triggerTargetArn: exampleTopic.arn,
-    }],
-});
-```
-{{% /example %}}
-
 ### Blue Green Deployments with ECS
 {{% example csharp %}}
 ```csharp
@@ -490,7 +264,55 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApplication, err := codedeploy.NewApplication(ctx, "exampleApplication", nil)
+		if err != nil {
+			return err
+		}
+		exampleDeploymentGroup, err := codedeploy.NewDeploymentGroup(ctx, "exampleDeploymentGroup", &codedeploy.DeploymentGroupArgs{
+			AppName: exampleApplication.Name,
+			BlueGreenDeploymentConfig: &codedeploy.DeploymentGroupBlueGreenDeploymentConfigArgs{
+				DeploymentReadyOption: &codedeploy.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs{
+					ActionOnTimeout:   pulumi.String("STOP_DEPLOYMENT"),
+					WaitTimeInMinutes: pulumi.Int(60),
+				},
+				GreenFleetProvisioningOption: &codedeploy.DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs{
+					Action: pulumi.String("DISCOVER_EXISTING"),
+				},
+				TerminateBlueInstancesOnDeploymentSuccess: &codedeploy.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs{
+					Action: pulumi.String("KEEP_ALIVE"),
+				},
+			},
+			DeploymentGroupName: pulumi.String("example-group"),
+			DeploymentStyle: &codedeploy.DeploymentGroupDeploymentStyleArgs{
+				DeploymentOption: pulumi.String("WITH_TRAFFIC_CONTROL"),
+				DeploymentType:   pulumi.String("BLUE_GREEN"),
+			},
+			LoadBalancerInfo: &codedeploy.DeploymentGroupLoadBalancerInfoArgs{
+				ElbInfo: []map[string]interface{}{
+					map[string]interface{}{
+						"name": aws_elb.Example.Name,
+					},
+				},
+			},
+			ServiceRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -18,7 +18,6 @@ this provider does not _create_ this resource, but instead "adopts" it
 into management.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +47,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultAz1, err := ec2.NewDefaultSubnet(ctx, "defaultAz1", &ec2.DefaultSubnetArgs{
+			AvailabilityZone: pulumi.String("us-west-2a"),
+			Tags: map[string]interface{}{
+				"Name": "Default subnet for us-west-2a",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

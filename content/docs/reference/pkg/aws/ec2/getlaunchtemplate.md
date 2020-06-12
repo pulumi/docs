@@ -13,7 +13,6 @@ meta_desc: "Explore the GetLaunchTemplate function of the ec2 module, including 
 Provides information about a Launch Template.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -93,7 +92,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := ec2.LookupLaunchTemplate(ctx, &ec2.LookupLaunchTemplateArgs{
+			Filters: ec2.getLaunchTemplateFilterArray{
+				&ec2.LookupLaunchTemplateFilter{
+					Name: "launch-template-name",
+					Values: []string{
+						"some-template",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

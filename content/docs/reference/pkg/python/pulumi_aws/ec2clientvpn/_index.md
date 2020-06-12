@@ -3,7 +3,10 @@ title: Module ec2clientvpn
 title_tag: Module ec2clientvpn | Package pulumi_aws | Python SDK
 linktitle: ec2clientvpn
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ec2clientvpn">
 <h1>ec2clientvpn<a class="headerlink" href="#ec2clientvpn" title="Permalink to this headline">¶</a></h1>

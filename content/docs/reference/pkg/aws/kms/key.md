@@ -13,7 +13,6 @@ meta_desc: "Explore the Key resource of the kms module, including examples, inpu
 Provides a KMS customer master key.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		key, err := kms.NewKey(ctx, "key", &kms.KeyArgs{
+			DeletionWindowInDays: pulumi.Int(10),
+			Description:          pulumi.String("KMS key 1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

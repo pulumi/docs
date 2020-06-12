@@ -17,7 +17,6 @@ See more about [Account Password Policy](http://docs.aws.amazon.com/IAM/latest/U
 in the official AWS docs.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +47,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		strict, err := iam.NewAccountPasswordPolicy(ctx, "strict", &iam.AccountPasswordPolicyArgs{
+			AllowUsersToChangePassword: pulumi.Bool(true),
+			MinimumPasswordLength:      pulumi.Int(8),
+			RequireLowercaseCharacters: pulumi.Bool(true),
+			RequireNumbers:             pulumi.Bool(true),
+			RequireSymbols:             pulumi.Bool(true),
+			RequireUppercaseCharacters: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

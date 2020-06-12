@@ -13,7 +13,6 @@ meta_desc: "Explore the ClusterParameterGroup resource of the neptune module, in
 Manages a Neptune Cluster Parameter Group
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,7 +36,7 @@ class MyStack : Stack
                 new Aws.Neptune.Inputs.ClusterParameterGroupParameterArgs
                 {
                     Name = "neptune_enable_audit_log",
-                    Value = 1,
+                    Value = "1",
                 },
             },
         });
@@ -48,7 +47,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := neptune.NewClusterParameterGroup(ctx, "example", &neptune.ClusterParameterGroupArgs{
+			Description: pulumi.String("neptune cluster parameter group"),
+			Family:      pulumi.String("neptune1"),
+			Parameters: neptune.ClusterParameterGroupParameterArray{
+				&neptune.ClusterParameterGroupParameterArgs{
+					Name:  pulumi.String("neptune_enable_audit_log"),
+					Value: pulumi.String("1"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

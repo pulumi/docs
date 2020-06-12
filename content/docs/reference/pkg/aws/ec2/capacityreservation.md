@@ -13,7 +13,6 @@ meta_desc: "Explore the CapacityReservation resource of the ec2 module, includin
 Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration.
 
 
-
 {{% examples %}}
 ## Example Usage
 

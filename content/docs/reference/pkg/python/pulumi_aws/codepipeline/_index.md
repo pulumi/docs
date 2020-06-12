@@ -3,7 +3,10 @@ title: Module codepipeline
 title_tag: Module codepipeline | Package pulumi_aws | Python SDK
 linktitle: codepipeline
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="codepipeline">
 <h1>codepipeline<a class="headerlink" href="#codepipeline" title="Permalink to this headline">¶</a></h1>
@@ -346,7 +349,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">bar_pipeline</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codepipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;barPipeline&quot;</span><span class="p">,</span>
     <span class="n">artifact_store</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;encryption_key&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kms.Alias&quot;</span><span class="p">][</span><span class="s2">&quot;s3kmskey&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_kms_alias&quot;</span><span class="p">][</span><span class="s2">&quot;s3kmskey&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;KMS&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
@@ -392,7 +395,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;secretToken&quot;</span><span class="p">:</span> <span class="n">webhook_secret</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;jsonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;$$.ref&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;jsonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;$.ref&quot;</span><span class="p">,</span>
         <span class="s2">&quot;matchEquals&quot;</span><span class="p">:</span> <span class="s2">&quot;refs/heads/</span><span class="si">{Branch}</span><span class="s2">&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">target_action</span><span class="o">=</span><span class="s2">&quot;Source&quot;</span><span class="p">,</span>

@@ -3,7 +3,10 @@ title: Module qldb
 title_tag: Module qldb | Package pulumi_aws | Python SDK
 linktitle: qldb
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="qldb">
 <h1>qldb<a class="headerlink" href="#qldb" title="Permalink to this headline">¶</a></h1>

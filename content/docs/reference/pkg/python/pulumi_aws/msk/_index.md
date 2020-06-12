@@ -3,7 +3,10 @@ title: Module msk
 title_tag: Module msk | Package pulumi_aws | Python SDK
 linktitle: msk
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="msk">
 <h1>msk<a class="headerlink" href="#msk" title="Permalink to this headline">¶</a></h1>

@@ -13,92 +13,6 @@ meta_desc: "Explore the Topic resource of the sns module, including examples, in
 Provides an SNS topic resource
 
 
-## Example with Delivery Policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const userUpdates = new aws.sns.Topic("user_updates", {
-    deliveryPolicy: `{
-  "http": {
-    "defaultHealthyRetryPolicy": {
-      "minDelayTarget": 20,
-      "maxDelayTarget": 20,
-      "numRetries": 3,
-      "numMaxDelayRetries": 0,
-      "numNoDelayRetries": 0,
-      "numMinDelayRetries": 0,
-      "backoffFunction": "linear"
-    },
-    "disableSubscriptionOverrides": false,
-    "defaultThrottlePolicy": {
-      "maxReceivesPerSecond": 1
-    }
-  }
-}
-`,
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-user_updates = aws.sns.Topic("userUpdates", delivery_policy="""{
-  "http": {
-    "defaultHealthyRetryPolicy": {
-      "minDelayTarget": 20,
-      "maxDelayTarget": 20,
-      "numRetries": 3,
-      "numMaxDelayRetries": 0,
-      "numNoDelayRetries": 0,
-      "numMinDelayRetries": 0,
-      "backoffFunction": "linear"
-    },
-    "disableSubscriptionOverrides": false,
-    "defaultThrottlePolicy": {
-      "maxReceivesPerSecond": 1
-    }
-  }
-}
-
-""")
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var userUpdates = new Aws.Sns.Topic("userUpdates", new Aws.Sns.TopicArgs
-        {
-            DeliveryPolicy = @"{
-  ""http"": {
-    ""defaultHealthyRetryPolicy"": {
-      ""minDelayTarget"": 20,
-      ""maxDelayTarget"": 20,
-      ""numRetries"": 3,
-      ""numMaxDelayRetries"": 0,
-      ""numNoDelayRetries"": 0,
-      ""numMinDelayRetries"": 0,
-      ""backoffFunction"": ""linear""
-    },
-    ""disableSubscriptionOverrides"": false,
-    ""defaultThrottlePolicy"": {
-      ""maxReceivesPerSecond"": 1
-    }
-  }
-}
-
-",
-        });
-    }
-
-}
-```
-
 ## Example with Server-side encryption (SSE)
 
 ```typescript
@@ -131,6 +45,26 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		userUpdates, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+			KmsMasterKeyId: pulumi.String("alias/aws/sns"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## Message Delivery Status Arguments
 
@@ -160,7 +94,24 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		userUpdates, err := sns.NewTopic(ctx, "userUpdates", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

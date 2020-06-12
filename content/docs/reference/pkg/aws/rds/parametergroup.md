@@ -19,7 +19,6 @@ Provides an RDS DB parameter group resource .Documentation of the available para
 * [PostgreSQL Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.html#Appendix.PostgreSQL.CommonDBATasks.Parameters)
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -13,7 +13,6 @@ meta_desc: "Explore the SourceCredential resource of the codebuild module, inclu
 Provides a CodeBuild Source Credentials Resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := codebuild.NewSourceCredential(ctx, "example", &codebuild.SourceCredentialArgs{
+			AuthType:   pulumi.String("PERSONAL_ACCESS_TOKEN"),
+			ServerType: pulumi.String("GITHUB"),
+			Token:      pulumi.String("example"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -93,7 +113,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := codebuild.NewSourceCredential(ctx, "example", &codebuild.SourceCredentialArgs{
+			AuthType:   pulumi.String("BASIC_AUTH"),
+			ServerType: pulumi.String("BITBUCKET"),
+			Token:      pulumi.String("example"),
+			UserName:   pulumi.String("test-user"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module macie
 title_tag: Module macie | Package pulumi_aws | Python SDK
 linktitle: macie
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="macie">
 <h1>macie<a class="headerlink" href="#macie" title="Permalink to this headline">¶</a></h1>

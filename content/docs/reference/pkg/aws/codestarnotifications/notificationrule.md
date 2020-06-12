@@ -12,9 +12,6 @@ meta_desc: "Explore the NotificationRule resource of the codestarnotifications m
 
 Provides a CodeStar Notifications Rule.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NotificationRule Resource {#create}

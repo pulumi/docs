@@ -3,7 +3,10 @@ title: Module iot
 title_tag: Module iot | Package pulumi_aws | Python SDK
 linktitle: iot
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="iot">
 <h1>iot<a class="headerlink" href="#iot" title="Permalink to this headline">¶</a></h1>
@@ -904,7 +907,6 @@ iam_policy_for_lambda = aws.iam.RolePolicy(&quot;iamPolicyForLambda&quot;,
     role=role.id)
 ```
 
-
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] description: The description of the rule.
@@ -975,7 +977,7 @@ The **firehose** object supports the following:
 The **iot_events** object supports the following:
 
   * `inputName` (`pulumi.Input[str]`) - The name of the AWS IoT Events input.
-  * `messageId` (`pulumi.Input[str]`) - Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+  * `messageId` (`pulumi.Input[str]`) - Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
 
 The **kinesis** object supports the following:
@@ -990,7 +992,7 @@ The **lambda_** object supports the following:
 
 The **republish** object supports the following:
 
-  * `qos` (`pulumi.Input[float]`) - The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
+  * `qos` (`pulumi.Input[float]`) - The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
   * `topic` (`pulumi.Input[str]`) - The name of the MQTT topic the message should be republished to.
 
@@ -1139,7 +1141,7 @@ The **firehose** object supports the following:
 The **iot_events** object supports the following:
 
   * `inputName` (`pulumi.Input[str]`) - The name of the AWS IoT Events input.
-  * `messageId` (`pulumi.Input[str]`) - Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+  * `messageId` (`pulumi.Input[str]`) - Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
 
 The **kinesis** object supports the following:
@@ -1154,7 +1156,7 @@ The **lambda_** object supports the following:
 
 The **republish** object supports the following:
 
-  * `qos` (`pulumi.Input[float]`) - The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
+  * `qos` (`pulumi.Input[float]`) - The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
   * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
   * `topic` (`pulumi.Input[str]`) - The name of the MQTT topic the message should be republished to.
 

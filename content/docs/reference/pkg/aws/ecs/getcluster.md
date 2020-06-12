@@ -14,7 +14,6 @@ The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -3,7 +3,10 @@ title: Module kms
 title_tag: Module kms | Package pulumi_aws | Python SDK
 linktitle: kms
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="kms">
 <h1>kms<a class="headerlink" href="#kms" title="Permalink to this headline">¶</a></h1>

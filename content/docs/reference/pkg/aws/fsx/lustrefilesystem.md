@@ -14,64 +14,6 @@ Manages a FSx Lustre File System. See the [FSx Lustre Guide](https://docs.aws.am
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Fsx.LustreFileSystem("example", new Aws.Fsx.LustreFileSystemArgs
-        {
-            ImportPath = $"s3://{aws_s3_bucket.Example.Bucket}",
-            StorageCapacity = 1200,
-            SubnetIds = aws_subnet.Example.Id,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.fsx.LustreFileSystem("example",
-    import_path=f"s3://{aws_s3_bucket['example']['bucket']}",
-    storage_capacity=1200,
-    subnet_ids=aws_subnet["example"]["id"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.fsx.LustreFileSystem("example", {
-    importPath: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}`,
-    storageCapacity: 1200,
-    subnetIds: aws_subnet_example.id,
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a LustreFileSystem Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

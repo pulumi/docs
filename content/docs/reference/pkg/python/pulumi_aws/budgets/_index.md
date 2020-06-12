@@ -3,7 +3,10 @@ title: Module budgets
 title_tag: Module budgets | Package pulumi_aws | Python SDK
 linktitle: budgets
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="budgets">
 <h1>budgets<a class="headerlink" href="#budgets" title="Permalink to this headline">¶</a></h1>

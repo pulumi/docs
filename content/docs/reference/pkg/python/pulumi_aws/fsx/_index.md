@@ -3,7 +3,10 @@ title: Module fsx
 title_tag: Module fsx | Package pulumi_aws | Python SDK
 linktitle: fsx
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="fsx">
 <h1>fsx<a class="headerlink" href="#fsx" title="Permalink to this headline">¶</a></h1>

@@ -15,7 +15,6 @@ Provides a CodePipeline.
 > **NOTE on `aws.codepipeline.Pipeline`:** - the `GITHUB_TOKEN` environment variable must be set if the GitHub provider is specified.
 
 
-
 {{% examples %}}
 ## Example Usage
 

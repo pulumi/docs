@@ -3,7 +3,10 @@ title: Module storagegateway
 title_tag: Module storagegateway | Package pulumi_aws | Python SDK
 linktitle: storagegateway
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="storagegateway">
 <h1>storagegateway<a class="headerlink" href="#storagegateway" title="Permalink to this headline">¶</a></h1>
@@ -29,7 +32,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">Cache</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
-    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;storagegateway.getLocalDisk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_storagegateway_local_disk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -1030,7 +1033,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">UploadBuffer</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
-    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;storagegateway.getLocalDisk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_storagegateway_local_disk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -1123,7 +1126,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">storagegateway</span><span class="o">.</span><span class="n">WorkingStorage</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
-    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;storagegateway.getLocalDisk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">disk_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_storagegateway_local_disk&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">gateway_arn</span><span class="o">=</span><span class="n">aws_storagegateway_gateway</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">])</span>
 </pre></div>
 </div>

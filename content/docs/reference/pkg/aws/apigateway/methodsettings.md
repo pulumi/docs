@@ -13,7 +13,6 @@ meta_desc: "Explore the MethodSettings resource of the apigateway module, includ
 Provides an API Gateway Method Settings, e.g. logging or monitoring.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -78,7 +77,7 @@ class MyStack : Stack
             RequestTemplates = 
             {
                 { "application/xml", @"{
-   ""body"" : $$input.json('$$')
+   ""body"" : $input.json('$')
 }
 
 " },
@@ -131,7 +130,7 @@ test_integration = aws.apigateway.Integration("testIntegration",
     http_method=test_method.http_method,
     request_templates={
         "application/xml": """{
-   "body" : $$input.json('$$')
+   "body" : $input.json('$')
 }
 
 """,
@@ -1047,7 +1046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached. 
+    <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1164,7 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached. 
+    <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1281,7 +1280,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached. 
+    <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1398,7 +1397,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached. 
+    <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

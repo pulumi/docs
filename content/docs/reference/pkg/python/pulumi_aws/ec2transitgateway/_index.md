@@ -3,7 +3,10 @@ title: Module ec2transitgateway
 title_tag: Module ec2transitgateway | Package pulumi_aws | Python SDK
 linktitle: ec2transitgateway
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ec2transitgateway">
 <h1>ec2transitgateway<a class="headerlink" href="#ec2transitgateway" title="Permalink to this headline">¶</a></h1>

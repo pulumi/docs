@@ -16,7 +16,6 @@ EC2-Classic Platform. For instances inside a VPC, use the
 attribute instead.
 
 
-
 {{% examples %}}
 ## Example Usage
 

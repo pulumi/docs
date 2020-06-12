@@ -13,7 +13,6 @@ meta_desc: "Explore the SubnetGroup resource of the neptune module, including ex
 Provides an Neptune subnet group resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

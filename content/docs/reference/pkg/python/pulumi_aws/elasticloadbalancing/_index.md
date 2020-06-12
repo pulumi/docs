@@ -3,7 +3,10 @@ title: Module elasticloadbalancing
 title_tag: Module elasticloadbalancing | Package pulumi_aws | Python SDK
 linktitle: elasticloadbalancing
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="elasticloadbalancing">
 <h1>elasticloadbalancing<a class="headerlink" href="#elasticloadbalancing" title="Permalink to this headline">¶</a></h1>
@@ -332,7 +335,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">policy_names</span><span class="o">=</span><span class="p">[</span><span class="n">wu_tang_ssl</span><span class="o">.</span><span class="n">policy_name</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>This example shows how to customize the TLS settings of an HTTPS listener.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
@@ -362,7 +364,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">policy_names</span><span class="o">=</span><span class="p">[</span><span class="n">wu_tang_ssl_tls_1_1</span><span class="o">.</span><span class="n">policy_name</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>This example shows how to add a <a class="reference external" href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html">Predefined Security Policy for ELBs</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

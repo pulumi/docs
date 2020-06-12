@@ -13,7 +13,6 @@ meta_desc: "Explore the ConfigurationAggregator resource of the cfg module, incl
 Manages an AWS Config Configuration Aggregator
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		account, err := cfg.NewConfigurationAggregator(ctx, "account", &cfg.ConfigurationAggregatorArgs{
+			AccountAggregationSource: &cfg.ConfigurationAggregatorAccountAggregationSourceArgs{
+				AccountIds: pulumi.StringArray{
+					pulumi.String("123456789012"),
+				},
+				Regions: pulumi.StringArray{
+					pulumi.String("us-west-2"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -75,121 +100,6 @@ const account = new aws.cfg.ConfigurationAggregator("account", {
         regions: ["us-west-2"],
     },
 });
-```
-{{% /example %}}
-
-### Organization Based Aggregation
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var organizationRole = new Aws.Iam.Role("organizationRole", new Aws.Iam.RoleArgs
-        {
-            AssumeRolePolicy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Sid"": """",
-      ""Effect"": ""Allow"",
-      ""Principal"": {
-        ""Service"": ""config.amazonaws.com""
-      },
-      ""Action"": ""sts:AssumeRole""
-    }
-  ]
-}
-
-",
-        });
-        var organizationConfigurationAggregator = new Aws.Cfg.ConfigurationAggregator("organizationConfigurationAggregator", new Aws.Cfg.ConfigurationAggregatorArgs
-        {
-            OrganizationAggregationSource = new Aws.Cfg.Inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs
-            {
-                AllRegions = true,
-                RoleArn = organizationRole.Arn,
-            },
-        });
-        var organizationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("organizationRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
-        {
-            PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
-            Role = organizationRole.Name,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-organization_role = aws.iam.Role("organizationRole", assume_role_policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "config.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-
-""")
-organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", organization_aggregation_source={
-    "allRegions": True,
-    "role_arn": organization_role.arn,
-})
-organization_role_policy_attachment = aws.iam.RolePolicyAttachment("organizationRolePolicyAttachment",
-    policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
-    role=organization_role.name)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const organizationRole = new aws.iam.Role("organization", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "config.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-`,
-});
-const organizationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("organization", {
-    policyArn: "arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
-    role: organizationRole.name,
-});
-const organizationConfigurationAggregator = new aws.cfg.ConfigurationAggregator("organization", {
-    organizationAggregationSource: {
-        allRegions: true,
-        roleArn: organizationRole.arn,
-    },
-}, { dependsOn: [organizationRolePolicyAttachment] });
 ```
 {{% /example %}}
 

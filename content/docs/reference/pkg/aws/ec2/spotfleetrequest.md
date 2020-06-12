@@ -14,7 +14,6 @@ Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -65,7 +64,7 @@ class MyStack : Stack
                     {
                         { "Name", "spot-fleet-example" },
                     },
-                    WeightedCapacity = 35,
+                    WeightedCapacity = "35",
                 },
             },
             SpotPrice = "0.03",
@@ -79,7 +78,58 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cheapCompute, err := ec2.NewSpotFleetRequest(ctx, "cheapCompute", &ec2.SpotFleetRequestArgs{
+			AllocationStrategy: pulumi.String("diversified"),
+			IamFleetRole:       pulumi.String("arn:aws:iam::12345678:role/spot-fleet"),
+			LaunchSpecifications: ec2.SpotFleetRequestLaunchSpecificationArray{
+				&ec2.SpotFleetRequestLaunchSpecificationArgs{
+					Ami:                   pulumi.String("ami-1234"),
+					IamInstanceProfileArn: pulumi.String(aws_iam_instance_profile.Example.Arn),
+					InstanceType:          pulumi.String("m4.10xlarge"),
+					PlacementTenancy:      pulumi.String("dedicated"),
+					SpotPrice:             pulumi.String("2.793"),
+				},
+				&ec2.SpotFleetRequestLaunchSpecificationArgs{
+					Ami:                   pulumi.String("ami-5678"),
+					AvailabilityZone:      pulumi.String("us-west-1a"),
+					IamInstanceProfileArn: pulumi.String(aws_iam_instance_profile.Example.Arn),
+					InstanceType:          pulumi.String("m4.4xlarge"),
+					KeyName:               pulumi.String("my-key"),
+					RootBlockDevice: []map[string]interface{}{
+						map[string]interface{}{
+							"volumeSize": "300",
+							"volumeType": "gp2",
+						},
+					},
+					SpotPrice: pulumi.String("1.117"),
+					SubnetId:  pulumi.String("subnet-1234"),
+					Tags: map[string]interface{}{
+						"Name": "spot-fleet-example",
+					},
+					WeightedCapacity: pulumi.String("35"),
+				},
+			},
+			SpotPrice:      pulumi.String("0.03"),
+			TargetCapacity: pulumi.Int(6),
+			ValidUntil:     pulumi.String("2019-11-04T20:44:20Z"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -206,7 +256,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := ec2.NewSpotFleetRequest(ctx, "foo", &ec2.SpotFleetRequestArgs{
+			IamFleetRole: pulumi.String("arn:aws:iam::12345678:role/spot-fleet"),
+			LaunchSpecifications: ec2.SpotFleetRequestLaunchSpecificationArray{
+				&ec2.SpotFleetRequestLaunchSpecificationArgs{
+					Ami:              pulumi.String("ami-d06a90b0"),
+					AvailabilityZone: pulumi.String("us-west-2a"),
+					InstanceType:     pulumi.String("m1.small"),
+					KeyName:          pulumi.String("my-key"),
+				},
+				&ec2.SpotFleetRequestLaunchSpecificationArgs{
+					Ami:              pulumi.String("ami-d06a90b0"),
+					AvailabilityZone: pulumi.String("us-west-2a"),
+					InstanceType:     pulumi.String("m5.large"),
+					KeyName:          pulumi.String("my-key"),
+				},
+			},
+			SpotPrice:      pulumi.String("0.005"),
+			TargetCapacity: pulumi.Int(2),
+			ValidUntil:     pulumi.String("2019-11-04T20:44:20Z"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -534,8 +620,7 @@ instance stops or terminates when it is interrupted. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}
-The number of Spot pools across which to allocate your target Spot capacity.
+    <dd>{{% md %}}The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
@@ -760,8 +845,7 @@ instance stops or terminates when it is interrupted. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}
-The number of Spot pools across which to allocate your target Spot capacity.
+    <dd>{{% md %}}The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
@@ -986,8 +1070,7 @@ instance stops or terminates when it is interrupted. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}
-The number of Spot pools across which to allocate your target Spot capacity.
+    <dd>{{% md %}}The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
@@ -1212,8 +1295,7 @@ instance stops or terminates when it is interrupted. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}
-The number of Spot pools across which to allocate your target Spot capacity.
+    <dd>{{% md %}}The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
@@ -1724,8 +1806,7 @@ instance stops or terminates when it is interrupted. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}
-The number of Spot pools across which to allocate your target Spot capacity.
+    <dd>{{% md %}}The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
@@ -1971,8 +2052,7 @@ instance stops or terminates when it is interrupted. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}
-The number of Spot pools across which to allocate your target Spot capacity.
+    <dd>{{% md %}}The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
@@ -2218,8 +2298,7 @@ instance stops or terminates when it is interrupted. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}
-The number of Spot pools across which to allocate your target Spot capacity.
+    <dd>{{% md %}}The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
@@ -2465,8 +2544,7 @@ instance stops or terminates when it is interrupted. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}
-The number of Spot pools across which to allocate your target Spot capacity.
+    <dd>{{% md %}}The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.

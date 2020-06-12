@@ -13,7 +13,6 @@ meta_desc: "Explore the Resolver resource of the appsync module, including examp
 Provides an AppSync Resolver.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,8 +67,8 @@ schema {
             {
                 CachingKeys = 
                 {
-                    "$$context.identity.sub",
-                    "$$context.arguments.id",
+                    "$context.identity.sub",
+                    "$context.arguments.id",
                 },
                 Ttl = 60,
             },
@@ -80,15 +79,15 @@ schema {
     ""method"": ""GET"",
     ""resourcePath"": ""/"",
     ""params"":{
-        ""headers"": $$utils.http.copyheaders($$ctx.request.headers)
+        ""headers"": $utils.http.copyheaders($ctx.request.headers)
     }
 }
 
 ",
-            ResponseTemplate = @"#if($$ctx.result.statusCode == 200)
-    $$ctx.result.body
+            ResponseTemplate = @"#if($ctx.result.statusCode == 200)
+    $ctx.result.body
 #else
-    $$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)
+    $utils.appendError($ctx.result.body, $ctx.result.statusCode)
 #end
 
 ",
@@ -110,7 +109,7 @@ schema {
                 },
             },
             RequestTemplate = "{}",
-            ResponseTemplate = "$$util.toJson($$ctx.result)",
+            ResponseTemplate = "$util.toJson($ctx.result)",
             Type = "Mutation",
         });
     }
@@ -160,8 +159,8 @@ test_resolver = aws.appsync.Resolver("testResolver",
     api_id=test_graph_ql_api.id,
     caching_config={
         "cachingKeys": [
-            "$$context.identity.sub",
-            "$$context.arguments.id",
+            "$context.identity.sub",
+            "$context.arguments.id",
         ],
         "ttl": 60,
     },
@@ -172,15 +171,15 @@ test_resolver = aws.appsync.Resolver("testResolver",
     "method": "GET",
     "resourcePath": "/",
     "params":{
-        "headers": $$utils.http.copyheaders($$ctx.request.headers)
+        "headers": $utils.http.copyheaders($ctx.request.headers)
     }
 }
 
 """,
-    response_template="""#if($$ctx.result.statusCode == 200)
-    $$ctx.result.body
+    response_template="""#if($ctx.result.statusCode == 200)
+    $ctx.result.body
 #else
-    $$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)
+    $utils.appendError($ctx.result.body, $ctx.result.statusCode)
 #end
 
 """,
@@ -198,7 +197,7 @@ mutation_pipeline_test = aws.appsync.Resolver("mutationPipelineTest",
         ],
     },
     request_template="{}",
-    response_template="$$util.toJson($$ctx.result)",
+    response_template="$util.toJson($ctx.result)",
     type="Mutation")
 ```
 {{% /example %}}

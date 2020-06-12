@@ -13,7 +13,6 @@ meta_desc: "Explore the EnvironmentEC2 resource of the cloud9 module, including 
 Provides a Cloud9 EC2 Development Environment.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloud9"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := cloud9.NewEnvironmentEC2(ctx, "example", &cloud9.EnvironmentEC2Args{
+			InstanceType: pulumi.String("t2.micro"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

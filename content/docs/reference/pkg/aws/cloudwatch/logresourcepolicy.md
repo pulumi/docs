@@ -13,7 +13,6 @@ meta_desc: "Explore the LogResourcePolicy resource of the cloudwatch module, inc
 Provides a resource to manage a CloudWatch log resource policy.
 
 
-
 {{% examples %}}
 ## Example Usage
 

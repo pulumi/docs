@@ -13,7 +13,6 @@ meta_desc: "Explore the Domain resource of the swf module, including examples, i
 Provides an SWF Domain resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -31,7 +30,7 @@ class MyStack : Stack
         var foo = new Aws.Swf.Domain("foo", new Aws.Swf.DomainArgs
         {
             Description = "SWF Domain",
-            WorkflowExecutionRetentionPeriodInDays = 30,
+            WorkflowExecutionRetentionPeriodInDays = "30",
         });
     }
 
@@ -40,7 +39,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/swf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := swf.NewDomain(ctx, "foo", &swf.DomainArgs{
+			Description:                            pulumi.String("SWF Domain"),
+			WorkflowExecutionRetentionPeriodInDays: pulumi.String("30"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

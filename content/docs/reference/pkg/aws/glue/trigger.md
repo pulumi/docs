@@ -13,7 +13,6 @@ meta_desc: "Explore the Trigger resource of the glue module, including examples,
 Manages a Glue Trigger resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,7 +56,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Actions: glue.TriggerActionArray{
+				&glue.TriggerActionArgs{
+					JobName: pulumi.String(aws_glue_job.Example1.Name),
+				},
+			},
+			Predicate: &glue.TriggerPredicateArgs{
+				Conditions: glue.TriggerPredicateConditionArray{
+					&glue.TriggerPredicateConditionArgs{
+						JobName: pulumi.String(aws_glue_job.Example2.Name),
+						State:   pulumi.String("SUCCEEDED"),
+					},
+				},
+			},
+			Type: pulumi.String("CONDITIONAL"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -127,7 +158,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Actions: glue.TriggerActionArray{
+				&glue.TriggerActionArgs{
+					JobName: pulumi.String(aws_glue_job.Example.Name),
+				},
+			},
+			Type: pulumi.String("ON_DEMAND"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -186,7 +241,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Actions: glue.TriggerActionArray{
+				&glue.TriggerActionArgs{
+					JobName: pulumi.String(aws_glue_job.Example.Name),
+				},
+			},
+			Schedule: pulumi.String("cron(15 12 * * ? *)"),
+			Type:     pulumi.String("SCHEDULED"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -257,7 +337,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Actions: glue.TriggerActionArray{
+				&glue.TriggerActionArgs{
+					CrawlerName: pulumi.String(aws_glue_crawler.Example1.Name),
+				},
+			},
+			Predicate: &glue.TriggerPredicateArgs{
+				Conditions: glue.TriggerPredicateConditionArray{
+					&glue.TriggerPredicateConditionArgs{
+						JobName: pulumi.String(aws_glue_job.Example2.Name),
+						State:   pulumi.String("SUCCEEDED"),
+					},
+				},
+			},
+			Type: pulumi.String("CONDITIONAL"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -338,7 +450,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewTrigger(ctx, "example", &glue.TriggerArgs{
+			Actions: glue.TriggerActionArray{
+				&glue.TriggerActionArgs{
+					JobName: pulumi.String(aws_glue_job.Example1.Name),
+				},
+			},
+			Predicate: &glue.TriggerPredicateArgs{
+				Conditions: glue.TriggerPredicateConditionArray{
+					&glue.TriggerPredicateConditionArgs{
+						CrawlState:  pulumi.String("SUCCEEDED"),
+						CrawlerName: pulumi.String(aws_glue_crawler.Example2.Name),
+					},
+				},
+			},
+			Type: pulumi.String("CONDITIONAL"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

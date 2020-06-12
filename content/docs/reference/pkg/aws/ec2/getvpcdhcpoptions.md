@@ -13,7 +13,6 @@ meta_desc: "Explore the GetVpcDhcpOptions function of the ec2 module, including 
 Retrieve information about an EC2 DHCP Options configuration.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.LookupVpcDhcpOptions(ctx, &ec2.LookupVpcDhcpOptionsArgs{
+			DhcpOptionsId: "dopts-12345678",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -101,7 +118,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.LookupVpcDhcpOptions(ctx, &ec2.LookupVpcDhcpOptionsArgs{
+			Filters: ec2.getVpcDhcpOptionsFilterArray{
+				&ec2.LookupVpcDhcpOptionsFilter{
+					Name: "key",
+					Values: []string{
+						"domain-name",
+					},
+				},
+				&ec2.LookupVpcDhcpOptionsFilter{
+					Name: "value",
+					Values: []string{
+						"example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

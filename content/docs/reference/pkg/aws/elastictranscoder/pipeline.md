@@ -13,7 +13,6 @@ meta_desc: "Explore the Pipeline resource of the elastictranscoder module, inclu
 Provides an Elastic Transcoder pipeline resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,7 +49,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bar, err := elastictranscoder.NewPipeline(ctx, "bar", &elastictranscoder.PipelineArgs{
+			ContentConfig: &elastictranscoder.PipelineContentConfigArgs{
+				Bucket:       pulumi.String(aws_s3_bucket.Content_bucket.Bucket),
+				StorageClass: pulumi.String("Standard"),
+			},
+			InputBucket: pulumi.String(aws_s3_bucket.Input_bucket.Bucket),
+			Role:        pulumi.String(aws_iam_role.Test_role.Arn),
+			ThumbnailConfig: &elastictranscoder.PipelineThumbnailConfigArgs{
+				Bucket:       pulumi.String(aws_s3_bucket.Thumb_bucket.Bucket),
+				StorageClass: pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

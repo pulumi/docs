@@ -3,7 +3,10 @@ title: Module docdb
 title_tag: Module docdb | Package pulumi_aws | Python SDK
 linktitle: docdb
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="docdb">
 <h1>docdb<a class="headerlink" href="#docdb" title="Permalink to this headline">¶</a></h1>

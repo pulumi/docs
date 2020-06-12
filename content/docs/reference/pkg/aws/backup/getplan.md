@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPlan function of the backup module, including example
 Use this data source to get information on an existing backup plan.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := backup.LookupPlan(ctx, &backup.LookupPlanArgs{
+			PlanId: "tf_example_backup_plan_id",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

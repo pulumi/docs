@@ -13,7 +13,6 @@ meta_desc: "Explore the GatewayAssociationProposal resource of the directconnect
 Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the `aws.directconnect.GatewayAssociation` resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := directconnect.NewGatewayAssociationProposal(ctx, "example", &directconnect.GatewayAssociationProposalArgs{
+			AssociatedGatewayId:     pulumi.String(aws_vpn_gateway.Example.Id),
+			DxGatewayId:             pulumi.String(aws_dx_gateway.Example.Id),
+			DxGatewayOwnerAccountId: pulumi.String(aws_dx_gateway.Example.Owner_account_id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

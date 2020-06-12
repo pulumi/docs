@@ -3,7 +3,10 @@ title: Module elasticloadbalancingv2
 title_tag: Module elasticloadbalancingv2 | Package pulumi_aws | Python SDK
 linktitle: elasticloadbalancingv2
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="elasticloadbalancingv2">
 <h1>elasticloadbalancingv2<a class="headerlink" href="#elasticloadbalancingv2" title="Permalink to this headline">¶</a></h1>

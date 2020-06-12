@@ -23,7 +23,6 @@ Copying an AMI can take several minutes. The creation of this resource will
 block until the new AMI is available for use on new instances.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.NewAmiCopy(ctx, "example", &ec2.AmiCopyArgs{
+			Description:     pulumi.String("A copy of ami-xxxxxxxx"),
+			SourceAmiId:     pulumi.String("ami-xxxxxxxx"),
+			SourceAmiRegion: pulumi.String("us-west-1"),
+			Tags: map[string]interface{}{
+				"Name": "HelloWorld",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

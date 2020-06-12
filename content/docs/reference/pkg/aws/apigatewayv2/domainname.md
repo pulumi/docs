@@ -17,7 +17,6 @@ More information can be found in the [Amazon API Gateway Developer Guide](https:
 a particular domain name. An API stage can be associated with the domain name using the `aws.apigatewayv2.ApiMapping` resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := apigatewayv2.NewDomainName(ctx, "example", &apigatewayv2.DomainNameArgs{
+			DomainName: pulumi.String("ws-api.example.com"),
+			DomainNameConfiguration: &apigatewayv2.DomainNameDomainNameConfigurationArgs{
+				CertificateArn: pulumi.String(aws_acm_certificate.Example.Arn),
+				EndpointType:   pulumi.String("REGIONAL"),
+				SecurityPolicy: pulumi.String("TLS_1_2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

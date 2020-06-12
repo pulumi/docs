@@ -3,7 +3,10 @@ title: Module acm
 title_tag: Module acm | Package pulumi_aws | Python SDK
 linktitle: acm
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="acm">
 <h1>acm<a class="headerlink" href="#acm" title="Permalink to this headline">¶</a></h1>

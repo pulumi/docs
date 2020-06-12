@@ -20,7 +20,6 @@ instances in conjunction with an ELB Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +47,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		baz, err := elb.NewAttachment(ctx, "baz", &elb.AttachmentArgs{
+			Elb:      pulumi.String(aws_elb.Bar.Id),
+			Instance: pulumi.String(aws_instance.Foo.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

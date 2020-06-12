@@ -16,7 +16,6 @@ This data source can prove useful when a module accepts a local gateway route ta
 an input variable and needs to, for example, find the associated Outpost or Local Gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		selected, err := ec2.LookupLocalGatewayRouteTable(ctx, &ec2.LookupLocalGatewayRouteTableArgs{
+			LocalGatewayRouteTableId: awsEc2LocalGatewayRouteTable,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -53,7 +70,7 @@ import pulumi
 import pulumi_aws as aws
 
 config = pulumi.Config()
-aws.ec2.getLocalGatewayRouteTable = config.require_object("awsEc2LocalGatewayRouteTable")
+aws_ec2_local_gateway_route_table = config.require_object("awsEc2LocalGatewayRouteTable")
 selected = aws.ec2.get_local_gateway_route_table(local_gateway_route_table_id=aws_ec2_local_gateway_route_table)
 ```
 {{% /example %}}

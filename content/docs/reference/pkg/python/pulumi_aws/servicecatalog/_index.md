@@ -3,7 +3,10 @@ title: Module servicecatalog
 title_tag: Module servicecatalog | Package pulumi_aws | Python SDK
 linktitle: servicecatalog
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="servicecatalog">
 <h1>servicecatalog<a class="headerlink" href="#servicecatalog" title="Permalink to this headline">¶</a></h1>

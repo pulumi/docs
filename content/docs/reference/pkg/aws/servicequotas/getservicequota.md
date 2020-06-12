@@ -13,7 +13,6 @@ meta_desc: "Explore the GetServiceQuota function of the servicequotas module, in
 Retrieve information about a Service Quota.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		byQuotaCode, err := servicequotas.LookupServiceQuota(ctx, &servicequotas.LookupServiceQuotaArgs{
+			QuotaCode:   "L-F678F1CE",
+			ServiceCode: "vpc",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		byQuotaName, err := servicequotas.LookupServiceQuota(ctx, &servicequotas.LookupServiceQuotaArgs{
+			QuotaName:   "VPCs per Region",
+			ServiceCode: "vpc",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

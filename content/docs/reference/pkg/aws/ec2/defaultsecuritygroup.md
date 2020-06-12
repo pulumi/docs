@@ -117,7 +117,7 @@ class MyStack : Stack
                 new Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs
                 {
                     FromPort = 0,
-                    Protocol = -1,
+                    Protocol = "-1",
                     Self = true,
                     ToPort = 0,
                 },
@@ -184,7 +184,7 @@ class MyStack : Stack
                 new Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs
                 {
                     FromPort = 0,
-                    Protocol = -1,
+                    Protocol = "-1",
                     Self = true,
                     ToPort = 0,
                 },

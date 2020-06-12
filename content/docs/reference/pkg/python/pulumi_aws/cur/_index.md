@@ -3,7 +3,10 @@ title: Module cur
 title_tag: Module cur | Package pulumi_aws | Python SDK
 linktitle: cur
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cur">
 <h1>cur<a class="headerlink" href="#cur" title="Permalink to this headline">¶</a></h1>

@@ -11,7 +11,6 @@ meta_desc: "Explore the SnapshotSchedule resource of the redshift module, includ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 

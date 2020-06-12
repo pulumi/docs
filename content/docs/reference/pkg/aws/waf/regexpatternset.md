@@ -13,7 +13,6 @@ meta_desc: "Explore the RegexPatternSet resource of the waf module, including ex
 Provides a WAF Regex Pattern Set Resource
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := waf.NewRegexPatternSet(ctx, "example", &waf.RegexPatternSetArgs{
+			RegexPatternStrings: pulumi.StringArray{
+				pulumi.String("one"),
+				pulumi.String("two"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -12,9 +12,6 @@ meta_desc: "Explore the NotebookInstanceLifecycleConfiguration resource of the s
 
 Provides a lifecycle configuration for SageMaker Notebook Instances.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NotebookInstanceLifecycleConfiguration Resource {#create}

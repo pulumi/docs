@@ -3,7 +3,10 @@ title: Module athena
 title_tag: Module athena | Package pulumi_aws | Python SDK
 linktitle: athena
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="athena">
 <h1>athena<a class="headerlink" href="#athena" title="Permalink to this headline">¶</a></h1>

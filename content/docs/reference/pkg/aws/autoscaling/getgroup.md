@@ -13,7 +13,6 @@ meta_desc: "Explore the GetGroup function of the autoscaling module, including e
 Use this data source to get information on an existing autoscaling group.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := autoscaling.LookupGroup(ctx, &autoscaling.LookupGroupArgs{
+			Name: "foo",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

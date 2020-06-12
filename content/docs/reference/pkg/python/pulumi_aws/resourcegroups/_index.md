@@ -3,7 +3,10 @@ title: Module resourcegroups
 title_tag: Module resourcegroups | Package pulumi_aws | Python SDK
 linktitle: resourcegroups
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="resourcegroups">
 <h1>resourcegroups<a class="headerlink" href="#resourcegroups" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module gamelift
 title_tag: Module gamelift | Package pulumi_aws | Python SDK
 linktitle: gamelift
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="gamelift">
 <h1>gamelift<a class="headerlink" href="#gamelift" title="Permalink to this headline">¶</a></h1>

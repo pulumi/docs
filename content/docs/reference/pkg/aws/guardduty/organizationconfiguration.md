@@ -15,7 +15,6 @@ Manages the GuardDuty Organization Configuration in the current AWS Region. The 
 > **NOTE:** This is an advanced resource. The provider will automatically assume management of the GuardDuty Organization Configuration without import and perform no actions on removal from the resource configuration.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +45,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleDetector, err := guardduty.NewDetector(ctx, "exampleDetector", &guardduty.DetectorArgs{
+			Enable: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleOrganizationConfiguration, err := guardduty.NewOrganizationConfiguration(ctx, "exampleOrganizationConfiguration", &guardduty.OrganizationConfigurationArgs{
+			AutoEnable: pulumi.Bool(true),
+			DetectorId: exampleDetector.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

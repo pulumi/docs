@@ -13,7 +13,6 @@ meta_desc: "Explore the FunctionEventInvokeConfig resource of the lambda module,
 Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
+			FunctionName:             pulumi.String(aws_lambda_alias.Example.Function_name),
+			MaximumEventAgeInSeconds: pulumi.Int(60),
+			MaximumRetryAttempts:     pulumi.Int(0),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -92,7 +112,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
+			FunctionName: pulumi.String(aws_lambda_alias.Example.Function_name),
+			Qualifier:    pulumi.String(aws_lambda_alias.Example.Name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -115,57 +155,6 @@ import * as aws from "@pulumi/aws";
 const example = new aws.lambda.FunctionEventInvokeConfig("example", {
     functionName: aws_lambda_alias.example.function_name,
     qualifier: aws_lambda_alias.example.name,
-});
-// ... other configuration ...
-```
-{{% /example %}}
-
-### Configuration for Function Latest Unpublished Version
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Lambda.FunctionEventInvokeConfig("example", new Aws.Lambda.FunctionEventInvokeConfigArgs
-        {
-            FunctionName = aws_lambda_function.Example.Function_name,
-            Qualifier = "$LATEST",
-        });
-        // ... other configuration ...
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.lambda_.FunctionEventInvokeConfig("example",
-    function_name=aws_lambda_function["example"]["function_name"],
-    qualifier="$LATEST")
-# ... other configuration ...
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.lambda.FunctionEventInvokeConfig("example", {
-    functionName: aws_lambda_function.example.function_name,
-    qualifier: `$LATEST`,
 });
 // ... other configuration ...
 ```
@@ -194,7 +183,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := lambda.NewFunctionEventInvokeConfig(ctx, "example", &lambda.FunctionEventInvokeConfigArgs{
+			FunctionName: pulumi.String(aws_lambda_function.Example.Function_name),
+			Qualifier:    pulumi.String(aws_lambda_function.Example.Version),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

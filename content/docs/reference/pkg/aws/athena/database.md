@@ -13,7 +13,6 @@ meta_desc: "Explore the Database resource of the athena module, including exampl
 Provides an Athena database.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		hogeBucket, err := s3.NewBucket(ctx, "hogeBucket", nil)
+		if err != nil {
+			return err
+		}
+		hogeDatabase, err := athena.NewDatabase(ctx, "hogeDatabase", &athena.DatabaseArgs{
+			Bucket: hogeBucket.Bucket,
+			Name:   pulumi.String("database_name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

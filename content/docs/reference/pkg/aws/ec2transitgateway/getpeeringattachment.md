@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPeeringAttachment function of the ec2transitgateway m
 Get information on an EC2 Transit Gateway Peering Attachment.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2transitgateway.LookupPeeringAttachment(ctx, &ec2transitgateway.LookupPeeringAttachmentArgs{
+			Filters: ec2transitgateway.getPeeringAttachmentFilterArray{
+				&ec2transitgateway.LookupPeeringAttachmentFilter{
+					Name: "transit-gateway-attachment-id",
+					Values: []string{
+						"tgw-attach-12345678",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -99,7 +123,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		attachment, err := ec2transitgateway.LookupPeeringAttachment(ctx, &ec2transitgateway.LookupPeeringAttachmentArgs{
+			Id: "tgw-attach-12345678",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

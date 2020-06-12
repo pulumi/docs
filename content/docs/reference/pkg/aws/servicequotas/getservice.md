@@ -13,7 +13,6 @@ meta_desc: "Explore the GetService function of the servicequotas module, includi
 Retrieve information about a Service Quotas Service.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := servicequotas.LookupService(ctx, &servicequotas.LookupServiceArgs{
+			ServiceName: "Amazon Virtual Private Cloud (Amazon VPC)",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

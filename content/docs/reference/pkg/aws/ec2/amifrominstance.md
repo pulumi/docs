@@ -29,7 +29,6 @@ the generated AMI. Users may taint or otherwise recreate the resource in order
 to produce a fresh snapshot.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.NewAmiFromInstance(ctx, "example", &ec2.AmiFromInstanceArgs{
+			SourceInstanceId: pulumi.String("i-xxxxxxxx"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

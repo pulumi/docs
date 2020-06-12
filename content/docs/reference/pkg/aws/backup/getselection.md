@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSelection function of the backup module, including ex
 Use this data source to get information on an existing backup selection.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := backup.LookupSelection(ctx, &backup.LookupSelectionArgs{
+			PlanId:      data.Aws_backup_plan.Example.Id,
+			SelectionId: "selection-id-example",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -48,7 +66,7 @@ Coming soon!
 import pulumi
 import pulumi_aws as aws
 
-example = aws.backup.get_selection(plan_id=data["aws.backup.Plan"]["example"]["id"],
+example = aws.backup.get_selection(plan_id=data["aws_backup_plan"]["example"]["id"],
     selection_id="selection-id-example")
 ```
 {{% /example %}}

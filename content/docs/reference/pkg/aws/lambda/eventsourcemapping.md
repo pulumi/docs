@@ -16,7 +16,6 @@ For information about Lambda and how to use it, see [What is AWS Lambda?](http:/
 For information about event source mappings, see [CreateEventSourceMapping](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html) in the API docs.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+			EventSourceArn:   pulumi.String(aws_dynamodb_table.Example.Stream_arn),
+			FunctionName:     pulumi.String(aws_lambda_function.Example.Arn),
+			StartingPosition: pulumi.String("LATEST"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -95,7 +115,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+			EventSourceArn:   pulumi.String(aws_kinesis_stream.Example.Arn),
+			FunctionName:     pulumi.String(aws_lambda_function.Example.Arn),
+			StartingPosition: pulumi.String("LATEST"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -145,7 +186,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+			EventSourceArn: pulumi.String(aws_sqs_queue.Sqs_queue_test.Arn),
+			FunctionName:   pulumi.String(aws_lambda_function.Example.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module transfer
 title_tag: Module transfer | Package pulumi_aws | Python SDK
 linktitle: transfer
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="transfer">
 <h1>transfer<a class="headerlink" href="#transfer" title="Permalink to this headline">¶</a></h1>

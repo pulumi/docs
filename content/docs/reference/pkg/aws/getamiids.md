@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAmiIds function of the AWS package, including example
 Use this data source to get a list of AMI IDs matching the specified criteria.
 
 
-
 {{% examples %}}
 ## Example Usage
 

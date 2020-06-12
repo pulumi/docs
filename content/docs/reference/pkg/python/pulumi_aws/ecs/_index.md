@@ -3,7 +3,10 @@ title: Module ecs
 title_tag: Module ecs | Package pulumi_aws | Python SDK
 linktitle: ecs
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ecs">
 <h1>ecs<a class="headerlink" href="#ecs" title="Permalink to this headline">¶</a></h1>
@@ -1358,7 +1361,7 @@ Service within a AWS ECS Cluster.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
-<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">cluster_arn</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ecs.Cluster&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">cluster_arn</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_ecs_cluster&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

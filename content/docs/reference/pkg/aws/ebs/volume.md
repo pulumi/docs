@@ -13,7 +13,6 @@ meta_desc: "Explore the Volume resource of the ebs module, including examples, i
 Manages a single EBS volume.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ebs.NewVolume(ctx, "example", &ebs.VolumeArgs{
+			AvailabilityZone: pulumi.String("us-west-2a"),
+			Size:             pulumi.Int(40),
+			Tags: map[string]interface{}{
+				"Name": "HelloWorld",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

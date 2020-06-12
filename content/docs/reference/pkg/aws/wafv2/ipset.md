@@ -13,7 +13,6 @@ meta_desc: "Explore the IpSet resource of the wafv2 module, including examples, 
 Provides a WAFv2 IP Set Resource
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,7 +50,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafv2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := wafv2.NewIpSet(ctx, "example", &wafv2.IpSetArgs{
+			Addresses: pulumi.StringArray{
+				pulumi.String("1.2.3.4/32"),
+				pulumi.String("5.6.7.8/32"),
+			},
+			Description:      pulumi.String("Example IP set"),
+			IpAddressVersion: pulumi.String("IPV4"),
+			Scope:            pulumi.String("REGIONAL"),
+			Tags: map[string]interface{}{
+				"Tag1": "Value1",
+				"Tag2": "Value2",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

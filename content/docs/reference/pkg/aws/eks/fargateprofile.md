@@ -13,7 +13,6 @@ meta_desc: "Explore the FargateProfile resource of the eks module, including exa
 Manages an EKS Fargate Profile.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -14,7 +14,6 @@ Use this data source to get the Account ID of the [AWS Elastic Load Balancing Se
 in a given region for the purpose of whitelisting in S3 bucket policy.
 
 
-
 {{% examples %}}
 ## Example Usage
 

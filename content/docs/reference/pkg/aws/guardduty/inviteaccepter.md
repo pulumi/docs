@@ -13,7 +13,6 @@ meta_desc: "Explore the InviteAccepter resource of the guardduty module, includi
 Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,7 +52,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		master, err := guardduty.NewDetector(ctx, "master", nil)
+		if err != nil {
+			return err
+		}
+		memberDetector, err := guardduty.NewDetector(ctx, "memberDetector", nil)
+		if err != nil {
+			return err
+		}
+		dev, err := guardduty.NewMember(ctx, "dev", &guardduty.MemberArgs{
+			AccountId:  memberDetector.AccountId,
+			DetectorId: master.ID(),
+			Email:      pulumi.String("required@example.com"),
+			Invite:     pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		memberInviteAccepter, err := guardduty.NewInviteAccepter(ctx, "memberInviteAccepter", &guardduty.InviteAccepterArgs{
+			DetectorId:      memberDetector.ID(),
+			MasterAccountId: master.AccountId,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the BucketMetric resource of the s3 module, including exampl
 Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html) resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

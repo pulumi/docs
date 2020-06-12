@@ -3,7 +3,10 @@ title: Module route53
 title_tag: Module route53 | Package pulumi_aws | Python SDK
 linktitle: route53
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="route53">
 <h1>route53<a class="headerlink" href="#route53" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module xray
 title_tag: Module xray | Package pulumi_aws | Python SDK
 linktitle: xray
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="xray">
 <h1>xray<a class="headerlink" href="#xray" title="Permalink to this headline">¶</a></h1>

@@ -14,7 +14,6 @@ Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing H
 in a given region for the purpose of using in an AWS Route53 Alias.
 
 
-
 {{% examples %}}
 ## Example Usage
 

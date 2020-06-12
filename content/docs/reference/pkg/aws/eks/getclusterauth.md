@@ -17,9 +17,6 @@ Uses IAM credentials from the AWS provider to generate a temporary token that is
 This can be used to authenticate to an EKS cluster or to a cluster that has the AWS IAM Authenticator
 server configured.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetClusterAuth {#using}

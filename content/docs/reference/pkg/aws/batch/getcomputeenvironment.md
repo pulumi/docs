@@ -14,7 +14,6 @@ The Batch Compute Environment data source allows access to details of a specific
 compute environment within AWS Batch.
 
 
-
 {{% examples %}}
 ## Example Usage
 

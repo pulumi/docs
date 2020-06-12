@@ -3,7 +3,10 @@ title: Module dlm
 title_tag: Module dlm | Package pulumi_aws | Python SDK
 linktitle: dlm
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="dlm">
 <h1>dlm<a class="headerlink" href="#dlm" title="Permalink to this headline">¶</a></h1>

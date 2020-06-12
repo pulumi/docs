@@ -3,7 +3,10 @@ title: Module alb
 title_tag: Module alb | Package pulumi_aws | Python SDK
 linktitle: alb
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="alb">
 <h1>alb<a class="headerlink" href="#alb" title="Permalink to this headline">¶</a></h1>

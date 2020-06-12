@@ -17,7 +17,6 @@ Manages a Config Organization Managed Rule. More information about these rules c
 > **NOTE:** Every Organization account except those configured in the `excluded_accounts` argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the `aws.cfg.Recorder` resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,7 +50,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+			AwsServiceAccessPrincipals: pulumi.StringArray{
+				pulumi.String("config-multiaccountsetup.amazonaws.com"),
+			},
+			FeatureSet: pulumi.String("ALL"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleOrganizationManagedRule, err := cfg.NewOrganizationManagedRule(ctx, "exampleOrganizationManagedRule", &cfg.OrganizationManagedRuleArgs{
+			RuleIdentifier: pulumi.String("IAM_PASSWORD_POLICY"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

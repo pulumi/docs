@@ -88,6 +88,37 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myEndpoint, err := ec2.NewVpcEndpoint(ctx, "myEndpoint", nil)
+		if err != nil {
+			return err
+		}
+		allowAll, err := ec2.NewSecurityGroupRule(ctx, "allowAll", &ec2.SecurityGroupRuleArgs{
+			FromPort: pulumi.Int(0),
+			PrefixListIds: pulumi.StringArray{
+				myEndpoint.PrefixListId,
+			},
+			Protocol:        pulumi.String("-1"),
+			SecurityGroupId: pulumi.String("sg-123456"),
+			ToPort:          pulumi.Int(0),
+			Type:            pulumi.String("egress"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -119,7 +150,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.NewSecurityGroupRule(ctx, "example", &ec2.SecurityGroupRuleArgs{
+			Type:            pulumi.String("ingress"),
+			FromPort:        pulumi.Int(0),
+			ToPort:          pulumi.Int(65535),
+			Protocol:        pulumi.String("tcp"),
+			CidrBlocks:      aws_vpc.Example.Cidr_block,
+			SecurityGroupId: pulumi.String("sg-123456"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

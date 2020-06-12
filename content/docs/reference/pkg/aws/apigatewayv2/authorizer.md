@@ -14,7 +14,6 @@ Manages an Amazon API Gateway Version 2 authorizer.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +45,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := apigatewayv2.NewAuthorizer(ctx, "example", &apigatewayv2.AuthorizerArgs{
+			ApiId:          pulumi.String(aws_apigatewayv2_api.Example.Id),
+			AuthorizerType: pulumi.String("REQUEST"),
+			AuthorizerUri:  pulumi.String(aws_lambda_function.Example.Invoke_arn),
+			IdentitySources: pulumi.StringArray{
+				pulumi.String("route.request.header.Auth"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -72,76 +95,6 @@ const example = new aws.apigatewayv2.Authorizer("example", {
     authorizerType: "REQUEST",
     authorizerUri: aws_lambda_function_example.invokeArn,
     identitySources: ["route.request.header.Auth"],
-});
-```
-{{% /example %}}
-
-### Basic HTTP API
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.ApiGatewayV2.Authorizer("example", new Aws.ApiGatewayV2.AuthorizerArgs
-        {
-            ApiId = aws_apigatewayv2_api.Example.Id,
-            AuthorizerType = "JWT",
-            IdentitySources = 
-            {
-                "$$request.header.Authorization",
-            },
-            JwtConfiguration = new Aws.ApiGatewayV2.Inputs.AuthorizerJwtConfigurationArgs
-            {
-                Audience = 
-                {
-                    "example",
-                },
-                Issuer = $"https://{aws_cognito_user_pool.Example.Endpoint}",
-            },
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.apigatewayv2.Authorizer("example",
-    api_id=aws_apigatewayv2_api["example"]["id"],
-    authorizer_type="JWT",
-    identity_sources=["$$request.header.Authorization"],
-    jwt_configuration={
-        "audience": ["example"],
-        "issuer": f"https://{aws_cognito_user_pool['example']['endpoint']}",
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.apigatewayv2.Authorizer("example", {
-    apiId: aws_apigatewayv2_api_example.id,
-    authorizerType: "JWT",
-    identitySources: ["$request.header.Authorization"],
-    jwtConfiguration: {
-        audiences: ["example"],
-        issuer: pulumi.interpolate`https://${aws_cognito_user_pool_example.endpoint}`,
-    },
 });
 ```
 {{% /example %}}

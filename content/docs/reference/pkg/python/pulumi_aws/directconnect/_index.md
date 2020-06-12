@@ -3,7 +3,10 @@ title: Module directconnect
 title_tag: Module directconnect | Package pulumi_aws | Python SDK
 linktitle: directconnect
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="directconnect">
 <h1>directconnect<a class="headerlink" href="#directconnect" title="Permalink to this headline">¶</a></h1>

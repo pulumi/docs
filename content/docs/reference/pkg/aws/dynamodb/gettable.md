@@ -13,7 +13,6 @@ meta_desc: "Explore the GetTable function of the dynamodb module, including exam
 Provides information about a DynamoDB table.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tableName, err := dynamodb.LookupTable(ctx, &dynamodb.LookupTableArgs{
+			Name: "tableName",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

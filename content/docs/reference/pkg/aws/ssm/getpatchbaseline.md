@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPatchBaseline function of the ssm module, including e
 Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		centos, err := ssm.LookupPatchBaseline(ctx, &ssm.LookupPatchBaselineArgs{
+			NamePrefix:      "AWS-",
+			OperatingSystem: "CENTOS",
+			Owner:           "AWS",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

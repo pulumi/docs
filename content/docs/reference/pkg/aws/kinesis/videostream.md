@@ -15,7 +15,6 @@ Provides a Kinesis Video Stream resource. Amazon Kinesis Video Streams makes it 
 For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
 
 
-
 {{% examples %}}
 ## Example Usage
 

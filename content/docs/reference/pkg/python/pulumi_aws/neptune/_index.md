@@ -3,7 +3,10 @@ title: Module neptune
 title_tag: Module neptune | Package pulumi_aws | Python SDK
 linktitle: neptune
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="neptune">
 <h1>neptune<a class="headerlink" href="#neptune" title="Permalink to this headline">¶</a></h1>

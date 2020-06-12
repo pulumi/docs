@@ -15,7 +15,6 @@ Provides a DMS (Data Migration Service) certificate resource. DMS certificates c
 > **Note:** All arguments including the PEM encoded certificate will be stored in the raw state as plain-text.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := dms.NewCertificate(ctx, "test", &dms.CertificateArgs{
+			CertificateId:  pulumi.String("test-dms-certificate-tf"),
+			CertificatePem: pulumi.String("..."),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

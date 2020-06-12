@@ -13,7 +13,6 @@ meta_desc: "Explore the IdentityPool resource of the cognito module, including e
 Provides an AWS Cognito Identity Pool.
 
 
-
 {{% examples %}}
 ## Example Usage
 

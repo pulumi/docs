@@ -13,7 +13,6 @@ meta_desc: "Explore the SubnetGroup resource of the docdb module, including exam
 Provides an DocumentDB subnet group resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

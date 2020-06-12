@@ -18,7 +18,6 @@ ElastiCache cluster **outside** of a VPC. If you are using a VPC, see the
 ElastiCache Subnet Group resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

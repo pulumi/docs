@@ -13,7 +13,6 @@ meta_desc: "Explore the ProductSubscription resource of the securityhub module, 
 Subscribes to a Security Hub product.
 
 
-
 {{% examples %}}
 ## Example Usage
 

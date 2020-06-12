@@ -3,7 +3,10 @@ title: Module cfg
 title_tag: Module cfg | Package pulumi_aws | Python SDK
 linktitle: cfg
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cfg">
 <h1>cfg<a class="headerlink" href="#cfg" title="Permalink to this headline">¶</a></h1>

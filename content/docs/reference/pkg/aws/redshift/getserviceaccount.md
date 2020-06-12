@@ -14,7 +14,6 @@ Use this data source to get the Account ID of the [AWS Redshift Service Account]
 in a given region for the purpose of allowing Redshift to store audit data in S3.
 
 
-
 {{% examples %}}
 ## Example Usage
 

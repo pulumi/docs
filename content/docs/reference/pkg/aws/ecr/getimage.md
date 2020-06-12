@@ -13,7 +13,6 @@ meta_desc: "Explore the GetImage function of the ecr module, including examples,
 The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		serviceImage, err := ecr.LookupImage(ctx, &ecr.LookupImageArgs{
+			ImageTag:       "latest",
+			RepositoryName: "my/service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

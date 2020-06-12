@@ -16,38 +16,6 @@ Lightsail.
 
 > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
 
-## Example Usage, creating a new Key Pair
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// Create a new Lightsail Key Pair
-const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-# Create a new Lightsail Key Pair
-lg_key_pair = aws.lightsail.KeyPair("lgKeyPair")
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // Create a new Lightsail Key Pair
-        var lgKeyPair = new Aws.LightSail.KeyPair("lgKeyPair", new Aws.LightSail.KeyPairArgs
-        {
-        });
-    }
-
-}
-```
 
 ## Create new Key Pair, encrypting the private key with a PGP Key
 
@@ -81,26 +49,34 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
 
-## Import an existing public key
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lightsail"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fs from "fs";
-
-const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {
-    publicKey: fs.readFileSync("~/.ssh/id_rsa.pub", "utf-8"),
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		lgKeyPair, err := lightsail.NewKeyPair(ctx, "lgKeyPair", &lightsail.KeyPairArgs{
+			PgpKey: pulumi.String("keybase:keybaseusername"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
-```python
-import pulumi
-import pulumi_aws as aws
 
-lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"))
-```
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creating A New Key Pair
+{{% example csharp %}}
 ```csharp
-using System.IO;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
@@ -108,15 +84,58 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a new Lightsail Key Pair
         var lgKeyPair = new Aws.LightSail.KeyPair("lgKeyPair", new Aws.LightSail.KeyPairArgs
         {
-            PublicKey = File.ReadAllText("~/.ssh/id_rsa.pub"),
         });
     }
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lightsail"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		lgKeyPair, err := lightsail.NewKeyPair(ctx, "lgKeyPair", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+# Create a new Lightsail Key Pair
+lg_key_pair = aws.lightsail.KeyPair("lgKeyPair")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// Create a new Lightsail Key Pair
+const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a KeyPair Resource {#create}

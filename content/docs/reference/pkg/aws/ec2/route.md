@@ -78,6 +78,41 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{
+			AssignGeneratedIpv6CidrBlock: pulumi.Bool(true),
+			CidrBlock:                    pulumi.String("10.1.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		egress, err := ec2.NewEgressOnlyInternetGateway(ctx, "egress", &ec2.EgressOnlyInternetGatewayArgs{
+			VpcId: vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		route, err := ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
+			DestinationIpv6CidrBlock: pulumi.String("::/0"),
+			EgressOnlyGatewayId:      egress.ID(),
+			RouteTableId:             pulumi.String("rtb-4fbb3ac4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -106,7 +141,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		route, err := ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
+			RouteTableId:           pulumi.String("rtb-4fbb3ac4"),
+			DestinationCidrBlock:   pulumi.String("10.0.1.0/22"),
+			VpcPeeringConnectionId: pulumi.String("pcx-45ff3dc1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

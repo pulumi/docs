@@ -13,7 +13,6 @@ meta_desc: "Explore the SubnetGroup resource of the rds module, including exampl
 Provides an RDS DB subnet group resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -14,7 +14,6 @@ Provides network associations for AWS Client VPN endpoints. For more information
 [AWS Client VPN Administrator's Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2clientvpn"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2clientvpn.NewNetworkAssociation(ctx, "example", &ec2clientvpn.NetworkAssociationArgs{
+			ClientVpnEndpointId: pulumi.String(aws_ec2_client_vpn_endpoint.Example.Id),
+			SubnetId:            pulumi.String(aws_subnet.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -418,7 +437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located. 
+    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -468,7 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located. 
+    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -518,7 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located. 
+    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -568,7 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located. 
+    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -756,7 +775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located. 
+    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -818,7 +837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located. 
+    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -880,7 +899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located. 
+    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -942,7 +961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located. 
+    <dd>{{% md %}}The ID of the VPC in which the target network (subnet) is located.
 {{% /md %}}</dd>
 
 </dl>

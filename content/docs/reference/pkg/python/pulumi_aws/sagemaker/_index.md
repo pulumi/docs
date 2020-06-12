@@ -3,7 +3,10 @@ title: Module sagemaker
 title_tag: Module sagemaker | Package pulumi_aws | Python SDK
 linktitle: sagemaker
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="sagemaker">
 <h1>sagemaker<a class="headerlink" href="#sagemaker" title="Permalink to this headline">¶</a></h1>

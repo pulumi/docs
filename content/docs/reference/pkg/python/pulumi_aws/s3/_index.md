@@ -3,7 +3,10 @@ title: Module s3
 title_tag: Module s3 | Package pulumi_aws | Python SDK
 linktitle: s3
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="s3">
 <h1>s3<a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h1>

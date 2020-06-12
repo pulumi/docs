@@ -13,7 +13,6 @@ meta_desc: "Explore the Model resource of the sagemaker module, including exampl
 Provides a SageMaker model resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -71,7 +70,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		model, err := sagemaker.NewModel(ctx, "model", &sagemaker.ModelArgs{
+			ExecutionRoleArn: pulumi.String(aws_iam_role.Foo.Arn),
+			PrimaryContainer: &sagemaker.ModelPrimaryContainerArgs{
+				Image: pulumi.String("174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		assumeRole, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
+			Statements: iam.getPolicyDocumentStatementArray{
+				&iam.LookupPolicyDocumentStatement{
+					Actions: []string{
+						"sts:AssumeRole",
+					},
+					Principals: iam.getPolicyDocumentStatementPrincipalArray{
+						&iam.LookupPolicyDocumentStatementPrincipal{
+							Identifiers: []string{
+								"sagemaker.amazonaws.com",
+							},
+							Type: "Service",
+						},
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(assumeRole.Json),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -14,7 +14,6 @@ Use this data source to get the Account ID of the [AWS CloudTrail Service Accoun
 in a given region for the purpose of allowing CloudTrail to store trail data in S3.
 
 
-
 {{% examples %}}
 ## Example Usage
 

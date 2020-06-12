@@ -3,7 +3,10 @@ title: Module emr
 title_tag: Module emr | Package pulumi_aws | Python SDK
 linktitle: emr
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="emr">
 <h1>emr<a class="headerlink" href="#emr" title="Permalink to this headline">¶</a></h1>

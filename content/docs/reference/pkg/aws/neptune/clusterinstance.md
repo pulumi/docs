@@ -17,7 +17,6 @@ meta-parameter to make multiple instances and join them all to the same Neptune 
 
 
 
-
 {{% examples %}}
 ## Example Usage
 

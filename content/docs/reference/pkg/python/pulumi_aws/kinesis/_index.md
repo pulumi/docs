@@ -3,7 +3,10 @@ title: Module kinesis
 title_tag: Module kinesis | Package pulumi_aws | Python SDK
 linktitle: kinesis
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="kinesis">
 <h1>kinesis<a class="headerlink" href="#kinesis" title="Permalink to this headline">¶</a></h1>
@@ -34,7 +37,7 @@ allows processing and analyzing streaming data using standard SQL.</p>
     <span class="p">},</span>
     <span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;recordColumns&quot;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="s2">&quot;mapping&quot;</span><span class="p">:</span> <span class="s2">&quot;$$.test&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mapping&quot;</span><span class="p">:</span> <span class="s2">&quot;$.test&quot;</span><span class="p">,</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
             <span class="s2">&quot;sqlType&quot;</span><span class="p">:</span> <span class="s2">&quot;VARCHAR(8)&quot;</span><span class="p">,</span>
         <span class="p">}],</span>
@@ -42,7 +45,7 @@ allows processing and analyzing streaming data using standard SQL.</p>
         <span class="s2">&quot;recordFormat&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;mappingParameters&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;json&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;recordRowPath&quot;</span><span class="p">:</span> <span class="s2">&quot;$$&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;recordRowPath&quot;</span><span class="p">:</span> <span class="s2">&quot;$&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
             <span class="p">},</span>
         <span class="p">},</span>
@@ -763,7 +766,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;processors&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[{</span>
                     <span class="s2">&quot;parameterName&quot;</span><span class="p">:</span> <span class="s2">&quot;LambdaArn&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;parameterValue&quot;</span><span class="p">:</span> <span class="n">lambda_processor</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">:$$LATEST&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;parameterValue&quot;</span><span class="p">:</span> <span class="n">lambda_processor</span><span class="o">.</span><span class="n">arn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">arn</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">arn</span><span class="si">}</span><span class="s2">:$LATEST&quot;</span><span class="p">),</span>
                 <span class="p">}],</span>
                 <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Lambda&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
@@ -851,7 +854,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;processors&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[{</span>
                     <span class="s2">&quot;parameterName&quot;</span><span class="p">:</span> <span class="s2">&quot;LambdaArn&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;parameterValue&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">aws_lambda_function</span><span class="p">[</span><span class="s1">&#39;lambda_processor&#39;</span><span class="p">][</span><span class="s1">&#39;arn&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:$$LATEST&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;parameterValue&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">aws_lambda_function</span><span class="p">[</span><span class="s1">&#39;lambda_processor&#39;</span><span class="p">][</span><span class="s1">&#39;arn&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:$LATEST&quot;</span><span class="p">,</span>
                 <span class="p">}],</span>
                 <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Lambda&quot;</span><span class="p">,</span>
             <span class="p">}],</span>

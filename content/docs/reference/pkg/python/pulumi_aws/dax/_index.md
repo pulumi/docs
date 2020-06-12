@@ -3,7 +3,10 @@ title: Module dax
 title_tag: Module dax | Package pulumi_aws | Python SDK
 linktitle: dax
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="dax">
 <h1>dax<a class="headerlink" href="#dax" title="Permalink to this headline">¶</a></h1>
@@ -22,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">dax</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
     <span class="n">cluster_name</span><span class="o">=</span><span class="s2">&quot;cluster-example&quot;</span><span class="p">,</span>
-    <span class="n">iam_role_arn</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;iam.Role&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="n">iam_role_arn</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_iam_role&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;dax.r4.large&quot;</span><span class="p">,</span>
     <span class="n">replication_factor</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetVpcAttachment function of the ec2transitgateway modul
 Get information on an EC2 Transit Gateway VPC Attachment.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2transitgateway.LookupVpcAttachment(ctx, &ec2transitgateway.LookupVpcAttachmentArgs{
+			Filters: ec2transitgateway.getVpcAttachmentFilterArray{
+				&ec2transitgateway.LookupVpcAttachmentFilter{
+					Name: "vpc-id",
+					Values: []string{
+						"vpc-12345678",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -99,7 +123,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2transitgateway.LookupVpcAttachment(ctx, &ec2transitgateway.LookupVpcAttachmentArgs{
+			Id: "tgw-attach-12345678",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

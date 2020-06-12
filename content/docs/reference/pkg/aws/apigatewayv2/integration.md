@@ -14,7 +14,6 @@ Manages an Amazon API Gateway Version 2 integration.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := apigatewayv2.NewIntegration(ctx, "example", &apigatewayv2.IntegrationArgs{
+			ApiId:           pulumi.String(aws_apigatewayv2_api.Example.Id),
+			IntegrationType: pulumi.String("MOCK"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -63,90 +82,6 @@ import * as aws from "@pulumi/aws";
 const example = new aws.apigatewayv2.Integration("example", {
     apiId: aws_apigatewayv2_api_example.id,
     integrationType: "MOCK",
-});
-```
-{{% /example %}}
-
-### Lambda Integration
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleFunction = new Aws.Lambda.Function("exampleFunction", new Aws.Lambda.FunctionArgs
-        {
-            Code = new FileArchive("example.zip"),
-            Handler = "index.handler",
-            Role = aws_iam_role.Example.Arn,
-            Runtime = "nodejs10.x",
-        });
-        var exampleIntegration = new Aws.ApiGatewayV2.Integration("exampleIntegration", new Aws.ApiGatewayV2.IntegrationArgs
-        {
-            ApiId = aws_apigatewayv2_api.Example.Id,
-            ConnectionType = "INTERNET",
-            ContentHandlingStrategy = "CONVERT_TO_TEXT",
-            Description = "Lambda example",
-            IntegrationMethod = "POST",
-            IntegrationType = "AWS",
-            IntegrationUri = exampleFunction.InvokeArn,
-            PassthroughBehavior = "WHEN_NO_MATCH",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_function = aws.lambda_.Function("exampleFunction",
-    code=pulumi.FileArchive("example.zip"),
-    handler="index.handler",
-    role=aws_iam_role["example"]["arn"],
-    runtime="nodejs10.x")
-example_integration = aws.apigatewayv2.Integration("exampleIntegration",
-    api_id=aws_apigatewayv2_api["example"]["id"],
-    connection_type="INTERNET",
-    content_handling_strategy="CONVERT_TO_TEXT",
-    description="Lambda example",
-    integration_method="POST",
-    integration_type="AWS",
-    integration_uri=example_function.invoke_arn,
-    passthrough_behavior="WHEN_NO_MATCH")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleFunction = new aws.lambda.Function("example", {
-    code: new pulumi.asset.FileArchive("example.zip"),
-    handler: "index.handler",
-    role: aws_iam_role_example.arn,
-    runtime: "nodejs10.x",
-});
-const exampleIntegration = new aws.apigatewayv2.Integration("example", {
-    apiId: aws_apigatewayv2_api_example.id,
-    connectionType: "INTERNET",
-    contentHandlingStrategy: "CONVERT_TO_TEXT",
-    description: "Lambda example",
-    integrationMethod: "POST",
-    integrationType: "AWS",
-    integrationUri: exampleFunction.invokeArn,
-    passthroughBehavior: "WHEN_NO_MATCH",
 });
 ```
 {{% /example %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetFunction function of the lambda module, including exa
 Provides information about a Lambda Function.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		existing, err := lambda.LookupFunction(ctx, &lambda.LookupFunctionArgs{
+			FunctionName: functionName,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

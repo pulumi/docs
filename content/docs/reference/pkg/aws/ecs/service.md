@@ -17,7 +17,6 @@ Provides an ECS service - effectively a task that is expected to run until an er
 See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bar, err := ecs.NewService(ctx, "bar", &ecs.ServiceArgs{
+			Cluster:            pulumi.String(aws_ecs_cluster.Foo.Id),
+			SchedulingStrategy: pulumi.String("DAEMON"),
+			TaskDefinition:     pulumi.String(aws_ecs_task_definition.Bar.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

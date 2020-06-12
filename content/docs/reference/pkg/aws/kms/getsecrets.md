@@ -12,9 +12,6 @@ meta_desc: "Explore the GetSecrets function of the kms module, including example
 
 Decrypt multiple secrets from data encrypted with the AWS KMS service.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetSecrets {#using}

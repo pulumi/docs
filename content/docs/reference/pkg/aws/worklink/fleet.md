@@ -2,7 +2,7 @@
 ---
 title: "Fleet"
 title_tag: "Resource Fleet | Module worklink | Package AWS"
-meta_desc: "Explore the Fleet resource of the worklink module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the Fleet resource of the worklink module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,53 +11,6 @@ meta_desc: "Explore the Fleet resource of the worklink module, including example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.WorkLink.Fleet("example", new Aws.WorkLink.FleetArgs
-        {
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.worklink.Fleet("example")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.worklink.Fleet("example", {});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Fleet Resource {#create}

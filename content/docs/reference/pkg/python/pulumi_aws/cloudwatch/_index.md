@@ -3,7 +3,10 @@ title: Module cloudwatch
 title_tag: Module cloudwatch | Package pulumi_aws | Python SDK
 linktitle: cloudwatch
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cloudwatch">
 <h1>cloudwatch<a class="headerlink" href="#cloudwatch" title="Permalink to this headline">¶</a></h1>

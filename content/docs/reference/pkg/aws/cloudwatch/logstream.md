@@ -13,7 +13,6 @@ meta_desc: "Explore the LogStream resource of the cloudwatch module, including e
 Provides a CloudWatch Log Stream resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		yada, err := cloudwatch.NewLogGroup(ctx, "yada", nil)
+		if err != nil {
+			return err
+		}
+		foo, err := cloudwatch.NewLogStream(ctx, "foo", &cloudwatch.LogStreamArgs{
+			LogGroupName: yada.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -14,7 +14,6 @@ The VPN Gateway data source provides details about
 a specific VPN gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,7 +52,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		selected, err := ec2.LookupVpnGateway(ctx, &ec2.LookupVpnGatewayArgs{
+			Filters: ec2.getVpnGatewayFilterArray{
+				&ec2.LookupVpnGatewayFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"vpn-gw",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("vpnGatewayId", selected.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

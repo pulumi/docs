@@ -108,6 +108,53 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooVpc, err := ec2.NewVpc(ctx, "fooVpc", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.0.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		bar, err := ec2.NewVpc(ctx, "bar", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.1.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		fooVpcPeeringConnection, err := ec2.NewVpcPeeringConnection(ctx, "fooVpcPeeringConnection", &ec2.VpcPeeringConnectionArgs{
+			AutoAccept: pulumi.Bool(true),
+			PeerVpcId:  bar.ID(),
+			VpcId:      fooVpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		fooPeeringConnectionOptions, err := ec2.NewPeeringConnectionOptions(ctx, "fooPeeringConnectionOptions", &ec2.PeeringConnectionOptionsArgs{
+			Accepter: &ec2.PeeringConnectionOptionsAccepterArgs{
+				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
+			},
+			Requester: &ec2.PeeringConnectionOptionsRequesterArgs{
+				AllowClassicLinkToRemoteVpc: pulumi.Bool(true),
+				AllowVpcToRemoteClassicLink: pulumi.Bool(true),
+			},
+			VpcPeeringConnectionId: fooVpcPeeringConnection.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 Basic cross-account usage:
 
@@ -128,7 +175,6 @@ const peerVpc = new aws.ec2.Vpc("peer", {
     enableDnsSupport: true,
 }, { provider: accepter });
 const peerCallerIdentity = pulumi.output(aws.getCallerIdentity({ provider: accepter, async: true }));
-// Requester's side of the connection.
 const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peer", {
     autoAccept: false,
     peerOwnerId: peerCallerIdentity.accountId,
@@ -138,7 +184,6 @@ const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peer", {
     },
     vpcId: main.id,
 }, { provider: requester });
-// Accepter's side of the connection.
 const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepter("peer", {
     autoAccept: true,
     tags: {
@@ -229,7 +274,6 @@ class MyStack : Stack
             EnableDnsSupport = true,
         });
         var peerCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
-        // Requester's side of the connection.
         var peerVpcPeeringConnection = new Aws.Ec2.VpcPeeringConnection("peerVpcPeeringConnection", new Aws.Ec2.VpcPeeringConnectionArgs
         {
             AutoAccept = false,
@@ -241,7 +285,6 @@ class MyStack : Stack
             },
             VpcId = main.Id,
         });
-        // Accepter's side of the connection.
         var peerVpcPeeringConnectionAccepter = new Aws.Ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter", new Aws.Ec2.VpcPeeringConnectionAccepterArgs
         {
             AutoAccept = true,

@@ -13,7 +13,6 @@ meta_desc: "Explore the Application resource of the opsworks module, including e
 Provides an OpsWorks application resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,7 @@ class MyStack : Stack
                     Url = "https://github.com/example.git",
                 },
             },
-            AutoBundleOnDeploy = true,
+            AutoBundleOnDeploy = "true",
             Description = "This is a Rails application",
             DocumentRoot = "public",
             Domains = 

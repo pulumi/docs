@@ -11,7 +11,6 @@ meta_desc: "Explore the GetNetworkInterfaces function of the ec2 module, includi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,7 +36,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.LookupNetworkInterfaces(ctx, &ec2.LookupNetworkInterfacesArgs{
+			Tags: map[string]interface{}{
+				"Name": "test",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("example1", example.Ids)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

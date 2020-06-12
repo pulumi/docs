@@ -13,7 +13,6 @@ meta_desc: "Explore the GetResolverRule function of the route53 module, includin
 `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := route53.LookupResolverRule(ctx, &route53.LookupResolverRuleArgs{
+			DomainName: "subdomain.example.com",
+			RuleType:   "SYSTEM",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -20,7 +20,6 @@ and the accepter can use the `aws.ec2.VpcPeeringConnectionAccepter` resource to 
 connection into management.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -13,7 +13,6 @@ meta_desc: "Explore the Association resource of the ssm module, including exampl
 Associates an SSM Document to an instance or EC2 tag.
 
 
-
 {{% examples %}}
 ## Example Usage
 

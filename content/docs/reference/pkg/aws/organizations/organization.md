@@ -13,7 +13,6 @@ meta_desc: "Explore the Organization resource of the organizations module, inclu
 Provides a resource to create an organization.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		org, err := organizations.NewOrganization(ctx, "org", &organizations.OrganizationArgs{
+			AwsServiceAccessPrincipals: pulumi.StringArray{
+				pulumi.String("cloudtrail.amazonaws.com"),
+				pulumi.String("config.amazonaws.com"),
+			},
+			FeatureSet: pulumi.String("ALL"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

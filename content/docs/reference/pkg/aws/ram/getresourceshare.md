@@ -67,6 +67,34 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tagFilter, err := ram.LookupResourceShare(ctx, &ram.LookupResourceShareArgs{
+			Filters: ram.getResourceShareFilterArray{
+				&ram.LookupResourceShareFilter{
+					Name: "NameOfTag",
+					Values: []string{
+						"exampleNameTagValue",
+					},
+				},
+			},
+			Name:          "MyResourceName",
+			ResourceOwner: "SELF",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -94,7 +122,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ram.LookupResourceShare(ctx, &ram.LookupResourceShareArgs{
+			Name:          "example",
+			ResourceOwner: "SELF",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

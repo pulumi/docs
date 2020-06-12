@@ -17,7 +17,6 @@ the `propagating_vgws` argument set. If that argument is set, any route
 propagation not explicitly listed in its value will be removed.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.NewVpnGatewayRoutePropagation(ctx, "example", &ec2.VpnGatewayRoutePropagationArgs{
+			RouteTableId: pulumi.String(aws_route_table.Example.Id),
+			VpnGatewayId: pulumi.String(aws_vpn_gateway.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

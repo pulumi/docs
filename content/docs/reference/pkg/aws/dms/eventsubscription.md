@@ -13,7 +13,6 @@ meta_desc: "Explore the EventSubscription resource of the dms module, including 
 Provides a DMS (Data Migration Service) event subscription resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

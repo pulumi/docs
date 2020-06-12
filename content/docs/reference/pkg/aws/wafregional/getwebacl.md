@@ -13,7 +13,6 @@ meta_desc: "Explore the GetWebAcl function of the wafregional module, including 
 `aws.wafregional.WebAcl` Retrieves a WAF Regional Web ACL Resource Id.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := wafregional.LookupWebAcl(ctx, &wafregional.LookupWebAclArgs{
+			Name: "tfWAFRegionalWebACL",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

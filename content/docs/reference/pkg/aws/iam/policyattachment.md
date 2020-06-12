@@ -17,7 +17,6 @@ Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)
 > **NOTE:** The usage of this resource conflicts with the `aws.iam.GroupPolicyAttachment`, `aws.iam.RolePolicyAttachment`, and `aws.iam.UserPolicyAttachment` resources and will permanently show a difference if both are defined.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -581,7 +580,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Group, Default=>]</span>
+        <span class="property-type">List[Group, Default=String>]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -603,7 +602,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=>]</span>
+        <span class="property-type">List[Role, Default=String>]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -614,7 +613,7 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[User, Default=>]</span>
+        <span class="property-type">List[User, Default=String>]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -1023,7 +1022,7 @@ The following state arguments are supported:
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Group, Default=>]</span>
+        <span class="property-type">List[Group, Default=String>]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -1056,7 +1055,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=>]</span>
+        <span class="property-type">List[Role, Default=String>]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
@@ -1067,7 +1066,7 @@ The following state arguments are supported:
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[User, Default=>]</span>
+        <span class="property-type">List[User, Default=String>]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>

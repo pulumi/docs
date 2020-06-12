@@ -3,7 +3,10 @@ title: Module cloudhsmv2
 title_tag: Module cloudhsmv2 | Package pulumi_aws | Python SDK
 linktitle: cloudhsmv2
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cloudhsmv2">
 <h1>cloudhsmv2<a class="headerlink" href="#cloudhsmv2" title="Permalink to this headline">¶</a></h1>

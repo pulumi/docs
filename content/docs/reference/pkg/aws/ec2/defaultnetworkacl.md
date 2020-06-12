@@ -109,7 +109,7 @@ class MyStack : Stack
             {
                 new Aws.Ec2.Inputs.DefaultNetworkAclIngressArgs
                 {
-                    Protocol = -1,
+                    Protocol = "-1",
                     RuleNo = 100,
                     Action = "allow",
                     CidrBlock = mainvpc.CidrBlock,
@@ -121,7 +121,7 @@ class MyStack : Stack
             {
                 new Aws.Ec2.Inputs.DefaultNetworkAclEgressArgs
                 {
-                    Protocol = -1,
+                    Protocol = "-1",
                     RuleNo = 100,
                     Action = "allow",
                     CidrBlock = "0.0.0.0/0",
@@ -192,7 +192,7 @@ class MyStack : Stack
             {
                 new Aws.Ec2.Inputs.DefaultNetworkAclIngressArgs
                 {
-                    Protocol = -1,
+                    Protocol = "-1",
                     RuleNo = 100,
                     Action = "allow",
                     CidrBlock = mainvpc.CidrBlock,

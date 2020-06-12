@@ -13,7 +13,6 @@ meta_desc: "Explore the IpGroup resource of the workspaces module, including exa
 Provides an IP access control group in AWS WorkSpaces Service
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		contractors, err := workspaces.NewIpGroup(ctx, "contractors", &workspaces.IpGroupArgs{
+			Description: pulumi.String("Contractors IP access control group"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

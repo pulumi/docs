@@ -3,7 +3,10 @@ title: Module datapipeline
 title_tag: Module datapipeline | Package pulumi_aws | Python SDK
 linktitle: datapipeline
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="datapipeline">
 <h1>datapipeline<a class="headerlink" href="#datapipeline" title="Permalink to this headline">¶</a></h1>

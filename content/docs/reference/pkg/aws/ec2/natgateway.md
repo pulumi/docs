@@ -13,7 +13,6 @@ meta_desc: "Explore the NatGateway resource of the ec2 module, including example
 Provides a resource to create a VPC NAT Gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		gw, err := ec2.NewNatGateway(ctx, "gw", &ec2.NatGatewayArgs{
+			AllocationId: pulumi.String(aws_eip.Nat.Id),
+			SubnetId:     pulumi.String(aws_subnet.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

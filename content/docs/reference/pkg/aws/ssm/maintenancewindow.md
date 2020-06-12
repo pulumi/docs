@@ -13,7 +13,6 @@ meta_desc: "Explore the MaintenanceWindow resource of the ssm module, including 
 Provides an SSM Maintenance Window resource
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		production, err := ssm.NewMaintenanceWindow(ctx, "production", &ssm.MaintenanceWindowArgs{
+			Cutoff:   pulumi.Int(1),
+			Duration: pulumi.Int(3),
+			Schedule: pulumi.String("cron(0 16 ? * TUE *)"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetLedger function of the qldb module, including example
 Use this data source to fetch information about a Quantum Ledger Database.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := qldb.LookupLedger(ctx, &qldb.LookupLedgerArgs{
+			Name: "an_example_ledger",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -207,7 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default. 
+    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -257,7 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default. 
+    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -307,7 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default. 
+    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -357,7 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default. 
+    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default.
 {{% /md %}}</dd>
 
     <dt class="property-"

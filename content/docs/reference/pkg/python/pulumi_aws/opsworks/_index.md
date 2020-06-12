@@ -3,7 +3,10 @@ title: Module opsworks
 title_tag: Module opsworks | Package pulumi_aws | Python SDK
 linktitle: opsworks
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="opsworks">
 <h1>opsworks<a class="headerlink" href="#opsworks" title="Permalink to this headline">¶</a></h1>

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSnapshot function of the ebs module, including exampl
 Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,7 +61,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ebsVolume, err := ebs.LookupSnapshot(ctx, &ebs.LookupSnapshotArgs{
+			Filters: ebs.getSnapshotFilterArray{
+				&ebs.LookupSnapshotFilter{
+					Name: "volume-size",
+					Values: []string{
+						"40",
+					},
+				},
+				&ebs.LookupSnapshotFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"Example",
+					},
+				},
+			},
+			MostRecent: true,
+			Owners: []string{
+				"self",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

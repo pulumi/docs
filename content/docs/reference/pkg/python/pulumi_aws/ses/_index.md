@@ -3,7 +3,10 @@ title: Module ses
 title_tag: Module ses | Package pulumi_aws | Python SDK
 linktitle: ses
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ses">
 <h1>ses<a class="headerlink" href="#ses" title="Permalink to this headline">¶</a></h1>

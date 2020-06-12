@@ -3,7 +3,10 @@ title: Module lightsail
 title_tag: Module lightsail | Package pulumi_aws | Python SDK
 linktitle: lightsail
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="lightsail">
 <h1>lightsail<a class="headerlink" href="#lightsail" title="Permalink to this headline">¶</a></h1>

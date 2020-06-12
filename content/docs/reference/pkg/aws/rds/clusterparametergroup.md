@@ -16,7 +16,6 @@ Provides an RDS DB cluster parameter group resource. Documentation of the availa
 * [Aurora PostgreSQL Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html)
 
 
-
 {{% examples %}}
 ## Example Usage
 

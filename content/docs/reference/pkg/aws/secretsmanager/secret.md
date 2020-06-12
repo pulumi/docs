@@ -13,7 +13,6 @@ meta_desc: "Explore the Secret resource of the secretsmanager module, including 
 Provides a resource to manage AWS Secrets Manager secret metadata. To manage a secret value, see the `aws.secretsmanager.SecretVersion` resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,7 +37,24 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := secretsmanager.NewSecret(ctx, "example", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

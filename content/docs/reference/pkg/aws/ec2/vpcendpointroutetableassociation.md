@@ -13,7 +13,6 @@ meta_desc: "Explore the VpcEndpointRouteTableAssociation resource of the ec2 mod
 Manages a VPC Endpoint Route Table Association
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.NewVpcEndpointRouteTableAssociation(ctx, "example", &ec2.VpcEndpointRouteTableAssociationArgs{
+			RouteTableId:  pulumi.String(aws_route_table.Example.Id),
+			VpcEndpointId: pulumi.String(aws_vpc_endpoint.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

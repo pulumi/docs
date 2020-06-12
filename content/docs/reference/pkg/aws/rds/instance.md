@@ -37,7 +37,6 @@ and Burstable Performance. For more information please read the AWS RDS document
 about [DB Instance Class Types](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -133,7 +132,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := rds.NewInstance(ctx, "example", &rds.InstanceArgs{
+			AllocatedStorage:    pulumi.Int(50),
+			MaxAllocatedStorage: pulumi.Int(100),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

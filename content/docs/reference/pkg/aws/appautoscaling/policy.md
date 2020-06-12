@@ -13,7 +13,6 @@ meta_desc: "Explore the Policy resource of the appautoscaling module, including 
 Provides an Application AutoScaling Policy resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,7 +57,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dynamodbTableReadTarget, err := appautoscaling.NewTarget(ctx, "dynamodbTableReadTarget", &appautoscaling.TargetArgs{
+			MaxCapacity:       pulumi.Int(100),
+			MinCapacity:       pulumi.Int(5),
+			ResourceId:        pulumi.String("table/tableName"),
+			ScalableDimension: pulumi.String("dynamodb:table:ReadCapacityUnits"),
+			ServiceNamespace:  pulumi.String("dynamodb"),
+		})
+		if err != nil {
+			return err
+		}
+		dynamodbTableReadPolicy, err := appautoscaling.NewPolicy(ctx, "dynamodbTableReadPolicy", &appautoscaling.PolicyArgs{
+			PolicyType:        pulumi.String("TargetTrackingScaling"),
+			ResourceId:        dynamodbTableReadTarget.ResourceId,
+			ScalableDimension: dynamodbTableReadTarget.ScalableDimension,
+			ServiceNamespace:  dynamodbTableReadTarget.ServiceNamespace,
+			TargetTrackingScalingPolicyConfiguration: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs{
+				PredefinedMetricSpecification: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs{
+					PredefinedMetricType: pulumi.String("DynamoDBReadCapacityUtilization"),
+				},
+				TargetValue: pulumi.Float64(70),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -159,7 +196,50 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ecsTarget, err := appautoscaling.NewTarget(ctx, "ecsTarget", &appautoscaling.TargetArgs{
+			MaxCapacity:       pulumi.Int(4),
+			MinCapacity:       pulumi.Int(1),
+			ResourceId:        pulumi.String("service/clusterName/serviceName"),
+			ScalableDimension: pulumi.String("ecs:service:DesiredCount"),
+			ServiceNamespace:  pulumi.String("ecs"),
+		})
+		if err != nil {
+			return err
+		}
+		ecsPolicy, err := appautoscaling.NewPolicy(ctx, "ecsPolicy", &appautoscaling.PolicyArgs{
+			PolicyType:        pulumi.String("StepScaling"),
+			ResourceId:        ecsTarget.ResourceId,
+			ScalableDimension: ecsTarget.ScalableDimension,
+			ServiceNamespace:  ecsTarget.ServiceNamespace,
+			StepScalingPolicyConfiguration: &appautoscaling.PolicyStepScalingPolicyConfigurationArgs{
+				AdjustmentType:        pulumi.String("ChangeInCapacity"),
+				Cooldown:              pulumi.Int(60),
+				MetricAggregationType: pulumi.String("Maximum"),
+				StepAdjustment: []map[string]interface{}{
+					map[string]interface{}{
+						"metricIntervalUpperBound": 0,
+						"scalingAdjustment":        -1,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -215,107 +295,6 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
             metricIntervalUpperBound: "0",
             scalingAdjustment: -1,
         }],
-    },
-});
-```
-{{% /example %}}
-
-### Aurora Read Replica Autoscaling
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var replicasTarget = new Aws.AppAutoScaling.Target("replicasTarget", new Aws.AppAutoScaling.TargetArgs
-        {
-            MaxCapacity = 15,
-            MinCapacity = 1,
-            ResourceId = $"cluster:{aws_rds_cluster.Example.Id}",
-            ScalableDimension = "rds:cluster:ReadReplicaCount",
-            ServiceNamespace = "rds",
-        });
-        var replicasPolicy = new Aws.AppAutoScaling.Policy("replicasPolicy", new Aws.AppAutoScaling.PolicyArgs
-        {
-            PolicyType = "TargetTrackingScaling",
-            ResourceId = replicasTarget.ResourceId,
-            ScalableDimension = replicasTarget.ScalableDimension,
-            ServiceNamespace = replicasTarget.ServiceNamespace,
-            TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
-            {
-                PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
-                {
-                    PredefinedMetricType = "RDSReaderAverageCPUUtilization",
-                },
-                ScaleInCooldown = 300,
-                ScaleOutCooldown = 300,
-                TargetValue = 75,
-            },
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-replicas_target = aws.appautoscaling.Target("replicasTarget",
-    max_capacity=15,
-    min_capacity=1,
-    resource_id=f"cluster:{aws_rds_cluster['example']['id']}",
-    scalable_dimension="rds:cluster:ReadReplicaCount",
-    service_namespace="rds")
-replicas_policy = aws.appautoscaling.Policy("replicasPolicy",
-    policy_type="TargetTrackingScaling",
-    resource_id=replicas_target.resource_id,
-    scalable_dimension=replicas_target.scalable_dimension,
-    service_namespace=replicas_target.service_namespace,
-    target_tracking_scaling_policy_configuration={
-        "predefinedMetricSpecification": {
-            "predefinedMetricType": "RDSReaderAverageCPUUtilization",
-        },
-        "scaleInCooldown": 300,
-        "scaleOutCooldown": 300,
-        "targetValue": 75,
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const replicasTarget = new aws.appautoscaling.Target("replicas", {
-    maxCapacity: 15,
-    minCapacity: 1,
-    resourceId: pulumi.interpolate`cluster:${aws_rds_cluster_example.id}`,
-    scalableDimension: "rds:cluster:ReadReplicaCount",
-    serviceNamespace: "rds",
-});
-const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
-    policyType: "TargetTrackingScaling",
-    resourceId: replicasTarget.resourceId,
-    scalableDimension: replicasTarget.scalableDimension,
-    serviceNamespace: replicasTarget.serviceNamespace,
-    targetTrackingScalingPolicyConfiguration: {
-        predefinedMetricSpecification: {
-            predefinedMetricType: "RDSReaderAverageCPUUtilization",
-        },
-        scaleInCooldown: 300,
-        scaleOutCooldown: 300,
-        targetValue: 75,
     },
 });
 ```
@@ -1770,7 +1749,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1780,7 +1760,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1790,7 +1771,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1807,7 +1789,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1817,7 +1800,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1827,7 +1811,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1844,7 +1829,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1854,7 +1840,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1864,7 +1851,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1881,7 +1869,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1891,7 +1880,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1901,7 +1891,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

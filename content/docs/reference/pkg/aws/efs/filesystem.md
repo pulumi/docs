@@ -13,7 +13,6 @@ meta_desc: "Explore the FileSystem resource of the efs module, including example
 Provides an Elastic File System (EFS) File System resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := efs.NewFileSystem(ctx, "foo", &efs.FileSystemArgs{
+			Tags: map[string]interface{}{
+				"Name": "MyProduct",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -93,7 +113,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooWithLifecylePolicy, err := efs.NewFileSystem(ctx, "fooWithLifecylePolicy", &efs.FileSystemArgs{
+			LifecyclePolicy: &efs.FileSystemLifecyclePolicyArgs{
+				TransitionToIa: pulumi.String("AFTER_30_DAYS"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
