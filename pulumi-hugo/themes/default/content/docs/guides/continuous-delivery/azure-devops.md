@@ -135,6 +135,10 @@ jobs:
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
+  - task: Npm@1
+    inputs:
+      command: install
+      workingDir: "infra/"
   - task: Pulumi@1
     condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
     inputs:
