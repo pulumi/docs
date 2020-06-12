@@ -1,4 +1,16 @@
 [[awards]]
+title = "Gartner Cool Vendor 2020"
+featured = true
+img = "/logos/press/awards/gartner-cool-vendor.png"
+url = "https://www.gartner.com/doc/reprints?id=1-1Z160QCQ&ct=200514&st=sb"
+
+[[awards]]
+title = "IDC Innovator 2020"
+featured = true
+img = "/logos/press/awards/idc-innovator.png"
+url = "https://www.idc.com/getdoc.jsp?containerId=US44895219"
+
+[[awards]]
 title = "Top Startups of 2019"
 featured = false
 img = "/logos/press/businessinsider.png"
