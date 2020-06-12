@@ -12,9 +12,6 @@ meta_desc: "Explore the Group resource of the containerservice module, including
 
 Manages as an Azure Container Group instance.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Group Resource {#create}

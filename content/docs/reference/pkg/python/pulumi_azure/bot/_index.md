@@ -379,9 +379,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example_channel_teams</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">ChannelTeams</span><span class="p">(</span><span class="s2">&quot;exampleChannelTeams&quot;</span><span class="p">,</span>
     <span class="n">bot_name</span><span class="o">=</span><span class="n">example_channels_registration</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_channels_registration</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
-    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">calling_web_hook</span><span class="o">=</span><span class="s2">&quot;https://example2.com/&quot;</span><span class="p">,</span>
-    <span class="n">enable_calling</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

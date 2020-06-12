@@ -17,9 +17,6 @@ optionally be configured with a security group to be associated with the subnet.
 provides both a standalone Subnet resource, and allows for Subnets to be defined in-line within the Virtual Network resource.
 At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet's.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a VirtualNetwork Resource {#create}

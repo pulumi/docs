@@ -13,7 +13,6 @@ meta_desc: "Explore the AdvancedThreatProtection resource of the securitycenter 
 Manages a resources Advanced Threat Protection setting.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,47 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/securitycenter"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      pulumi.String(azurerm_resource_group.Example.Name),
+			Location:               pulumi.String(azurerm_resource_group.Example.Location),
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+			Tags: map[string]interface{}{
+				"environment": "example",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleAdvancedThreatProtection, err := securitycenter.NewAdvancedThreatProtection(ctx, "exampleAdvancedThreatProtection", &securitycenter.AdvancedThreatProtectionArgs{
+			TargetResourceId: exampleAccount.ID(),
+			Enabled:          pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

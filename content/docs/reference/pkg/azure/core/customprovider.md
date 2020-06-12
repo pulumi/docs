@@ -12,9 +12,6 @@ meta_desc: "Explore the CustomProvider resource of the core module, including ex
 
 Manages an Azure Custom Provider.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a CustomProvider Resource {#create}
@@ -1109,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of the action. 
+    <dd>{{% md %}}Specifies the endpoint of the action.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1120,7 +1117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the action. 
+    <dd>{{% md %}}Specifies the name of the action.
 {{% /md %}}</dd>
 
 </dl>
@@ -1138,7 +1135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of the action. 
+    <dd>{{% md %}}Specifies the endpoint of the action.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1149,7 +1146,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the action. 
+    <dd>{{% md %}}Specifies the name of the action.
 {{% /md %}}</dd>
 
 </dl>
@@ -1167,7 +1164,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of the action. 
+    <dd>{{% md %}}Specifies the endpoint of the action.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1178,7 +1175,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the action. 
+    <dd>{{% md %}}Specifies the name of the action.
 {{% /md %}}</dd>
 
 </dl>
@@ -1196,7 +1193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of the action. 
+    <dd>{{% md %}}Specifies the endpoint of the action.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1207,7 +1204,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the action. 
+    <dd>{{% md %}}Specifies the name of the action.
 {{% /md %}}</dd>
 
 </dl>
@@ -1243,7 +1240,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of the route definition. 
+    <dd>{{% md %}}Specifies the endpoint of the route definition.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1254,7 +1251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the route definition. 
+    <dd>{{% md %}}Specifies the name of the route definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1265,7 +1262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The routing type that is supported for the resource request. Valid values are `ResourceTypeRoutingProxy` or `ResourceTypeRoutingProxyCache`. This value defaults to `ResourceTypeRoutingProxy`. 
+    <dd>{{% md %}}The routing type that is supported for the resource request. Valid values are `ResourceTypeRoutingProxy` or `ResourceTypeRoutingProxyCache`. This value defaults to `ResourceTypeRoutingProxy`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1283,7 +1280,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of the route definition. 
+    <dd>{{% md %}}Specifies the endpoint of the route definition.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1294,7 +1291,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the route definition. 
+    <dd>{{% md %}}Specifies the name of the route definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1305,7 +1302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The routing type that is supported for the resource request. Valid values are `ResourceTypeRoutingProxy` or `ResourceTypeRoutingProxyCache`. This value defaults to `ResourceTypeRoutingProxy`. 
+    <dd>{{% md %}}The routing type that is supported for the resource request. Valid values are `ResourceTypeRoutingProxy` or `ResourceTypeRoutingProxyCache`. This value defaults to `ResourceTypeRoutingProxy`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1323,7 +1320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of the route definition. 
+    <dd>{{% md %}}Specifies the endpoint of the route definition.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1334,7 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the route definition. 
+    <dd>{{% md %}}Specifies the name of the route definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1345,7 +1342,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The routing type that is supported for the resource request. Valid values are `ResourceTypeRoutingProxy` or `ResourceTypeRoutingProxyCache`. This value defaults to `ResourceTypeRoutingProxy`. 
+    <dd>{{% md %}}The routing type that is supported for the resource request. Valid values are `ResourceTypeRoutingProxy` or `ResourceTypeRoutingProxyCache`. This value defaults to `ResourceTypeRoutingProxy`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1363,7 +1360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of the route definition. 
+    <dd>{{% md %}}Specifies the endpoint of the route definition.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1374,7 +1371,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the route definition. 
+    <dd>{{% md %}}Specifies the name of the route definition.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1385,7 +1382,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The routing type that is supported for the resource request. Valid values are `ResourceTypeRoutingProxy` or `ResourceTypeRoutingProxyCache`. This value defaults to `ResourceTypeRoutingProxy`. 
+    <dd>{{% md %}}The routing type that is supported for the resource request. Valid values are `ResourceTypeRoutingProxy` or `ResourceTypeRoutingProxyCache`. This value defaults to `ResourceTypeRoutingProxy`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1421,7 +1418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The endpoint where the validation specification is located. 
+    <dd>{{% md %}}The endpoint where the validation specification is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1439,7 +1436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The endpoint where the validation specification is located. 
+    <dd>{{% md %}}The endpoint where the validation specification is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1457,7 +1454,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The endpoint where the validation specification is located. 
+    <dd>{{% md %}}The endpoint where the validation specification is located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1475,7 +1472,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The endpoint where the validation specification is located. 
+    <dd>{{% md %}}The endpoint where the validation specification is located.
 {{% /md %}}</dd>
 
 </dl>

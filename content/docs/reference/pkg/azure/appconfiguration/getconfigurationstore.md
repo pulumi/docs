@@ -13,7 +13,6 @@ meta_desc: "Explore the GetConfigurationStore function of the appconfiguration m
 Use this data source to access information about an existing App Configuration.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := appconfiguration.LookupConfigurationStore(ctx, &appconfiguration.LookupConfigurationStoreArgs{
+			Name:              "existing",
+			ResourceGroupName: "existing",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

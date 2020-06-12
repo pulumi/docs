@@ -12,9 +12,6 @@ meta_desc: "Explore the NetworkPacketCapture resource of the network module, inc
 
 Configures Network Packet Capturing against a Virtual Machine using a Network Watcher.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NetworkPacketCapture Resource {#create}

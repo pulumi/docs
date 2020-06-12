@@ -13,7 +13,6 @@ meta_desc: "Explore the AuthorizationRule resource of the notificationhub module
 Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -61,7 +60,55 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/notificationhub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("Australia East"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNamespace, err := notificationhub.NewNamespace(ctx, "exampleNamespace", &notificationhub.NamespaceArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			NamespaceType:     pulumi.String("NotificationHub"),
+			SkuName:           pulumi.String("Free"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleHub, err := notificationhub.NewHub(ctx, "exampleHub", &notificationhub.HubArgs{
+			NamespaceName:     exampleNamespace.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		exampleAuthorizationRule, err := notificationhub.NewAuthorizationRule(ctx, "exampleAuthorizationRule", &notificationhub.AuthorizationRuleArgs{
+			NotificationHubName: exampleHub.Name,
+			NamespaceName:       exampleNamespace.Name,
+			ResourceGroupName:   exampleResourceGroup.Name,
+			Manage:              pulumi.Bool(true),
+			Send:                pulumi.Bool(true),
+			Listen:              pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -12,35 +12,13 @@ meta_desc: "Explore the Plan resource of the appservice module, including exampl
 
 Manages an App Service Plan component.
 
-## Example Usage (Dedicated)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const examplePlan = new azure.appservice.Plan("examplePlan", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    sku: {
-        tier: "Standard",
-        size: "S1",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_plan = azure.appservice.Plan("examplePlan",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    sku={
-        "tier": "Standard",
-        "size": "S1",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dedicated)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -67,24 +45,44 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage (Shared / Consumption Plan)
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const examplePlan = new azure.appservice.Plan("examplePlan", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    kind: "FunctionApp",
-    sku: {
-        tier: "Dynamic",
-        size: "Y1",
-    },
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Standard"),
+				Size: pulumi.String("S1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -93,12 +91,32 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    kind="FunctionApp",
     sku={
-        "tier": "Dynamic",
-        "size": "Y1",
+        "tier": "Standard",
+        "size": "S1",
     })
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+```
+{{% /example %}}
+
+### Shared / Consumption Plan)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -126,25 +144,45 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage (Linux)
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const examplePlan = new azure.appservice.Plan("examplePlan", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    kind: "Linux",
-    reserved: true,
-    sku: {
-        tier: "Standard",
-        size: "S1",
-    },
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Kind:              pulumi.String("FunctionApp"),
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Dynamic"),
+				Size: pulumi.String("Y1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -153,13 +191,34 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    kind="Linux",
-    reserved=True,
+    kind="FunctionApp",
     sku={
-        "tier": "Standard",
-        "size": "S1",
+        "tier": "Dynamic",
+        "size": "Y1",
     })
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "FunctionApp",
+    sku: {
+        tier: "Dynamic",
+        size: "Y1",
+    },
+});
+```
+{{% /example %}}
+
+### Linux)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -188,25 +247,46 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage (Windows Container)
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const examplePlan = new azure.appservice.Plan("examplePlan", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    kind: "xenon",
-    isXenon: true,
-    sku: {
-        tier: "PremiumContainer",
-        size: "PC2",
-    },
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Kind:              pulumi.String("Linux"),
+			Reserved:          pulumi.Bool(true),
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Standard"),
+				Size: pulumi.String("S1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -215,13 +295,36 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    kind="xenon",
-    is_xenon=True,
+    kind="Linux",
+    reserved=True,
     sku={
-        "tier": "PremiumContainer",
-        "size": "PC2",
+        "tier": "Standard",
+        "size": "S1",
     })
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "Linux",
+    reserved: true,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+```
+{{% /example %}}
+
+### Windows Container)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -250,7 +353,83 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Kind:              pulumi.String("xenon"),
+			IsXenon:           pulumi.Bool(true),
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("PremiumContainer"),
+				Size: pulumi.String("PC2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    kind="xenon",
+    is_xenon=True,
+    sku={
+        "tier": "PremiumContainer",
+        "size": "PC2",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "xenon",
+    isXenon: true,
+    sku: {
+        tier: "PremiumContainer",
+        size: "PC2",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Plan Resource {#create}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetZone function of the dns module, including examples, 
 Use this data source to access information about an existing DNS Zone.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := dns.LookupZone(ctx, &dns.LookupZoneArgs{
+			Name:              "search-eventhubns",
+			ResourceGroupName: "search-service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("dnsZoneId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

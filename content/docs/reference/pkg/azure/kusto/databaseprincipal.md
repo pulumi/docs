@@ -13,7 +13,6 @@ meta_desc: "Explore the DatabasePrincipal resource of the kusto module, includin
 Manages a Kusto (also known as Azure Data Explorer) Database Principal
 
 
-
 {{% examples %}}
 ## Example Usage
 

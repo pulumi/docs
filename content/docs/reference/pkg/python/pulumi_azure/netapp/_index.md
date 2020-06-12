@@ -911,7 +911,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">account_name</span><span class="o">=</span><span class="s2">&quot;acctestnetappaccount&quot;</span><span class="p">,</span>
     <span class="n">pool_name</span><span class="o">=</span><span class="s2">&quot;acctestnetapppool&quot;</span><span class="p">,</span>
     <span class="n">volume_name</span><span class="o">=</span><span class="s2">&quot;acctestnetappvolume&quot;</span><span class="p">)</span>
-<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;netappSnapshotId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;netapp.Snapshot&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;netappSnapshotId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;azurerm_netapp_snapshot&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

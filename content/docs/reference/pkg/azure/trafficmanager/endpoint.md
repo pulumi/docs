@@ -12,9 +12,6 @@ meta_desc: "Explore the Endpoint resource of the trafficmanager module, includin
 
 Manages a Traffic Manager Endpoint.
 
-{{% examples %}}
-{{% /examples %}}
-
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.Endpoint has been deprecated in favor of azure.network.TrafficManagerEndpoint{{% /md %}}</p>
 
 

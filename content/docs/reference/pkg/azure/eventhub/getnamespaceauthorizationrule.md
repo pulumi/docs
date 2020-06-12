@@ -13,7 +13,6 @@ meta_desc: "Explore the GetNamespaceAuthorizationRule function of the eventhub m
 Use this data source to access information about an Authorization Rule for an Event Hub Namespace.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := eventhub.LookupNamespaceAuthorizationRule(ctx, &eventhub.LookupNamespaceAuthorizationRuleArgs{
+			Name:              "navi",
+			ResourceGroupName: "example-resources",
+			NamespaceName:     "example-ns",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("eventhubAuthorizationRuleId", data.Azurem_eventhub_namespace_authorization_rule.Example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -122,7 +142,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the EventHub Authorization Rule resource. 
+    <dd>{{% md %}}The name of the EventHub Authorization Rule resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -162,7 +182,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the EventHub Authorization Rule resource. 
+    <dd>{{% md %}}The name of the EventHub Authorization Rule resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -202,7 +222,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the EventHub Authorization Rule resource. 
+    <dd>{{% md %}}The name of the EventHub Authorization Rule resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -242,7 +262,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the EventHub Authorization Rule resource. 
+    <dd>{{% md %}}The name of the EventHub Authorization Rule resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"

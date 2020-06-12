@@ -13,7 +13,6 @@ meta_desc: "Explore the GetEventHub function of the eventhub module, including e
 Use this data source to access information about an existing EventHub.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := eventhub.LookupEventHub(ctx, &eventhub.LookupEventHubArgs{
+			Name:              "search-eventhub",
+			ResourceGroupName: "search-service",
+			NamespaceName:     "search-eventhubns",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("eventhubId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

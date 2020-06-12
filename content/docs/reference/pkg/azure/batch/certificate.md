@@ -12,9 +12,6 @@ meta_desc: "Explore the Certificate resource of the batch module, including exam
 
 Manages a certificate in an Azure Batch account.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Certificate Resource {#create}

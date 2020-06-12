@@ -13,7 +13,6 @@ meta_desc: "Explore the Policy resource of the devtest module, including example
 Manages a Policy within a Dev Test Policy Set.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -61,7 +60,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLab, err := devtest.NewLab(ctx, "exampleLab", &devtest.LabArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Tags: map[string]interface{}{
+				"Sydney": "Australia",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		examplePolicy, err := devtest.NewPolicy(ctx, "examplePolicy", &devtest.PolicyArgs{
+			PolicySetName:     pulumi.String("default"),
+			LabName:           exampleLab.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			FactData:          pulumi.String(""),
+			Threshold:         pulumi.String("999"),
+			EvaluatorType:     pulumi.String("MaxValuePolicy"),
+			Tags: map[string]interface{}{
+				"Acceptance": "Test",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

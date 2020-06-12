@@ -13,7 +13,6 @@ meta_desc: "Explore the GetRegistry function of the containerservice module, inc
 Use this data source to access information about an existing Container Registry.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := containerservice.LookupRegistry(ctx, &containerservice.LookupRegistryArgs{
+			Name:              "testacr",
+			ResourceGroupName: "test",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("loginServer", example.LoginServer)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

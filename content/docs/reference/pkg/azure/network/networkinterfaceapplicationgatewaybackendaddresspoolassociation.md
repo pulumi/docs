@@ -12,9 +12,6 @@ meta_desc: "Explore the NetworkInterfaceApplicationGatewayBackendAddressPoolAsso
 
 Manages the association between a Network Interface and a Application Gateway's Backend Address Pool.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation Resource {#create}

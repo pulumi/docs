@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSubnet function of the network module, including exam
 Use this data source to access information about an existing Subnet within a Virtual Network.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupSubnet(ctx, &network.LookupSubnetArgs{
+			Name:               "backend",
+			VirtualNetworkName: "production",
+			ResourceGroupName:  "networking",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("subnetId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

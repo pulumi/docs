@@ -12,28 +12,13 @@ meta_desc: "Explore the GetPublicIP function of the network module, including ex
 
 Use this data source to access information about an existing Public IP Address.
 
-## Example Usage (reference an existing)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const example = azure.network.getPublicIP({
-    name: "name_of_public_ip",
-    resourceGroupName: "name_of_resource_group",
-});
-export const domainNameLabel = example.then(example => example.domainNameLabel);
-export const publicIpAddress = example.then(example => example.ipAddress);
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example = azure.network.get_public_ip(name="name_of_public_ip",
-    resource_group_name="name_of_resource_group")
-pulumi.export("domainNameLabel", example.domain_name_label)
-pulumi.export("publicIpAddress", example.ip_address)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Reference An Existing)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -57,7 +42,60 @@ class MyStack : Stack
     public Output<string> PublicIpAddress { get; set; }
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupPublicIP(ctx, &network.LookupPublicIPArgs{
+			Name:              "name_of_public_ip",
+			ResourceGroupName: "name_of_resource_group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("domainNameLabel", example.DomainNameLabel)
+		ctx.Export("publicIpAddress", example.IpAddress)
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_public_ip(name="name_of_public_ip",
+    resource_group_name="name_of_resource_group")
+pulumi.export("domainNameLabel", example.domain_name_label)
+pulumi.export("publicIpAddress", example.ip_address)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getPublicIP({
+    name: "name_of_public_ip",
+    resourceGroupName: "name_of_resource_group",
+});
+export const domainNameLabel = example.then(example => example.domainNameLabel);
+export const publicIpAddress = example.then(example => example.ipAddress);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPublicIP {#using}

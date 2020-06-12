@@ -13,7 +13,6 @@ meta_desc: "Explore the WebApp resource of the bot module, including examples, i
 Manages a Bot Web App.
 
 
-
 {{% examples %}}
 ## Example Usage
 

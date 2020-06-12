@@ -13,7 +13,6 @@ meta_desc: "Explore the Server resource of the mariadb module, including example
 Manages a MariaDB Server.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,7 +53,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mariadb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := mariadb.NewServer(ctx, "exampleServer", &mariadb.ServerArgs{
+			Location:                   exampleResourceGroup.Location,
+			ResourceGroupName:          exampleResourceGroup.Name,
+			AdministratorLogin:         pulumi.String("mariadbadmin"),
+			AdministratorLoginPassword: pulumi.String("H@Sh1CoR3!"),
+			SkuName:                    pulumi.String("B_Gen5_2"),
+			StorageMb:                  pulumi.Int(5120),
+			Version:                    pulumi.String("10.2"),
+			AutoGrowEnabled:            pulumi.Bool(true),
+			BackupRetentionDays:        pulumi.Int(7),
+			GeoRedundantBackupEnabled:  pulumi.Bool(false),
+			PublicNetworkAccessEnabled: pulumi.Bool(false),
+			SslEnforcementEnabled:      pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

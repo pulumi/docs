@@ -12,9 +12,6 @@ meta_desc: "Explore the SparkCluster resource of the hdinsight module, including
 
 Manages a HDInsight Spark Cluster.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a SparkCluster Resource {#create}

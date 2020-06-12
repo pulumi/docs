@@ -13,7 +13,6 @@ meta_desc: "Explore the GetShare function of the datashare module, including exa
 Use this data source to access information about an existing Data Share.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +47,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleAccount, err := datashare.LookupAccount(ctx, &datashare.LookupAccountArgs{
+			Name:              "example-account",
+			ResourceGroupName: "example-resource-group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleShare, err := datashare.LookupShare(ctx, &datashare.LookupShareArgs{
+			Name:      "existing",
+			AccountId: data.Azurerm_data_share_account.Exmaple.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", exampleShare.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -59,7 +85,7 @@ import pulumi_azure as azure
 example_account = azure.datashare.get_account(name="example-account",
     resource_group_name="example-resource-group")
 example_share = azure.datashare.get_share(name="existing",
-    account_id=data["azure.datashare.Account"]["exmaple"]["id"])
+    account_id=data["azurerm_data_share_account"]["exmaple"]["id"])
 pulumi.export("id", example_share.id)
 ```
 {{% /example %}}

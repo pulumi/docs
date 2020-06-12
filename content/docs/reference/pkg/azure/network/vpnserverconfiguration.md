@@ -12,9 +12,6 @@ meta_desc: "Explore the VpnServerConfiguration resource of the network module, i
 
 Manages a VPN Server Configuration.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a VpnServerConfiguration Resource {#create}

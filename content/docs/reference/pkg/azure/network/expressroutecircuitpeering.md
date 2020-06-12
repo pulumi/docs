@@ -12,6 +12,9 @@ meta_desc: "Explore the ExpressRouteCircuitPeering resource of the network modul
 
 Manages an ExpressRoute Circuit Peering.
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a ExpressRouteCircuitPeering Resource {#create}

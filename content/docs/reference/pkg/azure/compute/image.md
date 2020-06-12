@@ -12,29 +12,13 @@ meta_desc: "Explore the Image resource of the compute module, including examples
 
 Manages a custom virtual machine image that can be used to create virtual machines.
 
-## Example Usage Creating from Virtual Machine (VM must be generalized beforehand)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
-const exampleImage = new azure.compute.Image("exampleImage", {
-    location: "West US",
-    resourceGroupName: exampleResourceGroup.name,
-    sourceVirtualMachineId: "{vm_id}",
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
-example_image = azure.compute.Image("exampleImage",
-    location="West US",
-    resource_group_name=example_resource_group.name,
-    source_virtual_machine_id="{vm_id}")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creating From Virtual Machine (VM Must Be Generalized Beforehand)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -57,7 +41,68 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleImage, err := compute.NewImage(ctx, "exampleImage", &compute.ImageArgs{
+			Location:               pulumi.String("West US"),
+			ResourceGroupName:      exampleResourceGroup.Name,
+			SourceVirtualMachineId: pulumi.String("{vm_id}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_image = azure.compute.Image("exampleImage",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    source_virtual_machine_id="{vm_id}")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleImage = new azure.compute.Image("exampleImage", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    sourceVirtualMachineId: "{vm_id}",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Image Resource {#create}

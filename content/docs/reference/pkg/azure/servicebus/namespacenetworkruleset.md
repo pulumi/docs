@@ -12,9 +12,6 @@ meta_desc: "Explore the NamespaceNetworkRuleSet resource of the servicebus modul
 
 Manages a ServiceBus Namespace Network Rule Set Set.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NamespaceNetworkRuleSet Resource {#create}

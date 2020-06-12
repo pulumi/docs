@@ -13,7 +13,6 @@ meta_desc: "Explore the Product resource of the apimanagement module, including 
 Manages an API Management Product.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,7 +56,49 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@exmaple.com"),
+			SkuName:           pulumi.String("Developer_1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleProduct, err := apimanagement.NewProduct(ctx, "exampleProduct", &apimanagement.ProductArgs{
+			ProductId:            pulumi.String("test-product"),
+			ApiManagementName:    exampleService.Name,
+			ResourceGroupName:    exampleResourceGroup.Name,
+			DisplayName:          pulumi.String("Test Product"),
+			SubscriptionRequired: pulumi.Bool(true),
+			ApprovalRequired:     pulumi.Bool(true),
+			Published:            pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

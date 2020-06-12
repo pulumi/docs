@@ -13,7 +13,6 @@ meta_desc: "Explore the Agreement resource of the marketplace module, including 
 Allows accepting the Legal Terms for a Marketplace Image.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/marketplace"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		barracuda, err := marketplace.NewAgreement(ctx, "barracuda", &marketplace.AgreementArgs{
+			Offer:     pulumi.String("waf"),
+			Plan:      pulumi.String("hourly"),
+			Publisher: pulumi.String("barracudanetworks"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

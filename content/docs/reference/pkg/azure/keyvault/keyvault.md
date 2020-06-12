@@ -18,9 +18,6 @@ Manages a Key Vault.
 
 > **Note:** This provi will automatically recover a soft-deleted Key Vault during Creation if one is found - you can opt out of this using the `features` configuration within the Provider configuration block.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a KeyVault Resource {#create}

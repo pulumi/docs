@@ -12,9 +12,6 @@ meta_desc: "Explore the Diagnostic resource of the apimanagement module, includi
 
 Manages an API Management Service Diagnostic.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Diagnostic Resource {#create}

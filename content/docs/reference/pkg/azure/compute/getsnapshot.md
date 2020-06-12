@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSnapshot function of the compute module, including ex
 Use this data source to access information about an existing Snapshot.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := compute.LookupSnapshot(ctx, &compute.LookupSnapshotArgs{
+			Name:              "my-snapshot",
+			ResourceGroupName: "my-resource-group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

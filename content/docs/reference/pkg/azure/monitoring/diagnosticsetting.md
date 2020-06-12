@@ -12,9 +12,6 @@ meta_desc: "Explore the DiagnosticSetting resource of the monitoring module, inc
 
 Manages a Diagnostic Setting for an existing Resource.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a DiagnosticSetting Resource {#create}

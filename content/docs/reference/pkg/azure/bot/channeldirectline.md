@@ -12,9 +12,6 @@ meta_desc: "Explore the ChannelDirectLine resource of the bot module, including 
 
 Manages a Directline integration for a Bot Channel
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ChannelDirectLine Resource {#create}

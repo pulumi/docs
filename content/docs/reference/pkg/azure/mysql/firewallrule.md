@@ -12,35 +12,13 @@ meta_desc: "Explore the FirewallRule resource of the mysql module, including exa
 
 Manages a Firewall Rule for a MySQL Server
 
-## Example Usage (Single IP Address)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleServer = new azure.mysql.Server("exampleServer", {});
-// ...
-const exampleFirewallRule = new azure.mysql.FirewallRule("exampleFirewallRule", {
-    resourceGroupName: exampleResourceGroup.name,
-    serverName: exampleServer.name,
-    startIpAddress: "40.112.8.12",
-    endIpAddress: "40.112.8.12",
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_server = azure.mysql.Server("exampleServer")
-# ...
-example_firewall_rule = azure.mysql.FirewallRule("exampleFirewallRule",
-    resource_group_name=example_resource_group.name,
-    server_name=example_server.name,
-    start_ip_address="40.112.8.12",
-    end_ip_address="40.112.8.12")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Single IP Address)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -68,36 +46,80 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage (IP Range)
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mysql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleServer = new azure.mysql.Server("exampleServer", {});
-// ...
-const exampleFirewallRule = new azure.mysql.FirewallRule("exampleFirewallRule", {
-    resourceGroupName: exampleResourceGroup.name,
-    serverName: exampleServer.name,
-    startIpAddress: "40.112.0.0",
-    endIpAddress: "40.112.255.255",
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := mysql.NewServer(ctx, "exampleServer", nil)
+		if err != nil {
+			return err
+		}
+		exampleFirewallRule, err := mysql.NewFirewallRule(ctx, "exampleFirewallRule", &mysql.FirewallRuleArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleServer.Name,
+			StartIpAddress:    pulumi.String("40.112.8.12"),
+			EndIpAddress:      pulumi.String("40.112.8.12"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_azure as azure
 
 example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_server = azure.mysql.Server("exampleServer")
-# ...
+# ...
 example_firewall_rule = azure.mysql.FirewallRule("exampleFirewallRule",
     resource_group_name=example_resource_group.name,
     server_name=example_server.name,
-    start_ip_address="40.112.0.0",
-    end_ip_address="40.112.255.255")
+    start_ip_address="40.112.8.12",
+    end_ip_address="40.112.8.12")
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.mysql.Server("exampleServer", {});
+// ...
+const exampleFirewallRule = new azure.mysql.FirewallRule("exampleFirewallRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    startIpAddress: "40.112.8.12",
+    endIpAddress: "40.112.8.12",
+});
+```
+{{% /example %}}
+
+### IP Range)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -125,7 +147,79 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mysql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := mysql.NewServer(ctx, "exampleServer", nil)
+		if err != nil {
+			return err
+		}
+		exampleFirewallRule, err := mysql.NewFirewallRule(ctx, "exampleFirewallRule", &mysql.FirewallRuleArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleServer.Name,
+			StartIpAddress:    pulumi.String("40.112.0.0"),
+			EndIpAddress:      pulumi.String("40.112.255.255"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.mysql.Server("exampleServer")
+# ...
+example_firewall_rule = azure.mysql.FirewallRule("exampleFirewallRule",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    start_ip_address="40.112.0.0",
+    end_ip_address="40.112.255.255")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.mysql.Server("exampleServer", {});
+// ...
+const exampleFirewallRule = new azure.mysql.FirewallRule("exampleFirewallRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    startIpAddress: "40.112.0.0",
+    endIpAddress: "40.112.255.255",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

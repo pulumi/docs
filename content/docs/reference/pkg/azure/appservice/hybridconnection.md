@@ -12,9 +12,148 @@ meta_desc: "Explore the HybridConnection resource of the appservice module, incl
 
 Manages an App Service Hybrid Connection for an existing App Service, Relay and Service Bus.
 
-{{% examples %}}
-{{% /examples %}}
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+        var exampleAppService = new Azure.AppService.AppService("exampleAppService", new Azure.AppService.AppServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+        });
+        var exampleNamespace = new Azure.Relay.Namespace("exampleNamespace", new Azure.Relay.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "Standard",
+        });
+        var exampleHybridConnection = new Azure.Relay.HybridConnection("exampleHybridConnection", new Azure.Relay.HybridConnectionArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            RelayNamespaceName = exampleNamespace.Name,
+            UserMetadata = "examplemetadata",
+        });
+        var exampleAppservice_hybridConnectionHybridConnection = new Azure.AppService.HybridConnection("exampleAppservice/hybridConnectionHybridConnection", new Azure.AppService.HybridConnectionArgs
+        {
+            AppServiceName = exampleAppService.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            RelayId = exampleHybridConnection.Id,
+            Hostname = "testhostname.example",
+            Port = 8080,
+            SendKeyName = "exampleSharedAccessKey",
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_app_service = azure.appservice.AppService("exampleAppService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id)
+example_namespace = azure.relay.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="Standard")
+example_hybrid_connection = azure.relay.HybridConnection("exampleHybridConnection",
+    resource_group_name=example_resource_group.name,
+    relay_namespace_name=example_namespace.name,
+    user_metadata="examplemetadata")
+example_appservice_hybrid_connection_hybrid_connection = azure.appservice.HybridConnection("exampleAppservice/hybridConnectionHybridConnection",
+    app_service_name=example_app_service.name,
+    resource_group_name=example_resource_group.name,
+    relay_id=example_hybrid_connection.id,
+    hostname="testhostname.example",
+    port=8080,
+    send_key_name="exampleSharedAccessKey")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+});
+const exampleNamespace = new azure.relay.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "Standard",
+});
+const exampleHybridConnection = new azure.relay.HybridConnection("exampleHybridConnection", {
+    resourceGroupName: exampleResourceGroup.name,
+    relayNamespaceName: exampleNamespace.name,
+    userMetadata: "examplemetadata",
+});
+const exampleAppservice_hybridConnectionHybridConnection = new azure.appservice.HybridConnection("exampleAppservice/hybridConnectionHybridConnection", {
+    appServiceName: exampleAppService.name,
+    resourceGroupName: exampleResourceGroup.name,
+    relayId: exampleHybridConnection.id,
+    hostname: "testhostname.example",
+    port: 8080,
+    sendKeyName: "exampleSharedAccessKey",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HybridConnection Resource {#create}

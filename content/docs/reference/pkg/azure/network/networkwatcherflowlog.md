@@ -12,9 +12,6 @@ meta_desc: "Explore the NetworkWatcherFlowLog resource of the network module, in
 
 Manages a Network Watcher Flow Log.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NetworkWatcherFlowLog Resource {#create}

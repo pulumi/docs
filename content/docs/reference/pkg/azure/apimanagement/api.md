@@ -13,7 +13,6 @@ meta_desc: "Explore the Api resource of the apimanagement module, including exam
 Manages an API within an API Management Service.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,7 +63,54 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@exmaple.com"),
+			SkuName:           pulumi.String("Developer_1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleApi, err := apimanagement.NewApi(ctx, "exampleApi", &apimanagement.ApiArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ApiManagementName: exampleService.Name,
+			Revision:          pulumi.String("1"),
+			DisplayName:       pulumi.String("Example API"),
+			Path:              pulumi.String("example"),
+			Protocols: pulumi.StringArray{
+				pulumi.String("https"),
+			},
+			Import: &apimanagement.ApiImportArgs{
+				ContentFormat: pulumi.String("swagger-link-json"),
+				ContentValue:  pulumi.String("http://conferenceapi.azurewebsites.net/?format=json"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetElasticPool function of the mssql module, including e
 Use this data source to access information about an existing SQL elastic pool.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := mssql.LookupElasticPool(ctx, &mssql.LookupElasticPoolArgs{
+			Name:              "mssqlelasticpoolname",
+			ResourceGroupName: "example-resources",
+			ServerName:        "example-sql-server",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("elasticpoolId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

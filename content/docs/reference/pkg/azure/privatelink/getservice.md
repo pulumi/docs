@@ -15,7 +15,6 @@ Use this data source to access information about an existing Private Link Servic
 > **NOTE** Private Link is currently in Public Preview.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := privatelink.LookupService(ctx, &privatelink.LookupServiceArgs{
+			Name:              "myPrivateLinkService",
+			ResourceGroupName: "PrivateLinkServiceRG",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("privateLinkServiceId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetProject function of the databasemigration module, inc
 Use this data source to access information about an existing Database Migration Project.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := databasemigration.LookupProject(ctx, &databasemigration.LookupProjectArgs{
+			Name:              "example-dbms-project",
+			ResourceGroupName: "example-rg",
+			ServiceName:       "example-dbms",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("name", example.Name)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the Vault resource of the recoveryservices module, including
 Manages an Recovery Services Vault.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +45,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		vault, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Location:          rg.Location,
+			ResourceGroupName: rg.Name,
+			Sku:               pulumi.String("Standard"),
+			SoftDeleteEnabled: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

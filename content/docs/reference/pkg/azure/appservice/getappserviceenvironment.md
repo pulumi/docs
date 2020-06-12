@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAppServiceEnvironment function of the appservice modu
 Use this data source to access information about an existing App Service Environment
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := appservice.LookupAppServiceEnvironment(ctx, &appservice.LookupAppServiceEnvironmentArgs{
+			Name:              "example-ase",
+			ResourceGroupName: "example-rg",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("appServiceEnvironmentId", data.Azurerm_app_service_environment.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -53,7 +72,7 @@ import pulumi_azure as azure
 
 example = azure.appservice.get_app_service_environment(name="example-ase",
     resource_group_name="example-rg")
-pulumi.export("appServiceEnvironmentId", data["azure.appservice.Environment"]["id"])
+pulumi.export("appServiceEnvironmentId", data["azurerm_app_service_environment"]["id"])
 ```
 {{% /example %}}
 

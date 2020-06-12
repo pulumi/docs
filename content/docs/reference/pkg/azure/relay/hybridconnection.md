@@ -13,7 +13,6 @@ meta_desc: "Explore the HybridConnection resource of the relay module, including
 Manages an Azure Relay Hybrid Connection.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,7 +55,47 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/relay"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNamespace, err := relay.NewNamespace(ctx, "exampleNamespace", &relay.NamespaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("Standard"),
+			Tags: map[string]interface{}{
+				"source": "managed",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleHybridConnection, err := relay.NewHybridConnection(ctx, "exampleHybridConnection", &relay.HybridConnectionArgs{
+			ResourceGroupName:           exampleResourceGroup.Name,
+			RelayNamespaceName:          exampleNamespace.Name,
+			RequiresClientAuthorization: pulumi.Bool(false),
+			UserMetadata:                pulumi.String("testmetadata"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

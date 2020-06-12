@@ -1469,6 +1469,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>front_end_scale_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Scale factor for front end instances. Possible values are between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">15</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">15</span></code>.</p></li>
+<li><p><strong>internal_load_balancing_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Web</span></code> and <code class="docutils literal notranslate"><span class="pre">Publishing</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the App Service Environment. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>pricing_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Pricing tier for the front end instances. Possible values are <code class="docutils literal notranslate"><span class="pre">I1</span></code>, <code class="docutils literal notranslate"><span class="pre">I2</span></code> and <code class="docutils literal notranslate"><span class="pre">I3</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">I1</span></code>.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>).</p></li>
@@ -1481,6 +1482,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.Environment.front_end_scale_factor">
 <code class="sig-name descname">front_end_scale_factor</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Environment.front_end_scale_factor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale factor for front end instances. Possible values are between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">15</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">15</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.Environment.internal_load_balancing_mode">
+<code class="sig-name descname">internal_load_balancing_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Environment.internal_load_balancing_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Web</span></code> and <code class="docutils literal notranslate"><span class="pre">Publishing</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1531,6 +1538,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>front_end_scale_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Scale factor for front end instances. Possible values are between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">15</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">15</span></code>.</p></li>
+<li><p><strong>internal_load_balancing_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Web</span></code> and <code class="docutils literal notranslate"><span class="pre">Publishing</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the App Service Environment exists.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the App Service Environment. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>pricing_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Pricing tier for the front end instances. Possible values are <code class="docutils literal notranslate"><span class="pre">I1</span></code>, <code class="docutils literal notranslate"><span class="pre">I2</span></code> and <code class="docutils literal notranslate"><span class="pre">I3</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">I1</span></code>.</p></li>
@@ -3145,6 +3153,180 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.appservice.HybridConnection">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">HybridConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relay_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">send_key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an App Service Hybrid Connection for an existing App Service, Relay and Service Bus.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_plan</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;examplePlan&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_app_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">AppService</span><span class="p">(</span><span class="s2">&quot;exampleAppService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_service_plan_id</span><span class="o">=</span><span class="n">example_plan</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example_namespace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">relay</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;exampleNamespace&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_hybrid_connection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">relay</span><span class="o">.</span><span class="n">HybridConnection</span><span class="p">(</span><span class="s2">&quot;exampleHybridConnection&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">relay_namespace_name</span><span class="o">=</span><span class="n">example_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">user_metadata</span><span class="o">=</span><span class="s2">&quot;examplemetadata&quot;</span><span class="p">)</span>
+<span class="n">example_appservice_hybrid_connection_hybrid_connection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">HybridConnection</span><span class="p">(</span><span class="s2">&quot;exampleAppservice/hybridConnectionHybridConnection&quot;</span><span class="p">,</span>
+    <span class="n">app_service_name</span><span class="o">=</span><span class="n">example_app_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">relay_id</span><span class="o">=</span><span class="n">example_hybrid_connection</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;testhostname.example&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span>
+    <span class="n">send_key_name</span><span class="o">=</span><span class="s2">&quot;exampleSharedAccessKey&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the App Service. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname of the endpoint.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the endpoint.</p></li>
+<li><p><strong>relay_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Resource ID of Service Bus relay.  Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the App Service.  Changing this forces a new resource to be created.</p></li>
+<li><p><strong>send_key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Service Bus key.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.app_service_name">
+<code class="sig-name descname">app_service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.app_service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the App Service. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.hostname">
+<code class="sig-name descname">hostname</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname of the endpoint.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.namespace_name">
+<code class="sig-name descname">namespace_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.namespace_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Relay Namespace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.port">
+<code class="sig-name descname">port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port of the endpoint.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.relay_id">
+<code class="sig-name descname">relay_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.relay_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Resource ID of Service Bus relay.  Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the App Service.  Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.send_key_name">
+<code class="sig-name descname">send_key_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.send_key_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Service Bus key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.send_key_value">
+<code class="sig-name descname">send_key_value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.send_key_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Service Bus Primary Access key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.service_bus_namespace">
+<code class="sig-name descname">service_bus_namespace</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.service_bus_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Service Bus namespace.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.appservice.HybridConnection.service_bus_suffix">
+<code class="sig-name descname">service_bus_suffix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.service_bus_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>The suffix for the service bus endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.appservice.HybridConnection.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relay_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relay_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">send_key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">send_key_value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_bus_namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_bus_suffix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HybridConnection resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the App Service. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname of the endpoint.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Relay Namespace.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the endpoint.</p></li>
+<li><p><strong>relay_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Resource ID of Service Bus relay.  Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the App Service.  Changing this forces a new resource to be created.</p></li>
+<li><p><strong>send_key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Service Bus key.</p></li>
+<li><p><strong>send_key_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the Service Bus Primary Access key.</p></li>
+<li><p><strong>service_bus_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Service Bus namespace.</p></li>
+<li><p><strong>service_bus_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The suffix for the service bus endpoint.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.appservice.HybridConnection.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.appservice.HybridConnection.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.HybridConnection.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.appservice.Plan">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_service_environment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_xenon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maximum_elastic_worker_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_site_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reserved</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service Plan component.</p>
@@ -4268,7 +4450,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appservice</span><span class="o">.</span><span class="n">get_app_service_environment</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-ase&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">)</span>
-<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;appServiceEnvironmentId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;appservice.Environment&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;appServiceEnvironmentId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;azurerm_app_service_environment&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

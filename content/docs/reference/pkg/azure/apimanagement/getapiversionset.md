@@ -13,7 +13,6 @@ meta_desc: "Explore the GetApiVersionSet function of the apimanagement module, i
 Uses this data source to access information about an API Version Set within an API Management Service.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := apimanagement.LookupApiVersionSet(ctx, &apimanagement.LookupApiVersionSetArgs{
+			ResourceGroupName: "example-resources",
+			ApiManagementName: "example-api",
+			Name:              "example-api-version-set",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("apiManagementApiVersionSetId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetServer function of the postgresql module, including e
 Use this data source to access information about an existing PostgreSQL Azure Database Server.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := postgresql.LookupServer(ctx, &postgresql.LookupServerArgs{
+			Name:              "postgresql-server-1",
+			ResourceGroupName: "api-rg-pro",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("postgresqlServerId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

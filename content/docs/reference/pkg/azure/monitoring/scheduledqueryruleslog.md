@@ -12,9 +12,6 @@ meta_desc: "Explore the ScheduledQueryRulesLog resource of the monitoring module
 
 Manages a LogToMetricAction Scheduled Query Rules resource within Azure Monitor.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ScheduledQueryRulesLog Resource {#create}

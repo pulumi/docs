@@ -187,7 +187,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet.</p></li>
 </ul>
 <p>The <strong>frontend_ports</strong> object supports the following:</p>
 <ul class="simple">
@@ -199,7 +199,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Gateway IP Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 <p>The <strong>http_listeners</strong> object supports the following:</p>
 <ul class="simple">
@@ -487,7 +487,7 @@ are published here <a class="reference external" href="https://docs.microsoft.co
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet.</p></li>
 </ul>
 </dd></dl>
 
@@ -509,7 +509,7 @@ are published here <a class="reference external" href="https://docs.microsoft.co
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Gateway IP Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 </dd></dl>
 
@@ -890,7 +890,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet.</p></li>
 </ul>
 <p>The <strong>frontend_ports</strong> object supports the following:</p>
 <ul class="simple">
@@ -902,7 +902,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Gateway IP Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 <p>The <strong>http_listeners</strong> object supports the following:</p>
 <ul class="simple">
@@ -7692,7 +7692,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">)</span>
+    <span class="n">address_prefixes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">])</span>
 <span class="n">example_nat_gateway</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NatGateway</span><span class="p">(</span><span class="s2">&quot;exampleNatGateway&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -8066,8 +8066,7 @@ values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.</p></li>
 <li><p><strong>profile_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the Traffic Manager endpoint.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group where the Traffic Manager Profile exists.</p></li>
 <li><p><strong>subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">subnet</span></code> blocks as defined below</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type <code class="docutils literal notranslate"><span class="pre">externalEndpoints</span></code>, for other types it
@@ -8171,8 +8170,7 @@ create the Traffic Manager endpoint.</p>
 <dl class="py attribute">
 <dt id="pulumi_azure.network.TrafficManagerEndpoint.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.TrafficManagerEndpoint.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to
-create the Traffic Manager endpoint.</p>
+<dd><p>The name of the resource group where the Traffic Manager Profile exists.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -8255,8 +8253,7 @@ values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.</p></li>
 <li><p><strong>profile_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the Traffic Manager endpoint.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group where the Traffic Manager Profile exists.</p></li>
 <li><p><strong>subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">subnet</span></code> blocks as defined below</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type <code class="docutils literal notranslate"><span class="pre">externalEndpoints</span></code>, for other types it

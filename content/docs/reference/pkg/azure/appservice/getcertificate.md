@@ -13,7 +13,6 @@ meta_desc: "Explore the GetCertificate function of the appservice module, includ
 Use this data source to access information about an App Service Certificate.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := appservice.LookupCertificate(ctx, &appservice.LookupCertificateArgs{
+			Name:              "example-app-service-certificate",
+			ResourceGroupName: "example-rg",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("appServiceCertificateId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

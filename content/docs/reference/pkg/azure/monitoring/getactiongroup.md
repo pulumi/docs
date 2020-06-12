@@ -13,7 +13,6 @@ meta_desc: "Explore the GetActionGroup function of the monitoring module, includ
 Use this data source to access the properties of an Action Group.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := monitoring.LookupActionGroup(ctx, &monitoring.LookupActionGroupArgs{
+			ResourceGroupName: "example-rg",
+			Name:              "tfex-actiongroup",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("actionGroupId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

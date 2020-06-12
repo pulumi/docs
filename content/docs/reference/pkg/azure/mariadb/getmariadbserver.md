@@ -13,7 +13,6 @@ meta_desc: "Explore the GetMariaDbServer function of the mariadb module, includi
 Use this data source to access information about an existing MariaDB Server.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dbServer, err := mariadb.LookupMariaDbServer(ctx, &mariadb.LookupMariaDbServerArgs{
+			Name:              "mariadb-server",
+			ResourceGroupName: azurerm_mariadb_server.Example.Resource_group_name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("mariadbServerId", data.Azurerm_mariadb_server.Example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -53,7 +72,7 @@ import pulumi_azure as azure
 
 db_server = azure.mariadb.get_maria_db_server(name="mariadb-server",
     resource_group_name=azurerm_mariadb_server["example"]["resource_group_name"])
-pulumi.export("mariadbServerId", data["azure.mariadb.Server"]["example"]["id"])
+pulumi.export("mariadbServerId", data["azurerm_mariadb_server"]["example"]["id"])
 ```
 {{% /example %}}
 
@@ -310,7 +329,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The SKU Name for this MariaDB Server. 
+    <dd>{{% md %}}The SKU Name for this MariaDB Server.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -437,7 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The SKU Name for this MariaDB Server. 
+    <dd>{{% md %}}The SKU Name for this MariaDB Server.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -564,7 +583,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The SKU Name for this MariaDB Server. 
+    <dd>{{% md %}}The SKU Name for this MariaDB Server.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -691,7 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The SKU Name for this MariaDB Server. 
+    <dd>{{% md %}}The SKU Name for this MariaDB Server.
 {{% /md %}}</dd>
 
     <dt class="property-"

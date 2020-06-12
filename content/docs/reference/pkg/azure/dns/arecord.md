@@ -13,79 +13,6 @@ meta_desc: "Explore the ARecord resource of the dns module, including examples, 
 Enables you to manage DNS A Records within Azure DNS.
 
 
-## Example Usage (Alias Record)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
-const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
-const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    allocationMethod: "Dynamic",
-    ipVersion: "IPv4",
-});
-const exampleARecord = new azure.dns.ARecord("exampleARecord", {
-    zoneName: exampleZone.name,
-    resourceGroupName: exampleResourceGroup.name,
-    ttl: 300,
-    targetResourceId: examplePublicIp.id,
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
-example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
-example_public_ip = azure.network.PublicIp("examplePublicIp",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    allocation_method="Dynamic",
-    ip_version="IPv4")
-example_a_record = azure.dns.ARecord("exampleARecord",
-    zone_name=example_zone.name,
-    resource_group_name=example_resource_group.name,
-    ttl=300,
-    target_resource_id=example_public_ip.id)
-```
-```csharp
-using Pulumi;
-using Azure = Pulumi.Azure;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
-        {
-            Location = "West US",
-        });
-        var exampleZone = new Azure.Dns.Zone("exampleZone", new Azure.Dns.ZoneArgs
-        {
-            ResourceGroupName = exampleResourceGroup.Name,
-        });
-        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
-        {
-            Location = exampleResourceGroup.Location,
-            ResourceGroupName = exampleResourceGroup.Name,
-            AllocationMethod = "Dynamic",
-            IpVersion = "IPv4",
-        });
-        var exampleARecord = new Azure.Dns.ARecord("exampleARecord", new Azure.Dns.ARecordArgs
-        {
-            ZoneName = exampleZone.Name,
-            ResourceGroupName = exampleResourceGroup.Name,
-            Ttl = 300,
-            TargetResourceId = examplePublicIp.Id,
-        });
-    }
-
-}
-```
-
 {{% examples %}}
 ## Example Usage
 
@@ -125,7 +52,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleZone, err := dns.NewZone(ctx, "exampleZone", &dns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleARecord, err := dns.NewARecord(ctx, "exampleARecord", &dns.ARecordArgs{
+			ZoneName:          exampleZone.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			Records: pulumi.StringArray{
+				pulumi.String("10.0.180.17"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -155,6 +119,135 @@ const exampleARecord = new azure.dns.ARecord("exampleARecord", {
     resourceGroupName: exampleResourceGroup.name,
     ttl: 300,
     records: ["10.0.180.17"],
+});
+```
+{{% /example %}}
+
+### Alias Record)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleZone = new Azure.Dns.Zone("exampleZone", new Azure.Dns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Dynamic",
+            IpVersion = "IPv4",
+        });
+        var exampleARecord = new Azure.Dns.ARecord("exampleARecord", new Azure.Dns.ARecordArgs
+        {
+            ZoneName = exampleZone.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Ttl = 300,
+            TargetResourceId = examplePublicIp.Id,
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleZone, err := dns.NewZone(ctx, "exampleZone", &dns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Dynamic"),
+			IpVersion:         pulumi.String("IPv4"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleARecord, err := dns.NewARecord(ctx, "exampleARecord", &dns.ARecordArgs{
+			ZoneName:          exampleZone.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			TargetResourceId:  examplePublicIp.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Dynamic",
+    ip_version="IPv4")
+example_a_record = azure.dns.ARecord("exampleARecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    target_resource_id=example_public_ip.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Dynamic",
+    ipVersion: "IPv4",
+});
+const exampleARecord = new azure.dns.ARecord("exampleARecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    targetResourceId: examplePublicIp.id,
 });
 ```
 {{% /example %}}

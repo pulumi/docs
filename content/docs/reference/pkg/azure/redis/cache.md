@@ -12,8 +12,6 @@ meta_desc: "Explore the Cache resource of the redis module, including examples, 
 
 Manages a Redis Cache.
 
-{{% examples %}}
-{{% /examples %}}
 ## Default Redis Configuration Values
 
 | Redis Value                     | Basic        | Standard     | Premium      |

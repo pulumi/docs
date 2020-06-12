@@ -12,9 +12,6 @@ meta_desc: "Explore the SqlContainer resource of the cosmosdb module, including 
 
 Manages a SQL Container within a Cosmos DB Account.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a SqlContainer Resource {#create}

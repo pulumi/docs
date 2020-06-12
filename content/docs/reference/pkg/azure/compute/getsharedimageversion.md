@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSharedImageVersion function of the compute module, in
 Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := compute.LookupSharedImageVersion(ctx, &compute.LookupSharedImageVersionArgs{
+			GalleryName:       "my-image-gallery",
+			ImageName:         "my-image",
+			Name:              "1.0.0",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -29,6 +29,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="automation/">automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backup/">backup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="batch/">batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blueprint/">blueprint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot/">bot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdn/">cdn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cognitive/">cognitive</a></li>

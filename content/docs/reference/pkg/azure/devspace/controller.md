@@ -12,9 +12,6 @@ meta_desc: "Explore the Controller resource of the devspace module, including ex
 
 Manages a DevSpace Controller.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Controller Resource {#create}

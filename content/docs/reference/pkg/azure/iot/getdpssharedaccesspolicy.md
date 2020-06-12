@@ -13,7 +13,6 @@ meta_desc: "Explore the GetDpsSharedAccessPolicy function of the iot module, inc
 Use this data source to access information about an existing IotHub Device Provisioning Service Shared Access Policy
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := iot.LookupDpsSharedAccessPolicy(ctx, &iot.LookupDpsSharedAccessPolicyArgs{
+			Name:              "example",
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+			IothubDpsName:     azurerm_iothub_dps.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

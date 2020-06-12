@@ -13,9 +13,6 @@ meta_desc: "Explore the ApiPolicy resource of the apimanagement module, includin
 Manages an API Management API Policy
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ApiPolicy Resource {#create}

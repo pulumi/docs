@@ -13,7 +13,6 @@ meta_desc: "Explore the OutputBlob resource of the streamanalytics module, inclu
 Manages a Stream Analytics Output to Blob Storage.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -73,7 +72,68 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.LookupResourceGroup(ctx, &core.LookupResourceGroupArgs{
+			Name: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleJob, err := streamanalytics.LookupJob(ctx, &streamanalytics.LookupJobArgs{
+			Name:              "example-job",
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      pulumi.String(exampleResourceGroup.Name),
+			Location:               pulumi.String(exampleResourceGroup.Location),
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleContainer, err := storage.NewContainer(ctx, "exampleContainer", &storage.ContainerArgs{
+			StorageAccountName:  exampleAccount.Name,
+			ContainerAccessType: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleOutputBlob, err := streamanalytics.NewOutputBlob(ctx, "exampleOutputBlob", &streamanalytics.OutputBlobArgs{
+			StreamAnalyticsJobName: pulumi.String(exampleJob.Name),
+			ResourceGroupName:      pulumi.String(exampleJob.ResourceGroupName),
+			StorageAccountName:     exampleAccount.Name,
+			StorageAccountKey:      exampleAccount.PrimaryAccessKey,
+			StorageContainerName:   exampleContainer.Name,
+			PathPattern:            pulumi.String("some-pattern"),
+			DateFormat:             pulumi.String("yyyy-MM-dd"),
+			TimeFormat:             pulumi.String("HH"),
+			Serialization: &streamanalytics.OutputBlobSerializationArgs{
+				Type:           pulumi.String("Csv"),
+				Encoding:       pulumi.String("UTF8"),
+				FieldDelimiter: pulumi.String(","),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

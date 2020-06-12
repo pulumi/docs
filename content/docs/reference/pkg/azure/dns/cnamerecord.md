@@ -13,79 +13,6 @@ meta_desc: "Explore the CNameRecord resource of the dns module, including exampl
 Enables you to manage DNS CNAME Records within Azure DNS.
 
 
-## Example Usage (Alias Record)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
-const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
-const target = new azure.dns.CNameRecord("target", {
-    zoneName: exampleZone.name,
-    resourceGroupName: exampleResourceGroup.name,
-    ttl: 300,
-    record: "contoso.com",
-});
-const exampleCNameRecord = new azure.dns.CNameRecord("exampleCNameRecord", {
-    zoneName: exampleZone.name,
-    resourceGroupName: exampleResourceGroup.name,
-    ttl: 300,
-    targetResourceId: target.id,
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
-example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
-target = azure.dns.CNameRecord("target",
-    zone_name=example_zone.name,
-    resource_group_name=example_resource_group.name,
-    ttl=300,
-    record="contoso.com")
-example_c_name_record = azure.dns.CNameRecord("exampleCNameRecord",
-    zone_name=example_zone.name,
-    resource_group_name=example_resource_group.name,
-    ttl=300,
-    target_resource_id=target.id)
-```
-```csharp
-using Pulumi;
-using Azure = Pulumi.Azure;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
-        {
-            Location = "West US",
-        });
-        var exampleZone = new Azure.Dns.Zone("exampleZone", new Azure.Dns.ZoneArgs
-        {
-            ResourceGroupName = exampleResourceGroup.Name,
-        });
-        var target = new Azure.Dns.CNameRecord("target", new Azure.Dns.CNameRecordArgs
-        {
-            ZoneName = exampleZone.Name,
-            ResourceGroupName = exampleResourceGroup.Name,
-            Ttl = 300,
-            Record = "contoso.com",
-        });
-        var exampleCNameRecord = new Azure.Dns.CNameRecord("exampleCNameRecord", new Azure.Dns.CNameRecordArgs
-        {
-            ZoneName = exampleZone.Name,
-            ResourceGroupName = exampleResourceGroup.Name,
-            Ttl = 300,
-            TargetResourceId = target.Id,
-        });
-    }
-
-}
-```
-
 {{% examples %}}
 ## Example Usage
 
@@ -122,7 +49,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleZone, err := dns.NewZone(ctx, "exampleZone", &dns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleCNameRecord, err := dns.NewCNameRecord(ctx, "exampleCNameRecord", &dns.CNameRecordArgs{
+			ZoneName:          exampleZone.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			Record:            pulumi.String("contoso.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -152,6 +114,134 @@ const exampleCNameRecord = new azure.dns.CNameRecord("exampleCNameRecord", {
     resourceGroupName: exampleResourceGroup.name,
     ttl: 300,
     record: "contoso.com",
+});
+```
+{{% /example %}}
+
+### Alias Record)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleZone = new Azure.Dns.Zone("exampleZone", new Azure.Dns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var target = new Azure.Dns.CNameRecord("target", new Azure.Dns.CNameRecordArgs
+        {
+            ZoneName = exampleZone.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Ttl = 300,
+            Record = "contoso.com",
+        });
+        var exampleCNameRecord = new Azure.Dns.CNameRecord("exampleCNameRecord", new Azure.Dns.CNameRecordArgs
+        {
+            ZoneName = exampleZone.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Ttl = 300,
+            TargetResourceId = target.Id,
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleZone, err := dns.NewZone(ctx, "exampleZone", &dns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		target, err := dns.NewCNameRecord(ctx, "target", &dns.CNameRecordArgs{
+			ZoneName:          exampleZone.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			Record:            pulumi.String("contoso.com"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleCNameRecord, err := dns.NewCNameRecord(ctx, "exampleCNameRecord", &dns.CNameRecordArgs{
+			ZoneName:          exampleZone.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			TargetResourceId:  target.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+target = azure.dns.CNameRecord("target",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    record="contoso.com")
+example_c_name_record = azure.dns.CNameRecord("exampleCNameRecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    target_resource_id=target.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const target = new azure.dns.CNameRecord("target", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    record: "contoso.com",
+});
+const exampleCNameRecord = new azure.dns.CNameRecord("exampleCNameRecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    targetResourceId: target.id,
 });
 ```
 {{% /example %}}

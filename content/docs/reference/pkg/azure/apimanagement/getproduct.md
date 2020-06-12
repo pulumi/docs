@@ -13,7 +13,6 @@ meta_desc: "Explore the GetProduct function of the apimanagement module, includi
 Use this data source to access information about an existing API Management Product.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := apimanagement.LookupProduct(ctx, &apimanagement.LookupProductArgs{
+			ProductId:         "my-product",
+			ApiManagementName: "example-apim",
+			ResourceGroupName: "search-service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("productTerms", example.Terms)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

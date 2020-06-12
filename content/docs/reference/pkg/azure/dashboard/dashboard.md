@@ -13,7 +13,6 @@ meta_desc: "Explore the Dashboard resource of the dashboard module, including ex
 Manages a shared dashboard in the Azure Portal.
 
 
-
 {{% examples %}}
 ## Example Usage
 

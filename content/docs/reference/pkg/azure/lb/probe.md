@@ -14,9 +14,6 @@ Manages a LoadBalancer Probe Resource.
 
 > **NOTE** When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Probe Resource {#create}

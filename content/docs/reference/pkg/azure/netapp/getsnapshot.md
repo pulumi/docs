@@ -36,7 +36,7 @@ test = azure.netapp.get_snapshot(resource_group_name="acctestRG",
     account_name="acctestnetappaccount",
     pool_name="acctestnetapppool",
     volume_name="acctestnetappvolume")
-pulumi.export("netappSnapshotId", data["azure.netapp.Snapshot"]["example"]["id"])
+pulumi.export("netappSnapshotId", data["azurerm_netapp_snapshot"]["example"]["id"])
 ```
 ```csharp
 using Pulumi;
@@ -59,6 +59,30 @@ class MyStack : Stack
 
     [Output("netappSnapshotId")]
     public Output<string> NetappSnapshotId { get; set; }
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := netapp.LookupSnapshot(ctx, &netapp.LookupSnapshotArgs{
+			ResourceGroupName: "acctestRG",
+			Name:              "acctestnetappsnapshot",
+			AccountName:       "acctestnetappaccount",
+			PoolName:          "acctestnetapppool",
+			VolumeName:        "acctestnetappvolume",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("netappSnapshotId", data.Azurerm_netapp_snapshot.Example.Id)
+		return nil
+	})
 }
 ```
 

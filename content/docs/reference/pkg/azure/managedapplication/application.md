@@ -12,9 +12,6 @@ meta_desc: "Explore the Application resource of the managedapplication module, i
 
 Manages a Managed Application.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Application Resource {#create}

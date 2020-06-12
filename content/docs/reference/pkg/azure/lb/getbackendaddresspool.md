@@ -13,7 +13,6 @@ meta_desc: "Explore the GetBackendAddressPool function of the lb module, includi
 Use this data source to access information about an existing Load Balancer's Backend Address Pool.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,7 +51,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleLB, err := lb.LookupLB(ctx, &lb.LookupLBArgs{
+			Name:              "example-lb",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleBackendAddressPool, err := lb.LookupBackendAddressPool(ctx, &lb.LookupBackendAddressPoolArgs{
+			Name:           "first",
+			LoadbalancerId: exampleLB.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("backendAddressPoolId", exampleBackendAddressPool.Id)
+		ctx.Export("backendIpConfigurationIds")
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -65,7 +92,7 @@ example_lb = azure.lb.get_lb(name="example-lb",
 example_backend_address_pool = azure.lb.get_backend_address_pool(name="first",
     loadbalancer_id=example_lb.id)
 pulumi.export("backendAddressPoolId", example_backend_address_pool.id)
-pulumi.export("backendIpConfigurationIds", [__item["id"] for __item in data["azure.lb.BackendAddressPool"]["beap"]["backend_ip_configurations"]])
+pulumi.export("backendIpConfigurationIds", [__item["id"] for __item in data["azurerm_lb_backend_address_pool"]["beap"]["backend_ip_configurations"]])
 ```
 {{% /example %}}
 

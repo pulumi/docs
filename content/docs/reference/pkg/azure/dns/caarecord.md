@@ -12,9 +12,6 @@ meta_desc: "Explore the CaaRecord resource of the dns module, including examples
 
 Enables you to manage DNS CAA Records within Azure DNS.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a CaaRecord Resource {#create}

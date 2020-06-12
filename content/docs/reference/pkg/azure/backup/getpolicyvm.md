@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPolicyVM function of the backup module, including exa
 Use this data source to access information about an existing VM Backup Policy.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		policy, err := backup.LookupPolicyVM(ctx, &backup.LookupPolicyVMArgs{
+			Name:              "policy",
+			RecoveryVaultName: "recovery_vault",
+			ResourceGroupName: "resource_group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

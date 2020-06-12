@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPolicy function of the storage module, including exam
 Use this data source to access information about an existing Storage Management Policy.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleAccount, err := storage.LookupAccount(ctx, &storage.LookupAccountArgs{
+			Name:              "storageaccountname",
+			ResourceGroupName: "resourcegroupname",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		examplePolicy, err := storage.LookupPolicy(ctx, &storage.LookupPolicyArgs{
+			StorageAccountId: azurerm_storage_account.Example.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

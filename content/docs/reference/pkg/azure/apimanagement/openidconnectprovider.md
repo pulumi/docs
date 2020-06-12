@@ -13,7 +13,6 @@ meta_desc: "Explore the OpenIdConnectProvider resource of the apimanagement modu
 Manages an OpenID Connect Provider within a API Management Service.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,47 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@exmaple.com"),
+			SkuName:           pulumi.String("Developer_1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleOpenIdConnectProvider, err := apimanagement.NewOpenIdConnectProvider(ctx, "exampleOpenIdConnectProvider", &apimanagement.OpenIdConnectProviderArgs{
+			ApiManagementName: exampleService.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			ClientId:          pulumi.String("00001111-2222-3333-4444-555566667777"),
+			DisplayName:       pulumi.String("Example Provider"),
+			MetadataEndpoint:  pulumi.String("https://example.com/example"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

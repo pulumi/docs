@@ -22,9 +22,6 @@ Manages a Linux Virtual Machine.
 
 > In this release there's a known issue where the `public_ip_address` and `public_ip_addresses` fields may not be fully populated for Dynamic Public IP's.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a LinuxVirtualMachine Resource {#create}

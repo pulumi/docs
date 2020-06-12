@@ -13,7 +13,6 @@ meta_desc: "Explore the EventhubDataConnection resource of the kusto module, inc
 Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -89,7 +88,88 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/kusto"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US"),
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := kusto.NewCluster(ctx, "cluster", &kusto.ClusterArgs{
+			Location:          rg.Location,
+			ResourceGroupName: rg.Name,
+			Sku: &kusto.ClusterSkuArgs{
+				Name:     pulumi.String("Standard_D13_v2"),
+				Capacity: pulumi.Int(2),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		database, err := kusto.NewDatabase(ctx, "database", &kusto.DatabaseArgs{
+			ResourceGroupName: rg.Name,
+			Location:          rg.Location,
+			ClusterName:       cluster.Name,
+			HotCachePeriod:    pulumi.String("P7D"),
+			SoftDeletePeriod:  pulumi.String("P31D"),
+		})
+		if err != nil {
+			return err
+		}
+		eventhubNs, err := eventhub.NewEventHubNamespace(ctx, "eventhubNs", &eventhub.EventHubNamespaceArgs{
+			Location:          rg.Location,
+			ResourceGroupName: rg.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		eventhub, err := eventhub.NewEventHub(ctx, "eventhub", &eventhub.EventHubArgs{
+			NamespaceName:     eventhubNs.Name,
+			ResourceGroupName: rg.Name,
+			PartitionCount:    pulumi.Int(1),
+			MessageRetention:  pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		consumerGroup, err := eventhub.NewConsumerGroup(ctx, "consumerGroup", &eventhub.ConsumerGroupArgs{
+			NamespaceName:     eventhubNs.Name,
+			EventhubName:      eventhub.Name,
+			ResourceGroupName: rg.Name,
+		})
+		if err != nil {
+			return err
+		}
+		eventhubConnection, err := kusto.NewEventhubDataConnection(ctx, "eventhubConnection", &kusto.EventhubDataConnectionArgs{
+			ResourceGroupName: rg.Name,
+			Location:          rg.Location,
+			ClusterName:       cluster.Name,
+			DatabaseName:      database.Name,
+			EventhubId:        pulumi.String(azurerm_eventhub.Evenhub.Id),
+			ConsumerGroup:     consumerGroup.Name,
+			TableName:         pulumi.String("my-table"),
+			MappingRuleName:   pulumi.String("my-table-mapping"),
+			DataFormat:        pulumi.String("JSON"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

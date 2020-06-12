@@ -13,7 +13,6 @@ meta_desc: "Explore the DatasetMysql resource of the datafactory module, includi
 Manages a MySQL Dataset inside a Azure Data Factory.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,7 +55,50 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleFactory, err := datafactory.NewFactory(ctx, "exampleFactory", &datafactory.FactoryArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleLinkedServiceMysql, err := datafactory.NewLinkedServiceMysql(ctx, "exampleLinkedServiceMysql", &datafactory.LinkedServiceMysqlArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			DataFactoryName:   exampleFactory.Name,
+			ConnectionString:  pulumi.String("Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleDatasetMysql, err := datafactory.NewDatasetMysql(ctx, "exampleDatasetMysql", &datafactory.DatasetMysqlArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			DataFactoryName:   exampleFactory.Name,
+			LinkedServiceName: exampleLinkedServiceMysql.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

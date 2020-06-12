@@ -12,9 +12,6 @@ meta_desc: "Explore the GremlinGraph resource of the cosmosdb module, including 
 
 Manages a Gremlin Graph within a Cosmos DB Account.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a GremlinGraph Resource {#create}

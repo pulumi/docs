@@ -12,9 +12,6 @@ meta_desc: "Explore the IotHubCertificate resource of the iot module, including 
 
 Manages an IotHub Device Provisioning Service Certificate. 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a IotHubCertificate Resource {#create}

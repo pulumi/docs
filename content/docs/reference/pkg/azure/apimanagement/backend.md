@@ -12,9 +12,6 @@ meta_desc: "Explore the Backend resource of the apimanagement module, including 
 
 Manages a backend within an API Management Service.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Backend Resource {#create}

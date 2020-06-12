@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPolicySetDefinition function of the policy module, in
 Use this data source to access information about an existing Policy Set Definition.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := policy.LookupPolicySetDefinition(ctx, &policy.LookupPolicySetDefinitionArgs{
+			DisplayName: "Policy Set Definition Example",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

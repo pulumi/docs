@@ -13,7 +13,6 @@ meta_desc: "Explore the GetTopicAuthorizationRule function of the servicebus mod
 Use this data source to access information about a ServiceBus Topic Authorization Rule within a ServiceBus Topic.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := servicebus.LookupTopicAuthorizationRule(ctx, &servicebus.LookupTopicAuthorizationRuleArgs{
+			Name:              "example-tfex_name",
+			NamespaceName:     "example-namespace",
+			ResourceGroupName: "example-resources",
+			TopicName:         "example-servicebus_topic",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("servicebusAuthorizationRuleId", data.Azurem_servicebus_topic_authorization_rule.Example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

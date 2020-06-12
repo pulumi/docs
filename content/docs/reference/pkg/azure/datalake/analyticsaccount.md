@@ -13,7 +13,6 @@ meta_desc: "Explore the AnalyticsAccount resource of the datalake module, includ
 Manages an Azure Data Lake Analytics Account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,7 +49,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datalake"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleStore, err := datalake.NewStore(ctx, "exampleStore", &datalake.StoreArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		exampleAnalyticsAccount, err := datalake.NewAnalyticsAccount(ctx, "exampleAnalyticsAccount", &datalake.AnalyticsAccountArgs{
+			ResourceGroupName:       exampleResourceGroup.Name,
+			Location:                exampleResourceGroup.Location,
+			DefaultStoreAccountName: exampleStore.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

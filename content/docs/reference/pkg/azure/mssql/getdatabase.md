@@ -13,7 +13,6 @@ meta_desc: "Explore the GetDatabase function of the mssql module, including exam
 Use this data source to access information about an existing SQL database.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := mssql.LookupDatabase(ctx, &mssql.LookupDatabaseArgs{
+			Name:     "example-mssql-db",
+			ServerId: "example-mssql-server-id",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("databaseId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -248,7 +267,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation of the database. 
+    <dd>{{% md %}}The collation of the database.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -313,7 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. 
+    <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -385,7 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation of the database. 
+    <dd>{{% md %}}The collation of the database.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -450,7 +469,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. 
+    <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -522,7 +541,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation of the database. 
+    <dd>{{% md %}}The collation of the database.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -587,7 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. 
+    <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -659,7 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The collation of the database. 
+    <dd>{{% md %}}The collation of the database.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -724,7 +743,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. 
+    <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed.
 {{% /md %}}</dd>
 
     <dt class="property-"

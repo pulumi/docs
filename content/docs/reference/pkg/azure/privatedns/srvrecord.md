@@ -12,9 +12,6 @@ meta_desc: "Explore the SRVRecord resource of the privatedns module, including e
 
 Enables you to manage DNS SRV Records within Azure Private DNS.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a SRVRecord Resource {#create}

@@ -12,9 +12,6 @@ meta_desc: "Explore the RunBook resource of the automation module, including exa
 
 Manages a Automation Runbook.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a RunBook Resource {#create}

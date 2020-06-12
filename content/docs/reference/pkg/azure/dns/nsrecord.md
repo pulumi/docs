@@ -13,7 +13,6 @@ meta_desc: "Explore the NsRecord resource of the dns module, including examples,
 Enables you to manage DNS NS Records within Azure DNS.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,7 +57,48 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleZone, err := dns.NewZone(ctx, "exampleZone", &dns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleNsRecord, err := dns.NewNsRecord(ctx, "exampleNsRecord", &dns.NsRecordArgs{
+			ZoneName:          exampleZone.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			Records: pulumi.StringArray{
+				pulumi.String("ns1.contoso.com"),
+				pulumi.String("ns2.contoso.com"),
+			},
+			Tags: map[string]interface{}{
+				"Environment": "Production",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -296,7 +336,7 @@ The NsRecord resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of values that make up the NS record. 
+    <dd>{{% md %}}A list of values that make up the NS record.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -369,7 +409,7 @@ The NsRecord resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of values that make up the NS record. 
+    <dd>{{% md %}}A list of values that make up the NS record.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -442,7 +482,7 @@ The NsRecord resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of values that make up the NS record. 
+    <dd>{{% md %}}A list of values that make up the NS record.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -515,7 +555,7 @@ The NsRecord resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of values that make up the NS record. 
+    <dd>{{% md %}}A list of values that make up the NS record.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -859,7 +899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of values that make up the NS record. 
+    <dd>{{% md %}}A list of values that make up the NS record.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -943,7 +983,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of values that make up the NS record. 
+    <dd>{{% md %}}A list of values that make up the NS record.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,7 +1067,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of values that make up the NS record. 
+    <dd>{{% md %}}A list of values that make up the NS record.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1111,7 +1151,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of values that make up the NS record. 
+    <dd>{{% md %}}A list of values that make up the NS record.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

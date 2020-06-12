@@ -12,9 +12,6 @@ meta_desc: "Explore the GetUser function of the apimanagement module, including 
 
 Use this data source to access information about an existing API Management User.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetUser {#using}

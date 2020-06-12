@@ -13,7 +13,6 @@ meta_desc: "Explore the GetManagementGroup function of the managementgroups modu
 Use this data source to access information about an existing Management Group.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := management.LookupGroup(ctx, &management.LookupGroupArgs{
+			Name: "00000000-0000-0000-0000-000000000000",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("displayName", example.DisplayName)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

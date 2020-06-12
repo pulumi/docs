@@ -12,9 +12,6 @@ meta_desc: "Explore the Schedule resource of the automation module, including ex
 
 Manages a Automation Schedule.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Schedule Resource {#create}

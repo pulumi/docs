@@ -12,9 +12,6 @@ meta_desc: "Explore the CacheNfsTarget resource of the hpc module, including exa
 
 Manages a NFS Target within a HPC Cache.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a CacheNfsTarget Resource {#create}

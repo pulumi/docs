@@ -13,7 +13,6 @@ meta_desc: "Explore the GetKubernetesServiceVersions function of the containerse
 Use this data source to retrieve the version of Kubernetes supported by Azure Kubernetes Service.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := containerservice.LookupKubernetesServiceVersions(ctx, &containerservice.LookupKubernetesServiceVersionsArgs{
+			Location: "West Europe",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("versions", current.Versions)
+		ctx.Export("latestVersion", current.LatestVersion)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

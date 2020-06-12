@@ -12,9 +12,129 @@ meta_desc: "Explore the TimeSeriesInsightsAccessPolicy resource of the iot modul
 
 Manages an Azure IoT Time Series Insights Access Policy.
 
-{{% examples %}}
-{{% /examples %}}
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleTimeSeriesInsightsStandardEnvironment = new Azure.Iot.TimeSeriesInsightsStandardEnvironment("exampleTimeSeriesInsightsStandardEnvironment", new Azure.Iot.TimeSeriesInsightsStandardEnvironmentArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "S1_1",
+            DataRetentionTime = "P30D",
+        });
+        var exampleTimeSeriesInsightsAccessPolicy = new Azure.Iot.TimeSeriesInsightsAccessPolicy("exampleTimeSeriesInsightsAccessPolicy", new Azure.Iot.TimeSeriesInsightsAccessPolicyArgs
+        {
+            TimeSeriesInsightsEnvironmentId = exampleTimeSeriesInsightsStandardEnvironment.Name,
+            PrincipalObjectId = "aGUID",
+            Roles = 
+            {
+                "Reader",
+            },
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleTimeSeriesInsightsStandardEnvironment, err := iot.NewTimeSeriesInsightsStandardEnvironment(ctx, "exampleTimeSeriesInsightsStandardEnvironment", &iot.TimeSeriesInsightsStandardEnvironmentArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SkuName:           pulumi.String("S1_1"),
+			DataRetentionTime: pulumi.String("P30D"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleTimeSeriesInsightsAccessPolicy, err := iot.NewTimeSeriesInsightsAccessPolicy(ctx, "exampleTimeSeriesInsightsAccessPolicy", &iot.TimeSeriesInsightsAccessPolicyArgs{
+			TimeSeriesInsightsEnvironmentId: exampleTimeSeriesInsightsStandardEnvironment.Name,
+			PrincipalObjectId:               pulumi.String("aGUID"),
+			Roles: pulumi.StringArray{
+				pulumi.String("Reader"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_time_series_insights_standard_environment = azure.iot.TimeSeriesInsightsStandardEnvironment("exampleTimeSeriesInsightsStandardEnvironment",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="S1_1",
+    data_retention_time="P30D")
+example_time_series_insights_access_policy = azure.iot.TimeSeriesInsightsAccessPolicy("exampleTimeSeriesInsightsAccessPolicy",
+    time_series_insights_environment_id=example_time_series_insights_standard_environment.name,
+    principal_object_id="aGUID",
+    roles=["Reader"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleTimeSeriesInsightsStandardEnvironment = new azure.iot.TimeSeriesInsightsStandardEnvironment("exampleTimeSeriesInsightsStandardEnvironment", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "S1_1",
+    dataRetentionTime: "P30D",
+});
+const exampleTimeSeriesInsightsAccessPolicy = new azure.iot.TimeSeriesInsightsAccessPolicy("exampleTimeSeriesInsightsAccessPolicy", {
+    timeSeriesInsightsEnvironmentId: exampleTimeSeriesInsightsStandardEnvironment.name,
+    principalObjectId: "aGUID",
+    roles: ["Reader"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TimeSeriesInsightsAccessPolicy Resource {#create}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetServiceBusNamespace function of the eventhub module, 
 Use this data source to access information about an existing ServiceBus Namespace.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := servicebus.LookupNamespace(ctx, &servicebus.LookupNamespaceArgs{
+			Name:              "examplenamespace",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("location", example.Location)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

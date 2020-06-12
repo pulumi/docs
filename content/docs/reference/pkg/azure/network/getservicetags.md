@@ -13,7 +13,6 @@ meta_desc: "Explore the GetServiceTags function of the network module, including
 Use this data source to access information about Service Tags.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupServiceTags(ctx, &network.LookupServiceTagsArgs{
+			Location:       "West Europe",
+			Service:        "AzureKeyVault",
+			LocationFilter: "northeurope",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("addressPrefixes", data.Azurerm_service_tags.Example.Address_prefixes)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

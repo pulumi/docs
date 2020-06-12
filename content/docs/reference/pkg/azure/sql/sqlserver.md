@@ -12,9 +12,6 @@ meta_desc: "Explore the SqlServer resource of the sql module, including examples
 
 Manages a Microsoft SQL Azure Database Server.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a SqlServer Resource {#create}

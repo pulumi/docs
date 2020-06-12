@@ -12,9 +12,6 @@ meta_desc: "Explore the ApplicationGateway resource of the network module, inclu
 
 Manages an Application Gateway.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ApplicationGateway Resource {#create}

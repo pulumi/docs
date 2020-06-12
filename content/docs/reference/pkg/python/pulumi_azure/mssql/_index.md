@@ -46,7 +46,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
     <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
 <span class="n">test</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
-    <span class="n">server_id</span><span class="o">=</span><span class="n">azurerm_sql_server</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">server_id</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">collation</span><span class="o">=</span><span class="s2">&quot;SQL_Latin1_General_CP1_CI_AS&quot;</span><span class="p">,</span>
     <span class="n">license_type</span><span class="o">=</span><span class="s2">&quot;LicenseIncluded&quot;</span><span class="p">,</span>
     <span class="n">max_size_gb</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>

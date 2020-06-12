@@ -13,7 +13,6 @@ meta_desc: "Explore the Application resource of the iotcentral module, including
 Manages an IoT Central Application
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,7 +51,41 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iotcentral"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleApplication, err := iotcentral.NewApplication(ctx, "exampleApplication", &iotcentral.ApplicationArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			SubDomain:         pulumi.String("example-iotcentral-app-subdomain"),
+			DisplayName:       pulumi.String("example-iotcentral-app-display-name"),
+			Sku:               pulumi.String("S1"),
+			Template:          pulumi.String("iotc-default@1.0.0"),
+			Tags: map[string]interface{}{
+				"Foo": "Bar",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -308,7 +341,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name. 
+    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,7 +436,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name. 
+    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -498,7 +531,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name. 
+    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -593,7 +626,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name. 
+    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -871,7 +904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name. 
+    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -966,7 +999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name. 
+    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1061,7 +1094,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name. 
+    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1156,7 +1189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name. 
+    <dd>{{% md %}}A `display_name` name. Custom display name for the IoT Central application. Default is resource name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

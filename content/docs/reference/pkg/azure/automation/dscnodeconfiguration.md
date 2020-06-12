@@ -12,9 +12,6 @@ meta_desc: "Explore the DscNodeConfiguration resource of the automation module, 
 
 Manages a Automation DSC Node Configuration.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a DscNodeConfiguration Resource {#create}

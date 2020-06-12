@@ -13,7 +13,6 @@ meta_desc: "Explore the Application resource of the batch module, including exam
 Manages Azure Batch Application instance.
 
 
-
 {{% examples %}}
 ## Example Usage
 

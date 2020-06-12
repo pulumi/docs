@@ -13,7 +13,6 @@ meta_desc: "Explore the GetVirtualNetwork function of the devtest module, includ
 Use this data source to access information about an existing Dev Test Lab Virtual Network.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := devtest.LookupVirtualNetwork(ctx, &devtest.LookupVirtualNetworkArgs{
+			Name:              "example-network",
+			LabName:           "examplelab",
+			ResourceGroupName: "example-resource",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("labSubnetName", example.AllowedSubnets[0].LabSubnetName)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

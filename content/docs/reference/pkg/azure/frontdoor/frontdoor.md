@@ -19,9 +19,6 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
 * Use Front Door to improve application performance with SSL offload and routing requests to the fastest available application backend.
 * Use Front Door for application layer security and DDoS protection for your application.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Frontdoor Resource {#create}

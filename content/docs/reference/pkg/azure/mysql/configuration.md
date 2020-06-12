@@ -16,9 +16,6 @@ Sets a MySQL Configuration value on a MySQL Server.
 
 > **Note:** Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Configuration Resource {#create}

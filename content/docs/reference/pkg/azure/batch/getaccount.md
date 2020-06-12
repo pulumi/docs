@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAccount function of the batch module, including examp
 Use this data source to access information about an existing Batch Account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := batch.LookupAccount(ctx, &batch.LookupAccountArgs{
+			Name:              "testbatchaccount",
+			ResourceGroupName: "test",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("poolAllocationMode", example.PoolAllocationMode)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -270,7 +289,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountkeyvaultreference">List&lt;Get<wbr>Account<wbr>Key<wbr>Vault<wbr>Reference&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The `key_vault_reference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode. 
+    <dd>{{% md %}}The `key_vault_reference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -397,7 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountkeyvaultreference">[]Get<wbr>Account<wbr>Key<wbr>Vault<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The `key_vault_reference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode. 
+    <dd>{{% md %}}The `key_vault_reference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -524,7 +543,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountkeyvaultreference">Get<wbr>Account<wbr>Key<wbr>Vault<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}The `key_vault_reference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode. 
+    <dd>{{% md %}}The `key_vault_reference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -651,7 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountkeyvaultreference">List[Get<wbr>Account<wbr>Key<wbr>Vault<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}The `key_vault_reference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode. 
+    <dd>{{% md %}}The `key_vault_reference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode.
 {{% /md %}}</dd>
 
     <dt class="property-"

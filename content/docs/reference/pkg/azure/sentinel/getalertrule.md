@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAlertRule function of the sentinel module, including 
 Use this data source to access information about an existing Sentinel Alert Rule.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +47,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleAnalyticsWorkspace, err := operationalinsights.LookupAnalyticsWorkspace(ctx, &operationalinsights.LookupAnalyticsWorkspaceArgs{
+			Name:              "example",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleAlertRule, err := sentinel.LookupAlertRule(ctx, &sentinel.LookupAlertRuleArgs{
+			Name:                    "existing",
+			LogAnalyticsWorkspaceId: exampleAnalyticsWorkspace.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", exampleAlertRule.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

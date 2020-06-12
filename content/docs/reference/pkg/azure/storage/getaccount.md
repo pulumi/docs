@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAccount function of the storage module, including exa
 Use this data source to access information about an existing Storage Account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := storage.LookupAccount(ctx, &storage.LookupAccountArgs{
+			Name:              "packerimages",
+			ResourceGroupName: "packer-storage",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("storageAccountTier", example.AccountTier)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

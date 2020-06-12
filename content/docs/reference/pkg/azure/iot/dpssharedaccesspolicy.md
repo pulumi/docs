@@ -13,7 +13,6 @@ meta_desc: "Explore the DpsSharedAccessPolicy resource of the iot module, includ
 Manages an IotHub Device Provisioning Service Shared Access Policy
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,7 +55,47 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleIotHubDps, err := iot.NewIotHubDps(ctx, "exampleIotHubDps", &iot.IotHubDpsArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Sku: &iot.IotHubDpsSkuArgs{
+				Name:     pulumi.String("S1"),
+				Capacity: pulumi.Int(1),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleDpsSharedAccessPolicy, err := iot.NewDpsSharedAccessPolicy(ctx, "exampleDpsSharedAccessPolicy", &iot.DpsSharedAccessPolicyArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			IothubDpsName:     exampleIotHubDps.Name,
+			EnrollmentWrite:   pulumi.Bool(true),
+			EnrollmentRead:    pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

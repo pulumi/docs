@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAuthorizationRule function of the eventhub module, in
 Use this data source to access information about an existing Event Hubs Authorization Rule within an Event Hub.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := eventhub.LookupAuthorizationRule(ctx, &eventhub.LookupAuthorizationRuleArgs{
+			EventhubName:      azurerm_eventhub.Test.Name,
+			Name:              "test",
+			NamespaceName:     azurerm_eventhub_namespace.Test.Name,
+			ResourceGroupName: azurerm_resource_group.Test.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

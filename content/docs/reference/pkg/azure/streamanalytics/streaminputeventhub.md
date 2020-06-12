@@ -13,7 +13,6 @@ meta_desc: "Explore the StreamInputEventHub resource of the streamanalytics modu
 Manages a Stream Analytics Stream Input EventHub.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -79,7 +78,76 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.LookupResourceGroup(ctx, &core.LookupResourceGroupArgs{
+			Name: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleJob, err := streamanalytics.LookupJob(ctx, &streamanalytics.LookupJobArgs{
+			Name:              "example-job",
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleEventHubNamespace, err := eventhub.NewEventHubNamespace(ctx, "exampleEventHubNamespace", &eventhub.EventHubNamespaceArgs{
+			Location:          pulumi.String(exampleResourceGroup.Location),
+			ResourceGroupName: pulumi.String(exampleResourceGroup.Name),
+			Sku:               pulumi.String("Standard"),
+			Capacity:          pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		exampleEventHub, err := eventhub.NewEventHub(ctx, "exampleEventHub", &eventhub.EventHubArgs{
+			NamespaceName:     exampleEventHubNamespace.Name,
+			ResourceGroupName: pulumi.String(exampleResourceGroup.Name),
+			PartitionCount:    pulumi.Int(2),
+			MessageRetention:  pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		exampleConsumerGroup, err := eventhub.NewConsumerGroup(ctx, "exampleConsumerGroup", &eventhub.ConsumerGroupArgs{
+			NamespaceName:     exampleEventHubNamespace.Name,
+			EventhubName:      exampleEventHub.Name,
+			ResourceGroupName: pulumi.String(exampleResourceGroup.Name),
+		})
+		if err != nil {
+			return err
+		}
+		exampleStreamInputEventHub, err := streamanalytics.NewStreamInputEventHub(ctx, "exampleStreamInputEventHub", &streamanalytics.StreamInputEventHubArgs{
+			StreamAnalyticsJobName:    pulumi.String(exampleJob.Name),
+			ResourceGroupName:         pulumi.String(exampleJob.ResourceGroupName),
+			EventhubConsumerGroupName: exampleConsumerGroup.Name,
+			EventhubName:              exampleEventHub.Name,
+			ServicebusNamespace:       exampleEventHubNamespace.Name,
+			SharedAccessPolicyKey:     exampleEventHubNamespace.DefaultPrimaryKey,
+			SharedAccessPolicyName:    pulumi.String("RootManageSharedAccessKey"),
+			Serialization: &streamanalytics.StreamInputEventHubSerializationArgs{
+				Type:     pulumi.String("Json"),
+				Encoding: pulumi.String("UTF8"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

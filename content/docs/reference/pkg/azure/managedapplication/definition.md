@@ -12,9 +12,6 @@ meta_desc: "Explore the Definition resource of the managedapplication module, in
 
 Manages a Managed Application Definition.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Definition Resource {#create}

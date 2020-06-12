@@ -13,7 +13,6 @@ meta_desc: "Explore the GetFactory function of the datafactory module, including
 Use this data source to access information about an existing Azure Data Factory (Version 2).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := datafactory.LookupFactory(ctx, &datafactory.LookupFactoryArgs{
+			Name:              azurerm_data_factory.Example.Name,
+			ResourceGroupName: azurerm_data_factory.Example.Resource_group_name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("dataFactoryId", azurerm_data_factory.Example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -119,7 +138,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about. 
+    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -148,7 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about. 
+    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -177,7 +196,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about. 
+    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -206,7 +225,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about. 
+    <dd>{{% md %}}Specifies the name of the Data Factory to retrieve information about.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -670,7 +689,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub Enterprise host name. 
+    <dd>{{% md %}}The GitHub Enterprise host name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -732,7 +751,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub Enterprise host name. 
+    <dd>{{% md %}}The GitHub Enterprise host name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -794,7 +813,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub Enterprise host name. 
+    <dd>{{% md %}}The GitHub Enterprise host name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -856,7 +875,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The GitHub Enterprise host name. 
+    <dd>{{% md %}}The GitHub Enterprise host name.
 {{% /md %}}</dd>
 
     <dt class="property-required"

@@ -12,29 +12,13 @@ meta_desc: "Explore the FirewallRule resource of the mariadb module, including e
 
 Manages a Firewall Rule for a MariaDB Server
 
-## Example Usage (Single IP Address)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const example = new azure.mariadb.FirewallRule("example", {
-    endIpAddress: "40.112.8.12",
-    resourceGroupName: "test-rg",
-    serverName: "test-server",
-    startIpAddress: "40.112.8.12",
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example = azure.mariadb.FirewallRule("example",
-    end_ip_address="40.112.8.12",
-    resource_group_name="test-rg",
-    server_name="test-server",
-    start_ip_address="40.112.8.12")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Single IP Address)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -54,30 +38,63 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage (IP Range)
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mariadb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const example = new azure.mariadb.FirewallRule("example", {
-    endIpAddress: "40.112.255.255",
-    resourceGroupName: "test-rg",
-    serverName: "test-server",
-    startIpAddress: "40.112.0.0",
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := mariadb.NewFirewallRule(ctx, "example", &mariadb.FirewallRuleArgs{
+			EndIpAddress:      pulumi.String("40.112.8.12"),
+			ResourceGroupName: pulumi.String("test-rg"),
+			ServerName:        pulumi.String("test-server"),
+			StartIpAddress:    pulumi.String("40.112.8.12"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_azure as azure
 
 example = azure.mariadb.FirewallRule("example",
-    end_ip_address="40.112.255.255",
+    end_ip_address="40.112.8.12",
     resource_group_name="test-rg",
     server_name="test-server",
-    start_ip_address="40.112.0.0")
+    start_ip_address="40.112.8.12")
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.mariadb.FirewallRule("example", {
+    endIpAddress: "40.112.8.12",
+    resourceGroupName: "test-rg",
+    serverName: "test-server",
+    startIpAddress: "40.112.8.12",
+});
+```
+{{% /example %}}
+
+### IP Range)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -97,7 +114,62 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mariadb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := mariadb.NewFirewallRule(ctx, "example", &mariadb.FirewallRuleArgs{
+			EndIpAddress:      pulumi.String("40.112.255.255"),
+			ResourceGroupName: pulumi.String("test-rg"),
+			ServerName:        pulumi.String("test-server"),
+			StartIpAddress:    pulumi.String("40.112.0.0"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.mariadb.FirewallRule("example",
+    end_ip_address="40.112.255.255",
+    resource_group_name="test-rg",
+    server_name="test-server",
+    start_ip_address="40.112.0.0")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.mariadb.FirewallRule("example", {
+    endIpAddress: "40.112.255.255",
+    resourceGroupName: "test-rg",
+    serverName: "test-server",
+    startIpAddress: "40.112.0.0",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

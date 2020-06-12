@@ -13,7 +13,6 @@ meta_desc: "Explore the GetApi function of the apimanagement module, including e
 Use this data source to access information about an existing API Management API.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := apimanagement.LookupApi(ctx, &apimanagement.LookupApiArgs{
+			Name:              "search-api",
+			ApiManagementName: "search-api-management",
+			ResourceGroupName: "search-service",
+			Revision:          "2",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("apiManagementApiId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

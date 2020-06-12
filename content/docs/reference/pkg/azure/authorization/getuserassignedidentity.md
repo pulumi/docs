@@ -12,28 +12,13 @@ meta_desc: "Explore the GetUserAssignedIdentity function of the authorization mo
 
 Use this data source to access information about an existing User Assigned Identity.
 
-## Example Usage (reference an existing)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const example = azure.authorization.getUserAssignedIdentity({
-    name: "name_of_user_assigned_identity",
-    resourceGroupName: "name_of_resource_group",
-});
-export const uaiClientId = example.then(example => example.clientId);
-export const uaiPrincipalId = example.then(example => example.principalId);
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example = azure.authorization.get_user_assigned_identity(name="name_of_user_assigned_identity",
-    resource_group_name="name_of_resource_group")
-pulumi.export("uaiClientId", example.client_id)
-pulumi.export("uaiPrincipalId", example.principal_id)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Reference An Existing)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -57,7 +42,60 @@ class MyStack : Stack
     public Output<string> UaiPrincipalId { get; set; }
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := authorization.LookupUserAssignedIdentity(ctx, &authorization.LookupUserAssignedIdentityArgs{
+			Name:              "name_of_user_assigned_identity",
+			ResourceGroupName: "name_of_resource_group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("uaiClientId", example.ClientId)
+		ctx.Export("uaiPrincipalId", example.PrincipalId)
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.authorization.get_user_assigned_identity(name="name_of_user_assigned_identity",
+    resource_group_name="name_of_resource_group")
+pulumi.export("uaiClientId", example.client_id)
+pulumi.export("uaiPrincipalId", example.principal_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.authorization.getUserAssignedIdentity({
+    name: "name_of_user_assigned_identity",
+    resourceGroupName: "name_of_resource_group",
+});
+export const uaiClientId = example.then(example => example.clientId);
+export const uaiPrincipalId = example.then(example => example.principalId);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetUserAssignedIdentity {#using}

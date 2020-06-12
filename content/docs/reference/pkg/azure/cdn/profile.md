@@ -13,7 +13,6 @@ meta_desc: "Explore the Profile resource of the cdn module, including examples, 
 Manages a CDN Profile to create a collection of CDN Endpoints.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,7 +49,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleProfile, err := cdn.NewProfile(ctx, "exampleProfile", &cdn.ProfileArgs{
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Standard_Verizon"),
+			Tags: map[string]interface{}{
+				"environment": "Production",
+				"cost_center": "MSFT",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

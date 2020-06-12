@@ -15,9 +15,102 @@ Use this data source to access information about an existing Key Vault Certifica
 > **Note:** All arguments including the secret value will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleKeyVault = Output.Create(Azure.KeyVault.GetKeyVault.InvokeAsync(new Azure.KeyVault.GetKeyVaultArgs
+        {
+            Name = "examplekv",
+            ResourceGroupName = "some-resource-group",
+        }));
+        var exampleCertificate = exampleKeyVault.Apply(exampleKeyVault => Output.Create(Azure.KeyVault.GetCertificate.InvokeAsync(new Azure.KeyVault.GetCertificateArgs
+        {
+            Name = "secret-sauce",
+            KeyVaultId = exampleKeyVault.Id,
+        })));
+        this.CertificateThumbprint = exampleCertificate.Apply(exampleCertificate => exampleCertificate.Thumbprint);
+    }
+
+    [Output("certificateThumbprint")]
+    public Output<string> CertificateThumbprint { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleKeyVault, err := keyvault.LookupKeyVault(ctx, &keyvault.LookupKeyVaultArgs{
+			Name:              "examplekv",
+			ResourceGroupName: "some-resource-group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleCertificate, err := keyvault.LookupCertificate(ctx, &keyvault.LookupCertificateArgs{
+			Name:       "secret-sauce",
+			KeyVaultId: exampleKeyVault.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("certificateThumbprint", exampleCertificate.Thumbprint)
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_key_vault = azure.keyvault.get_key_vault(name="examplekv",
+    resource_group_name="some-resource-group")
+example_certificate = azure.keyvault.get_certificate(name="secret-sauce",
+    key_vault_id=example_key_vault.id)
+pulumi.export("certificateThumbprint", example_certificate.thumbprint)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleKeyVault = azure.keyvault.getKeyVault({
+    name: "examplekv",
+    resourceGroupName: "some-resource-group",
+});
+const exampleCertificate = exampleKeyVault.then(exampleKeyVault => azure.keyvault.getCertificate({
+    name: "secret-sauce",
+    keyVaultId: exampleKeyVault.id,
+}));
+export const certificateThumbprint = exampleCertificate.then(exampleCertificate => exampleCertificate.thumbprint);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCertificate {#using}
@@ -88,7 +181,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest) 
+    <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest)
 {{% /md %}}</dd>
 
 </dl>
@@ -128,7 +221,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest) 
+    <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest)
 {{% /md %}}</dd>
 
 </dl>
@@ -168,7 +261,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest) 
+    <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest)
 {{% /md %}}</dd>
 
 </dl>
@@ -208,7 +301,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest) 
+    <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest)
 {{% /md %}}</dd>
 
 </dl>

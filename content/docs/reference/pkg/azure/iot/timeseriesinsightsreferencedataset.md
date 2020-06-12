@@ -12,9 +12,6 @@ meta_desc: "Explore the TimeSeriesInsightsReferenceDataSet resource of the iot m
 
 Manages an Azure IoT Time Series Insights Reference Data Set.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a TimeSeriesInsightsReferenceDataSet Resource {#create}

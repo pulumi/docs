@@ -50,6 +50,27 @@ class MyStack : Stack
     public Output<string> Id { get; set; }
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		existing, err := machinelearning.LookupWorkspace(ctx, &machinelearning.LookupWorkspaceArgs{
+			Name:              "example-workspace",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", azurerm_machine_learning_workspace.Existing.Id)
+		return nil
+	})
+}
+```
 
 
 

@@ -12,9 +12,6 @@ meta_desc: "Explore the FailoverGroup resource of the sql module, including exam
 
 Create a failover group of databases on a collection of Azure SQL servers.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a FailoverGroup Resource {#create}

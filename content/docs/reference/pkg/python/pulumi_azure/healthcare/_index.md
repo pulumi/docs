@@ -74,7 +74,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">access_policy_object_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;</span><span class="p">],</span>
     <span class="n">authentication_configuration</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;audience&quot;</span><span class="p">:</span> <span class="s2">&quot;https://azurehealthcareapis.com/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;authority&quot;</span><span class="p">:</span> <span class="s2">&quot;https://login.microsoftonline.com/$$%7Bdata.azurerm_client_config.current.tenant_id%7D&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;authority&quot;</span><span class="p">:</span> <span class="s2">&quot;https://login.microsoftonline.com/$%7Bdata.azurerm_client_config.current.tenant_id%7D&quot;</span><span class="p">,</span>
         <span class="s2">&quot;smartProxyEnabled&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">cors_configuration</span><span class="o">=</span><span class="p">{</span>

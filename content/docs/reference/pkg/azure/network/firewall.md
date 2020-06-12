@@ -12,9 +12,6 @@ meta_desc: "Explore the Firewall resource of the network module, including examp
 
 Manages an Azure Firewall.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Firewall Resource {#create}

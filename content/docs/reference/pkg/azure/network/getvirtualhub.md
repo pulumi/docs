@@ -52,6 +52,27 @@ class MyStack : Stack
     public Output<string> VirtualHubId { get; set; }
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupVirtualHub(ctx, &network.LookupVirtualHubArgs{
+			Name:              "example-hub",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("virtualHubId", example.Id)
+		return nil
+	})
+}
+```
 
 
 

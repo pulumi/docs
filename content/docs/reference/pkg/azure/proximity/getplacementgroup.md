@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPlacementGroup function of the proximity module, incl
 Use this data source to access information about an existing Proximity Placement Group.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := proximity.LookupPlacementGroup(ctx, &proximity.LookupPlacementGroupArgs{
+			Name:              "tf-appsecuritygroup",
+			ResourceGroupName: "my-resource-group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("proximityPlacementGroupId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

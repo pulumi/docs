@@ -13,7 +13,6 @@ meta_desc: "Explore the GetHub function of the notificationhub module, including
 Use this data source to access information about an existing Notification Hub within a Notification Hub Namespace.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := notificationhub.LookupHub(ctx, &notificationhub.LookupHubArgs{
+			Name:              "notification-hub",
+			NamespaceName:     "namespace-name",
+			ResourceGroupName: "resource-group-name",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

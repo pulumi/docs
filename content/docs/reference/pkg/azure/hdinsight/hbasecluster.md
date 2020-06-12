@@ -12,9 +12,6 @@ meta_desc: "Explore the HBaseCluster resource of the hdinsight module, including
 
 Manages a HDInsight HBase Cluster.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a HBaseCluster Resource {#create}

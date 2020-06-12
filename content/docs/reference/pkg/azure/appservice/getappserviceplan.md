@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAppServicePlan function of the appservice module, inc
 Use this data source to access information about an existing App Service Plan (formerly known as a `Server Farm`).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := appservice.LookupAppServicePlan(ctx, &appservice.LookupAppServicePlanArgs{
+			Name:              "search-app-service-plan",
+			ResourceGroupName: "search-service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("appServicePlanId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

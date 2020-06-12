@@ -12,70 +12,13 @@ meta_desc: "Explore the SubscriptionRule resource of the servicebus module, incl
 
 Manages a ServiceBus Subscription Rule.
 
-## Example Usage (SQL Filter)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    sku: "Standard",
-    tags: {
-        source: "example",
-    },
-});
-const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
-    resourceGroupName: exampleResourceGroup.name,
-    namespaceName: exampleNamespace.name,
-    enablePartitioning: true,
-});
-const exampleSubscription = new azure.servicebus.Subscription("exampleSubscription", {
-    resourceGroupName: exampleResourceGroup.name,
-    namespaceName: exampleNamespace.name,
-    topicName: exampleTopic.name,
-    maxDeliveryCount: 1,
-});
-const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("exampleSubscriptionRule", {
-    resourceGroupName: exampleResourceGroup.name,
-    namespaceName: exampleNamespace.name,
-    topicName: exampleTopic.name,
-    subscriptionName: exampleSubscription.name,
-    filterType: "SqlFilter",
-    sqlFilter: "colour = 'red'",
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_namespace = azure.servicebus.Namespace("exampleNamespace",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    sku="Standard",
-    tags={
-        "source": "example",
-    })
-example_topic = azure.servicebus.Topic("exampleTopic",
-    resource_group_name=example_resource_group.name,
-    namespace_name=example_namespace.name,
-    enable_partitioning=True)
-example_subscription = azure.servicebus.Subscription("exampleSubscription",
-    resource_group_name=example_resource_group.name,
-    namespace_name=example_namespace.name,
-    topic_name=example_topic.name,
-    max_delivery_count=1)
-example_subscription_rule = azure.servicebus.SubscriptionRule("exampleSubscriptionRule",
-    resource_group_name=example_resource_group.name,
-    namespace_name=example_namespace.name,
-    topic_name=example_topic.name,
-    subscription_name=example_subscription.name,
-    filter_type="SqlFilter",
-    sql_filter="colour = 'red'")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SQL Filter)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -124,7 +67,140 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNamespace, err := servicebus.NewNamespace(ctx, "exampleNamespace", &servicebus.NamespaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Standard"),
+			Tags: map[string]interface{}{
+				"source": "example",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleTopic, err := servicebus.NewTopic(ctx, "exampleTopic", &servicebus.TopicArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			NamespaceName:      exampleNamespace.Name,
+			EnablePartitioning: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubscription, err := servicebus.NewSubscription(ctx, "exampleSubscription", &servicebus.SubscriptionArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			NamespaceName:     exampleNamespace.Name,
+			TopicName:         exampleTopic.Name,
+			MaxDeliveryCount:  pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubscriptionRule, err := servicebus.NewSubscriptionRule(ctx, "exampleSubscriptionRule", &servicebus.SubscriptionRuleArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			NamespaceName:     exampleNamespace.Name,
+			TopicName:         exampleTopic.Name,
+			SubscriptionName:  exampleSubscription.Name,
+			FilterType:        pulumi.String("SqlFilter"),
+			SqlFilter:         pulumi.String("colour = 'red'"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    tags={
+        "source": "example",
+    })
+example_topic = azure.servicebus.Topic("exampleTopic",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    enable_partitioning=True)
+example_subscription = azure.servicebus.Subscription("exampleSubscription",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    topic_name=example_topic.name,
+    max_delivery_count=1)
+example_subscription_rule = azure.servicebus.SubscriptionRule("exampleSubscriptionRule",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    topic_name=example_topic.name,
+    subscription_name=example_subscription.name,
+    filter_type="SqlFilter",
+    sql_filter="colour = 'red'")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    tags: {
+        source: "example",
+    },
+});
+const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    enablePartitioning: true,
+});
+const exampleSubscription = new azure.servicebus.Subscription("exampleSubscription", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    topicName: exampleTopic.name,
+    maxDeliveryCount: 1,
+});
+const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("exampleSubscriptionRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    topicName: exampleTopic.name,
+    subscriptionName: exampleSubscription.name,
+    filterType: "SqlFilter",
+    sqlFilter: "colour = 'red'",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SubscriptionRule Resource {#create}

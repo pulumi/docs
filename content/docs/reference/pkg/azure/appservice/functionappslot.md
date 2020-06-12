@@ -12,74 +12,13 @@ meta_desc: "Explore the FunctionAppSlot resource of the appservice module, inclu
 
 Manages a Function App deployment Slot.
 
-## Example Usage (with App Service Plan)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus2"});
-const exampleAccount = new azure.storage.Account("exampleAccount", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-    accountTier: "Standard",
-    accountReplicationType: "LRS",
-});
-const examplePlan = new azure.appservice.Plan("examplePlan", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    sku: {
-        tier: "Standard",
-        size: "S1",
-    },
-});
-const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    appServicePlanId: examplePlan.id,
-    storageAccountName: exampleAccount.name,
-    storageAccountAccessKey: exampleAccount.primaryAccessKey,
-});
-const exampleFunctionAppSlot = new azure.appservice.FunctionAppSlot("exampleFunctionAppSlot", {
-    location: exampleResourceGroup.location,
-    resourceGroupName: exampleResourceGroup.name,
-    appServicePlanId: examplePlan.id,
-    functionAppName: exampleFunctionApp.name,
-    storageAccountName: exampleAccount.name,
-    storageAccountAccessKey: exampleAccount.primaryAccessKey,
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus2")
-example_account = azure.storage.Account("exampleAccount",
-    resource_group_name=example_resource_group.name,
-    location=example_resource_group.location,
-    account_tier="Standard",
-    account_replication_type="LRS")
-example_plan = azure.appservice.Plan("examplePlan",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    sku={
-        "tier": "Standard",
-        "size": "S1",
-    })
-example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    app_service_plan_id=example_plan.id,
-    storage_account_name=example_account.name,
-    storage_account_access_key=example_account.primary_access_key)
-example_function_app_slot = azure.appservice.FunctionAppSlot("exampleFunctionAppSlot",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    app_service_plan_id=example_plan.id,
-    function_app_name=example_function_app.name,
-    storage_account_name=example_account.name,
-    storage_account_access_key=example_account.primary_access_key)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### With App Service Plan)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -130,7 +69,147 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("westus2"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku: &appservice.PlanSkuArgs{
+				Tier: pulumi.String("Standard"),
+				Size: pulumi.String("S1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleFunctionApp, err := appservice.NewFunctionApp(ctx, "exampleFunctionApp", &appservice.FunctionAppArgs{
+			Location:                exampleResourceGroup.Location,
+			ResourceGroupName:       exampleResourceGroup.Name,
+			AppServicePlanId:        examplePlan.ID(),
+			StorageAccountName:      exampleAccount.Name,
+			StorageAccountAccessKey: exampleAccount.PrimaryAccessKey,
+		})
+		if err != nil {
+			return err
+		}
+		exampleFunctionAppSlot, err := appservice.NewFunctionAppSlot(ctx, "exampleFunctionAppSlot", &appservice.FunctionAppSlotArgs{
+			Location:                exampleResourceGroup.Location,
+			ResourceGroupName:       exampleResourceGroup.Name,
+			AppServicePlanId:        examplePlan.ID(),
+			FunctionAppName:         exampleFunctionApp.Name,
+			StorageAccountName:      exampleAccount.Name,
+			StorageAccountAccessKey: exampleAccount.PrimaryAccessKey,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus2")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    storage_account_name=example_account.name,
+    storage_account_access_key=example_account.primary_access_key)
+example_function_app_slot = azure.appservice.FunctionAppSlot("exampleFunctionAppSlot",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    function_app_name=example_function_app.name,
+    storage_account_name=example_account.name,
+    storage_account_access_key=example_account.primary_access_key)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus2"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    storageAccountName: exampleAccount.name,
+    storageAccountAccessKey: exampleAccount.primaryAccessKey,
+});
+const exampleFunctionAppSlot = new azure.appservice.FunctionAppSlot("exampleFunctionAppSlot", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    functionAppName: exampleFunctionApp.name,
+    storageAccountName: exampleAccount.name,
+    storageAccountAccessKey: exampleAccount.primaryAccessKey,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FunctionAppSlot Resource {#create}
@@ -497,7 +576,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the Operating System type for this function app. 
+    <dd>{{% md %}}A string indicating the Operating System type for this function app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -723,7 +802,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the Operating System type for this function app. 
+    <dd>{{% md %}}A string indicating the Operating System type for this function app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -949,7 +1028,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the Operating System type for this function app. 
+    <dd>{{% md %}}A string indicating the Operating System type for this function app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1175,7 +1254,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the Operating System type for this function app. 
+    <dd>{{% md %}}A string indicating the Operating System type for this function app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1815,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the Operating System type for this function app. 
+    <dd>{{% md %}}A string indicating the Operating System type for this function app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2096,7 +2175,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the Operating System type for this function app. 
+    <dd>{{% md %}}A string indicating the Operating System type for this function app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2377,7 +2456,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the Operating System type for this function app. 
+    <dd>{{% md %}}A string indicating the Operating System type for this function app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2658,7 +2737,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A string indicating the Operating System type for this function app. 
+    <dd>{{% md %}}A string indicating the Operating System type for this function app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

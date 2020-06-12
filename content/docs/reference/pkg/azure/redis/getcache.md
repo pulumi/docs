@@ -55,6 +55,28 @@ class MyStack : Stack
     public Output<string> Hostname { get; set; }
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := redis.LookupCache(ctx, &redis.LookupCacheArgs{
+			Name:              "myrediscache",
+			ResourceGroupName: "redis-cache",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("primaryAccessKey", example.PrimaryAccessKey)
+		ctx.Export("hostname", example.Hostname)
+		return nil
+	})
+}
+```
 
 
 

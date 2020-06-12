@@ -12,9 +12,6 @@ meta_desc: "Explore the Pool resource of the batch module, including examples, i
 
 Manages an Azure Batch pool.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Pool Resource {#create}

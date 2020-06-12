@@ -13,7 +13,6 @@ meta_desc: "Explore the Account resource of the batch module, including examples
 Manages an Azure Batch account.
 
 
-
 {{% examples %}}
 ## Example Usage
 

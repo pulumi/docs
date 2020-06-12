@@ -13,7 +13,6 @@ meta_desc: "Explore the AnalyticsSolution resource of the operationalinsights mo
 Manages a Log Analytics (formally Operational Insights) Solution.
 
 
-
 {{% examples %}}
 ## Example Usage
 

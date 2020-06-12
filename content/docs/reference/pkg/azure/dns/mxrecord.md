@@ -12,9 +12,6 @@ meta_desc: "Explore the MxRecord resource of the dns module, including examples,
 
 Enables you to manage DNS MX Records within Azure DNS.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a MxRecord Resource {#create}

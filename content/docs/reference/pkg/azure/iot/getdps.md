@@ -13,7 +13,6 @@ meta_desc: "Explore the GetDps function of the iot module, including examples, i
 Use this data source to access information about an existing IotHub Device Provisioning Service.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := iot.LookupDps(ctx, &iot.LookupDpsArgs{
+			Name:              "iot_hub_dps_test",
+			ResourceGroupName: "iothub_dps_rg",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

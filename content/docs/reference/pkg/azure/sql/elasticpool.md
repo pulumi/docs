@@ -15,7 +15,6 @@ Allows you to manage an Azure SQL Elastic Pool.
 > **NOTE:** -  This version of the `Elasticpool` resource is being **deprecated** and should no longer be used. Please use the azure.mssql.ElasticPool version instead.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,7 +59,50 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSqlServer, err := sql.NewSqlServer(ctx, "exampleSqlServer", &sql.SqlServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   exampleResourceGroup.Location,
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("4dm1n157r470r"),
+			AdministratorLoginPassword: pulumi.String("4-v3ry-53cr37-p455w0rd"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleElasticPool, err := sql.NewElasticPool(ctx, "exampleElasticPool", &sql.ElasticPoolArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			ServerName:        exampleSqlServer.Name,
+			Edition:           pulumi.String("Basic"),
+			Dtu:               pulumi.Int(50),
+			DbDtuMin:          pulumi.Int(0),
+			DbDtuMax:          pulumi.Int(5),
+			PoolSize:          pulumi.Int(5000),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,9 +13,6 @@ meta_desc: "Explore the Logger resource of the apimanagement module, including e
 Manages a Logger within an API Management Service.
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Logger Resource {#create}

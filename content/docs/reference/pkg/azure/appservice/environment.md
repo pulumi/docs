@@ -13,7 +13,6 @@ meta_desc: "Explore the Environment resource of the appservice module, including
 Manages an App Service Environment.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -66,7 +65,62 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("westeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ase, err := network.NewSubnet(ctx, "ase", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		gateway, err := network.NewSubnet(ctx, "gateway", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleEnvironment, err := appservice.NewEnvironment(ctx, "exampleEnvironment", &appservice.EnvironmentArgs{
+			SubnetId:            ase.ID(),
+			PricingTier:         pulumi.String("I2"),
+			FrontEndScaleFactor: pulumi.Int(10),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -348,7 +402,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,7 +435,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -432,7 +486,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,7 +519,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -516,7 +570,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -549,7 +603,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -600,7 +654,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -633,7 +687,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -933,7 +987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -977,7 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -1028,7 +1082,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1072,7 +1126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -1123,7 +1177,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,7 +1221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -1218,7 +1272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1262,7 +1316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created. 
+    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>

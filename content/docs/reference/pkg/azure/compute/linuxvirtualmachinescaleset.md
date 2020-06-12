@@ -18,9 +18,6 @@ Manages a Linux Virtual Machine Scale Set.
 
 > **Note:** This resource does not support Unmanaged Disks. If you need to use Unmanaged Disks you can continue to use the `azure.compute.ScaleSet` resource instead
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a LinuxVirtualMachineScaleSet Resource {#create}

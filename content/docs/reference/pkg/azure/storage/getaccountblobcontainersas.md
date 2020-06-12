@@ -15,7 +15,6 @@ Use this data source to obtain a Shared Access Signature (SAS Token) for an exis
 Shared access signatures allow fine-grained, ephemeral access control to various aspects of an Azure Storage Account Blob Container.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -84,7 +83,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("westus"),
+		})
+		if err != nil {
+			return err
+		}
+		storage, err := storage.NewAccount(ctx, "storage", &storage.AccountArgs{
+			ResourceGroupName:      rg.Name,
+			Location:               rg.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		container, err := storage.NewContainer(ctx, "container", &storage.ContainerArgs{
+			StorageAccountName:  storage.Name,
+			ContainerAccessType: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("sasUrlQueryString", example.ApplyT(func(example storage.LookupAccountBlobContainerSASResult) (string, error) {
+			return example.Sas, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

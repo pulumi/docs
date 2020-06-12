@@ -87,7 +87,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">assignable_scopes</span><span class="o">=</span><span class="p">[</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
 <span class="n">example_assignment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleAssignment&quot;</span><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
-    <span class="n">scope</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;management.Group&quot;</span><span class="p">][</span><span class="s2">&quot;primary&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;azurerm_management_group&quot;</span><span class="p">][</span><span class="s2">&quot;primary&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">role_definition_id</span><span class="o">=</span><span class="n">example_role_definition</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">principal_id</span><span class="o">=</span><span class="n">example_client_config</span><span class="o">.</span><span class="n">client_id</span><span class="p">)</span>
 </pre></div>

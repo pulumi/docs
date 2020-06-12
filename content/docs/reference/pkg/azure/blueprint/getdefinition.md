@@ -14,9 +14,70 @@ Use this data source to access information about an existing Azure Blueprint Def
 
 > **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
 
-{{% examples %}}
-{{% /examples %}}
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var root = current.Apply(current => Output.Create(Azure.Management.GetGroup.InvokeAsync(new Azure.Management.GetGroupArgs
+        {
+            Name = current.TenantId,
+        })));
+        var example = root.Apply(root => Output.Create(Azure.Blueprint.GetDefinition.InvokeAsync(new Azure.Blueprint.GetDefinitionArgs
+        {
+            Name = "exampleManagementGroupBP",
+            ScopeId = root.Id,
+        })));
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+root = azure.management.get_group(name=current.tenant_id)
+example = azure.blueprint.get_definition(name="exampleManagementGroupBP",
+    scope_id=root.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const root = current.then(current => azure.management.getGroup({
+    name: current.tenantId,
+}));
+const example = root.then(root => azure.blueprint.getDefinition({
+    name: "exampleManagementGroupBP",
+    scopeId: root.id,
+}));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDefinition {#using}
@@ -74,7 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.  
+    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -103,7 +164,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.  
+    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -132,7 +193,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.  
+    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -161,7 +222,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.  
+    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -192,7 +253,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the Blueprint Definition.  
+    <dd>{{% md %}}The description of the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -203,7 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The display name of the Blueprint Definition.  
+    <dd>{{% md %}}The display name of the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -225,7 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of when this last modification was saved to the Blueprint Definition.  
+    <dd>{{% md %}}The timestamp of when this last modification was saved to the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -256,7 +317,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The target scope.  
+    <dd>{{% md %}}The target scope.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -267,7 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of when this Blueprint Definition was created.  
+    <dd>{{% md %}}The timestamp of when this Blueprint Definition was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -278,7 +339,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of versions published for this Blueprint Definition.  
+    <dd>{{% md %}}A list of versions published for this Blueprint Definition.
 {{% /md %}}</dd>
 
 </dl>
@@ -296,7 +357,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the Blueprint Definition.  
+    <dd>{{% md %}}The description of the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -307,7 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The display name of the Blueprint Definition.  
+    <dd>{{% md %}}The display name of the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -329,7 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of when this last modification was saved to the Blueprint Definition.  
+    <dd>{{% md %}}The timestamp of when this last modification was saved to the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -360,7 +421,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The target scope.  
+    <dd>{{% md %}}The target scope.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -371,7 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of when this Blueprint Definition was created.  
+    <dd>{{% md %}}The timestamp of when this Blueprint Definition was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -382,7 +443,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of versions published for this Blueprint Definition.  
+    <dd>{{% md %}}A list of versions published for this Blueprint Definition.
 {{% /md %}}</dd>
 
 </dl>
@@ -400,7 +461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the Blueprint Definition.  
+    <dd>{{% md %}}The description of the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -411,7 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The display name of the Blueprint Definition.  
+    <dd>{{% md %}}The display name of the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -433,7 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of when this last modification was saved to the Blueprint Definition.  
+    <dd>{{% md %}}The timestamp of when this last modification was saved to the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -464,7 +525,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The target scope.  
+    <dd>{{% md %}}The target scope.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -475,7 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of when this Blueprint Definition was created.  
+    <dd>{{% md %}}The timestamp of when this Blueprint Definition was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -486,7 +547,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of versions published for this Blueprint Definition.  
+    <dd>{{% md %}}A list of versions published for this Blueprint Definition.
 {{% /md %}}</dd>
 
 </dl>
@@ -504,7 +565,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the Blueprint Definition.  
+    <dd>{{% md %}}The description of the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -515,7 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The display name of the Blueprint Definition.  
+    <dd>{{% md %}}The display name of the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -537,7 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of when this last modification was saved to the Blueprint Definition.  
+    <dd>{{% md %}}The timestamp of when this last modification was saved to the Blueprint Definition.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -568,7 +629,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The target scope.  
+    <dd>{{% md %}}The target scope.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -579,7 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The timestamp of when this Blueprint Definition was created.  
+    <dd>{{% md %}}The timestamp of when this Blueprint Definition was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -590,7 +651,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of versions published for this Blueprint Definition.  
+    <dd>{{% md %}}A list of versions published for this Blueprint Definition.
 {{% /md %}}</dd>
 
 </dl>

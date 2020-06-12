@@ -12,9 +12,6 @@ meta_desc: "Explore the SharedImageVersion resource of the compute module, inclu
 
 Manages a Version of a Shared Image within a Shared Image Gallery.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a SharedImageVersion Resource {#create}

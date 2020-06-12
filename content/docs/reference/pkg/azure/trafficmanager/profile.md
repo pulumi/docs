@@ -12,9 +12,6 @@ meta_desc: "Explore the Profile resource of the trafficmanager module, including
 
 Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 
-{{% examples %}}
-{{% /examples %}}
-
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.Profile has been deprecated in favor of azure.network.TrafficManagerProfile{{% /md %}}</p>
 
 

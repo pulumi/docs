@@ -12,9 +12,6 @@ meta_desc: "Explore the Share resource of the datashare module, including exampl
 
 Manages a Data Share.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Share Resource {#create}

@@ -12,9 +12,6 @@ meta_desc: "Explore the ActionGroup resource of the monitoring module, including
 
 Manages an Action Group within Azure Monitor.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ActionGroup Resource {#create}

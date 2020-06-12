@@ -12,9 +12,6 @@ meta_desc: "Explore the KubernetesCluster resource of the containerservice modul
 
 Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a KubernetesCluster Resource {#create}
@@ -1274,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.  
+    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1368,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.  
+    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1462,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.  
+    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1556,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.  
+    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1854,7 +1851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.  
+    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2179,7 +2176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.  
+    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2504,7 +2501,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.  
+    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2829,7 +2826,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.  
+    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3773,7 +3770,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3813,7 +3810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">[]Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3853,7 +3850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3893,7 +3890,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">List[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity]</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
 
 </dl>

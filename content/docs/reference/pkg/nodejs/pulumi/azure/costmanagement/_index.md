@@ -3,7 +3,7 @@ title: "Module costmanagement"
 title_tag: "Module costmanagement | Package @pulumi/azure | Node.js SDK"
 linktitle: "costmanagement"
 meta_desc: "Explore members of the costmanagement module in the @pulumi/azure package."
-git_sha: "b3cc20bdfecc18d2930ee34b92e74fb2d96db10d"
+git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ResourceGroupExport" data-link-title="ResourceGroupExport">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L44">
         Resource <strong>ResourceGroupExport</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ const exampleResourceGroupExport = new azure.costmanagement.ResourceGroupExport(
 ```
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +86,7 @@ Create a ResourceGroupExport resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +97,14 @@ Get an existing ResourceGroupExport resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -115,7 +115,7 @@ Returns true if the given object is an instance of ResourceGroupExport.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L75">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L75">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Is the cost management export active? Default is `true`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-deliveryInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L79">property <b>deliveryInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L79">property <b>deliveryInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deliveryInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ResourceGroupExportDeliveryInfo'>ResourceGroupExportDeliveryInfo</a>&gt;;</code></pre>
@@ -131,7 +131,7 @@ Is the cost management export active? Default is `true`.
 A `deliveryInfo` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -140,7 +140,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -148,7 +148,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L87">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L87">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ResourceGroupExportQuery'>ResourceGroupExportQuery</a>&gt;;</code></pre>
@@ -156,7 +156,7 @@ Specifies the name of the Cost Management Export. Changing this forces a new res
 A `query` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-recurrencePeriodEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L91">property <b>recurrencePeriodEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L91">property <b>recurrencePeriodEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrencePeriodEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ A `query` block as defined below.
 The date the export will stop capturing information.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-recurrencePeriodStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L95">property <b>recurrencePeriodStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L95">property <b>recurrencePeriodStart</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrencePeriodStart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ The date the export will stop capturing information.
 The date the export will start capturing information.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L99">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L99">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrenceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ The date the export will start capturing information.
 How often the requested information will be exported. Valid values include `Annually`, `Daily`, `Monthly`, `Weekly`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L103">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L103">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ How often the requested information will be exported. Valid values include `Annu
 The id of the resource group in which to export information.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExport-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -200,7 +200,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ResourceGroupExportArgs" data-link-title="ResourceGroupExportArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L206">
         interface <strong>ResourceGroupExportArgs</strong>
     </a>
 </h3>
@@ -210,7 +210,7 @@ deployments.
 The set of arguments for constructing a ResourceGroupExport resource.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L210">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L210">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -218,7 +218,7 @@ The set of arguments for constructing a ResourceGroupExport resource.
 Is the cost management export active? Default is `true`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportArgs-deliveryInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L214">property <b>deliveryInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L214">property <b>deliveryInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ResourceGroupExportDeliveryInfo'>ResourceGroupExportDeliveryInfo</a>&gt;;</code></pre>
@@ -226,7 +226,7 @@ Is the cost management export active? Default is `true`.
 A `deliveryInfo` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L218">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L218">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ A `deliveryInfo` block as defined below.
 Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportArgs-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L222">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L222">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ResourceGroupExportQuery'>ResourceGroupExportQuery</a>&gt;;</code></pre>
@@ -242,7 +242,7 @@ Specifies the name of the Cost Management Export. Changing this forces a new res
 A `query` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportArgs-recurrencePeriodEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L226">property <b>recurrencePeriodEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L226">property <b>recurrencePeriodEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrencePeriodEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ A `query` block as defined below.
 The date the export will stop capturing information.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportArgs-recurrencePeriodStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L230">property <b>recurrencePeriodStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L230">property <b>recurrencePeriodStart</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrencePeriodStart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ The date the export will stop capturing information.
 The date the export will start capturing information.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportArgs-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L234">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L234">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ The date the export will start capturing information.
 How often the requested information will be exported. Valid values include `Annually`, `Daily`, `Monthly`, `Weekly`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L238">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L238">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -274,7 +274,7 @@ How often the requested information will be exported. Valid values include `Annu
 The id of the resource group in which to export information.
 
 <h3 class="pdoc-module-header" id="ResourceGroupExportState" data-link-title="ResourceGroupExportState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L168">
         interface <strong>ResourceGroupExportState</strong>
     </a>
 </h3>
@@ -284,7 +284,7 @@ The id of the resource group in which to export information.
 Input properties used for looking up and filtering ResourceGroupExport resources.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L172">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L172">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -292,7 +292,7 @@ Input properties used for looking up and filtering ResourceGroupExport resources
 Is the cost management export active? Default is `true`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportState-deliveryInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L176">property <b>deliveryInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L176">property <b>deliveryInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deliveryInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ResourceGroupExportDeliveryInfo'>ResourceGroupExportDeliveryInfo</a>&gt;;</code></pre>
@@ -300,7 +300,7 @@ Is the cost management export active? Default is `true`.
 A `deliveryInfo` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ A `deliveryInfo` block as defined below.
 Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportState-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L184">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L184">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ResourceGroupExportQuery'>ResourceGroupExportQuery</a>&gt;;</code></pre>
@@ -316,7 +316,7 @@ Specifies the name of the Cost Management Export. Changing this forces a new res
 A `query` block as defined below.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportState-recurrencePeriodEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L188">property <b>recurrencePeriodEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L188">property <b>recurrencePeriodEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrencePeriodEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ A `query` block as defined below.
 The date the export will stop capturing information.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportState-recurrencePeriodStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L192">property <b>recurrencePeriodStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L192">property <b>recurrencePeriodStart</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrencePeriodStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ The date the export will stop capturing information.
 The date the export will start capturing information.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportState-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L196">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L196">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ The date the export will start capturing information.
 How often the requested information will be exported. Valid values include `Annually`, `Daily`, `Monthly`, `Weekly`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupExportState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/costmanagement/resourceGroupExport.ts#L200">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/costmanagement/resourceGroupExport.ts#L200">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
