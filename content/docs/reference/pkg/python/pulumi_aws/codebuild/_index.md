@@ -3,7 +3,10 @@ title: Module codebuild
 title_tag: Module codebuild | Package pulumi_aws | Python SDK
 linktitle: codebuild
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="codebuild">
 <h1>codebuild<a class="headerlink" href="#codebuild" title="Permalink to this headline">¶</a></h1>

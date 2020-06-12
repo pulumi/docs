@@ -13,7 +13,6 @@ meta_desc: "Explore the Connection resource of the directconnect module, includi
 Provides a Connection of Direct Connect.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		hoge, err := directconnect.NewConnection(ctx, "hoge", &directconnect.ConnectionArgs{
+			Bandwidth: pulumi.String("1Gbps"),
+			Location:  pulumi.String("EqDC2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

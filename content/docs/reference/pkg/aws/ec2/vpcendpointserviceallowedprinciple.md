@@ -19,7 +19,6 @@ a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal res
 and will overwrite the association.
 
 
-
 {{% examples %}}
 ## Example Usage
 

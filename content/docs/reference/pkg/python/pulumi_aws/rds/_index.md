@@ -3,7 +3,10 @@ title: Module rds
 title_tag: Module rds | Package pulumi_aws | Python SDK
 linktitle: rds
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="rds">
 <h1>rds<a class="headerlink" href="#rds" title="Permalink to this headline">¶</a></h1>

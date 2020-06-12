@@ -13,7 +13,6 @@ meta_desc: "Explore the SecurityGroup resource of the redshift module, including
 Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters
 
 
-
 {{% examples %}}
 ## Example Usage
 

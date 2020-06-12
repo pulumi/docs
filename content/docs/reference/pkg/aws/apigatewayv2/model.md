@@ -12,89 +12,8 @@ meta_desc: "Explore the Model resource of the apigatewayv2 module, including exa
 
 Manages an Amazon API Gateway Version 2 [model](https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models).
 
-
-
 {{% examples %}}
 ## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.ApiGatewayV2.Model("example", new Aws.ApiGatewayV2.ModelArgs
-        {
-            ApiId = aws_apigatewayv2_api.Example.Id,
-            ContentType = "application/json",
-            Schema = @"{
-  ""$$schema"": ""http://json-schema.org/draft-04/schema#"",
-  ""title"": ""ExampleModel"",
-  ""type"": ""object"",
-  ""properties"": {
-    ""id"": { ""type"": ""string"" }
-  }
-}
-
-",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.apigatewayv2.Model("example",
-    api_id=aws_apigatewayv2_api["example"]["id"],
-    content_type="application/json",
-    schema="""{
-  "$$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "ExampleModel",
-  "type": "object",
-  "properties": {
-    "id": { "type": "string" }
-  }
-}
-
-""")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.apigatewayv2.Model("example", {
-    apiId: aws_apigatewayv2_api_example.id,
-    contentType: "application/json",
-    schema: `{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "ExampleModel",
-  "type": "object",
-  "properties": {
-    "id": { "type": "string" }
-  }
-}
-`,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
 
 

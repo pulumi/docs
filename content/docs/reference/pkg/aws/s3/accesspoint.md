@@ -13,7 +13,6 @@ meta_desc: "Explore the AccessPoint resource of the s3 module, including example
 Provides a resource to manage an S3 Access Point.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+		if err != nil {
+			return err
+		}
+		exampleAccessPoint, err := s3.NewAccessPoint(ctx, "exampleAccessPoint", &s3.AccessPointArgs{
+			Bucket: exampleBucket.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

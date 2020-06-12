@@ -13,7 +13,6 @@ meta_desc: "Explore the GetInstanceTypeOffering function of the ec2 module, incl
 Information about single EC2 Instance Type Offering.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,7 +56,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2.LookupInstanceTypeOffering(ctx, &ec2.LookupInstanceTypeOfferingArgs{
+			Filters: ec2.getInstanceTypeOfferingFilterArray{
+				&ec2.LookupInstanceTypeOfferingFilter{
+					Name: "instance-type",
+					Values: []string{
+						"t1.micro",
+						"t2.micro",
+						"t3.micro",
+					},
+				},
+			},
+			PreferredInstanceTypes: []string{
+				"t3.micro",
+				"t2.micro",
+				"t1.micro",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

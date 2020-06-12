@@ -13,7 +13,6 @@ meta_desc: "Explore the AssessmentTarget resource of the inspector module, inclu
 Provides a Inspector assessment target
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,7 +46,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/inspector"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bar, err := inspector.NewResourceGroup(ctx, "bar", &inspector.ResourceGroupArgs{
+			Tags: map[string]interface{}{
+				"Env":  "bar",
+				"Name": "foo",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		foo, err := inspector.NewAssessmentTarget(ctx, "foo", &inspector.AssessmentTargetArgs{
+			ResourceGroupArn: bar.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

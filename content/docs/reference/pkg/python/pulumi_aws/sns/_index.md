@@ -3,7 +3,10 @@ title: Module sns
 title_tag: Module sns | Package pulumi_aws | Python SDK
 linktitle: sns
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="sns">
 <h1>sns<a class="headerlink" href="#sns" title="Permalink to this headline">¶</a></h1>
@@ -724,10 +727,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.sns.TopicSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sns.</code><code class="sig-name descname">TopicSubscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">confirmation_timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delivery_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_auto_confirms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">raw_message_delivery</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.TopicSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>Provides a resource for subscribing to SNS topics. Requires that an SNS topic exist for the subscription to attach to.</p>
-</div></blockquote>
-<p>This resource allows you to automatically place messages sent to SNS topics in SQS queues, send them as HTTP(S) POST requests
+<dd><p>Provides a resource for subscribing to SNS topics. Requires that an SNS topic exist for the subscription to attach to.
+This resource allows you to automatically place messages sent to SNS topics in SQS queues, send them as HTTP(S) POST requests
 to a given endpoint, send SMS messages, or notify devices / applications. The most likely use case will
 probably be SQS queues.</p>
 <blockquote>

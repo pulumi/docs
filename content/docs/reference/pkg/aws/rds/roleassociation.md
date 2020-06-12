@@ -18,7 +18,6 @@ Manages an RDS DB Instance association with an IAM Role. Example use cases:
 > To manage the RDS DB Instance IAM Role for [Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html), see the `aws.rds.Instance` resource `monitoring_role_arn` argument instead.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +45,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := rds.NewRoleAssociation(ctx, "example", &rds.RoleAssociationArgs{
+			DbInstanceIdentifier: pulumi.String(aws_db_instance.Example.Id),
+			FeatureName:          pulumi.String("S3_INTEGRATION"),
+			RoleArn:              pulumi.String(aws_iam_role.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module pinpoint
 title_tag: Module pinpoint | Package pulumi_aws | Python SDK
 linktitle: pinpoint
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="pinpoint">
 <h1>pinpoint<a class="headerlink" href="#pinpoint" title="Permalink to this headline">¶</a></h1>

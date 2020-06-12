@@ -3,7 +3,10 @@ title: Module ssm
 title_tag: Module ssm | Package pulumi_aws | Python SDK
 linktitle: ssm
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ssm">
 <h1>ssm<a class="headerlink" href="#ssm" title="Permalink to this headline">¶</a></h1>
@@ -1096,7 +1099,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">task_arn</span><span class="o">=</span><span class="s2">&quot;AWS-RestartEC2Instance&quot;</span><span class="p">,</span>
     <span class="n">task_invocation_parameters</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;automationParameters&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;document_version&quot;</span><span class="p">:</span> <span class="s2">&quot;$$LATEST&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;document_version&quot;</span><span class="p">:</span> <span class="s2">&quot;$LATEST&quot;</span><span class="p">,</span>
             <span class="s2">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;InstanceId&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>

@@ -13,7 +13,6 @@ meta_desc: "Explore the Stage resource of the apigateway module, including examp
 Provides an API Gateway Stage.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -3,7 +3,10 @@ title: Module servicequotas
 title_tag: Module servicequotas | Package pulumi_aws | Python SDK
 linktitle: servicequotas
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="servicequotas">
 <h1>servicequotas<a class="headerlink" href="#servicequotas" title="Permalink to this headline">¶</a></h1>

@@ -13,7 +13,6 @@ meta_desc: "Explore the ReceiptRuleSet resource of the ses module, including exa
 Provides an SES receipt rule set resource
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		main, err := ses.NewReceiptRuleSet(ctx, "main", &ses.ReceiptRuleSetArgs{
+			RuleSetName: pulumi.String("primary-rules"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

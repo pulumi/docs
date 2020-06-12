@@ -14,7 +14,6 @@ The Canonical User ID data source allows access to the [canonical user ID](http:
 for the effective account in which this provider is working.  
 
 
-
 {{% examples %}}
 ## Example Usage
 

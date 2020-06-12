@@ -3,7 +3,10 @@ title: Module autoscaling
 title_tag: Module autoscaling | Package pulumi_aws | Python SDK
 linktitle: autoscaling
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="autoscaling">
 <h1>autoscaling<a class="headerlink" href="#autoscaling" title="Permalink to this headline">¶</a></h1>
@@ -296,7 +299,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">launch_template</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">foobar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;$$Latest&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;$Latest&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">min_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -306,7 +309,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">example_launch_template</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LaunchTemplate</span><span class="p">(</span><span class="s2">&quot;exampleLaunchTemplate&quot;</span><span class="p">,</span>
-    <span class="n">image_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ec2.Ami&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">image_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_ami&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">instance_type</span><span class="o">=</span><span class="s2">&quot;c5.large&quot;</span><span class="p">,</span>
     <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
 <span class="n">example_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">autoscaling</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;exampleGroup&quot;</span><span class="p">,</span>
@@ -417,7 +420,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name of the placement group into which you’ll launch your instances, if any.</p></li>
 <li><p><strong>protect_from_scale_in</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.</p></li>
 <li><p><strong>service_linked_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the service-linked role that the ASG will use to call other AWS services</p></li>
 <li><p><strong>suspended_processes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of processes to suspend for the AutoScaling Group. The allowed values are <code class="docutils literal notranslate"><span class="pre">Launch</span></code>, <code class="docutils literal notranslate"><span class="pre">Terminate</span></code>, <code class="docutils literal notranslate"><span class="pre">HealthCheck</span></code>, <code class="docutils literal notranslate"><span class="pre">ReplaceUnhealthy</span></code>, <code class="docutils literal notranslate"><span class="pre">AZRebalance</span></code>, <code class="docutils literal notranslate"><span class="pre">AlarmNotification</span></code>, <code class="docutils literal notranslate"><span class="pre">ScheduledActions</span></code>, <code class="docutils literal notranslate"><span class="pre">AddToLoadBalancer</span></code>.
@@ -684,7 +687,7 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_aws.autoscaling.Group.protect_from_scale_in">
 <code class="sig-name descname">protect_from_scale_in</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.protect_from_scale_in" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.</p>
 </dd></dl>
 
@@ -809,7 +812,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name of the placement group into which you’ll launch your instances, if any.</p></li>
 <li><p><strong>protect_from_scale_in</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.</p></li>
 <li><p><strong>service_linked_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the service-linked role that the ASG will use to call other AWS services</p></li>
 <li><p><strong>suspended_processes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of processes to suspend for the AutoScaling Group. The allowed values are <code class="docutils literal notranslate"><span class="pre">Launch</span></code>, <code class="docutils literal notranslate"><span class="pre">Terminate</span></code>, <code class="docutils literal notranslate"><span class="pre">HealthCheck</span></code>, <code class="docutils literal notranslate"><span class="pre">ReplaceUnhealthy</span></code>, <code class="docutils literal notranslate"><span class="pre">AZRebalance</span></code>, <code class="docutils literal notranslate"><span class="pre">AlarmNotification</span></code>, <code class="docutils literal notranslate"><span class="pre">ScheduledActions</span></code>, <code class="docutils literal notranslate"><span class="pre">AddToLoadBalancer</span></code>.

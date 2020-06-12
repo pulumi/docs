@@ -13,7 +13,6 @@ meta_desc: "Explore the LoadBalancerPolicy resource of the elb module, including
 Provides a load balancer policy, which can be attached to an ELB listener or backend server.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -137,7 +136,19 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

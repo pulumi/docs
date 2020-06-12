@@ -17,7 +17,6 @@ an input variable and needs to, for example, determine the CIDR block of that
 COIP Pool.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		selected, err := ec2.LookupCoipPool(ctx, &ec2.LookupCoipPoolArgs{
+			Id: coipPoolId,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

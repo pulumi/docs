@@ -3,7 +3,10 @@ title: Module codecommit
 title_tag: Module codecommit | Package pulumi_aws | Python SDK
 linktitle: codecommit
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="codecommit">
 <h1>codecommit<a class="headerlink" href="#codecommit" title="Permalink to this headline">¶</a></h1>

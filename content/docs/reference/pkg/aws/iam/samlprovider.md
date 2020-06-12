@@ -13,7 +13,6 @@ meta_desc: "Explore the SamlProvider resource of the iam module, including examp
 Provides an IAM SAML provider.
 
 
-
 {{% examples %}}
 ## Example Usage
 

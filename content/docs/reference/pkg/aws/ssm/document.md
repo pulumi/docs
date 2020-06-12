@@ -16,7 +16,6 @@ Provides an SSM Document resource
 or greater can update their content once created, see [SSM Schema Features](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features). To update a document with an older
 schema version you must recreate the resource.
 
-
 ## Permissions
 
 The permissions attribute specifies how you want to share the document. If you share a document privately,
@@ -28,112 +27,6 @@ The permissions mapping supports the following:
 * `type` - The permission type for the document. The permission type can be `Share`.
 * `account_ids` - The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or `All`.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new Aws.Ssm.Document("foo", new Aws.Ssm.DocumentArgs
-        {
-            Content = @"  {
-    ""schemaVersion"": ""1.2"",
-    ""description"": ""Check ip configuration of a Linux instance."",
-    ""parameters"": {
-
-    },
-    ""runtimeConfig"": {
-      ""aws:runShellScript"": {
-        ""properties"": [
-          {
-            ""id"": ""0.aws:runShellScript"",
-            ""runCommand"": [""ifconfig""]
-          }
-        ]
-      }
-    }
-  }
-
-",
-            DocumentType = "Command",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-foo = aws.ssm.Document("foo",
-    content="""  {
-    "schemaVersion": "1.2",
-    "description": "Check ip configuration of a Linux instance.",
-    "parameters": {
-
-    },
-    "runtimeConfig": {
-      "aws:runShellScript": {
-        "properties": [
-          {
-            "id": "0.aws:runShellScript",
-            "runCommand": ["ifconfig"]
-          }
-        ]
-      }
-    }
-  }
-
-""",
-    document_type="Command")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const foo = new aws.ssm.Document("foo", {
-    content: `  {
-    "schemaVersion": "1.2",
-    "description": "Check ip configuration of a Linux instance.",
-    "parameters": {
-
-    },
-    "runtimeConfig": {
-      "aws:runShellScript": {
-        "properties": [
-          {
-            "id": "0.aws:runShellScript",
-            "runCommand": ["ifconfig"]
-          }
-        ]
-      }
-    }
-  }
-`,
-    documentType: "Command",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Document Resource {#create}

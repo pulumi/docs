@@ -14,7 +14,6 @@ Use this data source to get information about an EBS volume for use in other
 resources.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,7 +58,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ebsVolume, err := ebs.LookupVolume(ctx, &ebs.LookupVolumeArgs{
+			Filters: ebs.getVolumeFilterArray{
+				&ebs.LookupVolumeFilter{
+					Name: "volume-type",
+					Values: []string{
+						"gp2",
+					},
+				},
+				&ebs.LookupVolumeFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"Example",
+					},
+				},
+			},
+			MostRecent: true,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

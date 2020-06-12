@@ -3,7 +3,10 @@ title: Module mediapackage
 title_tag: Module mediapackage | Package pulumi_aws | Python SDK
 linktitle: mediapackage
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="mediapackage">
 <h1>mediapackage<a class="headerlink" href="#mediapackage" title="Permalink to this headline">¶</a></h1>

@@ -13,7 +13,6 @@ meta_desc: "Explore the ReplicationInstance resource of the dms module, includin
 Provides a DMS (Data Migration Service) replication instance resource. DMS replication instances can be created, updated, deleted, and imported.
 
 
-
 {{% examples %}}
 ## Example Usage
 

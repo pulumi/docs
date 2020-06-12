@@ -22,7 +22,6 @@ this provider does not _create_ this resource, but instead "adopts" it
 into management.
 
 
-
 {{% examples %}}
 ## Example Usage
 

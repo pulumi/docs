@@ -13,7 +13,6 @@ meta_desc: "Explore the GetBundle function of the workspaces module, including e
 Use this data source to get information about a WorkSpaces Bundle.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := workspaces.LookupBundle(ctx, &workspaces.LookupBundleArgs{
+			BundleId: "wsb-b0s22j3d7",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

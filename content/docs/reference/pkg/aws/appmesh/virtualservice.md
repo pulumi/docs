@@ -13,7 +13,6 @@ meta_desc: "Explore the VirtualService resource of the appmesh module, including
 Provides an AWS App Mesh virtual service resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		servicea, err := appmesh.NewVirtualService(ctx, "servicea", &appmesh.VirtualServiceArgs{
+			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			Spec: &appmesh.VirtualServiceSpecArgs{
+				Provider: &appmesh.VirtualServiceSpecProviderArgs{
+					VirtualNode: &appmesh.VirtualServiceSpecProviderVirtualNodeArgs{
+						VirtualNodeName: pulumi.String(aws_appmesh_virtual_node.Serviceb1.Name),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -118,7 +143,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		servicea, err := appmesh.NewVirtualService(ctx, "servicea", &appmesh.VirtualServiceArgs{
+			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			Spec: &appmesh.VirtualServiceSpecArgs{
+				Provider: &appmesh.VirtualServiceSpecProviderArgs{
+					VirtualRouter: &appmesh.VirtualServiceSpecProviderVirtualRouterArgs{
+						VirtualRouterName: pulumi.String(aws_appmesh_virtual_router.Serviceb.Name),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

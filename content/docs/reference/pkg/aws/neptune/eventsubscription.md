@@ -35,17 +35,17 @@ class MyStack : Stack
     {
         var defaultCluster = new Aws.Neptune.Cluster("defaultCluster", new Aws.Neptune.ClusterArgs
         {
-            ApplyImmediately = "true",
+            ApplyImmediately = true,
             BackupRetentionPeriod = 5,
             ClusterIdentifier = "neptune-cluster-demo",
             Engine = "neptune",
-            IamDatabaseAuthenticationEnabled = "true",
+            IamDatabaseAuthenticationEnabled = true,
             PreferredBackupWindow = "07:00-09:00",
             SkipFinalSnapshot = true,
         });
         var example = new Aws.Neptune.ClusterInstance("example", new Aws.Neptune.ClusterInstanceArgs
         {
-            ApplyImmediately = "true",
+            ApplyImmediately = true,
             ClusterIdentifier = defaultCluster.Id,
             Engine = "neptune",
             InstanceClass = "db.r4.large",
@@ -88,7 +88,73 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultCluster, err := neptune.NewCluster(ctx, "defaultCluster", &neptune.ClusterArgs{
+			ApplyImmediately:                 pulumi.Bool(true),
+			BackupRetentionPeriod:            pulumi.Int(5),
+			ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
+			Engine:                           pulumi.String("neptune"),
+			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+			PreferredBackupWindow:            pulumi.String("07:00-09:00"),
+			SkipFinalSnapshot:                pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		example, err := neptune.NewClusterInstance(ctx, "example", &neptune.ClusterInstanceArgs{
+			ApplyImmediately:  pulumi.Bool(true),
+			ClusterIdentifier: defaultCluster.ID(),
+			Engine:            pulumi.String("neptune"),
+			InstanceClass:     pulumi.String("db.r4.large"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultTopic, err := sns.NewTopic(ctx, "defaultTopic", nil)
+		if err != nil {
+			return err
+		}
+		defaultEventSubscription, err := neptune.NewEventSubscription(ctx, "defaultEventSubscription", &neptune.EventSubscriptionArgs{
+			EventCategories: pulumi.StringArray{
+				pulumi.String("maintenance"),
+				pulumi.String("availability"),
+				pulumi.String("creation"),
+				pulumi.String("backup"),
+				pulumi.String("restoration"),
+				pulumi.String("recovery"),
+				pulumi.String("deletion"),
+				pulumi.String("failover"),
+				pulumi.String("failure"),
+				pulumi.String("notification"),
+				pulumi.String("configuration change"),
+				pulumi.String("read replica"),
+			},
+			SnsTopicArn: pulumi.String(defaultTopic.Arn),
+			SourceIds: pulumi.StringArray{
+				example.ID(),
+			},
+			SourceType: pulumi.String("db-instance"),
+			Tags: map[string]interface{}{
+				"env": "test",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

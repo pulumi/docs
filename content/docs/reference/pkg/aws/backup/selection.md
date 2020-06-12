@@ -13,113 +13,10 @@ meta_desc: "Explore the Selection resource of the backup module, including examp
 Manages selection conditions for AWS Backup plan resources.
 
 
-
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### IAM Role
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
-        {
-            AssumeRolePolicy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Action"": [""sts:AssumeRole""],
-      ""Effect"": ""allow"",
-      ""Principal"": {
-        ""Service"": [""backup.amazonaws.com""]
-      }
-    }
-  ]
-}
-
-",
-        });
-        var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("exampleRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
-        {
-            PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
-            Role = exampleRole.Name,
-        });
-        var exampleSelection = new Aws.Backup.Selection("exampleSelection", new Aws.Backup.SelectionArgs
-        {
-            IamRoleArn = exampleRole.Arn,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": ["sts:AssumeRole"],
-      "Effect": "allow",
-      "Principal": {
-        "Service": ["backup.amazonaws.com"]
-      }
-    }
-  ]
-}
-
-""")
-example_role_policy_attachment = aws.iam.RolePolicyAttachment("exampleRolePolicyAttachment",
-    policy_arn="arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
-    role=example_role.name)
-example_selection = aws.backup.Selection("exampleSelection", iam_role_arn=example_role.arn)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleRole = new aws.iam.Role("example", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": ["sts:AssumeRole"],
-      "Effect": "allow",
-      "Principal": {
-        "Service": ["backup.amazonaws.com"]
-      }
-    }
-  ]
-}
-`,
-});
-const exampleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("example", {
-    policyArn: "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
-    role: exampleRole.name,
-});
-const exampleSelection = new aws.backup.Selection("example", {
-    iamRoleArn: exampleRole.arn,
-});
-```
-{{% /example %}}
-
 ### Selecting Backups By Tag
 {{% example csharp %}}
 ```csharp
@@ -151,7 +48,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := backup.NewSelection(ctx, "example", &backup.SelectionArgs{
+			IamRoleArn: pulumi.String(aws_iam_role.Example.Arn),
+			PlanId:     pulumi.String(aws_backup_plan.Example.Id),
+			SelectionTags: backup.SelectionSelectionTagArray{
+				&backup.SelectionSelectionTagArgs{
+					Key:   pulumi.String("foo"),
+					Type:  pulumi.String("STRINGEQUALS"),
+					Value: pulumi.String("bar"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

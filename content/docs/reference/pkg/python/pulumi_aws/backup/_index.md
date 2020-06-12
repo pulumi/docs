@@ -3,7 +3,10 @@ title: Module backup
 title_tag: Module backup | Package pulumi_aws | Python SDK
 linktitle: backup
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="backup">
 <h1>backup<a class="headerlink" href="#backup" title="Permalink to this headline">¶</a></h1>
@@ -632,7 +635,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
-<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">get_selection</span><span class="p">(</span><span class="n">plan_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;backup.Plan&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">get_selection</span><span class="p">(</span><span class="n">plan_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_backup_plan&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">selection_id</span><span class="o">=</span><span class="s2">&quot;selection-id-example&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

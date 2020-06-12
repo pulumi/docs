@@ -3,7 +3,10 @@ title: Module ram
 title_tag: Module ram | Package pulumi_aws | Python SDK
 linktitle: ram
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ram">
 <h1>ram<a class="headerlink" href="#ram" title="Permalink to this headline">¶</a></h1>

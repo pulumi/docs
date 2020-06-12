@@ -14,7 +14,6 @@ The ECS Service data source allows access to details of a specific
 Service within a AWS ECS Cluster.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ecs.LookupService(ctx, &ecs.LookupServiceArgs{
+			ClusterArn:  data.Aws_ecs_cluster.Example.Arn,
+			ServiceName: "example",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -49,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_aws as aws
 
-example = aws.ecs.get_service(cluster_arn=data["aws.ecs.Cluster"]["example"]["arn"],
+example = aws.ecs.get_service(cluster_arn=data["aws_ecs_cluster"]["example"]["arn"],
     service_name="example")
 ```
 {{% /example %}}

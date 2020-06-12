@@ -13,7 +13,6 @@ meta_desc: "Explore the AnalyticsConfiguration resource of the s3 module, includ
 Provides a S3 bucket [analytics configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

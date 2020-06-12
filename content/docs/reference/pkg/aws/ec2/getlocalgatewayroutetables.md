@@ -12,9 +12,6 @@ meta_desc: "Explore the GetLocalGatewayRouteTables function of the ec2 module, i
 
 Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetLocalGatewayRouteTables {#using}

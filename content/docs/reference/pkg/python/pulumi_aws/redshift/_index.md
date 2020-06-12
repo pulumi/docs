@@ -3,7 +3,10 @@ title: Module redshift
 title_tag: Module redshift | Package pulumi_aws | Python SDK
 linktitle: redshift
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="redshift">
 <h1>redshift<a class="headerlink" href="#redshift" title="Permalink to this headline">¶</a></h1>

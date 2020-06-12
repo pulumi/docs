@@ -42,31 +42,13 @@ in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite routes.
 
 
-## Example usage with tags
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
+{{% examples %}}
+## Example Usage
 
-const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
-    defaultRouteTableId: aws_vpc_foo.defaultRouteTableId,
-    routes: [{}],
-    tags: {
-        Name: "default table",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-default_route_table = aws.ec2.DefaultRouteTable("defaultRouteTable",
-    default_route_table_id=aws_vpc["foo"]["default_route_table_id"],
-    routes=[{}],
-    tags={
-        "Name": "default table",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### With Tags
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -91,7 +73,42 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+default_route_table = aws.ec2.DefaultRouteTable("defaultRouteTable",
+    default_route_table_id=aws_vpc["foo"]["default_route_table_id"],
+    routes=[{}],
+    tags={
+        "Name": "default table",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
+    defaultRouteTableId: aws_vpc_foo.defaultRouteTableId,
+    routes: [{}],
+    tags: {
+        Name: "default table",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DefaultRouteTable Resource {#create}

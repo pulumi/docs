@@ -3,7 +3,10 @@ title: Module licensemanager
 title_tag: Module licensemanager | Package pulumi_aws | Python SDK
 linktitle: licensemanager
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="licensemanager">
 <h1>licensemanager<a class="headerlink" href="#licensemanager" title="Permalink to this headline">¶</a></h1>

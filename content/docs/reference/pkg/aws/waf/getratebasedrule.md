@@ -13,7 +13,6 @@ meta_desc: "Explore the GetRateBasedRule function of the waf module, including e
 `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := waf.LookupRateBasedRule(ctx, &waf.LookupRateBasedRuleArgs{
+			Name: "tfWAFRateBasedRule",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

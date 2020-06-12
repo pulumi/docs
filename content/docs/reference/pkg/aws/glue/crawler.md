@@ -13,7 +13,6 @@ meta_desc: "Explore the Crawler resource of the glue module, including examples,
 Manages a Glue Crawler. More information can be found in the [AWS Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,7 +46,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewCrawler(ctx, "example", &glue.CrawlerArgs{
+			DatabaseName: pulumi.String(aws_glue_catalog_database.Example.Name),
+			DynamodbTargets: glue.CrawlerDynamodbTargetArray{
+				&glue.CrawlerDynamodbTargetArgs{
+					Path: pulumi.String("table-name"),
+				},
+			},
+			Role: pulumi.String(aws_iam_role.Example.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -75,131 +99,6 @@ const example = new aws.glue.Crawler("example", {
         path: "table-name",
     }],
     role: aws_iam_role_example.arn,
-});
-```
-{{% /example %}}
-
-### JDBC Target
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
-        {
-            DatabaseName = aws_glue_catalog_database.Example.Name,
-            JdbcTargets = 
-            {
-                new Aws.Glue.Inputs.CrawlerJdbcTargetArgs
-                {
-                    ConnectionName = aws_glue_connection.Example.Name,
-                    Path = "database-name/%",
-                },
-            },
-            Role = aws_iam_role.Example.Arn,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.glue.Crawler("example",
-    database_name=aws_glue_catalog_database["example"]["name"],
-    jdbc_targets=[{
-        "connectionName": aws_glue_connection["example"]["name"],
-        "path": "database-name/%",
-    }],
-    role=aws_iam_role["example"]["arn"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.glue.Crawler("example", {
-    databaseName: aws_glue_catalog_database_example.name,
-    jdbcTargets: [{
-        connectionName: aws_glue_connection_example.name,
-        path: "database-name/%",
-    }],
-    role: aws_iam_role_example.arn,
-});
-```
-{{% /example %}}
-
-### S3 Target
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
-        {
-            DatabaseName = aws_glue_catalog_database.Example.Name,
-            Role = aws_iam_role.Example.Arn,
-            S3Targets = 
-            {
-                new Aws.Glue.Inputs.CrawlerS3TargetArgs
-                {
-                    Path = $"s3://{aws_s3_bucket.Example.Bucket}",
-                },
-            },
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.glue.Crawler("example",
-    database_name=aws_glue_catalog_database["example"]["name"],
-    role=aws_iam_role["example"]["arn"],
-    s3_targets=[{
-        "path": f"s3://{aws_s3_bucket['example']['bucket']}",
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.glue.Crawler("example", {
-    databaseName: aws_glue_catalog_database_example.name,
-    role: aws_iam_role_example.arn,
-    s3Targets: [{
-        path: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}`,
-    }],
 });
 ```
 {{% /example %}}
@@ -1191,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the crawler 
+    <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1219,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the crawler 
+    <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1247,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the crawler 
+    <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1275,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the crawler 
+    <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1429,7 +1328,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the crawler 
+    <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1611,7 +1510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the crawler 
+    <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1793,7 +1692,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the crawler 
+    <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1975,7 +1874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the crawler 
+    <dd>{{% md %}}The ARN of the crawler
 {{% /md %}}</dd>
 
     <dt class="property-optional"

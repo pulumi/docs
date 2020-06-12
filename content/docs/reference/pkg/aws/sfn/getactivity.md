@@ -13,7 +13,6 @@ meta_desc: "Explore the GetActivity function of the sfn module, including exampl
 Provides a Step Functions Activity data source
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sfnActivity, err := sfn.LookupActivity(ctx, &sfn.LookupActivityArgs{
+			Name: "my-activity",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

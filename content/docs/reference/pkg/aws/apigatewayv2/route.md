@@ -13,60 +13,8 @@ meta_desc: "Explore the Route resource of the apigatewayv2 module, including exa
 Manages an Amazon API Gateway Version 2 route.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
-
-
 {{% examples %}}
 ## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.ApiGatewayV2.Route("example", new Aws.ApiGatewayV2.RouteArgs
-        {
-            ApiId = aws_apigatewayv2_api.Example.Id,
-            RouteKey = "$$default",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.apigatewayv2.Route("example",
-    api_id=aws_apigatewayv2_api["example"]["id"],
-    route_key="$$default")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.apigatewayv2.Route("example", {
-    apiId: aws_apigatewayv2_api_example.id,
-    routeKey: "$default",
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
 
 

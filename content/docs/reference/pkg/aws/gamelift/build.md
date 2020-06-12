@@ -12,9 +12,6 @@ meta_desc: "Explore the Build resource of the gamelift module, including example
 
 Provides an Gamelift Build resource.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Build Resource {#create}

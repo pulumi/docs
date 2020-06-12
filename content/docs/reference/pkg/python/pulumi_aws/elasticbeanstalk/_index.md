@@ -3,7 +3,10 @@ title: Module elasticbeanstalk
 title_tag: Module elasticbeanstalk | Package pulumi_aws | Python SDK
 linktitle: elasticbeanstalk
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="elasticbeanstalk">
 <h1>elasticbeanstalk<a class="headerlink" href="#elasticbeanstalk" title="Permalink to this headline">¶</a></h1>
@@ -949,7 +952,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">multi_docker</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticbeanstalk</span><span class="o">.</span><span class="n">get_solution_stack</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^64bit Amazon Linux (.*) Multi-container Docker (.*)$$&quot;</span><span class="p">)</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^64bit Amazon Linux (.*) Multi-container Docker (.*)$&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

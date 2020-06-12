@@ -3,7 +3,10 @@ title: Module cloudtrail
 title_tag: Module cloudtrail | Package pulumi_aws | Python SDK
 linktitle: cloudtrail
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cloudtrail">
 <h1>cloudtrail<a class="headerlink" href="#cloudtrail" title="Permalink to this headline">¶</a></h1>

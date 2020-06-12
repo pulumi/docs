@@ -15,7 +15,6 @@ Attaches a Managed IAM Policy to an IAM user
 > **NOTE:** The usage of this resource conflicts with the `aws.iam.PolicyAttachment` resource and will permanently show a difference if both are defined.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -13,7 +13,6 @@ meta_desc: "Explore the Zone resource of the route53 module, including examples,
 Manages a Route53 Hosted Zone.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,7 +37,24 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := route53.NewZone(ctx, "primary", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -89,7 +105,7 @@ class MyStack : Stack
                 dev.NameServers.Apply(nameServers => nameServers[2]),
                 dev.NameServers.Apply(nameServers => nameServers[3]),
             },
-            Ttl = "30",
+            Ttl = 30,
             Type = "NS",
             ZoneId = main.ZoneId,
         });
@@ -179,7 +195,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		private, err := route53.NewZone(ctx, "private", &route53.ZoneArgs{
+			Vpcs: route53.ZoneVpcArray{
+				&route53.ZoneVpcArgs{
+					VpcId: pulumi.String(aws_vpc.Example.Id),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

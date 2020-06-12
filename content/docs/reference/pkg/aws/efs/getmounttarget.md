@@ -13,7 +13,6 @@ meta_desc: "Explore the GetMountTarget function of the efs module, including exa
 Provides information about an Elastic File System Mount Target (EFS).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		byId, err := efs.LookupMountTarget(ctx, &efs.LookupMountTargetArgs{
+			MountTargetId: mountTargetId,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

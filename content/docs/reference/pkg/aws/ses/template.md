@@ -14,69 +14,6 @@ Provides a resource to create a SES template.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myTemplate = new Aws.Ses.Template("myTemplate", new Aws.Ses.TemplateArgs
-        {
-            Html = "<h1>Hello {{name}},</h1><p>Your favorite animal is {{favoriteanimal}}.</p>",
-            Subject = "Greetings, {{name}}!",
-            Text = @"Hello {{name}},
-Your favorite animal is {{favoriteanimal}}.
-",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-my_template = aws.ses.Template("myTemplate",
-    html="<h1>Hello {{name}},</h1><p>Your favorite animal is {{favoriteanimal}}.</p>",
-    subject="Greetings, {{name}}!",
-    text="""Hello {{name}},
-Your favorite animal is {{favoriteanimal}}.
-""")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const myTemplate = new aws.ses.Template("MyTemplate", {
-    html: "<h1>Hello {{name}},</h1><p>Your favorite animal is {{favoriteanimal}}.</p>",
-    subject: "Greetings, {{name}}!",
-    text: `Hello {{name}},
-Your favorite animal is {{favoriteanimal}}.`,
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a Template Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

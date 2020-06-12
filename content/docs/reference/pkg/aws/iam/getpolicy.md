@@ -14,7 +14,6 @@ This data source can be used to fetch information about a specific
 IAM policy.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := iam.LookupPolicy(ctx, &iam.LookupPolicyArgs{
+			Arn: "arn:aws:iam::123456789012:policy/UsersManageOwnCredentials",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

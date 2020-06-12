@@ -13,7 +13,6 @@ meta_desc: "Explore the GetReplicationGroup function of the elasticache module, 
 Use this data source to get information about an Elasticache Replication Group.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bar, err := elasticache.LookupReplicationGroup(ctx, &elasticache.LookupReplicationGroupArgs{
+			ReplicationGroupId: "example",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

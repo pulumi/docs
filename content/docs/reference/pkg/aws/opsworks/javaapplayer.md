@@ -13,7 +13,6 @@ meta_desc: "Explore the JavaAppLayer resource of the opsworks module, including 
 Provides an OpsWorks Java application layer resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		app, err := opsworks.NewJavaAppLayer(ctx, "app", &opsworks.JavaAppLayerArgs{
+			StackId: pulumi.String(aws_opsworks_stack.Main.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

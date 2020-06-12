@@ -14,7 +14,6 @@ Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,7 +58,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := ec2.LookupInstance(ctx, &ec2.LookupInstanceArgs{
+			Filters: ec2.getInstanceFilterArray{
+				&ec2.LookupInstanceFilter{
+					Name: "image-id",
+					Values: []string{
+						"ami-xxxxxxxx",
+					},
+				},
+				&ec2.LookupInstanceFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"instance-name-tag",
+					},
+				},
+			},
+			InstanceId: "i-instanceid",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

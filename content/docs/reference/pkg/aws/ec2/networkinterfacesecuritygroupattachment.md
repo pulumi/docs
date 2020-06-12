@@ -90,7 +90,41 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := ec2.LookupInstance(ctx, &ec2.LookupInstanceArgs{
+			InstanceId: "i-1234567890abcdef0",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		sg, err := ec2.NewSecurityGroup(ctx, "sg", &ec2.SecurityGroupArgs{
+			Tags: map[string]interface{}{
+				"type": "test-security-group",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		sgAttachment, err := ec2.NewNetworkInterfaceSecurityGroupAttachment(ctx, "sgAttachment", &ec2.NetworkInterfaceSecurityGroupAttachmentArgs{
+			NetworkInterfaceId: pulumi.String(instance.NetworkInterfaceId),
+			SecurityGroupId:    sg.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

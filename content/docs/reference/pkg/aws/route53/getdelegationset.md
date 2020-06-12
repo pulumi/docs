@@ -15,7 +15,6 @@ meta_desc: "Explore the GetDelegationSet function of the route53 module, includi
 This data source allows to find a list of name servers associated with a specific delegation set.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dset, err := route53.LookupDelegationSet(ctx, &route53.LookupDelegationSetArgs{
+			Id: "MQWGHCBFAKEID",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module swf
 title_tag: Module swf | Package pulumi_aws | Python SDK
 linktitle: swf
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="swf">
 <h1>swf<a class="headerlink" href="#swf" title="Permalink to this headline">¶</a></h1>

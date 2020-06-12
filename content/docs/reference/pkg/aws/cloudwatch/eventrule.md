@@ -13,7 +13,6 @@ meta_desc: "Explore the EventRule resource of the cloudwatch module, including e
 Provides a CloudWatch Event Rule resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

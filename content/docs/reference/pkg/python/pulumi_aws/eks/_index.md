@@ -3,7 +3,10 @@ title: Module eks
 title_tag: Module eks | Package pulumi_aws | Python SDK
 linktitle: eks
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="eks">
 <h1>eks<a class="headerlink" href="#eks" title="Permalink to this headline">¶</a></h1>

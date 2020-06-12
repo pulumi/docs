@@ -13,7 +13,6 @@ meta_desc: "Explore the App resource of the pinpoint module, including examples,
 Provides a Pinpoint App resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,7 +46,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/pinpoint"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := pinpoint.NewApp(ctx, "example", &pinpoint.AppArgs{
+			Limits: &pinpoint.AppLimitsArgs{
+				MaximumDuration: pulumi.Int(600),
+			},
+			QuietTime: &pinpoint.AppQuietTimeArgs{
+				End:   pulumi.String("06:00"),
+				Start: pulumi.String("00:00"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -1277,7 +1301,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.  
+    <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1317,7 +1341,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.  
+    <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1357,7 +1381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.  
+    <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1397,7 +1421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.  
+    <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,7 +1468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of messages that the campaign can send daily. 
+    <dd>{{% md %}}The maximum number of messages that the campaign can send daily.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1495,7 +1519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of messages that the campaign can send daily. 
+    <dd>{{% md %}}The maximum number of messages that the campaign can send daily.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1546,7 +1570,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of messages that the campaign can send daily. 
+    <dd>{{% md %}}The maximum number of messages that the campaign can send daily.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1597,7 +1621,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of messages that the campaign can send daily. 
+    <dd>{{% md %}}The maximum number of messages that the campaign can send daily.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

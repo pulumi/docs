@@ -13,7 +13,6 @@ meta_desc: "Explore the LogService resource of the directoryservice module, incl
 Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -3,7 +3,10 @@ title: Module sfn
 title_tag: Module sfn | Package pulumi_aws | Python SDK
 linktitle: sfn
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="sfn">
 <h1>sfn<a class="headerlink" href="#sfn" title="Permalink to this headline">¶</a></h1>

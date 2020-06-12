@@ -13,7 +13,6 @@ meta_desc: "Explore the GetDocument function of the ssm module, including exampl
 Gets the contents of the specified Systems Manager document.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := ssm.LookupDocument(ctx, &ssm.LookupDocumentArgs{
+			DocumentFormat: "YAML",
+			Name:           "AWS-GatherSoftwareInventory",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("content", foo.Content)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

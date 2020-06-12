@@ -15,7 +15,6 @@ Manages an AWS DataSync EFS Location.
 > **NOTE:** The EFS File System must have a mounted EFS Mount Target before creating this resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := datasync.NewEfsLocation(ctx, "example", &datasync.EfsLocationArgs{
+			Ec2Config: &datasync.EfsLocationEc2ConfigArgs{
+				SecurityGroupArns: pulumi.StringArray{
+					pulumi.String(aws_security_group.Example.Arn),
+				},
+				SubnetArn: pulumi.String(aws_subnet.Example.Arn),
+			},
+			EfsFileSystemArn: pulumi.String(aws_efs_mount_target.Example.File_system_arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -76,8 +100,8 @@ const example = new aws.datasync.EfsLocation("example", {
         securityGroupArns: [aws_security_group_example.arn],
         subnetArn: aws_subnet_example.arn,
     },
-    // The below example uses aws.efs.MountTarget as a reference to ensure a mount target already exists when resource creation occurs.
-    // You can accomplish the same behavior with depends_on or an aws.efs.MountTarget data source reference.
+    // The below example uses aws_efs_mount_target as a reference to ensure a mount target already exists when resource creation occurs.
+    // You can accomplish the same behavior with depends_on or an aws_efs_mount_target data source reference.
     efsFileSystemArn: aws_efs_mount_target_example.fileSystemArn,
 });
 ```

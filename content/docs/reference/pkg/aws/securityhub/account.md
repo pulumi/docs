@@ -15,7 +15,6 @@ Enables Security Hub for this AWS account.
 > **NOTE:** Destroying this resource will disable Security Hub for this AWS account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,24 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/securityhub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := securityhub.NewAccount(ctx, "example", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

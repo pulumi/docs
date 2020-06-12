@@ -13,7 +13,6 @@ meta_desc: "Explore the GetInternetGateway function of the ec2 module, including
 `aws.ec2.InternetGateway` provides details about a specific Internet Gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 

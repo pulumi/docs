@@ -13,7 +13,6 @@ meta_desc: "Explore the GetRule function of the waf module, including examples, 
 `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := waf.LookupRule(ctx, &waf.LookupRuleArgs{
+			Name: "tfWAFRule",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

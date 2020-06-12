@@ -20,7 +20,6 @@ By using the `aws.ebs.DefaultKmsKey` resource, you can specify a customer-manage
 > **NOTE:** Destroying this resource will reset the default CMK to the account's AWS-managed default CMK for EBS.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +45,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ebs.NewDefaultKmsKey(ctx, "example", &ebs.DefaultKmsKeyArgs{
+			KeyArn: pulumi.String(aws_kms_key.Example.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

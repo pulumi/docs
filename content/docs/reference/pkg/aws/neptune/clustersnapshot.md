@@ -13,7 +13,6 @@ meta_desc: "Explore the ClusterSnapshot resource of the neptune module, includin
 Manages a Neptune database cluster snapshot.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/neptune"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := neptune.NewClusterSnapshot(ctx, "example", &neptune.ClusterSnapshotArgs{
+			DbClusterIdentifier:         pulumi.String(aws_neptune_cluster.Example.Id),
+			DbClusterSnapshotIdentifier: pulumi.String("resourcetestsnapshot1234"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetOrganizationalUnits function of the organizations mod
 Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.
 
 
-
 {{% examples %}}
 ## Example Usage
 

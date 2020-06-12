@@ -12,9 +12,6 @@ meta_desc: "Explore the Authorizer resource of the apigateway module, including 
 
 Provides an API Gateway Authorizer.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Authorizer Resource {#create}

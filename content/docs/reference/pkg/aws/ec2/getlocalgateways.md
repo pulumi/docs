@@ -13,7 +13,6 @@ meta_desc: "Explore the GetLocalGateways function of the ec2 module, including e
 Provides information for multiple EC2 Local Gateways, such as their identifiers.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooLocalGateways, err := ec2.LookupLocalGateways(ctx, &ec2.LookupLocalGatewaysArgs{
+			Tags: map[string]interface{}{
+				"service": "production",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("foo", fooLocalGateways.Ids)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

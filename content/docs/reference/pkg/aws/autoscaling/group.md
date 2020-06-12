@@ -251,91 +251,6 @@ const bar = new aws.autoscaling.Group("bar", {
 ```
 {{% /example %}}
 
-### With Latest Version Of Launch Template
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foobar = new Aws.Ec2.LaunchTemplate("foobar", new Aws.Ec2.LaunchTemplateArgs
-        {
-            ImageId = "ami-1a2b3c",
-            InstanceType = "t2.micro",
-            NamePrefix = "foobar",
-        });
-        var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
-        {
-            AvailabilityZones = 
-            {
-                "us-east-1a",
-            },
-            DesiredCapacity = 1,
-            LaunchTemplate = new Aws.AutoScaling.Inputs.GroupLaunchTemplateArgs
-            {
-                Id = foobar.Id,
-                Version = "$$Latest",
-            },
-            MaxSize = 1,
-            MinSize = 1,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-foobar = aws.ec2.LaunchTemplate("foobar",
-    image_id="ami-1a2b3c",
-    instance_type="t2.micro",
-    name_prefix="foobar")
-bar = aws.autoscaling.Group("bar",
-    availability_zones=["us-east-1a"],
-    desired_capacity=1,
-    launch_template={
-        "id": foobar.id,
-        "version": "$$Latest",
-    },
-    max_size=1,
-    min_size=1)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const foobar = new aws.ec2.LaunchTemplate("foobar", {
-    imageId: "ami-1a2b3c",
-    instanceType: "t2.micro",
-    namePrefix: "foobar",
-});
-const bar = new aws.autoscaling.Group("bar", {
-    availabilityZones: ["us-east-1a"],
-    desiredCapacity: 1,
-    launchTemplate: {
-        id: foobar.id,
-        version: "$Latest",
-    },
-    maxSize: 1,
-    minSize: 1,
-});
-```
-{{% /example %}}
-
 ### Mixed Instances Policy
 {{% example csharp %}}
 ```csharp
@@ -392,7 +307,57 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleLaunchTemplate, err := ec2.NewLaunchTemplate(ctx, "exampleLaunchTemplate", &ec2.LaunchTemplateArgs{
+			ImageId:      pulumi.String(data.Aws_ami.Example.Id),
+			InstanceType: pulumi.String("c5.large"),
+			NamePrefix:   pulumi.String("example"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleGroup, err := autoscaling.NewGroup(ctx, "exampleGroup", &autoscaling.GroupArgs{
+			AvailabilityZones: pulumi.StringArray{
+				pulumi.String("us-east-1a"),
+			},
+			DesiredCapacity: pulumi.Int(1),
+			MaxSize:         pulumi.Int(1),
+			MinSize:         pulumi.Int(1),
+			MixedInstancesPolicy: &autoscaling.GroupMixedInstancesPolicyArgs{
+				LaunchTemplate: &autoscaling.GroupMixedInstancesPolicyLaunchTemplateArgs{
+					LaunchTemplateSpecification: &autoscaling.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs{
+						LaunchTemplateId: exampleLaunchTemplate.ID(),
+					},
+					Override: []map[string]interface{}{
+						map[string]interface{}{
+							"instanceType":     "c4.large",
+							"weightedCapacity": "3",
+						},
+						map[string]interface{}{
+							"instanceType":     "c3.large",
+							"weightedCapacity": "2",
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -401,7 +366,7 @@ import pulumi
 import pulumi_aws as aws
 
 example_launch_template = aws.ec2.LaunchTemplate("exampleLaunchTemplate",
-    image_id=data["aws.ec2.Ami"]["example"]["id"],
+    image_id=data["aws_ami"]["example"]["id"],
     instance_type="c5.large",
     name_prefix="example")
 example_group = aws.autoscaling.Group("exampleGroup",
@@ -896,7 +861,7 @@ prefix. Conflicts with `name`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
 
@@ -1262,7 +1227,7 @@ prefix. Conflicts with `name`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
 
@@ -1628,7 +1593,7 @@ prefix. Conflicts with `name`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
 
@@ -1994,7 +1959,7 @@ prefix. Conflicts with `name`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
 
@@ -2620,7 +2585,7 @@ prefix. Conflicts with `name`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
 
@@ -2997,7 +2962,7 @@ prefix. Conflicts with `name`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
 
@@ -3374,7 +3339,7 @@ prefix. Conflicts with `name`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
 
@@ -3751,7 +3716,7 @@ prefix. Conflicts with `name`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for terminination
+autoscaling group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
 

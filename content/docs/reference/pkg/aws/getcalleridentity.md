@@ -14,7 +14,6 @@ Use this data source to get the access to the effective Account ID, User ID, and
 which this provider is authorized.
 
 
-
 {{% examples %}}
 ## Example Usage
 

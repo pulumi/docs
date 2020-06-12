@@ -3,7 +3,10 @@ title: Module elasticsearch
 title_tag: Module elasticsearch | Package pulumi_aws | Python SDK
 linktitle: elasticsearch
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="elasticsearch">
 <h1>elasticsearch<a class="headerlink" href="#elasticsearch" title="Permalink to this headline">¶</a></h1>

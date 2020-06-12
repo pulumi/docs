@@ -3,7 +3,10 @@ title: Module dynamodb
 title_tag: Module dynamodb | Package pulumi_aws | Python SDK
 linktitle: dynamodb
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="dynamodb">
 <h1>dynamodb<a class="headerlink" href="#dynamodb" title="Permalink to this headline">¶</a></h1>

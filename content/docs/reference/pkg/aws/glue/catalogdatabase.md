@@ -13,7 +13,6 @@ meta_desc: "Explore the CatalogDatabase resource of the glue module, including e
 Provides a Glue Catalog Database Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		awsGlueCatalogDatabase, err := glue.NewCatalogDatabase(ctx, "awsGlueCatalogDatabase", &glue.CatalogDatabaseArgs{
+			Name: pulumi.String("MyCatalogDatabase"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -47,7 +65,7 @@ Coming soon!
 import pulumi
 import pulumi_aws as aws
 
-aws.glue.CatalogDatabase = aws.glue.CatalogDatabase("awsGlueCatalogDatabase", name="MyCatalogDatabase")
+aws_glue_catalog_database = aws.glue.CatalogDatabase("awsGlueCatalogDatabase", name="MyCatalogDatabase")
 ```
 {{% /example %}}
 
@@ -56,7 +74,7 @@ aws.glue.CatalogDatabase = aws.glue.CatalogDatabase("awsGlueCatalogDatabase", na
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const awsGlueCatalogDatabase = new aws.glue.CatalogDatabase("aws.glue.CatalogDatabase", {
+const awsGlueCatalogDatabase = new aws.glue.CatalogDatabase("aws_glue_catalog_database", {
     name: "MyCatalogDatabase",
 });
 ```

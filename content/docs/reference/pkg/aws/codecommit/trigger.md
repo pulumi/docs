@@ -13,7 +13,6 @@ meta_desc: "Explore the Trigger resource of the codecommit module, including exa
 Provides a CodeCommit Trigger Resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,41 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codecommit"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testRepository, err := codecommit.NewRepository(ctx, "testRepository", &codecommit.RepositoryArgs{
+			RepositoryName: pulumi.String("test"),
+		})
+		if err != nil {
+			return err
+		}
+		testTrigger, err := codecommit.NewTrigger(ctx, "testTrigger", &codecommit.TriggerArgs{
+			RepositoryName: testRepository.RepositoryName,
+			Triggers: codecommit.TriggerTriggerArray{
+				&codecommit.TriggerTriggerArgs{
+					DestinationArn: pulumi.String(aws_sns_topic.Test.Arn),
+					Events: pulumi.StringArray{
+						pulumi.String("all"),
+					},
+					Name: pulumi.String("all"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the SecurityConfiguration resource of the glue module, inclu
 Manages a Glue Security Configuration.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,7 +53,37 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewSecurityConfiguration(ctx, "example", &glue.SecurityConfigurationArgs{
+			EncryptionConfiguration: &glue.SecurityConfigurationEncryptionConfigurationArgs{
+				CloudwatchEncryption: &glue.SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs{
+					CloudwatchEncryptionMode: pulumi.String("DISABLED"),
+				},
+				JobBookmarksEncryption: &glue.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs{
+					JobBookmarksEncryptionMode: pulumi.String("DISABLED"),
+				},
+				S3Encryption: &glue.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs{
+					KmsKeyArn:        pulumi.String(data.Aws_kms_key.Example.Arn),
+					S3EncryptionMode: pulumi.String("SSE-KMS"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -70,7 +99,7 @@ example = aws.glue.SecurityConfiguration("example", encryption_configuration={
         "jobBookmarksEncryptionMode": "DISABLED",
     },
     "s3Encryption": {
-        "kms_key_arn": data["aws.kms.Key"]["example"]["arn"],
+        "kms_key_arn": data["aws_kms_key"]["example"]["arn"],
         "s3EncryptionMode": "SSE-KMS",
     },
 })

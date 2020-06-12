@@ -3,7 +3,10 @@ title: Module worklink
 title_tag: Module worklink | Package pulumi_aws | Python SDK
 linktitle: worklink
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="worklink">
 <h1>worklink<a class="headerlink" href="#worklink" title="Permalink to this headline">¶</a></h1>

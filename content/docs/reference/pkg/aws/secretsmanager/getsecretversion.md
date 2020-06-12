@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSecretVersion function of the secretsmanager module, 
 Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := secretsmanager.LookupSecretVersion(ctx, &secretsmanager.LookupSecretVersionArgs{
+			SecretId: data.Aws_secretsmanager_secret.Example.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -47,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_aws as aws
 
-example = aws.secretsmanager.get_secret_version(secret_id=data["aws.secretsmanager.Secret"]["example"]["id"])
+example = aws.secretsmanager.get_secret_version(secret_id=data["aws_secretsmanager_secret"]["example"]["id"])
 ```
 {{% /example %}}
 
@@ -92,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_aws as aws
 
-by_version_stage = aws.secretsmanager.get_secret_version(secret_id=data["aws.secretsmanager.Secret"]["example"]["id"],
+by_version_stage = aws.secretsmanager.get_secret_version(secret_id=data["aws_secretsmanager_secret"]["example"]["id"],
     version_stage="example")
 ```
 {{% /example %}}

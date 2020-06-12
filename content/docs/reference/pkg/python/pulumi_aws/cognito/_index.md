@@ -3,7 +3,10 @@ title: Module cognito
 title_tag: Module cognito | Package pulumi_aws | Python SDK
 linktitle: cognito
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cognito">
 <h1>cognito<a class="headerlink" href="#cognito" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module inspector
 title_tag: Module inspector | Package pulumi_aws | Python SDK
 linktitle: inspector
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="inspector">
 <h1>inspector<a class="headerlink" href="#inspector" title="Permalink to this headline">¶</a></h1>
@@ -362,7 +365,7 @@ configured in the provider.</p>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">rules</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">get_rules_packages</span><span class="p">()</span>
-<span class="c1"># e.g. Use in inspector.AssessmentTemplate</span>
+<span class="c1"># e.g. Use in aws_inspector_assessment_template</span>
 <span class="n">group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
     <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
 <span class="p">})</span>

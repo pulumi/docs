@@ -16,7 +16,6 @@ Manages an Amazon API Gateway Version 2 VPC Link.
 To enable private integration for REST APIs, use the `Amazon API Gateway Version 1 VPC Link` resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,7 +49,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := apigatewayv2.NewVpcLink(ctx, "example", &apigatewayv2.VpcLinkArgs{
+			SecurityGroupIds: pulumi.StringArray{
+				pulumi.String(data.Aws_security_group.Example.Id),
+			},
+			SubnetIds: data.Aws_subnet_ids.Example.Ids,
+			Tags: map[string]interface{}{
+				"Usage": "example",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -59,8 +83,8 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.apigatewayv2.VpcLink("example",
-    security_group_ids=[data["aws.ec2.SecurityGroup"]["example"]["id"]],
-    subnet_ids=data["aws.ec2.getSubnetIds"]["example"]["ids"],
+    security_group_ids=[data["aws_security_group"]["example"]["id"]],
+    subnet_ids=data["aws_subnet_ids"]["example"]["ids"],
     tags={
         "Usage": "example",
     })

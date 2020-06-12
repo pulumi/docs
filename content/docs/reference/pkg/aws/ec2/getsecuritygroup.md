@@ -17,7 +17,6 @@ an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,7 +49,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		selected, err := ec2.LookupSecurityGroup(ctx, &ec2.LookupSecurityGroupArgs{
+			Id: securityGroupId,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		subnet, err := ec2.NewSubnet(ctx, "subnet", &ec2.SubnetArgs{
+			CidrBlock: pulumi.String("10.0.1.0/24"),
+			VpcId:     pulumi.String(selected.VpcId),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module workspaces
 title_tag: Module workspaces | Package pulumi_aws | Python SDK
 linktitle: workspaces
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="workspaces">
 <h1>workspaces<a class="headerlink" href="#workspaces" title="Permalink to this headline">¶</a></h1>

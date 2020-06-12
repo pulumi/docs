@@ -13,7 +13,6 @@ meta_desc: "Explore the ClusterSnapshot resource of the rds module, including ex
 Manages an RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the `aws.rds.Snapshot` resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := rds.NewClusterSnapshot(ctx, "example", &rds.ClusterSnapshotArgs{
+			DbClusterIdentifier:         pulumi.String(aws_rds_cluster.Example.Id),
+			DbClusterSnapshotIdentifier: pulumi.String("resourcetestsnapshot1234"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

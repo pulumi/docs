@@ -16,7 +16,6 @@ over IPv6 from instances in your VPC to the Internet, and prevents hosts
 outside of your VPC from initiating an IPv6 connection with your instance.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,7 +50,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+			AssignGeneratedIpv6CidrBlock: pulumi.Bool(true),
+			CidrBlock:                    pulumi.String("10.1.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleEgressOnlyInternetGateway, err := ec2.NewEgressOnlyInternetGateway(ctx, "exampleEgressOnlyInternetGateway", &ec2.EgressOnlyInternetGatewayArgs{
+			Tags: map[string]interface{}{
+				"Name": "main",
+			},
+			VpcId: exampleVpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

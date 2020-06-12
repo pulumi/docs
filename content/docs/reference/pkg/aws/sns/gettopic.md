@@ -15,7 +15,6 @@ Service (SNS). By using this data source, you can reference SNS topics
 without having to hard code the ARNs as input.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := sns.LookupTopic(ctx, &sns.LookupTopicArgs{
+			Name: "an_example_topic",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

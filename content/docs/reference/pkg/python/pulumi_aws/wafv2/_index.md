@@ -3,7 +3,10 @@ title: Module wafv2
 title_tag: Module wafv2 | Package pulumi_aws | Python SDK
 linktitle: wafv2
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="wafv2">
 <h1>wafv2<a class="headerlink" href="#wafv2" title="Permalink to this headline">¶</a></h1>

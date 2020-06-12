@@ -13,7 +13,6 @@ meta_desc: "Explore the Fleet resource of the gamelift module, including example
 Provides a Gamelift Fleet resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,7 +51,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := gamelift.NewFleet(ctx, "example", &gamelift.FleetArgs{
+			BuildId:         pulumi.String(aws_gamelift_build.Example.Id),
+			Ec2InstanceType: pulumi.String("t2.micro"),
+			FleetType:       pulumi.String("ON_DEMAND"),
+			RuntimeConfiguration: &gamelift.FleetRuntimeConfigurationArgs{
+				ServerProcess: []map[string]interface{}{
+					map[string]interface{}{
+						"concurrentExecutions": 1,
+						"launchPath":           "C:\\game\\GomokuServer.exe",
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -2250,7 +2278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously. 
+    <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2290,7 +2318,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously. 
+    <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2330,7 +2358,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously. 
+    <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2370,7 +2398,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously. 
+    <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

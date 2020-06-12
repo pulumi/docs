@@ -61,7 +61,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleLayerVersion, err := lambda.NewLayerVersion(ctx, "exampleLayerVersion", nil)
+		if err != nil {
+			return err
+		}
+		exampleFunction, err := lambda.NewFunction(ctx, "exampleFunction", &lambda.FunctionArgs{
+			Layers: pulumi.StringArray{
+				exampleLayerVersion.Arn,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -84,135 +109,6 @@ const exampleFunction = new aws.lambda.Function("example", {
     // ... other configuration ...
     layers: [exampleLayerVersion.arn],
 });
-```
-{{% /example %}}
-
-### CloudWatch Logging and Permissions
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
-        {
-        });
-        // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
-        // If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-        var example = new Aws.CloudWatch.LogGroup("example", new Aws.CloudWatch.LogGroupArgs
-        {
-            RetentionInDays = 14,
-        });
-        // See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-        var lambdaLogging = new Aws.Iam.Policy("lambdaLogging", new Aws.Iam.PolicyArgs
-        {
-            Description = "IAM policy for logging from a lambda",
-            Path = "/",
-            Policy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Action"": [
-        ""logs:CreateLogGroup"",
-        ""logs:CreateLogStream"",
-        ""logs:PutLogEvents""
-      ],
-      ""Resource"": ""arn:aws:logs:*:*:*"",
-      ""Effect"": ""Allow""
-    }
-  ]
-}
-
-",
-        });
-        var lambdaLogs = new Aws.Iam.RolePolicyAttachment("lambdaLogs", new Aws.Iam.RolePolicyAttachmentArgs
-        {
-            PolicyArn = lambdaLogging.Arn,
-            Role = aws_iam_role.Iam_for_lambda.Name,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-test_lambda = aws.lambda_.Function("testLambda")
-# This is to optionally manage the CloudWatch Log Group for the Lambda Function.
-# If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-example = aws.cloudwatch.LogGroup("example", retention_in_days=14)
-# See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-lambda_logging = aws.iam.Policy("lambdaLogging",
-    description="IAM policy for logging from a lambda",
-    path="/",
-    policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": "arn:aws:logs:*:*:*",
-      "Effect": "Allow"
-    }
-  ]
-}
-
-""")
-lambda_logs = aws.iam.RolePolicyAttachment("lambdaLogs",
-    policy_arn=lambda_logging.arn,
-    role=aws_iam_role["iam_for_lambda"]["name"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// This is to optionally manage the CloudWatch Log Group for the Lambda Function.
-// If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-const example = new aws.cloudwatch.LogGroup("example", {
-    retentionInDays: 14,
-});
-// See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-const lambdaLogging = new aws.iam.Policy("lambda_logging", {
-    description: "IAM policy for logging from a lambda",
-    path: "/",
-    policy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": "arn:aws:logs:*:*:*",
-      "Effect": "Allow"
-    }
-  ]
-}
-`,
-});
-const lambdaLogs = new aws.iam.RolePolicyAttachment("lambda_logs", {
-    policyArn: lambdaLogging.arn,
-    role: aws_iam_role_iam_for_lambda.name,
-});
-const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [example, lambdaLogs] });
 ```
 {{% /example %}}
 

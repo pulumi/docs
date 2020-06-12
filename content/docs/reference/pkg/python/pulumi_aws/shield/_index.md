@@ -3,7 +3,10 @@ title: Module shield
 title_tag: Module shield | Package pulumi_aws | Python SDK
 linktitle: shield
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="shield">
 <h1>shield<a class="headerlink" href="#shield" title="Permalink to this headline">¶</a></h1>

@@ -14,7 +14,6 @@ Provides a resource to manage the accepter's side of a Direct Connect hosted pri
 This resource accepts ownership of a private virtual interface created by another AWS account.
 
 
-
 {{% examples %}}
 ## Example Usage
 

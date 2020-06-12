@@ -13,7 +13,6 @@ meta_desc: "Explore the GetOrganization function of the organizations module, in
 Get information about the organization that the user's account belongs to
 
 
-
 {{% examples %}}
 ## Example Usage
 

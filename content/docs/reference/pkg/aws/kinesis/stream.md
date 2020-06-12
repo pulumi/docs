@@ -16,7 +16,6 @@ scales elastically for real-time processing of streaming big data.
 For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,7 +51,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testStream, err := kinesis.NewStream(ctx, "testStream", &kinesis.StreamArgs{
+			RetentionPeriod: pulumi.Int(48),
+			ShardCount:      pulumi.Int(1),
+			ShardLevelMetrics: pulumi.StringArray{
+				pulumi.String("IncomingBytes"),
+				pulumi.String("OutgoingBytes"),
+			},
+			Tags: map[string]interface{}{
+				"Environment": "test",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module accessanalyzer
 title_tag: Module accessanalyzer | Package pulumi_aws | Python SDK
 linktitle: accessanalyzer
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="accessanalyzer">
 <h1>accessanalyzer<a class="headerlink" href="#accessanalyzer" title="Permalink to this headline">¶</a></h1>

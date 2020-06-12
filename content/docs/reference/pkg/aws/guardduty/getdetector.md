@@ -13,7 +13,6 @@ meta_desc: "Explore the GetDetector function of the guardduty module, including 
 Retrieve information about a GuardDuty detector.
 
 
-
 {{% examples %}}
 ## Example Usage
 

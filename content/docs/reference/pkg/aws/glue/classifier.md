@@ -15,7 +15,6 @@ Provides a Glue Classifier resource.
 > **NOTE:** It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,7 +52,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+			CsvClassifier: &glue.ClassifierCsvClassifierArgs{
+				AllowSingleColumn:    pulumi.Bool(false),
+				ContainsHeader:       pulumi.String("PRESENT"),
+				Delimiter:            pulumi.String(","),
+				DisableValueTrimming: pulumi.Bool(false),
+				Header: pulumi.StringArray{
+					pulumi.String("example1"),
+					pulumi.String("example2"),
+				},
+				QuoteSymbol: pulumi.String("'"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -121,7 +149,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+			GrokClassifier: &glue.ClassifierGrokClassifierArgs{
+				Classification: pulumi.String("example"),
+				GrokPattern:    pulumi.String("example"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -174,7 +224,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+			JsonClassifier: &glue.ClassifierJsonClassifierArgs{
+				JsonPath: pulumi.String("example"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -226,7 +297,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+			XmlClassifier: &glue.ClassifierXmlClassifierArgs{
+				Classification: pulumi.String("example"),
+				RowTag:         pulumi.String("example"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -1207,7 +1300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to trim column values. 
+    <dd>{{% md %}}Specifies whether to trim column values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1280,7 +1373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to trim column values. 
+    <dd>{{% md %}}Specifies whether to trim column values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1353,7 +1446,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to trim column values. 
+    <dd>{{% md %}}Specifies whether to trim column values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1426,7 +1519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to trim column values. 
+    <dd>{{% md %}}Specifies whether to trim column values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

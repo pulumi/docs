@@ -3,7 +3,10 @@ title: Module ecr
 title_tag: Module ecr | Package pulumi_aws | Python SDK
 linktitle: ecr
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ecr">
 <h1>ecr<a class="headerlink" href="#ecr" title="Permalink to this headline">¶</a></h1>

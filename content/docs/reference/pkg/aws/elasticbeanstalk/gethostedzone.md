@@ -13,7 +13,6 @@ meta_desc: "Explore the GetHostedZone function of the elasticbeanstalk module, i
 Use this data source to get the ID of an [elastic beanstalk hosted zone](http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region).
 
 
-
 {{% examples %}}
 ## Example Usage
 

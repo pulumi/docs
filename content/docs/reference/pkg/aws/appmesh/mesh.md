@@ -13,7 +13,6 @@ meta_desc: "Explore the Mesh resource of the appmesh module, including examples,
 Provides an AWS App Mesh service mesh resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,7 +37,24 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		simple, err := appmesh.NewMesh(ctx, "simple", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -86,7 +102,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		simple, err := appmesh.NewMesh(ctx, "simple", &appmesh.MeshArgs{
+			Spec: &appmesh.MeshSpecArgs{
+				EgressFilter: &appmesh.MeshSpecEgressFilterArgs{
+					Type: pulumi.String("ALLOW_ALL"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

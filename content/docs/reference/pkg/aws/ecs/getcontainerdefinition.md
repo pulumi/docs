@@ -14,7 +14,6 @@ The ECS container definition data source allows access to details of
 a specific container within an AWS ECS service.
 
 
-
 {{% examples %}}
 ## Example Usage
 

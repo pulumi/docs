@@ -13,7 +13,6 @@ meta_desc: "Explore the SmbFileShare resource of the storagegateway module, incl
 Manages an AWS Storage Gateway SMB File Share.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := storagegateway.NewSmbFileShare(ctx, "example", &storagegateway.SmbFileShareArgs{
+			Authentication: pulumi.String("ActiveDirectory"),
+			GatewayArn:     pulumi.String(aws_storagegateway_gateway.Example.Arn),
+			LocationArn:    pulumi.String(aws_s3_bucket.Example.Arn),
+			RoleArn:        pulumi.String(aws_iam_role.Example.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -96,7 +117,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := storagegateway.NewSmbFileShare(ctx, "example", &storagegateway.SmbFileShareArgs{
+			Authentication: pulumi.String("GuestAccess"),
+			GatewayArn:     pulumi.String(aws_storagegateway_gateway.Example.Arn),
+			LocationArn:    pulumi.String(aws_s3_bucket.Example.Arn),
+			RoleArn:        pulumi.String(aws_iam_role.Example.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

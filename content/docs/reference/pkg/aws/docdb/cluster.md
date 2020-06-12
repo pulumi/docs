@@ -23,7 +23,6 @@ phase because a modification has not yet taken place. You can use the
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		docdb, err := docdb.NewCluster(ctx, "docdb", &docdb.ClusterArgs{
+			BackupRetentionPeriod: pulumi.Int(5),
+			ClusterIdentifier:     pulumi.String("my-docdb-cluster"),
+			Engine:                pulumi.String("docdb"),
+			MasterPassword:        pulumi.String("mustbeeightchars"),
+			MasterUsername:        pulumi.String("foo"),
+			PreferredBackupWindow: pulumi.String("07:00-09:00"),
+			SkipFinalSnapshot:     pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -455,7 +479,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Username for the master DB user. 
+    <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -734,7 +758,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Username for the master DB user. 
+    <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1013,7 +1037,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Username for the master DB user. 
+    <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,7 +1316,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Username for the master DB user. 
+    <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2040,7 +2064,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Username for the master DB user. 
+    <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2374,7 +2398,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Username for the master DB user. 
+    <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2708,7 +2732,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Username for the master DB user. 
+    <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3042,7 +3066,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Username for the master DB user. 
+    <dd>{{% md %}}Username for the master DB user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

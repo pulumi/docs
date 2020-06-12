@@ -3,7 +3,10 @@ title: Module acmpca
 title_tag: Module acmpca | Package pulumi_aws | Python SDK
 linktitle: acmpca
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="acmpca">
 <h1>acmpca<a class="headerlink" href="#acmpca" title="Permalink to this headline">¶</a></h1>

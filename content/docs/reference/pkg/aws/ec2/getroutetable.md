@@ -17,7 +17,6 @@ an input variable and needs to, for example, add a route in
 the Route Table.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,7 +50,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		selected, err := ec2.LookupRouteTable(ctx, &ec2.LookupRouteTableArgs{
+			SubnetId: subnetId,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		route, err := ec2.NewRoute(ctx, "route", &ec2.RouteArgs{
+			DestinationCidrBlock:   pulumi.String("10.0.1.0/22"),
+			RouteTableId:           pulumi.String(selected.Id),
+			VpcPeeringConnectionId: pulumi.String("pcx-45ff3dc1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

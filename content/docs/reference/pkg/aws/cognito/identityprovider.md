@@ -13,7 +13,6 @@ meta_desc: "Explore the IdentityProvider resource of the cognito module, includi
 Provides a Cognito User Identity Provider resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,7 +58,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := cognito.NewUserPool(ctx, "example", &cognito.UserPoolArgs{
+			AutoVerifiedAttributes: pulumi.StringArray{
+				pulumi.String("email"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleProvider, err := cognito.NewIdentityProvider(ctx, "exampleProvider", &cognito.IdentityProviderArgs{
+			AttributeMapping: map[string]interface{}{
+				"email":    "email",
+				"username": "sub",
+			},
+			ProviderDetails: map[string]interface{}{
+				"authorize_scopes": "email",
+				"client_id":        "your client_id",
+				"client_secret":    "your client_secret",
+			},
+			ProviderName: pulumi.String("Google"),
+			ProviderType: pulumi.String("Google"),
+			UserPoolId:   example.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

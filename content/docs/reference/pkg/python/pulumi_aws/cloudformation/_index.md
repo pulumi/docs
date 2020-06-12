@@ -3,7 +3,10 @@ title: Module cloudformation
 title_tag: Module cloudformation | Package pulumi_aws | Python SDK
 linktitle: cloudformation
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cloudformation">
 <h1>cloudformation<a class="headerlink" href="#cloudformation" title="Permalink to this headline">¶</a></h1>

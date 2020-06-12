@@ -19,7 +19,6 @@ variable and needs to, for example, determine the security groups associated
 with it, etc.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,7 +46,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := elb.LookupLoadBalancer(ctx, &elb.LookupLoadBalancerArgs{
+			Name: lbName,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module lambda_
 title_tag: Module lambda_ | Package pulumi_aws | Python SDK
 linktitle: lambda_
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="lambda">
 <h1><a class="reference internal" href="#lambda">lambda</a><a class="headerlink" href="#lambda" title="Permalink to this headline">¶</a></h1>
@@ -1482,7 +1485,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">test_alias</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Alias</span><span class="p">(</span><span class="s2">&quot;testAlias&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;a sample description&quot;</span><span class="p">,</span>
     <span class="n">function_name</span><span class="o">=</span><span class="n">test_lambda</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">function_version</span><span class="o">=</span><span class="s2">&quot;$$LATEST&quot;</span><span class="p">)</span>
+    <span class="n">function_version</span><span class="o">=</span><span class="s2">&quot;$LATEST&quot;</span><span class="p">)</span>
 <span class="n">allow_cloudwatch</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Permission</span><span class="p">(</span><span class="s2">&quot;allowCloudwatch&quot;</span><span class="p">,</span>
     <span class="n">action</span><span class="o">=</span><span class="s2">&quot;lambda:InvokeFunction&quot;</span><span class="p">,</span>
     <span class="n">function</span><span class="o">=</span><span class="n">test_lambda</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>

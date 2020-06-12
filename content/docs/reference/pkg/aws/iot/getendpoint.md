@@ -12,9 +12,6 @@ meta_desc: "Explore the GetEndpoint function of the iot module, including exampl
 
 Returns a unique endpoint specific to the AWS account making the call.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetEndpoint {#using}

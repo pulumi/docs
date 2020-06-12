@@ -25,63 +25,6 @@ Certificates][2] in AWS Documentation.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using System.IO;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testCert = new Aws.Iam.ServerCertificate("testCert", new Aws.Iam.ServerCertificateArgs
-        {
-            CertificateBody = File.ReadAllText("self-ca-cert.pem"),
-            PrivateKey = File.ReadAllText("test-key.pem"),
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-test_cert = aws.iam.ServerCertificate("testCert",
-    certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
-    private_key=(lambda path: open(path).read())("test-key.pem"))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fs from "fs";
-
-const testCert = new aws.iam.ServerCertificate("test_cert", {
-    certificateBody: fs.readFileSync("self-ca-cert.pem", "utf-8"),
-    privateKey: fs.readFileSync("test-key.pem", "utf-8"),
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a ServerCertificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

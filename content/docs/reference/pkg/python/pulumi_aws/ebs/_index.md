@@ -3,7 +3,10 @@ title: Module ebs
 title_tag: Module ebs | Package pulumi_aws | Python SDK
 linktitle: ebs
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ebs">
 <h1>ebs<a class="headerlink" href="#ebs" title="Permalink to this headline">¶</a></h1>

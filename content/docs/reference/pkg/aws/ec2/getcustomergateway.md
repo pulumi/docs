@@ -13,7 +13,6 @@ meta_desc: "Explore the GetCustomerGateway function of the ec2 module, including
 Get an existing AWS Customer Gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,7 @@ class MyStack : Stack
         }));
         var main = new Aws.Ec2.VpnGateway("main", new Aws.Ec2.VpnGatewayArgs
         {
-            AmazonSideAsn = 7224,
+            AmazonSideAsn = "7224",
             VpcId = aws_vpc.Main.Id,
         });
         var transit = new Aws.Ec2.VpnConnection("transit", new Aws.Ec2.VpnConnectionArgs
@@ -61,7 +60,49 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := ec2.LookupCustomerGateway(ctx, &ec2.LookupCustomerGatewayArgs{
+			Filters: ec2.getCustomerGatewayFilterArray{
+				&ec2.LookupCustomerGatewayFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"foo-prod",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		main, err := ec2.NewVpnGateway(ctx, "main", &ec2.VpnGatewayArgs{
+			AmazonSideAsn: pulumi.String("7224"),
+			VpcId:         pulumi.String(aws_vpc.Main.Id),
+		})
+		if err != nil {
+			return err
+		}
+		transit, err := ec2.NewVpnConnection(ctx, "transit", &ec2.VpnConnectionArgs{
+			CustomerGatewayId: pulumi.String(foo.Id),
+			StaticRoutesOnly:  pulumi.Bool(false),
+			Type:              pulumi.String(foo.Type),
+			VpnGatewayId:      main.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

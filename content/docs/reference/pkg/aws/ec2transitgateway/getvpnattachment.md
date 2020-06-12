@@ -13,7 +13,6 @@ meta_desc: "Explore the GetVpnAttachment function of the ec2transitgateway modul
 Get information on an EC2 Transit Gateway VPN Attachment.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2transitgateway.LookupVpnAttachment(ctx, &ec2transitgateway.LookupVpnAttachmentArgs{
+			TransitGatewayId: aws_ec2_transit_gateway.Example.Id,
+			VpnConnectionId:  aws_vpn_connection.Example.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -96,7 +114,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := ec2transitgateway.LookupVpnAttachment(ctx, &ec2transitgateway.LookupVpnAttachmentArgs{
+			Filters: ec2transitgateway.getVpnAttachmentFilterArray{
+				&ec2transitgateway.LookupVpnAttachmentFilter{
+					Name: "resource-id",
+					Values: []string{
+						"some-resource",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

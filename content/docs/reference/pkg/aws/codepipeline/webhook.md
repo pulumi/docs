@@ -13,7 +13,6 @@ meta_desc: "Explore the Webhook resource of the codepipeline module, including e
 Provides a CodePipeline Webhook.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -106,7 +105,7 @@ class MyStack : Stack
             {
                 new Aws.CodePipeline.Inputs.WebhookFilterArgs
                 {
-                    JsonPath = "$$.ref",
+                    JsonPath = "$.ref",
                     MatchEquals = "refs/heads/{Branch}",
                 },
             },
@@ -148,7 +147,7 @@ import pulumi_github as github
 bar_pipeline = aws.codepipeline.Pipeline("barPipeline",
     artifact_store={
         "encryption_key": {
-            "id": data["aws.kms.Alias"]["s3kmskey"]["arn"],
+            "id": data["aws_kms_alias"]["s3kmskey"]["arn"],
             "type": "KMS",
         },
         "location": aws_s3_bucket["bar"]["bucket"],
@@ -194,7 +193,7 @@ bar_webhook = aws.codepipeline.Webhook("barWebhook",
         "secretToken": webhook_secret,
     },
     filters=[{
-        "jsonPath": "$$.ref",
+        "jsonPath": "$.ref",
         "matchEquals": "refs/heads/{Branch}",
     }],
     target_action="Source",

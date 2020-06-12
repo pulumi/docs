@@ -13,7 +13,6 @@ meta_desc: "Explore the NotebookInstance resource of the sagemaker module, inclu
 Provides a Sagemaker Notebook Instance resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ni, err := sagemaker.NewNotebookInstance(ctx, "ni", &sagemaker.NotebookInstanceArgs{
+			InstanceType: pulumi.String("ml.t2.medium"),
+			RoleArn:      pulumi.String(aws_iam_role.Role.Arn),
+			Tags: map[string]interface{}{
+				"Name": "foo",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

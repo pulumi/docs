@@ -12,9 +12,6 @@ meta_desc: "Explore the LaunchTemplate resource of the ec2 module, including exa
 
 Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a LaunchTemplate Resource {#create}

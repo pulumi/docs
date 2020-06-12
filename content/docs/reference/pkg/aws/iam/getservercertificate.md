@@ -16,7 +16,7 @@ Use this data source to lookup information about IAM Server Certificates.
 ## Import 
 
 The import function will read in certificate body, certificate chain (if it exists), id, name, path, and arn. 
-It will not retrieve the private key which is not available through the AWS API.   
+It will not retrieve the private key which is not available through the AWS API.
 
 {{% examples %}}
 ## Example Usage

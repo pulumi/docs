@@ -3,7 +3,10 @@ title: Module cloud9
 title_tag: Module cloud9 | Package pulumi_aws | Python SDK
 linktitle: cloud9
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="cloud9">
 <h1>cloud9<a class="headerlink" href="#cloud9" title="Permalink to this headline">¶</a></h1>

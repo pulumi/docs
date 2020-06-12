@@ -3,7 +3,10 @@ title: Module ec2
 title_tag: Module ec2 | Package pulumi_aws | Python SDK
 linktitle: ec2
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="ec2">
 <h1>ec2<a class="headerlink" href="#ec2" title="Permalink to this headline">¶</a></h1>
@@ -15029,7 +15032,7 @@ an input variable and needs to, for example, find the associated Outpost or Loca
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
-<span class="n">ec2</span><span class="o">.</span><span class="n">getLocalGatewayRouteTable</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;awsEc2LocalGatewayRouteTable&quot;</span><span class="p">)</span>
+<span class="n">aws_ec2_local_gateway_route_table</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">require_object</span><span class="p">(</span><span class="s2">&quot;awsEc2LocalGatewayRouteTable&quot;</span><span class="p">)</span>
 <span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_local_gateway_route_table</span><span class="p">(</span><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="n">aws_ec2_local_gateway_route_table</span><span class="p">)</span>
 </pre></div>
 </div>

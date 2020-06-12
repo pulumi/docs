@@ -13,7 +13,6 @@ meta_desc: "Explore the Hsm resource of the cloudhsmv2 module, including example
 Creates an HSM module in Amazon CloudHSM v2 cluster.
 
 
-
 {{% examples %}}
 ## Example Usage
 

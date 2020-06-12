@@ -25,7 +25,6 @@ These resource can be imported using `import`.
 The state associated with existing resources will automatically be migrated.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,7 +61,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		serviceb, err := appmesh.NewVirtualRouter(ctx, "serviceb", &appmesh.VirtualRouterArgs{
+			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
+			Spec: &appmesh.VirtualRouterSpecArgs{
+				Listener: &appmesh.VirtualRouterSpecListenerArgs{
+					PortMapping: &appmesh.VirtualRouterSpecListenerPortMappingArgs{
+						Port:     pulumi.Int(8080),
+						Protocol: pulumi.String("http"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module organizations
 title_tag: Module organizations | Package pulumi_aws | Python SDK
 linktitle: organizations
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="organizations">
 <h1>organizations<a class="headerlink" href="#organizations" title="Permalink to this headline">¶</a></h1>

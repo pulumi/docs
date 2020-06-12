@@ -13,7 +13,6 @@ meta_desc: "Explore the GameSessionQueue resource of the gamelift module, includ
 Provides an Gamelift Game Session Queue resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -13,7 +13,6 @@ meta_desc: "Explore the Cluster resource of the dax module, including examples, 
 Provides a DAX Cluster resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dax"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bar, err := dax.NewCluster(ctx, "bar", &dax.ClusterArgs{
+			ClusterName:       pulumi.String("cluster-example"),
+			IamRoleArn:        pulumi.String(data.Aws_iam_role.Example.Arn),
+			NodeType:          pulumi.String("dax.r4.large"),
+			ReplicationFactor: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -52,7 +73,7 @@ import pulumi_aws as aws
 
 bar = aws.dax.Cluster("bar",
     cluster_name="cluster-example",
-    iam_role_arn=data["aws.iam.Role"]["example"]["arn"],
+    iam_role_arn=data["aws_iam_role"]["example"]["arn"],
     node_type="dax.r4.large",
     replication_factor=1)
 ```

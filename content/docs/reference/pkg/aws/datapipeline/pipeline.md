@@ -13,7 +13,6 @@ meta_desc: "Explore the Pipeline resource of the datapipeline module, including 
 Provides a Data Pipeline resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 

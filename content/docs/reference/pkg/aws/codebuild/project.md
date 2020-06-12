@@ -13,7 +13,6 @@ meta_desc: "Explore the Project resource of the codebuild module, including exam
 Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` resource, which manages the webhook to the source (e.g. the "rebuild every time a code change is pushed" option in the CodeBuild web console).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -123,7 +122,7 @@ class MyStack : Stack
             {
                 Type = "NO_ARTIFACTS",
             },
-            BuildTimeout = "5",
+            BuildTimeout = 5,
             Cache = new Aws.CodeBuild.Inputs.ProjectCacheArgs
             {
                 Location = exampleBucket.BucketName,
@@ -201,7 +200,7 @@ class MyStack : Stack
             {
                 Type = "NO_ARTIFACTS",
             },
-            BuildTimeout = "5",
+            BuildTimeout = 5,
             Cache = new Aws.CodeBuild.Inputs.ProjectCacheArgs
             {
                 Modes = 
@@ -227,7 +226,7 @@ class MyStack : Stack
                 ImagePullCredentialsType = "CODEBUILD",
                 Type = "LINUX_CONTAINER",
             },
-            QueuedTimeout = "5",
+            QueuedTimeout = 5,
             ServiceRole = exampleRole.Arn,
             Source = new Aws.CodeBuild.Inputs.ProjectSourceArgs
             {

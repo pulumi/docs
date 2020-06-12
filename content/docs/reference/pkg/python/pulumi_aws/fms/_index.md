@@ -3,7 +3,10 @@ title: Module fms
 title_tag: Module fms | Package pulumi_aws | Python SDK
 linktitle: fms
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="fms">
 <h1>fms<a class="headerlink" href="#fms" title="Permalink to this headline">¶</a></h1>

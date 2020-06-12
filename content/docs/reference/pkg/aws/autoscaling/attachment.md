@@ -20,7 +20,6 @@ load balancers in conjunction with an ASG Attachment resource. Doing so will cau
 conflict and will overwrite attachments.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +47,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		asgAttachmentBar, err := autoscaling.NewAttachment(ctx, "asgAttachmentBar", &autoscaling.AttachmentArgs{
+			AutoscalingGroupName: pulumi.String(aws_autoscaling_group.Asg.Id),
+			Elb:                  pulumi.String(aws_elb.Bar.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetNatGateway function of the ec2 module, including exam
 Provides details about a specific Nat Gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 

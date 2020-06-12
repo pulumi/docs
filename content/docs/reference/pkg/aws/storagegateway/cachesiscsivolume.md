@@ -17,28 +17,10 @@ Manages an AWS Storage Gateway cached iSCSI volume.
 > **NOTE:** The gateway must have an upload buffer added (e.g. via the `aws.storagegateway.UploadBuffer` resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `UPLOAD BUFFER NOT CONFIGURED`.
 
 
-
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-Coming soon!
-{{% /example %}}
-
 ### Create Empty Cached iSCSI Volume
 {{% example csharp %}}
 ```csharp
@@ -64,7 +46,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
+			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
+			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
+			TargetName:         pulumi.String("example"),
+			VolumeSizeInBytes:  pulumi.Int(5368709120),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -120,7 +124,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
+			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
+			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
+			SnapshotId:         pulumi.String(aws_ebs_snapshot.Example.Id),
+			TargetName:         pulumi.String("example"),
+			VolumeSizeInBytes:  pulumi.Int(aws_ebs_snapshot.Example.Volume_size * 1024 * 1024 * 1024),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -177,7 +204,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
+			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
+			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
+			SourceVolumeArn:    pulumi.String(aws_storagegateway_cached_iscsi_volume.Existing.Arn),
+			TargetName:         pulumi.String("example"),
+			VolumeSizeInBytes:  pulumi.Int(aws_storagegateway_cached_iscsi_volume.Existing.Volume_size_in_bytes),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

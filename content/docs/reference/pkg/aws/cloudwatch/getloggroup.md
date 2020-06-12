@@ -13,7 +13,6 @@ meta_desc: "Explore the GetLogGroup function of the cloudwatch module, including
 Use this data source to get information about an AWS Cloudwatch Log Group
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := cloudwatch.LookupLogGroup(ctx, &cloudwatch.LookupLogGroupArgs{
+			Name: "MyImportantLogs",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module securityhub
 title_tag: Module securityhub | Package pulumi_aws | Python SDK
 linktitle: securityhub
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="securityhub">
 <h1>securityhub<a class="headerlink" href="#securityhub" title="Permalink to this headline">¶</a></h1>

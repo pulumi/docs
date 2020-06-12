@@ -14,7 +14,6 @@ Use this data source to get IDs and VPC membership of Security Groups that are c
 outside of this provider.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := ec2.LookupSecurityGroups(ctx, &ec2.LookupSecurityGroupsArgs{
+			Tags: map[string]interface{}{
+				"Application": "k8s",
+				"Environment": "dev",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

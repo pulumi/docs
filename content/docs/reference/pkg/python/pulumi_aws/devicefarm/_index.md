@@ -3,7 +3,10 @@ title: Module devicefarm
 title_tag: Module devicefarm | Package pulumi_aws | Python SDK
 linktitle: devicefarm
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="devicefarm">
 <h1>devicefarm<a class="headerlink" href="#devicefarm" title="Permalink to this headline">¶</a></h1>

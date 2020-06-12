@@ -15,7 +15,6 @@ Manages an RDS Global Cluster, which is an Aurora global database spread across 
 More information about Aurora global databases can be found in the [Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating).
 
 
-
 {{% examples %}}
 ## Example Usage
 

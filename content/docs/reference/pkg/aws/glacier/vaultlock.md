@@ -17,7 +17,6 @@ Manages a Glacier Vault Lock. You can refer to the [Glacier Developer Guide](htt
 !> **WARNING:** Once a Glacier Vault Lock is completed, it is immutable. The deletion of the Glacier Vault Lock is not be possible and attempting to remove it from this provider will return an error. Set the `ignore_deletion_error` argument to `true` and apply this configuration before attempting to delete this resource via this provider or remove this resource from this provider's management.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -78,7 +77,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleVault, err := glacier.NewVault(ctx, "exampleVault", nil)
+		if err != nil {
+			return err
+		}
+		exampleVaultLock, err := glacier.NewVaultLock(ctx, "exampleVaultLock", &glacier.VaultLockArgs{
+			CompleteLock: pulumi.Bool(false),
+			Policy: examplePolicyDocument.ApplyT(func(examplePolicyDocument iam.LookupPolicyDocumentResult) (string, error) {
+				return examplePolicyDocument.Json, nil
+			}).(pulumi.StringOutput),
+			VaultName: exampleVault.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -153,7 +179,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := glacier.NewVaultLock(ctx, "example", &glacier.VaultLockArgs{
+			CompleteLock: pulumi.Bool(true),
+			Policy:       pulumi.String(data.Aws_iam_policy_document.Example.Json),
+			VaultName:    pulumi.String(aws_glacier_vault.Example.Name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -163,7 +210,7 @@ import pulumi_aws as aws
 
 example = aws.glacier.VaultLock("example",
     complete_lock=True,
-    policy=data["aws.iam.getPolicyDocument"]["example"]["json"],
+    policy=data["aws_iam_policy_document"]["example"]["json"],
     vault_name=aws_glacier_vault["example"]["name"])
 ```
 {{% /example %}}

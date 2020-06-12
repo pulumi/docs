@@ -3,7 +3,10 @@ title: Module apigateway
 title_tag: Module apigateway | Package pulumi_aws | Python SDK
 linktitle: apigateway
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="apigateway">
 <h1>apigateway<a class="headerlink" href="#apigateway" title="Permalink to this headline">¶</a></h1>
@@ -1186,7 +1189,7 @@ from the validation resource where it will be available after the resource creat
     <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
     <span class="n">zone_id</span><span class="o">=</span><span class="n">aws_route53_zone</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
-<span class="c1"># See route53.Zone for how to create this</span>
+<span class="c1"># See aws_route53_zone for how to create this</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -1688,7 +1691,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">},</span>
     <span class="n">request_templates</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
-<span class="s2">   &quot;body&quot; : $$input.json(&#39;$$&#39;)</span>
+<span class="s2">   &quot;body&quot; : $input.json(&#39;$&#39;)</span>
 <span class="s2">}</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
@@ -1736,7 +1739,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">},</span>
     <span class="n">request_templates</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;application/json&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;#set($$inputRoot = $$input.path(&#39;$$&#39;))</span>
+        <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;#set($inputRoot = $input.path(&#39;$&#39;))</span>
 <span class="s2">{ }</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -1998,10 +2001,10 @@ you might need to add an explicit <code class="docutils literal notranslate"><sp
     <span class="n">http_method</span><span class="o">=</span><span class="n">my_demo_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
     <span class="n">resource_id</span><span class="o">=</span><span class="n">my_demo_resource</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">response_templates</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;#set($$inputRoot = $$input.path(&#39;$$&#39;))</span>
+        <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;#set($inputRoot = $input.path(&#39;$&#39;))</span>
 <span class="s2">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="s2">&lt;message&gt;</span>
-<span class="s2">    $$inputRoot.body</span>
+<span class="s2">    $inputRoot.body</span>
 <span class="s2">&lt;/message&gt;</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
@@ -2525,7 +2528,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">http_method</span><span class="o">=</span><span class="n">test_method</span><span class="o">.</span><span class="n">http_method</span><span class="p">,</span>
     <span class="n">request_templates</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;application/xml&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
-<span class="s2">   &quot;body&quot; : $$input.json(&#39;$$&#39;)</span>
+<span class="s2">   &quot;body&quot; : $input.json(&#39;$&#39;)</span>
 <span class="s2">}</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
@@ -3015,7 +3018,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;gatewayresponse.header.Authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;&#39;Basic&#39;&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">response_templates</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;application/json&quot;</span><span class="p">:</span> <span class="s2">&quot;{&#39;message&#39;:$$context.error.messageString}&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;application/json&quot;</span><span class="p">:</span> <span class="s2">&quot;{&#39;message&#39;:$context.error.messageString}&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">response_type</span><span class="o">=</span><span class="s2">&quot;UNAUTHORIZED&quot;</span><span class="p">,</span>
     <span class="n">rest_api_id</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>

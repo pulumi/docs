@@ -13,7 +13,6 @@ meta_desc: "Explore the ContainerPolicy resource of the mediastore module, inclu
 Provides a MediaStore Container Policy.
 
 
-
 {{% examples %}}
 ## Example Usage
 

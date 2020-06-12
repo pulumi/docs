@@ -2,7 +2,7 @@
 ---
 title: "TopicRule"
 title_tag: "Resource TopicRule | Module iot | Package AWS"
-meta_desc: "Explore the TopicRule resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the TopicRule resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,183 +11,6 @@ meta_desc: "Explore the TopicRule resource of the iot module, including examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mytopic = new Aws.Sns.Topic("mytopic", new Aws.Sns.TopicArgs
-        {
-        });
-        var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
-        {
-            AssumeRolePolicy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Effect"": ""Allow"",
-      ""Principal"": {
-        ""Service"": ""iot.amazonaws.com""
-      },
-      ""Action"": ""sts:AssumeRole""
-    }
-  ]
-}
-
-",
-        });
-        var rule = new Aws.Iot.TopicRule("rule", new Aws.Iot.TopicRuleArgs
-        {
-            Description = "Example rule",
-            Enabled = true,
-            Sns = new Aws.Iot.Inputs.TopicRuleSnsArgs
-            {
-                Sns = "RAW",
-                Sns = role.Arn,
-                Sns = mytopic.Arn,
-            },
-            Sql = "SELECT * FROM 'topic/test'",
-            SqlVersion = "2016-03-23",
-        });
-        var iamPolicyForLambda = new Aws.Iam.RolePolicy("iamPolicyForLambda", new Aws.Iam.RolePolicyArgs
-        {
-            Policy = mytopic.Arn.Apply(arn => @$"{{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {{
-        ""Effect"": ""Allow"",
-        ""Action"": [
-            ""sns:Publish""
-        ],
-        ""Resource"": ""{arn}""
-    }}
-  ]
-}}
-
-"),
-            Role = role.Id,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-mytopic = aws.sns.Topic("mytopic")
-role = aws.iam.Role("role", assume_role_policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "iot.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-
-""")
-rule = aws.iot.TopicRule("rule",
-    description="Example rule",
-    enabled=True,
-    sns={
-        "sns": "RAW",
-        "sns": role.arn,
-        "sns": mytopic.arn,
-    },
-    sql="SELECT * FROM 'topic/test'",
-    sql_version="2016-03-23")
-iam_policy_for_lambda = aws.iam.RolePolicy("iamPolicyForLambda",
-    policy=mytopic.arn.apply(lambda arn: f"""{{
-  "Version": "2012-10-17",
-  "Statement": [
-    {{
-        "Effect": "Allow",
-        "Action": [
-            "sns:Publish"
-        ],
-        "Resource": "{arn}"
-    }}
-  ]
-}}
-
-"""),
-    role=role.id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const mytopic = new aws.sns.Topic("mytopic", {});
-const role = new aws.iam.Role("role", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "iot.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-`,
-});
-const rule = new aws.iot.TopicRule("rule", {
-    description: "Example rule",
-    enabled: true,
-    sns: {
-        messageFormat: "RAW",
-        roleArn: role.arn,
-        targetArn: mytopic.arn,
-    },
-    sql: "SELECT * FROM 'topic/test'",
-    sqlVersion: "2016-03-23",
-});
-const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
-    policy: pulumi.interpolate`{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-        "Effect": "Allow",
-        "Action": [
-            "sns:Publish"
-        ],
-        "Resource": "${mytopic.arn}"
-    }
-  ]
-}
-`,
-    role: role.id,
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a TopicRule Resource {#create}
@@ -4324,7 +4147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
 {{% /md %}}</dd>
 
 </dl>
@@ -4364,7 +4187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
 {{% /md %}}</dd>
 
 </dl>
@@ -4404,7 +4227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
 {{% /md %}}</dd>
 
 </dl>
@@ -4444,7 +4267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector. 
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
 {{% /md %}}</dd>
 
 </dl>
@@ -4770,7 +4593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd>
 
 </dl>
@@ -4810,7 +4633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd>
 
 </dl>
@@ -4850,7 +4673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd>
 
 </dl>
@@ -4890,7 +4713,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0. 
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd>
 
 </dl>

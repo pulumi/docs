@@ -13,7 +13,6 @@ meta_desc: "Explore the GeoMatchSet resource of the waf module, including exampl
 Provides a WAF Geo Match Set Resource
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,7 +50,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		geoMatchSet, err := waf.NewGeoMatchSet(ctx, "geoMatchSet", &waf.GeoMatchSetArgs{
+			GeoMatchConstraints: waf.GeoMatchSetGeoMatchConstraintArray{
+				&waf.GeoMatchSetGeoMatchConstraintArgs{
+					Type:  pulumi.String("Country"),
+					Value: pulumi.String("US"),
+				},
+				&waf.GeoMatchSetGeoMatchConstraintArgs{
+					Type:  pulumi.String("Country"),
+					Value: pulumi.String("CA"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

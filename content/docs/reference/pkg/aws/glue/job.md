@@ -15,131 +15,10 @@ Provides a Glue Job resource.
 > Glue functionality, such as monitoring and logging of jobs, is typically managed with the `default_arguments` argument. See the [Special Parameters Used by AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html) topic in the Glue developer guide for additional information.
 
 
-
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Python Job
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Glue.Job("example", new Aws.Glue.JobArgs
-        {
-            Command = new Aws.Glue.Inputs.JobCommandArgs
-            {
-                ScriptLocation = $"s3://{aws_s3_bucket.Example.Bucket}/example.py",
-            },
-            RoleArn = aws_iam_role.Example.Arn,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.glue.Job("example",
-    command={
-        "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.py",
-    },
-    role_arn=aws_iam_role["example"]["arn"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.glue.Job("example", {
-    command: {
-        scriptLocation: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}/example.py`,
-    },
-    roleArn: aws_iam_role_example.arn,
-});
-```
-{{% /example %}}
-
-### Scala Job
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Aws.Glue.Job("example", new Aws.Glue.JobArgs
-        {
-            Command = new Aws.Glue.Inputs.JobCommandArgs
-            {
-                ScriptLocation = $"s3://{aws_s3_bucket.Example.Bucket}/example.scala",
-            },
-            DefaultArguments = 
-            {
-                { "--job-language", "scala" },
-            },
-            RoleArn = aws_iam_role.Example.Arn,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.glue.Job("example",
-    command={
-        "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.scala",
-    },
-    default_arguments={
-        "--job-language": "scala",
-    },
-    role_arn=aws_iam_role["example"]["arn"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.glue.Job("example", {
-    command: {
-        scriptLocation: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}/example.scala`,
-    },
-    defaultArguments: {
-        "--job-language": "scala",
-    },
-    roleArn: aws_iam_role_example.arn,
-});
-```
-{{% /example %}}
-
 ### Enabling CloudWatch Logs and Metrics
 {{% example csharp %}}
 ```csharp
@@ -171,7 +50,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", &cloudwatch.LogGroupArgs{
+			RetentionInDays: pulumi.Int(14),
+		})
+		if err != nil {
+			return err
+		}
+		exampleJob, err := glue.NewJob(ctx, "exampleJob", &glue.JobArgs{
+			DefaultArguments: map[string]interface{}{
+				"--continuous-log-logGroup":          exampleLogGroup.Name,
+				"--enable-continuous-cloudwatch-log": "true",
+				"--enable-continuous-log-filter":     "true",
+				"--enable-metrics":                   "",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

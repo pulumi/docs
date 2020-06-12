@@ -21,9 +21,6 @@ Practically no single attribute can be updated except TAGS.
 If you need to delete a cluster, you have to remove its HSM modules first.
 To initialize cluster, you have to add an hsm instance to the cluster then sign CSR and upload it.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Cluster Resource {#create}

@@ -13,7 +13,6 @@ meta_desc: "Explore the Directory resource of the workspaces module, including e
 Provides a directory registration in AWS WorkSpaces Service
 
 
-
 {{% examples %}}
 ## Example Usage
 

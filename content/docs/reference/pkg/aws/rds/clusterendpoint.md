@@ -15,7 +15,6 @@ You can refer to the [User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/A
 
 
 
-
 {{% examples %}}
 ## Example Usage
 

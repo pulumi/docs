@@ -16,71 +16,6 @@ Provides a Pinpoint APNs Sandbox Channel resource.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using System.IO;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
-        {
-        });
-        var apnsSandbox = new Aws.Pinpoint.ApnsSandboxChannel("apnsSandbox", new Aws.Pinpoint.ApnsSandboxChannelArgs
-        {
-            ApplicationId = app.ApplicationId,
-            Certificate = File.ReadAllText("./certificate.pem"),
-            PrivateKey = File.ReadAllText("./private_key.key"),
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-app = aws.pinpoint.App("app")
-apns_sandbox = aws.pinpoint.ApnsSandboxChannel("apnsSandbox",
-    application_id=app.application_id,
-    certificate=(lambda path: open(path).read())("./certificate.pem"),
-    private_key=(lambda path: open(path).read())("./private_key.key"))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fs from "fs";
-
-const app = new aws.pinpoint.App("app", {});
-const apnsSandbox = new aws.pinpoint.ApnsSandboxChannel("apns_sandbox", {
-    applicationId: app.applicationId,
-    certificate: fs.readFileSync("./certificate.pem", "utf-8"),
-    privateKey: fs.readFileSync("./private_key.key", "utf-8"),
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a ApnsSandboxChannel Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -350,7 +285,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key. 
+    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -459,7 +394,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key. 
+    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -568,7 +503,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key. 
+    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -677,7 +612,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key. 
+    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -991,7 +926,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key. 
+    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1100,7 +1035,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key. 
+    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1209,7 +1144,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key. 
+    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1318,7 +1253,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key. 
+    <dd>{{% md %}}The `.p8` file that you download from your Apple developer account when you create an authentication key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -12,9 +12,6 @@ meta_desc: "Explore the TaskDefinition resource of the ecs module, including exa
 
 Manages a revision of an ECS task definition to be used in `aws.ecs.Service`.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a TaskDefinition Resource {#create}

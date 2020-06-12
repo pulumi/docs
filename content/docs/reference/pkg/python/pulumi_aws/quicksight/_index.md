@@ -3,7 +3,10 @@ title: Module quicksight
 title_tag: Module quicksight | Package pulumi_aws | Python SDK
 linktitle: quicksight
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="quicksight">
 <h1>quicksight<a class="headerlink" href="#quicksight" title="Permalink to this headline">¶</a></h1>

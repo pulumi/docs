@@ -13,7 +13,6 @@ meta_desc: "Explore the ResourceShare resource of the ram module, including exam
 Manages a Resource Access Manager (RAM) Resource Share. To associate principals with the share, see the `aws.ram.PrincipalAssociation` resource. To associate resources with the share, see the `aws.ram.ResourceAssociation` resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ram.NewResourceShare(ctx, "example", &ram.ResourceShareArgs{
+			AllowExternalPrincipals: pulumi.Bool(true),
+			Tags: map[string]interface{}{
+				"Environment": "Production",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module sqs
 title_tag: Module sqs | Package pulumi_aws | Python SDK
 linktitle: sqs
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="sqs">
 <h1>sqs<a class="headerlink" href="#sqs" title="Permalink to this headline">¶</a></h1>

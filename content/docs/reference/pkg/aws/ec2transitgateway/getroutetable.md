@@ -13,7 +13,6 @@ meta_desc: "Explore the GetRouteTable function of the ec2transitgateway module, 
 Get information on an EC2 Transit Gateway Route Table.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,7 +56,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2transitgateway.LookupRouteTable(ctx, &ec2transitgateway.LookupRouteTableArgs{
+			Filters: ec2transitgateway.getRouteTableFilterArray{
+				&ec2transitgateway.LookupRouteTableFilter{
+					Name: "default-association-route-table",
+					Values: []string{
+						"true",
+					},
+				},
+				&ec2transitgateway.LookupRouteTableFilter{
+					Name: "transit-gateway-id",
+					Values: []string{
+						"tgw-12345678",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -119,7 +149,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := ec2transitgateway.LookupRouteTable(ctx, &ec2transitgateway.LookupRouteTableArgs{
+			Id: "tgw-rtb-12345678",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

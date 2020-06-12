@@ -14,9 +14,6 @@ The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetTaskDefinition {#using}

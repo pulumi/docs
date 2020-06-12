@@ -13,7 +13,6 @@ meta_desc: "Explore the SmsChannel resource of the pinpoint module, including ex
 Provides a Pinpoint SMS Channel resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/pinpoint"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		app, err := pinpoint.NewApp(ctx, "app", nil)
+		if err != nil {
+			return err
+		}
+		sms, err := pinpoint.NewSmsChannel(ctx, "sms", &pinpoint.SmsChannelArgs{
+			ApplicationId: app.ApplicationId,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

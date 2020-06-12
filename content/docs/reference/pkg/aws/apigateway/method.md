@@ -118,6 +118,59 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		thisUserPools, err := cognito.LookupUserPools(ctx, &cognito.LookupUserPoolsArgs{
+			Name: cognitoUserPoolName,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		thisRestApi, err := apigateway.NewRestApi(ctx, "thisRestApi", nil)
+		if err != nil {
+			return err
+		}
+		thisResource, err := apigateway.NewResource(ctx, "thisResource", &apigateway.ResourceArgs{
+			ParentId: thisRestApi.RootResourceId,
+			PathPart: pulumi.String("{proxy+}"),
+			RestApi:  thisRestApi.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		thisAuthorizer, err := apigateway.NewAuthorizer(ctx, "thisAuthorizer", &apigateway.AuthorizerArgs{
+			ProviderArns: pulumi.StringArray(thisUserPools.Arns),
+			RestApi:      thisRestApi.ID(),
+			Type:         pulumi.String("COGNITO_USER_POOLS"),
+		})
+		if err != nil {
+			return err
+		}
+		any, err := apigateway.NewMethod(ctx, "any", &apigateway.MethodArgs{
+			Authorization: pulumi.String("COGNITO_USER_POOLS"),
+			AuthorizerId:  thisAuthorizer.ID(),
+			HttpMethod:    pulumi.String("ANY"),
+			RequestParameters: map[string]interface{}{
+				"method.request.path.proxy": true,
+			},
+			ResourceId: thisResource.ID(),
+			RestApi:    thisRestApi.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -157,7 +210,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myDemoAPI, err := apigateway.NewRestApi(ctx, "myDemoAPI", &apigateway.RestApiArgs{
+			Description: pulumi.String("This is my API for demonstration purposes"),
+		})
+		if err != nil {
+			return err
+		}
+		myDemoResource, err := apigateway.NewResource(ctx, "myDemoResource", &apigateway.ResourceArgs{
+			ParentId: myDemoAPI.RootResourceId,
+			PathPart: pulumi.String("mydemoresource"),
+			RestApi:  myDemoAPI.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		myDemoMethod, err := apigateway.NewMethod(ctx, "myDemoMethod", &apigateway.MethodArgs{
+			Authorization: pulumi.String("NONE"),
+			HttpMethod:    pulumi.String("GET"),
+			ResourceId:    myDemoResource.ID(),
+			RestApi:       myDemoAPI.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

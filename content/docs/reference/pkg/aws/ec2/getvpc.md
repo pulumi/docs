@@ -16,9 +16,6 @@ This resource can prove useful when a module accepts a vpc id as
 an input variable and needs to, for example, determine the CIDR block of that
 VPC.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetVpc {#using}

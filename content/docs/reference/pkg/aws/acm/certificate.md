@@ -29,7 +29,6 @@ It's recommended to specify `create_before_destroy = true` in a [lifecycle](http
 which is currently in use (eg, by `aws.lb.Listener`).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,7 +59,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cert, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+			DomainName: pulumi.String("example.com"),
+			Tags: map[string]interface{}{
+				"Environment": "test",
+			},
+			ValidationMethod: pulumi.String("DNS"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

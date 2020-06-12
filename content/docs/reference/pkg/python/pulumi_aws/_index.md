@@ -3,7 +3,10 @@ title: Package pulumi_aws
 title_tag: Package pulumi_aws | Python SDK
 linktitle: pulumi_aws
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="pulumi-aws">
 <h1>Pulumi AWS<a class="headerlink" href="#pulumi-aws" title="Permalink to this headline">¶</a></h1>

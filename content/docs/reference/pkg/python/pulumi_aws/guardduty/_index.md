@@ -3,7 +3,10 @@ title: Module guardduty
 title_tag: Module guardduty | Package pulumi_aws | Python SDK
 linktitle: guardduty
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="guardduty">
 <h1>guardduty<a class="headerlink" href="#guardduty" title="Permalink to this headline">¶</a></h1>

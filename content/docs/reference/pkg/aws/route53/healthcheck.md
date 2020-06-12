@@ -13,7 +13,6 @@ meta_desc: "Explore the HealthCheck resource of the route53 module, including ex
 Provides a Route53 health check.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,10 +29,10 @@ class MyStack : Stack
     {
         var example = new Aws.Route53.HealthCheck("example", new Aws.Route53.HealthCheckArgs
         {
-            FailureThreshold = "5",
+            FailureThreshold = 5,
             Fqdn = "example.com",
             Port = 80,
-            RequestInterval = "30",
+            RequestInterval = 30,
             ResourcePath = "/",
             Tags = 
             {
@@ -48,7 +47,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
+			FailureThreshold: pulumi.Int(5),
+			Fqdn:             pulumi.String("example.com"),
+			Port:             pulumi.Int(80),
+			RequestInterval:  pulumi.Int(30),
+			ResourcePath:     pulumi.String("/"),
+			Tags: map[string]interface{}{
+				"Name": "tf-test-health-check",
+			},
+			Type: pulumi.String("HTTP"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -100,10 +126,10 @@ class MyStack : Stack
     {
         var example = new Aws.Route53.HealthCheck("example", new Aws.Route53.HealthCheckArgs
         {
-            FailureThreshold = "5",
+            FailureThreshold = 5,
             Fqdn = "example.com",
             Port = 443,
-            RequestInterval = "30",
+            RequestInterval = 30,
             ResourcePath = "/",
             SearchString = "example",
             Type = "HTTPS_STR_MATCH",
@@ -115,7 +141,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
+			FailureThreshold: pulumi.Int(5),
+			Fqdn:             pulumi.String("example.com"),
+			Port:             pulumi.Int(443),
+			RequestInterval:  pulumi.Int(30),
+			ResourcePath:     pulumi.String("/"),
+			SearchString:     pulumi.String("example"),
+			Type:             pulumi.String("HTTPS_STR_MATCH"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -229,12 +280,12 @@ class MyStack : Stack
         {
             AlarmDescription = "This metric monitors ec2 cpu utilization",
             ComparisonOperator = "GreaterThanOrEqualToThreshold",
-            EvaluationPeriods = "2",
+            EvaluationPeriods = 2,
             MetricName = "CPUUtilization",
             Namespace = "AWS/EC2",
-            Period = "120",
+            Period = 120,
             Statistic = "Average",
-            Threshold = "80",
+            Threshold = 80,
         });
         var foo = new Aws.Route53.HealthCheck("foo", new Aws.Route53.HealthCheckArgs
         {
@@ -250,7 +301,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foobar, err := cloudwatch.NewMetricAlarm(ctx, "foobar", &cloudwatch.MetricAlarmArgs{
+			AlarmDescription:   pulumi.String("This metric monitors ec2 cpu utilization"),
+			ComparisonOperator: pulumi.String("GreaterThanOrEqualToThreshold"),
+			EvaluationPeriods:  pulumi.Int(2),
+			MetricName:         pulumi.String("CPUUtilization"),
+			Namespace:          pulumi.String("AWS/EC2"),
+			Period:             pulumi.Int(120),
+			Statistic:          pulumi.String("Average"),
+			Threshold:          pulumi.Float64(80),
+		})
+		if err != nil {
+			return err
+		}
+		foo, err := route53.NewHealthCheck(ctx, "foo", &route53.HealthCheckArgs{
+			CloudwatchAlarmName:          foobar.Name,
+			CloudwatchAlarmRegion:        pulumi.String("us-west-2"),
+			InsufficientDataHealthStatus: pulumi.String("Healthy"),
+			Type:                         pulumi.String("CLOUDWATCH_METRIC"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

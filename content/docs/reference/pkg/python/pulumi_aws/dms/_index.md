@@ -3,7 +3,10 @@ title: Module dms
 title_tag: Module dms | Package pulumi_aws | Python SDK
 linktitle: dms
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="dms">
 <h1>dms<a class="headerlink" href="#dms" title="Permalink to this headline">¶</a></h1>
@@ -155,7 +158,6 @@ test = aws.dms.Endpoint(&quot;test&quot;,
     },
     username=&quot;test&quot;)
 ```
-
 
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.

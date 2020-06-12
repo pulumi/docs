@@ -13,7 +13,6 @@ meta_desc: "Explore the GetDomain function of the elasticsearch module, includin
 Use this data source to get information about an Elasticsearch Domain
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myDomain, err := elasticsearch.LookupDomain(ctx, &elasticsearch.LookupDomainArgs{
+			DomainName: "my-domain-name",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

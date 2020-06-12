@@ -3,7 +3,10 @@ title: Module elastictranscoder
 title_tag: Module elastictranscoder | Package pulumi_aws | Python SDK
 linktitle: elastictranscoder
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="elastictranscoder">
 <h1>elastictranscoder<a class="headerlink" href="#elastictranscoder" title="Permalink to this headline">¶</a></h1>

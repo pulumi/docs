@@ -17,7 +17,6 @@ Manages a CloudFormation StackSet Instance. Instances are managed in the account
 > **NOTE:** To retain the Stack during resource destroy, ensure `retain_stack` has been set to `true` in the state first. This must be completed _before_ a deployment that would destroy the resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudformation"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := cloudformation.NewStackSetInstance(ctx, "example", &cloudformation.StackSetInstanceArgs{
+			AccountId:    pulumi.String("123456789012"),
+			Region:       pulumi.String("us-east-1"),
+			StackSetName: pulumi.String(aws_cloudformation_stack_set.Example.Name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

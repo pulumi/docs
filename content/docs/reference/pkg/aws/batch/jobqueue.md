@@ -13,7 +13,6 @@ meta_desc: "Explore the JobQueue resource of the batch module, including example
 Provides a Batch Job Queue resource.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testQueue, err := batch.NewJobQueue(ctx, "testQueue", &batch.JobQueueArgs{
+			ComputeEnvironments: pulumi.StringArray{
+				pulumi.String(aws_batch_compute_environment.Test_environment_1.Arn),
+				pulumi.String(aws_batch_compute_environment.Test_environment_2.Arn),
+			},
+			Priority: pulumi.Int(1),
+			State:    pulumi.String("ENABLED"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

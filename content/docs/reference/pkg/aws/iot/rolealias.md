@@ -12,9 +12,6 @@ meta_desc: "Explore the RoleAlias resource of the iot module, including examples
 
 Provides an IoT role alias.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a RoleAlias Resource {#create}

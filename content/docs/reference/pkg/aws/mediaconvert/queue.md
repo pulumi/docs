@@ -13,7 +13,6 @@ meta_desc: "Explore the Queue resource of the mediaconvert module, including exa
 Provides an AWS Elemental MediaConvert Queue.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,7 +37,24 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/mediaconvert"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := mediaconvert.NewQueue(ctx, "test", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

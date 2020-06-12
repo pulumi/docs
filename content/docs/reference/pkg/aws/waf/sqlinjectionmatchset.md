@@ -13,7 +13,6 @@ meta_desc: "Explore the SqlInjectionMatchSet resource of the waf module, includi
 Provides a WAF SQL Injection Match Set Resource
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sqlInjectionMatchSet, err := waf.NewSqlInjectionMatchSet(ctx, "sqlInjectionMatchSet", &waf.SqlInjectionMatchSetArgs{
+			SqlInjectionMatchTuples: waf.SqlInjectionMatchSetSqlInjectionMatchTupleArray{
+				&waf.SqlInjectionMatchSetSqlInjectionMatchTupleArgs{
+					FieldToMatch: &waf.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs{
+						Type: pulumi.String("QUERY_STRING"),
+					},
+					TextTransformation: pulumi.String("URL_DECODE"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

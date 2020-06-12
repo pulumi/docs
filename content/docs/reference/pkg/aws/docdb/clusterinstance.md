@@ -20,7 +20,6 @@ Cluster, or you may specify different Cluster Instance resources with various
 `instance_class` sizes.
 
 
-
 {{% examples %}}
 ## Example Usage
 

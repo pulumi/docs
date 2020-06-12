@@ -12,9 +12,6 @@ meta_desc: "Explore the GetCoipPools function of the ec2 module, including examp
 
 Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetCoipPools {#using}

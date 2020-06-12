@@ -3,7 +3,10 @@ title: Module apigatewayv2
 title_tag: Module apigatewayv2 | Package pulumi_aws | Python SDK
 linktitle: apigatewayv2
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="apigatewayv2">
 <h1>apigatewayv2<a class="headerlink" href="#apigatewayv2" title="Permalink to this headline">¶</a></h1>
@@ -25,7 +28,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Api</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">protocol_type</span><span class="o">=</span><span class="s2">&quot;WEBSOCKET&quot;</span><span class="p">,</span>
-    <span class="n">route_selection_expression</span><span class="o">=</span><span class="s2">&quot;$$request.body.action&quot;</span><span class="p">)</span>
+    <span class="n">route_selection_expression</span><span class="o">=</span><span class="s2">&quot;$request.body.action&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -385,7 +388,7 @@ More information can be found in the <a class="reference external" href="https:/
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Authorizer</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">authorizer_type</span><span class="o">=</span><span class="s2">&quot;JWT&quot;</span><span class="p">,</span>
-    <span class="n">identity_sources</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;$$request.header.Authorization&quot;</span><span class="p">],</span>
+    <span class="n">identity_sources</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;$request.header.Authorization&quot;</span><span class="p">],</span>
     <span class="n">jwt_configuration</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;audience&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">],</span>
         <span class="s2">&quot;issuer&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">aws_cognito_user_pool</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">][</span><span class="s1">&#39;endpoint&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
@@ -1167,7 +1170,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
     <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
-<span class="s2">  &quot;$$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,</span>
+<span class="s2">  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,</span>
 <span class="s2">  &quot;title&quot;: &quot;ExampleModel&quot;,</span>
 <span class="s2">  &quot;type&quot;: &quot;object&quot;,</span>
 <span class="s2">  &quot;properties&quot;: {</span>
@@ -1291,7 +1294,7 @@ More information can be found in the <a class="reference external" href="https:/
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-    <span class="n">route_key</span><span class="o">=</span><span class="s2">&quot;$$default&quot;</span><span class="p">)</span>
+    <span class="n">route_key</span><span class="o">=</span><span class="s2">&quot;$default&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1466,7 +1469,7 @@ More information can be found in the <a class="reference external" href="https:/
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">RouteResponse</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">api_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_api</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">route_id</span><span class="o">=</span><span class="n">aws_apigatewayv2_route</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-    <span class="n">route_response_key</span><span class="o">=</span><span class="s2">&quot;$$default&quot;</span><span class="p">)</span>
+    <span class="n">route_response_key</span><span class="o">=</span><span class="s2">&quot;$default&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1858,8 +1861,8 @@ To enable private integration for REST APIs, use the <code class="docutils liter
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">VpcLink</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
-    <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ec2.SecurityGroup&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
-    <span class="n">subnet_ids</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ec2.getSubnetIds&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
+    <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_security_group&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnet_ids&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;Usage&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="p">})</span>

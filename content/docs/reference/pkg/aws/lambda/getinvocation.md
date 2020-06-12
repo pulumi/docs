@@ -14,9 +14,6 @@ Use this data source to invoke custom lambda functions as data source.
 The lambda function is invoked with [RequestResponse](https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_RequestSyntax)
 invocation type.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetInvocation {#using}

@@ -3,7 +3,10 @@ title: Module elasticache
 title_tag: Module elasticache | Package pulumi_aws | Python SDK
 linktitle: elasticache
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="elasticache">
 <h1>elasticache<a class="headerlink" href="#elasticache" title="Permalink to this headline">¶</a></h1>

@@ -14,110 +14,6 @@ Provides an IAM instance profile.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
-        {
-            AssumeRolePolicy = @"{
-    ""Version"": ""2012-10-17"",
-    ""Statement"": [
-        {
-            ""Action"": ""sts:AssumeRole"",
-            ""Principal"": {
-               ""Service"": ""ec2.amazonaws.com""
-            },
-            ""Effect"": ""Allow"",
-            ""Sid"": """"
-        }
-    ]
-}
-
-",
-            Path = "/",
-        });
-        var testProfile = new Aws.Iam.InstanceProfile("testProfile", new Aws.Iam.InstanceProfileArgs
-        {
-            Role = role.Name,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-role = aws.iam.Role("role",
-    assume_role_policy="""{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Principal": {
-               "Service": "ec2.amazonaws.com"
-            },
-            "Effect": "Allow",
-            "Sid": ""
-        }
-    ]
-}
-
-""",
-    path="/")
-test_profile = aws.iam.InstanceProfile("testProfile", role=role.name)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const role = new aws.iam.Role("role", {
-    assumeRolePolicy: `{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Principal": {
-               "Service": "ec2.amazonaws.com"
-            },
-            "Effect": "Allow",
-            "Sid": ""
-        }
-    ]
-}
-`,
-    path: "/",
-});
-const testProfile = new aws.iam.InstanceProfile("test_profile", {
-    role: role.name,
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a InstanceProfile Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -351,8 +247,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}
-A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
+    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
 </dl>
@@ -414,8 +309,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}
-A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
+    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
 </dl>
@@ -477,8 +371,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
         <span class="property-indicator"></span>
         <span class="property-type">string | Role[]</span>
     </dt>
-    <dd>{{% md %}}
-A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
+    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
 </dl>
@@ -538,10 +431,9 @@ A list of role names to include in the profile.  The current default is 1.  If y
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=>]</span>
+        <span class="property-type">List[Role, Default=String>]</span>
     </dt>
-    <dd>{{% md %}}
-A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
+    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
 </dl>
@@ -962,8 +854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}
-A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
+    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1058,8 +949,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}
-A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
+    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1154,8 +1044,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
         <span class="property-indicator"></span>
         <span class="property-type">string | Role[]</span>
     </dt>
-    <dd>{{% md %}}
-A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
+    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1248,10 +1137,9 @@ A list of role names to include in the profile.  The current default is 1.  If y
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=>]</span>
+        <span class="property-type">List[Role, Default=String>]</span>
     </dt>
-    <dd>{{% md %}}
-A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
+    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
     <dt class="property-optional"

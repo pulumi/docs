@@ -13,7 +13,6 @@ meta_desc: "Explore the GetLocalGateway function of the ec2 module, including ex
 Provides details about an EC2 Local Gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		selected, err := ec2.LookupLocalGateway(ctx, &ec2.LookupLocalGatewayArgs{
+			Id: localGatewayId,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,10 @@ title: Module iam
 title_tag: Module iam | Package pulumi_aws | Python SDK
 linktitle: iam
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="iam">
 <h1>iam<a class="headerlink" href="#iam" title="Permalink to this headline">¶</a></h1>

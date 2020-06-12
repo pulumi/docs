@@ -3,7 +3,10 @@ title: Module datasync
 title_tag: Module datasync | Package pulumi_aws | Python SDK
 linktitle: datasync
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="datasync">
 <h1>datasync<a class="headerlink" href="#datasync" title="Permalink to this headline">¶</a></h1>

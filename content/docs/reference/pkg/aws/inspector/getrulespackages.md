@@ -15,7 +15,6 @@ Inspector Rules Packages which can be used by AWS Inspector within the region
 configured in the provider.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -31,7 +30,7 @@ class MyStack : Stack
     public MyStack()
     {
         var rules = Output.Create(Aws.Inspector.GetRulesPackages.InvokeAsync());
-        // e.g. Use in aws.inspector.AssessmentTemplate
+        // e.g. Use in aws_inspector_assessment_template
         var @group = new Aws.Inspector.ResourceGroup("group", new Aws.Inspector.ResourceGroupArgs
         {
             Tags = 
@@ -45,7 +44,7 @@ class MyStack : Stack
         });
         var assessmentAssessmentTemplate = new Aws.Inspector.AssessmentTemplate("assessmentAssessmentTemplate", new Aws.Inspector.AssessmentTemplateArgs
         {
-            Duration = "60",
+            Duration = 60,
             RulesPackageArns = rules.Apply(rules => rules.Arns),
             TargetArn = assessmentAssessmentTarget.Arn,
         });
@@ -65,7 +64,7 @@ import pulumi
 import pulumi_aws as aws
 
 rules = aws.inspector.get_rules_packages()
-# e.g. Use in aws.inspector.AssessmentTemplate
+# e.g. Use in aws_inspector_assessment_template
 group = aws.inspector.ResourceGroup("group", tags={
     "test": "test",
 })
@@ -84,7 +83,7 @@ import * as aws from "@pulumi/aws";
 
 // Declare the data source
 const rules = pulumi.output(aws.inspector.getRulesPackages({ async: true }));
-// e.g. Use in aws.inspector.AssessmentTemplate
+// e.g. Use in aws_inspector_assessment_template
 const group = new aws.inspector.ResourceGroup("group", {
     tags: {
         test: "test",

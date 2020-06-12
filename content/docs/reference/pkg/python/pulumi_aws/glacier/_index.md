@@ -3,7 +3,10 @@ title: Module glacier
 title_tag: Module glacier | Package pulumi_aws | Python SDK
 linktitle: glacier
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="glacier">
 <h1>glacier<a class="headerlink" href="#glacier" title="Permalink to this headline">¶</a></h1>
@@ -23,7 +26,7 @@ anything, please consult the source <a class="reference external" href="https://
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
-<span class="n">sns</span><span class="o">.</span><span class="n">Topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;awsSnsTopic&quot;</span><span class="p">)</span>
+<span class="n">aws_sns_topic</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sns</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;awsSnsTopic&quot;</span><span class="p">)</span>
 <span class="n">my_archive</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glacier</span><span class="o">.</span><span class="n">Vault</span><span class="p">(</span><span class="s2">&quot;myArchive&quot;</span><span class="p">,</span>
     <span class="n">access_policy</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
 <span class="s2">    &quot;Version&quot;:&quot;2012-10-17&quot;,</span>
@@ -214,7 +217,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glacier</span><span class="o">.</span><span class="n">VaultLock</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">complete_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">policy</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;iam.getPolicyDocument&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;json&quot;</span><span class="p">],</span>
+    <span class="n">policy</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_iam_policy_document&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;json&quot;</span><span class="p">],</span>
     <span class="n">vault_name</span><span class="o">=</span><span class="n">aws_glacier_vault</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
 </pre></div>
 </div>

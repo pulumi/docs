@@ -3,7 +3,10 @@ title: Module glue
 title_tag: Module glue | Package pulumi_aws | Python SDK
 linktitle: glue
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="glue">
 <h1>glue<a class="headerlink" href="#glue" title="Permalink to this headline">¶</a></h1>
@@ -25,7 +28,7 @@ anything, please consult the source <a class="reference external" href="https://
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
-<span class="n">glue</span><span class="o">.</span><span class="n">CatalogDatabase</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogDatabase</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogDatabase&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyCatalogDatabase&quot;</span><span class="p">)</span>
+<span class="n">aws_glue_catalog_database</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogDatabase</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogDatabase&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyCatalogDatabase&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -137,7 +140,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
-<span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogTable&quot;</span><span class="p">,</span>
+<span class="n">aws_glue_catalog_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogTable&quot;</span><span class="p">,</span>
     <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;MyCatalogDatabase&quot;</span><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyCatalogTable&quot;</span><span class="p">)</span>
 </pre></div>
@@ -145,7 +148,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
-<span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogTable&quot;</span><span class="p">,</span>
+<span class="n">aws_glue_catalog_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">CatalogTable</span><span class="p">(</span><span class="s2">&quot;awsGlueCatalogTable&quot;</span><span class="p">,</span>
     <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;MyCatalogDatabase&quot;</span><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyCatalogTable&quot;</span><span class="p">,</span>
     <span class="n">parameters</span><span class="o">=</span><span class="p">{</span>
@@ -1510,7 +1513,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;jobBookmarksEncryptionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;DISABLED&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="s2">&quot;s3Encryption&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;kms_key_arn&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kms.Key&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;kms_key_arn&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_kms_key&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;s3EncryptionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;SSE-KMS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">})</span>

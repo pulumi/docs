@@ -3,7 +3,10 @@ title: Module simpledb
 title_tag: Module simpledb | Package pulumi_aws | Python SDK
 linktitle: simpledb
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="simpledb">
 <h1>simpledb<a class="headerlink" href="#simpledb" title="Permalink to this headline">¶</a></h1>

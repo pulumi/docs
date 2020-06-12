@@ -3,7 +3,10 @@ title: Module appsync
 title_tag: Module appsync | Package pulumi_aws | Python SDK
 linktitle: appsync
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="appsync">
 <h1>appsync<a class="headerlink" href="#appsync" title="Permalink to this headline">¶</a></h1>
@@ -413,15 +416,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="s2">    &quot;method&quot;: &quot;GET&quot;,</span>
 <span class="s2">    &quot;resourcePath&quot;: &quot;/&quot;,</span>
 <span class="s2">    &quot;params&quot;:{</span>
-<span class="s2">        &quot;headers&quot;: $$utils.http.copyheaders($$ctx.request.headers)</span>
+<span class="s2">        &quot;headers&quot;: $utils.http.copyheaders($ctx.request.headers)</span>
 <span class="s2">    }</span>
 <span class="s2">}</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
-    <span class="n">response_mapping_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;#if($$ctx.result.statusCode == 200)</span>
-<span class="s2">    $$ctx.result.body</span>
+    <span class="n">response_mapping_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;#if($ctx.result.statusCode == 200)</span>
+<span class="s2">    $ctx.result.body</span>
 <span class="s2">#else</span>
-<span class="s2">    $$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)</span>
+<span class="s2">    $utils.appendError($ctx.result.body, $ctx.result.statusCode)</span>
 <span class="s2">#end</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
@@ -575,7 +578,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;AMAZON_COGNITO_USER_POOLS&quot;</span><span class="p">,</span>
     <span class="n">user_pool_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;awsRegion&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;.getRegion&quot;</span><span class="p">][</span><span class="s2">&quot;current&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;awsRegion&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_region&quot;</span><span class="p">][</span><span class="s2">&quot;current&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
         <span class="s2">&quot;default_action&quot;</span><span class="p">:</span> <span class="s2">&quot;DENY&quot;</span><span class="p">,</span>
         <span class="s2">&quot;user_pool_id&quot;</span><span class="p">:</span> <span class="n">aws_cognito_user_pool</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">})</span>
@@ -948,8 +951,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">api_id</span><span class="o">=</span><span class="n">test_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">caching_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;cachingKeys&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;$$context.identity.sub&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;$$context.arguments.id&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;$context.identity.sub&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;$context.arguments.id&quot;</span><span class="p">,</span>
         <span class="p">],</span>
         <span class="s2">&quot;ttl&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
     <span class="p">},</span>
@@ -960,15 +963,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="s2">    &quot;method&quot;: &quot;GET&quot;,</span>
 <span class="s2">    &quot;resourcePath&quot;: &quot;/&quot;,</span>
 <span class="s2">    &quot;params&quot;:{</span>
-<span class="s2">        &quot;headers&quot;: $$utils.http.copyheaders($$ctx.request.headers)</span>
+<span class="s2">        &quot;headers&quot;: $utils.http.copyheaders($ctx.request.headers)</span>
 <span class="s2">    }</span>
 <span class="s2">}</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
-    <span class="n">response_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;#if($$ctx.result.statusCode == 200)</span>
-<span class="s2">    $$ctx.result.body</span>
+    <span class="n">response_template</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;#if($ctx.result.statusCode == 200)</span>
+<span class="s2">    $ctx.result.body</span>
 <span class="s2">#else</span>
-<span class="s2">    $$utils.appendError($$ctx.result.body, $$ctx.result.statusCode)</span>
+<span class="s2">    $utils.appendError($ctx.result.body, $ctx.result.statusCode)</span>
 <span class="s2">#end</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
@@ -986,7 +989,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">],</span>
     <span class="p">},</span>
     <span class="n">request_template</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">,</span>
-    <span class="n">response_template</span><span class="o">=</span><span class="s2">&quot;$$util.toJson($$ctx.result)&quot;</span><span class="p">,</span>
+    <span class="n">response_template</span><span class="o">=</span><span class="s2">&quot;$util.toJson($ctx.result)&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Mutation&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

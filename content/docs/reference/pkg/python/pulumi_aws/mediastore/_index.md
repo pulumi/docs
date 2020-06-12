@@ -3,7 +3,10 @@ title: Module mediastore
 title_tag: Module mediastore | Package pulumi_aws | Python SDK
 linktitle: mediastore
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aws" >}}
 
 <div class="section" id="mediastore">
 <h1>mediastore<a class="headerlink" href="#mediastore" title="Permalink to this headline">¶</a></h1>
