@@ -56,6 +56,28 @@ class MyStack : Stack
     public Output<string> NetappPoolId { get; set; }
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := netapp.LookupPool(ctx, &netapp.LookupPoolArgs{
+			ResourceGroupName: "acctestRG",
+			AccountName:       "acctestnetappaccount",
+			Name:              "acctestnetapppool",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("netappPoolId", example.Id)
+		return nil
+	})
+}
+```
 
 
 

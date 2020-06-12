@@ -13,7 +13,6 @@ meta_desc: "Explore the StoreFirewallRule resource of the datalake module, inclu
 Manages a Azure Data Lake Store Firewall Rule.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,7 +50,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datalake"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleStore, err := datalake.NewStore(ctx, "exampleStore", &datalake.StoreArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		exampleStoreFirewallRule, err := datalake.NewStoreFirewallRule(ctx, "exampleStoreFirewallRule", &datalake.StoreFirewallRuleArgs{
+			AccountName:       exampleStore.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			StartIpAddress:    pulumi.String("1.2.3.4"),
+			EndIpAddress:      pulumi.String("2.3.4.5"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

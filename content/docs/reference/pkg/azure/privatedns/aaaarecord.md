@@ -13,7 +13,6 @@ meta_desc: "Explore the AAAARecord resource of the privatedns module, including 
 Enables you to manage DNS AAAA Records within Azure Private DNS.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,7 +53,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatedns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testResourceGroup, err := core.NewResourceGroup(ctx, "testResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		testZone, err := privatedns.NewZone(ctx, "testZone", &privatedns.ZoneArgs{
+			ResourceGroupName: testResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		testAAAARecord, err := privatedns.NewAAAARecord(ctx, "testAAAARecord", &privatedns.AAAARecordArgs{
+			ZoneName:          testZone.Name,
+			ResourceGroupName: testResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			Records: pulumi.StringArray{
+				pulumi.String("fd5d:70bc:930e:d008:0000:0000:0000:7334"),
+				pulumi.String("fd5d:70bc:930e:d008::7335"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

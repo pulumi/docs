@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPolicyDefintion function of the policy module, includ
 Use this data source to access information about a Policy Definition, both custom and built in. Retrieves Policy Definitions from your current subscription by default.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,7 +41,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := policy.LookupPolicyDefintion(ctx, &policy.LookupPolicyDefintionArgs{
+			DisplayName: "Allowed resource types",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

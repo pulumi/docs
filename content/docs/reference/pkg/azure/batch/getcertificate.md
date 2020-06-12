@@ -13,7 +13,6 @@ meta_desc: "Explore the GetCertificate function of the batch module, including e
 Use this data source to access information about an existing certificate in a Batch Account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := batch.LookupCertificate(ctx, &batch.LookupCertificateArgs{
+			Name:              "SHA1-42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
+			AccountName:       "examplebatchaccount",
+			ResourceGroupName: "example",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("thumbprint", example.Thumbprint)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

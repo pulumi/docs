@@ -13,7 +13,6 @@ meta_desc: "Explore the Account resource of the storage module, including exampl
 Manages an Azure Storage Account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,7 +49,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("GRS"),
+			Tags: map[string]interface{}{
+				"environment": "staging",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the ProtectedVM resource of the backup module, including exa
 Manages Azure Backup for an Azure VM
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,7 +61,56 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVault, err := recoveryservices.NewVault(ctx, "exampleVault", &recoveryservices.VaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePolicyVM, err := backup.NewPolicyVM(ctx, "examplePolicyVM", &backup.PolicyVMArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			RecoveryVaultName: exampleVault.Name,
+			Backup: &backup.PolicyVMBackupArgs{
+				Frequency: pulumi.String("Daily"),
+				Time:      pulumi.String("23:00"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		vm1, err := backup.NewProtectedVM(ctx, "vm1", &backup.ProtectedVMArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			RecoveryVaultName: exampleVault.Name,
+			SourceVmId:        pulumi.String(azurerm_virtual_machine.Example.Id),
+			BackupPolicyId:    examplePolicyVM.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

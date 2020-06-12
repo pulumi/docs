@@ -15,7 +15,6 @@ Manages an IotHub Storage Container Endpoint
 > **NOTE:** Endpoints can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azurerm_iothub_endpoint_*` resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a `azurerm_iothub_endpoint_*` resource and another endpoint of a different type directly on the `azure.iot.IoTHub` resource is not supported.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -74,7 +73,68 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleContainer, err := storage.NewContainer(ctx, "exampleContainer", &storage.ContainerArgs{
+			StorageAccountName:  exampleAccount.Name,
+			ContainerAccessType: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleIoTHub, err := iot.NewIoTHub(ctx, "exampleIoTHub", &iot.IoTHubArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Sku: &iot.IoTHubSkuArgs{
+				Name:     pulumi.String("S1"),
+				Capacity: pulumi.Int(1),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleEndpointStorageContainer, err := iot.NewEndpointStorageContainer(ctx, "exampleEndpointStorageContainer", &iot.EndpointStorageContainerArgs{
+			ResourceGroupName:       exampleResourceGroup.Name,
+			IothubName:              exampleIoTHub.Name,
+			ContainerName:           pulumi.String("acctestcont"),
+			ConnectionString:        exampleAccount.PrimaryBlobConnectionString,
+			FileNameFormat:          pulumi.String("{iothub}/{partition}_{YYYY}_{MM}_{DD}_{HH}_{mm}"),
+			BatchFrequencyInSeconds: pulumi.Int(60),
+			MaxChunkSizeInBytes:     pulumi.Int(10485760),
+			Encoding:                pulumi.String("JSON"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

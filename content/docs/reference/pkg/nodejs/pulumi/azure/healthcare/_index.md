@@ -3,7 +3,7 @@ title: "Module healthcare"
 title_tag: "Module healthcare | Package @pulumi/azure | Node.js SDK"
 linktitle: "healthcare"
 meta_desc: "Explore members of the healthcare module in the @pulumi/azure package."
-git_sha: "b3cc20bdfecc18d2930ee34b92e74fb2d96db10d"
+git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L54">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ const example = new azure.healthcare.Service("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -102,7 +102,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L64">method <b>get</b></a>
 </h4>
 
 
@@ -113,14 +113,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L54">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L75">method <b>isInstance</b></a>
 </h4>
 
 
@@ -131,12 +131,12 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-accessPolicyObjectIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L82">property <b>accessPolicyObjectIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L82">property <b>accessPolicyObjectIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessPolicyObjectIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-authenticationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L86">property <b>authenticationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L86">property <b>authenticationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAuthenticationConfiguration'>ServiceAuthenticationConfiguration</a>&gt;;</code></pre>
@@ -144,7 +144,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An `authenticationConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="Service-corsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L90">property <b>corsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L90">property <b>corsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>corsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceCorsConfiguration'>ServiceCorsConfiguration</a>&gt;;</code></pre>
@@ -152,7 +152,7 @@ An `authenticationConfiguration` block as defined below.
 A `corsConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="Service-cosmosdbThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L94">property <b>cosmosdbThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L94">property <b>cosmosdbThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cosmosdbThroughput: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ A `corsConfiguration` block as defined below.
 The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L54">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -169,7 +169,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L98">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L98">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ deployments and may be missing (undefined) during planning phases.
 The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 
 <h4 class="pdoc-member-header" id="Service-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L102">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L102">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` 
 Specifies the supported Azure Region where the Service should be created.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ Specifies the supported Azure Region where the Service should be created.
 The name of the service instance. Used for service endpoint, must be unique within the audience.
 
 <h4 class="pdoc-member-header" id="Service-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L110">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L110">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ The name of the service instance. Used for service endpoint, must be unique with
 The name of the Resource Group in which to create the Service.
 
 <h4 class="pdoc-member-header" id="Service-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L114">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L114">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ The name of the Resource Group in which to create the Service.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L54">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -220,7 +220,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L28">
         Function <strong>getService</strong>
     </a>
 </h3>
@@ -250,7 +250,7 @@ export const healthcareServiceId = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L46">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -260,7 +260,7 @@ export const healthcareServiceId = example.then(example => example.id);
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L50">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L50">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -268,7 +268,7 @@ A collection of arguments for invoking getService.
 The Azure Region where the Service is located.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -276,7 +276,7 @@ The Azure Region where the Service is located.
 Specifies the name of the Healthcare Service.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L58">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L58">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -284,7 +284,7 @@ Specifies the name of the Healthcare Service.
 The name of the Resource Group in which the Healthcare Service exists.
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L64">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -294,12 +294,12 @@ The name of the Resource Group in which the Healthcare Service exists.
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-accessPolicyObjectIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L65">property <b>accessPolicyObjectIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L65">property <b>accessPolicyObjectIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessPolicyObjectIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-authenticationConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L69">property <b>authenticationConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L69">property <b>authenticationConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAuthenticationConfiguration'>GetServiceAuthenticationConfiguration</a>[];</code></pre>
@@ -307,7 +307,7 @@ A collection of values returned by getService.
 An `authenticationConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-corsConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L73">property <b>corsConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L73">property <b>corsConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>corsConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceCorsConfiguration'>GetServiceCorsConfiguration</a>[];</code></pre>
@@ -315,12 +315,12 @@ An `authenticationConfiguration` block as defined below.
 A `corsConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-cosmosdbThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L74">property <b>cosmosdbThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L74">property <b>cosmosdbThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cosmosdbThroughput: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -328,7 +328,7 @@ A `corsConfiguration` block as defined below.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L82">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L82">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -336,7 +336,7 @@ The provider-assigned unique ID for this managed resource.
 The type of the service.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L86">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L86">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -344,17 +344,17 @@ The type of the service.
 The Azure Region where the Service is located.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L88">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L88">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/getService.ts#L92">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/getService.ts#L92">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -362,7 +362,7 @@ The Azure Region where the Service is located.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L208">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -372,12 +372,12 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-accessPolicyObjectIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L209">property <b>accessPolicyObjectIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L209">property <b>accessPolicyObjectIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessPolicyObjectIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-authenticationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L213">property <b>authenticationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L213">property <b>authenticationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAuthenticationConfiguration'>ServiceAuthenticationConfiguration</a>&gt;;</code></pre>
@@ -385,7 +385,7 @@ The set of arguments for constructing a Service resource.
 An `authenticationConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-corsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L217">property <b>corsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L217">property <b>corsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>corsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCorsConfiguration'>ServiceCorsConfiguration</a>&gt;;</code></pre>
@@ -393,7 +393,7 @@ An `authenticationConfiguration` block as defined below.
 A `corsConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-cosmosdbThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L221">property <b>cosmosdbThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L221">property <b>cosmosdbThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cosmosdbThroughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ A `corsConfiguration` block as defined below.
 The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L225">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L225">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ The provisioned throughput for the backing database. Range of `400`-`1000`. Defa
 The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L229">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L229">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` 
 Specifies the supported Azure Region where the Service should be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L233">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L233">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ Specifies the supported Azure Region where the Service should be created.
 The name of the service instance. Used for service endpoint, must be unique within the audience.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L237">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L237">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ The name of the service instance. Used for service endpoint, must be unique with
 The name of the Resource Group in which to create the Service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L241">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L241">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -441,7 +441,7 @@ The name of the Resource Group in which to create the Service.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L169">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -451,12 +451,12 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-accessPolicyObjectIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L170">property <b>accessPolicyObjectIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L170">property <b>accessPolicyObjectIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessPolicyObjectIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceState-authenticationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L174">property <b>authenticationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L174">property <b>authenticationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAuthenticationConfiguration'>ServiceAuthenticationConfiguration</a>&gt;;</code></pre>
@@ -464,7 +464,7 @@ Input properties used for looking up and filtering Service resources.
 An `authenticationConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-corsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L178">property <b>corsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L178">property <b>corsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>corsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCorsConfiguration'>ServiceCorsConfiguration</a>&gt;;</code></pre>
@@ -472,7 +472,7 @@ An `authenticationConfiguration` block as defined below.
 A `corsConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-cosmosdbThroughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L182">property <b>cosmosdbThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L182">property <b>cosmosdbThroughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cosmosdbThroughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ A `corsConfiguration` block as defined below.
 The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 
 <h4 class="pdoc-member-header" id="ServiceState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L186">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L186">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -488,7 +488,7 @@ The provisioned throughput for the backing database. Range of `400`-`1000`. Defa
 The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 
 <h4 class="pdoc-member-header" id="ServiceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L190">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L190">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -496,7 +496,7 @@ The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` 
 Specifies the supported Azure Region where the Service should be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -504,7 +504,7 @@ Specifies the supported Azure Region where the Service should be created.
 The name of the service instance. Used for service endpoint, must be unique within the audience.
 
 <h4 class="pdoc-member-header" id="ServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L198">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L198">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ The name of the service instance. Used for service endpoint, must be unique with
 The name of the Resource Group in which to create the Service.
 
 <h4 class="pdoc-member-header" id="ServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/healthcare/service.ts#L202">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/healthcare/service.ts#L202">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

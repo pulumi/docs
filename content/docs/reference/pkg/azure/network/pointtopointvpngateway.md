@@ -13,7 +13,6 @@ meta_desc: "Explore the PointToPointVpnGateway resource of the network module, i
 Manages a Point-to-Site VPN Gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.NewPointToPointVpnGateway(ctx, "example", &network.PointToPointVpnGatewayArgs{
+			Location:                 pulumi.String(azurerm_resource_group.Example.Location),
+			ResourceGroupName:        pulumi.String(azurerm_resource_group.Example.Resource_group_name),
+			VirtualHubId:             pulumi.String(azurerm_virtual_hub.Example.Id),
+			VpnServerConfigurationId: pulumi.String(azurerm_vpn_server_configuration.Example.Id),
+			ScaleUnit:                pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

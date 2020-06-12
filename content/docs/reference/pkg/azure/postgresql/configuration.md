@@ -17,7 +17,6 @@ Sets a PostgreSQL Configuration value on a PostgreSQL Server.
 > **Note:** Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -63,7 +62,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/postgresql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := postgresql.NewServer(ctx, "exampleServer", &postgresql.ServerArgs{
+			Location:                   exampleResourceGroup.Location,
+			ResourceGroupName:          exampleResourceGroup.Name,
+			SkuName:                    pulumi.String("B_Gen5_2"),
+			StorageMb:                  pulumi.Int(5120),
+			BackupRetentionDays:        pulumi.Int(7),
+			GeoRedundantBackupEnabled:  pulumi.Bool(false),
+			AutoGrowEnabled:            pulumi.Bool(true),
+			AdministratorLogin:         pulumi.String("psqladminun"),
+			AdministratorLoginPassword: pulumi.String("H@Sh1CoR3!"),
+			Version:                    pulumi.String("9.5"),
+			SslEnforcementEnabled:      pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleConfiguration, err := postgresql.NewConfiguration(ctx, "exampleConfiguration", &postgresql.ConfigurationArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleServer.Name,
+			Value:             pulumi.String("on"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

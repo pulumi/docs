@@ -13,7 +13,6 @@ meta_desc: "Explore the PtrRecord resource of the dns module, including examples
 Enables you to manage DNS PTR Records within Azure DNS.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,7 +52,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleZone, err := dns.NewZone(ctx, "exampleZone", &dns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		examplePtrRecord, err := dns.NewPtrRecord(ctx, "examplePtrRecord", &dns.PtrRecordArgs{
+			ZoneName:          exampleZone.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Ttl:               pulumi.Int(300),
+			Records: pulumi.StringArray{
+				pulumi.String("yourdomain.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

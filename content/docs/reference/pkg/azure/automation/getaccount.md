@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAccount function of the automation module, including 
 Use this data source to access information about an existing Automation Account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := automation.LookupAccount(ctx, &automation.LookupAccountArgs{
+			Name:              "example-account",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("automationAccountId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

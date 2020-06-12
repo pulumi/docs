@@ -13,7 +13,6 @@ meta_desc: "Explore the GetDatabase function of the sql module, including exampl
 Use this data source to access information about an existing SQL Azure Database.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := sql.LookupDatabase(ctx, &sql.LookupDatabaseArgs{
+			Name:              "example_db",
+			ServerName:        "example_db_server",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("sqlDatabaseId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -339,7 +359,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the collation. 
+    <dd>{{% md %}}The name of the collation.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -478,7 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the collation. 
+    <dd>{{% md %}}The name of the collation.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -617,7 +637,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the collation. 
+    <dd>{{% md %}}The name of the collation.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -756,7 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the collation. 
+    <dd>{{% md %}}The name of the collation.
 {{% /md %}}</dd>
 
     <dt class="property-"

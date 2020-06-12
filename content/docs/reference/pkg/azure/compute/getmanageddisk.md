@@ -13,7 +13,6 @@ meta_desc: "Explore the GetManagedDisk function of the compute module, including
 Use this data source to access information about an existing Managed Disk.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		existing, err := compute.LookupManagedDisk(ctx, &compute.LookupManagedDiskArgs{
+			Name:              "example-datadisk",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", existing.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

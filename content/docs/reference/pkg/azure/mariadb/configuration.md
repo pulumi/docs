@@ -12,9 +12,6 @@ meta_desc: "Explore the Configuration resource of the mariadb module, including 
 
 Sets a MariaDB Configuration value on a MariaDB Server.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Configuration Resource {#create}

@@ -12,9 +12,6 @@ meta_desc: "Explore the WindowsVirtualMachine resource of the devtest module, in
 
 Manages a Windows Virtual Machine within a Dev Test Lab.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a WindowsVirtualMachine Resource {#create}

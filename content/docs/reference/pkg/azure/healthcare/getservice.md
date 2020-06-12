@@ -13,7 +13,6 @@ meta_desc: "Explore the GetService function of the healthcare module, including 
 Use this data source to access information about an existing Healthcare Service
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := healthcare.LookupService(ctx, &healthcare.LookupServiceArgs{
+			Name:              "example-healthcare_service",
+			ResourceGroupName: "example-resources",
+			Location:          "westus2",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("healthcareServiceId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -771,7 +791,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The intended audience to receive authentication tokens for the service. 
+    <dd>{{% md %}}The intended audience to receive authentication tokens for the service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -782,7 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service. 
+    <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -811,7 +831,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The intended audience to receive authentication tokens for the service. 
+    <dd>{{% md %}}The intended audience to receive authentication tokens for the service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -822,7 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service. 
+    <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -851,7 +871,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The intended audience to receive authentication tokens for the service. 
+    <dd>{{% md %}}The intended audience to receive authentication tokens for the service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -862,7 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service. 
+    <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -891,7 +911,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The intended audience to receive authentication tokens for the service. 
+    <dd>{{% md %}}The intended audience to receive authentication tokens for the service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -902,7 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service. 
+    <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service.
 {{% /md %}}</dd>
 
     <dt class="property-required"

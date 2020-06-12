@@ -13,7 +13,6 @@ meta_desc: "Explore the ActiveDirectoryAdministrator resource of the sql module,
 Allows you to set a user or group as the AD administrator for an Azure SQL server
 
 
-
 {{% examples %}}
 ## Example Usage
 

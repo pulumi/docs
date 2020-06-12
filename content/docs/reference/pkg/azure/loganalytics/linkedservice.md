@@ -12,9 +12,6 @@ meta_desc: "Explore the LinkedService resource of the loganalytics module, inclu
 
 Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a LinkedService Resource {#create}

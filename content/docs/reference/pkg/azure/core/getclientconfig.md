@@ -13,7 +13,6 @@ meta_desc: "Explore the GetClientConfig function of the core module, including e
 Use this data source to access the configuration of the AzureRM provider.
 
 
-
 {{% examples %}}
 ## Example Usage
 

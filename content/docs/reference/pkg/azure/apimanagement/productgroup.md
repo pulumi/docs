@@ -13,7 +13,6 @@ meta_desc: "Explore the ProductGroup resource of the apimanagement module, inclu
 Manages an API Management Product Assignment to a Group.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,7 +68,52 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleService, err := apimanagement.LookupService(ctx, &apimanagement.LookupServiceArgs{
+			Name:              "example-api",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleProduct, err := apimanagement.LookupProduct(ctx, &apimanagement.LookupProductArgs{
+			ProductId:         "my-product",
+			ApiManagementName: exampleService.Name,
+			ResourceGroupName: exampleService.ResourceGroupName,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleGroup, err := apimanagement.LookupGroup(ctx, &apimanagement.LookupGroupArgs{
+			Name:              "my-group",
+			ApiManagementName: exampleService.Name,
+			ResourceGroupName: exampleService.ResourceGroupName,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleProductGroup, err := apimanagement.NewProductGroup(ctx, "exampleProductGroup", &apimanagement.ProductGroupArgs{
+			ProductId:         pulumi.String(exampleProduct.ProductId),
+			GroupName:         pulumi.String(exampleGroup.Name),
+			ApiManagementName: pulumi.String(exampleService.Name),
+			ResourceGroupName: pulumi.String(exampleService.ResourceGroupName),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

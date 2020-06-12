@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPlatformImage function of the compute module, includi
 Use this data source to access information about a Platform Image.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := compute.LookupPlatformImage(ctx, &compute.LookupPlatformImageArgs{
+			Location:  "West Europe",
+			Publisher: "Canonical",
+			Offer:     "UbuntuServer",
+			Sku:       "16.04-LTS",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

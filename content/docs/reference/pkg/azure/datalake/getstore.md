@@ -13,7 +13,6 @@ meta_desc: "Explore the GetStore function of the datalake module, including exam
 Use this data source to access information about an existing Data Lake Store.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := datalake.LookupStore(ctx, &datalake.LookupStoreArgs{
+			Name:              "testdatalake",
+			ResourceGroupName: "testdatalake",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("dataLakeStoreId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

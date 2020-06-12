@@ -17,7 +17,6 @@ provides both a standalone Route resource, and allows for Routes to be defined i
 At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleRouteTable, err := network.NewRouteTable(ctx, "exampleRouteTable", &network.RouteTableArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleRoute, err := network.NewRoute(ctx, "exampleRoute", &network.RouteArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			RouteTableName:    exampleRouteTable.Name,
+			AddressPrefix:     pulumi.String("10.1.0.0/16"),
+			NextHopType:       pulumi.String("vnetlocal"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

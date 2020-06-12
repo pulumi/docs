@@ -13,7 +13,6 @@ meta_desc: "Explore the GetNetworkSecurityGroup function of the network module, 
 Use this data source to access information about an existing Network Security Group.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupNetworkSecurityGroup(ctx, &network.LookupNetworkSecurityGroupArgs{
+			Name:              azurerm_network_security_group.Example.Name,
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("location", example.Location)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

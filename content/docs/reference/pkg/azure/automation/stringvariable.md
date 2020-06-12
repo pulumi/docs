@@ -13,9 +13,6 @@ meta_desc: "Explore the StringVariable resource of the automation module, includ
 Manages a string variable in Azure Automation
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a StringVariable Resource {#create}

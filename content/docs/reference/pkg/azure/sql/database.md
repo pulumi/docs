@@ -12,9 +12,6 @@ meta_desc: "Explore the Database resource of the sql module, including examples,
 
 Allows you to manage an Azure SQL Database
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Database Resource {#create}

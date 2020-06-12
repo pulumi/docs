@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPool function of the batch module, including examples
 Use this data source to access information about an existing Batch pool
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := batch.LookupPool(ctx, &batch.LookupPoolArgs{
+			AccountName:       "testbatchaccount",
+			Name:              "testbatchpool",
+			ResourceGroupName: "test",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,7 +3,7 @@ title: "Module managementresource"
 title_tag: "Module managementresource | Package @pulumi/azure | Node.js SDK"
 linktitle: "managementresource"
 meta_desc: "Explore members of the managementresource module in the @pulumi/azure package."
-git_sha: "b3cc20bdfecc18d2930ee34b92e74fb2d96db10d"
+git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ManangementLock" data-link-title="ManangementLock">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L48">
         Resource <strong>ManangementLock</strong>
     </a>
 </h3>
@@ -43,35 +43,23 @@ azure.managementresource.ManangementLock has been deprecated in favor of azure.m
 
 Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.
 
-#### Example Usage (Subscription Level Lock)
+#### Example Usage
+
+##### Subscription Level Lock)
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const current = azure.core.getSubscription({});
-const subscriptionLevel = new azure.management.Lock("subscription-level", {
+const subscription_level = new azure.management.Lock("subscription-level", {
     scope: current.then(current => current.id),
     lockLevel: "CanNotDelete",
     notes: "Items can't be deleted in this subscription!",
 });
 ```
 
-## Example Usage (Resource Group Level Lock)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
-const resourceGroupLevel = new azure.management.Lock("resource-group-level", {
-    scope: example.id,
-    lockLevel: "ReadOnly",
-    notes: "This Resource Group is Read-Only",
-});
-```
-
-#### Example Usage (Resource Level Lock)
+##### Resource Level Lock)
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -84,7 +72,7 @@ const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
     allocationMethod: "Static",
     idleTimeoutInMinutes: 30,
 });
-const publicIp = new azure.management.Lock("public-ip", {
+const public_ip = new azure.management.Lock("public-ip", {
     scope: examplePublicIp.id,
     lockLevel: "CanNotDelete",
     notes: "Locked because it's needed by a third-party",
@@ -92,7 +80,7 @@ const publicIp = new azure.management.Lock("public-ip", {
 ```
 
 <h4 class="pdoc-member-header" id="ManangementLock-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L92"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -107,7 +95,7 @@ azure.managementresource.ManangementLock has been deprecated in favor of azure.m
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ManangementLock(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ManangementLockArgs'>ManangementLockArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ManangementLock-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -118,14 +106,14 @@ Get an existing ManangementLock resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ManangementLock-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ManangementLock-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L82">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -136,7 +124,7 @@ Returns true if the given object is an instance of ManangementLock.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ManangementLock-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -145,7 +133,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ManangementLock-lockLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L92">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L80">property <b>lockLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lockLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +141,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the Level to be used for this Lock. Possible values are `CanNotDelete` and `ReadOnly`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLock-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +149,7 @@ Specifies the Level to be used for this Lock. Possible values are `CanNotDelete`
 Specifies the name of the Management Lock. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLock-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L100">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L88">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -169,7 +157,7 @@ Specifies the name of the Management Lock. Changing this forces a new resource t
 Specifies some notes about the lock. Maximum of 512 characters. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLock-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L104">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L92">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +165,7 @@ Specifies some notes about the lock. Maximum of 512 characters. Changing this fo
 Specifies the scope at which the Management Lock should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLock-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -189,7 +177,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ManangementLockArgs" data-link-title="ManangementLockArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L162">
         interface <strong>ManangementLockArgs</strong>
     </a>
 </h3>
@@ -199,7 +187,7 @@ deployments.
 The set of arguments for constructing a ManangementLock resource.
 
 <h4 class="pdoc-member-header" id="ManangementLockArgs-lockLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L178">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L166">property <b>lockLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -207,7 +195,7 @@ The set of arguments for constructing a ManangementLock resource.
 Specifies the Level to be used for this Lock. Possible values are `CanNotDelete` and `ReadOnly`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLockArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +203,7 @@ Specifies the Level to be used for this Lock. Possible values are `CanNotDelete`
 Specifies the name of the Management Lock. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLockArgs-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L186">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L174">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -223,7 +211,7 @@ Specifies the name of the Management Lock. Changing this forces a new resource t
 Specifies some notes about the lock. Maximum of 512 characters. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLockArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L190">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L178">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -231,7 +219,7 @@ Specifies some notes about the lock. Maximum of 512 characters. Changing this fo
 Specifies the scope at which the Management Lock should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ManangementLockState" data-link-title="ManangementLockState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L140">
         interface <strong>ManangementLockState</strong>
     </a>
 </h3>
@@ -241,7 +229,7 @@ Specifies the scope at which the Management Lock should be created. Changing thi
 Input properties used for looking up and filtering ManangementLock resources.
 
 <h4 class="pdoc-member-header" id="ManangementLockState-lockLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L156">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L144">property <b>lockLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -249,7 +237,7 @@ Input properties used for looking up and filtering ManangementLock resources.
 Specifies the Level to be used for this Lock. Possible values are `CanNotDelete` and `ReadOnly`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLockState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -257,7 +245,7 @@ Specifies the Level to be used for this Lock. Possible values are `CanNotDelete`
 Specifies the name of the Management Lock. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLockState-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L164">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L152">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +253,7 @@ Specifies the name of the Management Lock. Changing this forces a new resource t
 Specifies some notes about the lock. Maximum of 512 characters. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ManangementLockState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managementresource/manangementLock.ts#L168">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managementresource/manangementLock.ts#L156">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

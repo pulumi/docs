@@ -13,7 +13,6 @@ meta_desc: "Explore the SubnetNatGatewayAssociation resource of the network modu
 Associates a NAT Gateway with a Subnet within a Virtual Network.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,7 +66,61 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US 2"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleNatGateway, err := network.NewNatGateway(ctx, "exampleNatGateway", &network.NatGatewayArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnetNatGatewayAssociation, err := network.NewSubnetNatGatewayAssociation(ctx, "exampleSubnetNatGatewayAssociation", &network.SubnetNatGatewayAssociationArgs{
+			SubnetId:     exampleSubnet.ID(),
+			NatGatewayId: exampleNatGateway.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

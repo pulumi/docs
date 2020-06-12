@@ -12,9 +12,6 @@ meta_desc: "Explore the ManagementPolicy resource of the storage module, includi
 
 Manages an Azure Storage Account Management Policy.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ManagementPolicy Resource {#create}

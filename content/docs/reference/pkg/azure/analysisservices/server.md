@@ -12,9 +12,6 @@ meta_desc: "Explore the Server resource of the analysisservices module, includin
 
 Manages an Analysis Services Server.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Server Resource {#create}

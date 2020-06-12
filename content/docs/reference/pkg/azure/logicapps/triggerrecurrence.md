@@ -13,7 +13,6 @@ meta_desc: "Explore the TriggerRecurrence resource of the logicapps module, incl
 Manages a Recurrence Trigger within a Logic App Workflow
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,7 +49,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/logicapps"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleWorkflow, err := logicapps.NewWorkflow(ctx, "exampleWorkflow", &logicapps.WorkflowArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleTriggerRecurrence, err := logicapps.NewTriggerRecurrence(ctx, "exampleTriggerRecurrence", &logicapps.TriggerRecurrenceArgs{
+			LogicAppId: exampleWorkflow.ID(),
+			Frequency:  pulumi.String("Day"),
+			Interval:   pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

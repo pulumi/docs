@@ -13,7 +13,6 @@ meta_desc: "Explore the GetCertificateOrder function of the appservice module, i
 Use this data source to access information about an existing App Service Certificate Order.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := appservice.LookupCertificateOrder(ctx, &appservice.LookupCertificateOrderArgs{
+			Name:              "example-cert-order",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("certificateOrderId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

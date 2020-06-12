@@ -13,7 +13,6 @@ meta_desc: "Explore the NatGateway resource of the network module, including exa
 Manages a Azure NAT Gateway.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -79,7 +78,68 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("eastus2"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Static"),
+			Sku:               pulumi.String("Standard"),
+			Zones: pulumi.String(pulumi.String{
+				pulumi.String("1"),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIpPrefix, err := network.NewPublicIpPrefix(ctx, "examplePublicIpPrefix", &network.PublicIpPrefixArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PrefixLength:      pulumi.Int(30),
+			Zones: pulumi.String(pulumi.String{
+				pulumi.String("1"),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		exampleNatGateway, err := network.NewNatGateway(ctx, "exampleNatGateway", &network.NatGatewayArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublicIpAddressIds: pulumi.StringArray{
+				examplePublicIp.ID(),
+			},
+			PublicIpPrefixIds: pulumi.StringArray{
+				examplePublicIpPrefix.ID(),
+			},
+			SkuName:              pulumi.String("Standard"),
+			IdleTimeoutInMinutes: pulumi.Int(10),
+			Zones: pulumi.StringArray{
+				pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

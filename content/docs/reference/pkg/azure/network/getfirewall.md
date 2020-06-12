@@ -13,7 +13,6 @@ meta_desc: "Explore the GetFirewall function of the network module, including ex
 Use this data source to access information about an existing Azure Firewall.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupFirewall(ctx, &network.LookupFirewallArgs{
+			Name:              "firewall1",
+			ResourceGroupName: "firewall-RG",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firewallPrivateIp", example.IpConfigurations[0].PrivateIpAddress)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

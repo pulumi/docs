@@ -12,9 +12,6 @@ meta_desc: "Explore the NetworkInterfaceBackendAddressPoolAssociation resource o
 
 Manages the association between a Network Interface and a Load Balancer's Backend Address Pool.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NetworkInterfaceBackendAddressPoolAssociation Resource {#create}

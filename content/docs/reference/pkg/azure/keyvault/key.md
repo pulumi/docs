@@ -12,9 +12,6 @@ meta_desc: "Explore the Key resource of the keyvault module, including examples,
 
 Manages a Key Vault Key.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Key Resource {#create}

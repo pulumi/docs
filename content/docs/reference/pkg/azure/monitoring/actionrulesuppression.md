@@ -13,7 +13,6 @@ meta_desc: "Explore the ActionRuleSuppression resource of the monitoring module,
 Manages an Monitor Action Rule which type is suppression.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -71,7 +70,55 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleActionRuleSuppression, err := monitoring.NewActionRuleSuppression(ctx, "exampleActionRuleSuppression", &monitoring.ActionRuleSuppressionArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Scope: &monitoring.ActionRuleSuppressionScopeArgs{
+				Type: pulumi.String("ResourceGroup"),
+				ResourceIds: pulumi.StringArray{
+					exampleResourceGroup.ID(),
+				},
+			},
+			Suppression: &monitoring.ActionRuleSuppressionSuppressionArgs{
+				RecurrenceType: pulumi.String("Weekly"),
+				Schedule: &monitoring.ActionRuleSuppressionSuppressionScheduleArgs{
+					StartDateUtc: pulumi.String("2019-01-01T01:02:03Z"),
+					EndDateUtc:   pulumi.String("2019-01-03T15:02:07Z"),
+					RecurrenceWeeklies: pulumi.StringArray{
+						pulumi.String("Sunday"),
+						pulumi.String("Monday"),
+						pulumi.String("Friday"),
+						pulumi.String("Saturday"),
+					},
+				},
+			},
+			Tags: map[string]interface{}{
+				"foo": "bar",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

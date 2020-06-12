@@ -12,9 +12,6 @@ meta_desc: "Explore the KafkaCluster resource of the hdinsight module, including
 
 Manages a HDInsight Kafka Cluster.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a KafkaCluster Resource {#create}

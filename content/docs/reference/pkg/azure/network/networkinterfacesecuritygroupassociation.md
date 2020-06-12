@@ -12,9 +12,6 @@ meta_desc: "Explore the NetworkInterfaceSecurityGroupAssociation resource of the
 
 Manages the association between a Network Interface and a Network Security Group.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NetworkInterfaceSecurityGroupAssociation Resource {#create}

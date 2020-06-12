@@ -13,7 +13,6 @@ meta_desc: "Explore the UserAssignedIdentity resource of the msi module, includi
 Manages a user assigned identity.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("eastus"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleUserAssignedIdentity, err := authorization.NewUserAssignedIdentity(ctx, "exampleUserAssignedIdentity", &authorization.UserAssignedIdentityArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

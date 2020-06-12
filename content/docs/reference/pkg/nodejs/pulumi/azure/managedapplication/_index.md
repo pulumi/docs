@@ -3,7 +3,7 @@ title: "Module managedapplication"
 title_tag: "Module managedapplication | Package @pulumi/azure | Node.js SDK"
 linktitle: "managedapplication"
 meta_desc: "Explore members of the managedapplication module in the @pulumi/azure package."
-git_sha: "b3cc20bdfecc18d2930ee34b92e74fb2d96db10d"
+git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Application" data-link-title="Application">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L51">
         Resource <strong>Application</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ const exampleApplication = new azure.managedapplication.Application("exampleAppl
 ```
 
 <h4 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -102,7 +102,7 @@ Create a Application resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -113,14 +113,14 @@ Get an existing Application resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -131,7 +131,7 @@ Returns true if the given object is an instance of Application.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Application-applicationDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L82">property <b>applicationDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L82">property <b>applicationDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The application definition ID to deploy.
 
 <h4 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -148,7 +148,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Application-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L86">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L86">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ deployments and may be missing (undefined) during planning phases.
 The kind of the managed application to deploy. Possible values are `MarketPlace` and `ServiceCatalog`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Application-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L90">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L90">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ The kind of the managed application to deploy. Possible values are `MarketPlace`
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Application-managedResourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L94">property <b>managedResourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L94">property <b>managedResourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedResourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the target resource group where all the resources deployed by the managed application will reside. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Application-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ The name of the target resource group where all the resources deployed by the ma
 Specifies the name of the Managed Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Application-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L102">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L102">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -188,7 +188,7 @@ Specifies the name of the Managed Application. Changing this forces a new resour
 The name and value pairs that define the managed application outputs.
 
 <h4 class="pdoc-member-header" id="Application-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L106">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L106">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ The name and value pairs that define the managed application outputs.
 A mapping of name and value pairs to pass to the managed application as parameters.
 
 <h4 class="pdoc-member-header" id="Application-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L110">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L110">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationPlan'>ApplicationPlan</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ A mapping of name and value pairs to pass to the managed application as paramete
 One `plan` block as defined below.
 
 <h4 class="pdoc-member-header" id="Application-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L114">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L114">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ One `plan` block as defined below.
 The name of the Resource Group where the Managed Application should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Application-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L118">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ The name of the Resource Group where the Managed Application should exist. Chang
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -229,7 +229,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Definition" data-link-title="Definition">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L36">
         Resource <strong>Definition</strong>
     </a>
 </h3>
@@ -263,7 +263,7 @@ const exampleDefinition = new azure.managedapplication.Definition("exampleDefini
 ```
 
 <h4 class="pdoc-member-header" id="Definition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -277,7 +277,7 @@ Create a Definition resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Definition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -288,14 +288,14 @@ Get an existing Definition resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Definition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Definition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -306,7 +306,7 @@ Returns true if the given object is an instance of Definition.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Definition-authorizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L67">property <b>authorizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L67">property <b>authorizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DefinitionAuthorization'>DefinitionAuthorization</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 One or more `authorization` block defined below.
 
 <h4 class="pdoc-member-header" id="Definition-createUiDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L71">property <b>createUiDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L71">property <b>createUiDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createUiDefinition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ One or more `authorization` block defined below.
 Specifies the `createUiDefinition` json for the backing template with `Microsoft.Solutions/applications` resource.
 
 <h4 class="pdoc-member-header" id="Definition-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L75">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L75">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ Specifies the `createUiDefinition` json for the backing template with `Microsoft
 Specifies the managed application definition description.
 
 <h4 class="pdoc-member-header" id="Definition-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L79">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L79">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ Specifies the managed application definition description.
 Specifies the managed application definition display name.
 
 <h4 class="pdoc-member-header" id="Definition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -347,7 +347,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Definition-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L83">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L83">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Definition-lockLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L87">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L87">property <b>lockLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lockLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the managed application lock level. Valid values include `CanNotDelete`, `None`, `ReadOnly`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Definition-mainTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L91">property <b>mainTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L91">property <b>mainTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mainTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ Specifies the managed application lock level. Valid values include `CanNotDelete
 Specifies the inline main template json which has resources to be provisioned.
 
 <h4 class="pdoc-member-header" id="Definition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ Specifies the inline main template json which has resources to be provisioned.
 Specifies the name of the Managed Application Definition. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Definition-packageEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L99">property <b>packageEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L99">property <b>packageEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Specifies the name of the Managed Application Definition. Changing this forces a
 Is the package enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Definition-packageFileUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L103">property <b>packageFileUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L103">property <b>packageFileUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageFileUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ Is the package enabled? Defaults to `true`.
 Specifies the managed application definition package file Uri.
 
 <h4 class="pdoc-member-header" id="Definition-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L107">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L107">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ Specifies the managed application definition package file Uri.
 The name of the Resource Group where the Managed Application Definition should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Definition-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L111">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L111">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -411,7 +411,7 @@ The name of the Resource Group where the Managed Application Definition should e
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Definition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -422,7 +422,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDefinition" data-link-title="getDefinition">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L27">
         Function <strong>getDefinition</strong>
     </a>
 </h3>
@@ -451,7 +451,7 @@ export const id = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApplicationArgs" data-link-title="ApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L224">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L224">
         interface <strong>ApplicationArgs</strong>
     </a>
 </h3>
@@ -461,7 +461,7 @@ export const id = example.then(example => example.id);
 The set of arguments for constructing a Application resource.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-applicationDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L228">property <b>applicationDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L228">property <b>applicationDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +469,7 @@ The set of arguments for constructing a Application resource.
 The application definition ID to deploy.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L232">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L232">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -477,7 +477,7 @@ The application definition ID to deploy.
 The kind of the managed application to deploy. Possible values are `MarketPlace` and `ServiceCatalog`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L236">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L236">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ The kind of the managed application to deploy. Possible values are `MarketPlace`
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-managedResourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L240">property <b>managedResourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L240">property <b>managedResourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedResourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the target resource group where all the resources deployed by the managed application will reside. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L244">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L244">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ The name of the target resource group where all the resources deployed by the ma
 Specifies the name of the Managed Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L248">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L248">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -509,7 +509,7 @@ Specifies the name of the Managed Application. Changing this forces a new resour
 A mapping of name and value pairs to pass to the managed application as parameters.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L252">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L252">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationPlan'>ApplicationPlan</a>&gt;;</code></pre>
@@ -517,7 +517,7 @@ A mapping of name and value pairs to pass to the managed application as paramete
 One `plan` block as defined below.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L256">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L256">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +525,7 @@ One `plan` block as defined below.
 The name of the Resource Group where the Managed Application should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L260">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L260">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -533,7 +533,7 @@ The name of the Resource Group where the Managed Application should exist. Chang
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ApplicationState" data-link-title="ApplicationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L178">
         interface <strong>ApplicationState</strong>
     </a>
 </h3>
@@ -543,7 +543,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Application resources.
 
 <h4 class="pdoc-member-header" id="ApplicationState-applicationDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L182">property <b>applicationDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L182">property <b>applicationDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ Input properties used for looking up and filtering Application resources.
 The application definition ID to deploy.
 
 <h4 class="pdoc-member-header" id="ApplicationState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L186">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L186">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +559,7 @@ The application definition ID to deploy.
 The kind of the managed application to deploy. Possible values are `MarketPlace` and `ServiceCatalog`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L190">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L190">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +567,7 @@ The kind of the managed application to deploy. Possible values are `MarketPlace`
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationState-managedResourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L194">property <b>managedResourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L194">property <b>managedResourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedResourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the target resource group where all the resources deployed by the managed application will reside. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L198">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -583,7 +583,7 @@ The name of the target resource group where all the resources deployed by the ma
 Specifies the name of the Managed Application. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationState-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L202">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L202">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -591,7 +591,7 @@ Specifies the name of the Managed Application. Changing this forces a new resour
 The name and value pairs that define the managed application outputs.
 
 <h4 class="pdoc-member-header" id="ApplicationState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L206">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L206">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -599,7 +599,7 @@ The name and value pairs that define the managed application outputs.
 A mapping of name and value pairs to pass to the managed application as parameters.
 
 <h4 class="pdoc-member-header" id="ApplicationState-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L210">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L210">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationPlan'>ApplicationPlan</a>&gt;;</code></pre>
@@ -607,7 +607,7 @@ A mapping of name and value pairs to pass to the managed application as paramete
 One `plan` block as defined below.
 
 <h4 class="pdoc-member-header" id="ApplicationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L214">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L214">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -615,7 +615,7 @@ One `plan` block as defined below.
 The name of the Resource Group where the Managed Application should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApplicationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/application.ts#L218">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/application.ts#L218">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -623,7 +623,7 @@ The name of the Resource Group where the Managed Application should exist. Chang
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DefinitionArgs" data-link-title="DefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L229">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L229">
         interface <strong>DefinitionArgs</strong>
     </a>
 </h3>
@@ -633,7 +633,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a Definition resource.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-authorizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L233">property <b>authorizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L233">property <b>authorizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DefinitionAuthorization'>DefinitionAuthorization</a>&gt;[]&gt;;</code></pre>
@@ -641,7 +641,7 @@ The set of arguments for constructing a Definition resource.
 One or more `authorization` block defined below.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-createUiDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L237">property <b>createUiDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L237">property <b>createUiDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createUiDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -649,7 +649,7 @@ One or more `authorization` block defined below.
 Specifies the `createUiDefinition` json for the backing template with `Microsoft.Solutions/applications` resource.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L241">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L241">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ Specifies the `createUiDefinition` json for the backing template with `Microsoft
 Specifies the managed application definition description.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L245">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L245">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ Specifies the managed application definition description.
 Specifies the managed application definition display name.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L249">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L249">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ Specifies the managed application definition display name.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-lockLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L253">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L253">property <b>lockLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the managed application lock level. Valid values include `CanNotDelete`, `None`, `ReadOnly`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-mainTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L257">property <b>mainTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L257">property <b>mainTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mainTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ Specifies the managed application lock level. Valid values include `CanNotDelete
 Specifies the inline main template json which has resources to be provisioned.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L261">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L261">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ Specifies the inline main template json which has resources to be provisioned.
 Specifies the name of the Managed Application Definition. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-packageEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L265">property <b>packageEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L265">property <b>packageEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -705,7 +705,7 @@ Specifies the name of the Managed Application Definition. Changing this forces a
 Is the package enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-packageFileUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L269">property <b>packageFileUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L269">property <b>packageFileUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageFileUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -713,7 +713,7 @@ Is the package enabled? Defaults to `true`.
 Specifies the managed application definition package file Uri.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L273">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L273">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -721,7 +721,7 @@ Specifies the managed application definition package file Uri.
 The name of the Resource Group where the Managed Application Definition should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L277">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L277">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -729,7 +729,7 @@ The name of the Resource Group where the Managed Application Definition should e
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DefinitionState" data-link-title="DefinitionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L175">
         interface <strong>DefinitionState</strong>
     </a>
 </h3>
@@ -739,7 +739,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Definition resources.
 
 <h4 class="pdoc-member-header" id="DefinitionState-authorizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L179">property <b>authorizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L179">property <b>authorizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DefinitionAuthorization'>DefinitionAuthorization</a>&gt;[]&gt;;</code></pre>
@@ -747,7 +747,7 @@ Input properties used for looking up and filtering Definition resources.
 One or more `authorization` block defined below.
 
 <h4 class="pdoc-member-header" id="DefinitionState-createUiDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L183">property <b>createUiDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L183">property <b>createUiDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createUiDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ One or more `authorization` block defined below.
 Specifies the `createUiDefinition` json for the backing template with `Microsoft.Solutions/applications` resource.
 
 <h4 class="pdoc-member-header" id="DefinitionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -763,7 +763,7 @@ Specifies the `createUiDefinition` json for the backing template with `Microsoft
 Specifies the managed application definition description.
 
 <h4 class="pdoc-member-header" id="DefinitionState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L191">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L191">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -771,7 +771,7 @@ Specifies the managed application definition description.
 Specifies the managed application definition display name.
 
 <h4 class="pdoc-member-header" id="DefinitionState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L195">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L195">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -779,7 +779,7 @@ Specifies the managed application definition display name.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionState-lockLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L199">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L199">property <b>lockLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -787,7 +787,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the managed application lock level. Valid values include `CanNotDelete`, `None`, `ReadOnly`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionState-mainTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L203">property <b>mainTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L203">property <b>mainTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mainTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -795,7 +795,7 @@ Specifies the managed application lock level. Valid values include `CanNotDelete
 Specifies the inline main template json which has resources to be provisioned.
 
 <h4 class="pdoc-member-header" id="DefinitionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -803,7 +803,7 @@ Specifies the inline main template json which has resources to be provisioned.
 Specifies the name of the Managed Application Definition. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionState-packageEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L211">property <b>packageEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L211">property <b>packageEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -811,7 +811,7 @@ Specifies the name of the Managed Application Definition. Changing this forces a
 Is the package enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="DefinitionState-packageFileUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L215">property <b>packageFileUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L215">property <b>packageFileUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageFileUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -819,7 +819,7 @@ Is the package enabled? Defaults to `true`.
 Specifies the managed application definition package file Uri.
 
 <h4 class="pdoc-member-header" id="DefinitionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L219">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L219">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -827,7 +827,7 @@ Specifies the managed application definition package file Uri.
 The name of the Resource Group where the Managed Application Definition should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DefinitionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/definition.ts#L223">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/definition.ts#L223">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -835,7 +835,7 @@ The name of the Resource Group where the Managed Application Definition should e
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetDefinitionArgs" data-link-title="GetDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L44">
         interface <strong>GetDefinitionArgs</strong>
     </a>
 </h3>
@@ -845,7 +845,7 @@ A mapping of tags to assign to the resource.
 A collection of arguments for invoking getDefinition.
 
 <h4 class="pdoc-member-header" id="GetDefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -853,7 +853,7 @@ A collection of arguments for invoking getDefinition.
 Specifies the name of the Managed Application Definition.
 
 <h4 class="pdoc-member-header" id="GetDefinitionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L52">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L52">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -861,7 +861,7 @@ Specifies the name of the Managed Application Definition.
 Specifies the name of the Resource Group where this Managed Application Definition exists.
 
 <h3 class="pdoc-module-header" id="GetDefinitionResult" data-link-title="GetDefinitionResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L58">
         interface <strong>GetDefinitionResult</strong>
     </a>
 </h3>
@@ -871,7 +871,7 @@ Specifies the name of the Resource Group where this Managed Application Definiti
 A collection of values returned by getDefinition.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -879,17 +879,17 @@ A collection of values returned by getDefinition.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDefinitionResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L63">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L63">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDefinitionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDefinitionResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/managedapplication/getDefinition.ts#L65">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/managedapplication/getDefinition.ts#L65">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

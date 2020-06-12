@@ -12,26 +12,13 @@ meta_desc: "Explore the GetPublicIpPrefix function of the network module, includ
 
 Use this data source to access information about an existing Public IP Prefix.
 
-## Example Usage (reference an existing)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const example = azure.network.getPublicIpPrefix({
-    name: "name_of_public_ip",
-    resourceGroupName: "name_of_resource_group",
-});
-export const publicIpPrefix = example.then(example => example.ipPrefix);
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example = azure.network.get_public_ip_prefix(name="name_of_public_ip",
-    resource_group_name="name_of_resource_group")
-pulumi.export("publicIpPrefix", example.ip_prefix)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Reference An Existing)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -52,7 +39,57 @@ class MyStack : Stack
     public Output<string> PublicIpPrefix { get; set; }
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupPublicIpPrefix(ctx, &network.LookupPublicIpPrefixArgs{
+			Name:              "name_of_public_ip",
+			ResourceGroupName: "name_of_resource_group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("publicIpPrefix", example.IpPrefix)
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_public_ip_prefix(name="name_of_public_ip",
+    resource_group_name="name_of_resource_group")
+pulumi.export("publicIpPrefix", example.ip_prefix)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getPublicIpPrefix({
+    name: "name_of_public_ip",
+    resourceGroupName: "name_of_resource_group",
+});
+export const publicIpPrefix = example.then(example => example.ipPrefix);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPublicIpPrefix {#using}

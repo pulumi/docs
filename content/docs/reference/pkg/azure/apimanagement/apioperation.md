@@ -12,9 +12,6 @@ meta_desc: "Explore the ApiOperation resource of the apimanagement module, inclu
 
 Manages an API Operation within an API Management Service.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ApiOperation Resource {#create}

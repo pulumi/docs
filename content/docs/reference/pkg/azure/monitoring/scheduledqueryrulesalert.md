@@ -12,9 +12,6 @@ meta_desc: "Explore the ScheduledQueryRulesAlert resource of the monitoring modu
 
 Manages an AlertingAction Scheduled Query Rules resource within Azure Monitor.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ScheduledQueryRulesAlert Resource {#create}

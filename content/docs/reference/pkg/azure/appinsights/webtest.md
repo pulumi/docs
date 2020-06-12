@@ -12,9 +12,6 @@ meta_desc: "Explore the WebTest resource of the appinsights module, including ex
 
 Manages an Application Insights WebTest.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a WebTest Resource {#create}

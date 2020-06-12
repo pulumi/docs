@@ -12,9 +12,6 @@ meta_desc: "Explore the AutoscaleSetting resource of the monitoring module, incl
 
 Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a AutoscaleSetting Resource {#create}

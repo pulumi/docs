@@ -12,9 +12,6 @@ meta_desc: "Explore the Secret resource of the keyvault module, including exampl
 
 Manages a Key Vault Secret.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Secret Resource {#create}

@@ -14,9 +14,6 @@ Manage a Azure Database Migration Project.
 
 > **NOTE:** Destroying a Database Migration Project will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provider.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Project Resource {#create}

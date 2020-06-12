@@ -13,7 +13,6 @@ meta_desc: "Explore the GetPublicIPs function of the network module, including e
 Use this data source to access information about a set of existing Public IP Addresses.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupPublicIPs(ctx, &network.LookupPublicIPsArgs{
+			Attached:          false,
+			ResourceGroupName: "pip-test",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

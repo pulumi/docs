@@ -12,9 +12,6 @@ meta_desc: "Explore the Certificate resource of the apimanagement module, includ
 
 Manages an Certificate within an API Management Service.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Certificate Resource {#create}

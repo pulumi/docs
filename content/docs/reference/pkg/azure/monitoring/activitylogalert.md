@@ -12,9 +12,6 @@ meta_desc: "Explore the ActivityLogAlert resource of the monitoring module, incl
 
 Manages an Activity Log Alert within Azure Monitor.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ActivityLogAlert Resource {#create}

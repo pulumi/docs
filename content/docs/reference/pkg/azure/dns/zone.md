@@ -13,7 +13,6 @@ meta_desc: "Explore the Zone resource of the dns module, including examples, inp
 Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure's name servers to which you can delegate the zone from the parent domain.
 
 
-
 {{% examples %}}
 ## Example Usage
 

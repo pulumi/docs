@@ -12,9 +12,6 @@ meta_desc: "Explore the Cluster resource of the servicefabric module, including 
 
 Manages a Service Fabric Cluster.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Cluster Resource {#create}
@@ -316,7 +313,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatecommonname">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
+    <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -327,7 +324,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
+    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,7 +529,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatecommonname">[]Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
+    <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -543,7 +540,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">[]Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
+    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -748,7 +745,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatecommonname">Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name[]</a></span>
     </dt>
-    <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
+    <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -759,7 +756,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint[]</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
+    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -964,7 +961,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatecommonname">List[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name]</a></span>
     </dt>
-    <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
+    <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -975,7 +972,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">List[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint]</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
+    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1363,7 +1360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatecommonname">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
+    <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1374,7 +1371,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
+    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1590,7 +1587,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatecommonname">[]Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
+    <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1601,7 +1598,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">[]Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
+    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1817,7 +1814,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatecommonname">Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name[]</a></span>
     </dt>
-    <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
+    <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1828,7 +1825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint[]</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
+    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2044,7 +2041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatecommonname">List[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name]</a></span>
     </dt>
-    <dd>{{% md %}}A `client_certificate_common_name` block as defined below. 
+    <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2055,7 +2052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">List[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint]</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below. 
+    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

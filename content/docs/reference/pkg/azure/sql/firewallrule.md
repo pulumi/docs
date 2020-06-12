@@ -13,7 +13,6 @@ meta_desc: "Explore the FirewallRule resource of the sql module, including examp
 Allows you to manage an Azure SQL Firewall Rule
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,7 +53,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSqlServer, err := sql.NewSqlServer(ctx, "exampleSqlServer", &sql.SqlServerArgs{
+			ResourceGroupName:          exampleResourceGroup.Name,
+			Location:                   pulumi.String("West US"),
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("4dm1n157r470r"),
+			AdministratorLoginPassword: pulumi.String("4-v3ry-53cr37-p455w0rd"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleFirewallRule, err := sql.NewFirewallRule(ctx, "exampleFirewallRule", &sql.FirewallRuleArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleSqlServer.Name,
+			StartIpAddress:    pulumi.String("10.0.17.62"),
+			EndIpAddress:      pulumi.String("10.0.17.62"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

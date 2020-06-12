@@ -12,9 +12,6 @@ meta_desc: "Explore the NetworkConnectionMonitor resource of the network module,
 
 Configures a Network Connection Monitor to monitor communication between a Virtual Machine and an endpoint using a Network Watcher.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NetworkConnectionMonitor Resource {#create}

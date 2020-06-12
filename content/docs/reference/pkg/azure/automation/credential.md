@@ -12,9 +12,6 @@ meta_desc: "Explore the Credential resource of the automation module, including 
 
 Manages a Automation Credential.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Credential Resource {#create}

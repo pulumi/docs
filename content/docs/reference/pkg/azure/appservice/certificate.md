@@ -12,9 +12,6 @@ meta_desc: "Explore the Certificate resource of the appservice module, including
 
 Manages an App Service certificate.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Certificate Resource {#create}

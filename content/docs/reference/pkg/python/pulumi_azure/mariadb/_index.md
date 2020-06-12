@@ -849,7 +849,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">db_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mariadb</span><span class="o">.</span><span class="n">get_maria_db_server</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;mariadb-server&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_mariadb_server</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;resource_group_name&quot;</span><span class="p">])</span>
-<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;mariadbServerId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;mariadb.Server&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;mariadbServerId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;azurerm_mariadb_server&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

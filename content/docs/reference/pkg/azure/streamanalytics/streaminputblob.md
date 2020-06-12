@@ -13,7 +13,6 @@ meta_desc: "Explore the StreamInputBlob resource of the streamanalytics module, 
 Manages a Stream Analytics Stream Input Blob.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,7 +71,67 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.LookupResourceGroup(ctx, &core.LookupResourceGroupArgs{
+			Name: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleJob, err := streamanalytics.LookupJob(ctx, &streamanalytics.LookupJobArgs{
+			Name:              "example-job",
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      pulumi.String(azurerm_resource_group.Example.Name),
+			Location:               pulumi.String(azurerm_resource_group.Example.Location),
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleContainer, err := storage.NewContainer(ctx, "exampleContainer", &storage.ContainerArgs{
+			StorageAccountName:  exampleAccount.Name,
+			ContainerAccessType: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleStreamInputBlob, err := streamanalytics.NewStreamInputBlob(ctx, "exampleStreamInputBlob", &streamanalytics.StreamInputBlobArgs{
+			StreamAnalyticsJobName: pulumi.String(exampleJob.Name),
+			ResourceGroupName:      pulumi.String(exampleJob.ResourceGroupName),
+			StorageAccountName:     exampleAccount.Name,
+			StorageAccountKey:      exampleAccount.PrimaryAccessKey,
+			StorageContainerName:   exampleContainer.Name,
+			PathPattern:            pulumi.String("some-random-pattern"),
+			DateFormat:             pulumi.String("yyyy/MM/dd"),
+			TimeFormat:             pulumi.String("HH"),
+			Serialization: &streamanalytics.StreamInputBlobSerializationArgs{
+				Type:     pulumi.String("Json"),
+				Encoding: pulumi.String("UTF8"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

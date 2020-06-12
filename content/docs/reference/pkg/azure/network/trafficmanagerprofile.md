@@ -12,9 +12,6 @@ meta_desc: "Explore the TrafficManagerProfile resource of the network module, in
 
 Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a TrafficManagerProfile Resource {#create}

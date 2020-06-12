@@ -13,7 +13,6 @@ meta_desc: "Explore the AlertRuleMsSecurityIncident resource of the sentinel mod
 Manages a Sentinel MS Security Incident Alert Rule.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,47 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/operationalinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAnalyticsWorkspace, err := operationalinsights.NewAnalyticsWorkspace(ctx, "exampleAnalyticsWorkspace", &operationalinsights.AnalyticsWorkspaceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("pergb2018"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAlertRuleMsSecurityIncident, err := sentinel.NewAlertRuleMsSecurityIncident(ctx, "exampleAlertRuleMsSecurityIncident", &sentinel.AlertRuleMsSecurityIncidentArgs{
+			LogAnalyticsWorkspaceId: exampleAnalyticsWorkspace.ID(),
+			ProductFilter:           pulumi.String("Microsoft Cloud App Security"),
+			DisplayName:             pulumi.String("example rule"),
+			SeverityFilters: pulumi.StringArray{
+				pulumi.String("High"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetCluster function of the kusto module, including examp
 Use this data source to access information about an existing Kusto (also known as Azure Data Explorer) Cluster
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := kusto.LookupCluster(ctx, &kusto.LookupClusterArgs{
+			Name:              "kustocluster",
+			ResourceGroupName: "test_resource_group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

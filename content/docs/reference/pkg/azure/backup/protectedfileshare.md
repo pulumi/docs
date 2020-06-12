@@ -16,9 +16,6 @@ Manages an Azure Backup Protected File Share to enable backups for file shares w
 
 > **NOTE** Azure Backup for Azure File Shares does not support Soft Delete at this time. Deleting this resource will also delete all associated backup data. Please exercise caution. Consider using [`protect`](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to guard against accidental deletion.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ProtectedFileShare Resource {#create}

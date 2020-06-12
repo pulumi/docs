@@ -13,7 +13,6 @@ meta_desc: "Explore the Snapshot resource of the compute module, including examp
 Manages a Disk Snapshot.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,7 +53,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleManagedDisk, err := compute.NewManagedDisk(ctx, "exampleManagedDisk", &compute.ManagedDiskArgs{
+			Location:           exampleResourceGroup.Location,
+			ResourceGroupName:  exampleResourceGroup.Name,
+			StorageAccountType: pulumi.String("Standard_LRS"),
+			CreateOption:       pulumi.String("Empty"),
+			DiskSizeGb:         pulumi.Int(10),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSnapshot, err := compute.NewSnapshot(ctx, "exampleSnapshot", &compute.SnapshotArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			CreateOption:      pulumi.String("Copy"),
+			SourceUri:         exampleManagedDisk.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -14,103 +14,6 @@ Manages a Blob within a Storage Container.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Azure = Pulumi.Azure;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
-        {
-            Location = "West Europe",
-        });
-        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
-        {
-            ResourceGroupName = exampleResourceGroup.Name,
-            Location = exampleResourceGroup.Location,
-            AccountTier = "Standard",
-            AccountReplicationType = "LRS",
-        });
-        var exampleContainer = new Azure.Storage.Container("exampleContainer", new Azure.Storage.ContainerArgs
-        {
-            StorageAccountName = exampleAccount.Name,
-            ContainerAccessType = "private",
-        });
-        var exampleBlob = new Azure.Storage.Blob("exampleBlob", new Azure.Storage.BlobArgs
-        {
-            StorageAccountName = exampleAccount.Name,
-            StorageContainerName = exampleContainer.Name,
-            Type = "Block",
-            Source = new FileAsset("some-local-file.zip"),
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_account = azure.storage.Account("exampleAccount",
-    resource_group_name=example_resource_group.name,
-    location=example_resource_group.location,
-    account_tier="Standard",
-    account_replication_type="LRS")
-example_container = azure.storage.Container("exampleContainer",
-    storage_account_name=example_account.name,
-    container_access_type="private")
-example_blob = azure.storage.Blob("exampleBlob",
-    storage_account_name=example_account.name,
-    storage_container_name=example_container.name,
-    type="Block",
-    source=pulumi.FileAsset("some-local-file.zip"))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleAccount = new azure.storage.Account("exampleAccount", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-    accountTier: "Standard",
-    accountReplicationType: "LRS",
-});
-const exampleContainer = new azure.storage.Container("exampleContainer", {
-    storageAccountName: exampleAccount.name,
-    containerAccessType: "private",
-});
-const exampleBlob = new azure.storage.Blob("exampleBlob", {
-    storageAccountName: exampleAccount.name,
-    storageContainerName: exampleContainer.name,
-    type: "Block",
-    source: new pulumi.asset.FileAsset("some-local-file.zip"),
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a Blob Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -389,7 +292,7 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -530,7 +433,7 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -671,7 +574,7 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -812,7 +715,7 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1168,7 +1071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1320,7 +1223,7 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1472,7 +1375,7 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1624,7 +1527,7 @@ Changing this forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0. 
+    <dd>{{% md %}}Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

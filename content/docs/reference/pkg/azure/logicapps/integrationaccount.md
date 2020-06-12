@@ -13,7 +13,6 @@ meta_desc: "Explore the IntegrationAccount resource of the logicapps module, inc
 Manages a Logic App Integration Account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/logicapps"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleIntegrationAccount, err := logicapps.NewIntegrationAccount(ctx, "exampleIntegrationAccount", &logicapps.IntegrationAccountArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			SkuName:           pulumi.String("Standard"),
+			Tags: map[string]interface{}{
+				"foo": "bar",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

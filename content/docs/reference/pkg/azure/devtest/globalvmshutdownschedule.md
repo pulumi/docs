@@ -14,9 +14,6 @@ Manages automated shutdown schedules for Azure VMs that are not within an Azure 
 this resource applies only to standard VMs, not DevTest Lab VMs. To manage automated shutdown schedules for DevTest Lab VMs, reference the
 `azure.devtest.Schedule` resource
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a GlobalVMShutdownSchedule Resource {#create}

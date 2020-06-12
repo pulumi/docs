@@ -12,9 +12,6 @@ meta_desc: "Explore the SubnetNetworkSecurityGroupAssociation resource of the ne
 
 Associates a Network Security Group with a Subnet within a Virtual Network.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a SubnetNetworkSecurityGroupAssociation Resource {#create}

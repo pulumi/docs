@@ -12,9 +12,88 @@ meta_desc: "Explore the GetClusterNodePool function of the containerservice modu
 
 Use this data source to access information about an existing Kubernetes Cluster Node Pool.
 
-{{% examples %}}
-{{% /examples %}}
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.ContainerService.GetClusterNodePool.InvokeAsync(new Azure.ContainerService.GetClusterNodePoolArgs
+        {
+            Name = "existing",
+            KubernetesClusterName = "existing-cluster",
+            ResourceGroupName = "existing-resource-group",
+        }));
+        this.Id = example.Apply(example => example.Id);
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := containerservice.LookupClusterNodePool(ctx, &containerservice.LookupClusterNodePoolArgs{
+			Name:                  "existing",
+			KubernetesClusterName: "existing-cluster",
+			ResourceGroupName:     "existing-resource-group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", example.Id)
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.containerservice.get_cluster_node_pool(name="existing",
+    kubernetes_cluster_name="existing-cluster",
+    resource_group_name="existing-resource-group")
+pulumi.export("id", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.containerservice.getClusterNodePool({
+    name: "existing",
+    kubernetesClusterName: "existing-cluster",
+    resourceGroupName: "existing-resource-group",
+});
+export const id = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetClusterNodePool {#using}

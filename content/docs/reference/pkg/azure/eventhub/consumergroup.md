@@ -13,7 +13,6 @@ meta_desc: "Explore the ConsumerGroup resource of the eventhub module, including
 Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,7 +63,57 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleEventHubNamespace, err := eventhub.NewEventHubNamespace(ctx, "exampleEventHubNamespace", &eventhub.EventHubNamespaceArgs{
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("Basic"),
+			Capacity:          pulumi.Int(2),
+			Tags: map[string]interface{}{
+				"environment": "Production",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleEventHub, err := eventhub.NewEventHub(ctx, "exampleEventHub", &eventhub.EventHubArgs{
+			NamespaceName:     exampleEventHubNamespace.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PartitionCount:    pulumi.Int(2),
+			MessageRetention:  pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		exampleConsumerGroup, err := eventhub.NewConsumerGroup(ctx, "exampleConsumerGroup", &eventhub.ConsumerGroupArgs{
+			NamespaceName:     exampleEventHubNamespace.Name,
+			EventhubName:      exampleEventHub.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			UserMetadata:      pulumi.String("some-meta-data"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

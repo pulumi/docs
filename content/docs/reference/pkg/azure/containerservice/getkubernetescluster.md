@@ -13,7 +13,6 @@ meta_desc: "Explore the GetKubernetesCluster function of the containerservice mo
 Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := containerservice.LookupKubernetesCluster(ctx, &containerservice.LookupKubernetesClusterArgs{
+			Name:              "myakscluster",
+			ResourceGroupName: "my-example-resource-group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -452,7 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -463,7 +481,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
+    <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -754,7 +772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -765,7 +783,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
+    <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -1056,7 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1067,7 +1085,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
+    <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -1358,7 +1376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1369,7 +1387,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
+    <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -2033,7 +2051,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2073,7 +2091,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2113,7 +2131,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2153,7 +2171,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity]</a></span>
     </dt>
-    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
 
 </dl>

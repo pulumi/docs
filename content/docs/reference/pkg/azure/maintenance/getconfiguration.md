@@ -13,7 +13,6 @@ meta_desc: "Explore the GetConfiguration function of the maintenance module, inc
 Use this data source to access information about an existing Maintenance Configuration.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		existing, err := maintenance.LookupConfiguration(ctx, &maintenance.LookupConfigurationArgs{
+			Name:              "example-mc",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("id", azurerm_maintenance_configuration.Existing.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

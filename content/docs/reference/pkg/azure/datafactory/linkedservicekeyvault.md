@@ -12,9 +12,102 @@ meta_desc: "Explore the LinkedServiceKeyVault resource of the datafactory module
 
 Manages a Linked Service (connection) between Key Vault and Azure Data Factory.
 
-{{% examples %}}
-{{% /examples %}}
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "eastus",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "standard",
+        });
+        var exampleFactory = new Azure.DataFactory.Factory("exampleFactory", new Azure.DataFactory.FactoryArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleLinkedServiceKeyVault = new Azure.DataFactory.LinkedServiceKeyVault("exampleLinkedServiceKeyVault", new Azure.DataFactory.LinkedServiceKeyVaultArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            DataFactoryName = exampleFactory.Name,
+            KeyVaultId = exampleKeyVault.Id,
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="eastus")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="standard")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_linked_service_key_vault = azure.datafactory.LinkedServiceKeyVault("exampleLinkedServiceKeyVault",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    key_vault_id=example_key_vault.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "eastus"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "standard",
+});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleLinkedServiceKeyVault = new azure.datafactory.LinkedServiceKeyVault("exampleLinkedServiceKeyVault", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+    keyVaultId: exampleKeyVault.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkedServiceKeyVault Resource {#create}

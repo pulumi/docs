@@ -13,7 +13,6 @@ meta_desc: "Explore the IdentityProviderMicrosoft resource of the apimanagement 
 Manages an API Management Microsoft Identity Provider.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,7 +53,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@mycompany.io"),
+			SkuName:           pulumi.String("Developer_1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleIdentityProviderMicrosoft, err := apimanagement.NewIdentityProviderMicrosoft(ctx, "exampleIdentityProviderMicrosoft", &apimanagement.IdentityProviderMicrosoftArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ApiManagementName: exampleService.Name,
+			ClientId:          pulumi.String("00000000-0000-0000-0000-000000000000"),
+			ClientSecret:      pulumi.String("00000000000000000000000000000000"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

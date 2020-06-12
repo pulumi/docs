@@ -12,9 +12,6 @@ meta_desc: "Explore the FunctionJavaScriptUDF resource of the streamanalytics mo
 
 Manages a JavaScript UDF Function within Stream Analytics Streaming Job.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a FunctionJavaScriptUDF Resource {#create}

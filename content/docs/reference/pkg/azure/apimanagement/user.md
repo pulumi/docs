@@ -13,7 +13,6 @@ meta_desc: "Explore the User resource of the apimanagement module, including exa
 Manages an API Management User.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,7 +56,49 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := apimanagement.NewService(ctx, "exampleService", &apimanagement.ServiceArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PublisherName:     pulumi.String("My Company"),
+			PublisherEmail:    pulumi.String("company@exmaple.com"),
+			SkuName:           pulumi.String("Developer_1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleUser, err := apimanagement.NewUser(ctx, "exampleUser", &apimanagement.UserArgs{
+			UserId:            pulumi.String("5931a75ae4bbd512288c680b"),
+			ApiManagementName: exampleService.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			FirstName:         pulumi.String("Example"),
+			LastName:          pulumi.String("User"),
+			Email:             pulumi.String("user@example.com"),
+			State:             pulumi.String("active"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

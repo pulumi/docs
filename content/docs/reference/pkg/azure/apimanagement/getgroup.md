@@ -13,7 +13,6 @@ meta_desc: "Explore the GetGroup function of the apimanagement module, including
 Use this data source to access information about an existing API Management Group.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := apimanagement.LookupGroup(ctx, &apimanagement.LookupGroupArgs{
+			Name:              "my-group",
+			ApiManagementName: "example-apim",
+			ResourceGroupName: "search-service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("groupType", example.Type)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

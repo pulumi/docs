@@ -1572,7 +1572,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">cosmosdb</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;tfex-cosmosdb-account-rg&quot;</span><span class="p">)</span>
-<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;cosmosdbAccountEndpoint&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;cosmosdb.Account&quot;</span><span class="p">][</span><span class="s2">&quot;jobs&quot;</span><span class="p">][</span><span class="s2">&quot;endpoint&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;cosmosdbAccountEndpoint&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;azurerm_cosmosdb_account&quot;</span><span class="p">][</span><span class="s2">&quot;jobs&quot;</span><span class="p">][</span><span class="s2">&quot;endpoint&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

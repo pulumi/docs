@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAvailabilitySet function of the compute module, inclu
 Use this data source to access information about an existing Availability Set.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := compute.LookupAvailabilitySet(ctx, &compute.LookupAvailabilitySetArgs{
+			Name:              "tf-appsecuritygroup",
+			ResourceGroupName: "my-resource-group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("availabilitySetId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

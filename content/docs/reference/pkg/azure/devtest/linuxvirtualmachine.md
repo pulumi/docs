@@ -12,9 +12,6 @@ meta_desc: "Explore the LinuxVirtualMachine resource of the devtest module, incl
 
 Manages a Linux Virtual Machine within a Dev Test Lab.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a LinuxVirtualMachine Resource {#create}

@@ -12,9 +12,6 @@ meta_desc: "Explore the Share resource of the storage module, including examples
 
 Manages a File Share within Azure Storage.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Share Resource {#create}

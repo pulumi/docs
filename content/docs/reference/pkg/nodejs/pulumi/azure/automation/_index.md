@@ -3,7 +3,7 @@ title: "Module automation"
 title_tag: "Module automation | Package @pulumi/azure | Node.js SDK"
 linktitle: "automation"
 meta_desc: "Explore members of the automation module in the @pulumi/azure package."
-git_sha: "b3cc20bdfecc18d2930ee34b92e74fb2d96db10d"
+git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
 block_external_search_index: true
 ---
 
@@ -84,7 +84,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L29">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -113,7 +113,7 @@ const exampleAccount = new azure.automation.Account("exampleAccount", {
 ```
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -127,7 +127,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -138,14 +138,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -156,7 +156,7 @@ Returns true if the given object is an instance of Account.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Account-dscPrimaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L60">property <b>dscPrimaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L60">property <b>dscPrimaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dscPrimaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Primary Access Key for the DSC Endpoint associated with this Automation Account.
 
 <h4 class="pdoc-member-header" id="Account-dscSecondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L64">property <b>dscSecondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L64">property <b>dscSecondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dscSecondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ The Primary Access Key for the DSC Endpoint associated with this Automation Acco
 The Secondary Access Key for the DSC Endpoint associated with this Automation Account.
 
 <h4 class="pdoc-member-header" id="Account-dscServerEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L68">property <b>dscServerEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L68">property <b>dscServerEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dscServerEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ The Secondary Access Key for the DSC Endpoint associated with this Automation Ac
 The DSC Server Endpoint associated with this Automation Account.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -189,7 +189,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L72">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L72">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Automation Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L80">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ Specifies the name of the Automation Account. Changing this forces a new resourc
 The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L84">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L84">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ The name of the resource group in which the Automation Account is created. Chang
 The SKU name of the account - only `Basic` is supported at this time.
 
 <h4 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L88">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L88">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ The SKU name of the account - only `Basic` is supported at this time.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -238,7 +238,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BoolVariable" data-link-title="BoolVariable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L34">
         Resource <strong>BoolVariable</strong>
     </a>
 </h3>
@@ -271,7 +271,7 @@ const exampleBoolVariable = new azure.automation.BoolVariable("exampleBoolVariab
 ```
 
 <h4 class="pdoc-member-header" id="BoolVariable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -285,7 +285,7 @@ Create a BoolVariable resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BoolVariable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -296,14 +296,14 @@ Get an existing BoolVariable resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BoolVariable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BoolVariable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -314,7 +314,7 @@ Returns true if the given object is an instance of BoolVariable.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BoolVariable-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L65">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L65">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="BoolVariable-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L73">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L73">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="BoolVariable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -347,7 +347,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BoolVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariable-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L81">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -372,7 +372,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="BoolVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L85">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L85">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -380,7 +380,7 @@ deployments.
 The value of the Automation Variable as a `boolean`.
 
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L10">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -390,7 +390,7 @@ The value of the Automation Variable as a `boolean`.
 Manages an Automation Certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L62"> <b>constructor</b></a>
 </h4>
 
 
@@ -404,7 +404,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -415,14 +415,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -433,7 +433,7 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L41">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L41">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -441,7 +441,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Certificate is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-base64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L45">property <b>base64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L45">property <b>base64</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>base64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -449,7 +449,7 @@ The name of the automation account in which the Certificate is created. Changing
 Base64 encoded value of the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L49">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L49">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -457,12 +457,12 @@ Base64 encoded value of the certificate.
 The description of this Automation Certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-exportable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L50">property <b>exportable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L50">property <b>exportable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>exportable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -471,7 +471,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L58">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L58">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -487,7 +487,7 @@ Specifies the name of the Certificate. Changing this forces a new resource to be
 The name of the resource group in which the Certificate is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L62">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L62">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thumbprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -495,7 +495,7 @@ The name of the resource group in which the Certificate is created. Changing thi
 The thumbprint for the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -504,7 +504,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Credential" data-link-title="Credential">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L35">
         Resource <strong>Credential</strong>
     </a>
 </h3>
@@ -532,14 +532,14 @@ const exampleAccount = new azure.automation.Account("exampleAccount", {
 const exampleCredential = new azure.automation.Credential("exampleCredential", {
     resourceGroupName: exampleResourceGroup.name,
     automationAccountName: exampleAccount.name,
-    username: "exampleUser",
-    password: "examplePwd",
+    username: "example_user",
+    password: "example_pwd",
     description: "This is an example credential",
 });
 ```
 
 <h4 class="pdoc-member-header" id="Credential-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -553,7 +553,7 @@ Create a Credential resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Credential-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -564,14 +564,14 @@ Get an existing Credential resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Credential-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Credential-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -582,7 +582,7 @@ Returns true if the given object is an instance of Credential.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Credential-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L66">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L66">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Credential is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Credential-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ The name of the automation account in which the Credential is created. Changing 
 The description associated with this Automation Credential.
 
 <h4 class="pdoc-member-header" id="Credential-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -607,7 +607,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Credential-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -615,7 +615,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Credential. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Credential-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L78">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L78">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -623,7 +623,7 @@ Specifies the name of the Credential. Changing this forces a new resource to be 
 The password associated with this Automation Credential.
 
 <h4 class="pdoc-member-header" id="Credential-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L82">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L82">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -631,7 +631,7 @@ The password associated with this Automation Credential.
 The name of the resource group in which the Credential is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Credential-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -640,7 +640,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Credential-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L86">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L86">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ deployments.
 The username associated with this Automation Credential.
 
 <h3 class="pdoc-module-header" id="DateTimeVariable" data-link-title="DateTimeVariable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L34">
         Resource <strong>DateTimeVariable</strong>
     </a>
 </h3>
@@ -681,7 +681,7 @@ const exampleDateTimeVariable = new azure.automation.DateTimeVariable("exampleDa
 ```
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -695,7 +695,7 @@ Create a DateTimeVariable resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -706,14 +706,14 @@ Get an existing DateTimeVariable resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -724,7 +724,7 @@ Returns true if the given object is an instance of DateTimeVariable.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L65">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L65">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -732,7 +732,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -740,7 +740,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L73">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L73">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -748,7 +748,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -757,7 +757,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -765,7 +765,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L81">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -782,7 +782,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DateTimeVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L85">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L85">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -790,7 +790,7 @@ deployments.
 The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/Time Format](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 <h3 class="pdoc-module-header" id="DscConfiguration" data-link-title="DscConfiguration">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L34">
         Resource <strong>DscConfiguration</strong>
     </a>
 </h3>
@@ -824,7 +824,7 @@ const exampleDscConfiguration = new azure.automation.DscConfiguration("exampleDs
 ```
 
 <h4 class="pdoc-member-header" id="DscConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -838,7 +838,7 @@ Create a DscConfiguration resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -849,14 +849,14 @@ Get an existing DscConfiguration resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DscConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -867,7 +867,7 @@ Returns true if the given object is an instance of DscConfiguration.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L65">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L65">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -875,7 +875,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the DSC Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-contentEmbedded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L69">property <b>contentEmbedded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L69">property <b>contentEmbedded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentEmbedded: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -883,7 +883,7 @@ The name of the automation account in which the DSC Configuration is created. Ch
 The PowerShell DSC Configuration script.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L73">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -891,7 +891,7 @@ The PowerShell DSC Configuration script.
 Description to go with DSC Configuration.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -900,7 +900,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L77">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -908,7 +908,7 @@ deployments and may be missing (undefined) during planning phases.
 Must be the same location as the Automation Account.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-logVerbose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L81">property <b>logVerbose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L81">property <b>logVerbose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logVerbose: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -916,7 +916,7 @@ Must be the same location as the Automation Account.
 Verbose log option.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -924,7 +924,7 @@ Verbose log option.
 Specifies the name of the DSC Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L89">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L89">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -932,12 +932,12 @@ Specifies the name of the DSC Configuration. Changing this forces a new resource
 The name of the resource group in which the DSC Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L90">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L90">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DscConfiguration-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -945,7 +945,7 @@ The name of the resource group in which the DSC Configuration is created. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DscConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -954,7 +954,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DscNodeConfiguration" data-link-title="DscNodeConfiguration">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L60">
         Resource <strong>DscNodeConfiguration</strong>
     </a>
 </h3>
@@ -1014,7 +1014,7 @@ instance of OMI_ConfigurationDocument
 ```
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -1028,7 +1028,7 @@ Create a DscNodeConfiguration resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -1039,14 +1039,14 @@ Get an existing DscNodeConfiguration resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L81">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1057,7 +1057,7 @@ Returns true if the given object is an instance of DscNodeConfiguration.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L91">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L91">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1065,12 +1065,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-configurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L92">property <b>configurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L92">property <b>configurationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-contentEmbedded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L96">property <b>contentEmbedded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L96">property <b>contentEmbedded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentEmbedded: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1078,7 +1078,7 @@ The name of the automation account in which the DSC Node Configuration is create
 The PowerShell DSC Node Configuration (mof content).
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1087,7 +1087,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1095,7 +1095,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the DSC Node Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L104">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L104">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1103,7 +1103,7 @@ Specifies the name of the DSC Node Configuration. Changing this forces a new res
 The name of the resource group in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscNodeConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1112,7 +1112,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IntVariable" data-link-title="IntVariable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L34">
         Resource <strong>IntVariable</strong>
     </a>
 </h3>
@@ -1145,7 +1145,7 @@ const exampleIntVariable = new azure.automation.IntVariable("exampleIntVariable"
 ```
 
 <h4 class="pdoc-member-header" id="IntVariable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -1159,7 +1159,7 @@ Create a IntVariable resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IntVariable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -1170,14 +1170,14 @@ Get an existing IntVariable resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IntVariable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IntVariable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1188,7 +1188,7 @@ Returns true if the given object is an instance of IntVariable.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IntVariable-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L65">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L65">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1196,7 +1196,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1204,7 +1204,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="IntVariable-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L73">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L73">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IntVariable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IntVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariable-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L81">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1246,7 +1246,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="IntVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L85">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L85">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1254,7 +1254,7 @@ deployments.
 The value of the Automation Variable as a `integer`.
 
 <h3 class="pdoc-module-header" id="JobSchedule" data-link-title="JobSchedule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L30">
         Resource <strong>JobSchedule</strong>
     </a>
 </h3>
@@ -1284,7 +1284,7 @@ const example = new azure.automation.JobSchedule("example", {
 ```
 
 <h4 class="pdoc-member-header" id="JobSchedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -1298,7 +1298,7 @@ Create a JobSchedule resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="JobSchedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -1309,14 +1309,14 @@ Get an existing JobSchedule resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="JobSchedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="JobSchedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1327,7 +1327,7 @@ Returns true if the given object is an instance of JobSchedule.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="JobSchedule-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L61">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L61">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1335,7 +1335,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the Automation Account in which the Job Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobSchedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1344,7 +1344,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="JobSchedule-jobScheduleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L65">property <b>jobScheduleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L65">property <b>jobScheduleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jobScheduleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1352,7 +1352,7 @@ deployments and may be missing (undefined) during planning phases.
 The UUID identifying the Automation Job Schedule.
 
 <h4 class="pdoc-member-header" id="JobSchedule-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L69">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L69">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1360,7 +1360,7 @@ The UUID identifying the Automation Job Schedule.
 A map of key/value pairs corresponding to the arguments that can be passed to the Runbook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobSchedule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L73">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L73">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1368,7 +1368,7 @@ A map of key/value pairs corresponding to the arguments that can be passed to th
 The name of the resource group in which the Job Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobSchedule-runOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L77">property <b>runOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L77">property <b>runOn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1376,7 +1376,7 @@ The name of the resource group in which the Job Schedule is created. Changing th
 Name of a Hybrid Worker Group the Runbook will be executed on. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobSchedule-runbookName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L81">property <b>runbookName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L81">property <b>runbookName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runbookName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1384,12 +1384,12 @@ Name of a Hybrid Worker Group the Runbook will be executed on. Changing this for
 The name of a Runbook to link to a Schedule. It needs to be in the same Automation Account as the Schedule and Job Schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobSchedule-scheduleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L82">property <b>scheduleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L82">property <b>scheduleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="JobSchedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1398,7 +1398,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Module" data-link-title="Module">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L37">
         Resource <strong>Module</strong>
     </a>
 </h3>
@@ -1433,7 +1433,7 @@ const exampleModule = new azure.automation.Module("exampleModule", {
 ```
 
 <h4 class="pdoc-member-header" id="Module-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -1447,7 +1447,7 @@ Create a Module resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Module-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -1458,14 +1458,14 @@ Get an existing Module resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Module-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Module-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1476,7 +1476,7 @@ Returns true if the given object is an instance of Module.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Module-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L68">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L68">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1484,7 +1484,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Module is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Module-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1493,7 +1493,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Module-moduleLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L72">property <b>moduleLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L72">property <b>moduleLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</code></pre>
@@ -1501,7 +1501,7 @@ deployments and may be missing (undefined) during planning phases.
 The published Module link.
 
 <h4 class="pdoc-member-header" id="Module-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1509,7 +1509,7 @@ The published Module link.
 Specifies the name of the Module. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Module-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L80">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1517,7 +1517,7 @@ Specifies the name of the Module. Changing this forces a new resource to be crea
 The name of the resource group in which the Module is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Module-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1526,7 +1526,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RunBook" data-link-title="RunBook">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L42">
         Resource <strong>RunBook</strong>
     </a>
 </h3>
@@ -1566,7 +1566,7 @@ const exampleRunBook = new azure.automation.RunBook("exampleRunBook", {
 ```
 
 <h4 class="pdoc-member-header" id="RunBook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -1580,7 +1580,7 @@ Create a RunBook resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RunBook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -1591,14 +1591,14 @@ Get an existing RunBook resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RunBook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RunBook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1609,7 +1609,7 @@ Returns true if the given object is an instance of RunBook.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RunBook-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L73">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L73">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1617,7 +1617,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBook-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L77">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L77">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1625,7 +1625,7 @@ The name of the automation account in which the Runbook is created. Changing thi
 The desired content of the runbook.
 
 <h4 class="pdoc-member-header" id="RunBook-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1633,7 +1633,7 @@ The desired content of the runbook.
 A description for this credential.
 
 <h4 class="pdoc-member-header" id="RunBook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1642,7 +1642,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RunBook-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L85">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L85">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1650,7 +1650,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBook-logProgress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L89">property <b>logProgress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L89">property <b>logProgress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logProgress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1658,7 +1658,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Progress log option.
 
 <h4 class="pdoc-member-header" id="RunBook-logVerbose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L93">property <b>logVerbose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L93">property <b>logVerbose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logVerbose: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1666,7 +1666,7 @@ Progress log option.
 Verbose log option.
 
 <h4 class="pdoc-member-header" id="RunBook-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L97">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L97">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1674,7 +1674,7 @@ Verbose log option.
 Specifies the name of the Runbook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBook-publishContentLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L101">property <b>publishContentLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L101">property <b>publishContentLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RunBookPublishContentLink'>RunBookPublishContentLink</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1682,7 +1682,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 The published runbook content link.
 
 <h4 class="pdoc-member-header" id="RunBook-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L105">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L105">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1690,7 +1690,7 @@ The published runbook content link.
 The name of the resource group in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBook-runbookType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L109">property <b>runbookType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L109">property <b>runbookType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runbookType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1698,7 +1698,7 @@ The name of the resource group in which the Runbook is created. Changing this fo
 The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerShellWorkflow`, `PowerShellWorkflow`, `PowerShell` or `Script`.
 
 <h4 class="pdoc-member-header" id="RunBook-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L113">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L113">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1706,7 +1706,7 @@ The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerS
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="RunBook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1715,7 +1715,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Schedule" data-link-title="Schedule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L40">
         Resource <strong>Schedule</strong>
     </a>
 </h3>
@@ -1753,7 +1753,7 @@ const exampleSchedule = new azure.automation.Schedule("exampleSchedule", {
 ```
 
 <h4 class="pdoc-member-header" id="Schedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -1767,7 +1767,7 @@ Create a Schedule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Schedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1778,14 +1778,14 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Schedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Schedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1796,7 +1796,7 @@ Returns true if the given object is an instance of Schedule.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Schedule-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L71">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L71">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1804,7 +1804,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L75">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L75">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1812,7 +1812,7 @@ The name of the automation account in which the Schedule is created. Changing th
 A description for this Schedule.
 
 <h4 class="pdoc-member-header" id="Schedule-expiryTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L79">property <b>expiryTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L79">property <b>expiryTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiryTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1820,7 +1820,7 @@ A description for this Schedule.
 The end time of the schedule.
 
 <h4 class="pdoc-member-header" id="Schedule-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L83">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L83">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1828,7 +1828,7 @@ The end time of the schedule.
 The frequency of the schedule. - can be either `OneTime`, `Day`, `Hour`, `Week`, or `Month`.
 
 <h4 class="pdoc-member-header" id="Schedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1837,7 +1837,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Schedule-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L87">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L87">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1845,7 +1845,7 @@ deployments and may be missing (undefined) during planning phases.
 The number of `frequency`s between runs. Only valid when frequency is `Day`, `Hour`, `Week`, or `Month` and defaults to `1`.
 
 <h4 class="pdoc-member-header" id="Schedule-monthDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L91">property <b>monthDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L91">property <b>monthDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monthDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1853,7 +1853,7 @@ The number of `frequency`s between runs. Only valid when frequency is `Day`, `Ho
 List of days of the month that the job should execute on. Must be between `1` and `31`. `-1` for last day of the month. Only valid when frequency is `Month`.
 
 <h4 class="pdoc-member-header" id="Schedule-monthlyOccurrences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L95">property <b>monthlyOccurrences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L95">property <b>monthlyOccurrences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monthlyOccurrences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1861,7 +1861,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 List of occurrences of days within a month. Only valid when frequency is `Month`. The `monthlyOccurrence` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="Schedule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1869,7 +1869,7 @@ List of occurrences of days within a month. Only valid when frequency is `Month`
 Specifies the name of the Schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L103">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L103">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1877,7 +1877,7 @@ Specifies the name of the Schedule. Changing this forces a new resource to be cr
 The name of the resource group in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Schedule-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L107">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L107">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ The name of the resource group in which the Schedule is created. Changing this f
 Start time of the schedule. Must be at least five minutes in the future. Defaults to seven minutes in the future from the time the resource is created.
 
 <h4 class="pdoc-member-header" id="Schedule-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L111">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L111">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1893,7 +1893,7 @@ Start time of the schedule. Must be at least five minutes in the future. Default
 The timezone of the start time. Defaults to `UTC`. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
 
 <h4 class="pdoc-member-header" id="Schedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1902,7 +1902,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Schedule-weekDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L115">property <b>weekDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L115">property <b>weekDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weekDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1910,7 +1910,7 @@ deployments.
 List of days of the week that the job should execute on. Only valid when frequency is `Week`.
 
 <h3 class="pdoc-module-header" id="StringVariable" data-link-title="StringVariable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L34">
         Resource <strong>StringVariable</strong>
     </a>
 </h3>
@@ -1943,7 +1943,7 @@ const exampleStringVariable = new azure.automation.StringVariable("exampleString
 ```
 
 <h4 class="pdoc-member-header" id="StringVariable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -1957,7 +1957,7 @@ Create a StringVariable resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StringVariable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -1968,14 +1968,14 @@ Get an existing StringVariable resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StringVariable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StringVariable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1986,7 +1986,7 @@ Returns true if the given object is an instance of StringVariable.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StringVariable-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L65">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L65">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1994,7 +1994,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2002,7 +2002,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="StringVariable-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L73">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L73">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2010,7 +2010,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StringVariable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2019,7 +2019,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StringVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2027,7 +2027,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariable-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L81">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2035,7 +2035,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2044,7 +2044,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="StringVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L85">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L85">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2054,7 +2054,7 @@ The value of the Automation Variable as a `string`.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccount" data-link-title="getAccount">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L27">
         Function <strong>getAccount</strong>
     </a>
 </h3>
@@ -2081,7 +2081,7 @@ export const automationAccountId = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getBoolVariable" data-link-title="getBoolVariable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L29">
         Function <strong>getBoolVariable</strong>
     </a>
 </h3>
@@ -2109,7 +2109,7 @@ export const variableId = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getDateTimeVariable" data-link-title="getDateTimeVariable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L29">
         Function <strong>getDateTimeVariable</strong>
     </a>
 </h3>
@@ -2137,7 +2137,7 @@ export const variableId = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getIntVariable" data-link-title="getIntVariable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L29">
         Function <strong>getIntVariable</strong>
     </a>
 </h3>
@@ -2165,7 +2165,7 @@ export const variableId = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getStringVariable" data-link-title="getStringVariable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L29">
         Function <strong>getStringVariable</strong>
     </a>
 </h3>
@@ -2195,7 +2195,7 @@ export const variableId = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L179">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -2205,7 +2205,7 @@ export const variableId = example.then(example => example.id);
 The set of arguments for constructing a Account resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L183">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L183">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2213,7 +2213,7 @@ The set of arguments for constructing a Account resource.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2221,7 +2221,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Automation Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L191">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L191">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2229,7 +2229,7 @@ Specifies the name of the Automation Account. Changing this forces a new resourc
 The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L195">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L195">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2237,7 +2237,7 @@ The name of the resource group in which the Automation Account is created. Chang
 The SKU name of the account - only `Basic` is supported at this time.
 
 <h4 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L199">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2245,7 +2245,7 @@ The SKU name of the account - only `Basic` is supported at this time.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L141">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -2255,7 +2255,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Account resources.
 
 <h4 class="pdoc-member-header" id="AccountState-dscPrimaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L145">property <b>dscPrimaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L145">property <b>dscPrimaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dscPrimaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2263,7 +2263,7 @@ Input properties used for looking up and filtering Account resources.
 The Primary Access Key for the DSC Endpoint associated with this Automation Account.
 
 <h4 class="pdoc-member-header" id="AccountState-dscSecondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L149">property <b>dscSecondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L149">property <b>dscSecondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dscSecondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2271,7 +2271,7 @@ The Primary Access Key for the DSC Endpoint associated with this Automation Acco
 The Secondary Access Key for the DSC Endpoint associated with this Automation Account.
 
 <h4 class="pdoc-member-header" id="AccountState-dscServerEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L153">property <b>dscServerEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L153">property <b>dscServerEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dscServerEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2279,7 +2279,7 @@ The Secondary Access Key for the DSC Endpoint associated with this Automation Ac
 The DSC Server Endpoint associated with this Automation Account.
 
 <h4 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L157">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L157">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2287,7 +2287,7 @@ The DSC Server Endpoint associated with this Automation Account.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2295,7 +2295,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Automation Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L165">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L165">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2303,7 +2303,7 @@ Specifies the name of the Automation Account. Changing this forces a new resourc
 The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L169">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L169">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2311,7 +2311,7 @@ The name of the resource group in which the Automation Account is created. Chang
 The SKU name of the account - only `Basic` is supported at this time.
 
 <h4 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/account.ts#L173">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/account.ts#L173">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2319,7 +2319,7 @@ The SKU name of the account - only `Basic` is supported at this time.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="BoolVariableArgs" data-link-title="BoolVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L164">
         interface <strong>BoolVariableArgs</strong>
     </a>
 </h3>
@@ -2329,7 +2329,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a BoolVariable resource.
 
 <h4 class="pdoc-member-header" id="BoolVariableArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L168">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L168">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2337,7 +2337,7 @@ The set of arguments for constructing a BoolVariable resource.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariableArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L172">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L172">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2345,7 +2345,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="BoolVariableArgs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L176">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L176">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2353,7 +2353,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="BoolVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2361,7 +2361,7 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L184">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L184">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2369,7 +2369,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L188">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L188">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2377,7 +2377,7 @@ The name of the resource group in which to create the Automation Variable. Chang
 The value of the Automation Variable as a `boolean`.
 
 <h3 class="pdoc-module-header" id="BoolVariableState" data-link-title="BoolVariableState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L134">
         interface <strong>BoolVariableState</strong>
     </a>
 </h3>
@@ -2387,7 +2387,7 @@ The value of the Automation Variable as a `boolean`.
 Input properties used for looking up and filtering BoolVariable resources.
 
 <h4 class="pdoc-member-header" id="BoolVariableState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L138">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L138">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2395,7 +2395,7 @@ Input properties used for looking up and filtering BoolVariable resources.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariableState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L142">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2403,7 +2403,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="BoolVariableState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L146">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L146">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2411,7 +2411,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="BoolVariableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2419,7 +2419,7 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariableState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L154">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L154">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2427,7 +2427,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BoolVariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/boolVariable.ts#L158">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/boolVariable.ts#L158">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2435,7 +2435,7 @@ The name of the resource group in which to create the Automation Variable. Chang
 The value of the Automation Variable as a `boolean`.
 
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L147">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -2445,7 +2445,7 @@ The value of the Automation Variable as a `boolean`.
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L151">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L151">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2453,7 +2453,7 @@ The set of arguments for constructing a Certificate resource.
 The name of the automation account in which the Certificate is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-base64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L155">property <b>base64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L155">property <b>base64</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>base64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2461,7 +2461,7 @@ The name of the automation account in which the Certificate is created. Changing
 Base64 encoded value of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L159">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2469,7 +2469,7 @@ Base64 encoded value of the certificate.
 The description of this Automation Certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2477,7 +2477,7 @@ The description of this Automation Certificate.
 Specifies the name of the Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L167">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L167">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2485,7 +2485,7 @@ Specifies the name of the Certificate. Changing this forces a new resource to be
 The name of the resource group in which the Certificate is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L116">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -2495,7 +2495,7 @@ The name of the resource group in which the Certificate is created. Changing thi
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L120">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L120">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2503,7 +2503,7 @@ Input properties used for looking up and filtering Certificate resources.
 The name of the automation account in which the Certificate is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-base64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L124">property <b>base64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L124">property <b>base64</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>base64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2511,7 +2511,7 @@ The name of the automation account in which the Certificate is created. Changing
 Base64 encoded value of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L128">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L128">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2519,12 +2519,12 @@ Base64 encoded value of the certificate.
 The description of this Automation Certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-exportable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L129">property <b>exportable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L129">property <b>exportable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exportable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2532,7 +2532,7 @@ The description of this Automation Certificate.
 Specifies the name of the Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L137">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L137">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2540,7 +2540,7 @@ Specifies the name of the Certificate. Changing this forces a new resource to be
 The name of the resource group in which the Certificate is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/certificate.ts#L141">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/certificate.ts#L141">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2548,7 +2548,7 @@ The name of the resource group in which the Certificate is created. Changing thi
 The thumbprint for the certificate.
 
 <h3 class="pdoc-module-header" id="CredentialArgs" data-link-title="CredentialArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L171">
         interface <strong>CredentialArgs</strong>
     </a>
 </h3>
@@ -2558,7 +2558,7 @@ The thumbprint for the certificate.
 The set of arguments for constructing a Credential resource.
 
 <h4 class="pdoc-member-header" id="CredentialArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L175">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L175">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2566,7 +2566,7 @@ The set of arguments for constructing a Credential resource.
 The name of the automation account in which the Credential is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CredentialArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L179">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L179">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2574,7 +2574,7 @@ The name of the automation account in which the Credential is created. Changing 
 The description associated with this Automation Credential.
 
 <h4 class="pdoc-member-header" id="CredentialArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L183">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L183">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2582,7 +2582,7 @@ The description associated with this Automation Credential.
 Specifies the name of the Credential. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CredentialArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L187">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L187">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2590,7 +2590,7 @@ Specifies the name of the Credential. Changing this forces a new resource to be 
 The password associated with this Automation Credential.
 
 <h4 class="pdoc-member-header" id="CredentialArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L191">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L191">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2598,7 +2598,7 @@ The password associated with this Automation Credential.
 The name of the resource group in which the Credential is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CredentialArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L195">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L195">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2606,7 +2606,7 @@ The name of the resource group in which the Credential is created. Changing this
 The username associated with this Automation Credential.
 
 <h3 class="pdoc-module-header" id="CredentialState" data-link-title="CredentialState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L141">
         interface <strong>CredentialState</strong>
     </a>
 </h3>
@@ -2616,7 +2616,7 @@ The username associated with this Automation Credential.
 Input properties used for looking up and filtering Credential resources.
 
 <h4 class="pdoc-member-header" id="CredentialState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L145">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L145">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2624,7 +2624,7 @@ Input properties used for looking up and filtering Credential resources.
 The name of the automation account in which the Credential is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CredentialState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L149">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L149">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2632,7 +2632,7 @@ The name of the automation account in which the Credential is created. Changing 
 The description associated with this Automation Credential.
 
 <h4 class="pdoc-member-header" id="CredentialState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2640,7 +2640,7 @@ The description associated with this Automation Credential.
 Specifies the name of the Credential. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CredentialState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L157">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L157">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2648,7 +2648,7 @@ Specifies the name of the Credential. Changing this forces a new resource to be 
 The password associated with this Automation Credential.
 
 <h4 class="pdoc-member-header" id="CredentialState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L161">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L161">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2656,7 +2656,7 @@ The password associated with this Automation Credential.
 The name of the resource group in which the Credential is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CredentialState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/credential.ts#L165">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/credential.ts#L165">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2664,7 +2664,7 @@ The name of the resource group in which the Credential is created. Changing this
 The username associated with this Automation Credential.
 
 <h3 class="pdoc-module-header" id="DateTimeVariableArgs" data-link-title="DateTimeVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L164">
         interface <strong>DateTimeVariableArgs</strong>
     </a>
 </h3>
@@ -2674,7 +2674,7 @@ The username associated with this Automation Credential.
 The set of arguments for constructing a DateTimeVariable resource.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L168">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L168">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2682,7 +2682,7 @@ The set of arguments for constructing a DateTimeVariable resource.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L172">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L172">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2690,7 +2690,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableArgs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L176">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L176">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2698,7 +2698,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2706,7 +2706,7 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L184">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L184">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2714,7 +2714,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L188">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L188">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2722,7 +2722,7 @@ The name of the resource group in which to create the Automation Variable. Chang
 The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/Time Format](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 <h3 class="pdoc-module-header" id="DateTimeVariableState" data-link-title="DateTimeVariableState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L134">
         interface <strong>DateTimeVariableState</strong>
     </a>
 </h3>
@@ -2732,7 +2732,7 @@ The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/T
 Input properties used for looking up and filtering DateTimeVariable resources.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L138">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L138">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2740,7 +2740,7 @@ Input properties used for looking up and filtering DateTimeVariable resources.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L142">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2748,7 +2748,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L146">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L146">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2756,7 +2756,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2764,7 +2764,7 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L154">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L154">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2772,7 +2772,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DateTimeVariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dateTimeVariable.ts#L158">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dateTimeVariable.ts#L158">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2780,7 +2780,7 @@ The name of the resource group in which to create the Automation Variable. Chang
 The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/Time Format](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 <h3 class="pdoc-module-header" id="DscConfigurationArgs" data-link-title="DscConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L191">
         interface <strong>DscConfigurationArgs</strong>
     </a>
 </h3>
@@ -2790,7 +2790,7 @@ The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/T
 The set of arguments for constructing a DscConfiguration resource.
 
 <h4 class="pdoc-member-header" id="DscConfigurationArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L195">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L195">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2798,7 +2798,7 @@ The set of arguments for constructing a DscConfiguration resource.
 The name of the automation account in which the DSC Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfigurationArgs-contentEmbedded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L199">property <b>contentEmbedded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L199">property <b>contentEmbedded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEmbedded: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2806,7 +2806,7 @@ The name of the automation account in which the DSC Configuration is created. Ch
 The PowerShell DSC Configuration script.
 
 <h4 class="pdoc-member-header" id="DscConfigurationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L203">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L203">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2814,7 +2814,7 @@ The PowerShell DSC Configuration script.
 Description to go with DSC Configuration.
 
 <h4 class="pdoc-member-header" id="DscConfigurationArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L207">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L207">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2822,7 +2822,7 @@ Description to go with DSC Configuration.
 Must be the same location as the Automation Account.
 
 <h4 class="pdoc-member-header" id="DscConfigurationArgs-logVerbose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L211">property <b>logVerbose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L211">property <b>logVerbose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logVerbose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2830,7 +2830,7 @@ Must be the same location as the Automation Account.
 Verbose log option.
 
 <h4 class="pdoc-member-header" id="DscConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2838,7 +2838,7 @@ Verbose log option.
 Specifies the name of the DSC Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfigurationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L219">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L219">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2846,7 +2846,7 @@ Specifies the name of the DSC Configuration. Changing this forces a new resource
 The name of the resource group in which the DSC Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfigurationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L223">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L223">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2854,7 +2854,7 @@ The name of the resource group in which the DSC Configuration is created. Changi
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DscConfigurationState" data-link-title="DscConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L152">
         interface <strong>DscConfigurationState</strong>
     </a>
 </h3>
@@ -2864,7 +2864,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering DscConfiguration resources.
 
 <h4 class="pdoc-member-header" id="DscConfigurationState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L156">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L156">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2872,7 +2872,7 @@ Input properties used for looking up and filtering DscConfiguration resources.
 The name of the automation account in which the DSC Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfigurationState-contentEmbedded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L160">property <b>contentEmbedded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L160">property <b>contentEmbedded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEmbedded?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2880,7 +2880,7 @@ The name of the automation account in which the DSC Configuration is created. Ch
 The PowerShell DSC Configuration script.
 
 <h4 class="pdoc-member-header" id="DscConfigurationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L164">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L164">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2888,7 +2888,7 @@ The PowerShell DSC Configuration script.
 Description to go with DSC Configuration.
 
 <h4 class="pdoc-member-header" id="DscConfigurationState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L168">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L168">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2896,7 +2896,7 @@ Description to go with DSC Configuration.
 Must be the same location as the Automation Account.
 
 <h4 class="pdoc-member-header" id="DscConfigurationState-logVerbose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L172">property <b>logVerbose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L172">property <b>logVerbose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logVerbose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2904,7 +2904,7 @@ Must be the same location as the Automation Account.
 Verbose log option.
 
 <h4 class="pdoc-member-header" id="DscConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L176">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2912,7 +2912,7 @@ Verbose log option.
 Specifies the name of the DSC Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfigurationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L180">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L180">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2920,12 +2920,12 @@ Specifies the name of the DSC Configuration. Changing this forces a new resource
 The name of the resource group in which the DSC Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscConfigurationState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L181">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L181">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DscConfigurationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscConfiguration.ts#L185">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscConfiguration.ts#L185">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2933,7 +2933,7 @@ The name of the resource group in which the DSC Configuration is created. Changi
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DscNodeConfigurationArgs" data-link-title="DscNodeConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L177">
         interface <strong>DscNodeConfigurationArgs</strong>
     </a>
 </h3>
@@ -2943,7 +2943,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a DscNodeConfiguration resource.
 
 <h4 class="pdoc-member-header" id="DscNodeConfigurationArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L181">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L181">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2951,7 +2951,7 @@ The set of arguments for constructing a DscNodeConfiguration resource.
 The name of the automation account in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscNodeConfigurationArgs-contentEmbedded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L185">property <b>contentEmbedded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L185">property <b>contentEmbedded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEmbedded: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2959,7 +2959,7 @@ The name of the automation account in which the DSC Node Configuration is create
 The PowerShell DSC Node Configuration (mof content).
 
 <h4 class="pdoc-member-header" id="DscNodeConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L189">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L189">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2967,7 +2967,7 @@ The PowerShell DSC Node Configuration (mof content).
 Specifies the name of the DSC Node Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscNodeConfigurationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L193">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L193">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2975,7 +2975,7 @@ Specifies the name of the DSC Node Configuration. Changing this forces a new res
 The name of the resource group in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="DscNodeConfigurationState" data-link-title="DscNodeConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L154">
         interface <strong>DscNodeConfigurationState</strong>
     </a>
 </h3>
@@ -2985,7 +2985,7 @@ The name of the resource group in which the DSC Node Configuration is created. C
 Input properties used for looking up and filtering DscNodeConfiguration resources.
 
 <h4 class="pdoc-member-header" id="DscNodeConfigurationState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L158">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L158">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2993,12 +2993,12 @@ Input properties used for looking up and filtering DscNodeConfiguration resource
 The name of the automation account in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscNodeConfigurationState-configurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L159">property <b>configurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L159">property <b>configurationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DscNodeConfigurationState-contentEmbedded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L163">property <b>contentEmbedded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L163">property <b>contentEmbedded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEmbedded?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3006,7 +3006,7 @@ The name of the automation account in which the DSC Node Configuration is create
 The PowerShell DSC Node Configuration (mof content).
 
 <h4 class="pdoc-member-header" id="DscNodeConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3014,7 +3014,7 @@ The PowerShell DSC Node Configuration (mof content).
 Specifies the name of the DSC Node Configuration. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DscNodeConfigurationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/dscNodeConfiguration.ts#L171">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/dscNodeConfiguration.ts#L171">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3022,7 +3022,7 @@ Specifies the name of the DSC Node Configuration. Changing this forces a new res
 The name of the resource group in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GetAccountArgs" data-link-title="GetAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L44">
         interface <strong>GetAccountArgs</strong>
     </a>
 </h3>
@@ -3032,7 +3032,7 @@ The name of the resource group in which the DSC Node Configuration is created. C
 A collection of arguments for invoking getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3040,7 +3040,7 @@ A collection of arguments for invoking getAccount.
 The name of the Automation Account.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L52">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L52">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3048,7 +3048,7 @@ The name of the Automation Account.
 Specifies the name of the Resource Group where the Automation Account exists.
 
 <h3 class="pdoc-module-header" id="GetAccountResult" data-link-title="GetAccountResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L58">
         interface <strong>GetAccountResult</strong>
     </a>
 </h3>
@@ -3058,7 +3058,7 @@ Specifies the name of the Resource Group where the Automation Account exists.
 A collection of values returned by getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L62">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L62">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3066,7 +3066,7 @@ A collection of values returned by getAccount.
 The Endpoint for this Auomation Account.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3074,12 +3074,12 @@ The Endpoint for this Auomation Account.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L71">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L71">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3087,12 +3087,12 @@ The provider-assigned unique ID for this managed resource.
 The Primary Access Key for the Automation Account.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L72">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L72">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getAccount.ts#L76">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getAccount.ts#L76">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3100,7 +3100,7 @@ The Primary Access Key for the Automation Account.
 The Secondary Access Key for the Automation Account.
 
 <h3 class="pdoc-module-header" id="GetBoolVariableArgs" data-link-title="GetBoolVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L47">
         interface <strong>GetBoolVariableArgs</strong>
     </a>
 </h3>
@@ -3110,7 +3110,7 @@ The Secondary Access Key for the Automation Account.
 A collection of arguments for invoking getBoolVariable.
 
 <h4 class="pdoc-member-header" id="GetBoolVariableArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L51">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L51">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3118,7 +3118,7 @@ A collection of arguments for invoking getBoolVariable.
 The name of the automation account in which the Automation Variable exists.
 
 <h4 class="pdoc-member-header" id="GetBoolVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3126,7 +3126,7 @@ The name of the automation account in which the Automation Variable exists.
 The name of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="GetBoolVariableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L59">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L59">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3134,7 +3134,7 @@ The name of the Automation Variable.
 The Name of the Resource Group where the automation account exists.
 
 <h3 class="pdoc-module-header" id="GetBoolVariableResult" data-link-title="GetBoolVariableResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L65">
         interface <strong>GetBoolVariableResult</strong>
     </a>
 </h3>
@@ -3144,12 +3144,12 @@ The Name of the Resource Group where the automation account exists.
 A collection of values returned by getBoolVariable.
 
 <h4 class="pdoc-member-header" id="GetBoolVariableResult-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L66">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L66">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBoolVariableResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3157,7 +3157,7 @@ A collection of values returned by getBoolVariable.
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="GetBoolVariableResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L74">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L74">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3165,7 +3165,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GetBoolVariableResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3173,17 +3173,17 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBoolVariableResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBoolVariableResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L80">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBoolVariableResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getBoolVariable.ts#L84">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getBoolVariable.ts#L84">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3191,7 +3191,7 @@ The provider-assigned unique ID for this managed resource.
 The value of the Automation Variable as a `boolean`.
 
 <h3 class="pdoc-module-header" id="GetDateTimeVariableArgs" data-link-title="GetDateTimeVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L47">
         interface <strong>GetDateTimeVariableArgs</strong>
     </a>
 </h3>
@@ -3201,7 +3201,7 @@ The value of the Automation Variable as a `boolean`.
 A collection of arguments for invoking getDateTimeVariable.
 
 <h4 class="pdoc-member-header" id="GetDateTimeVariableArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L51">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L51">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3209,7 +3209,7 @@ A collection of arguments for invoking getDateTimeVariable.
 The name of the automation account in which the Automation Variable exists.
 
 <h4 class="pdoc-member-header" id="GetDateTimeVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3217,7 +3217,7 @@ The name of the automation account in which the Automation Variable exists.
 The name of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="GetDateTimeVariableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L59">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L59">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3225,7 +3225,7 @@ The name of the Automation Variable.
 The Name of the Resource Group where the automation account exists.
 
 <h3 class="pdoc-module-header" id="GetDateTimeVariableResult" data-link-title="GetDateTimeVariableResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L65">
         interface <strong>GetDateTimeVariableResult</strong>
     </a>
 </h3>
@@ -3235,12 +3235,12 @@ The Name of the Resource Group where the automation account exists.
 A collection of values returned by getDateTimeVariable.
 
 <h4 class="pdoc-member-header" id="GetDateTimeVariableResult-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L66">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L66">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDateTimeVariableResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3248,7 +3248,7 @@ A collection of values returned by getDateTimeVariable.
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="GetDateTimeVariableResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L74">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L74">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3256,7 +3256,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GetDateTimeVariableResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3264,17 +3264,17 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDateTimeVariableResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDateTimeVariableResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L80">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDateTimeVariableResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getDateTimeVariable.ts#L84">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getDateTimeVariable.ts#L84">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3282,7 +3282,7 @@ The provider-assigned unique ID for this managed resource.
 The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/Time Format](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 <h3 class="pdoc-module-header" id="GetIntVariableArgs" data-link-title="GetIntVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L47">
         interface <strong>GetIntVariableArgs</strong>
     </a>
 </h3>
@@ -3292,7 +3292,7 @@ The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/T
 A collection of arguments for invoking getIntVariable.
 
 <h4 class="pdoc-member-header" id="GetIntVariableArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L51">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L51">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3300,7 +3300,7 @@ A collection of arguments for invoking getIntVariable.
 The name of the automation account in which the Automation Variable exists.
 
 <h4 class="pdoc-member-header" id="GetIntVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3308,7 +3308,7 @@ The name of the automation account in which the Automation Variable exists.
 The name of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="GetIntVariableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L59">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L59">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3316,7 +3316,7 @@ The name of the Automation Variable.
 The Name of the Resource Group where the automation account exists.
 
 <h3 class="pdoc-module-header" id="GetIntVariableResult" data-link-title="GetIntVariableResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L65">
         interface <strong>GetIntVariableResult</strong>
     </a>
 </h3>
@@ -3326,12 +3326,12 @@ The Name of the Resource Group where the automation account exists.
 A collection of values returned by getIntVariable.
 
 <h4 class="pdoc-member-header" id="GetIntVariableResult-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L66">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L66">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetIntVariableResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3339,7 +3339,7 @@ A collection of values returned by getIntVariable.
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="GetIntVariableResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L74">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L74">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3347,7 +3347,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GetIntVariableResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3355,17 +3355,17 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetIntVariableResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetIntVariableResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L80">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetIntVariableResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getIntVariable.ts#L84">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getIntVariable.ts#L84">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3373,7 +3373,7 @@ The provider-assigned unique ID for this managed resource.
 The value of the Automation Variable as a `integer`.
 
 <h3 class="pdoc-module-header" id="GetStringVariableArgs" data-link-title="GetStringVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L47">
         interface <strong>GetStringVariableArgs</strong>
     </a>
 </h3>
@@ -3383,7 +3383,7 @@ The value of the Automation Variable as a `integer`.
 A collection of arguments for invoking getStringVariable.
 
 <h4 class="pdoc-member-header" id="GetStringVariableArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L51">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L51">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3391,7 +3391,7 @@ A collection of arguments for invoking getStringVariable.
 The name of the automation account in which the Automation Variable exists.
 
 <h4 class="pdoc-member-header" id="GetStringVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3399,7 +3399,7 @@ The name of the automation account in which the Automation Variable exists.
 The name of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="GetStringVariableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L59">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L59">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3407,7 +3407,7 @@ The name of the Automation Variable.
 The Name of the Resource Group where the automation account exists.
 
 <h3 class="pdoc-module-header" id="GetStringVariableResult" data-link-title="GetStringVariableResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L65">
         interface <strong>GetStringVariableResult</strong>
     </a>
 </h3>
@@ -3417,12 +3417,12 @@ The Name of the Resource Group where the automation account exists.
 A collection of values returned by getStringVariable.
 
 <h4 class="pdoc-member-header" id="GetStringVariableResult-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L66">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L66">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStringVariableResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3430,7 +3430,7 @@ A collection of values returned by getStringVariable.
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="GetStringVariableResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L74">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L74">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3438,7 +3438,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GetStringVariableResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3446,17 +3446,17 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetStringVariableResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStringVariableResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L80">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStringVariableResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/getStringVariable.ts#L84">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/getStringVariable.ts#L84">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3464,7 +3464,7 @@ The provider-assigned unique ID for this managed resource.
 The value of the Automation Variable as a `string`.
 
 <h3 class="pdoc-module-header" id="IntVariableArgs" data-link-title="IntVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L164">
         interface <strong>IntVariableArgs</strong>
     </a>
 </h3>
@@ -3474,7 +3474,7 @@ The value of the Automation Variable as a `string`.
 The set of arguments for constructing a IntVariable resource.
 
 <h4 class="pdoc-member-header" id="IntVariableArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L168">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L168">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3482,7 +3482,7 @@ The set of arguments for constructing a IntVariable resource.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariableArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L172">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L172">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3490,7 +3490,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="IntVariableArgs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L176">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L176">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3498,7 +3498,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IntVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3506,7 +3506,7 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L184">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L184">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3514,7 +3514,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L188">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L188">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3522,7 +3522,7 @@ The name of the resource group in which to create the Automation Variable. Chang
 The value of the Automation Variable as a `integer`.
 
 <h3 class="pdoc-module-header" id="IntVariableState" data-link-title="IntVariableState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L134">
         interface <strong>IntVariableState</strong>
     </a>
 </h3>
@@ -3532,7 +3532,7 @@ The value of the Automation Variable as a `integer`.
 Input properties used for looking up and filtering IntVariable resources.
 
 <h4 class="pdoc-member-header" id="IntVariableState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L138">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L138">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3540,7 +3540,7 @@ Input properties used for looking up and filtering IntVariable resources.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariableState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L142">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3548,7 +3548,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="IntVariableState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L146">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L146">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3556,7 +3556,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IntVariableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3564,7 +3564,7 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariableState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L154">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L154">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3572,7 +3572,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntVariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/intVariable.ts#L158">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/intVariable.ts#L158">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3580,7 +3580,7 @@ The name of the resource group in which to create the Automation Variable. Chang
 The value of the Automation Variable as a `integer`.
 
 <h3 class="pdoc-module-header" id="JobScheduleArgs" data-link-title="JobScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L170">
         interface <strong>JobScheduleArgs</strong>
     </a>
 </h3>
@@ -3590,7 +3590,7 @@ The value of the Automation Variable as a `integer`.
 The set of arguments for constructing a JobSchedule resource.
 
 <h4 class="pdoc-member-header" id="JobScheduleArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L174">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L174">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3598,7 +3598,7 @@ The set of arguments for constructing a JobSchedule resource.
 The name of the Automation Account in which the Job Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleArgs-jobScheduleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L178">property <b>jobScheduleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L178">property <b>jobScheduleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobScheduleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3606,7 +3606,7 @@ The name of the Automation Account in which the Job Schedule is created. Changin
 The UUID identifying the Automation Job Schedule.
 
 <h4 class="pdoc-member-header" id="JobScheduleArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L182">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L182">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3614,7 +3614,7 @@ The UUID identifying the Automation Job Schedule.
 A map of key/value pairs corresponding to the arguments that can be passed to the Runbook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L186">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L186">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3622,7 +3622,7 @@ A map of key/value pairs corresponding to the arguments that can be passed to th
 The name of the resource group in which the Job Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleArgs-runOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L190">property <b>runOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L190">property <b>runOn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runOn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3630,7 +3630,7 @@ The name of the resource group in which the Job Schedule is created. Changing th
 Name of a Hybrid Worker Group the Runbook will be executed on. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleArgs-runbookName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L194">property <b>runbookName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L194">property <b>runbookName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3638,12 +3638,12 @@ Name of a Hybrid Worker Group the Runbook will be executed on. Changing this for
 The name of a Runbook to link to a Schedule. It needs to be in the same Automation Account as the Schedule and Job Schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleArgs-scheduleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L195">property <b>scheduleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L195">property <b>scheduleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="JobScheduleState" data-link-title="JobScheduleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L139">
         interface <strong>JobScheduleState</strong>
     </a>
 </h3>
@@ -3653,7 +3653,7 @@ The name of a Runbook to link to a Schedule. It needs to be in the same Automati
 Input properties used for looking up and filtering JobSchedule resources.
 
 <h4 class="pdoc-member-header" id="JobScheduleState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L143">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L143">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3661,7 +3661,7 @@ Input properties used for looking up and filtering JobSchedule resources.
 The name of the Automation Account in which the Job Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleState-jobScheduleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L147">property <b>jobScheduleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L147">property <b>jobScheduleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobScheduleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3669,7 +3669,7 @@ The name of the Automation Account in which the Job Schedule is created. Changin
 The UUID identifying the Automation Job Schedule.
 
 <h4 class="pdoc-member-header" id="JobScheduleState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L151">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L151">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3677,7 +3677,7 @@ The UUID identifying the Automation Job Schedule.
 A map of key/value pairs corresponding to the arguments that can be passed to the Runbook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L155">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L155">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3685,7 +3685,7 @@ A map of key/value pairs corresponding to the arguments that can be passed to th
 The name of the resource group in which the Job Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleState-runOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L159">property <b>runOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L159">property <b>runOn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runOn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3693,7 +3693,7 @@ The name of the resource group in which the Job Schedule is created. Changing th
 Name of a Hybrid Worker Group the Runbook will be executed on. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleState-runbookName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L163">property <b>runbookName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L163">property <b>runbookName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3701,12 +3701,12 @@ Name of a Hybrid Worker Group the Runbook will be executed on. Changing this for
 The name of a Runbook to link to a Schedule. It needs to be in the same Automation Account as the Schedule and Job Schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="JobScheduleState-scheduleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/jobSchedule.ts#L164">property <b>scheduleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/jobSchedule.ts#L164">property <b>scheduleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ModuleArgs" data-link-title="ModuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L150">
         interface <strong>ModuleArgs</strong>
     </a>
 </h3>
@@ -3716,7 +3716,7 @@ The name of a Runbook to link to a Schedule. It needs to be in the same Automati
 The set of arguments for constructing a Module resource.
 
 <h4 class="pdoc-member-header" id="ModuleArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L154">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L154">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3724,7 +3724,7 @@ The set of arguments for constructing a Module resource.
 The name of the automation account in which the Module is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ModuleArgs-moduleLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L158">property <b>moduleLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L158">property <b>moduleLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</code></pre>
@@ -3732,7 +3732,7 @@ The name of the automation account in which the Module is created. Changing this
 The published Module link.
 
 <h4 class="pdoc-member-header" id="ModuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3740,7 +3740,7 @@ The published Module link.
 Specifies the name of the Module. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ModuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L166">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L166">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3748,7 +3748,7 @@ Specifies the name of the Module. Changing this forces a new resource to be crea
 The name of the resource group in which the Module is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ModuleState" data-link-title="ModuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L128">
         interface <strong>ModuleState</strong>
     </a>
 </h3>
@@ -3758,7 +3758,7 @@ The name of the resource group in which the Module is created. Changing this for
 Input properties used for looking up and filtering Module resources.
 
 <h4 class="pdoc-member-header" id="ModuleState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L132">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L132">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3766,7 +3766,7 @@ Input properties used for looking up and filtering Module resources.
 The name of the automation account in which the Module is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ModuleState-moduleLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L136">property <b>moduleLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L136">property <b>moduleLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>moduleLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</code></pre>
@@ -3774,7 +3774,7 @@ The name of the automation account in which the Module is created. Changing this
 The published Module link.
 
 <h4 class="pdoc-member-header" id="ModuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3782,7 +3782,7 @@ The published Module link.
 Specifies the name of the Module. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ModuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/module.ts#L144">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/module.ts#L144">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3790,7 +3790,7 @@ Specifies the name of the Module. Changing this forces a new resource to be crea
 The name of the resource group in which the Module is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="RunBookArgs" data-link-title="RunBookArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L231">
         interface <strong>RunBookArgs</strong>
     </a>
 </h3>
@@ -3800,7 +3800,7 @@ The name of the resource group in which the Module is created. Changing this for
 The set of arguments for constructing a RunBook resource.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L235">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L235">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3808,7 +3808,7 @@ The set of arguments for constructing a RunBook resource.
 The name of the automation account in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L239">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L239">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3816,7 +3816,7 @@ The name of the automation account in which the Runbook is created. Changing thi
 The desired content of the runbook.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L243">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L243">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3824,7 +3824,7 @@ The desired content of the runbook.
 A description for this credential.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L247">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L247">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3832,7 +3832,7 @@ A description for this credential.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-logProgress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L251">property <b>logProgress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L251">property <b>logProgress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logProgress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3840,7 +3840,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Progress log option.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-logVerbose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L255">property <b>logVerbose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L255">property <b>logVerbose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logVerbose: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3848,7 +3848,7 @@ Progress log option.
 Verbose log option.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L259">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L259">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3856,7 +3856,7 @@ Verbose log option.
 Specifies the name of the Runbook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-publishContentLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L263">property <b>publishContentLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L263">property <b>publishContentLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publishContentLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookPublishContentLink'>RunBookPublishContentLink</a>&gt;;</code></pre>
@@ -3864,7 +3864,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 The published runbook content link.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L267">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L267">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3872,7 +3872,7 @@ The published runbook content link.
 The name of the resource group in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-runbookType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L271">property <b>runbookType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L271">property <b>runbookType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3880,7 +3880,7 @@ The name of the resource group in which the Runbook is created. Changing this fo
 The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerShellWorkflow`, `PowerShellWorkflow`, `PowerShell` or `Script`.
 
 <h4 class="pdoc-member-header" id="RunBookArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L275">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L275">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3888,7 +3888,7 @@ The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerS
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="RunBookState" data-link-title="RunBookState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L181">
         interface <strong>RunBookState</strong>
     </a>
 </h3>
@@ -3898,7 +3898,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering RunBook resources.
 
 <h4 class="pdoc-member-header" id="RunBookState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L185">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L185">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3906,7 +3906,7 @@ Input properties used for looking up and filtering RunBook resources.
 The name of the automation account in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBookState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L189">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L189">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3914,7 +3914,7 @@ The name of the automation account in which the Runbook is created. Changing thi
 The desired content of the runbook.
 
 <h4 class="pdoc-member-header" id="RunBookState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L193">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L193">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3922,7 +3922,7 @@ The desired content of the runbook.
 A description for this credential.
 
 <h4 class="pdoc-member-header" id="RunBookState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L197">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L197">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3930,7 +3930,7 @@ A description for this credential.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBookState-logProgress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L201">property <b>logProgress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L201">property <b>logProgress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logProgress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3938,7 +3938,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Progress log option.
 
 <h4 class="pdoc-member-header" id="RunBookState-logVerbose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L205">property <b>logVerbose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L205">property <b>logVerbose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logVerbose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3946,7 +3946,7 @@ Progress log option.
 Verbose log option.
 
 <h4 class="pdoc-member-header" id="RunBookState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L209">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L209">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3954,7 +3954,7 @@ Verbose log option.
 Specifies the name of the Runbook. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBookState-publishContentLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L213">property <b>publishContentLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L213">property <b>publishContentLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publishContentLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookPublishContentLink'>RunBookPublishContentLink</a>&gt;;</code></pre>
@@ -3962,7 +3962,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 The published runbook content link.
 
 <h4 class="pdoc-member-header" id="RunBookState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L217">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L217">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3970,7 +3970,7 @@ The published runbook content link.
 The name of the resource group in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="RunBookState-runbookType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L221">property <b>runbookType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L221">property <b>runbookType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3978,7 +3978,7 @@ The name of the resource group in which the Runbook is created. Changing this fo
 The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerShellWorkflow`, `PowerShellWorkflow`, `PowerShell` or `Script`.
 
 <h4 class="pdoc-member-header" id="RunBookState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/runBook.ts#L225">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/runBook.ts#L225">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3986,7 +3986,7 @@ The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerS
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ScheduleArgs" data-link-title="ScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L233">
         interface <strong>ScheduleArgs</strong>
     </a>
 </h3>
@@ -3996,7 +3996,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a Schedule resource.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L237">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L237">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4004,7 +4004,7 @@ The set of arguments for constructing a Schedule resource.
 The name of the automation account in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L241">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L241">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4012,7 +4012,7 @@ The name of the automation account in which the Schedule is created. Changing th
 A description for this Schedule.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-expiryTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L245">property <b>expiryTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L245">property <b>expiryTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiryTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4020,7 +4020,7 @@ A description for this Schedule.
 The end time of the schedule.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L249">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L249">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4028,7 +4028,7 @@ The end time of the schedule.
 The frequency of the schedule. - can be either `OneTime`, `Day`, `Hour`, `Week`, or `Month`.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L253">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L253">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4036,7 +4036,7 @@ The frequency of the schedule. - can be either `OneTime`, `Day`, `Hour`, `Week`,
 The number of `frequency`s between runs. Only valid when frequency is `Day`, `Hour`, `Week`, or `Month` and defaults to `1`.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-monthDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L257">property <b>monthDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L257">property <b>monthDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monthDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -4044,7 +4044,7 @@ The number of `frequency`s between runs. Only valid when frequency is `Day`, `Ho
 List of days of the month that the job should execute on. Must be between `1` and `31`. `-1` for last day of the month. Only valid when frequency is `Month`.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-monthlyOccurrences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L261">property <b>monthlyOccurrences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L261">property <b>monthlyOccurrences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</code></pre>
@@ -4052,7 +4052,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 List of occurrences of days within a month. Only valid when frequency is `Month`. The `monthlyOccurrence` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L265">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L265">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4060,7 +4060,7 @@ List of occurrences of days within a month. Only valid when frequency is `Month`
 Specifies the name of the Schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L269">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L269">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4068,7 +4068,7 @@ Specifies the name of the Schedule. Changing this forces a new resource to be cr
 The name of the resource group in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L273">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L273">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4076,7 +4076,7 @@ The name of the resource group in which the Schedule is created. Changing this f
 Start time of the schedule. Must be at least five minutes in the future. Defaults to seven minutes in the future from the time the resource is created.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L277">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L277">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4084,7 +4084,7 @@ Start time of the schedule. Must be at least five minutes in the future. Default
 The timezone of the start time. Defaults to `UTC`. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-weekDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L281">property <b>weekDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L281">property <b>weekDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weekDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4092,7 +4092,7 @@ The timezone of the start time. Defaults to `UTC`. For possible values see: http
 List of days of the week that the job should execute on. Only valid when frequency is `Week`.
 
 <h3 class="pdoc-module-header" id="ScheduleState" data-link-title="ScheduleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L179">
         interface <strong>ScheduleState</strong>
     </a>
 </h3>
@@ -4102,7 +4102,7 @@ List of days of the week that the job should execute on. Only valid when frequen
 Input properties used for looking up and filtering Schedule resources.
 
 <h4 class="pdoc-member-header" id="ScheduleState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L183">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L183">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4110,7 +4110,7 @@ Input properties used for looking up and filtering Schedule resources.
 The name of the automation account in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4118,7 +4118,7 @@ The name of the automation account in which the Schedule is created. Changing th
 A description for this Schedule.
 
 <h4 class="pdoc-member-header" id="ScheduleState-expiryTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L191">property <b>expiryTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L191">property <b>expiryTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiryTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4126,7 +4126,7 @@ A description for this Schedule.
 The end time of the schedule.
 
 <h4 class="pdoc-member-header" id="ScheduleState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L195">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L195">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4134,7 +4134,7 @@ The end time of the schedule.
 The frequency of the schedule. - can be either `OneTime`, `Day`, `Hour`, `Week`, or `Month`.
 
 <h4 class="pdoc-member-header" id="ScheduleState-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L199">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L199">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4142,7 +4142,7 @@ The frequency of the schedule. - can be either `OneTime`, `Day`, `Hour`, `Week`,
 The number of `frequency`s between runs. Only valid when frequency is `Day`, `Hour`, `Week`, or `Month` and defaults to `1`.
 
 <h4 class="pdoc-member-header" id="ScheduleState-monthDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L203">property <b>monthDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L203">property <b>monthDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monthDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -4150,7 +4150,7 @@ The number of `frequency`s between runs. Only valid when frequency is `Day`, `Ho
 List of days of the month that the job should execute on. Must be between `1` and `31`. `-1` for last day of the month. Only valid when frequency is `Month`.
 
 <h4 class="pdoc-member-header" id="ScheduleState-monthlyOccurrences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L207">property <b>monthlyOccurrences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L207">property <b>monthlyOccurrences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</code></pre>
@@ -4158,7 +4158,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 List of occurrences of days within a month. Only valid when frequency is `Month`. The `monthlyOccurrence` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ScheduleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4166,7 +4166,7 @@ List of occurrences of days within a month. Only valid when frequency is `Month`
 Specifies the name of the Schedule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L215">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L215">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4174,7 +4174,7 @@ Specifies the name of the Schedule. Changing this forces a new resource to be cr
 The name of the resource group in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L219">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L219">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4182,7 +4182,7 @@ The name of the resource group in which the Schedule is created. Changing this f
 Start time of the schedule. Must be at least five minutes in the future. Defaults to seven minutes in the future from the time the resource is created.
 
 <h4 class="pdoc-member-header" id="ScheduleState-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L223">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L223">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4190,7 +4190,7 @@ Start time of the schedule. Must be at least five minutes in the future. Default
 The timezone of the start time. Defaults to `UTC`. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
 
 <h4 class="pdoc-member-header" id="ScheduleState-weekDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/schedule.ts#L227">property <b>weekDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/schedule.ts#L227">property <b>weekDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weekDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4198,7 +4198,7 @@ The timezone of the start time. Defaults to `UTC`. For possible values see: http
 List of days of the week that the job should execute on. Only valid when frequency is `Week`.
 
 <h3 class="pdoc-module-header" id="StringVariableArgs" data-link-title="StringVariableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L164">
         interface <strong>StringVariableArgs</strong>
     </a>
 </h3>
@@ -4208,7 +4208,7 @@ List of days of the week that the job should execute on. Only valid when frequen
 The set of arguments for constructing a StringVariable resource.
 
 <h4 class="pdoc-member-header" id="StringVariableArgs-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L168">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L168">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4216,7 +4216,7 @@ The set of arguments for constructing a StringVariable resource.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariableArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L172">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L172">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4224,7 +4224,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="StringVariableArgs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L176">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L176">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4232,7 +4232,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StringVariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4240,7 +4240,7 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L184">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L184">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4248,7 +4248,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L188">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L188">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4256,7 +4256,7 @@ The name of the resource group in which to create the Automation Variable. Chang
 The value of the Automation Variable as a `string`.
 
 <h3 class="pdoc-module-header" id="StringVariableState" data-link-title="StringVariableState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L134">
         interface <strong>StringVariableState</strong>
     </a>
 </h3>
@@ -4266,7 +4266,7 @@ The value of the Automation Variable as a `string`.
 Input properties used for looking up and filtering StringVariable resources.
 
 <h4 class="pdoc-member-header" id="StringVariableState-automationAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L138">property <b>automationAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L138">property <b>automationAccountName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationAccountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4274,7 +4274,7 @@ Input properties used for looking up and filtering StringVariable resources.
 The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariableState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L142">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4282,7 +4282,7 @@ The name of the automation account in which the Variable is created. Changing th
 The description of the Automation Variable.
 
 <h4 class="pdoc-member-header" id="StringVariableState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L146">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L146">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4290,7 +4290,7 @@ The description of the Automation Variable.
 Specifies if the Automation Variable is encrypted. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StringVariableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4298,7 +4298,7 @@ Specifies if the Automation Variable is encrypted. Defaults to `false`.
 The name of the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariableState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L154">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L154">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4306,7 +4306,7 @@ The name of the Automation Variable. Changing this forces a new resource to be c
 The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="StringVariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/automation/stringVariable.ts#L158">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/automation/stringVariable.ts#L158">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

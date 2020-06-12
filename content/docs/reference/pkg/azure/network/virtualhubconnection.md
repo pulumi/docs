@@ -13,7 +13,6 @@ meta_desc: "Explore the VirtualHubConnection resource of the network module, inc
 Manages a Connection for a Virtual Hub.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -65,7 +64,60 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("172.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		test, err := network.NewVirtualWan(ctx, "test", &network.VirtualWanArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualHub, err := network.NewVirtualHub(ctx, "exampleVirtualHub", &network.VirtualHubArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			VirtualWanId:      pulumi.String(azurerm_virtual_wan.Example.Id),
+			AddressPrefix:     pulumi.String("10.0.1.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualHubConnection, err := network.NewVirtualHubConnection(ctx, "exampleVirtualHubConnection", &network.VirtualHubConnectionArgs{
+			VirtualHubId:           exampleVirtualHub.ID(),
+			RemoteVirtualNetworkId: exampleVirtualNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

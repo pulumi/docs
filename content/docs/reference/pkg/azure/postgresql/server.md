@@ -13,7 +13,6 @@ meta_desc: "Explore the Server resource of the postgresql module, including exam
 Manages a PostgreSQL Server.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +54,45 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/postgresql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := postgresql.NewServer(ctx, "exampleServer", &postgresql.ServerArgs{
+			Location:                     exampleResourceGroup.Location,
+			ResourceGroupName:            exampleResourceGroup.Name,
+			AdministratorLogin:           pulumi.String("psqladminun"),
+			AdministratorLoginPassword:   pulumi.String("H@Sh1CoR3!"),
+			SkuName:                      pulumi.String("GP_Gen5_4"),
+			Version:                      pulumi.String("9.6"),
+			StorageMb:                    pulumi.Int(640000),
+			BackupRetentionDays:          pulumi.Int(7),
+			GeoRedundantBackupEnabled:    pulumi.Bool(true),
+			AutoGrowEnabled:              pulumi.Bool(true),
+			PublicNetworkAccessEnabled:   pulumi.Bool(false),
+			SslEnforcementEnabled:        pulumi.Bool(true),
+			SslMinimalTlsVersionEnforced: pulumi.String("TLS1_2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -451,7 +488,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`. 
+    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -515,7 +552,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.  
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -698,7 +735,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`. 
+    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -762,7 +799,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.  
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -945,7 +982,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`. 
+    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1009,7 +1046,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.  
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1192,7 +1229,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`. 
+    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1256,7 +1293,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.  
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1677,7 +1714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`. 
+    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1752,7 +1789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.  
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1935,7 +1972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`. 
+    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2010,7 +2047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.  
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2193,7 +2230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`. 
+    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2268,7 +2305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.  
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2451,7 +2488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`. 
+    <dd>{{% md %}}When `create_mode` is `PointInTimeRestore` the point in time to restore from `creation_source_server_id`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2526,7 +2563,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.  
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

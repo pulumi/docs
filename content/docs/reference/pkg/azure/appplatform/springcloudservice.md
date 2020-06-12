@@ -12,9 +12,6 @@ meta_desc: "Explore the SpringCloudService resource of the appplatform module, i
 
 Manages an Azure Spring Cloud Service.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a SpringCloudService Resource {#create}

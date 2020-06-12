@@ -12,9 +12,6 @@ meta_desc: "Explore the Account resource of the cosmosdb module, including examp
 
 Manages a CosmosDB (formally DocumentDB) Account.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Account Resource {#create}

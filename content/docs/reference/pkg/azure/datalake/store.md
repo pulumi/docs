@@ -13,7 +13,6 @@ meta_desc: "Explore the Store resource of the datalake module, including example
 Manages an Azure Data Lake Store.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +45,36 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datalake"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleStore, err := datalake.NewStore(ctx, "exampleStore", &datalake.StoreArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			EncryptionState:   pulumi.String("Enabled"),
+			EncryptionType:    pulumi.String("ServiceManaged"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

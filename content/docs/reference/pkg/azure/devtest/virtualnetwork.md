@@ -13,7 +13,6 @@ meta_desc: "Explore the VirtualNetwork resource of the devtest module, including
 Manages a Virtual Network within a DevTest Lab.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,7 +57,48 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/devtest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLab, err := devtest.NewLab(ctx, "exampleLab", &devtest.LabArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Tags: map[string]interface{}{
+				"Sydney": "Australia",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := devtest.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &devtest.VirtualNetworkArgs{
+			LabName:           exampleLab.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Subnet: &devtest.VirtualNetworkSubnetArgs{
+				UsePublicIpAddress:          pulumi.String("Allow"),
+				UseInVirtualMachineCreation: pulumi.String("Allow"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

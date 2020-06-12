@@ -13,7 +13,6 @@ meta_desc: "Explore the VirtualNetworkRule resource of the sql module, including
 Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,7 +71,67 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		vnet, err := network.NewVirtualNetwork(ctx, "vnet", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.7.29.0/29"),
+			},
+			Location:          example.Location,
+			ResourceGroupName: example.Name,
+		})
+		if err != nil {
+			return err
+		}
+		subnet, err := network.NewSubnet(ctx, "subnet", &network.SubnetArgs{
+			ResourceGroupName:  example.Name,
+			VirtualNetworkName: vnet.Name,
+			AddressPrefix:      pulumi.String("10.7.29.0/29"),
+			ServiceEndpoints: pulumi.StringArray{
+				pulumi.String("Microsoft.Sql"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		sqlserver, err := sql.NewSqlServer(ctx, "sqlserver", &sql.SqlServerArgs{
+			ResourceGroupName:          example.Name,
+			Location:                   example.Location,
+			Version:                    pulumi.String("12.0"),
+			AdministratorLogin:         pulumi.String("4dm1n157r470r"),
+			AdministratorLoginPassword: pulumi.String("4-v3ry-53cr37-p455w0rd"),
+		})
+		if err != nil {
+			return err
+		}
+		sqlvnetrule, err := sql.NewVirtualNetworkRule(ctx, "sqlvnetrule", &sql.VirtualNetworkRuleArgs{
+			ResourceGroupName: example.Name,
+			ServerName:        sqlserver.Name,
+			SubnetId:          subnet.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

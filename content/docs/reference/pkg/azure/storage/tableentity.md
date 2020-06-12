@@ -12,9 +12,6 @@ meta_desc: "Explore the TableEntity resource of the storage module, including ex
 
 Manages an Entity within a Table in an Azure Storage Account.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a TableEntity Resource {#create}

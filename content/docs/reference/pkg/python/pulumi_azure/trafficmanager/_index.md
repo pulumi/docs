@@ -87,8 +87,7 @@ values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.</p></li>
 <li><p><strong>profile_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the Traffic Manager endpoint.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group where the Traffic Manager Profile exists.</p></li>
 <li><p><strong>subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">subnet</span></code> blocks as defined below</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type <code class="docutils literal notranslate"><span class="pre">externalEndpoints</span></code>, for other types it
@@ -192,8 +191,7 @@ create the Traffic Manager endpoint.</p>
 <dl class="py attribute">
 <dt id="pulumi_azure.trafficmanager.Endpoint.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.trafficmanager.Endpoint.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to
-create the Traffic Manager endpoint.</p>
+<dd><p>The name of the resource group where the Traffic Manager Profile exists.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -276,8 +274,7 @@ values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.</p></li>
 <li><p><strong>profile_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the Traffic Manager endpoint.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group where the Traffic Manager Profile exists.</p></li>
 <li><p><strong>subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">subnet</span></code> blocks as defined below</p></li>
 <li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type <code class="docutils literal notranslate"><span class="pre">externalEndpoints</span></code>, for other types it

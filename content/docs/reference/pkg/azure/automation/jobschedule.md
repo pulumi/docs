@@ -13,7 +13,6 @@ meta_desc: "Explore the JobSchedule resource of the automation module, including
 Links an Automation Runbook and Schedule.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,7 +46,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/automation"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := automation.NewJobSchedule(ctx, "example", &automation.JobScheduleArgs{
+			AutomationAccountName: pulumi.String("tf-automation-account"),
+			Parameters: map[string]interface{}{
+				"resourcegroup": "tf-rgr-vm",
+				"vmname":        "TF-VM-01",
+			},
+			ResourceGroupName: pulumi.String("tf-rgr-automation"),
+			RunbookName:       pulumi.String("Get-VirtualMachine"),
+			ScheduleName:      pulumi.String("hour"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -12,9 +12,6 @@ meta_desc: "Explore the Certificate resource of the automation module, including
 
 Manages an Automation Certificate.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Certificate Resource {#create}

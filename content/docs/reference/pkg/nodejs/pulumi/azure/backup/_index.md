@@ -3,7 +3,7 @@ title: "Module backup"
 title_tag: "Module backup | Package @pulumi/azure | Node.js SDK"
 linktitle: "backup"
 meta_desc: "Explore members of the backup module in the @pulumi/azure package."
-git_sha: "b3cc20bdfecc18d2930ee34b92e74fb2d96db10d"
+git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
 block_external_search_index: true
 ---
 
@@ -48,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ContainerStorageAccount" data-link-title="ContainerStorageAccount">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L39">
         Resource <strong>ContainerStorageAccount</strong>
     </a>
 </h3>
@@ -87,7 +87,7 @@ const container = new azure.backup.ContainerStorageAccount("container", {
 ```
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -101,7 +101,7 @@ Create a ContainerStorageAccount resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -112,14 +112,14 @@ Get an existing ContainerStorageAccount resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -130,7 +130,7 @@ Returns true if the given object is an instance of ContainerStorageAccount.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -139,7 +139,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L70">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L70">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -147,7 +147,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the vault where the storage account will be registered.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L74">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L74">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ The name of the vault where the storage account will be registered.
 Name of the resource group where the vault is located.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L78">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L78">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -163,7 +163,7 @@ Name of the resource group where the vault is located.
 Azure Resource ID of the storage account to be registered
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -172,7 +172,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyFileShare" data-link-title="PolicyFileShare">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L42">
         Resource <strong>PolicyFileShare</strong>
     </a>
 </h3>
@@ -212,7 +212,7 @@ const policy = new azure.backup.PolicyFileShare("policy", {
 ```
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -226,7 +226,7 @@ Create a PolicyFileShare resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -237,14 +237,14 @@ Get an existing PolicyFileShare resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -255,7 +255,7 @@ Returns true if the given object is an instance of PolicyFileShare.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L73">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L73">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyFileShareBackup'>PolicyFileShareBackup</a>&gt;;</code></pre>
@@ -263,7 +263,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Configures the Policy backup frequency and times as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -272,7 +272,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L81">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L81">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ Specifies the name of the policy. Changing this forces a new resource to be crea
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L89">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L89">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionDaily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyFileShareRetentionDaily'>PolicyFileShareRetentionDaily</a>&gt;;</code></pre>
@@ -304,7 +304,7 @@ The name of the resource group in which to create the policy. Changing this forc
 Configures the policy daily retention as documented in the `retentionDaily` block below.
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L93">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L93">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -312,7 +312,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Specifies the timezone. Defaults to `UTC`
 
 <h4 class="pdoc-member-header" id="PolicyFileShare-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -321,7 +321,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PolicyVM" data-link-title="PolicyVM">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L66">
         Resource <strong>PolicyVM</strong>
     </a>
 </h3>
@@ -385,7 +385,7 @@ const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
 ```
 
 <h4 class="pdoc-member-header" id="PolicyVM-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L133"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L133"> <b>constructor</b></a>
 </h4>
 
 
@@ -399,7 +399,7 @@ Create a PolicyVM resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PolicyVM-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L76">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L76">method <b>get</b></a>
 </h4>
 
 
@@ -410,14 +410,14 @@ Get an existing PolicyVM resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PolicyVM-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L66">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L66">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PolicyVM-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L87">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L87">method <b>isInstance</b></a>
 </h4>
 
 
@@ -428,7 +428,7 @@ Returns true if the given object is an instance of PolicyVM.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PolicyVM-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L97">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L97">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyVMBackup'>PolicyVMBackup</a>&gt;;</code></pre>
@@ -436,7 +436,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVM-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -445,7 +445,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PolicyVM-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -453,7 +453,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVM-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L105">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L105">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -461,7 +461,7 @@ Specifies the name of the Backup Policy. Changing this forces a new resource to 
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVM-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L109">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L109">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +469,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVM-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L113">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L113">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionDaily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyVMRetentionDaily'>PolicyVMRetentionDaily</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -477,7 +477,7 @@ The name of the resource group in which to create the policy. Changing this forc
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
 <h4 class="pdoc-member-header" id="PolicyVM-retentionMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L117">property <b>retentionMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L117">property <b>retentionMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionMonthly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyVMRetentionMonthly'>PolicyVMRetentionMonthly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVM-retentionWeekly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L121">property <b>retentionWeekly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L121">property <b>retentionWeekly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionWeekly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyVMRetentionWeekly'>PolicyVMRetentionWeekly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
 <h4 class="pdoc-member-header" id="PolicyVM-retentionYearly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L125">property <b>retentionYearly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L125">property <b>retentionYearly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionYearly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyVMRetentionYearly'>PolicyVMRetentionYearly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVM-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L129">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L129">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ Configures the policy yearly retention as documented in the `retentionYearly` bl
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PolicyVM-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L133">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L133">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ A mapping of tags to assign to the resource.
 Specifies the timezone. Defaults to `UTC`
 
 <h4 class="pdoc-member-header" id="PolicyVM-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L66">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L66">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -526,7 +526,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProtectedFileShare" data-link-title="ProtectedFileShare">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L60">
         Resource <strong>ProtectedFileShare</strong>
     </a>
 </h3>
@@ -560,7 +560,7 @@ const sa = new azure.storage.Account("sa", {
     accountReplicationType: "LRS",
 });
 const exampleShare = new azure.storage.Share("exampleShare", {storageAccountName: sa.name});
-const protectionContainer = new azure.backup.ContainerStorageAccount("protection-container", {
+const protection_container = new azure.backup.ContainerStorageAccount("protection-container", {
     resourceGroupName: rg.name,
     recoveryVaultName: vault.name,
     storageAccountId: sa.id,
@@ -586,7 +586,7 @@ const share1 = new azure.backup.ProtectedFileShare("share1", {
 ```
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -600,7 +600,7 @@ Create a ProtectedFileShare resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -611,14 +611,14 @@ Get an existing ProtectedFileShare resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L81">method <b>isInstance</b></a>
 </h4>
 
 
@@ -629,7 +629,7 @@ Returns true if the given object is an instance of ProtectedFileShare.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L91">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L91">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -637,7 +637,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the ID of the backup policy to use. The policy must be an Azure File Share backup policy. Other types are not supported.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -646,7 +646,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L95">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L95">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L99">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L99">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -662,7 +662,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Azure Backup Protected File Share. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-sourceFileShareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L103">property <b>sourceFileShareName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L103">property <b>sourceFileShareName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceFileShareName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ The name of the resource group in which to create the Azure Backup Protected Fil
 Specifies the name of the file share to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-sourceStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L107">property <b>sourceStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L107">property <b>sourceStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceStorageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -678,7 +678,7 @@ Specifies the name of the file share to backup. Changing this forces a new resou
 Specifies the ID of the storage account of the file share to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShare-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -687,7 +687,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProtectedVM" data-link-title="ProtectedVM">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L40">
         Resource <strong>ProtectedVM</strong>
     </a>
 </h3>
@@ -727,7 +727,7 @@ const vm1 = new azure.backup.ProtectedVM("vm1", {
 ```
 
 <h4 class="pdoc-member-header" id="ProtectedVM-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -741,7 +741,7 @@ Create a ProtectedVM resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -752,14 +752,14 @@ Get an existing ProtectedVM resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProtectedVM-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -770,7 +770,7 @@ Returns true if the given object is an instance of ProtectedVM.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L71">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L71">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the id of the backup policy to use.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -787,7 +787,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L75">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L75">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -795,7 +795,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L79">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -803,7 +803,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L83">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L83">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceVmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -811,7 +811,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -819,7 +819,7 @@ Specifies the ID of the VM to backup. Changing this forces a new resource to be 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -830,7 +830,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getPolicyVM" data-link-title="getPolicyVM">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L27">
         Function <strong>getPolicyVM</strong>
     </a>
 </h3>
@@ -851,15 +851,15 @@ import * as azure from "@pulumi/azure";
 
 const policy = pulumi.output(azure.backup.getPolicyVM({
     name: "policy",
-    recoveryVaultName: "recoveryVault",
-    resourceGroupName: "resourceGroup",
+    recoveryVaultName: "recovery_vault",
+    resourceGroupName: "resource_group",
 }, { async: true }));
 ```
 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ContainerStorageAccountArgs" data-link-title="ContainerStorageAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L142">
         interface <strong>ContainerStorageAccountArgs</strong>
     </a>
 </h3>
@@ -869,7 +869,7 @@ const policy = pulumi.output(azure.backup.getPolicyVM({
 The set of arguments for constructing a ContainerStorageAccount resource.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccountArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L146">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L146">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -877,7 +877,7 @@ The set of arguments for constructing a ContainerStorageAccount resource.
 The name of the vault where the storage account will be registered.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L150">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L150">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ The name of the vault where the storage account will be registered.
 Name of the resource group where the vault is located.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccountArgs-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L154">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L154">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -893,7 +893,7 @@ Name of the resource group where the vault is located.
 Azure Resource ID of the storage account to be registered
 
 <h3 class="pdoc-module-header" id="ContainerStorageAccountState" data-link-title="ContainerStorageAccountState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L124">
         interface <strong>ContainerStorageAccountState</strong>
     </a>
 </h3>
@@ -903,7 +903,7 @@ Azure Resource ID of the storage account to be registered
 Input properties used for looking up and filtering ContainerStorageAccount resources.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccountState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L128">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L128">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -911,7 +911,7 @@ Input properties used for looking up and filtering ContainerStorageAccount resou
 The name of the vault where the storage account will be registered.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L132">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L132">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -919,7 +919,7 @@ The name of the vault where the storage account will be registered.
 Name of the resource group where the vault is located.
 
 <h4 class="pdoc-member-header" id="ContainerStorageAccountState-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/containerStorageAccount.ts#L136">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/containerStorageAccount.ts#L136">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +927,7 @@ Name of the resource group where the vault is located.
 Azure Resource ID of the storage account to be registered
 
 <h3 class="pdoc-module-header" id="GetPolicyVMArgs" data-link-title="GetPolicyVMArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L45">
         interface <strong>GetPolicyVMArgs</strong>
     </a>
 </h3>
@@ -937,7 +937,7 @@ Azure Resource ID of the storage account to be registered
 A collection of arguments for invoking getPolicyVM.
 
 <h4 class="pdoc-member-header" id="GetPolicyVMArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -945,7 +945,7 @@ A collection of arguments for invoking getPolicyVM.
 Specifies the name of the VM Backup Policy.
 
 <h4 class="pdoc-member-header" id="GetPolicyVMArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L53">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L53">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -953,7 +953,7 @@ Specifies the name of the VM Backup Policy.
 Specifies the name of the Recovery Services Vault.
 
 <h4 class="pdoc-member-header" id="GetPolicyVMArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L57">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L57">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -961,7 +961,7 @@ Specifies the name of the Recovery Services Vault.
 The name of the resource group in which the VM Backup Policy resides.
 
 <h3 class="pdoc-module-header" id="GetPolicyVMResult" data-link-title="GetPolicyVMResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L63">
         interface <strong>GetPolicyVMResult</strong>
     </a>
 </h3>
@@ -971,7 +971,7 @@ The name of the resource group in which the VM Backup Policy resides.
 A collection of values returned by getPolicyVM.
 
 <h4 class="pdoc-member-header" id="GetPolicyVMResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -979,22 +979,22 @@ A collection of values returned by getPolicyVM.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPolicyVMResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyVMResult-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L69">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L69">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyVMResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L70">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L70">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPolicyVMResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/getPolicyVM.ts#L74">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/getPolicyVM.ts#L74">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1002,7 +1002,7 @@ The provider-assigned unique ID for this managed resource.
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-module-header" id="PolicyFileShareArgs" data-link-title="PolicyFileShareArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L178">
         interface <strong>PolicyFileShareArgs</strong>
     </a>
 </h3>
@@ -1012,7 +1012,7 @@ A mapping of tags assigned to the resource.
 The set of arguments for constructing a PolicyFileShare resource.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareArgs-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L182">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L182">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyFileShareBackup'>PolicyFileShareBackup</a>&gt;;</code></pre>
@@ -1020,7 +1020,7 @@ The set of arguments for constructing a PolicyFileShare resource.
 Configures the Policy backup frequency and times as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1028,7 +1028,7 @@ Configures the Policy backup frequency and times as documented in the `backup` b
 Specifies the name of the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L190">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L190">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1036,7 +1036,7 @@ Specifies the name of the policy. Changing this forces a new resource to be crea
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L194">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L194">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1044,7 +1044,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareArgs-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L198">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L198">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDaily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyFileShareRetentionDaily'>PolicyFileShareRetentionDaily</a>&gt;;</code></pre>
@@ -1052,7 +1052,7 @@ The name of the resource group in which to create the policy. Changing this forc
 Configures the policy daily retention as documented in the `retentionDaily` block below.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareArgs-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L202">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L202">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1060,7 +1060,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Specifies the timezone. Defaults to `UTC`
 
 <h3 class="pdoc-module-header" id="PolicyFileShareState" data-link-title="PolicyFileShareState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L148">
         interface <strong>PolicyFileShareState</strong>
     </a>
 </h3>
@@ -1070,7 +1070,7 @@ Specifies the timezone. Defaults to `UTC`
 Input properties used for looking up and filtering PolicyFileShare resources.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareState-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L152">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L152">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyFileShareBackup'>PolicyFileShareBackup</a>&gt;;</code></pre>
@@ -1078,7 +1078,7 @@ Input properties used for looking up and filtering PolicyFileShare resources.
 Configures the Policy backup frequency and times as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1086,7 +1086,7 @@ Configures the Policy backup frequency and times as documented in the `backup` b
 Specifies the name of the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L160">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L160">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1094,7 +1094,7 @@ Specifies the name of the policy. Changing this forces a new resource to be crea
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L164">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L164">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1102,7 +1102,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareState-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L168">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L168">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyFileShareRetentionDaily'>PolicyFileShareRetentionDaily</a>&gt;;</code></pre>
@@ -1110,7 +1110,7 @@ The name of the resource group in which to create the policy. Changing this forc
 Configures the policy daily retention as documented in the `retentionDaily` block below.
 
 <h4 class="pdoc-member-header" id="PolicyFileShareState-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyFileShare.ts#L172">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyFileShare.ts#L172">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1118,7 +1118,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Specifies the timezone. Defaults to `UTC`
 
 <h3 class="pdoc-module-header" id="PolicyVMArgs" data-link-title="PolicyVMArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L239">
         interface <strong>PolicyVMArgs</strong>
     </a>
 </h3>
@@ -1128,7 +1128,7 @@ Specifies the timezone. Defaults to `UTC`
 The set of arguments for constructing a PolicyVM resource.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L243">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L243">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMBackup'>PolicyVMBackup</a>&gt;;</code></pre>
@@ -1136,7 +1136,7 @@ The set of arguments for constructing a PolicyVM resource.
 Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L247">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L247">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1144,7 +1144,7 @@ Configures the Policy backup frequency, times & days as documented in the `backu
 Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L251">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L251">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1152,7 +1152,7 @@ Specifies the name of the Backup Policy. Changing this forces a new resource to 
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L255">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L255">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1160,7 +1160,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L259">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L259">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMRetentionDaily'>PolicyVMRetentionDaily</a>&gt;;</code></pre>
@@ -1168,7 +1168,7 @@ The name of the resource group in which to create the policy. Changing this forc
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-retentionMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L263">property <b>retentionMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L263">property <b>retentionMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMRetentionMonthly'>PolicyVMRetentionMonthly</a>&gt;;</code></pre>
@@ -1176,7 +1176,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-retentionWeekly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L267">property <b>retentionWeekly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L267">property <b>retentionWeekly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMRetentionWeekly'>PolicyVMRetentionWeekly</a>&gt;;</code></pre>
@@ -1184,7 +1184,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-retentionYearly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L271">property <b>retentionYearly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L271">property <b>retentionYearly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMRetentionYearly'>PolicyVMRetentionYearly</a>&gt;;</code></pre>
@@ -1192,7 +1192,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L275">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L275">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1200,7 +1200,7 @@ Configures the policy yearly retention as documented in the `retentionYearly` bl
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PolicyVMArgs-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L279">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L279">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1208,7 +1208,7 @@ A mapping of tags to assign to the resource.
 Specifies the timezone. Defaults to `UTC`
 
 <h3 class="pdoc-module-header" id="PolicyVMState" data-link-title="PolicyVMState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L193">
         interface <strong>PolicyVMState</strong>
     </a>
 </h3>
@@ -1218,7 +1218,7 @@ Specifies the timezone. Defaults to `UTC`
 Input properties used for looking up and filtering PolicyVM resources.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L197">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L197">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMBackup'>PolicyVMBackup</a>&gt;;</code></pre>
@@ -1226,7 +1226,7 @@ Input properties used for looking up and filtering PolicyVM resources.
 Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L201">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1234,7 +1234,7 @@ Configures the Policy backup frequency, times & days as documented in the `backu
 Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L205">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L205">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1242,7 +1242,7 @@ Specifies the name of the Backup Policy. Changing this forces a new resource to 
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L209">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L209">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1250,7 +1250,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L213">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L213">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMRetentionDaily'>PolicyVMRetentionDaily</a>&gt;;</code></pre>
@@ -1258,7 +1258,7 @@ The name of the resource group in which to create the policy. Changing this forc
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-retentionMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L217">property <b>retentionMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L217">property <b>retentionMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMRetentionMonthly'>PolicyVMRetentionMonthly</a>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-retentionWeekly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L221">property <b>retentionWeekly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L221">property <b>retentionWeekly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMRetentionWeekly'>PolicyVMRetentionWeekly</a>&gt;;</code></pre>
@@ -1274,7 +1274,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-retentionYearly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L225">property <b>retentionYearly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L225">property <b>retentionYearly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyVMRetentionYearly'>PolicyVMRetentionYearly</a>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L229">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L229">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1290,7 +1290,7 @@ Configures the policy yearly retention as documented in the `retentionYearly` bl
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PolicyVMState-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/policyVM.ts#L233">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/policyVM.ts#L233">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1298,7 +1298,7 @@ A mapping of tags to assign to the resource.
 Specifies the timezone. Defaults to `UTC`
 
 <h3 class="pdoc-module-header" id="ProtectedFileShareArgs" data-link-title="ProtectedFileShareArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L189">
         interface <strong>ProtectedFileShareArgs</strong>
     </a>
 </h3>
@@ -1308,7 +1308,7 @@ Specifies the timezone. Defaults to `UTC`
 The set of arguments for constructing a ProtectedFileShare resource.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareArgs-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L193">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L193">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1316,7 +1316,7 @@ The set of arguments for constructing a ProtectedFileShare resource.
 Specifies the ID of the backup policy to use. The policy must be an Azure File Share backup policy. Other types are not supported.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L197">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L197">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1324,7 +1324,7 @@ Specifies the ID of the backup policy to use. The policy must be an Azure File S
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L201">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L201">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1332,7 +1332,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Azure Backup Protected File Share. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareArgs-sourceFileShareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L205">property <b>sourceFileShareName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L205">property <b>sourceFileShareName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceFileShareName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1340,7 +1340,7 @@ The name of the resource group in which to create the Azure Backup Protected Fil
 Specifies the name of the file share to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareArgs-sourceStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L209">property <b>sourceStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L209">property <b>sourceStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceStorageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1348,7 +1348,7 @@ Specifies the name of the file share to backup. Changing this forces a new resou
 Specifies the ID of the storage account of the file share to backup. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ProtectedFileShareState" data-link-title="ProtectedFileShareState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L163">
         interface <strong>ProtectedFileShareState</strong>
     </a>
 </h3>
@@ -1358,7 +1358,7 @@ Specifies the ID of the storage account of the file share to backup. Changing th
 Input properties used for looking up and filtering ProtectedFileShare resources.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareState-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L167">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L167">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1366,7 +1366,7 @@ Input properties used for looking up and filtering ProtectedFileShare resources.
 Specifies the ID of the backup policy to use. The policy must be an Azure File Share backup policy. Other types are not supported.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L171">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L171">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1374,7 +1374,7 @@ Specifies the ID of the backup policy to use. The policy must be an Azure File S
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L175">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L175">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1382,7 +1382,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Azure Backup Protected File Share. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareState-sourceFileShareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L179">property <b>sourceFileShareName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L179">property <b>sourceFileShareName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceFileShareName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1390,7 +1390,7 @@ The name of the resource group in which to create the Azure Backup Protected Fil
 Specifies the name of the file share to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedFileShareState-sourceStorageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedFileShare.ts#L183">property <b>sourceStorageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedFileShare.ts#L183">property <b>sourceStorageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceStorageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1398,7 +1398,7 @@ Specifies the name of the file share to backup. Changing this forces a new resou
 Specifies the ID of the storage account of the file share to backup. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ProtectedVMArgs" data-link-title="ProtectedVMArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L166">
         interface <strong>ProtectedVMArgs</strong>
     </a>
 </h3>
@@ -1408,7 +1408,7 @@ Specifies the ID of the storage account of the file share to backup. Changing th
 The set of arguments for constructing a ProtectedVM resource.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L170">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L170">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1416,7 +1416,7 @@ The set of arguments for constructing a ProtectedVM resource.
 Specifies the id of the backup policy to use.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L174">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L174">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ Specifies the id of the backup policy to use.
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L178">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L178">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1432,7 +1432,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L182">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L182">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceVmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1440,7 +1440,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L186">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1448,7 +1448,7 @@ Specifies the ID of the VM to backup. Changing this forces a new resource to be 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ProtectedVMState" data-link-title="ProtectedVMState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L140">
         interface <strong>ProtectedVMState</strong>
     </a>
 </h3>
@@ -1458,7 +1458,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ProtectedVM resources.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L144">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L144">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1466,7 +1466,7 @@ Input properties used for looking up and filtering ProtectedVM resources.
 Specifies the id of the backup policy to use.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L148">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L148">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1474,7 +1474,7 @@ Specifies the id of the backup policy to use.
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L152">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1482,7 +1482,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L156">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L156">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceVmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1490,7 +1490,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/b3cc20bdfecc18d2930ee34b92e74fb2d96db10d/sdk/nodejs/backup/protectedVM.ts#L160">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/backup/protectedVM.ts#L160">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

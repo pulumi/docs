@@ -13,7 +13,6 @@ meta_desc: "Explore the GetInsights function of the appinsights module, includin
 Use this data source to access information about an existing Application Insights component.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := appinsights.LookupInsights(ctx, &appinsights.LookupInsightsArgs{
+			Name:              "production",
+			ResourceGroupName: "networking",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("applicationInsightsInstrumentationKey", example.InstrumentationKey)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

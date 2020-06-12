@@ -12,31 +12,13 @@ meta_desc: "Explore the Assignment resource of the role module, including exampl
 
 Assigns a given Principal (User or Group) to a given Role.
 
-## Example Usage (using a built-in Role)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const primary = azure.core.getSubscription({});
-const exampleClientConfig = azure.core.getClientConfig({});
-const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
-    scope: primary.then(primary => primary.id),
-    roleDefinitionName: "Reader",
-    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.objectId),
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-primary = azure.core.get_subscription()
-example_client_config = azure.core.get_client_config()
-example_assignment = azure.authorization.Assignment("exampleAssignment",
-    scope=primary.id,
-    role_definition_name="Reader",
-    principal_id=example_client_config.object_id)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Using A Built-In Role)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -57,51 +39,43 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage (Custom Role & Service Principal)
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const primary = azure.core.getSubscription({});
-const exampleClientConfig = azure.core.getClientConfig({});
-const exampleRoleDefinition = new azure.authorization.RoleDefinition("exampleRoleDefinition", {
-    roleDefinitionId: "00000000-0000-0000-0000-000000000000",
-    scope: primary.then(primary => primary.id),
-    permissions: [{
-        actions: ["Microsoft.Resources/subscriptions/resourceGroups/read"],
-        notActions: [],
-    }],
-    assignableScopes: [primary.then(primary => primary.id)],
-});
-const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
-    name: "00000000-0000-0000-0000-000000000000",
-    scope: primary.then(primary => primary.id),
-    roleDefinitionId: exampleRoleDefinition.id,
-    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.objectId),
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_azure as azure
 
 primary = azure.core.get_subscription()
 example_client_config = azure.core.get_client_config()
-example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
-    role_definition_id="00000000-0000-0000-0000-000000000000",
-    scope=primary.id,
-    permissions=[{
-        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
-        "notActions": [],
-    }],
-    assignable_scopes=[primary.id])
 example_assignment = azure.authorization.Assignment("exampleAssignment",
-    name="00000000-0000-0000-0000-000000000000",
     scope=primary.id,
-    role_definition_id=example_role_definition.id,
+    role_definition_name="Reader",
     principal_id=example_client_config.object_id)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const primary = azure.core.getSubscription({});
+const exampleClientConfig = azure.core.getClientConfig({});
+const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
+    scope: primary.then(primary => primary.id),
+    roleDefinitionName: "Reader",
+    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.objectId),
+});
+```
+{{% /example %}}
+
+### Custom Role &amp; Service Principal)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -143,9 +117,36 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage (Custom Role & User)
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+primary = azure.core.get_subscription()
+example_client_config = azure.core.get_client_config()
+example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
+    role_definition_id="00000000-0000-0000-0000-000000000000",
+    scope=primary.id,
+    permissions=[{
+        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
+        "notActions": [],
+    }],
+    assignable_scopes=[primary.id])
+example_assignment = azure.authorization.Assignment("exampleAssignment",
+    name="00000000-0000-0000-0000-000000000000",
+    scope=primary.id,
+    role_definition_id=example_role_definition.id,
+    principal_id=example_client_config.object_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -165,29 +166,13 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
     name: "00000000-0000-0000-0000-000000000000",
     scope: primary.then(primary => primary.id),
     roleDefinitionId: exampleRoleDefinition.id,
-    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.clientId),
+    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.objectId),
 });
 ```
-```python
-import pulumi
-import pulumi_azure as azure
+{{% /example %}}
 
-primary = azure.core.get_subscription()
-example_client_config = azure.core.get_client_config()
-example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
-    role_definition_id="00000000-0000-0000-0000-000000000000",
-    scope=primary.id,
-    permissions=[{
-        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
-        "notActions": [],
-    }],
-    assignable_scopes=[primary.id])
-example_assignment = azure.authorization.Assignment("exampleAssignment",
-    name="00000000-0000-0000-0000-000000000000",
-    scope=primary.id,
-    role_definition_id=example_role_definition.id,
-    principal_id=example_client_config.client_id)
-```
+### Custom Role &amp; User)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -229,16 +214,42 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage (Custom Role & Management Group)
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+primary = azure.core.get_subscription()
+example_client_config = azure.core.get_client_config()
+example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
+    role_definition_id="00000000-0000-0000-0000-000000000000",
+    scope=primary.id,
+    permissions=[{
+        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
+        "notActions": [],
+    }],
+    assignable_scopes=[primary.id])
+example_assignment = azure.authorization.Assignment("exampleAssignment",
+    name="00000000-0000-0000-0000-000000000000",
+    scope=primary.id,
+    role_definition_id=example_role_definition.id,
+    principal_id=example_client_config.client_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const primary = azure.core.getSubscription({});
 const exampleClientConfig = azure.core.getClientConfig({});
-const exampleGroup = azure.management.getGroup({});
 const exampleRoleDefinition = new azure.authorization.RoleDefinition("exampleRoleDefinition", {
     roleDefinitionId: "00000000-0000-0000-0000-000000000000",
     scope: primary.then(primary => primary.id),
@@ -250,32 +261,15 @@ const exampleRoleDefinition = new azure.authorization.RoleDefinition("exampleRol
 });
 const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
     name: "00000000-0000-0000-0000-000000000000",
-    scope: data.azurerm_management_group.primary.id,
+    scope: primary.then(primary => primary.id),
     roleDefinitionId: exampleRoleDefinition.id,
     principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.clientId),
 });
 ```
-```python
-import pulumi
-import pulumi_azure as azure
+{{% /example %}}
 
-primary = azure.core.get_subscription()
-example_client_config = azure.core.get_client_config()
-example_group = azure.management.get_group()
-example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
-    role_definition_id="00000000-0000-0000-0000-000000000000",
-    scope=primary.id,
-    permissions=[{
-        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
-        "notActions": [],
-    }],
-    assignable_scopes=[primary.id])
-example_assignment = azure.authorization.Assignment("exampleAssignment",
-    name="00000000-0000-0000-0000-000000000000",
-    scope=data["azure.management.Group"]["primary"]["id"],
-    role_definition_id=example_role_definition.id,
-    principal_id=example_client_config.client_id)
-```
+### Custom Role &amp; Management Group)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -318,7 +312,63 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+primary = azure.core.get_subscription()
+example_client_config = azure.core.get_client_config()
+example_group = azure.management.get_group()
+example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
+    role_definition_id="00000000-0000-0000-0000-000000000000",
+    scope=primary.id,
+    permissions=[{
+        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
+        "notActions": [],
+    }],
+    assignable_scopes=[primary.id])
+example_assignment = azure.authorization.Assignment("exampleAssignment",
+    name="00000000-0000-0000-0000-000000000000",
+    scope=data["azurerm_management_group"]["primary"]["id"],
+    role_definition_id=example_role_definition.id,
+    principal_id=example_client_config.client_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const primary = azure.core.getSubscription({});
+const exampleClientConfig = azure.core.getClientConfig({});
+const exampleGroup = azure.management.getGroup({});
+const exampleRoleDefinition = new azure.authorization.RoleDefinition("exampleRoleDefinition", {
+    roleDefinitionId: "00000000-0000-0000-0000-000000000000",
+    scope: primary.then(primary => primary.id),
+    permissions: [{
+        actions: ["Microsoft.Resources/subscriptions/resourceGroups/read"],
+        notActions: [],
+    }],
+    assignableScopes: [primary.then(primary => primary.id)],
+});
+const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
+    name: "00000000-0000-0000-0000-000000000000",
+    scope: data.azurerm_management_group.primary.id,
+    roleDefinitionId: exampleRoleDefinition.id,
+    principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.clientId),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.role.Assignment has been deprecated in favor of azure.authorization.Assignment{{% /md %}}</p>
 
 

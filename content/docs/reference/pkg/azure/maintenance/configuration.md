@@ -13,7 +13,6 @@ meta_desc: "Explore the Configuration resource of the maintenance module, includ
 Manages a maintenance configuration.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/maintenance"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleConfiguration, err := maintenance.NewConfiguration(ctx, "exampleConfiguration", &maintenance.ConfigurationArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Scope:             pulumi.String("All"),
+			Tags: map[string]interface{}{
+				"Env": "prod",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

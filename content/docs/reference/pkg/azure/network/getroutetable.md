@@ -13,7 +13,6 @@ meta_desc: "Explore the GetRouteTable function of the network module, including 
 Use this data source to access information about an existing Route Table.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupRouteTable(ctx, &network.LookupRouteTableArgs{
+			Name:              "myroutetable",
+			ResourceGroupName: "some-resource-group",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

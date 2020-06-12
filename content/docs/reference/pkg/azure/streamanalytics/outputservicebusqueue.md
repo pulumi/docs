@@ -13,7 +13,6 @@ meta_desc: "Explore the OutputServiceBusQueue resource of the streamanalytics mo
 Manages a Stream Analytics Output to a ServiceBus Queue.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,7 +68,64 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.LookupResourceGroup(ctx, &core.LookupResourceGroupArgs{
+			Name: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleJob, err := streamanalytics.LookupJob(ctx, &streamanalytics.LookupJobArgs{
+			Name:              "example-job",
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleNamespace, err := servicebus.NewNamespace(ctx, "exampleNamespace", &servicebus.NamespaceArgs{
+			Location:          pulumi.String(exampleResourceGroup.Location),
+			ResourceGroupName: pulumi.String(exampleResourceGroup.Name),
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleQueue, err := servicebus.NewQueue(ctx, "exampleQueue", &servicebus.QueueArgs{
+			ResourceGroupName:  pulumi.String(exampleResourceGroup.Name),
+			NamespaceName:      exampleNamespace.Name,
+			EnablePartitioning: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		exampleOutputServiceBusQueue, err := streamanalytics.NewOutputServiceBusQueue(ctx, "exampleOutputServiceBusQueue", &streamanalytics.OutputServiceBusQueueArgs{
+			StreamAnalyticsJobName: pulumi.String(exampleJob.Name),
+			ResourceGroupName:      pulumi.String(exampleJob.ResourceGroupName),
+			QueueName:              exampleQueue.Name,
+			ServicebusNamespace:    exampleNamespace.Name,
+			SharedAccessPolicyKey:  exampleNamespace.DefaultPrimaryKey,
+			SharedAccessPolicyName: pulumi.String("RootManageSharedAccessKey"),
+			Serialization: &streamanalytics.OutputServiceBusQueueSerializationArgs{
+				Format: pulumi.String("Avro"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

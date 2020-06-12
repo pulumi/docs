@@ -12,39 +12,13 @@ meta_desc: "Explore the ManagedDisk resource of the compute module, including ex
 
 Manages a managed disk.
 
-## Example Usage with Create Empty
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
-const exampleManagedDisk = new azure.compute.ManagedDisk("exampleManagedDisk", {
-    location: "West US 2",
-    resourceGroupName: exampleResourceGroup.name,
-    storageAccountType: "Standard_LRS",
-    createOption: "Empty",
-    diskSizeGb: "1",
-    tags: {
-        environment: "staging",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
-example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
-    location="West US 2",
-    resource_group_name=example_resource_group.name,
-    storage_account_type="Standard_LRS",
-    create_option="Empty",
-    disk_size_gb="1",
-    tags={
-        "environment": "staging",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### With Create Empty
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -73,17 +47,72 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage with Create Copy
+{{% example go %}}
+```go
+package main
 
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US 2"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleManagedDisk, err := compute.NewManagedDisk(ctx, "exampleManagedDisk", &compute.ManagedDiskArgs{
+			Location:           pulumi.String("West US 2"),
+			ResourceGroupName:  exampleResourceGroup.Name,
+			StorageAccountType: pulumi.String("Standard_LRS"),
+			CreateOption:       pulumi.String("Empty"),
+			DiskSizeGb:         pulumi.Int(1),
+			Tags: map[string]interface{}{
+				"environment": "staging",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
+    location="West US 2",
+    resource_group_name=example_resource_group.name,
+    storage_account_type="Standard_LRS",
+    create_option="Empty",
+    disk_size_gb="1",
+    tags={
+        "environment": "staging",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "West US 2"});
-const source = new azure.compute.ManagedDisk("source", {
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleManagedDisk = new azure.compute.ManagedDisk("exampleManagedDisk", {
     location: "West US 2",
-    resourceGroupName: example.name,
+    resourceGroupName: exampleResourceGroup.name,
     storageAccountType: "Standard_LRS",
     createOption: "Empty",
     diskSizeGb: "1",
@@ -91,43 +120,11 @@ const source = new azure.compute.ManagedDisk("source", {
         environment: "staging",
     },
 });
-const copy = new azure.compute.ManagedDisk("copy", {
-    location: "West US 2",
-    resourceGroupName: example.name,
-    storageAccountType: "Standard_LRS",
-    createOption: "Copy",
-    sourceResourceId: source.id,
-    diskSizeGb: "1",
-    tags: {
-        environment: "staging",
-    },
-});
 ```
-```python
-import pulumi
-import pulumi_azure as azure
+{{% /example %}}
 
-example = azure.core.ResourceGroup("example", location="West US 2")
-source = azure.compute.ManagedDisk("source",
-    location="West US 2",
-    resource_group_name=example.name,
-    storage_account_type="Standard_LRS",
-    create_option="Empty",
-    disk_size_gb="1",
-    tags={
-        "environment": "staging",
-    })
-copy = azure.compute.ManagedDisk("copy",
-    location="West US 2",
-    resource_group_name=example.name,
-    storage_account_type="Standard_LRS",
-    create_option="Copy",
-    source_resource_id=source.id,
-    disk_size_gb="1",
-    tags={
-        "environment": "staging",
-    })
-```
+### With Create Copy
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -169,7 +166,118 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US 2"),
+		})
+		if err != nil {
+			return err
+		}
+		source, err := compute.NewManagedDisk(ctx, "source", &compute.ManagedDiskArgs{
+			Location:           pulumi.String("West US 2"),
+			ResourceGroupName:  example.Name,
+			StorageAccountType: pulumi.String("Standard_LRS"),
+			CreateOption:       pulumi.String("Empty"),
+			DiskSizeGb:         pulumi.Int(1),
+			Tags: map[string]interface{}{
+				"environment": "staging",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		copy, err := compute.NewManagedDisk(ctx, "copy", &compute.ManagedDiskArgs{
+			Location:           pulumi.String("West US 2"),
+			ResourceGroupName:  example.Name,
+			StorageAccountType: pulumi.String("Standard_LRS"),
+			CreateOption:       pulumi.String("Copy"),
+			SourceResourceId:   source.ID(),
+			DiskSizeGb:         pulumi.Int(1),
+			Tags: map[string]interface{}{
+				"environment": "staging",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US 2")
+source = azure.compute.ManagedDisk("source",
+    location="West US 2",
+    resource_group_name=example.name,
+    storage_account_type="Standard_LRS",
+    create_option="Empty",
+    disk_size_gb="1",
+    tags={
+        "environment": "staging",
+    })
+copy = azure.compute.ManagedDisk("copy",
+    location="West US 2",
+    resource_group_name=example.name,
+    storage_account_type="Standard_LRS",
+    create_option="Copy",
+    source_resource_id=source.id,
+    disk_size_gb="1",
+    tags={
+        "environment": "staging",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US 2"});
+const source = new azure.compute.ManagedDisk("source", {
+    location: "West US 2",
+    resourceGroupName: example.name,
+    storageAccountType: "Standard_LRS",
+    createOption: "Empty",
+    diskSizeGb: "1",
+    tags: {
+        environment: "staging",
+    },
+});
+const copy = new azure.compute.ManagedDisk("copy", {
+    location: "West US 2",
+    resourceGroupName: example.name,
+    storageAccountType: "Standard_LRS",
+    createOption: "Copy",
+    sourceResourceId: source.id,
+    diskSizeGb: "1",
+    tags: {
+        environment: "staging",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedDisk Resource {#create}

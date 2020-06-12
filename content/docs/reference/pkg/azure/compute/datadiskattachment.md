@@ -16,9 +16,6 @@ Manages attaching a Disk to a Virtual Machine.
 
 > **Please Note:** only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the `storage_data_disk` block in the `azure.compute.VirtualMachine` resource.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a DataDiskAttachment Resource {#create}

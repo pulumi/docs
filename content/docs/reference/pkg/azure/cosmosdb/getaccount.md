@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAccount function of the cosmosdb module, including ex
 Use this data source to access information about an existing CosmosDB (formally DocumentDB) Account.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := cosmosdb.LookupAccount(ctx, &cosmosdb.LookupAccountArgs{
+			Name:              "tfex-cosmosdb-account",
+			ResourceGroupName: "tfex-cosmosdb-account-rg",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("cosmosdbAccountEndpoint", data.Azurerm_cosmosdb_account.Jobs.Endpoint)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -53,7 +72,7 @@ import pulumi_azure as azure
 
 example = azure.cosmosdb.get_account(name="tfex-cosmosdb-account",
     resource_group_name="tfex-cosmosdb-account-rg")
-pulumi.export("cosmosdbAccountEndpoint", data["azure.cosmosdb.Account"]["jobs"]["endpoint"])
+pulumi.export("cosmosdbAccountEndpoint", data["azurerm_cosmosdb_account"]["jobs"]["endpoint"])
 ```
 {{% /example %}}
 

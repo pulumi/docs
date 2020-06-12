@@ -12,9 +12,6 @@ meta_desc: "Explore the CustomerManagedKey resource of the storage module, inclu
 
 Manages a Customer Managed Key for a Storage Account.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a CustomerManagedKey Resource {#create}

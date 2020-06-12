@@ -13,9 +13,6 @@ meta_desc: "Explore the DateTimeVariable resource of the automation module, incl
 Manages a DateTime variable in Azure Automation
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a DateTimeVariable Resource {#create}

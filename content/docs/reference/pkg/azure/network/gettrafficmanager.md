@@ -12,24 +12,13 @@ meta_desc: "Explore the GetTrafficManager function of the network module, includ
 
 Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
 
-## Example Usage (World)
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+{{% examples %}}
+## Example Usage
 
-const example = azure.network.getTrafficManager({
-    name: "World",
-});
-export const locationCode = example.then(example => example.id);
-```
-```python
-import pulumi
-import pulumi_azure as azure
-
-example = azure.network.get_traffic_manager(name="World")
-pulumi.export("locationCode", example.id)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### World)
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -49,7 +38,54 @@ class MyStack : Stack
     public Output<string> LocationCode { get; set; }
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := network.LookupTrafficManager(ctx, &network.LookupTrafficManagerArgs{
+			Name: "World",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("locationCode", example.Id)
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_traffic_manager(name="World")
+pulumi.export("locationCode", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getTrafficManager({
+    name: "World",
+});
+export const locationCode = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetTrafficManager {#using}

@@ -12,9 +12,6 @@ meta_desc: "Explore the TrafficManagerEndpoint resource of the network module, i
 
 Manages a Traffic Manager Endpoint.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a TrafficManagerEndpoint Resource {#create}

@@ -12,9 +12,6 @@ meta_desc: "Explore the Module resource of the automation module, including exam
 
 Manages a Automation Module.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Module Resource {#create}

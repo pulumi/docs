@@ -15,7 +15,6 @@ Manages the subscription's Security Center Contact.
 > **NOTE:** Owner access permission is required.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/securitycenter"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := securitycenter.NewContact(ctx, "example", &securitycenter.ContactArgs{
+			AlertNotifications: pulumi.Bool(true),
+			AlertsToAdmins:     pulumi.Bool(true),
+			Email:              pulumi.String("contact@example.com"),
+			Phone:              pulumi.String("+1-555-555-5555"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

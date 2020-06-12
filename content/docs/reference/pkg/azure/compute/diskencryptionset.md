@@ -14,9 +14,6 @@ Manages a Disk Encryption Set.
 
 > **NOTE:** At this time the Key Vault used to store the Active Key for this Disk Encryption Set must have both Soft Delete & Purge Protection enabled - which are not yet supported by this provider.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a DiskEncryptionSet Resource {#create}

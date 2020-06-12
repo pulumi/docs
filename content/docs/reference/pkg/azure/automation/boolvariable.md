@@ -13,9 +13,6 @@ meta_desc: "Explore the BoolVariable resource of the automation module, includin
 Manages a boolean variable in Azure Automation
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a BoolVariable Resource {#create}

@@ -13,7 +13,6 @@ meta_desc: "Explore the TriggerSchedule resource of the datafactory module, incl
 Manages a Trigger Schedule inside a Azure Data Factory.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,7 +56,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleFactory, err := datafactory.NewFactory(ctx, "exampleFactory", &datafactory.FactoryArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		testPipeline, err := datafactory.NewPipeline(ctx, "testPipeline", &datafactory.PipelineArgs{
+			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+			DataFactoryName:   pulumi.String(azurerm_data_factory.Test.Name),
+		})
+		if err != nil {
+			return err
+		}
+		testTriggerSchedule, err := datafactory.NewTriggerSchedule(ctx, "testTriggerSchedule", &datafactory.TriggerScheduleArgs{
+			DataFactoryName:   pulumi.String(azurerm_data_factory.Test.Name),
+			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+			PipelineName:      testPipeline.Name,
+			Interval:          pulumi.Int(5),
+			Frequency:         pulumi.String("Day"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

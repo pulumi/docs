@@ -12,9 +12,6 @@ meta_desc: "Explore the RServerCluster resource of the hdinsight module, includi
 
 Manages a HDInsight RServer Cluster.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a RServerCluster Resource {#create}

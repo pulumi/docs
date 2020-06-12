@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSpringCloudService function of the appplatform module
 Use this data source to access information about an existing Spring Cloud Service.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := appplatform.LookupSpringCloudService(ctx, &appplatform.LookupSpringCloudServiceArgs{
+			Name:              azurerm_spring_cloud_service.Example.Name,
+			ResourceGroupName: azurerm_spring_cloud_service.Example.Resource_group_name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("springCloudServiceId", example.Id)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

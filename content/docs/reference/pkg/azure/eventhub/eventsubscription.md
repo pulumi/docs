@@ -12,9 +12,6 @@ meta_desc: "Explore the EventSubscription resource of the eventhub module, inclu
 
 Manages an EventGrid Event Subscription
 
-{{% examples %}}
-{{% /examples %}}
-
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.EventSubscription has been deprecated in favor of azure.eventgrid.EventSubscription{{% /md %}}</p>
 
 
@@ -2839,7 +2836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -2868,7 +2865,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -2897,7 +2894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -2926,7 +2923,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -2973,7 +2970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3002,7 +2999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3031,7 +3028,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3060,7 +3057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3107,7 +3104,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3136,7 +3133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3165,7 +3162,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3194,7 +3191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3375,7 +3372,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3404,7 +3401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3433,7 +3430,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3462,7 +3459,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3509,7 +3506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3538,7 +3535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3567,7 +3564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>
@@ -3596,7 +3593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator. 
+    <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd>
 
 </dl>

@@ -12,9 +12,6 @@ meta_desc: "Explore the StormCluster resource of the hdinsight module, including
 
 Manages a HDInsight Storm Cluster.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a StormCluster Resource {#create}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSharedAccessPolicy function of the iot module, includ
 Use this data source to access information about an existing IotHub Shared Access Policy
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +40,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := iot.LookupSharedAccessPolicy(ctx, &iot.LookupSharedAccessPolicyArgs{
+			Name:              "example",
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+			IothubName:        azurerm_iothub.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
