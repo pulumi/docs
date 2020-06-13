@@ -3,7 +3,10 @@ title: Package pulumi_mailgun
 title_tag: Package pulumi_mailgun | Python SDK
 linktitle: pulumi_mailgun
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "mailgun" >}}
 
 <div class="section" id="pulumi-mailgun">
 <h1>Pulumi Mailgun<a class="headerlink" href="#pulumi-mailgun" title="Permalink to this headline">¶</a></h1>
