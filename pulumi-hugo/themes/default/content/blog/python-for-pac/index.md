@@ -10,15 +10,15 @@ tags:
     - "Policy as Code"
 ---
 
-With the launch of Pulumi 2.0, we introduced the preview of Python Policy as Code. Policies written in code let you test, automate deployment, and enable version control. Typically, policies are written using the cloud providers web base interface making it difficult to recreate the policy or version it. These policies must be tested on a deployed system, meaning that the  policy must be run against a live test environment or ephemeral environment which adds to system overhead. In contrast, Pulumi runs policies during the preview phase along with the other cloud resources you have declared. Preview validates your infrastructure before any resources are deployed.
+With the launch of Pulumi 2.0, we introduced the preview of Python Policy as Code. Policies written in code let you test, automate deployment, and enable version control. Python is a popular scripting language used for machine learning and artificial intelligence, data science, web development and devops. It's an ideal language for developers and operators to use in common.
 
 <!--more-->
 
-Devops benefits greatly from policy as code because policies can use standard software development practices and verify resources without deployments that are costly in time and money. Organizations can also gain significant benefits through cost savings, fine-grained control over infrastructure, efficient deployments, improved compliance, and better use of cloud provider native resources.
+Devops benefits greatly from policy as code because policies can use software development practices and verify resources without deployments that are costly in time and money. Organizations can also gain significant benefits through cost savings, fine-grained control over infrastructure, efficient deployments, improved compliance, and better use of cloud provider native resources.
 
-## How it Works
+## How it Wo
 
-Policies enforce specific criteria for a resource or a stack (a set of resources). A common policy is to ensure that storage is not publicly accessible over the Internet or to ensure that virtual machines must have a firewall. Policies are run twice. First, during pulumi preview when the resource graph is creates; and second, during pulumi update when resources are created.
+Policies enforce specific criteria for a resource or a stack (a set of resources). A common policy is to ensure that storage is not publicly accessible over the Internet or to ensure that virtual machines must have a firewall. Policies are run twice. First, during Pulumi preview when the resource graph is creates; and second, during Pulumi update when resources are created.
 
 Policies are validation functions that evaluate all resources in a Pulumi stack. When a resource is in violation of a policy, the validation function calls reportViolation .
 
