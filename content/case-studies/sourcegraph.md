@@ -6,7 +6,7 @@ meta_desc: |
     Pulumi helps to supercharge Kubernetes deployments at Sourcegraph, ensuring their team has continuous access to the latest builds.
 
 customer_name: Sourcegraph
-customer_logo: /logos/customers/sourcegraph_logo.png
+customer_logo: /logos/customers/sourcegraph-logo.svg
 customer_url: https://about.sourcegraph.com/
 
 exec_summary: |
