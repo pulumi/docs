@@ -29,7 +29,7 @@ Sourcegraph’s mission is to empower everyone to be able to build software. Its
 
 ## Supercharged Deployments
 
-Just as the Pulumi team uses its own technology to [build Pulumi]({{ relref "/blog/how-we-use-pulumi-to-build-pulumi" }}), the Sourcegraph team uses Sourcegraph as an integral part of building its product. Having team members leverage pre-release versions in their day-to-day work ensures that each new version gets put through its paces before it reaches customers. This process, often known as [self-hosting or 'dogfooding'](https://en.wikipedia.org/wiki/Eating_your_own_dog_food), is a common practice within technology companies and it requires that the development team has access to the latest pre-release software. Given this requirement, rapid deployments are critical to ensure that the latest version is in use and that deployments don’t delay development.
+Just as the Pulumi team uses its own technology to [build Pulumi]({{< relref "/blog/how-we-use-pulumi-to-build-pulumi" >}}), the Sourcegraph team uses Sourcegraph as an integral part of building its product. Having team members leverage pre-release versions in their day-to-day work ensures that each new version gets put through its paces before it reaches customers. This process, often known as [self-hosting or 'dogfooding'](https://en.wikipedia.org/wiki/Eating_your_own_dog_food), is a common practice within technology companies and it requires that the development team has access to the latest pre-release software. Given this requirement, rapid deployments are critical to ensure that the latest version is in use and that deployments don’t delay development.
 
 Sourcegraph selected Pulumi to deploy their latest versions to [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine) (GKE) - ensuring that their deployments are quick, secure, and always available - this keeps the development team productive while they use and validate each new release. Specifically, Pulumi helped Sourcegraph automate deploying and managing the primary dogfood instance of the Sourcegraph service. This helped improve the deployment process by simplifying multi-user configuration changes -- increasing the team’s confidence in each deployment.
 
@@ -49,4 +49,4 @@ By adopting Pulumi, the team is able to achieve their rapid deployment goals whi
 
 ## Deploy to GKE with Pulumi
 
-Just like Sourcegraph, you can use Pulumi to deploy your applications to GKE in a snap. Learn how to acquire your deployment superpowers here: [GKE + Pulumi]({{ relref "/docs/tutorials/kubernetes/gke" }}).
+Just like Sourcegraph, you can use Pulumi to deploy your applications to GKE in a snap. Learn how to acquire your deployment superpowers here: [GKE + Pulumi]({{< relref "/docs/tutorials/kubernetes/gke" >}}).
