@@ -27,15 +27,14 @@ Pulumi supports two types of polices:
 
 Policies are enforced as either
 
-- *advisory* which prints a warning message the resource violates the policy
-- *mandatory* prevents a resource deployment if it violates the policy.
+- *advisory*, which prints a warning message the resource violates the policy, or
+- *mandatory*, which prevents a resource deployment if it violates the policy.
 
 Now that we have the basics of policy as code, lets take a look at example policies written in Python.
 
 ## Examples
 
 Policies are validation functions that validate resources in a Pulumi stack. In the examples below, we define a function that takes `ResourceValidationArgs` and `ReportViolation` as arguments. The function checks to see what type of resource and its arguments, these are used to determine of the resource violates the policy. If the resource is not compliant, the function returns the violation and because the enforcement level is *mandatory*, the resource will not be deployed.
-
 
 {{< chooser cloud "aws,azure,gcp" >}}
 {{% choosable cloud aws %}}
@@ -183,9 +182,9 @@ PolicyPack(
 
 Policy as Code is an important tool for building secure and efficient cloud infrastructure. Pulumi lets you efficiently test resources before deployment and entire stacks when deployed. Learn more about what you can do with Policy as Code:
 
-- [Get Started with Policy as Code]({{< relred "/docs/get-started/crossguard">}})
+- [Get Started with Policy as Code]({{< relref "/docs/get-started/crossguard">}})
 - [New Policy as Code Capabilities with CrossGuard]({{< relref "/blog/crossguard-2-0" >}})
 - [Automatically Enforcing AWS Resource Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
-- [Manage Any Infrastructure with Policy as Code]({{< relref "https://www.pulumi.com/blog/manage-infrastructure-with-pac" >}})
+- [Manage Any Infrastructure with Policy as Code]({{< relref "/blog/manage-infrastructure-with-pac" >}})
 - [Enforcing Different Kinds of Policies for Cloud Resources]({{< relref "/blog/enforcing-different-kinds-of-policies-for-cloud-resources" >}})
 - [Running AWS IAM Access Analyzer at Deployment Time]({{< relref "/blog/aws-iam-access-analyzer-and-crossguard" >}})
