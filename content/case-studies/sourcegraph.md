@@ -1,9 +1,9 @@
 ---
 title: Sourcegraph
 description: |
-    Learn why Sourcegraph selected Pulumi to deploy software to Google Kubernetes Engine, ensuring their team has continuous access to the latest builds.
+    Pulumi helps to supercharge Kubernetes deployments at Sourcegraph, ensuring their team has continuous access to the latest builds.
 meta_desc: |
-    Learn why Sourcegraph selected Pulumi to deploy software to Google Kubernetes Engine, ensuring their team has continuous access to the latest builds.
+    Pulumi helps to supercharge Kubernetes deployments at Sourcegraph, ensuring their team has continuous access to the latest builds.
 
 customer_name: Sourcegraph
 customer_logo: /logos/customers/sourcegraph_logo.png
