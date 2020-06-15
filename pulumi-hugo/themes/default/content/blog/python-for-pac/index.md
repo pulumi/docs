@@ -16,20 +16,26 @@ With the launch of Pulumi 2.0, we introduced the preview of Python Policy as Cod
 
 Devops benefits greatly from policy as code because policies can use software development practices and verify resources without deployments that are costly in time and money. Organizations can also gain significant benefits through cost savings, fine-grained control over infrastructure, efficient deployments, improved compliance, and better use of cloud provider native resources.
 
-## How it Wo
+## How Policy as Code Works
 
-Policies enforce specific criteria for a resource or a stack (a set of resources). A common policy is to ensure that storage is not publicly accessible over the Internet or to ensure that virtual machines must have a firewall. Policies are run twice. First, during Pulumi preview when the resource graph is creates; and second, during Pulumi update when resources are created.
-
-Policies are validation functions that evaluate all resources in a Pulumi stack. When a resource is in violation of a policy, the validation function calls reportViolation .
+Policies enforce specific criteria for a resource or for a set of resources (stacks)). For example, a common policy is to ensure that storage is not publicly accessible over the Internet or to ensure that virtual machines must have a firewall.
 
 Pulumi supports two types of polices:
 
 - **ResourceValidationPolicy** validates individual resources in a stack and is run during preview.
 - **StackValidationPolicy** validates the stack as a whole and runs when the stack is deployed because some resources may need to exists to validate inputs or outputs.
 
+Policies are enforced as either
+
+- *advisory* which prints a warning message the resource violates the policy
+- *mandatory* prevents a resource deployment if it violates the policy.
+
 Now that we have the basics of policy as code, lets take a look at example policies written in Python.
 
 ## Examples
+
+Policies are validation functions that validate resources in a Pulumi stack. In the examples below, we define a function that takes `ResourceValidationArgs` and `ReportViolation` as arguments. The function checks to see what type of resource and its arguments, these are used to determine of the resource violates the policy. If the resource is not compliant, the function returns the violation and because the enforcement level is *mandatory*, the resource will not be deployed.
+
 
 {{< chooser cloud "aws,azure,gcp" >}}
 {{% choosable cloud aws %}}
@@ -138,7 +144,7 @@ PolicyPack(
 {{% /choosable %}}
 {{< /chooser >}}
 
-Kubernetes
+In the case of this Kubernetes policy example, the policy does not allow deploying a loadbalancer which would open the kubernetes cluster to the public Internet.
 
 ```python
 from pulumi_policy import (
@@ -173,7 +179,13 @@ PolicyPack(
 )
 ```
 
-
 ## Summary
 
-loren ipsum
+Policy as Code is an important tool for building secure and efficient cloud infrastructure. Pulumi lets you efficiently test resources before deployment and entire stacks when deployed. Learn more about what you can do with Policy as Code:
+
+- [Get Started with Policy as Code]({{< relred "/docs/get-started/crossguard">}})
+- [New Policy as Code Capabilities with CrossGuard]({{< relref "/blog/crossguard-2-0" >}})
+- [Automatically Enforcing AWS Resource Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
+- [Manage Any Infrastructure with Policy as Code]({{< relref "https://www.pulumi.com/blog/manage-infrastructure-with-pac" >}})
+- [Enforcing Different Kinds of Policies for Cloud Resources]({{< relref "/blog/enforcing-different-kinds-of-policies-for-cloud-resources" >}})
+- [Running AWS IAM Access Analyzer at Deployment Time]({{< relref "/blog/aws-iam-access-analyzer-and-crossguard" >}})
