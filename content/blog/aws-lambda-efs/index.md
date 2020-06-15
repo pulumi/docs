@@ -36,7 +36,7 @@ To use an EFS file system from Lambda, we need a few things:
 1. An EFS Access Point specifying how Lambda should mount the EFS volume
 1. An AWS Lambda Function running in the same VPC and private subnets and referencing the EFS Access Point
 
-![Lambda with EFS Architecture](lanbdaefs.png)
+![Lambda with EFS Architecture](lambdaefs.png)
 
 Because EFS is tied to a VPC, we can only access it from a Lambda running inside a VPC.  We should create a VPC with both public and private subnets to ensure the Lambda function can reach the internet (since Lambda functions inside VPCs are not assigned public IPs).
 
