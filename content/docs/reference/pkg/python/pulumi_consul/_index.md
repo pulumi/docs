@@ -3,7 +3,10 @@ title: Package pulumi_consul
 title_tag: Package pulumi_consul | Python SDK
 linktitle: pulumi_consul
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "consul" >}}
 
 <div class="section" id="pulumi-consul">
 <h1>Pulumi Consul<a class="headerlink" href="#pulumi-consul" title="Permalink to this headline">¶</a></h1>
