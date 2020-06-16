@@ -223,6 +223,6 @@ Support for EFS in Lambda opens up a lot of new options for managing persistent 
 
 In this post, we've shown how you can use Pulumi to manage Lambda + EFS. Pulumi makes it easy to provision and manage cloud infrastructure on any cloud, using programming languages you are familiar with, including TypeScript, Python, Go and .NET.  This is a great fit for EFS and Lambda, which combine managed infrastructure with small serverless function code.
 
-Check out the [full Lambda + EFS example above](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples, learn more about [Lambda support for EFS in the AWS docs](TODO), and [get started with Pulumi for AWS](https://www.pulumi.com/docs/get-started/aws/) today.
+Check out the [full Lambda + EFS example above](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples, learn more about [Lambda support for EFS in the AWS docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html), and [get started with Pulumi for AWS](https://www.pulumi.com/docs/get-started/aws/) today.
 
 {{< youtube "zPj_JxaRJyE?rel=0" >}}
