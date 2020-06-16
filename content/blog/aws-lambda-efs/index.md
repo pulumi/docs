@@ -2,8 +2,8 @@
 title: "Using AWS Lambda with Amazon Elastic File Service (EFS)"
 date: 2020-06-15T06:37:35-05:00
 draft: true
-meta_desc: "Pulumi supports AWS EFS with Lambda and Fargate services."
-meta_image: meta.png
+meta_desc: "Pulumi supports Amazon EFS with Lambda and Fargate services."
+meta_image: aws-lambda-efs.png
 authors:
     - luke-hoban
 tags:
@@ -12,11 +12,11 @@ tags:
     - EFS
 ---
 
-Ever since AWS Lambda was released in 2015, users have wanted persistent file storage beyond the small 512MB `/tmp` disk allocated to each Lambda function.  The following year, Amazon launched EFS,  offering a simple managed file system service for AWS, but initially only available to mount onto Amazon EC2 instances. Over the last few months, AWS has been extending access to EFS to all of the modern compute offerings.  First EKS, then ECS and Fargate.  And today, Lambda!
+Ever since AWS Lambda was released in 2015, users have wanted persistent file storage beyond the small 512MB `/tmp` disk allocated to each Lambda function.  The following year, Amazon launched EFS,  offering a simple managed file system service for AWS, but initially only available to mount onto Amazon EC2 instances. Over the last few months, AWS has been extending access to EFS to all of the modern compute offerings.  First [EKS](https://aws.amazon.com/about-aws/whats-new/2019/09/amazon-eks-announces-beta-release-of-amazon-efs-csi-driver/) for Kubernetes, then [ECS and Fargate](https://aws.amazon.com/about-aws/whats-new/2020/04/amazon-ecs-aws-fargate-support-amazon-efs-filesystems-generally-available/) for containers.  Today, AWS announced that [EFS is now also supported in Lambda](TBD), providing easy access to network file systems from your serverless functions.
 
 <!--more-->
 
-In this post, we’ll show you how to get started using  EFS with Lambda and Pulumi.
+In this post, we’ll show you how to get started using EFS with Lambda and Pulumi.
 
 Why would you *want* to use EFS from Lambda?  There are a few common reasons:
 
@@ -38,17 +38,19 @@ To use an EFS file system from Lambda, we need a few things:
 
 ![Lambda with EFS Architecture](lambdaefs.png)
 
-Because EFS is tied to a VPC, we can only access it from a Lambda running inside a VPC.  We should create a VPC with both public and private subnets to ensure the Lambda function can reach the internet (since Lambda functions inside VPCs are not assigned public IPs).
+Let's walk through how to build the required infrastructure.  We'll use Pulumi to provision the necessary resources.  You can check out the [full source code](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples.
+
+Because EFS is tied to a VPC, we can only access it from a Lambda running inside a VPC.  We should create a VPC with both public and private subnets to ensure the Lambda function can reach the internet (since Lambda functions inside VPCs are not assigned public IPs).  We could use an existing VPC or create a new one for our application.
 
 ```ts
-   const vpc = new awsx.ec2.Vpc("vpc", { subnets: [{ type: "private" }, { type: "public" }] });
-   const subnetIds = await vpc.publicSubnetIds;
+const vpc = new awsx.ec2.Vpc("vpc", { subnets: [{ type: "private" }, { type: "public" }] });
+const subnetIds = await vpc.publicSubnetIds;
 ```
 
-An EFS FileSystem is a regional service, but accessing it requires adding mount points to a VPC.  We can add those to the private subnets where our Functions will run.  Each mount target has a security group, and we can use the default security group to allow access only from other compute in the same security group in our VPC.
+An EFS FileSystem is a regional service, but accessing it requires adding mount points to a VPC.  We can add those to the private subnets where our Functions will run.  Each mount target has a security group, and we can use the default security group to allow access only from other compute resources in the same security group in our VPC.  We could also use an existing FileSystem and mount targets if they have already been provisioned for another application.
 
 ```ts
-    const filesystem = new aws.efs.FileSystem("filesystem");
+const filesystem = new aws.efs.FileSystem("filesystem");
     const targets = [];
     for (let i = 0; i < subnetIds.length; i++) {
         targets.push(new aws.efs.MountTarget(`fs-mount-${i}`, {
@@ -89,14 +91,63 @@ We now have our infrastructure all set up to start using Lambda with EFS.  Let�
 
 ## Interact with EFS from an HTTP API
 
-For a first simple Lambda app, let's expose an HTTP API that interacts with our EFS file system.  This will allow us to run `curl` to run commands to populate and read the contents of the file system.  It’s now just a few lines of code.  We create an AWS API Gateway API with a single POST route that invokes a function that invokes the command in its payload.
+For a first simple Lambda application, we'll expose an HTTP API that GETs files from, and POSTs files to, our EFS file system.  We'll implement this with API Gateway and two routes.  Using the helper we defined above, each of these is just a few lines of code.
 
-> Note: Yes, this is insecure - definitely add authentication or use a private endpoint before running this in production!
+Note that we can use our normal Node.js `fs.readFileSync` and `fs.writeFileSync` APIs to interact with the EFS file system - no need for an AWS SDK to talk to EFS. This makes it easy to take existing software and libraries that can interact with the filesystem and run them inside Lambda.
+
+> Note: Yes, exposing this to the internet is insecure - it is recommended that you [add authentication or use a private endpoint](https://www.pulumi.com/docs/guides/crosswalk/aws/api-gateway/#controlling-and-managing-access-to-apis) before running this in production!
 
 ```ts
-    const api = new awsx.apigateway.API("api", {
-        routes: [
-            {
+const api = new awsx.apigateway.API("api", {
+    routes: [
+        {
+            method: "GET", path: "/files/{filename+}", eventHandler: efsvpcCallback("getHandler", async (ev, ctx) => {
+                try {
+                    const f = "/mnt/storage/" + ev.pathParameters!.filename;
+                    const data = fs.readFileSync(f)
+                    return {
+                        statusCode: 200,
+                        body: data.toString(),
+                    };
+                } catch {
+                    return { statusCode: 500, body: "" }
+                }
+            }),
+        },
+        {
+            method: "POST", path: "/files/{filename+}", eventHandler: efsvpcCallback("uploadHandler", async (ev, ctx) => {
+                try {
+                    const f = "/mnt/storage/" + ev.pathParameters!.filename;
+                    const data = new Buffer(ev.body!, 'base64');
+                    fs.writeFileSync(f, data)
+                    return {
+                        statusCode: 200,
+                        body: "",
+                    };
+                } catch {
+                    return { statusCode: 500, body: "" }
+                }
+            }),
+        },
+    ]
+});
+```
+
+Once this is deployed, we can interact with the API to add files to our file system:
+
+```
+$ curl -X POST -d 'Hello world' $(pulumi stack output url)files/file.txt
+$ curl -X GET $(pulumi stack output url)files/file.txt
+Hello, world
+```
+
+Easy as that - our two Lambda functions are sharing data via EFS!
+
+We can get more insight into what the file system looks like inside Lambda by exposing a REST endpoint to run commands inside the a Lambda function.  This will allow us to run `curl` to run commands to populate and read the contents of the file system.
+
+```ts
+...
+{
                 method: "POST", path: "/", eventHandler: efsvpcCallback("postHandler", async (ev, ctx) => {
                     const cmd = new Buffer(ev.body!, 'base64').toString()
                     const buf = cp.execSync(cmd);
@@ -106,26 +157,25 @@ For a first simple Lambda app, let's expose an HTTP API that interacts with our 
                     };
                 }),
             },
-        ]
-    });
 ```
 
-We can now interact with our EFS file system by just running shell commands!  Since it’s a normal file system mount, all our standard Unix tools work as we expect.
+We can now interact with our EFS file system by just running shell commands.  Since it’s a normal file system mount, all our standard Unix tools work as we expect.  Note that the files are owned by uid/gid `1000`/`1000`, and have the 755 permissions specified by our Access Point.
 
-```
+```bash
 $ curl -X POST -d 'ls -la /mnt/storage' $(pulumi stack output url)
 total 8
 drwxr-xr-x 2 1000 1000 6144 Jun 10 05:37 .
 drwxr-xr-x 3 root root 4096 Jun 10 05:35 ..
+-rw-rw-r-- 1 1000 1000   21 Jun 10 05:37 file.txt
+
 $ curl -X POST -d 'echo "<h1>Hello World</h1>" > /mnt/storage/index.html' $(pulumi stack output url)
 $ curl -X POST -d 'ls -la /mnt/storage' $(pulumi stack output url)
 total 12
 drwxr-xr-x 2 1000 1000 6144 Jun 10 05:38 .
 drwxr-xr-x 3 root root 4096 Jun 10 05:35 ..
+-rw-rw-r-- 1 1000 1000   21 Jun 10 05:37 file.txt
 -rw-rw-r-- 1 1000 1000   21 Jun 10 05:38 index.html
 ```
-
-Success!
 
 ## Sharing a File System between Fargate and Lambda
 
@@ -166,3 +216,9 @@ Navigating to our Task’s public IP - we see the contents of the file we stored
 ![Hello World application](helloworld.png)
 
 ## Conclusion
+
+Support for EFS in Lambda opens up a lot of new options for managing persistent data inside serverless functions.  And even more importantly, makes it easy to share data in a format that existing applications in VM instances or containers can natively work with.
+
+In this post, we've shown how you can use Pulumi to manage Lambda + EFS. Pulumi makes it easy to provision and manage cloud infrastructure on any cloud, using programming languages you are familiar with, including TypeScript, Python, Go and .NET.  This is a great fit for EFS and Lambda, which combine managed infrastructure with small serverless function code.
+
+Check out the [full Lambda + EFS example above](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples, learn more about [Lambda support for EFS in the AWS docs](TODO), and [get started with Pulumi for AWS](https://www.pulumi.com/docs/get-started/aws/) today.
