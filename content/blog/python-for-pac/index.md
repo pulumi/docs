@@ -23,7 +23,7 @@ Policies enforce specific criteria for a resource or a set of resources (stacks)
 
 Pulumi supports two types of policies:
 
-- **ResourceValidationPolicy** validates individual resources in a stack and is run during preview.
+- **ResourceValidationPolicy** validates inputs of individual resources in a stack before the resource is created or modified.
 - **StackValidationPolicy** validates outputs of all resources in the stack after all resources have been created or modified.
 
 ResourceValidationPolicy and StackValidationPolicy validations run during previews and updates. During previews, resources aren't created or modified, so the ResourceValidationPolicy and StackValidationPolicy validations see a preview of what's going to happen (as best we can determine).
