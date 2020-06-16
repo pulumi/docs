@@ -6,7 +6,7 @@ import { setLanguage, setK8sLanguage, setOS, setCloud } from "../../store/action
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic"
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx"
 export type OSKey = "macos" | "linux" | "windows"
-export type CloudKey = "aws" | "azure" | "gcp"
+export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes";
 
 export type ChooserMode = "local" | "global";
 export type ChooserOptionStyle = "tabbed" | "none";
@@ -406,6 +406,11 @@ export class Chooser {
         {
             key: "gcp",
             name: "GCP",
+            preview: false,
+        },
+        {
+            key: "kubernetes",
+            name: "Kubernetes",
             preview: false,
         },
     ];
