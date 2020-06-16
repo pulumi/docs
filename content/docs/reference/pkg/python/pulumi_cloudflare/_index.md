@@ -3,7 +3,10 @@ title: Package pulumi_cloudflare
 title_tag: Package pulumi_cloudflare | Python SDK
 linktitle: pulumi_cloudflare
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "cloudflare" >}}
 
 <div class="section" id="pulumi-cloudflare">
 <h1>Pulumi Cloudflare<a class="headerlink" href="#pulumi-cloudflare" title="Permalink to this headline">¶</a></h1>

@@ -30,7 +30,7 @@ class MyStack : Stack
     {
         var example = new Cloudflare.LogpullRetention("example", new Cloudflare.LogpullRetentionArgs
         {
-            Enabled = "true",
+            Enabled = true,
             ZoneId = "fb54f084ca7f7b732d3d3ecbd8ef7bf2",
         });
     }

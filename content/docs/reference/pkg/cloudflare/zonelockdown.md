@@ -40,7 +40,7 @@ class MyStack : Stack
                 },
             },
             Description = "Restrict access to these endpoints to requests from a known IP address",
-            Paused = "false",
+            Paused = false,
             Urls = 
             {
                 "api.mysite.com/some/endpoint*",
