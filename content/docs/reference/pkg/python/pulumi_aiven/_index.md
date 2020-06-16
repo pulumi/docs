@@ -3,7 +3,10 @@ title: Package pulumi_aiven
 title_tag: Package pulumi_aiven | Python SDK
 linktitle: pulumi_aiven
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "aiven" >}}
 
 <div class="section" id="module-pulumi_aiven">
 <span id="pulumi-aiven"></span><h1>Pulumi Aiven<a class="headerlink" href="#module-pulumi_aiven" title="Permalink to this headline">¶</a></h1>
