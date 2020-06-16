@@ -1,5 +1,5 @@
 ---
-title: "Using AWS Lambda with Amazon Elastic File Service (EFS)"
+title: "Using Amazon Elastic File System (EFS) with AWS Lambda"
 date: 2020-06-16
 meta_desc: "Pulumi supports Amazon EFS with Lambda and Fargate services."
 meta_image: aws-lambda-efs.png
