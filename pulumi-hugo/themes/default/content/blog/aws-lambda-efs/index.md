@@ -40,6 +40,8 @@ To use an EFS file system from Lambda, we need a few things:
 
 Let's walk through how to build the required infrastructure.  We'll use Pulumi to provision the necessary resources.  You can check out the [full source code](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples.
 
+> Note: These examples depend on the newly added support for EFS with Lambda in the `2.10.0` release of the `pulumi-aws` package, which will be released later today.
+
 Because EFS is tied to a VPC, we can only access it from a Lambda running inside a VPC.  We should create a VPC with both public and private subnets to ensure the Lambda function can reach the internet (since Lambda functions inside VPCs are not assigned public IPs).  We could use an existing VPC or create a new one for our application.
 
 ```ts
