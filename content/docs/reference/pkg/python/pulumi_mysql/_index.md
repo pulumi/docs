@@ -3,7 +3,10 @@ title: Package pulumi_mysql
 title_tag: Package pulumi_mysql | Python SDK
 linktitle: pulumi_mysql
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "mysql" >}}
 
 <div class="section" id="pulumi-mysql">
 <h1>Pulumi MySQL<a class="headerlink" href="#pulumi-mysql" title="Permalink to this headline">¶</a></h1>

@@ -31,7 +31,7 @@ A Pulumi package for creating and managing mysql cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`mysql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mysql).</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
+	<dd>2.1.3</dd>
 </dl>
 
 
