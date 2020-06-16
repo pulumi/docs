@@ -3,7 +3,10 @@ title: Package pulumi_f5bigip
 title_tag: Package pulumi_f5bigip | Python SDK
 linktitle: pulumi_f5bigip
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "f5bigip" >}}
 
 <div class="section" id="pulumi-f5bigip">
 <h1>Pulumi F5BigIP<a class="headerlink" href="#pulumi-f5bigip" title="Permalink to this headline">¶</a></h1>

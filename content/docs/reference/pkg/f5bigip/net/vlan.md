@@ -38,7 +38,7 @@ class MyStack : Stack
                 new F5BigIP.Net.Inputs.VlanInterfaceArgs
                 {
                     Tagged = false,
-                    Vlanport = 1.2,
+                    Vlanport = "1.2",
                 },
             },
             Name = "/Common/Internal",

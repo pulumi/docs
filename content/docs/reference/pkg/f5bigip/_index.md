@@ -37,7 +37,7 @@ A Pulumi package for creating and managing F5 BigIP resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
+	<dd>2.1.3</dd>
 </dl>
 
 

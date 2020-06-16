@@ -3,7 +3,10 @@ title: Module net
 title_tag: Module net | Package pulumi_f5bigip | Python SDK
 linktitle: net
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "f5bigip" >}}
 
 <div class="section" id="net">
 <h1>net<a class="headerlink" href="#net" title="Permalink to this headline">¶</a></h1>
