@@ -24,11 +24,15 @@ Plugins are a recent addition to Spinnaker and as such require a more recent ver
 
 Additionally, your Spinnaker instance should have been deployed using the [distributed installation](https://www.spinnaker.io/setup/install/environment/#distributed-installation) method (i.e. Kubernetes). If you are using any other installation method, although the plugin shown in this document will not work, you may be able to apply similar concepts to your installation.
 
-### Pulumi Account
+### Pulumi
 
 This guide assumes you are using the default Pulumi Service [managed backend](https://www.pulumi.com/docs/intro/concepts/state/#backends). The Spinnaker plugin referenced in this guide supports specifying alternate backend URLs.
 
-To sign-up for a new Pulumi account and get started quickly, head over to the [Pulumi Console](https://app.pulumi.com/signup).
+* To sign-up for a new Pulumi account, head over to the [Pulumi Console](https://app.pulumi.com/signup).
+* Depending on your use-case for using Pulumi in Spinnaker, you may want to create the Pulumi Stack ahead of time.
+* To create a new stack, you have a couple of options, you may create it in the [Pulumi Console](https://app.pulumi.com/site/new-project) directly.
+* Alternatively, you can also run `pulumi new [template]` to create a template project.
+  * Learn more [here]({{< relref "/docs/reference/cli/pulumi_new" >}}).
 
 ## Pulumi Plugin For Spinnaker
 
@@ -122,4 +126,4 @@ Spinnaker Pipelines support [Pipeline Expressions](https://www.spinnaker.io/guid
 * Checkout more detailed examples for Pulumi [here](https://www.pulumi.com/docs/tutorials/).
 * Learn how to use the multitude of providers available with Pulumi [here](https://www.pulumi.com/docs/reference/pkg/).
 * We hope that you find the plugin useful in running Pulumi in your Spinnaker instance. If you run into problems or would like to provide feedback, we encourage you to open an issue in this [repo](https://github.com/pulumi/spinnaker-preconfigured-job-plugin). The plugin is free and open-source.
-* Lastly, please feel free to drop by our [Community Slack](https://slack.pulumi.com) and participate in the conversation.
+* Lastly, whether you are looking to use Pulumi to deploy a Spinnaker installation on your favorite cloud and have questions about it, or you want to simply participate in the various conversations happening with our community of users, please feel free to drop by our [Community Slack](https://slack.pulumi.com).
