@@ -560,9 +560,9 @@ class MyStack : Stack
     {
         var cluster_test = new Mongodbatlas.Cluster("cluster-test", new Mongodbatlas.ClusterArgs
         {
-            AutoScalingDiskGbEnabled = "false",
+            AutoScalingDiskGbEnabled = false,
             BackingProviderName = "AWS",
-            DiskSizeGb = "2",
+            DiskSizeGb = 2,
             MongoDbMajorVersion = "4.2",
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderInstanceSizeName = "M2",
