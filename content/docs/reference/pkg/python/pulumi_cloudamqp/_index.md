@@ -3,7 +3,10 @@ title: Package pulumi_cloudamqp
 title_tag: Package pulumi_cloudamqp | Python SDK
 linktitle: pulumi_cloudamqp
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "cloudamqp" >}}
 
 <div class="section" id="module-pulumi_cloudamqp">
 <span id="pulumi-cloudamqp"></span><h1>Pulumi CloudAMQP<a class="headerlink" href="#module-pulumi_cloudamqp" title="Permalink to this headline">¶</a></h1>
