@@ -22,7 +22,6 @@ an existing Google Cloud Platform folder.
     your existing members are preserved.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,7 +57,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		department1, err := organizations.NewFolder(ctx, "department1", &organizations.FolderArgs{
+			DisplayName: pulumi.String("Department 1"),
+			Parent:      pulumi.String("organizations/1234567"),
+		})
+		if err != nil {
+			return err
+		}
+		admin, err := folder.NewIAMBinding(ctx, "admin", &folder.IAMBindingArgs{
+			Folder: department1.Name,
+			Role:   pulumi.String("roles/editor"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:alice@gmail.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -22,6 +22,9 @@ To get more information about StandardAppVersion, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a StandardAppVersion Resource {#create}
@@ -257,7 +260,7 @@ The StandardAppVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
+    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,7 +471,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
+    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -679,7 +682,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
+    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -890,7 +893,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
+    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1328,7 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
+    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1550,7 +1553,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
+    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1772,7 +1775,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
+    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1994,7 +1997,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.    
+    <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

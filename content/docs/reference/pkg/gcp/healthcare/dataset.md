@@ -18,26 +18,13 @@ To get more information about Dataset, see:
 * How-to Guides
     * [Creating a dataset](https://cloud.google.com/healthcare/docs/how-tos/datasets)
 
-## Example Usage - Healthcare Dataset Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultDataset = new gcp.healthcare.Dataset("default", {
-    location: "us-central1",
-    timeZone: "UTC",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.healthcare.Dataset("default",
-    location="us-central1",
-    time_zone="UTC")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Healthcare Dataset Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -55,7 +42,36 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.healthcare.Dataset("default",
+    location="us-central1",
+    time_zone="UTC")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultDataset = new gcp.healthcare.Dataset("default", {
+    location: "us-central1",
+    timeZone: "UTC",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Dataset Resource {#create}

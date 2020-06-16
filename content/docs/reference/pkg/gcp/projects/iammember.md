@@ -90,6 +90,40 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/editor",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		project, err := projects.NewIAMPolicy(ctx, "project", &projects.IAMPolicyArgs{
+			Project:    pulumi.String("your-project-id"),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 With IAM Conditions):
 
@@ -167,6 +201,45 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: organizations.getIAMPolicyBindingArray{
+				&organizations.LookupIAMPolicyBinding{
+					Condition: &organizations.LookupIAMPolicyBindingCondition{
+						Description: "Expiring at midnight of 2019-12-31",
+						Expression:  "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+						Title:       "expires_after_2019_12_31",
+					},
+					Members: []string{
+						"user:jane@example.com",
+					},
+					Role: "roles/editor",
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		project, err := projects.NewIAMPolicy(ctx, "project", &projects.IAMPolicyArgs{
+			PolicyData: pulumi.String(admin.PolicyData),
+			Project:    pulumi.String("your-project-id"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_project\_iam\_binding
 
@@ -210,6 +283,30 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := projects.NewIAMBinding(ctx, "project", &projects.IAMBindingArgs{
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Project: pulumi.String("your-project-id"),
+			Role:    pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
@@ -271,6 +368,35 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := projects.NewIAMBinding(ctx, "project", &projects.IAMBindingArgs{
+			Condition: &projects.IAMBindingConditionArgs{
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+				Title:       pulumi.String("expires_after_2019_12_31"),
+			},
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Project: pulumi.String("your-project-id"),
+			Role:    pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_project\_iam\_member
 
@@ -309,6 +435,28 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := projects.NewIAMMember(ctx, "project", &projects.IAMMemberArgs{
+			Member:  pulumi.String("user:jane@example.com"),
+			Project: pulumi.String("your-project-id"),
+			Role:    pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
@@ -365,6 +513,33 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := projects.NewIAMMember(ctx, "project", &projects.IAMMemberArgs{
+			Condition: &projects.IAMMemberConditionArgs{
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+				Title:       pulumi.String("expires_after_2019_12_31"),
+			},
+			Member:  pulumi.String("user:jane@example.com"),
+			Project: pulumi.String("your-project-id"),
+			Role:    pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
@@ -435,6 +610,38 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := projects.NewIAMAuditConfig(ctx, "project", &projects.IAMAuditConfigArgs{
+			AuditLogConfigs: projects.IAMAuditConfigAuditLogConfigArray{
+				&projects.IAMAuditConfigAuditLogConfigArgs{
+					LogType: pulumi.String("ADMIN_READ"),
+				},
+				&projects.IAMAuditConfigAuditLogConfigArgs{
+					ExemptedMembers: pulumi.StringArray{
+						pulumi.String("user:joebloggs@hashicorp.com"),
+					},
+					LogType: pulumi.String("DATA_READ"),
+				},
+			},
+			Project: pulumi.String("your-project-id"),
+			Service: pulumi.String("allServices"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

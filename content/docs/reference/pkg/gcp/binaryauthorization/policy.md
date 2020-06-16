@@ -19,6 +19,9 @@ To get more information about Policy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}

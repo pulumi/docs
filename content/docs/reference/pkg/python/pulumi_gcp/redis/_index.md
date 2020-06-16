@@ -3,6 +3,7 @@ title: Module redis
 title_tag: Module redis | Package pulumi_gcp | Python SDK
 linktitle: redis
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

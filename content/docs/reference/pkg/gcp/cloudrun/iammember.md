@@ -88,6 +88,42 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/viewer",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		policy, err := cloudrun.NewIamPolicy(ctx, "policy", &cloudrun.IamPolicyArgs{
+			Location:   pulumi.String(google_cloud_run_service.Default.Location),
+			Project:    pulumi.String(google_cloud_run_service.Default.Project),
+			Service:    pulumi.String(google_cloud_run_service.Default.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_cloud\_run\_service\_iam\_binding
 
@@ -137,6 +173,32 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		binding, err := cloudrun.NewIamBinding(ctx, "binding", &cloudrun.IamBindingArgs{
+			Location: pulumi.String(google_cloud_run_service.Default.Location),
+			Project:  pulumi.String(google_cloud_run_service.Default.Project),
+			Service:  pulumi.String(google_cloud_run_service.Default.Name),
+			Role:     pulumi.String("roles/viewer"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_cloud\_run\_service\_iam\_member
 
@@ -181,6 +243,30 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		member, err := cloudrun.NewIamMember(ctx, "member", &cloudrun.IamMemberArgs{
+			Location: pulumi.String(google_cloud_run_service.Default.Location),
+			Project:  pulumi.String(google_cloud_run_service.Default.Project),
+			Service:  pulumi.String(google_cloud_run_service.Default.Name),
+			Role:     pulumi.String("roles/viewer"),
+			Member:   pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

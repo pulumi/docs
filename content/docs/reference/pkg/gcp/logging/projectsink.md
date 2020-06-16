@@ -20,9 +20,6 @@ and
 
 > **Note** You must [enable the Cloud Resource Manager API](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com)
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ProjectSink Resource {#create}
@@ -224,6 +221,29 @@ import pulumi
 ```
 ```csharp
 using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -312,6 +332,29 @@ import pulumi
 ```
 ```csharp
 using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,6 +443,29 @@ import pulumi
 ```
 ```csharp
 using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -488,6 +554,29 @@ import pulumi
 ```
 ```csharp
 using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -840,6 +929,29 @@ import pulumi
 ```
 ```csharp
 using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -940,6 +1052,29 @@ import pulumi
 ```
 ```csharp
 using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1040,6 +1175,29 @@ import pulumi
 ```
 ```csharp
 using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1140,6 +1298,29 @@ import pulumi
 ```
 ```csharp
 using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
+The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

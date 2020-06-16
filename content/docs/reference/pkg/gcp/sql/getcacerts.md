@@ -16,9 +16,6 @@ and
 [API](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/listServerCas).
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetCaCerts {#using}

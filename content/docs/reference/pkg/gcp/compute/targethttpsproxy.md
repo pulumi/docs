@@ -20,6 +20,9 @@ To get more information about TargetHttpsProxy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a TargetHttpsProxy Resource {#create}

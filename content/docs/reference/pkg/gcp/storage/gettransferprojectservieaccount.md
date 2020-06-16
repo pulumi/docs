@@ -13,7 +13,6 @@ meta_desc: "Explore the GetTransferProjectServieAccount function of the storage 
 Use this data source to retrieve Storage Transfer service account for this project
 
 
-
 {{% examples %}}
 ## Example Usage
 

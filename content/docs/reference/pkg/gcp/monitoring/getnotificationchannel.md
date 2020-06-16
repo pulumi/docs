@@ -24,56 +24,13 @@ To get more information about NotificationChannel, see:
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
 
-## Example Usage - Notification Channel Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const basic = gcp.monitoring.getNotificationChannel({
-    displayName: "Test Notification Channel",
-});
-const alertPolicy = new gcp.monitoring.AlertPolicy("alertPolicy", {
-    displayName: "My Alert Policy",
-    notificationChannels: [basic.then(basic => basic.name)],
-    combiner: "OR",
-    conditions: [{
-        displayName: "test condition",
-        condition_threshold: {
-            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-            duration: "60s",
-            comparison: "COMPARISON_GT",
-            aggregations: [{
-                alignmentPeriod: "60s",
-                perSeriesAligner: "ALIGN_RATE",
-            }],
-        },
-    }],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-basic = gcp.monitoring.get_notification_channel(display_name="Test Notification Channel")
-alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
-    display_name="My Alert Policy",
-    notification_channels=[basic.name],
-    combiner="OR",
-    conditions=[{
-        "display_name": "test condition",
-        "condition_threshold": {
-            "filter": "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-            "duration": "60s",
-            "comparison": "COMPARISON_GT",
-            "aggregations": [{
-                "alignmentPeriod": "60s",
-                "perSeriesAligner": "ALIGN_RATE",
-            }],
-        },
-    }])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Notification Channel Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -120,7 +77,111 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		basic, err := monitoring.LookupNotificationChannel(ctx, &monitoring.LookupNotificationChannelArgs{
+			DisplayName: "Test Notification Channel",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		alertPolicy, err := monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
+			DisplayName: pulumi.String("My Alert Policy"),
+			NotificationChannels: pulumi.StringArray{
+				pulumi.String(basic.Name),
+			},
+			Combiner: pulumi.String("OR"),
+			Conditions: monitoring.AlertPolicyConditionArray{
+				&monitoring.AlertPolicyConditionArgs{
+					DisplayName: pulumi.String("test condition"),
+					Condition_threshold: map[string]interface{}{
+						"filter":     "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+						"duration":   "60s",
+						"comparison": "COMPARISON_GT",
+						"aggregations": []map[string]interface{}{
+							map[string]interface{}{
+								"alignmentPeriod":  "60s",
+								"perSeriesAligner": "ALIGN_RATE",
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic = gcp.monitoring.get_notification_channel(display_name="Test Notification Channel")
+alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
+    display_name="My Alert Policy",
+    notification_channels=[basic.name],
+    combiner="OR",
+    conditions=[{
+        "display_name": "test condition",
+        "condition_threshold": {
+            "filter": "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aggregations": [{
+                "alignmentPeriod": "60s",
+                "perSeriesAligner": "ALIGN_RATE",
+            }],
+        },
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = gcp.monitoring.getNotificationChannel({
+    displayName: "Test Notification Channel",
+});
+const alertPolicy = new gcp.monitoring.AlertPolicy("alertPolicy", {
+    displayName: "My Alert Policy",
+    notificationChannels: [basic.then(basic => basic.name)],
+    combiner: "OR",
+    conditions: [{
+        displayName: "test condition",
+        condition_threshold: {
+            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+            duration: "60s",
+            comparison: "COMPARISON_GT",
+            aggregations: [{
+                alignmentPeriod: "60s",
+                perSeriesAligner: "ALIGN_RATE",
+            }],
+        },
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNotificationChannel {#using}

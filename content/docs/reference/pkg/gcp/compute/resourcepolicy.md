@@ -14,40 +14,13 @@ A policy that can be attached to a resource to specify or schedule actions on th
 
 
 
-## Example Usage - Resource Policy Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const foo = new gcp.compute.ResourcePolicy("foo", {
-    region: "us-central1",
-    snapshotSchedulePolicy: {
-        schedule: {
-            dailySchedule: {
-                daysInCycle: 1,
-                startTime: "04:00",
-            },
-        },
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-foo = gcp.compute.ResourcePolicy("foo",
-    region="us-central1",
-    snapshot_schedule_policy={
-        "schedule": {
-            "dailySchedule": {
-                "daysInCycle": 1,
-                "startTime": "04:00",
-            },
-        },
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Resource Policy Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -75,62 +48,78 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Resource Policy Full
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const bar = new gcp.compute.ResourcePolicy("bar", {
-    region: "us-central1",
-    snapshotSchedulePolicy: {
-        retentionPolicy: {
-            maxRetentionDays: 10,
-            onSourceDiskDelete: "KEEP_AUTO_SNAPSHOTS",
-        },
-        schedule: {
-            hourlySchedule: {
-                hoursInCycle: 20,
-                startTime: "23:00",
-            },
-        },
-        snapshotProperties: {
-            guestFlush: true,
-            labels: {
-                my_label: "value",
-            },
-            storageLocations: "us",
-        },
-    },
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := compute.NewResourcePolicy(ctx, "foo", &compute.ResourcePolicyArgs{
+			Region: pulumi.String("us-central1"),
+			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
+				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
+					DailySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs{
+						DaysInCycle: pulumi.Int(1),
+						StartTime:   pulumi.String("04:00"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-bar = gcp.compute.ResourcePolicy("bar",
+foo = gcp.compute.ResourcePolicy("foo",
     region="us-central1",
     snapshot_schedule_policy={
-        "retention_policy": {
-            "maxRetentionDays": 10,
-            "onSourceDiskDelete": "KEEP_AUTO_SNAPSHOTS",
-        },
         "schedule": {
-            "hourlySchedule": {
-                "hoursInCycle": 20,
-                "startTime": "23:00",
+            "dailySchedule": {
+                "daysInCycle": 1,
+                "startTime": "04:00",
             },
-        },
-        "snapshotProperties": {
-            "guestFlush": True,
-            "labels": {
-                "myLabel": "value",
-            },
-            "storageLocations": "us",
         },
     })
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foo = new gcp.compute.ResourcePolicy("foo", {
+    region: "us-central1",
+    snapshotSchedulePolicy: {
+        schedule: {
+            dailySchedule: {
+                daysInCycle: 1,
+                startTime: "04:00",
+            },
+        },
+    },
+});
+```
+{{% /example %}}
+
+### Resource Policy Full
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -172,32 +161,111 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Resource Policy Placement Policy
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const baz = new gcp.compute.ResourcePolicy("baz", {
-    groupPlacementPolicy: {
-        collocation: "COLLOCATED",
-        vmCount: 2,
-    },
-    region: "us-central1",
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bar, err := compute.NewResourcePolicy(ctx, "bar", &compute.ResourcePolicyArgs{
+			Region: pulumi.String("us-central1"),
+			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
+				RetentionPolicy: &compute.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs{
+					MaxRetentionDays:   pulumi.Int(10),
+					OnSourceDiskDelete: pulumi.String("KEEP_AUTO_SNAPSHOTS"),
+				},
+				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
+					HourlySchedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs{
+						HoursInCycle: pulumi.Int(20),
+						StartTime:    pulumi.String("23:00"),
+					},
+				},
+				SnapshotProperties: &compute.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs{
+					GuestFlush: pulumi.Bool(true),
+					Labels: map[string]interface{}{
+						"myLabel": "value",
+					},
+					StorageLocations: pulumi.String("us"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-baz = gcp.compute.ResourcePolicy("baz",
-    group_placement_policy={
-        "collocation": "COLLOCATED",
-        "vmCount": 2,
-    },
-    region="us-central1")
+bar = gcp.compute.ResourcePolicy("bar",
+    region="us-central1",
+    snapshot_schedule_policy={
+        "retention_policy": {
+            "maxRetentionDays": 10,
+            "onSourceDiskDelete": "KEEP_AUTO_SNAPSHOTS",
+        },
+        "schedule": {
+            "hourlySchedule": {
+                "hoursInCycle": 20,
+                "startTime": "23:00",
+            },
+        },
+        "snapshotProperties": {
+            "guestFlush": True,
+            "labels": {
+                "myLabel": "value",
+            },
+            "storageLocations": "us",
+        },
+    })
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bar = new gcp.compute.ResourcePolicy("bar", {
+    region: "us-central1",
+    snapshotSchedulePolicy: {
+        retentionPolicy: {
+            maxRetentionDays: 10,
+            onSourceDiskDelete: "KEEP_AUTO_SNAPSHOTS",
+        },
+        schedule: {
+            hourlySchedule: {
+                hoursInCycle: 20,
+                startTime: "23:00",
+            },
+        },
+        snapshotProperties: {
+            guestFlush: true,
+            labels: {
+                my_label: "value",
+            },
+            storageLocations: "us",
+        },
+    },
+});
+```
+{{% /example %}}
+
+### Resource Policy Placement Policy
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -219,7 +287,65 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		baz, err := compute.NewResourcePolicy(ctx, "baz", &compute.ResourcePolicyArgs{
+			GroupPlacementPolicy: &compute.ResourcePolicyGroupPlacementPolicyArgs{
+				Collocation: pulumi.String("COLLOCATED"),
+				VmCount:     pulumi.Int(2),
+			},
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+baz = gcp.compute.ResourcePolicy("baz",
+    group_placement_policy={
+        "collocation": "COLLOCATED",
+        "vmCount": 2,
+    },
+    region="us-central1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const baz = new gcp.compute.ResourcePolicy("baz", {
+    groupPlacementPolicy: {
+        collocation: "COLLOCATED",
+        vmCount: 2,
+    },
+    region: "us-central1",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ResourcePolicy Resource {#create}

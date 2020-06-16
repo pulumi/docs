@@ -19,39 +19,13 @@ To get more information about Database, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/spanner/)
 
-## Example Usage - Spanner Database Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const main = new gcp.spanner.Instance("main", {
-    config: "regional-europe-west1",
-    displayName: "main-instance",
-});
-const database = new gcp.spanner.Database("database", {
-    instance: main.name,
-    ddls: [
-        "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
-        "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-main = gcp.spanner.Instance("main",
-    config="regional-europe-west1",
-    display_name="main-instance")
-database = gcp.spanner.Database("database",
-    instance=main.name,
-    ddls=[
-        "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
-        "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
-    ])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Spanner Database Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -78,7 +52,79 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		main, err := spanner.NewInstance(ctx, "main", &spanner.InstanceArgs{
+			Config:      pulumi.String("regional-europe-west1"),
+			DisplayName: pulumi.String("main-instance"),
+		})
+		if err != nil {
+			return err
+		}
+		database, err := spanner.NewDatabase(ctx, "database", &spanner.DatabaseArgs{
+			Instance: main.Name,
+			Ddls: pulumi.StringArray{
+				pulumi.String("CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)"),
+				pulumi.String("CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+main = gcp.spanner.Instance("main",
+    config="regional-europe-west1",
+    display_name="main-instance")
+database = gcp.spanner.Database("database",
+    instance=main.name,
+    ddls=[
+        "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+        "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const main = new gcp.spanner.Instance("main", {
+    config: "regional-europe-west1",
+    displayName: "main-instance",
+});
+const database = new gcp.spanner.Database("database", {
+    instance: main.name,
+    ddls: [
+        "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+        "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

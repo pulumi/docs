@@ -18,7 +18,6 @@ the IAM policy for an existing Google Cloud Platform Organization.
    what your policy should be.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +45,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		binding, err := organizations.NewIAMMember(ctx, "binding", &organizations.IAMMemberArgs{
+			Member: pulumi.String("user:alice@gmail.com"),
+			OrgId:  pulumi.String("0123456789"),
+			Role:   pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

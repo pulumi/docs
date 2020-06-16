@@ -13,7 +13,6 @@ meta_desc: "Explore the GetVPNGateway function of the compute module, including 
 Get a VPN gateway within GCE from its name.
 
 
-
 {{% examples %}}
 ## Example Usage
 

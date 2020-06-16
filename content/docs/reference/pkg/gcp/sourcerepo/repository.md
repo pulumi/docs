@@ -19,21 +19,13 @@ To get more information about Repository, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/source-repositories/)
 
-## Example Usage - Sourcerepo Repository Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const my_repo = new gcp.sourcerepo.Repository("my-repo", {});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_repo = gcp.sourcerepo.Repository("my-repo")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Sourcerepo Repository Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -49,7 +41,31 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_repo = gcp.sourcerepo.Repository("my-repo")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_repo = new gcp.sourcerepo.Repository("my-repo", {});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Repository Resource {#create}

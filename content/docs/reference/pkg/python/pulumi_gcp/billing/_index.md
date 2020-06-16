@@ -3,6 +3,7 @@ title: Module billing
 title_tag: Module billing | Package pulumi_gcp | Python SDK
 linktitle: billing
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

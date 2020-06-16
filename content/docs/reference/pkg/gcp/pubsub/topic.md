@@ -19,27 +19,13 @@ To get more information about Topic, see:
 * How-to Guides
     * [Managing Topics](https://cloud.google.com/pubsub/docs/admin#managing_topics)
 
-## Example Usage - Pubsub Topic Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example = new gcp.pubsub.Topic("example", {
-    labels: {
-        foo: "bar",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example = gcp.pubsub.Topic("example", labels={
-    "foo": "bar",
-})
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Pubsub Topic Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -59,25 +45,59 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Pubsub Topic Cmek
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const keyRing = new gcp.kms.KeyRing("keyRing", {location: "global"});
-const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id});
-const example = new gcp.pubsub.Topic("example", {kmsKeyName: cryptoKey.id});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
+			Labels: map[string]interface{}{
+				"foo": "bar",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-key_ring = gcp.kms.KeyRing("keyRing", location="global")
-crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id)
-example = gcp.pubsub.Topic("example", kms_key_name=crypto_key.id)
+example = gcp.pubsub.Topic("example", labels={
+    "foo": "bar",
+})
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.pubsub.Topic("example", {
+    labels: {
+        foo: "bar",
+    },
+});
+```
+{{% /example %}}
+
+### Pubsub Topic Cmek
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -102,27 +122,68 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Pubsub Topic Geo Restricted
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const example = new gcp.pubsub.Topic("example", {
-    messageStoragePolicy: {
-        allowedPersistenceRegions: ["europe-west3"],
-    },
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		keyRing, err := kms.NewKeyRing(ctx, "keyRing", &kms.KeyRingArgs{
+			Location: pulumi.String("global"),
+		})
+		if err != nil {
+			return err
+		}
+		cryptoKey, err := kms.NewCryptoKey(ctx, "cryptoKey", &kms.CryptoKeyArgs{
+			KeyRing: keyRing.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		example, err := pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
+			KmsKeyName: cryptoKey.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-example = gcp.pubsub.Topic("example", message_storage_policy={
-    "allowedPersistenceRegions": ["europe-west3"],
-})
+key_ring = gcp.kms.KeyRing("keyRing", location="global")
+crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id)
+example = gcp.pubsub.Topic("example", kms_key_name=crypto_key.id)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRing("keyRing", {location: "global"});
+const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id});
+const example = new gcp.pubsub.Topic("example", {kmsKeyName: cryptoKey.id});
+```
+{{% /example %}}
+
+### Pubsub Topic Geo Restricted
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -145,7 +206,60 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := pubsub.NewTopic(ctx, "example", &pubsub.TopicArgs{
+			MessageStoragePolicy: &pubsub.TopicMessageStoragePolicyArgs{
+				AllowedPersistenceRegions: pulumi.StringArray{
+					pulumi.String("europe-west3"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.pubsub.Topic("example", message_storage_policy={
+    "allowedPersistenceRegions": ["europe-west3"],
+})
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.pubsub.Topic("example", {
+    messageStoragePolicy: {
+        allowedPersistenceRegions: ["europe-west3"],
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Topic Resource {#create}

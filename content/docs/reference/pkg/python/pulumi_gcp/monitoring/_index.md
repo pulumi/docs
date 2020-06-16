@@ -3,6 +3,7 @@ title: Module monitoring
 title_tag: Module monitoring | Package pulumi_gcp | Python SDK
 linktitle: monitoring
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -3528,6 +3529,7 @@ If it is not provided, the provider project is used.</p></li>
 <p>The <strong>content_matchers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String or regex content to match (max 1024 bytes)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of content matcher that will be applied to the server output, compared to the content string when the check is run.</p></li>
 </ul>
 <p>The <strong>http_check</strong> object supports the following:</p>
 <ul class="simple">
@@ -3564,6 +3566,7 @@ If it is not provided, the provider project is used.</p></li>
 <dd><p>The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response’s content. This field is optional and should only be specified if a content match is required.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - String or regex content to match (max 1024 bytes)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of content matcher that will be applied to the server output, compared to the content string when the check is run.</p></li>
 </ul>
 </dd></dl>
 
@@ -3691,6 +3694,7 @@ If it is not provided, the provider project is used.</p></li>
 <p>The <strong>content_matchers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String or regex content to match (max 1024 bytes)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of content matcher that will be applied to the server output, compared to the content string when the check is run.</p></li>
 </ul>
 <p>The <strong>http_check</strong> object supports the following:</p>
 <ul class="simple">

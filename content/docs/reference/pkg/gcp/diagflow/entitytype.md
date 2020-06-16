@@ -19,67 +19,13 @@ To get more information about EntityType, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
 
-## Example Usage - Dialogflow Entity Type Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const basicAgent = new gcp.diagflow.Agent("basicAgent", {
-    displayName: "example_agent",
-    defaultLanguageCode: "en",
-    timeZone: "America/New_York",
-});
-const basicEntityType = new gcp.diagflow.EntityType("basicEntityType", {
-    displayName: "",
-    kind: "KIND_MAP",
-    entities: [
-        {
-            value: "value1",
-            synonyms: [
-                "synonym1",
-                "synonym2",
-            ],
-        },
-        {
-            value: "value2",
-            synonyms: [
-                "synonym3",
-                "synonym4",
-            ],
-        },
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-basic_agent = gcp.diagflow.Agent("basicAgent",
-    display_name="example_agent",
-    default_language_code="en",
-    time_zone="America/New_York")
-basic_entity_type = gcp.diagflow.EntityType("basicEntityType",
-    display_name="",
-    kind="KIND_MAP",
-    entities=[
-        {
-            "value": "value1",
-            "synonyms": [
-                "synonym1",
-                "synonym2",
-            ],
-        },
-        {
-            "value": "value2",
-            "synonyms": [
-                "synonym3",
-                "synonym4",
-            ],
-        },
-    ])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dialogflow Entity Type Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -124,7 +70,121 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/diagflow"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		basicAgent, err := diagflow.NewAgent(ctx, "basicAgent", &diagflow.AgentArgs{
+			DisplayName:         pulumi.String("example_agent"),
+			DefaultLanguageCode: pulumi.String("en"),
+			TimeZone:            pulumi.String("America/New_York"),
+		})
+		if err != nil {
+			return err
+		}
+		basicEntityType, err := diagflow.NewEntityType(ctx, "basicEntityType", &diagflow.EntityTypeArgs{
+			DisplayName: pulumi.String(""),
+			Kind:        pulumi.String("KIND_MAP"),
+			Entities: diagflow.EntityTypeEntityArray{
+				&diagflow.EntityTypeEntityArgs{
+					Value: pulumi.String("value1"),
+					Synonyms: pulumi.StringArray{
+						pulumi.String("synonym1"),
+						pulumi.String("synonym2"),
+					},
+				},
+				&diagflow.EntityTypeEntityArgs{
+					Value: pulumi.String("value2"),
+					Synonyms: pulumi.StringArray{
+						pulumi.String("synonym3"),
+						pulumi.String("synonym4"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_agent = gcp.diagflow.Agent("basicAgent",
+    display_name="example_agent",
+    default_language_code="en",
+    time_zone="America/New_York")
+basic_entity_type = gcp.diagflow.EntityType("basicEntityType",
+    display_name="",
+    kind="KIND_MAP",
+    entities=[
+        {
+            "value": "value1",
+            "synonyms": [
+                "synonym1",
+                "synonym2",
+            ],
+        },
+        {
+            "value": "value2",
+            "synonyms": [
+                "synonym3",
+                "synonym4",
+            ],
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basicAgent = new gcp.diagflow.Agent("basicAgent", {
+    displayName: "example_agent",
+    defaultLanguageCode: "en",
+    timeZone: "America/New_York",
+});
+const basicEntityType = new gcp.diagflow.EntityType("basicEntityType", {
+    displayName: "",
+    kind: "KIND_MAP",
+    entities: [
+        {
+            value: "value1",
+            synonyms: [
+                "synonym1",
+                "synonym2",
+            ],
+        },
+        {
+            value: "value2",
+            synonyms: [
+                "synonym3",
+                "synonym4",
+            ],
+        },
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EntityType Resource {#create}

@@ -3,6 +3,7 @@ title: Module cloudscheduler
 title_tag: Module cloudscheduler | Package pulumi_gcp | Python SDK
 linktitle: cloudscheduler
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

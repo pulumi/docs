@@ -22,34 +22,13 @@ To get more information about RouterBgpPeer, see:
 * How-to Guides
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
 
-## Example Usage - Router Peer Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const peer = new gcp.compute.RouterPeer("peer", {
-    advertisedRoutePriority: 100,
-    interface: "interface-1",
-    peerAsn: 65513,
-    peerIpAddress: "169.254.1.2",
-    region: "us-central1",
-    router: "my-router",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-peer = gcp.compute.RouterPeer("peer",
-    advertised_route_priority=100,
-    interface="interface-1",
-    peer_asn=65513,
-    peer_ip_address="169.254.1.2",
-    region="us-central1",
-    router="my-router")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Router Peer Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -71,7 +50,68 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		peer, err := compute.NewRouterPeer(ctx, "peer", &compute.RouterPeerArgs{
+			AdvertisedRoutePriority: pulumi.Int(100),
+			Interface:               pulumi.String("interface-1"),
+			PeerAsn:                 pulumi.Int(65513),
+			PeerIpAddress:           pulumi.String("169.254.1.2"),
+			Region:                  pulumi.String("us-central1"),
+			Router:                  pulumi.String("my-router"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+peer = gcp.compute.RouterPeer("peer",
+    advertised_route_priority=100,
+    interface="interface-1",
+    peer_asn=65513,
+    peer_ip_address="169.254.1.2",
+    region="us-central1",
+    router="my-router")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const peer = new gcp.compute.RouterPeer("peer", {
+    advertisedRoutePriority: 100,
+    interface: "interface-1",
+    peerAsn: 65513,
+    peerIpAddress: "169.254.1.2",
+    region: "us-central1",
+    router: "my-router",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RouterPeer Resource {#create}

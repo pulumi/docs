@@ -20,6 +20,9 @@ To get more information about Occurrence, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/container-analysis/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Occurence Resource {#create}

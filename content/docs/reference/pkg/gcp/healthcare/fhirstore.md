@@ -19,6 +19,9 @@ To get more information about FhirStore, see:
 * How-to Guides
     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a FhirStore Resource {#create}
@@ -30,7 +33,7 @@ To get more information about FhirStore, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/healthcare/#FhirStore">FhirStore</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/healthcare/#FhirStore">FhirStore</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>stream_configs=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -321,6 +324,22 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="streamconfigs_csharp">
+<a href="#streamconfigs_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">List&lt;Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
@@ -452,6 +471,22 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="streamconfigs_go">
+<a href="#streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">[]Fhir<wbr>Store<wbr>Stream<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -591,6 +626,22 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="streamconfigs_nodejs">
+<a href="#streamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
@@ -722,6 +773,22 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-type"><a href="#fhirstorenotificationconfig">Dict[Fhir<wbr>Store<wbr>Notification<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stream_configs_python">
+<a href="#stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">List[Fhir<wbr>Store<wbr>Stream<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -877,7 +944,7 @@ Get an existing FhirStore resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>self_link=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>self_link=None<span class="p">, </span>stream_configs=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1121,6 +1188,22 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_streamconfigs_csharp">
+<a href="#state_streamconfigs_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">List&lt;Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
@@ -1263,6 +1346,22 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_streamconfigs_go">
+<a href="#state_streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">[]Fhir<wbr>Store<wbr>Stream<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1413,6 +1512,22 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_streamconfigs_nodejs">
+<a href="#state_streamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
@@ -1559,6 +1674,22 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_stream_configs_python">
+<a href="#state_stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">List[Fhir<wbr>Store<wbr>Stream<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
@@ -1684,6 +1815,452 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="fhirstorestreamconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreStreamConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FhirStoreStreamConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.FhirStoreStreamConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.FhirStoreStreamConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bigquerydestination_csharp">
+<a href="#bigquerydestination_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
+The output is organized in one table per resource type. The server reuses the existing tables (if any) that
+are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
+resource type, the server attempts to create one.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetypes_csharp">
+<a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
+https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
+an empty list as an intent to stream all the supported resource types in this FHIR store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bigquerydestination_go">
+<a href="#bigquerydestination_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
+    </dt>
+    <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
+The output is organized in one table per resource type. The server reuses the existing tables (if any) that
+are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
+resource type, the server attempts to create one.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetypes_go">
+<a href="#resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
+https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
+an empty list as an intent to stream all the supported resource types in this FHIR store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bigquerydestination_nodejs">
+<a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
+    </dt>
+    <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
+The output is organized in one table per resource type. The server reuses the existing tables (if any) that
+are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
+resource type, the server attempts to create one.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetypes_nodejs">
+<a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
+https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
+an empty list as an intent to stream all the supported resource types in this FHIR store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bigquerydestination_python">
+<a href="#bigquerydestination_python" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Dict[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination]</a></span>
+    </dt>
+    <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
+The output is organized in one table per resource type. The server reuses the existing tables (if any) that
+are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
+resource type, the server attempts to create one.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetypes_python">
+<a href="#resourcetypes_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
+https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
+an empty list as an intent to stream all the supported resource types in this FHIR store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreStreamConfigBigqueryDestination">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FhirStoreStreamConfigBigqueryDestination">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigBigqueryDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigBigqueryDestinationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.FhirStoreStreamConfigBigqueryDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.FhirStoreStreamConfigBigqueryDestination.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dataseturi_csharp">
+<a href="#dataseturi_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schemaconfig_csharp">
+<a href="#schemaconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dataseturi_go">
+<a href="#dataseturi_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schemaconfig_go">
+<a href="#schemaconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dataseturi_nodejs">
+<a href="#dataseturi_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schemaconfig_nodejs">
+<a href="#schemaconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dataseturi_python">
+<a href="#dataseturi_python" style="color: inherit; text-decoration: inherit;">dataset<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schemaconfig_python">
+<a href="#schemaconfig_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Dict[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreStreamConfigBigqueryDestinationSchemaConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FhirStoreStreamConfigBigqueryDestinationSchemaConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigBigqueryDestinationSchemaConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recursivestructuredepth_csharp">
+<a href="#recursivestructuredepth_csharp" style="color: inherit; text-decoration: inherit;">Recursive<wbr>Structure<wbr>Depth</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+value 2. The maximum depth allowed is 5.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schematype_csharp">
+<a href="#schematype_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
+* ANALYTICS: Analytics schema defined by the FHIR community.
+See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recursivestructuredepth_go">
+<a href="#recursivestructuredepth_go" style="color: inherit; text-decoration: inherit;">Recursive<wbr>Structure<wbr>Depth</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+value 2. The maximum depth allowed is 5.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schematype_go">
+<a href="#schematype_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
+* ANALYTICS: Analytics schema defined by the FHIR community.
+See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recursivestructuredepth_nodejs">
+<a href="#recursivestructuredepth_nodejs" style="color: inherit; text-decoration: inherit;">recursive<wbr>Structure<wbr>Depth</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+value 2. The maximum depth allowed is 5.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schematype_nodejs">
+<a href="#schematype_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
+* ANALYTICS: Analytics schema defined by the FHIR community.
+See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recursivestructuredepth_python">
+<a href="#recursivestructuredepth_python" style="color: inherit; text-decoration: inherit;">recursive<wbr>Structure<wbr>Depth</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+value 2. The maximum depth allowed is 5.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schematype_python">
+<a href="#schematype_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
+* ANALYTICS: Analytics schema defined by the FHIR community.
+See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
 {{% /md %}}</dd>
 
 </dl>

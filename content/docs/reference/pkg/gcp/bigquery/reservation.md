@@ -18,28 +18,13 @@ To get more information about Reservation, see:
 * How-to Guides
     * [Introduction to Reservations](https://cloud.google.com/bigquery/docs/reservations-intro)
 
-## Example Usage - Bigquery Reservation Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const reservation = new gcp.bigquery.Reservation("reservation", {
-    location: "asia-northeast1",
-    slotCapacity: 0,
-    ignoreIdleSlots: false,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-reservation = gcp.bigquery.Reservation("reservation",
-    location="asia-northeast1",
-    slot_capacity=0,
-    ignore_idle_slots=False)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Bigquery Reservation Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -58,7 +43,59 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		reservation, err := bigquery.NewReservation(ctx, "reservation", &bigquery.ReservationArgs{
+			Location:        pulumi.String("asia-northeast1"),
+			SlotCapacity:    pulumi.Int(0),
+			IgnoreIdleSlots: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+reservation = gcp.bigquery.Reservation("reservation",
+    location="asia-northeast1",
+    slot_capacity=0,
+    ignore_idle_slots=False)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const reservation = new gcp.bigquery.Reservation("reservation", {
+    location: "asia-northeast1",
+    slotCapacity: 0,
+    ignoreIdleSlots: false,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Reservation Resource {#create}

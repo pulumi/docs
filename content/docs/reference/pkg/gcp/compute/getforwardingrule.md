@@ -13,7 +13,6 @@ meta_desc: "Explore the GetForwardingRule function of the compute module, includ
 Get a forwarding rule within GCE from its name.
 
 
-
 {{% examples %}}
 ## Example Usage
 

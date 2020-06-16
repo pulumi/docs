@@ -19,61 +19,13 @@ To get more information about DomainMapping, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/mapping-custom-domains)
 
-## Example Usage - Cloud Run Domain Mapping Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultService = new gcp.cloudrun.Service("defaultService", {
-    location: "us-central1",
-    metadata: {
-        namespace: "my-project-name",
-    },
-    template: {
-        spec: {
-            containers: [{
-                image: "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
-});
-const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMapping", {
-    location: "us-central1",
-    metadata: {
-        namespace: "my-project-name",
-    },
-    spec: {
-        routeName: defaultService.name,
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_service = gcp.cloudrun.Service("defaultService",
-    location="us-central1",
-    metadata={
-        "namespace": "my-project-name",
-    },
-    template={
-        "spec": {
-            "containers": [{
-                "image": "gcr.io/cloudrun/hello",
-            }],
-        },
-    })
-default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
-    location="us-central1",
-    metadata={
-        "namespace": "my-project-name",
-    },
-    spec={
-        "routeName": default_service.name,
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloud Run Domain Mapping Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -119,7 +71,114 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultService, err := cloudrun.NewService(ctx, "defaultService", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
+			Metadata: &cloudrun.ServiceMetadataArgs{
+				Namespace: pulumi.String("my-project-name"),
+			},
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultDomainMapping, err := cloudrun.NewDomainMapping(ctx, "defaultDomainMapping", &cloudrun.DomainMappingArgs{
+			Location: pulumi.String("us-central1"),
+			Metadata: &cloudrun.DomainMappingMetadataArgs{
+				Namespace: pulumi.String("my-project-name"),
+			},
+			Spec: &cloudrun.DomainMappingSpecArgs{
+				RouteName: defaultService.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_service = gcp.cloudrun.Service("defaultService",
+    location="us-central1",
+    metadata={
+        "namespace": "my-project-name",
+    },
+    template={
+        "spec": {
+            "containers": [{
+                "image": "gcr.io/cloudrun/hello",
+            }],
+        },
+    })
+default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
+    location="us-central1",
+    metadata={
+        "namespace": "my-project-name",
+    },
+    spec={
+        "routeName": default_service.name,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("defaultService", {
+    location: "us-central1",
+    metadata: {
+        namespace: "my-project-name",
+    },
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+});
+const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMapping", {
+    location: "us-central1",
+    metadata: {
+        namespace: "my-project-name",
+    },
+    spec: {
+        routeName: defaultService.name,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DomainMapping Resource {#create}

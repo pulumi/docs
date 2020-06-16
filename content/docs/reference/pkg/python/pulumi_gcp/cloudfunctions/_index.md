@@ -3,6 +3,7 @@ title: Module cloudfunctions
 title_tag: Module cloudfunctions | Package pulumi_gcp | Python SDK
 linktitle: cloudfunctions
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

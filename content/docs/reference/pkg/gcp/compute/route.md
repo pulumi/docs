@@ -40,32 +40,13 @@ To get more information about Route, see:
 * How-to Guides
     * [Using Routes](https://cloud.google.com/vpc/docs/using-routes)
 
-## Example Usage - Route Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
-const defaultRoute = new gcp.compute.Route("defaultRoute", {
-    destRange: "15.0.0.0/24",
-    network: defaultNetwork.name,
-    nextHopIp: "10.132.1.5",
-    priority: 100,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_network = gcp.compute.Network("defaultNetwork")
-default_route = gcp.compute.Route("defaultRoute",
-    dest_range="15.0.0.0/24",
-    network=default_network.name,
-    next_hop_ip="10.132.1.5",
-    priority=100)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Route Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -88,7 +69,68 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
+		if err != nil {
+			return err
+		}
+		defaultRoute, err := compute.NewRoute(ctx, "defaultRoute", &compute.RouteArgs{
+			DestRange: pulumi.String("15.0.0.0/24"),
+			Network:   defaultNetwork.Name,
+			NextHopIp: pulumi.String("10.132.1.5"),
+			Priority:  pulumi.Int(100),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+default_route = gcp.compute.Route("defaultRoute",
+    dest_range="15.0.0.0/24",
+    network=default_network.name,
+    next_hop_ip="10.132.1.5",
+    priority=100)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const defaultRoute = new gcp.compute.Route("defaultRoute", {
+    destRange: "15.0.0.0/24",
+    network: defaultNetwork.name,
+    nextHopIp: "10.132.1.5",
+    priority: 100,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Route Resource {#create}

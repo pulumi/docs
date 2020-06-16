@@ -3,6 +3,7 @@ title: Module healthcare
 title_tag: Module healthcare | Package pulumi_gcp | Python SDK
 linktitle: healthcare
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -1233,7 +1234,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.healthcare.FhirStore">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">FhirStore</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_referential_integrity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_resource_versioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_history_import</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_update_create</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">FhirStore</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_referential_integrity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_resource_versioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_history_import</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_update_create</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stream_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore" title="Permalink to this definition">¶</a></dt>
 <dd><p>A FhirStore is a datastore inside a Healthcare dataset that conforms to the FHIR (<a class="reference external" href="https://www.hl7.org/fhir/STU3/">https://www.hl7.org/fhir/STU3/</a>)
 standard for Healthcare information exchange</p>
 <p>To get more information about FhirStore, see:</p>
@@ -1263,6 +1264,38 @@ standard for Healthcare information exchange</p>
     <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;label1&quot;</span><span class="p">:</span> <span class="s2">&quot;labelvalue1&quot;</span><span class="p">,</span>
     <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
+<span class="n">bq_dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s2">&quot;bqDataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;bq_example_dataset&quot;</span><span class="p">,</span>
+    <span class="n">friendly_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a test description&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
+    <span class="n">delete_contents_on_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">healthcare</span><span class="o">.</span><span class="n">FhirStore</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;R4&quot;</span><span class="p">,</span>
+    <span class="n">enable_update_create</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">disable_referential_integrity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">disable_resource_versioning</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">enable_history_import</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;label1&quot;</span><span class="p">:</span> <span class="s2">&quot;labelvalue1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">stream_configs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;resourceTypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Observation&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;bigquery_destination&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;datasetUri&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bq_dataset</span><span class="o">.</span><span class="n">project</span><span class="p">,</span> <span class="n">bq_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project</span><span class="p">,</span> <span class="n">dataset_id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;bq://</span><span class="si">{</span><span class="n">project</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">dataset_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;schema_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;recursiveStructureDepth&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+<span class="n">topic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1308,6 +1341,12 @@ Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3�
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
 <li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
+<li><p><strong>stream_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project’s Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version.</p></li>
 </ul>
 </dd>
@@ -1320,6 +1359,35 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
+</ul>
+<p>The <strong>stream_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination BigQuery structure that contains both the dataset location and corresponding schema config.
+The output is organized in one table per resource type. The server reuses the existing tables (if any) that
+are named after the resource types, e.g. “Patient”, “Observation”. When there is no existing table for a given
+resource type, the server attempts to create one.
+See the <a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig">streaming config reference</a> for more details.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">datasetUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration for the exported BigQuery schema.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recursiveStructureDepth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+value 2. The maximum depth allowed is 5.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the output schema type. Only ANALYTICS is supported at this time.</p>
+<ul>
+<li><p>ANALYTICS: Analytics schema defined by the FHIR community.
+See <a class="reference external" href="https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md">https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md</a>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Supply a FHIR resource type (such as “Patient” or “Observation”). See
+<a class="reference external" href="https://www.hl7.org/fhir/valueset-resource-types.html">https://www.hl7.org/fhir/valueset-resource-types.html</a> for a list of all FHIR resource types. The server treats
+an empty list as an intent to stream all the supported resource types in this FHIR store.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.dataset">
@@ -1413,6 +1481,45 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.healthcare.FhirStore.stream_configs">
+<code class="sig-name descname">stream_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.stream_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project’s Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The destination BigQuery structure that contains both the dataset location and corresponding schema config.
+The output is organized in one table per resource type. The server reuses the existing tables (if any) that
+are named after the resource types, e.g. “Patient”, “Observation”. When there is no existing table for a given
+resource type, the server attempts to create one.
+See the <a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig">streaming config reference</a> for more details.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">datasetUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The configuration for the exported BigQuery schema.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recursiveStructureDepth</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+value 2. The maximum depth allowed is 5.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the output schema type. Only ANALYTICS is supported at this time.</p>
+<ul>
+<li><p>ANALYTICS: Analytics schema defined by the FHIR community.
+See <a class="reference external" href="https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md">https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md</a>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Supply a FHIR resource type (such as “Patient” or “Observation”). See
+<a class="reference external" href="https://www.hl7.org/fhir/valueset-resource-types.html">https://www.hl7.org/fhir/valueset-resource-types.html</a> for a list of all FHIR resource types. The server treats
+an empty list as an intent to stream all the supported resource types in this FHIR store.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.version">
 <code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The FHIR specification version.</p>
@@ -1420,7 +1527,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 
 <dl class="py method">
 <dt id="pulumi_gcp.healthcare.FhirStore.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_referential_integrity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_resource_versioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_history_import</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_update_create</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_referential_integrity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_resource_versioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_history_import</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_update_create</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stream_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FhirStore resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1468,6 +1575,12 @@ Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3�
 ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
 <li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
+<li><p><strong>stream_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of streaming configs that configure the destinations of streaming export for every resource mutation in
+this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
+resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
+from the list, the server stops streaming to that location. Before adding a new config, you must add the required
+bigquery.dataEditor role to your project’s Cloud Healthcare Service Agent service account. Some lag (typically on
+the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version.</p></li>
 </ul>
 </dd>
@@ -1480,6 +1593,35 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
+</ul>
+<p>The <strong>stream_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bigqueryDestination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination BigQuery structure that contains both the dataset location and corresponding schema config.
+The output is organized in one table per resource type. The server reuses the existing tables (if any) that
+are named after the resource types, e.g. “Patient”, “Observation”. When there is no existing table for a given
+resource type, the server attempts to create one.
+See the <a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig">streaming config reference</a> for more details.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">datasetUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration for the exported BigQuery schema.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recursiveStructureDepth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
+resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
+concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
+value 2. The maximum depth allowed is 5.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the output schema type. Only ANALYTICS is supported at this time.</p>
+<ul>
+<li><p>ANALYTICS: Analytics schema defined by the FHIR community.
+See <a class="reference external" href="https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md">https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md</a>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Supply a FHIR resource type (such as “Patient” or “Observation”). See
+<a class="reference external" href="https://www.hl7.org/fhir/valueset-resource-types.html">https://www.hl7.org/fhir/valueset-resource-types.html</a> for a list of all FHIR resource types. The server treats
+an empty list as an intent to stream all the supported resource types in this FHIR store.</p></li>
 </ul>
 </dd></dl>
 
@@ -1983,8 +2125,9 @@ To get more information about Hl7V2Store, see:
 * How-to Guides
     * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
 
-## Example Usage - Healthcare Hl7 V2 Store Basic
+## Example Usage
 
+### Healthcare Hl7 V2 Store Basic
 
 ```python
 import pulumi
@@ -2001,8 +2144,8 @@ default = gcp.healthcare.Hl7Store(&quot;default&quot;,
         &quot;label1&quot;: &quot;labelvalue1&quot;,
     })
 ```
-## Example Usage - Healthcare Hl7 V2 Store Parser Config
 
+### Healthcare Hl7 V2 Store Parser Config
 
 ```python
 import pulumi
@@ -2218,7 +2361,7 @@ Fields/functions available for filtering are:</p>
 <li><p>sendTime, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, sendTime &lt; “2017-01-02T00:00:00-05:00”.</p></li>
 <li><p>sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = “ABC”.</p></li>
 <li><p>PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId(“123456”, “MRN”).</p></li>
-<li><p>labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels.”priority”=”high”. The operator :* can be used to assert the existence of a label. For example, labels.”priority”:<a href="#id11"><span class="problematic" id="id12">*</span></a>.</p></li>
+<li><p>labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels.”priority”=”high”. The operator :* can be used to assert the existence of a label. For example, labels.”priority”:<a href="#id13"><span class="problematic" id="id14">*</span></a>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.

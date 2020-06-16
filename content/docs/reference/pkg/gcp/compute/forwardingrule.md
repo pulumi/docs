@@ -21,28 +21,13 @@ To get more information about ForwardingRule, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules)
 
-## Example Usage - Forwarding Rule Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {});
-const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
-    target: defaultTargetPool.id,
-    portRange: "80",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_target_pool = gcp.compute.TargetPool("defaultTargetPool")
-default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
-    target=default_target_pool.id,
-    port_range="80")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Forwarding Rule Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -63,7 +48,62 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultTargetPool, err := compute.NewTargetPool(ctx, "defaultTargetPool", nil)
+		if err != nil {
+			return err
+		}
+		defaultForwardingRule, err := compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+			Target:    defaultTargetPool.ID(),
+			PortRange: pulumi.String("80"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_target_pool = gcp.compute.TargetPool("defaultTargetPool")
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    target=default_target_pool.id,
+    port_range="80")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {});
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    target: defaultTargetPool.id,
+    portRange: "80",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ForwardingRule Resource {#create}

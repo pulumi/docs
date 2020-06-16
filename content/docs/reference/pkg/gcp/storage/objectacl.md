@@ -23,7 +23,6 @@ and
 role entity pairs.
 
 
-
 {{% examples %}}
 ## Example Usage
 

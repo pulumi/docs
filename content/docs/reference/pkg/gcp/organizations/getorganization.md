@@ -54,6 +54,33 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		org, err := organizations.LookupOrganization(ctx, &organizations.LookupOrganizationArgs{
+			Domain: "example.com",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		sales, err := organizations.NewFolder(ctx, "sales", &organizations.FolderArgs{
+			DisplayName: pulumi.String("Sales"),
+			Parent:      pulumi.String(org.Name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 
 

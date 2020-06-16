@@ -28,23 +28,13 @@ On import, the `secret` value will not be retrieved.
 > **Warning:** All arguments including `secret` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - Storage Hmac Key
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const serviceAccount = new gcp.serviceAccount.Account("serviceAccount", {accountId: "my-svc-acc"});
-const key = new gcp.storage.HmacKey("key", {serviceAccountEmail: serviceAccount.email});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-service_account = gcp.service_account.Account("serviceAccount", account_id="my-svc-acc")
-key = gcp.storage.HmacKey("key", service_account_email=service_account.email)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Storage Hmac Key
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -65,7 +55,59 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		serviceAccount, err := serviceAccount.NewAccount(ctx, "serviceAccount", &serviceAccount.AccountArgs{
+			AccountId: pulumi.String("my-svc-acc"),
+		})
+		if err != nil {
+			return err
+		}
+		key, err := storage.NewHmacKey(ctx, "key", &storage.HmacKeyArgs{
+			ServiceAccountEmail: serviceAccount.Email,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+service_account = gcp.service_account.Account("serviceAccount", account_id="my-svc-acc")
+key = gcp.storage.HmacKey("key", service_account_email=service_account.email)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serviceAccount = new gcp.serviceAccount.Account("serviceAccount", {accountId: "my-svc-acc"});
+const key = new gcp.storage.HmacKey("key", {serviceAccountEmail: serviceAccount.email});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HmacKey Resource {#create}

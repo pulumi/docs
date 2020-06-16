@@ -3,6 +3,7 @@ title: Module composer
 title_tag: Module composer | Package pulumi_gcp | Python SDK
 linktitle: composer
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -217,22 +218,10 @@ separated by a hyphen, for example “core-dags_are_paused_at_creation”.</p></
 Environment variable names must match the regular expression <code class="docutils literal notranslate"><span class="pre">[a-zA-Z_][a-zA-Z0-9_]*</span></code>.
 They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
 <code class="docutils literal notranslate"><span class="pre">AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+</span></code>), and they cannot match any of the following reserved names:
-.. code-block:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AIRFLOW_HOME</span>
-<span class="n">C_FORCE_ROOT</span>
-<span class="n">CONTAINER_NAME</span>
-<span class="n">DAGS_FOLDER</span>
-<span class="n">GCP_PROJECT</span>
-<span class="n">GCS_BUCKET</span>
-<span class="n">GKE_CLUSTER_NAME</span>
-<span class="n">SQL_DATABASE</span>
-<span class="n">SQL_INSTANCE</span>
-<span class="n">SQL_PASSWORD</span>
-<span class="n">SQL_PROJECT</span>
-<span class="n">SQL_REGION</span>
-<span class="n">SQL_USER</span>
-</pre></div>
-</div>
+.. code-block:: python</p>
+<blockquote>
+<div><p>import pulumi</p>
+</div></blockquote>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
 The version of the software running in the environment. This encapsulates both the version of Cloud Composer
@@ -357,22 +346,10 @@ separated by a hyphen, for example “core-dags_are_paused_at_creation”.</p></
 Environment variable names must match the regular expression <code class="docutils literal notranslate"><span class="pre">[a-zA-Z_][a-zA-Z0-9_]*</span></code>.
 They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
 <code class="docutils literal notranslate"><span class="pre">AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+</span></code>), and they cannot match any of the following reserved names:
-.. code-block:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AIRFLOW_HOME</span>
-<span class="n">C_FORCE_ROOT</span>
-<span class="n">CONTAINER_NAME</span>
-<span class="n">DAGS_FOLDER</span>
-<span class="n">GCP_PROJECT</span>
-<span class="n">GCS_BUCKET</span>
-<span class="n">GKE_CLUSTER_NAME</span>
-<span class="n">SQL_DATABASE</span>
-<span class="n">SQL_INSTANCE</span>
-<span class="n">SQL_PASSWORD</span>
-<span class="n">SQL_PROJECT</span>
-<span class="n">SQL_REGION</span>
-<span class="n">SQL_USER</span>
-</pre></div>
-</div>
+.. code-block:: python</p>
+<blockquote>
+<div><p>import pulumi</p>
+</div></blockquote>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
 The version of the software running in the environment. This encapsulates both the version of Cloud Composer
@@ -557,22 +534,10 @@ separated by a hyphen, for example “core-dags_are_paused_at_creation”.</p></
 Environment variable names must match the regular expression <code class="docutils literal notranslate"><span class="pre">[a-zA-Z_][a-zA-Z0-9_]*</span></code>.
 They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
 <code class="docutils literal notranslate"><span class="pre">AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+</span></code>), and they cannot match any of the following reserved names:
-.. code-block:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AIRFLOW_HOME</span>
-<span class="n">C_FORCE_ROOT</span>
-<span class="n">CONTAINER_NAME</span>
-<span class="n">DAGS_FOLDER</span>
-<span class="n">GCP_PROJECT</span>
-<span class="n">GCS_BUCKET</span>
-<span class="n">GKE_CLUSTER_NAME</span>
-<span class="n">SQL_DATABASE</span>
-<span class="n">SQL_INSTANCE</span>
-<span class="n">SQL_PASSWORD</span>
-<span class="n">SQL_PROJECT</span>
-<span class="n">SQL_REGION</span>
-<span class="n">SQL_USER</span>
-</pre></div>
-</div>
+.. code-block:: python</p>
+<blockquote>
+<div><p>import pulumi</p>
+</div></blockquote>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
 The version of the software running in the environment. This encapsulates both the version of Cloud Composer

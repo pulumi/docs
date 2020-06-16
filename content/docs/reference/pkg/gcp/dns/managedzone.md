@@ -21,32 +21,13 @@ To get more information about ManagedZone, see:
 * How-to Guides
     * [Managing Zones](https://cloud.google.com/dns/zones/)
 
-## Example Usage - Dns Managed Zone Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example_zone = new gcp.dns.ManagedZone("example-zone", {
-    description: "Example DNS zone",
-    dnsName: "my-domain.com.",
-    labels: {
-        foo: "bar",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example_zone = gcp.dns.ManagedZone("example-zone",
-    description="Example DNS zone",
-    dns_name="my-domain.com.",
-    labels={
-        "foo": "bar",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dns Managed Zone Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -68,7 +49,42 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_zone = gcp.dns.ManagedZone("example-zone",
+    description="Example DNS zone",
+    dns_name="my-domain.com.",
+    labels={
+        "foo": "bar",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example_zone = new gcp.dns.ManagedZone("example-zone", {
+    description: "Example DNS zone",
+    dnsName: "my-domain.com.",
+    labels: {
+        foo: "bar",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedZone Resource {#create}
@@ -2573,8 +2589,8 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+    <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
 {{% /md %}}</dd>
 
@@ -2593,8 +2609,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+    <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
 {{% /md %}}</dd>
 
@@ -2613,8 +2629,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+    <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
 {{% /md %}}</dd>
 
@@ -2633,8 +2649,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+    <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
 {{% /md %}}</dd>
 
@@ -2761,8 +2777,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+    <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
 {{% /md %}}</dd>
 
@@ -2781,8 +2797,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+    <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
 {{% /md %}}</dd>
 
@@ -2801,8 +2817,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+    <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
 {{% /md %}}</dd>
 
@@ -2821,8 +2837,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+    <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
 {{% /md %}}</dd>
 

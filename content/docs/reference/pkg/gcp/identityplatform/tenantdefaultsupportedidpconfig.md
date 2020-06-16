@@ -18,34 +18,13 @@ the marketplace prior to using this resource.
 
 
 
-## Example Usage - Identity Platform Tenant Default Supported Idp Config Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
-const idpConfig = new gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpConfig", {
-    enabled: true,
-    tenant: tenant.name,
-    idpId: "playgames.google.com",
-    clientId: "my-client-id",
-    clientSecret: "secret",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
-idp_config = gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpConfig",
-    enabled=True,
-    tenant=tenant.name,
-    idp_id="playgames.google.com",
-    client_id="my-client-id",
-    client_secret="secret")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Identity Platform Tenant Default Supported Idp Config Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -70,7 +49,73 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tenant, err := identityplatform.NewTenant(ctx, "tenant", &identityplatform.TenantArgs{
+			DisplayName: pulumi.String("tenant"),
+		})
+		if err != nil {
+			return err
+		}
+		idpConfig, err := identityplatform.NewTenantDefaultSupportedIdpConfig(ctx, "idpConfig", &identityplatform.TenantDefaultSupportedIdpConfigArgs{
+			Enabled:      pulumi.Bool(true),
+			Tenant:       tenant.Name,
+			IdpId:        pulumi.String("playgames.google.com"),
+			ClientId:     pulumi.String("my-client-id"),
+			ClientSecret: pulumi.String("secret"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
+idp_config = gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpConfig",
+    enabled=True,
+    tenant=tenant.name,
+    idp_id="playgames.google.com",
+    client_id="my-client-id",
+    client_secret="secret")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const idpConfig = new gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpConfig", {
+    enabled: true,
+    tenant: tenant.name,
+    idpId: "playgames.google.com",
+    clientId: "my-client-id",
+    clientSecret: "secret",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TenantDefaultSupportedIdpConfig Resource {#create}

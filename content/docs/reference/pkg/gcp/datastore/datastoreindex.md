@@ -19,44 +19,13 @@ To get more information about Index, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/datastore/docs/concepts/indexes)
 
-## Example Usage - Datastore Index
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
-    kind: "foo",
-    properties: [
-        {
-            direction: "ASCENDING",
-            name: "property_a",
-        },
-        {
-            direction: "ASCENDING",
-            name: "property_b",
-        },
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.datastore.DataStoreIndex("default",
-    kind="foo",
-    properties=[
-        {
-            "direction": "ASCENDING",
-            "name": "property_a",
-        },
-        {
-            "direction": "ASCENDING",
-            "name": "property_b",
-        },
-    ])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Datastore Index
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -86,7 +55,54 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.datastore.DataStoreIndex("default",
+    kind="foo",
+    properties=[
+        {
+            "direction": "ASCENDING",
+            "name": "property_a",
+        },
+        {
+            "direction": "ASCENDING",
+            "name": "property_b",
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
+    kind: "foo",
+    properties: [
+        {
+            direction: "ASCENDING",
+            name: "property_a",
+        },
+        {
+            direction: "ASCENDING",
+            name: "property_b",
+        },
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataStoreIndex Resource {#create}

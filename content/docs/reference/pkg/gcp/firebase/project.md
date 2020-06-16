@@ -22,6 +22,9 @@ To get more information about Project, see:
 * How-to Guides
     * [Official Documentation](https://firebase.google.com/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Project Resource {#create}

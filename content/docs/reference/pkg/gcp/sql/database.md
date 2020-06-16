@@ -15,32 +15,13 @@ Google's cloud.
 
 
 
-## Example Usage - Sql Database Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.sql.DatabaseInstance("instance", {
-    region: "us-central1",
-    settings: {
-        tier: "db-f1-micro",
-    },
-});
-const database = new gcp.sql.Database("database", {instance: instance.name});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-instance = gcp.sql.DatabaseInstance("instance",
-    region="us-central1",
-    settings={
-        "tier": "db-f1-micro",
-    })
-database = gcp.sql.Database("database", instance=instance.name)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Sql Database Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -65,7 +46,70 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+			Region: pulumi.String("us-central1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		database, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			Instance: instance.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.sql.DatabaseInstance("instance",
+    region="us-central1",
+    settings={
+        "tier": "db-f1-micro",
+    })
+database = gcp.sql.Database("database", instance=instance.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+});
+const database = new gcp.sql.Database("database", {instance: instance.name});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

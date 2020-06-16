@@ -20,63 +20,13 @@ To get more information about AccessLevel, see:
 * How-to Guides
     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
 
-## Example Usage - Access Context Manager Access Level Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
-    parent: "organizations/123456789",
-    title: "my policy",
-});
-const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
-    basic: {
-        conditions: [{
-            devicePolicy: {
-                osConstraints: [{
-                    osType: "DESKTOP_CHROME_OS",
-                }],
-                requireScreenLock: true,
-            },
-            regions: [
-                "CH",
-                "IT",
-                "US",
-            ],
-        }],
-    },
-    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
-    title: "chromeos_no_lock",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
-    parent="organizations/123456789",
-    title="my policy")
-access_level = gcp.accesscontextmanager.AccessLevel("access-level",
-    basic={
-        "conditions": [{
-            "devicePolicy": {
-                "osConstraints": [{
-                    "osType": "DESKTOP_CHROME_OS",
-                }],
-                "requireScreenLock": True,
-            },
-            "regions": [
-                "CH",
-                "IT",
-                "US",
-            ],
-        }],
-    },
-    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    title="chromeos_no_lock")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Access Context Manager Access Level Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -125,7 +75,73 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+access_level = gcp.accesscontextmanager.AccessLevel("access-level",
+    basic={
+        "conditions": [{
+            "devicePolicy": {
+                "osConstraints": [{
+                    "osType": "DESKTOP_CHROME_OS",
+                }],
+                "requireScreenLock": True,
+            },
+            "regions": [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
+    },
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+    title="chromeos_no_lock")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
+const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
+    basic: {
+        conditions: [{
+            devicePolicy: {
+                osConstraints: [{
+                    osType: "DESKTOP_CHROME_OS",
+                }],
+                requireScreenLock: true,
+            },
+            regions: [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
+    },
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+    title: "chromeos_no_lock",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessLevel Resource {#create}

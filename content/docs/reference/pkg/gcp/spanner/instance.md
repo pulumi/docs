@@ -20,34 +20,13 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/spanner/)
 
-## Example Usage - Spanner Instance Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example = new gcp.spanner.Instance("example", {
-    config: "regional-us-central1",
-    displayName: "Test Spanner Instance",
-    labels: {
-        foo: "bar",
-    },
-    numNodes: 2,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example = gcp.spanner.Instance("example",
-    config="regional-us-central1",
-    display_name="Test Spanner Instance",
-    labels={
-        "foo": "bar",
-    },
-    num_nodes=2)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Spanner Instance Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -70,7 +49,68 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := spanner.NewInstance(ctx, "example", &spanner.InstanceArgs{
+			Config:      pulumi.String("regional-us-central1"),
+			DisplayName: pulumi.String("Test Spanner Instance"),
+			Labels: map[string]interface{}{
+				"foo": "bar",
+			},
+			NumNodes: pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.spanner.Instance("example",
+    config="regional-us-central1",
+    display_name="Test Spanner Instance",
+    labels={
+        "foo": "bar",
+    },
+    num_nodes=2)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.spanner.Instance("example", {
+    config: "regional-us-central1",
+    displayName: "Test Spanner Instance",
+    labels: {
+        foo: "bar",
+    },
+    numNodes: 2,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}

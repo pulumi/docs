@@ -3,6 +3,7 @@ title: Module iap
 title_tag: Module iap | Package pulumi_gcp | Python SDK
 linktitle: iap
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -1581,7 +1582,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">brand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.Client" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains the data that describes an Identity Aware Proxy owned client.</p>
 <blockquote>
-<div><p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">secret</span></code> will be stored in the raw
+<div><p><strong>Note:</strong> Only internal org clients can be created via declarative tools. Other types of clients must be
+manually created via the GCP console. This restriction is due to the existing APIs and not lack of support
+in this tool.</p>
+<p><strong>Warning:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">secret</span></code> will be stored in the raw
 state as plain-text. <a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets">Read more about secrets in state</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">

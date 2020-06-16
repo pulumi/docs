@@ -3,6 +3,7 @@ title: Package pulumi_gcp
 title_tag: Package pulumi_gcp | Python SDK
 linktitle: pulumi_gcp
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -54,8 +55,10 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logging/">logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memcache/">memcache</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml/">ml</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring/">monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networkmanagement/">networkmanagement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="organizations/">organizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oslogin/">oslogin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects/">projects</a></li>

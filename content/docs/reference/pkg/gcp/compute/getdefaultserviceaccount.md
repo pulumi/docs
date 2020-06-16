@@ -13,7 +13,6 @@ meta_desc: "Explore the GetDefaultServiceAccount function of the compute module,
 Use this data source to retrieve default service account for this project
 
 
-
 {{% examples %}}
 ## Example Usage
 

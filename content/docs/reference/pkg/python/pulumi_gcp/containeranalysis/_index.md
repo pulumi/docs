@@ -3,6 +3,7 @@ title: Module containeranalysis
 title_tag: Module containeranalysis | Package pulumi_gcp | Python SDK
 linktitle: containeranalysis
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

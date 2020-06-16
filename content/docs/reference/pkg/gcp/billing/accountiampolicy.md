@@ -23,7 +23,6 @@ by use of this resource. The safest alternative is to use multiple `gcp.billing.
    or they will fight over what your policy should be.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,7 +63,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/billing.viewer",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		policy, err := billing.NewAccountIamPolicy(ctx, "policy", &billing.AccountIamPolicyArgs{
+			BillingAccountId: pulumi.String("00AA00-000AAA-00AA0A"),
+			PolicyData:       pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

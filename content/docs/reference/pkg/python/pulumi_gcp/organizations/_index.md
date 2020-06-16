@@ -3,6 +3,7 @@ title: Module organizations
 title_tag: Module organizations | Package pulumi_gcp | Python SDK
 linktitle: organizations
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

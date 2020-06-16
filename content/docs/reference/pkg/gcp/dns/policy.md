@@ -20,6 +20,10 @@ To get more information about Policy, see:
     * [Using DNS server policies](https://cloud.google.com/dns/zones/#using-dns-server-policies)
 
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
+
 
 ## Create a Policy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}

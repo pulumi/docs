@@ -14,9 +14,6 @@ Creates a Google Cloud Bigtable table inside an instance. For more information s
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Table Resource {#create}

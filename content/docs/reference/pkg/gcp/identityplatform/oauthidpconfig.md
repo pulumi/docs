@@ -18,32 +18,13 @@ the marketplace prior to using this resource.
 
 
 
-## Example Usage - Identity Platform Oauth Idp Config Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const oauthIdpConfig = new gcp.identityplatform.OauthIdpConfig("oauth_idp_config", {
-    clientId: "client-id",
-    clientSecret: "secret",
-    displayName: "Display Name",
-    enabled: true,
-    issuer: "issuer",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-oauth_idp_config = gcp.identityplatform.OauthIdpConfig("oauthIdpConfig",
-    client_id="client-id",
-    client_secret="secret",
-    display_name="Display Name",
-    enabled=True,
-    issuer="issuer")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Identity Platform Oauth Idp Config Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -64,7 +45,65 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		oauthIdpConfig, err := identityplatform.NewOauthIdpConfig(ctx, "oauthIdpConfig", &identityplatform.OauthIdpConfigArgs{
+			ClientId:     pulumi.String("client-id"),
+			ClientSecret: pulumi.String("secret"),
+			DisplayName:  pulumi.String("Display Name"),
+			Enabled:      pulumi.Bool(true),
+			Issuer:       pulumi.String("issuer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+oauth_idp_config = gcp.identityplatform.OauthIdpConfig("oauthIdpConfig",
+    client_id="client-id",
+    client_secret="secret",
+    display_name="Display Name",
+    enabled=True,
+    issuer="issuer")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const oauthIdpConfig = new gcp.identityplatform.OauthIdpConfig("oauth_idp_config", {
+    clientId: "client-id",
+    clientSecret: "secret",
+    displayName: "Display Name",
+    enabled: true,
+    issuer: "issuer",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OauthIdpConfig Resource {#create}

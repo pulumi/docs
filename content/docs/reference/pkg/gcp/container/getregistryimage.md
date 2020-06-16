@@ -15,7 +15,6 @@ This data source fetches the project name, and provides the appropriate URLs to 
 The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +43,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		debian, err := container.LookupRegistryImage(ctx, &container.LookupRegistryImageArgs{
+			Name: "debian",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("gcrLocation", debian.ImageUrl)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

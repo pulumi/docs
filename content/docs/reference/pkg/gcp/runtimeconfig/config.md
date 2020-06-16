@@ -16,7 +16,6 @@ or the
 [JSON API](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/).
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -87,6 +87,42 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/viewer",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		policy, err := artifactregistry.NewRepositoryIamPolicy(ctx, "policy", &artifactregistry.RepositoryIamPolicyArgs{
+			Project:    pulumi.String(google_artifact_registry_repository.My - repo.Project),
+			Location:   pulumi.String(google_artifact_registry_repository.My - repo.Location),
+			Repository: pulumi.String(google_artifact_registry_repository.My - repo.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_artifact\_registry\_repository\_iam\_binding
 
@@ -136,6 +172,32 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		binding, err := artifactregistry.NewRepositoryIamBinding(ctx, "binding", &artifactregistry.RepositoryIamBindingArgs{
+			Project:    pulumi.String(google_artifact_registry_repository.My - repo.Project),
+			Location:   pulumi.String(google_artifact_registry_repository.My - repo.Location),
+			Repository: pulumi.String(google_artifact_registry_repository.My - repo.Name),
+			Role:       pulumi.String("roles/viewer"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_artifact\_registry\_repository\_iam\_member
 
@@ -180,6 +242,30 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		member, err := artifactregistry.NewRepositoryIamMember(ctx, "member", &artifactregistry.RepositoryIamMemberArgs{
+			Project:    pulumi.String(google_artifact_registry_repository.My - repo.Project),
+			Location:   pulumi.String(google_artifact_registry_repository.My - repo.Location),
+			Repository: pulumi.String(google_artifact_registry_repository.My - repo.Name),
+			Role:       pulumi.String("roles/viewer"),
+			Member:     pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

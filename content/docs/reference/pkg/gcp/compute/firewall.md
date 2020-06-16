@@ -30,6 +30,9 @@ To get more information about Firewall, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/firewalls)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Firewall Resource {#create}

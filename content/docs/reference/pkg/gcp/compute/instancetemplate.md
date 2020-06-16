@@ -16,9 +16,6 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/instanceTemplates).
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a InstanceTemplate Resource {#create}

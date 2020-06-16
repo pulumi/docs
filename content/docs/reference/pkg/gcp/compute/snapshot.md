@@ -33,49 +33,13 @@ To get more information about Snapshot, see:
 > **Warning:** All arguments including `snapshot_encryption_key.raw_key` and `source_disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - Snapshot Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const debian = gcp.compute.getImage({
-    family: "debian-9",
-    project: "debian-cloud",
-});
-const persistent = new gcp.compute.Disk("persistent", {
-    image: debian.then(debian => debian.selfLink),
-    size: 10,
-    type: "pd-ssd",
-    zone: "us-central1-a",
-});
-const snapshot = new gcp.compute.Snapshot("snapshot", {
-    sourceDisk: persistent.name,
-    zone: "us-central1-a",
-    labels: {
-        my_label: "value",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-debian = gcp.compute.get_image(family="debian-9",
-    project="debian-cloud")
-persistent = gcp.compute.Disk("persistent",
-    image=debian.self_link,
-    size=10,
-    type="pd-ssd",
-    zone="us-central1-a")
-snapshot = gcp.compute.Snapshot("snapshot",
-    source_disk=persistent.name,
-    zone="us-central1-a",
-    labels={
-        "my_label": "value",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Snapshot Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -109,7 +73,98 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		debian, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  "debian-9",
+			Project: "debian-cloud",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		persistent, err := compute.NewDisk(ctx, "persistent", &compute.DiskArgs{
+			Image: pulumi.String(debian.SelfLink),
+			Size:  pulumi.Int(10),
+			Type:  pulumi.String("pd-ssd"),
+			Zone:  pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		snapshot, err := compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
+			SourceDisk: persistent.Name,
+			Zone:       pulumi.String("us-central1-a"),
+			Labels: map[string]interface{}{
+				"my_label": "value",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+persistent = gcp.compute.Disk("persistent",
+    image=debian.self_link,
+    size=10,
+    type="pd-ssd",
+    zone="us-central1-a")
+snapshot = gcp.compute.Snapshot("snapshot",
+    source_disk=persistent.name,
+    zone="us-central1-a",
+    labels={
+        "my_label": "value",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const persistent = new gcp.compute.Disk("persistent", {
+    image: debian.then(debian => debian.selfLink),
+    size: 10,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const snapshot = new gcp.compute.Snapshot("snapshot", {
+    sourceDisk: persistent.name,
+    zone: "us-central1-a",
+    labels: {
+        my_label: "value",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Snapshot Resource {#create}

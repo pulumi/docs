@@ -13,7 +13,6 @@ meta_desc: "Explore the GetActiveFolder function of the organizations module, in
 Get an active folder within GCP by `display_name` and `parent`.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,7 +39,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		department1, err := organizations.LookupActiveFolder(ctx, &organizations.LookupActiveFolderArgs{
+			DisplayName: "Department 1",
+			Parent:      "organizations/1234567",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

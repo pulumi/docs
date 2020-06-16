@@ -3,6 +3,7 @@ title: Module gameservices
 title_tag: Module gameservices | Package pulumi_gcp | Python SDK
 linktitle: gameservices
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

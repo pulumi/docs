@@ -22,7 +22,6 @@ an existing Google Cloud Platform Billing Account.
     your existing members are preserved.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,7 +52,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		binding, err := billing.NewAccountIamBinding(ctx, "binding", &billing.AccountIamBindingArgs{
+			BillingAccountId: pulumi.String("00AA00-000AAA-00AA0A"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:alice@gmail.com"),
+			},
+			Role: pulumi.String("roles/billing.viewer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

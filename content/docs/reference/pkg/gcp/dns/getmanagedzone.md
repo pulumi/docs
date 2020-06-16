@@ -67,6 +67,37 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		envDnsZone, err := dns.LookupManagedZone(ctx, &dns.LookupManagedZoneArgs{
+			Name: "qa-zone",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		dns, err := dns.NewRecordSet(ctx, "dns", &dns.RecordSetArgs{
+			Type:        pulumi.String("TXT"),
+			Ttl:         pulumi.Int(300),
+			ManagedZone: pulumi.String(envDnsZone.Name),
+			Rrdatas: pulumi.StringArray{
+				pulumi.String("test"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 
 

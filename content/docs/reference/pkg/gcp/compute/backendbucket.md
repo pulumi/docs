@@ -25,30 +25,13 @@ To get more information about BackendBucket, see:
 * How-to Guides
     * [Using a Cloud Storage bucket as a load balancer backend](https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket)
 
-## Example Usage - Backend Bucket Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const imageBucket = new gcp.storage.Bucket("imageBucket", {location: "EU"});
-const imageBackend = new gcp.compute.BackendBucket("imageBackend", {
-    description: "Contains beautiful images",
-    bucketName: imageBucket.name,
-    enableCdn: true,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-image_bucket = gcp.storage.Bucket("imageBucket", location="EU")
-image_backend = gcp.compute.BackendBucket("imageBackend",
-    description="Contains beautiful images",
-    bucket_name=image_bucket.name,
-    enable_cdn=True)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Backend Bucket Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -71,7 +54,68 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		imageBucket, err := storage.NewBucket(ctx, "imageBucket", &storage.BucketArgs{
+			Location: pulumi.String("EU"),
+		})
+		if err != nil {
+			return err
+		}
+		imageBackend, err := compute.NewBackendBucket(ctx, "imageBackend", &compute.BackendBucketArgs{
+			Description: pulumi.String("Contains beautiful images"),
+			BucketName:  imageBucket.Name,
+			EnableCdn:   pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+image_bucket = gcp.storage.Bucket("imageBucket", location="EU")
+image_backend = gcp.compute.BackendBucket("imageBackend",
+    description="Contains beautiful images",
+    bucket_name=image_bucket.name,
+    enable_cdn=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const imageBucket = new gcp.storage.Bucket("imageBucket", {location: "EU"});
+const imageBackend = new gcp.compute.BackendBucket("imageBackend", {
+    description: "Contains beautiful images",
+    bucketName: imageBucket.name,
+    enableCdn: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackendBucket Resource {#create}

@@ -63,6 +63,34 @@ class MyStack : Stack
     public Output<string> MyFolder2Parent { get; set; }
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myFolder1, err := organizations.LookupFolder(ctx, &organizations.LookupFolderArgs{
+			Folder:             "folders/12345",
+			LookupOrganization: true,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		myFolder2, err := organizations.LookupFolder(ctx, &organizations.LookupFolderArgs{
+			Folder: "folders/23456",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("myFolder1Organization", myFolder1.Organization)
+		ctx.Export("myFolder2Parent", myFolder2.Parent)
+		return nil
+	})
+}
+```
 
 
 

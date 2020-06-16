@@ -25,32 +25,13 @@ To get more information about DatasetAccess, see:
 * How-to Guides
     * [Controlling access to datasets](https://cloud.google.com/bigquery/docs/dataset-access-controls)
 
-## Example Usage - Bigquery Dataset Access Basic User
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const dataset = new gcp.bigquery.Dataset("dataset", {datasetId: "example_dataset"});
-const bqowner = new gcp.serviceAccount.Account("bqowner", {accountId: "bqowner"});
-const access = new gcp.bigquery.DatasetAccess("access", {
-    datasetId: dataset.datasetId,
-    role: "OWNER",
-    userByEmail: bqowner.email,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-dataset = gcp.bigquery.Dataset("dataset", dataset_id="example_dataset")
-bqowner = gcp.service_account.Account("bqowner", account_id="bqowner")
-access = gcp.bigquery.DatasetAccess("access",
-    dataset_id=dataset.dataset_id,
-    role="OWNER",
-    user_by_email=bqowner.email)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Bigquery Dataset Access Basic User
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -77,53 +58,77 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Bigquery Dataset Access View
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const _private = new gcp.bigquery.Dataset("private", {datasetId: "example_dataset"});
-const publicDataset = new gcp.bigquery.Dataset("publicDataset", {datasetId: "example_dataset2"});
-const publicTable = new gcp.bigquery.Table("publicTable", {
-    datasetId: publicDataset.datasetId,
-    tableId: "example_table",
-    view: {
-        query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        useLegacySql: false,
-    },
-});
-const access = new gcp.bigquery.DatasetAccess("access", {
-    datasetId: _private.datasetId,
-    view: {
-        projectId: publicTable.project,
-        datasetId: publicDataset.datasetId,
-        tableId: publicTable.tableId,
-    },
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dataset, err := bigquery.NewDataset(ctx, "dataset", &bigquery.DatasetArgs{
+			DatasetId: pulumi.String("example_dataset"),
+		})
+		if err != nil {
+			return err
+		}
+		bqowner, err := serviceAccount.NewAccount(ctx, "bqowner", &serviceAccount.AccountArgs{
+			AccountId: pulumi.String("bqowner"),
+		})
+		if err != nil {
+			return err
+		}
+		access, err := bigquery.NewDatasetAccess(ctx, "access", &bigquery.DatasetAccessArgs{
+			DatasetId:   dataset.DatasetId,
+			Role:        pulumi.String("OWNER"),
+			UserByEmail: bqowner.Email,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-private = gcp.bigquery.Dataset("private", dataset_id="example_dataset")
-public_dataset = gcp.bigquery.Dataset("publicDataset", dataset_id="example_dataset2")
-public_table = gcp.bigquery.Table("publicTable",
-    dataset_id=public_dataset.dataset_id,
-    table_id="example_table",
-    view={
-        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        "useLegacySql": False,
-    })
+dataset = gcp.bigquery.Dataset("dataset", dataset_id="example_dataset")
+bqowner = gcp.service_account.Account("bqowner", account_id="bqowner")
 access = gcp.bigquery.DatasetAccess("access",
-    dataset_id=private.dataset_id,
-    view={
-        "project_id": public_table.project,
-        "dataset_id": public_dataset.dataset_id,
-        "table_id": public_table.table_id,
-    })
+    dataset_id=dataset.dataset_id,
+    role="OWNER",
+    user_by_email=bqowner.email)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.bigquery.Dataset("dataset", {datasetId: "example_dataset"});
+const bqowner = new gcp.serviceAccount.Account("bqowner", {accountId: "bqowner"});
+const access = new gcp.bigquery.DatasetAccess("access", {
+    datasetId: dataset.datasetId,
+    role: "OWNER",
+    userByEmail: bqowner.email,
+});
+```
+{{% /example %}}
+
+### Bigquery Dataset Access View
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -164,7 +169,110 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		private, err := bigquery.NewDataset(ctx, "private", &bigquery.DatasetArgs{
+			DatasetId: pulumi.String("example_dataset"),
+		})
+		if err != nil {
+			return err
+		}
+		publicDataset, err := bigquery.NewDataset(ctx, "publicDataset", &bigquery.DatasetArgs{
+			DatasetId: pulumi.String("example_dataset2"),
+		})
+		if err != nil {
+			return err
+		}
+		publicTable, err := bigquery.NewTable(ctx, "publicTable", &bigquery.TableArgs{
+			DatasetId: publicDataset.DatasetId,
+			TableId:   pulumi.String("example_table"),
+			View: &bigquery.TableViewArgs{
+				Query:        pulumi.String("SELECT state FROM [lookerdata:cdc.project_tycho_reports]"),
+				UseLegacySql: pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		access, err := bigquery.NewDatasetAccess(ctx, "access", &bigquery.DatasetAccessArgs{
+			DatasetId: private.DatasetId,
+			View: &bigquery.DatasetAccessViewArgs{
+				ProjectId: publicTable.Project,
+				DatasetId: publicDataset.DatasetId,
+				TableId:   publicTable.TableId,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+private = gcp.bigquery.Dataset("private", dataset_id="example_dataset")
+public_dataset = gcp.bigquery.Dataset("publicDataset", dataset_id="example_dataset2")
+public_table = gcp.bigquery.Table("publicTable",
+    dataset_id=public_dataset.dataset_id,
+    table_id="example_table",
+    view={
+        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        "useLegacySql": False,
+    })
+access = gcp.bigquery.DatasetAccess("access",
+    dataset_id=private.dataset_id,
+    view={
+        "project_id": public_table.project,
+        "dataset_id": public_dataset.dataset_id,
+        "table_id": public_table.table_id,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _private = new gcp.bigquery.Dataset("private", {datasetId: "example_dataset"});
+const publicDataset = new gcp.bigquery.Dataset("publicDataset", {datasetId: "example_dataset2"});
+const publicTable = new gcp.bigquery.Table("publicTable", {
+    datasetId: publicDataset.datasetId,
+    tableId: "example_table",
+    view: {
+        query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        useLegacySql: false,
+    },
+});
+const access = new gcp.bigquery.DatasetAccess("access", {
+    datasetId: _private.datasetId,
+    view: {
+        projectId: publicTable.project,
+        datasetId: publicDataset.datasetId,
+        tableId: publicTable.tableId,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatasetAccess Resource {#create}

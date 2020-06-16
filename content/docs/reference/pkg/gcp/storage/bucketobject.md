@@ -20,61 +20,6 @@ and
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var picture = new Gcp.Storage.BucketObject("picture", new Gcp.Storage.BucketObjectArgs
-        {
-            Bucket = "image-store",
-            Source = new FileAsset("/images/nature/garden-tiger-moth.jpg"),
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-picture = gcp.storage.BucketObject("picture",
-    bucket="image-store",
-    source=pulumi.FileAsset("/images/nature/garden-tiger-moth.jpg"))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const picture = new gcp.storage.BucketObject("picture", {
-    bucket: "image-store",
-    source: new pulumi.asset.FileAsset("/images/nature/garden-tiger-moth.jpg"),
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a BucketObject Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

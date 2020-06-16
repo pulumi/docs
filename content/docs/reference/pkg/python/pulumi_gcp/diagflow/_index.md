@@ -3,6 +3,7 @@ title: Module diagflow
 title_tag: Module diagflow | Package pulumi_gcp | Python SDK
 linktitle: diagflow
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

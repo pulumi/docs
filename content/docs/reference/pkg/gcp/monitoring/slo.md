@@ -26,6 +26,9 @@ To get more information about Slo, see:
     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Slo Resource {#create}

@@ -3,6 +3,7 @@ title: Module folder
 title_tag: Module folder | Package pulumi_gcp | Python SDK
 linktitle: folder
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

@@ -15,9 +15,6 @@ Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more informati
 and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetKeys {#using}

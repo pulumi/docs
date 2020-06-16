@@ -18,30 +18,13 @@ affect billing. You cannot update the source representation instance.
 
 
 
-## Example Usage - Sql Source Representation Instance Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.sql.SourceRepresentationInstance("instance", {
-    databaseVersion: "MYSQL_5_7",
-    host: "10.20.30.40",
-    port: 3306,
-    region: "us-central1",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-instance = gcp.sql.SourceRepresentationInstance("instance",
-    database_version="MYSQL_5_7",
-    host="10.20.30.40",
-    port=3306,
-    region="us-central1")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Sql Source Representation Instance Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -61,7 +44,62 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewSourceRepresentationInstance(ctx, "instance", &sql.SourceRepresentationInstanceArgs{
+			DatabaseVersion: pulumi.String("MYSQL_5_7"),
+			Host:            pulumi.String("10.20.30.40"),
+			Port:            pulumi.Int(3306),
+			Region:          pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.sql.SourceRepresentationInstance("instance",
+    database_version="MYSQL_5_7",
+    host="10.20.30.40",
+    port=3306,
+    region="us-central1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.SourceRepresentationInstance("instance", {
+    databaseVersion: "MYSQL_5_7",
+    host: "10.20.30.40",
+    port: 3306,
+    region: "us-central1",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SourceRepresentationInstance Resource {#create}

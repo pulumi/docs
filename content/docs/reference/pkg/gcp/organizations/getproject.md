@@ -15,7 +15,6 @@ For more information see
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)
 
 
-
 {{% examples %}}
 ## Example Usage
 

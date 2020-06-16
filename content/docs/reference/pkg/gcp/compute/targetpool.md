@@ -18,7 +18,6 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/targetPools).
 
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,7 +57,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+			RequestPath:      pulumi.String("/"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		defaultTargetPool, err := compute.NewTargetPool(ctx, "defaultTargetPool", &compute.TargetPoolArgs{
+			Instances: pulumi.StringArray{
+				pulumi.String("us-central1-a/myinstance1"),
+				pulumi.String("us-central1-b/myinstance2"),
+			},
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHttpHealthCheck.Name,
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

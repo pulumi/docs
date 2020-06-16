@@ -14,7 +14,6 @@ Get service account public key. For more information, see [the official document
 
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,7 +48,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myaccount, err := serviceAccount.NewAccount(ctx, "myaccount", &serviceAccount.AccountArgs{
+			AccountId: pulumi.String("dev-foo-account"),
+		})
+		if err != nil {
+			return err
+		}
+		mykeyKey, err := serviceAccount.NewKey(ctx, "mykeyKey", &serviceAccount.KeyArgs{
+			ServiceAccountId: myaccount.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

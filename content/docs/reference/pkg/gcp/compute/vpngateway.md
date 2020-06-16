@@ -18,76 +18,13 @@ To get more information about VpnGateway, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/targetVpnGateways)
 
-## Example Usage - Target Vpn Gateway Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const network1 = new gcp.compute.Network("network1", {});
-const targetGateway = new gcp.compute.VPNGateway("targetGateway", {network: network1.id});
-const vpnStaticIp = new gcp.compute.Address("vpnStaticIp", {});
-const frEsp = new gcp.compute.ForwardingRule("frEsp", {
-    ipProtocol: "ESP",
-    ipAddress: vpnStaticIp.address,
-    target: targetGateway.id,
-});
-const frUdp500 = new gcp.compute.ForwardingRule("frUdp500", {
-    ipProtocol: "UDP",
-    portRange: "500",
-    ipAddress: vpnStaticIp.address,
-    target: targetGateway.id,
-});
-const frUdp4500 = new gcp.compute.ForwardingRule("frUdp4500", {
-    ipProtocol: "UDP",
-    portRange: "4500",
-    ipAddress: vpnStaticIp.address,
-    target: targetGateway.id,
-});
-const tunnel1 = new gcp.compute.VPNTunnel("tunnel1", {
-    peerIp: "15.0.0.120",
-    sharedSecret: "a secret message",
-    targetVpnGateway: targetGateway.id,
-});
-const route1 = new gcp.compute.Route("route1", {
-    network: network1.name,
-    destRange: "15.0.0.0/24",
-    priority: 1000,
-    nextHopVpnTunnel: tunnel1.id,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-network1 = gcp.compute.Network("network1")
-target_gateway = gcp.compute.VPNGateway("targetGateway", network=network1.id)
-vpn_static_ip = gcp.compute.Address("vpnStaticIp")
-fr_esp = gcp.compute.ForwardingRule("frEsp",
-    ip_protocol="ESP",
-    ip_address=vpn_static_ip.address,
-    target=target_gateway.id)
-fr_udp500 = gcp.compute.ForwardingRule("frUdp500",
-    ip_protocol="UDP",
-    port_range="500",
-    ip_address=vpn_static_ip.address,
-    target=target_gateway.id)
-fr_udp4500 = gcp.compute.ForwardingRule("frUdp4500",
-    ip_protocol="UDP",
-    port_range="4500",
-    ip_address=vpn_static_ip.address,
-    target=target_gateway.id)
-tunnel1 = gcp.compute.VPNTunnel("tunnel1",
-    peer_ip="15.0.0.120",
-    shared_secret="a secret message",
-    target_vpn_gateway=target_gateway.id)
-route1 = gcp.compute.Route("route1",
-    network=network1.name,
-    dest_range="15.0.0.0/24",
-    priority=1000,
-    next_hop_vpn_tunnel=tunnel1.id)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Target Vpn Gateway Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -143,7 +80,156 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := compute.NewNetwork(ctx, "network1", nil)
+		if err != nil {
+			return err
+		}
+		targetGateway, err := compute.NewVPNGateway(ctx, "targetGateway", &compute.VPNGatewayArgs{
+			Network: network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		vpnStaticIp, err := compute.NewAddress(ctx, "vpnStaticIp", nil)
+		if err != nil {
+			return err
+		}
+		frEsp, err := compute.NewForwardingRule(ctx, "frEsp", &compute.ForwardingRuleArgs{
+			IpProtocol: pulumi.String("ESP"),
+			IpAddress:  vpnStaticIp.Address,
+			Target:     targetGateway.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		frUdp500, err := compute.NewForwardingRule(ctx, "frUdp500", &compute.ForwardingRuleArgs{
+			IpProtocol: pulumi.String("UDP"),
+			PortRange:  pulumi.String("500"),
+			IpAddress:  vpnStaticIp.Address,
+			Target:     targetGateway.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		frUdp4500, err := compute.NewForwardingRule(ctx, "frUdp4500", &compute.ForwardingRuleArgs{
+			IpProtocol: pulumi.String("UDP"),
+			PortRange:  pulumi.String("4500"),
+			IpAddress:  vpnStaticIp.Address,
+			Target:     targetGateway.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		tunnel1, err := compute.NewVPNTunnel(ctx, "tunnel1", &compute.VPNTunnelArgs{
+			PeerIp:           pulumi.String("15.0.0.120"),
+			SharedSecret:     pulumi.String("a secret message"),
+			TargetVpnGateway: targetGateway.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		route1, err := compute.NewRoute(ctx, "route1", &compute.RouteArgs{
+			Network:          network1.Name,
+			DestRange:        pulumi.String("15.0.0.0/24"),
+			Priority:         pulumi.Int(1000),
+			NextHopVpnTunnel: tunnel1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network1 = gcp.compute.Network("network1")
+target_gateway = gcp.compute.VPNGateway("targetGateway", network=network1.id)
+vpn_static_ip = gcp.compute.Address("vpnStaticIp")
+fr_esp = gcp.compute.ForwardingRule("frEsp",
+    ip_protocol="ESP",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.id)
+fr_udp500 = gcp.compute.ForwardingRule("frUdp500",
+    ip_protocol="UDP",
+    port_range="500",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.id)
+fr_udp4500 = gcp.compute.ForwardingRule("frUdp4500",
+    ip_protocol="UDP",
+    port_range="4500",
+    ip_address=vpn_static_ip.address,
+    target=target_gateway.id)
+tunnel1 = gcp.compute.VPNTunnel("tunnel1",
+    peer_ip="15.0.0.120",
+    shared_secret="a secret message",
+    target_vpn_gateway=target_gateway.id)
+route1 = gcp.compute.Route("route1",
+    network=network1.name,
+    dest_range="15.0.0.0/24",
+    priority=1000,
+    next_hop_vpn_tunnel=tunnel1.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network1 = new gcp.compute.Network("network1", {});
+const targetGateway = new gcp.compute.VPNGateway("targetGateway", {network: network1.id});
+const vpnStaticIp = new gcp.compute.Address("vpnStaticIp", {});
+const frEsp = new gcp.compute.ForwardingRule("frEsp", {
+    ipProtocol: "ESP",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.id,
+});
+const frUdp500 = new gcp.compute.ForwardingRule("frUdp500", {
+    ipProtocol: "UDP",
+    portRange: "500",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.id,
+});
+const frUdp4500 = new gcp.compute.ForwardingRule("frUdp4500", {
+    ipProtocol: "UDP",
+    portRange: "4500",
+    ipAddress: vpnStaticIp.address,
+    target: targetGateway.id,
+});
+const tunnel1 = new gcp.compute.VPNTunnel("tunnel1", {
+    peerIp: "15.0.0.120",
+    sharedSecret: "a secret message",
+    targetVpnGateway: targetGateway.id,
+});
+const route1 = new gcp.compute.Route("route1", {
+    network: network1.name,
+    destRange: "15.0.0.0/24",
+    priority: 1000,
+    nextHopVpnTunnel: tunnel1.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VPNGateway Resource {#create}

@@ -21,54 +21,13 @@ To get more information about Index, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/firestore/docs/query-data/indexing)
 
-## Example Usage - Firestore Index Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const my_index = new gcp.firestore.Index("my-index", {
-    collection: "chatrooms",
-    fields: [
-        {
-            fieldPath: "name",
-            order: "ASCENDING",
-        },
-        {
-            fieldPath: "description",
-            order: "DESCENDING",
-        },
-        {
-            fieldPath: "__name__",
-            order: "DESCENDING",
-        },
-    ],
-    project: "my-project-name",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_index = gcp.firestore.Index("my-index",
-    collection="chatrooms",
-    fields=[
-        {
-            "fieldPath": "name",
-            "order": "ASCENDING",
-        },
-        {
-            "fieldPath": "description",
-            "order": "DESCENDING",
-        },
-        {
-            "fieldPath": "__name__",
-            "order": "DESCENDING",
-        },
-    ],
-    project="my-project-name")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Firestore Index Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -104,7 +63,64 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_index = gcp.firestore.Index("my-index",
+    collection="chatrooms",
+    fields=[
+        {
+            "fieldPath": "name",
+            "order": "ASCENDING",
+        },
+        {
+            "fieldPath": "description",
+            "order": "DESCENDING",
+        },
+        {
+            "fieldPath": "__name__",
+            "order": "DESCENDING",
+        },
+    ],
+    project="my-project-name")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_index = new gcp.firestore.Index("my-index", {
+    collection: "chatrooms",
+    fields: [
+        {
+            fieldPath: "name",
+            order: "ASCENDING",
+        },
+        {
+            fieldPath: "description",
+            order: "DESCENDING",
+        },
+        {
+            fieldPath: "__name__",
+            order: "DESCENDING",
+        },
+    ],
+    project: "my-project-name",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Index Resource {#create}

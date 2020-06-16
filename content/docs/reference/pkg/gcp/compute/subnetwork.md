@@ -41,34 +41,13 @@ To get more information about Subnetwork, see:
     * [Private Google Access](https://cloud.google.com/vpc/docs/configure-private-google-access)
     * [Cloud Networking](https://cloud.google.com/vpc/docs/using-vpc)
 
-## Example Usage - Subnetwork Internal L7lb
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
-const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
-    ipCidrRange: "10.0.0.0/22",
-    region: "us-central1",
-    purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
-    role: "ACTIVE",
-    network: custom_test.id,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
-network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
-    ip_cidr_range="10.0.0.0/22",
-    region="us-central1",
-    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
-    role="ACTIVE",
-    network=custom_test.id)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Subnetwork Internal L7lb
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -93,7 +72,44 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
+network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
+    ip_cidr_range="10.0.0.0/22",
+    region="us-central1",
+    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
+    role="ACTIVE",
+    network=custom_test.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
+    ipCidrRange: "10.0.0.0/22",
+    region: "us-central1",
+    purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
+    role: "ACTIVE",
+    network: custom_test.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Subnetwork Resource {#create}
@@ -394,7 +410,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the GCP region for this subnetwork.
+    <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -550,7 +566,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the GCP region for this subnetwork.
+    <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -706,7 +722,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the GCP region for this subnetwork.
+    <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -862,7 +878,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the GCP region for this subnetwork.
+    <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1432,7 +1448,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the GCP region for this subnetwork.
+    <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1632,7 +1648,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the GCP region for this subnetwork.
+    <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1832,7 +1848,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the GCP region for this subnetwork.
+    <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2032,7 +2048,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the GCP region for this subnetwork.
+    <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

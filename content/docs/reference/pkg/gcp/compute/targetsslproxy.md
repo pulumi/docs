@@ -21,6 +21,9 @@ To get more information about TargetSslProxy, see:
 * How-to Guides
     * [Setting Up SSL proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a TargetSSLProxy Resource {#create}

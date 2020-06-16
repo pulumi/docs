@@ -17,26 +17,13 @@ ready to receive prediction requests. The model itself is just a container.
 
 
 
-## Example Usage - Ml Model Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultEngineModel = new gcp.ml.EngineModel("default", {
-    description: "My model",
-    regions: "us-central1",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.ml.EngineModel("default",
-    description="My model",
-    regions="us-central1")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Ml Model Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -54,36 +41,37 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Ml Model Full
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultEngineModel = new gcp.ml.EngineModel("default", {
-    description: "My model",
-    labels: {
-        my_model: "foo",
-    },
-    onlinePredictionConsoleLogging: true,
-    onlinePredictionLogging: true,
-    regions: "us-central1",
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
 default = gcp.ml.EngineModel("default",
     description="My model",
-    labels={
-        "my_model": "foo",
-    },
-    online_prediction_console_logging=True,
-    online_prediction_logging=True,
     regions="us-central1")
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultEngineModel = new gcp.ml.EngineModel("default", {
+    description: "My model",
+    regions: "us-central1",
+});
+```
+{{% /example %}}
+
+### Ml Model Full
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -107,7 +95,46 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.ml.EngineModel("default",
+    description="My model",
+    labels={
+        "my_model": "foo",
+    },
+    online_prediction_console_logging=True,
+    online_prediction_logging=True,
+    regions="us-central1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultEngineModel = new gcp.ml.EngineModel("default", {
+    description: "My model",
+    labels: {
+        my_model: "foo",
+    },
+    onlinePredictionConsoleLogging: true,
+    onlinePredictionLogging: true,
+    regions: "us-central1",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EngineModel Resource {#create}

@@ -22,37 +22,13 @@ To get more information about BackendBucketSignedUrlKey, see:
 > **Warning:** All arguments including `key_value` will be stored in the raw
 state as plain-text.
 
-## Example Usage - Backend Bucket Signed Url Key
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const bucket = new gcp.storage.Bucket("bucket", {location: "EU"});
-const testBackend = new gcp.compute.BackendBucket("testBackend", {
-    description: "Contains beautiful images",
-    bucketName: bucket.name,
-    enableCdn: true,
-});
-const backendKey = new gcp.compute.BackendBucketSignedUrlKey("backendKey", {
-    keyValue: "pPsVemX8GM46QVeezid6Rw==",
-    backendBucket: testBackend.name,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-bucket = gcp.storage.Bucket("bucket", location="EU")
-test_backend = gcp.compute.BackendBucket("testBackend",
-    description="Contains beautiful images",
-    bucket_name=bucket.name,
-    enable_cdn=True)
-backend_key = gcp.compute.BackendBucketSignedUrlKey("backendKey",
-    key_value="pPsVemX8GM46QVeezid6Rw==",
-    backend_bucket=test_backend.name)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Backend Bucket Signed Url Key
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -80,7 +56,82 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+			Location: pulumi.String("EU"),
+		})
+		if err != nil {
+			return err
+		}
+		testBackend, err := compute.NewBackendBucket(ctx, "testBackend", &compute.BackendBucketArgs{
+			Description: pulumi.String("Contains beautiful images"),
+			BucketName:  bucket.Name,
+			EnableCdn:   pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		backendKey, err := compute.NewBackendBucketSignedUrlKey(ctx, "backendKey", &compute.BackendBucketSignedUrlKeyArgs{
+			KeyValue:      pulumi.String("pPsVemX8GM46QVeezid6Rw=="),
+			BackendBucket: testBackend.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket", location="EU")
+test_backend = gcp.compute.BackendBucket("testBackend",
+    description="Contains beautiful images",
+    bucket_name=bucket.name,
+    enable_cdn=True)
+backend_key = gcp.compute.BackendBucketSignedUrlKey("backendKey",
+    key_value="pPsVemX8GM46QVeezid6Rw==",
+    backend_bucket=test_backend.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {location: "EU"});
+const testBackend = new gcp.compute.BackendBucket("testBackend", {
+    description: "Contains beautiful images",
+    bucketName: bucket.name,
+    enableCdn: true,
+});
+const backendKey = new gcp.compute.BackendBucketSignedUrlKey("backendKey", {
+    keyValue: "pPsVemX8GM46QVeezid6Rw==",
+    backendBucket: testBackend.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackendBucketSignedUrlKey Resource {#create}

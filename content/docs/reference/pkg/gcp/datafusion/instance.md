@@ -18,26 +18,13 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
 
-## Example Usage - Data Fusion Instance Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const basicInstance = new gcp.datafusion.Instance("basicInstance", {
-    region: "us-central1",
-    type: "BASIC",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-basic_instance = gcp.datafusion.Instance("basicInstance",
-    region="us-central1",
-    type="BASIC")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Data Fusion Instance Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -55,7 +42,170 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		basicInstance, err := datafusion.NewInstance(ctx, "basicInstance", &datafusion.InstanceArgs{
+			Region: pulumi.String("us-central1"),
+			Type:   pulumi.String("BASIC"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_instance = gcp.datafusion.Instance("basicInstance",
+    region="us-central1",
+    type="BASIC")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as google_beta from "@pulumi/google-beta";
+
+const basicInstance = new google_beta.datafusion.Instance("basic_instance", {
+    region: "us-central1",
+    type: "BASIC",
+});
+```
+{{% /example %}}
+
+### Data Fusion Instance Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var extendedInstance = new Gcp.DataFusion.Instance("extendedInstance", new Gcp.DataFusion.InstanceArgs
+        {
+            Description = "My Data Fusion instance",
+            EnableStackdriverLogging = true,
+            EnableStackdriverMonitoring = true,
+            Labels = 
+            {
+                { "example_key", "example_value" },
+            },
+            NetworkConfig = new Gcp.DataFusion.Inputs.InstanceNetworkConfigArgs
+            {
+                IpAllocation = "10.89.48.0/22",
+                Network = "default",
+            },
+            PrivateInstance = true,
+            Region = "us-central1",
+            Type = "BASIC",
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		extendedInstance, err := datafusion.NewInstance(ctx, "extendedInstance", &datafusion.InstanceArgs{
+			Description:                 pulumi.String("My Data Fusion instance"),
+			EnableStackdriverLogging:    pulumi.Bool(true),
+			EnableStackdriverMonitoring: pulumi.Bool(true),
+			Labels: map[string]interface{}{
+				"example_key": "example_value",
+			},
+			NetworkConfig: &datafusion.InstanceNetworkConfigArgs{
+				IpAllocation: pulumi.String("10.89.48.0/22"),
+				Network:      pulumi.String("default"),
+			},
+			PrivateInstance: pulumi.Bool(true),
+			Region:          pulumi.String("us-central1"),
+			Type:            pulumi.String("BASIC"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+extended_instance = gcp.datafusion.Instance("extendedInstance",
+    description="My Data Fusion instance",
+    enable_stackdriver_logging=True,
+    enable_stackdriver_monitoring=True,
+    labels={
+        "example_key": "example_value",
+    },
+    network_config={
+        "ipAllocation": "10.89.48.0/22",
+        "network": "default",
+    },
+    private_instance=True,
+    region="us-central1",
+    type="BASIC")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as google_beta from "@pulumi/google-beta";
+
+const extendedInstance = new google_beta.datafusion.Instance("extended_instance", {
+    description: "My Data Fusion instance",
+    enableStackdriverLogging: true,
+    enableStackdriverMonitoring: true,
+    labels: {
+        example_key: "example_value",
+    },
+    networkConfig: {
+        ipAllocation: "10.89.48.0/22",
+        network: "default",
+    },
+    privateInstance: true,
+    region: "us-central1",
+    type: "BASIC",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}

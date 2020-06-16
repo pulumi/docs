@@ -18,9 +18,6 @@ the datasource. A region can have a different set of supported versions than
 its component zones, and not all zones in a region are guaranteed to
 support the same version.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetEngineVersions {#using}

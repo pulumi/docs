@@ -21,56 +21,13 @@ To get more information about AlertPolicy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/alerts/)
 
-## Example Usage - Monitoring Alert Policy Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
-    combiner: "OR",
-    conditions: [{
-        conditionThreshold: {
-            aggregations: [{
-                alignmentPeriod: "60s",
-                perSeriesAligner: "ALIGN_RATE",
-            }],
-            comparison: "COMPARISON_GT",
-            duration: "60s",
-            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-        },
-        displayName: "test condition",
-    }],
-    displayName: "My Alert Policy",
-    userLabels: {
-        foo: "bar",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
-    combiner="OR",
-    conditions=[{
-        "conditionThreshold": {
-            "aggregations": [{
-                "alignmentPeriod": "60s",
-                "perSeriesAligner": "ALIGN_RATE",
-            }],
-            "comparison": "COMPARISON_GT",
-            "duration": "60s",
-            "filter": "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-        },
-        "display_name": "test condition",
-    }],
-    display_name="My Alert Policy",
-    user_labels={
-        "foo": "bar",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Monitoring Alert Policy Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -113,7 +70,105 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		alertPolicy, err := monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
+			Combiner: pulumi.String("OR"),
+			Conditions: monitoring.AlertPolicyConditionArray{
+				&monitoring.AlertPolicyConditionArgs{
+					ConditionThreshold: &monitoring.AlertPolicyConditionConditionThresholdArgs{
+						Aggregations: monitoring.AlertPolicyConditionConditionThresholdAggregationArray{
+							&monitoring.AlertPolicyConditionConditionThresholdAggregationArgs{
+								AlignmentPeriod:  pulumi.String("60s"),
+								PerSeriesAligner: pulumi.String("ALIGN_RATE"),
+							},
+						},
+						Comparison: pulumi.String("COMPARISON_GT"),
+						Duration:   pulumi.String("60s"),
+						Filter:     pulumi.String("metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\""),
+					},
+					DisplayName: pulumi.String("test condition"),
+				},
+			},
+			DisplayName: pulumi.String("My Alert Policy"),
+			UserLabels: map[string]interface{}{
+				"foo": "bar",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
+    combiner="OR",
+    conditions=[{
+        "conditionThreshold": {
+            "aggregations": [{
+                "alignmentPeriod": "60s",
+                "perSeriesAligner": "ALIGN_RATE",
+            }],
+            "comparison": "COMPARISON_GT",
+            "duration": "60s",
+            "filter": "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+        },
+        "display_name": "test condition",
+    }],
+    display_name="My Alert Policy",
+    user_labels={
+        "foo": "bar",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
+    combiner: "OR",
+    conditions: [{
+        conditionThreshold: {
+            aggregations: [{
+                alignmentPeriod: "60s",
+                perSeriesAligner: "ALIGN_RATE",
+            }],
+            comparison: "COMPARISON_GT",
+            duration: "60s",
+            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+        },
+        displayName: "test condition",
+    }],
+    displayName: "My Alert Policy",
+    userLabels: {
+        foo: "bar",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertPolicy Resource {#create}

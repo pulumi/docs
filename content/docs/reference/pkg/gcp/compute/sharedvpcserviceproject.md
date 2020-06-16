@@ -20,7 +20,6 @@ For more information, see,
 where the Shared VPC feature is referred to by its former name "XPN".
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,7 +46,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		service1, err := compute.NewSharedVPCServiceProject(ctx, "service1", &compute.SharedVPCServiceProjectArgs{
+			HostProject:    pulumi.String("host-project-id"),
+			ServiceProject: pulumi.String("service-project-id-1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,6 +3,7 @@ title: Module secretmanager
 title_tag: Module secretmanager | Package pulumi_gcp | Python SDK
 linktitle: secretmanager
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

@@ -3,6 +3,7 @@ title: Module firebase
 title_tag: Module firebase | Package pulumi_gcp | Python SDK
 linktitle: firebase
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

@@ -14,7 +14,6 @@ Returns the list of IP addresses that checkers run from. For more information se
 the [official documentation](https://cloud.google.com/monitoring/uptime-checks#get-ips).
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -21,30 +21,13 @@ To get more information about NodeTemplate, see:
 * How-to Guides
     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
 
-## Example Usage - Node Template Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const central1a = gcp.compute.getNodeTypes({
-    zone: "us-central1-a",
-});
-const template = new gcp.compute.NodeTemplate("template", {
-    region: "us-central1",
-    nodeType: central1a.then(central1a => central1a.names[0]),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-central1a = gcp.compute.get_node_types(zone="us-central1-a")
-template = gcp.compute.NodeTemplate("template",
-    region="us-central1",
-    node_type=central1a.names[0])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Node Template Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -66,7 +49,66 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		central1a, err := compute.LookupNodeTypes(ctx, &compute.LookupNodeTypesArgs{
+			Zone: "us-central1-a",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		template, err := compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
+			Region:   pulumi.String("us-central1"),
+			NodeType: pulumi.String(central1a.Names[0]),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1a = gcp.compute.get_node_types(zone="us-central1-a")
+template = gcp.compute.NodeTemplate("template",
+    region="us-central1",
+    node_type=central1a.names[0])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1a = gcp.compute.getNodeTypes({
+    zone: "us-central1-a",
+});
+const template = new gcp.compute.NodeTemplate("template", {
+    region: "us-central1",
+    nodeType: central1a.then(central1a => central1a.names[0]),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NodeTemplate Resource {#create}

@@ -21,6 +21,9 @@ To get more information about GlobalNetworkEndpoint, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a GlobalNetworkEndpoint Resource {#create}

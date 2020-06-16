@@ -3,6 +3,7 @@ title: Module runtimeconfig
 title_tag: Module runtimeconfig | Package pulumi_gcp | Python SDK
 linktitle: runtimeconfig
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

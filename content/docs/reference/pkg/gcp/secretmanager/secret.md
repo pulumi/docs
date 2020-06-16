@@ -17,54 +17,13 @@ To get more information about Secret, see:
 * [API documentation](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets)
 
 
-## Example Usage - Secret Config Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
-    labels: {
-        label: "my-label",
-    },
-    replication: {
-        userManaged: {
-            replicas: [
-                {
-                    location: "us-central1",
-                },
-                {
-                    location: "us-east1",
-                },
-            ],
-        },
-    },
-    secretId: "secret",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-secret_basic = gcp.secretmanager.Secret("secret-basic",
-    labels={
-        "label": "my-label",
-    },
-    replication={
-        "userManaged": {
-            "replicas": [
-                {
-                    "location": "us-central1",
-                },
-                {
-                    "location": "us-east1",
-                },
-            ],
-        },
-    },
-    secret_id="secret")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Secret Config Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -102,7 +61,64 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+secret_basic = gcp.secretmanager.Secret("secret-basic",
+    labels={
+        "label": "my-label",
+    },
+    replication={
+        "userManaged": {
+            "replicas": [
+                {
+                    "location": "us-central1",
+                },
+                {
+                    "location": "us-east1",
+                },
+            ],
+        },
+    },
+    secret_id="secret")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
+    labels: {
+        label: "my-label",
+    },
+    replication: {
+        userManaged: {
+            replicas: [
+                {
+                    location: "us-central1",
+                },
+                {
+                    location: "us-east1",
+                },
+            ],
+        },
+    },
+    secretId: "secret",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Secret Resource {#create}

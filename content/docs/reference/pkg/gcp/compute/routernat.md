@@ -19,6 +19,9 @@ To get more information about RouterNat, see:
 * How-to Guides
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a RouterNat Resource {#create}

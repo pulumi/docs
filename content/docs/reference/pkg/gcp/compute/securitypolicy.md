@@ -15,7 +15,6 @@ see the [official documentation](https://cloud.google.com/armor/docs/configure-s
 and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -77,7 +76,53 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		policy, err := compute.NewSecurityPolicy(ctx, "policy", &compute.SecurityPolicyArgs{
+			Rules: compute.SecurityPolicyRuleArray{
+				&compute.SecurityPolicyRuleArgs{
+					Action:      pulumi.String("deny(403)"),
+					Description: pulumi.String("Deny access to IPs in 9.9.9.0/24"),
+					Match: &compute.SecurityPolicyRuleMatchArgs{
+						Config: &compute.SecurityPolicyRuleMatchConfigArgs{
+							SrcIpRanges: pulumi.StringArray{
+								pulumi.String("9.9.9.0/24"),
+							},
+						},
+						VersionedExpr: pulumi.String("SRC_IPS_V1"),
+					},
+					Priority: pulumi.Int(1000),
+				},
+				&compute.SecurityPolicyRuleArgs{
+					Action:      pulumi.String("allow"),
+					Description: pulumi.String("default rule"),
+					Match: &compute.SecurityPolicyRuleMatchArgs{
+						Config: &compute.SecurityPolicyRuleMatchConfigArgs{
+							SrcIpRanges: pulumi.StringArray{
+								pulumi.String("*"),
+							},
+						},
+						VersionedExpr: pulumi.String("SRC_IPS_V1"),
+					},
+					Priority: pulumi.Int(2147483647),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

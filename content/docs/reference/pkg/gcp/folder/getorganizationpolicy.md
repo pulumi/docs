@@ -15,7 +15,6 @@ Allows management of Organization policies for a Google Folder. For more informa
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		policy, err := folder.LookupOrganizationPolicy(ctx, &folder.LookupOrganizationPolicyArgs{
+			Folder:     "folders/folderid",
+			Constraint: "constraints/compute.trustedImageProjects",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("version", policy.Version)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

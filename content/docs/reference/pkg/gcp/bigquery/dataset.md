@@ -19,6 +19,9 @@ To get more information about Dataset, see:
 * How-to Guides
     * [Datasets Intro](https://cloud.google.com/bigquery/docs/datasets-intro)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Dataset Resource {#create}

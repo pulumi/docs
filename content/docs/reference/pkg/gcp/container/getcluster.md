@@ -13,7 +13,6 @@ meta_desc: "Explore the GetCluster function of the container module, including e
 Get info about a GKE cluster from its name and location.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,7 +57,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myCluster, err := container.LookupCluster(ctx, &container.LookupClusterArgs{
+			Name:     "my-cluster",
+			Location: "us-east1-a",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("clusterUsername", myCluster.MasterAuths[0].Username)
+		ctx.Export("clusterPassword", myCluster.MasterAuths[0].Password)
+		ctx.Export("endpoint", myCluster.Endpoint)
+		ctx.Export("instanceGroupUrls", myCluster.InstanceGroupUrls)
+		ctx.Export("nodeConfig", myCluster.NodeConfigs)
+		ctx.Export("nodePools", myCluster.NodePools)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -464,6 +488,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="clustertelemetries_csharp">
+<a href="#clustertelemetries_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Telemetries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterclustertelemetry">List&lt;Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -977,6 +1011,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="clustertelemetries_go">
+<a href="#clustertelemetries_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Telemetries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterclustertelemetry">[]Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="databaseencryptions_go">
 <a href="#databaseencryptions_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Encryptions</a>
 </span> 
@@ -1485,6 +1529,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="clustertelemetries_nodejs">
+<a href="#clustertelemetries_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Telemetries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterclustertelemetry">Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="databaseencryptions_nodejs">
 <a href="#databaseencryptions_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Encryptions</a>
 </span> 
@@ -1988,6 +2042,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cluster_telemetries_python">
+<a href="#cluster_telemetries_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>telemetries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterclustertelemetry">List[Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4412,6 +4476,92 @@ The following output properties are available:
             title="Required">
         <span id="resourcetype_python">
 <a href="#resourcetype_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusterclustertelemetry">Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterTelemetry">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#GetClusterClusterTelemetry">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterClusterTelemetry.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

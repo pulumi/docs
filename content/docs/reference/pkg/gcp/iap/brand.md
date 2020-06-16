@@ -20,6 +20,10 @@ project and cannot be deleted. Destroying a provider-managed Brand
 will remove it from state but *will not delete the resource on the server.*
 
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
+
 
 ## Create a Brand Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}

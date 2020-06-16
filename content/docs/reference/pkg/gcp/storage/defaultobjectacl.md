@@ -25,7 +25,6 @@ and
 to control individual role entity pairs.
 
 
-
 {{% examples %}}
 ## Example Usage
 

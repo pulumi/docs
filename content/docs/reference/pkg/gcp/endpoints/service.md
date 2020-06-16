@@ -12,9 +12,6 @@ meta_desc: "Explore the Service resource of the endpoints module, including exam
 
 This resource creates and rolls out a Cloud Endpoints service using OpenAPI or gRPC.  View the relevant docs for [OpenAPI](https://cloud.google.com/endpoints/docs/openapi/) and [gRPC](https://cloud.google.com/endpoints/docs/grpc/).
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Service Resource {#create}

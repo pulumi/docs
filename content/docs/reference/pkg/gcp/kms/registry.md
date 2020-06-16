@@ -19,21 +19,13 @@ To get more information about DeviceRegistry, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/iot/docs/)
 
-## Example Usage - Cloudiot Device Registry Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const test_registry = new gcp.iot.Registry("test-registry", {});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-test_registry = gcp.iot.Registry("test-registry")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloudiot Device Registry Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -49,7 +41,31 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test_registry = gcp.iot.Registry("test-registry")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test_registry = new gcp.iot.Registry("test-registry", {});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}gcp.kms.Registry has been deprecated in favor of gcp.iot.Registry{{% /md %}}</p>
 
 

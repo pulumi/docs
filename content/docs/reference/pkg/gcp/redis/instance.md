@@ -19,23 +19,13 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/memorystore/docs/redis/)
 
-## Example Usage - Redis Instance Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const cache = new gcp.redis.Instance("cache", {
-    memorySizeGb: 1,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-cache = gcp.redis.Instance("cache", memory_size_gb=1)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Redis Instance Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -52,50 +42,53 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Redis Instance Full
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/redis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const redis-network = gcp.compute.getNetwork({
-    name: "redis-test-network",
-});
-const cache = new gcp.redis.Instance("cache", {
-    tier: "STANDARD_HA",
-    memorySizeGb: 1,
-    locationId: "us-central1-a",
-    alternativeLocationId: "us-central1-f",
-    authorizedNetwork: redis_network.then(redis_network => redis_network.id),
-    redisVersion: "REDIS_3_2",
-    displayName: "Test Instance",
-    reservedIpRange: "192.168.0.0/29",
-    labels: {
-        my_key: "my_val",
-        other_key: "other_val",
-    },
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cache, err := redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
+			MemorySizeGb: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-redis_network = gcp.compute.get_network(name="redis-test-network")
-cache = gcp.redis.Instance("cache",
-    tier="STANDARD_HA",
-    memory_size_gb=1,
-    location_id="us-central1-a",
-    alternative_location_id="us-central1-f",
-    authorized_network=redis_network.id,
-    redis_version="REDIS_3_2",
-    display_name="Test Instance",
-    reserved_ip_range="192.168.0.0/29",
-    labels={
-        "my_key": "my_val",
-        "other_key": "other_val",
-    })
+cache = gcp.redis.Instance("cache", memory_size_gb=1)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cache = new gcp.redis.Instance("cache", {
+    memorySizeGb: 1,
+});
+```
+{{% /example %}}
+
+### Redis Instance Full
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -128,7 +121,60 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+redis_network = gcp.compute.get_network(name="redis-test-network")
+cache = gcp.redis.Instance("cache",
+    tier="STANDARD_HA",
+    memory_size_gb=1,
+    location_id="us-central1-a",
+    alternative_location_id="us-central1-f",
+    authorized_network=redis_network.id,
+    redis_version="REDIS_3_2",
+    display_name="Test Instance",
+    reserved_ip_range="192.168.0.0/29",
+    labels={
+        "my_key": "my_val",
+        "other_key": "other_val",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const redis-network = gcp.compute.getNetwork({
+    name: "redis-test-network",
+});
+const cache = new gcp.redis.Instance("cache", {
+    tier: "STANDARD_HA",
+    memorySizeGb: 1,
+    locationId: "us-central1-a",
+    alternativeLocationId: "us-central1-f",
+    authorizedNetwork: redis_network.then(redis_network => redis_network.id),
+    redisVersion: "REDIS_3_2",
+    displayName: "Test Instance",
+    reservedIpRange: "192.168.0.0/29",
+    labels: {
+        my_key: "my_val",
+        other_key: "other_val",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}

@@ -22,54 +22,13 @@ To get more information about UptimeCheckConfig, see:
 > **Warning:** All arguments including `http_check.auth_info.password` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - Uptime Check Config Http
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http = new gcp.monitoring.UptimeCheckConfig("http", {
-    contentMatchers: [{
-        content: "example",
-    }],
-    displayName: "http-uptime-check",
-    httpCheck: {
-        path: "/some-path",
-        port: 8010,
-    },
-    monitoredResource: {
-        labels: {
-            host: "192.168.1.1",
-            project_id: "my-project-name",
-        },
-        type: "uptime_url",
-    },
-    timeout: "60s",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-http = gcp.monitoring.UptimeCheckConfig("http",
-    content_matchers=[{
-        "content": "example",
-    }],
-    display_name="http-uptime-check",
-    http_check={
-        "path": "/some-path",
-        "port": "8010",
-    },
-    monitored_resource={
-        "labels": {
-            "host": "192.168.1.1",
-            "project_id": "my-project-name",
-        },
-        "type": "uptime_url",
-    },
-    timeout="60s")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Uptime Check Config Http
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -108,23 +67,86 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Uptime Check Config Https
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		http, err := monitoring.NewUptimeCheckConfig(ctx, "http", &monitoring.UptimeCheckConfigArgs{
+			ContentMatchers: monitoring.UptimeCheckConfigContentMatcherArray{
+				&monitoring.UptimeCheckConfigContentMatcherArgs{
+					Content: pulumi.String("example"),
+				},
+			},
+			DisplayName: pulumi.String("http-uptime-check"),
+			HttpCheck: &monitoring.UptimeCheckConfigHttpCheckArgs{
+				Path: pulumi.String("/some-path"),
+				Port: pulumi.Int(8010),
+			},
+			MonitoredResource: &monitoring.UptimeCheckConfigMonitoredResourceArgs{
+				Labels: map[string]interface{}{
+					"host":       "192.168.1.1",
+					"project_id": "my-project-name",
+				},
+				Type: pulumi.String("uptime_url"),
+			},
+			Timeout: pulumi.String("60s"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http = gcp.monitoring.UptimeCheckConfig("http",
+    content_matchers=[{
+        "content": "example",
+    }],
+    display_name="http-uptime-check",
+    http_check={
+        "path": "/some-path",
+        "port": "8010",
+    },
+    monitored_resource={
+        "labels": {
+            "host": "192.168.1.1",
+            "project_id": "my-project-name",
+        },
+        "type": "uptime_url",
+    },
+    timeout="60s")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const https = new gcp.monitoring.UptimeCheckConfig("https", {
+const http = new gcp.monitoring.UptimeCheckConfig("http", {
     contentMatchers: [{
         content: "example",
     }],
-    displayName: "https-uptime-check",
+    displayName: "http-uptime-check",
     httpCheck: {
         path: "/some-path",
-        port: 443,
-        useSsl: true,
-        validateSsl: true,
+        port: 8010,
     },
     monitoredResource: {
         labels: {
@@ -136,30 +158,10 @@ const https = new gcp.monitoring.UptimeCheckConfig("https", {
     timeout: "60s",
 });
 ```
-```python
-import pulumi
-import pulumi_gcp as gcp
+{{% /example %}}
 
-https = gcp.monitoring.UptimeCheckConfig("https",
-    content_matchers=[{
-        "content": "example",
-    }],
-    display_name="https-uptime-check",
-    http_check={
-        "path": "/some-path",
-        "port": "443",
-        "useSsl": True,
-        "validateSsl": True,
-    },
-    monitored_resource={
-        "labels": {
-            "host": "192.168.1.1",
-            "project_id": "my-project-name",
-        },
-        "type": "uptime_url",
-    },
-    timeout="60s")
-```
+### Uptime Check Config Https
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -200,7 +202,106 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		https, err := monitoring.NewUptimeCheckConfig(ctx, "https", &monitoring.UptimeCheckConfigArgs{
+			ContentMatchers: monitoring.UptimeCheckConfigContentMatcherArray{
+				&monitoring.UptimeCheckConfigContentMatcherArgs{
+					Content: pulumi.String("example"),
+				},
+			},
+			DisplayName: pulumi.String("https-uptime-check"),
+			HttpCheck: &monitoring.UptimeCheckConfigHttpCheckArgs{
+				Path:        pulumi.String("/some-path"),
+				Port:        pulumi.Int(443),
+				UseSsl:      pulumi.Bool(true),
+				ValidateSsl: pulumi.Bool(true),
+			},
+			MonitoredResource: &monitoring.UptimeCheckConfigMonitoredResourceArgs{
+				Labels: map[string]interface{}{
+					"host":       "192.168.1.1",
+					"project_id": "my-project-name",
+				},
+				Type: pulumi.String("uptime_url"),
+			},
+			Timeout: pulumi.String("60s"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+https = gcp.monitoring.UptimeCheckConfig("https",
+    content_matchers=[{
+        "content": "example",
+    }],
+    display_name="https-uptime-check",
+    http_check={
+        "path": "/some-path",
+        "port": "443",
+        "useSsl": True,
+        "validateSsl": True,
+    },
+    monitored_resource={
+        "labels": {
+            "host": "192.168.1.1",
+            "project_id": "my-project-name",
+        },
+        "type": "uptime_url",
+    },
+    timeout="60s")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const https = new gcp.monitoring.UptimeCheckConfig("https", {
+    contentMatchers: [{
+        content: "example",
+    }],
+    displayName: "https-uptime-check",
+    httpCheck: {
+        path: "/some-path",
+        port: 443,
+        useSsl: true,
+        validateSsl: true,
+    },
+    monitoredResource: {
+        labels: {
+            host: "192.168.1.1",
+            project_id: "my-project-name",
+        },
+        type: "uptime_url",
+    },
+    timeout: "60s",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UptimeCheckConfig Resource {#create}
@@ -1754,6 +1855,17 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matcher_csharp">
+<a href="#matcher_csharp" style="color: inherit; text-decoration: inherit;">Matcher</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1770,6 +1882,17 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matcher_go">
+<a href="#matcher_go" style="color: inherit; text-decoration: inherit;">Matcher</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
 {{% /md %}}</dd>
 
 </dl>
@@ -1790,6 +1913,17 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matcher_nodejs">
+<a href="#matcher_nodejs" style="color: inherit; text-decoration: inherit;">matcher</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1806,6 +1940,17 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matcher_python">
+<a href="#matcher_python" style="color: inherit; text-decoration: inherit;">matcher</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
 {{% /md %}}</dd>
 
 </dl>

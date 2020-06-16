@@ -23,7 +23,6 @@ and
  by the provider, and new roles cannot share that name.
  
 
-
 {{% examples %}}
 ## Example Usage
 

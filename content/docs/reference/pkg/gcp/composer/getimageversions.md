@@ -13,7 +13,6 @@ meta_desc: "Explore the GetImageVersions function of the composer module, includ
 Provides access to available Cloud Composer versions in a region for a given project.
 
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -21,6 +21,244 @@ To get more information about TagTemplate, see:
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Data Catalog Tag Template Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basicTagTemplate = new Gcp.DataCatalog.TagTemplate("basicTagTemplate", new Gcp.DataCatalog.TagTemplateArgs
+        {
+            DisplayName = "Demo Tag Template",
+            Fields = 
+            {
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    DisplayName = "Source of data asset",
+                    FieldId = "source",
+                    IsRequired = true,
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        PrimitiveType = "STRING",
+                    },
+                },
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    DisplayName = "Number of rows in the data asset",
+                    FieldId = "num_rows",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        PrimitiveType = "DOUBLE",
+                    },
+                },
+                new Gcp.DataCatalog.Inputs.TagTemplateFieldArgs
+                {
+                    DisplayName = "PII type",
+                    FieldId = "pii_type",
+                    Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
+                    {
+                        EnumType = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeArgs
+                        {
+                            AllowedValues = 
+                            {
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "EMAIL",
+                                },
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "SOCIAL SECURITY NUMBER",
+                                },
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
+                                {
+                                    DisplayName = "NONE",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            ForceDelete = false,
+            Region = "us-central1",
+            TagTemplateId = "my_template",
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		basicTagTemplate, err := datacatalog.NewTagTemplate(ctx, "basicTagTemplate", &datacatalog.TagTemplateArgs{
+			DisplayName: pulumi.String("Demo Tag Template"),
+			Fields: datacatalog.TagTemplateFieldArray{
+				&datacatalog.TagTemplateFieldArgs{
+					DisplayName: pulumi.String("Source of data asset"),
+					FieldId:     pulumi.String("source"),
+					IsRequired:  pulumi.Bool(true),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						PrimitiveType: pulumi.String("STRING"),
+					},
+				},
+				&datacatalog.TagTemplateFieldArgs{
+					DisplayName: pulumi.String("Number of rows in the data asset"),
+					FieldId:     pulumi.String("num_rows"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						PrimitiveType: pulumi.String("DOUBLE"),
+					},
+				},
+				&datacatalog.TagTemplateFieldArgs{
+					DisplayName: pulumi.String("PII type"),
+					FieldId:     pulumi.String("pii_type"),
+					Type: &datacatalog.TagTemplateFieldTypeArgs{
+						EnumType: &datacatalog.TagTemplateFieldTypeEnumTypeArgs{
+							AllowedValues: datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArray{
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("EMAIL"),
+								},
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("SOCIAL SECURITY NUMBER"),
+								},
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("NONE"),
+								},
+							},
+						},
+					},
+				},
+			},
+			ForceDelete:   pulumi.Bool(false),
+			Region:        pulumi.String("us-central1"),
+			TagTemplateId: pulumi.String("my_template"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_tag_template = gcp.datacatalog.TagTemplate("basicTagTemplate",
+    display_name="Demo Tag Template",
+    fields=[
+        {
+            "display_name": "Source of data asset",
+            "fieldId": "source",
+            "isRequired": True,
+            "type": {
+                "primitiveType": "STRING",
+            },
+        },
+        {
+            "display_name": "Number of rows in the data asset",
+            "fieldId": "num_rows",
+            "type": {
+                "primitiveType": "DOUBLE",
+            },
+        },
+        {
+            "display_name": "PII type",
+            "fieldId": "pii_type",
+            "type": {
+                "enumType": {
+                    "allowedValues": [
+                        {
+                            "display_name": "EMAIL",
+                        },
+                        {
+                            "display_name": "SOCIAL SECURITY NUMBER",
+                        },
+                        {
+                            "display_name": "NONE",
+                        },
+                    ],
+                },
+            },
+        },
+    ],
+    force_delete="false",
+    region="us-central1",
+    tag_template_id="my_template")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basicTagTemplate = new gcp.datacatalog.TagTemplate("basic_tag_template", {
+    displayName: "Demo Tag Template",
+    fields: [
+        {
+            displayName: "Source of data asset",
+            fieldId: "source",
+            isRequired: true,
+            type: {
+                primitiveType: "STRING",
+            },
+        },
+        {
+            displayName: "Number of rows in the data asset",
+            fieldId: "num_rows",
+            type: {
+                primitiveType: "DOUBLE",
+            },
+        },
+        {
+            displayName: "PII type",
+            fieldId: "pii_type",
+            type: {
+                enumType: {
+                    allowedValues: [
+                        {
+                            displayName: "EMAIL",
+                        },
+                        {
+                            displayName: "SOCIAL SECURITY NUMBER",
+                        },
+                        {
+                            displayName: "NONE",
+                        },
+                    ],
+                },
+            },
+        },
+    ],
+    forceDelete: false,
+    region: "us-central1",
+    tagTemplateId: "my_template",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Create a TagTemplate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}

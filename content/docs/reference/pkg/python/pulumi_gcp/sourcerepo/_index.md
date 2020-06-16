@@ -3,6 +3,7 @@ title: Module sourcerepo
 title_tag: Module sourcerepo | Package pulumi_gcp | Python SDK
 linktitle: sourcerepo
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

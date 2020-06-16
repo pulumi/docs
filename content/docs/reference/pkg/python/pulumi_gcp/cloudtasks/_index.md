@@ -3,6 +3,7 @@ title: Module cloudtasks
 title_tag: Module cloudtasks | Package pulumi_gcp | Python SDK
 linktitle: cloudtasks
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

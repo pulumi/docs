@@ -28,28 +28,13 @@ To get more information about CryptoKey, see:
 * How-to Guides
     * [Creating a key](https://cloud.google.com/kms/docs/creating-keys#create_a_key)
 
-## Example Usage - Kms Crypto Key Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
-const example_key = new gcp.kms.CryptoKey("example-key", {
-    keyRing: keyring.id,
-    rotationPeriod: "100000s",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-keyring = gcp.kms.KeyRing("keyring", location="global")
-example_key = gcp.kms.CryptoKey("example-key",
-    key_ring=keyring.id,
-    rotation_period="100000s")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Kms Crypto Key Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -71,7 +56,38 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+example_key = gcp.kms.CryptoKey("example-key",
+    key_ring=keyring.id,
+    rotation_period="100000s")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const example_key = new gcp.kms.CryptoKey("example-key", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CryptoKey Resource {#create}

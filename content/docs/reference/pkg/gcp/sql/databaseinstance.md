@@ -41,7 +41,6 @@ instance creation. You should use `gcp.sql.User` to define a custom user with
 a restricted host and strong password.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,7 +71,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		master, err := sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
+			DatabaseVersion: pulumi.String("POSTGRES_11"),
+			Region:          pulumi.String("us-central1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -444,8 +466,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}
-The full path to the encryption key used for the CMEK disk encryption.  Setting
+    <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.  Setting
 up disk encryption currently requires manual steps outside of this provider.
 The provided key must be in the same region as the SQL instance.  In order
 to use this feature, a special kind of service account must be created and
@@ -573,8 +594,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}
-The full path to the encryption key used for the CMEK disk encryption.  Setting
+    <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.  Setting
 up disk encryption currently requires manual steps outside of this provider.
 The provided key must be in the same region as the SQL instance.  In order
 to use this feature, a special kind of service account must be created and
@@ -702,8 +722,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}
-The full path to the encryption key used for the CMEK disk encryption.  Setting
+    <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.  Setting
 up disk encryption currently requires manual steps outside of this provider.
 The provided key must be in the same region as the SQL instance.  In order
 to use this feature, a special kind of service account must be created and
@@ -831,8 +850,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}
-The full path to the encryption key used for the CMEK disk encryption.  Setting
+    <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.  Setting
 up disk encryption currently requires manual steps outside of this provider.
 The provided key must be in the same region as the SQL instance.  In order
 to use this feature, a special kind of service account must be created and
@@ -986,7 +1004,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned. 
+    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -997,7 +1015,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned. 
+    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1091,7 +1109,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned. 
+    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1102,7 +1120,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned. 
+    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1196,7 +1214,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned. 
+    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1207,7 +1225,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned. 
+    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1301,7 +1319,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned. 
+    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1312,7 +1330,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned. 
+    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1517,8 +1535,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}
-The full path to the encryption key used for the CMEK disk encryption.  Setting
+    <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.  Setting
 up disk encryption currently requires manual steps outside of this provider.
 The provided key must be in the same region as the SQL instance.  In order
 to use this feature, a special kind of service account must be created and
@@ -1581,7 +1598,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned. 
+    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1604,7 +1621,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned. 
+    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1734,8 +1751,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}
-The full path to the encryption key used for the CMEK disk encryption.  Setting
+    <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.  Setting
 up disk encryption currently requires manual steps outside of this provider.
 The provided key must be in the same region as the SQL instance.  In order
 to use this feature, a special kind of service account must be created and
@@ -1798,7 +1814,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned. 
+    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1821,7 +1837,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned. 
+    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1951,8 +1967,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}
-The full path to the encryption key used for the CMEK disk encryption.  Setting
+    <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.  Setting
 up disk encryption currently requires manual steps outside of this provider.
 The provided key must be in the same region as the SQL instance.  In order
 to use this feature, a special kind of service account must be created and
@@ -2015,7 +2030,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned. 
+    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2038,7 +2053,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned. 
+    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2168,8 +2183,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}
-The full path to the encryption key used for the CMEK disk encryption.  Setting
+    <dd>{{% md %}}The full path to the encryption key used for the CMEK disk encryption.  Setting
 up disk encryption currently requires manual steps outside of this provider.
 The provided key must be in the same region as the SQL instance.  In order
 to use this feature, a special kind of service account must be created and
@@ -2232,7 +2246,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned. 
+    <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2255,7 +2269,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned. 
+    <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

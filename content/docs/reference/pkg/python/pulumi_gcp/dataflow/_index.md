@@ -3,6 +3,7 @@ title: Module dataflow
 title_tag: Module dataflow | Package pulumi_gcp | Python SDK
 linktitle: dataflow
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

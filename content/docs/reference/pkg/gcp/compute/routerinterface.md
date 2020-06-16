@@ -16,7 +16,6 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/routers).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foobar, err := compute.NewRouterInterface(ctx, "foobar", &compute.RouterInterfaceArgs{
+			IpRange:   pulumi.String("169.254.1.1/30"),
+			Region:    pulumi.String("us-central1"),
+			Router:    pulumi.String("router-1"),
+			VpnTunnel: pulumi.String("tunnel-1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

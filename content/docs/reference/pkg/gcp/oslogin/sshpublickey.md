@@ -19,29 +19,13 @@ To get more information about SSHPublicKey, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/oslogin)
 
-## Example Usage - Os Login Ssh Key Provided User
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-import * from "fs";
-
-const me = gcp.organizations.getClientOpenIdUserInfo({});
-const cache = new gcp.oslogin.SshPublicKey("cache", {
-    user: me.then(me => me.email),
-    key: fs.readFileSync("path/to/id_rsa.pub"),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-me = gcp.organizations.get_client_open_id_user_info()
-cache = gcp.oslogin.SshPublicKey("cache",
-    user=me.email,
-    key=(lambda path: open(path).read())("path/to/id_rsa.pub"))
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Os Login Ssh Key Provided User
+{{% example csharp %}}
 ```csharp
 using System.IO;
 using Pulumi;
@@ -61,7 +45,39 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+me = gcp.organizations.get_client_open_id_user_info()
+cache = gcp.oslogin.SshPublicKey("cache",
+    user=me.email,
+    key=(lambda path: open(path).read())("path/to/id_rsa.pub"))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const me = gcp.organizations.getClientOpenIdUserInfo({});
+const cache = new gcp.oslogin.SshPublicKey("cache", {
+    user: me.then(me => me.email),
+    key: fs.readFileSync("path/to/id_rsa.pub"),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SshPublicKey Resource {#create}

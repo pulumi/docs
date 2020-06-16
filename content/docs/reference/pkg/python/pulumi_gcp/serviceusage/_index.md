@@ -3,6 +3,7 @@ title: Module serviceusage
 title_tag: Module serviceusage | Package pulumi_gcp | Python SDK
 linktitle: serviceusage
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

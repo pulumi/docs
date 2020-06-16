@@ -15,28 +15,13 @@ information, see Creating VLAN Attachments.
 
 
 
-## Example Usage - Interconnect Attachment Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const foobar = new gcp.compute.Router("foobar", {network: google_compute_network.foobar.name});
-const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
-    interconnect: "my-interconnect-id",
-    router: foobar.id,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-foobar = gcp.compute.Router("foobar", network=google_compute_network["foobar"]["name"])
-on_prem = gcp.compute.InterconnectAttachment("onPrem",
-    interconnect="my-interconnect-id",
-    router=foobar.id)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Interconnect Attachment Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -58,7 +43,64 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foobar, err := compute.NewRouter(ctx, "foobar", &compute.RouterArgs{
+			Network: pulumi.String(google_compute_network.Foobar.Name),
+		})
+		if err != nil {
+			return err
+		}
+		onPrem, err := compute.NewInterconnectAttachment(ctx, "onPrem", &compute.InterconnectAttachmentArgs{
+			Interconnect: pulumi.String("my-interconnect-id"),
+			Router:       foobar.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+foobar = gcp.compute.Router("foobar", network=google_compute_network["foobar"]["name"])
+on_prem = gcp.compute.InterconnectAttachment("onPrem",
+    interconnect="my-interconnect-id",
+    router=foobar.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foobar = new gcp.compute.Router("foobar", {network: google_compute_network.foobar.name});
+const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
+    interconnect: "my-interconnect-id",
+    router: foobar.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InterconnectAttachment Resource {#create}
