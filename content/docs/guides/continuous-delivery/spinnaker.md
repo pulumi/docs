@@ -17,7 +17,7 @@ CI/CD system. So the steps described here can be altered to fit into any existin
 
 > For a full overview of Spinnaker Plugins, please see the official plugin creator's [guide](https://www.spinnaker.io/guides/developer/plugin-creators/overview/).
 
-Plugins are a recent addition to Spinnaker and as such require a more recent version to use plugins as well as the Pulumi plugin for Spinnaker, which this guide will show you how to use. 
+Plugins are a recent addition to Spinnaker and as such require a more recent version to use plugins as well as the Pulumi plugin for Spinnaker, which this guide will show you how to use.
 
 * Spinnaker v1.19.4+
 * Halyard 1.34+
@@ -43,7 +43,7 @@ The pre-configured job will also need to access your VCS to clone the repo into 
 ### Secrets
 
 To pass sensitive secrets to the Kubernetes batch job run by the plugin, you'll need to define a [Kubernetes Secret](https://kubernetes.io/docs/concepts/configuration/secret/). The secret will need to be in the same namespace as the namespace used to run the pre-configured job.
-Sensitive secrets such as the Pulumi Access Token, the cloud provider credentials, or even your Git VCS credentials (eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the Secret resource. 
+Sensitive secrets such as the Pulumi Access Token, the cloud provider credentials, or even your Git VCS credentials (eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the Secret resource.
 
 If you are using the service backend, either the Pulumi-managed or the self-hosted one, you'll need to get a [Pulumi Access Token](https://app.pulumi.com/account/tokens) for the Pulumi account that you'll use in your pipeline. Save the value of the token with the key `PULUMI_ACCESS_TOKEN` in your Kubernetes Secret resource.
 
@@ -92,11 +92,12 @@ hal plugins add Pulumi.PreConfiguredJobPlugin --enabled true --version 0.0.1 --e
 hal deploy apply
 ```
 
-> Depending on your Spinnaker installation you might have to run the above commands using `sudo`. 
+> Depending on your Spinnaker installation you might have to run the above commands using `sudo`.
 
 ## Plugin Configuration
 
 There are two configuration opportunities available with the plugin:
+
 * Global
 * Per-stage
 
