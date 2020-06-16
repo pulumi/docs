@@ -1,7 +1,7 @@
 ---
 title: "Policy as Code with Python"
 date: 2020-06-16
-meta_desc: "Policy as Code for Python available as a preview in the 2.0 release."
+meta_desc: "Policy as Code for Python available as GA in the 2.0 release."
 meta_image: meta.png
 authors:
     - sophia-parafina
@@ -10,7 +10,7 @@ tags:
     - "Policy as Code"
 ---
 
-With the launch of Pulumi 2.0, we introduced the preview of Python Policy as Code. Policies written in code let you test, automate deployment, and enable version control. Python is a popular scripting language used for machine learning and artificial intelligence, data science, web development and devops. It's an ideal language for developers and operators to use in common.
+Policy as Code for Python is now GA in Pulumi 2.0. Policies written in code let you test, automate deployment, and enable version control. Python is a popular scripting language used for machine learning and artificial intelligence, data science, web development and devops. It's an ideal language for developers and operators to use in common.
 
 <!--more-->
 
@@ -18,17 +18,27 @@ Devops benefits greatly from policy as code because policies can use software de
 
 ## How Policy as Code Works
 
-Policies enforce specific criteria for a resource or for a set of resources (stacks). For example, a common policy is to ensure that storage is not publicly accessible over the Internet or to ensure that virtual machines must have a firewall.
+Policies enforce specific criteria for a resource or for a set of resources (stacks). For example, a common policy is to ensure that storage is not publicly accessible over the Internet or to ensure that virtual machines must have a firewall. Policies are enforced as either *advisory*, which prints a warning message the resource violates the policy; or
+*mandatory*, which prevents a resource deployment if it violates the policy.
 
 Pulumi supports two types of polices:
 
 - **ResourceValidationPolicy** validates individual resources in a stack and is run during preview.
 - **StackValidationPolicy** validates the stack as a whole and runs when the stack is deployed because some resources may need to exists to validate inputs or outputs.
 
-Policies are enforced as either
+ResourceValidationPolicy and StackValidationPolicy both run during previews and updates.
 
-- *advisory*, which prints a warning message the resource violates the policy, or
-- *mandatory*, which prevents a resource deployment if it violates the policy.
+ResourceValidationPolicy validates inputs of individual resources before the resource is created/modified. StackValidationPolicy validates outputs of all resources in the stack after all resources have been created/modified. During previews, resources aren't created or modified, so the ResourceValidationPolicy and StackValidationPolicy validations see a preview of what's going to happen (as best we can determine)
+
+With stack validation policies, the validation happens after resources have been created or modified. Modifications to resources can't be prevented, but using mandatory enforcement results in a deployment failing (despite the resources being modified). If you run Pulumi preview before an update and use a mandatory StackValidationPolicy, you can catch the problems before a real deployment occurs.
+
+The difference is described in this table:
+
+|                                | Resource Validation                   | Stack Validation                                                                     |
+|--------------------------------|---------------------------------------|--------------------------------------------------------------------------------------|
+| What does it check?            | Individual resources                  | All resources in the stack                                                           |
+| When is the check performed?   | Before resources are created/modified | After all stack resources have been created/modified                                 |
+| What information is available? | Resource _input_ properties           | Resource _output_ properties (Note: inputs are propagated to outputs during preview) |
 
 Now that we have the basics of policy as code, lets take a look at example policies written in Python.
 
@@ -36,7 +46,11 @@ Now that we have the basics of policy as code, lets take a look at example polic
 
 Policies are validation functions that validate resources in a Pulumi stack. In the examples below, we define a function that takes `ResourceValidationArgs` and `ReportViolation` as arguments. The function checks to see what type of resource and its arguments, these are used to determine of the resource violates the policy. If the resource is not compliant, the function reports the violation and because the enforcement level is *mandatory*, the resource will not be deployed.
 
-{{< chooser cloud "aws,azure,gcp" >}}
+In the case of this Kubernetes policy example, the policy does not allow deploying a loadbalancer which would open the kubernetes cluster to the public Internet.
+
+If you'd like to try out one of the examples, you can create a policy with `pulumi policy new` and to run locally against a Pulumi program specify `pulumi up --policy-pack <path-to-policy-pack>`.
+
+{{< chooser cloud "aws,azure,gcp,kubernetes" >}}
 {{% choosable cloud aws %}}
 
 ```python
@@ -141,9 +155,7 @@ PolicyPack(
 ```
 
 {{% /choosable %}}
-{{< /chooser >}}
-
-In the case of this Kubernetes policy example, the policy does not allow deploying a loadbalancer which would open the kubernetes cluster to the public Internet.
+{{% choosable cloud kubernetes %}}
 
 ```python
 from pulumi_policy import (
@@ -177,12 +189,14 @@ PolicyPack(
     ],
 )
 ```
+{{% /choosable %}}
+{{< /chooser >}}
 
 ## Summary
 
 Policy as Code is an important tool for building secure and efficient cloud infrastructure. Pulumi lets you efficiently test resources before deployment and entire stacks when deployed. Learn more about what you can do with Policy as Code:
 
-- [Get Started with Policy as Code]({{< relref "/docs/get-started/crossguard">}})
+- [Get Started with Policy as Code]({{< relref "/docs/get-started/crossguard" >}})
 - [New Policy as Code Capabilities with CrossGuard]({{< relref "/blog/crossguard-2-0" >}})
 - [Automatically Enforcing AWS Resource Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
 - [Manage Any Infrastructure with Policy as Code]({{< relref "/blog/manage-infrastructure-with-pac" >}})
