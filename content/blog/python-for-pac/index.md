@@ -43,7 +43,6 @@ Now that we have the basics of policy as code let's take a look at example polic
 
 Policies are validation functions that validate resources in a Pulumi stack. In the examples below, we define a function that takes `ResourceValidationArgs` and `ReportViolation` as arguments. The function checks to see what type of resource and its arguments, these are used to determine if the resource violates the policy. If the resource is not compliant, the function reports the violation, and because the enforcement level is *mandatory*, the resource will not be deployed.
 
-
 If you'd like to try out one of the examples, you can create a policy with `pulumi policy new` and run locally against a Pulumi program, specify `pulumi up --policy-pack <path-to-policy-pack>`.
 
 {{< chooser cloud "aws,azure,gcp,kubernetes" >}}
