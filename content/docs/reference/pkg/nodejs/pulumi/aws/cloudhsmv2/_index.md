@@ -3,7 +3,7 @@ title: "Module cloudhsmv2"
 title_tag: "Module cloudhsmv2 | Package @pulumi/aws | Node.js SDK"
 linktitle: "cloudhsmv2"
 meta_desc: "Explore members of the cloudhsmv2 module in the @pulumi/aws package."
-git_sha: "c672e225a765b11b07ea23e7b1b411483d7f38da"
+git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
 block_external_search_index: true
 ---
 
@@ -46,7 +46,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L57">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -101,7 +101,7 @@ const cloudhsmV2Cluster = new aws.cloudhsmv2.Cluster("cloudhsm_v2_cluster", {
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L125"> <b>constructor</b></a>
 </h4>
 
 
@@ -115,7 +115,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L67">method <b>get</b></a>
 </h4>
 
 
@@ -126,14 +126,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L78">method <b>isInstance</b></a>
 </h4>
 
 
@@ -144,7 +144,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L93">property <b>clusterCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L93">property <b>clusterCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterClusterCertificate'>ClusterClusterCertificate</a>[]&gt;;</code></pre>
@@ -157,7 +157,7 @@ The list of cluster certificates.
 * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L97">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L97">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ The list of cluster certificates.
 The id of the CloudHSM cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L101">property <b>clusterState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L101">property <b>clusterState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -173,7 +173,7 @@ The id of the CloudHSM cluster.
 The state of the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-hsmType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L105">property <b>hsmType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L105">property <b>hsmType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hsmType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ The state of the cluster.
 The type of HSM module in the cluster. Currently, only hsm1.medium is supported.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -190,7 +190,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L109">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L109">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the security group associated with the CloudHSM cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-sourceBackupIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L113">property <b>sourceBackupIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L113">property <b>sourceBackupIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceBackupIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -206,7 +206,7 @@ The ID of the security group associated with the CloudHSM cluster.
 The id of Cloud HSM v2 cluster backup to be restored.
 
 <h4 class="pdoc-member-header" id="Cluster-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L117">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L117">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -214,7 +214,7 @@ The id of Cloud HSM v2 cluster backup to be restored.
 The IDs of subnets in which cluster will operate.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L121">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L121">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -222,7 +222,7 @@ The IDs of subnets in which cluster will operate.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -231,7 +231,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L125">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L125">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -239,7 +239,7 @@ deployments.
 The id of the VPC that the CloudHSM cluster resides in.
 
 <h3 class="pdoc-module-header" id="Hsm" data-link-title="Hsm">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L27">
         Resource <strong>Hsm</strong>
     </a>
 </h3>
@@ -266,7 +266,7 @@ const cloudhsmV2Hsm = new aws.cloudhsmv2.Hsm("cloudhsm_v2_hsm", {
 ```
 
 <h4 class="pdoc-member-header" id="Hsm-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -280,7 +280,7 @@ Create a Hsm resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Hsm-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -291,14 +291,14 @@ Get an existing Hsm resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Hsm-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Hsm-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -309,7 +309,7 @@ Returns true if the given object is an instance of Hsm.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Hsm-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L58">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L58">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.
 
 <h4 class="pdoc-member-header" id="Hsm-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L62">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L62">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ The IDs of AZ in which HSM module will be located. Do not use together with subn
 The ID of Cloud HSM v2 cluster to which HSM will be added.
 
 <h4 class="pdoc-member-header" id="Hsm-hsmEniId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L66">property <b>hsmEniId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L66">property <b>hsmEniId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hsmEniId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ The ID of Cloud HSM v2 cluster to which HSM will be added.
 The id of the ENI interface allocated for HSM module.
 
 <h4 class="pdoc-member-header" id="Hsm-hsmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L70">property <b>hsmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L70">property <b>hsmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hsmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ The id of the ENI interface allocated for HSM module.
 The id of the HSM module.
 
 <h4 class="pdoc-member-header" id="Hsm-hsmState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L74">property <b>hsmState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L74">property <b>hsmState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hsmState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ The id of the HSM module.
 The state of the HSM module.
 
 <h4 class="pdoc-member-header" id="Hsm-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -358,7 +358,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Hsm-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L78">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L78">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ deployments and may be missing (undefined) during planning phases.
 The IP address of HSM module. Must be within the CIDR of selected subnet.
 
 <h4 class="pdoc-member-header" id="Hsm-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L82">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L82">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ The IP address of HSM module. Must be within the CIDR of selected subnet.
 The ID of subnet in which HSM module will be located.
 
 <h4 class="pdoc-member-header" id="Hsm-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -385,7 +385,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L25">
         Function <strong>getCluster</strong>
     </a>
 </h3>
@@ -412,7 +412,7 @@ const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L227">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -422,7 +422,7 @@ const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-hsmType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L231">property <b>hsmType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L231">property <b>hsmType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hsmType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -430,7 +430,7 @@ The set of arguments for constructing a Cluster resource.
 The type of HSM module in the cluster. Currently, only hsm1.medium is supported.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-sourceBackupIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L235">property <b>sourceBackupIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L235">property <b>sourceBackupIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceBackupIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ The type of HSM module in the cluster. Currently, only hsm1.medium is supported.
 The id of Cloud HSM v2 cluster backup to be restored.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L239">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L239">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -446,7 +446,7 @@ The id of Cloud HSM v2 cluster backup to be restored.
 The IDs of subnets in which cluster will operate.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L243">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L243">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -454,7 +454,7 @@ The IDs of subnets in which cluster will operate.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L180">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -464,7 +464,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L189">property <b>clusterCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L189">property <b>clusterCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterClusterCertificate'>ClusterClusterCertificate</a>&gt;[]&gt;;</code></pre>
@@ -477,7 +477,7 @@ The list of cluster certificates.
 * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L193">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L193">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ The list of cluster certificates.
 The id of the CloudHSM cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L197">property <b>clusterState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L197">property <b>clusterState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ The id of the CloudHSM cluster.
 The state of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-hsmType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L201">property <b>hsmType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L201">property <b>hsmType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hsmType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ The state of the cluster.
 The type of HSM module in the cluster. Currently, only hsm1.medium is supported.
 
 <h4 class="pdoc-member-header" id="ClusterState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L205">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L205">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ The type of HSM module in the cluster. Currently, only hsm1.medium is supported.
 The ID of the security group associated with the CloudHSM cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-sourceBackupIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L209">property <b>sourceBackupIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L209">property <b>sourceBackupIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceBackupIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ The ID of the security group associated with the CloudHSM cluster.
 The id of Cloud HSM v2 cluster backup to be restored.
 
 <h4 class="pdoc-member-header" id="ClusterState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L213">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L213">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -525,7 +525,7 @@ The id of Cloud HSM v2 cluster backup to be restored.
 The IDs of subnets in which cluster will operate.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L217">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L217">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -533,7 +533,7 @@ The IDs of subnets in which cluster will operate.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/cluster.ts#L221">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/cluster.ts#L221">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ A map of tags to assign to the resource.
 The id of the VPC that the CloudHSM cluster resides in.
 
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L42">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -551,7 +551,7 @@ The id of the VPC that the CloudHSM cluster resides in.
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L46">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L46">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -559,7 +559,7 @@ A collection of arguments for invoking getCluster.
 The id of Cloud HSM v2 cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-clusterState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L50">property <b>clusterState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L50">property <b>clusterState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterState?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -567,7 +567,7 @@ The id of Cloud HSM v2 cluster.
 The state of the cluster to be found.
 
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L56">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -577,7 +577,7 @@ The state of the cluster to be found.
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L66">property <b>clusterCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L66">property <b>clusterCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterClusterCertificates'>GetClusterClusterCertificates</a>;</code></pre>
@@ -591,17 +591,17 @@ The list of cluster certificates.
 The number of available cluster certificates may vary depending on state of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L67">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L67">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L68">property <b>clusterState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L68">property <b>clusterState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -609,7 +609,7 @@ The number of available cluster certificates may vary depending on state of the 
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L76">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L76">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -617,7 +617,7 @@ The provider-assigned unique ID for this managed resource.
 The ID of the security group associated with the CloudHSM cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L80">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L80">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -625,7 +625,7 @@ The ID of the security group associated with the CloudHSM cluster.
 The IDs of subnets in which cluster operates.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/getCluster.ts#L84">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/getCluster.ts#L84">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -633,7 +633,7 @@ The IDs of subnets in which cluster operates.
 The id of the VPC that the CloudHSM cluster resides in.
 
 <h3 class="pdoc-module-header" id="HsmArgs" data-link-title="HsmArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L164">
         interface <strong>HsmArgs</strong>
     </a>
 </h3>
@@ -643,7 +643,7 @@ The id of the VPC that the CloudHSM cluster resides in.
 The set of arguments for constructing a Hsm resource.
 
 <h4 class="pdoc-member-header" id="HsmArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L168">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L168">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -651,7 +651,7 @@ The set of arguments for constructing a Hsm resource.
 The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.
 
 <h4 class="pdoc-member-header" id="HsmArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L172">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L172">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -659,7 +659,7 @@ The IDs of AZ in which HSM module will be located. Do not use together with subn
 The ID of Cloud HSM v2 cluster to which HSM will be added.
 
 <h4 class="pdoc-member-header" id="HsmArgs-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L176">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L176">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -667,7 +667,7 @@ The ID of Cloud HSM v2 cluster to which HSM will be added.
 The IP address of HSM module. Must be within the CIDR of selected subnet.
 
 <h4 class="pdoc-member-header" id="HsmArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L180">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L180">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ The IP address of HSM module. Must be within the CIDR of selected subnet.
 The ID of subnet in which HSM module will be located.
 
 <h3 class="pdoc-module-header" id="HsmState" data-link-title="HsmState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L130">
         interface <strong>HsmState</strong>
     </a>
 </h3>
@@ -685,7 +685,7 @@ The ID of subnet in which HSM module will be located.
 Input properties used for looking up and filtering Hsm resources.
 
 <h4 class="pdoc-member-header" id="HsmState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L134">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L134">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ Input properties used for looking up and filtering Hsm resources.
 The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.
 
 <h4 class="pdoc-member-header" id="HsmState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L138">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L138">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ The IDs of AZ in which HSM module will be located. Do not use together with subn
 The ID of Cloud HSM v2 cluster to which HSM will be added.
 
 <h4 class="pdoc-member-header" id="HsmState-hsmEniId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L142">property <b>hsmEniId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L142">property <b>hsmEniId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hsmEniId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ The ID of Cloud HSM v2 cluster to which HSM will be added.
 The id of the ENI interface allocated for HSM module.
 
 <h4 class="pdoc-member-header" id="HsmState-hsmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L146">property <b>hsmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L146">property <b>hsmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hsmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ The id of the ENI interface allocated for HSM module.
 The id of the HSM module.
 
 <h4 class="pdoc-member-header" id="HsmState-hsmState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L150">property <b>hsmState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L150">property <b>hsmState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hsmState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -725,7 +725,7 @@ The id of the HSM module.
 The state of the HSM module.
 
 <h4 class="pdoc-member-header" id="HsmState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L154">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L154">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ The state of the HSM module.
 The IP address of HSM module. Must be within the CIDR of selected subnet.
 
 <h4 class="pdoc-member-header" id="HsmState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cloudhsmv2/hsm.ts#L158">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudhsmv2/hsm.ts#L158">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

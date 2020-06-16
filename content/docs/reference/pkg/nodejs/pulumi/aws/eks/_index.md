@@ -3,7 +3,7 @@ title: "Module eks"
 title_tag: "Module eks | Package @pulumi/aws | Node.js SDK"
 linktitle: "eks"
 meta_desc: "Explore members of the eks module in the @pulumi/aws package."
-git_sha: "c672e225a765b11b07ea23e7b1b411483d7f38da"
+git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
 block_external_search_index: true
 ---
 
@@ -52,7 +52,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L98">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -148,7 +148,7 @@ const exampleRole = new aws.iam.Role("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L178"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L178"> <b>constructor</b></a>
 </h4>
 
 
@@ -162,7 +162,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L108">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L108">method <b>get</b></a>
 </h4>
 
 
@@ -173,14 +173,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L98">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L98">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L119">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L119">method <b>isInstance</b></a>
 </h4>
 
 
@@ -191,7 +191,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L129">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L129">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-certificateAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L133">property <b>certificateAuthority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L133">property <b>certificateAuthority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCertificateAuthority'>ClusterCertificateAuthority</a>&gt;;</code></pre>
@@ -207,12 +207,12 @@ The Amazon Resource Name (ARN) of the cluster.
 Nested attribute containing `certificate-authority-data` for your cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L134">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L134">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-enabledClusterLogTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L138">property <b>enabledClusterLogTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L138">property <b>enabledClusterLogTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabledClusterLogTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ Nested attribute containing `certificate-authority-data` for your cluster.
 A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
 
 <h4 class="pdoc-member-header" id="Cluster-encryptionConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L142">property <b>encryptionConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L142">property <b>encryptionConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptionConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterEncryptionConfig'>ClusterEncryptionConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -228,7 +228,7 @@ A list of the desired control plane logging to enable. For more information, see
 Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 
 <h4 class="pdoc-member-header" id="Cluster-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L146">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L146">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -236,7 +236,7 @@ Configuration block with encryption configuration for the cluster. Only availabl
 The endpoint for your Kubernetes API server.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L98">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L98">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -245,7 +245,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-identities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L150">property <b>identities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L150">property <b>identities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterIdentity'>ClusterIdentity</a>[]&gt;;</code></pre>
@@ -253,7 +253,7 @@ deployments and may be missing (undefined) during planning phases.
 Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
 
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ Nested attribute containing identity provider information for your cluster. Only
 Name of the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-platformVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L158">property <b>platformVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L158">property <b>platformVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ Name of the cluster.
 The platform version for the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L162">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L162">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ The platform version for the cluster.
 The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
 
 <h4 class="pdoc-member-header" id="Cluster-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L166">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L166">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ The Amazon Resource Name (ARN) of the IAM role that provides permissions for the
 The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L170">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L170">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L98">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L98">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -302,7 +302,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L174">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L174">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -310,7 +310,7 @@ deployments.
 Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
 
 <h4 class="pdoc-member-header" id="Cluster-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L178">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L178">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterVpcConfig'>ClusterVpcConfig</a>&gt;;</code></pre>
@@ -318,7 +318,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
 Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 
 <h3 class="pdoc-module-header" id="FargateProfile" data-link-title="FargateProfile">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L52">
         Resource <strong>FargateProfile</strong>
     </a>
 </h3>
@@ -368,7 +368,7 @@ const example_AmazonEKSFargatePodExecutionRolePolicy = new aws.iam.RolePolicyAtt
 ```
 
 <h4 class="pdoc-member-header" id="FargateProfile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -382,7 +382,7 @@ Create a FargateProfile resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FargateProfile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -393,14 +393,14 @@ Get an existing FargateProfile resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FargateProfile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FargateProfile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -411,7 +411,7 @@ Returns true if the given object is an instance of FargateProfile.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FargateProfile-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L83">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L83">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -419,7 +419,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfile-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L87">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L87">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ Amazon Resource Name (ARN) of the EKS Fargate Profile.
 Name of the EKS Cluster.
 
 <h4 class="pdoc-member-header" id="FargateProfile-fargateProfileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L91">property <b>fargateProfileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L91">property <b>fargateProfileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fargateProfileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -435,7 +435,7 @@ Name of the EKS Cluster.
 Name of the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -444,7 +444,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FargateProfile-podExecutionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L95">property <b>podExecutionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L95">property <b>podExecutionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>podExecutionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -452,7 +452,7 @@ deployments and may be missing (undefined) during planning phases.
 Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfile-selectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L99">property <b>selectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L99">property <b>selectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selectors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FargateProfileSelector'>FargateProfileSelector</a>[]&gt;;</code></pre>
@@ -460,7 +460,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
 
 <h4 class="pdoc-member-header" id="FargateProfile-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L103">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L103">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fa
 Status of the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfile-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L107">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L107">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ Status of the EKS Fargate Profile.
 Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 
 <h4 class="pdoc-member-header" id="FargateProfile-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L111">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L111">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. Th
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="FargateProfile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -493,7 +493,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NodeGroup" data-link-title="NodeGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L74">
         Resource <strong>NodeGroup</strong>
     </a>
 </h3>
@@ -565,7 +565,7 @@ const example_AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachm
 ```
 
 <h4 class="pdoc-member-header" id="NodeGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L169"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L169"> <b>constructor</b></a>
 </h4>
 
 
@@ -579,7 +579,7 @@ Create a NodeGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NodeGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L84">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L84">method <b>get</b></a>
 </h4>
 
 
@@ -590,14 +590,14 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NodeGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L74">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L74">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NodeGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L95">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L95">method <b>isInstance</b></a>
 </h4>
 
 
@@ -608,7 +608,7 @@ Returns true if the given object is an instance of NodeGroup.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NodeGroup-amiType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L105">property <b>amiType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L105">property <b>amiType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>amiType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
 
 <h4 class="pdoc-member-header" id="NodeGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L109">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L109">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults 
 Amazon Resource Name (ARN) of the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroup-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L113">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L113">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ Amazon Resource Name (ARN) of the EKS Node Group.
 Name of the EKS Cluster.
 
 <h4 class="pdoc-member-header" id="NodeGroup-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L117">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L117">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ Name of the EKS Cluster.
 Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
 
 <h4 class="pdoc-member-header" id="NodeGroup-forceUpdateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L121">property <b>forceUpdateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L121">property <b>forceUpdateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceUpdateVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ Disk size in GiB for worker nodes. Defaults to `20`. This provider will only per
 Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
 
 <h4 class="pdoc-member-header" id="NodeGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -657,7 +657,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NodeGroup-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L125">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L125">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ deployments and may be missing (undefined) during planning phases.
 Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
 
 <h4 class="pdoc-member-header" id="NodeGroup-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L129">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L129">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ Set of instance types associated with the EKS Node Group. Defaults to `["t3.medi
 Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
 
 <h4 class="pdoc-member-header" id="NodeGroup-nodeGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L133">property <b>nodeGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L133">property <b>nodeGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ Key-value map of Kubernetes labels. Only labels that are applied with the EKS AP
 Name of the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroup-nodeRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L137">property <b>nodeRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L137">property <b>nodeRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ Name of the EKS Node Group.
 Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroup-releaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L141">property <b>releaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L141">property <b>releaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>releaseVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
 
 <h4 class="pdoc-member-header" id="NodeGroup-remoteAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L145">property <b>remoteAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L145">property <b>remoteAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remoteAccess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupRemoteAccess'>NodeGroupRemoteAccess</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -705,7 +705,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
 Configuration block with remote access settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="NodeGroup-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L149">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L149">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupResource'>NodeGroupResource</a>[]&gt;;</code></pre>
@@ -713,7 +713,7 @@ Configuration block with remote access settings. Detailed below.
 List of objects containing information about underlying resources.
 
 <h4 class="pdoc-member-header" id="NodeGroup-scalingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L153">property <b>scalingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L153">property <b>scalingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupScalingConfig'>NodeGroupScalingConfig</a>&gt;;</code></pre>
@@ -721,7 +721,7 @@ List of objects containing information about underlying resources.
 Configuration block with scaling settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="NodeGroup-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L157">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L157">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ Configuration block with scaling settings. Detailed below.
 Status of the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroup-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L161">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L161">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -737,7 +737,7 @@ Status of the EKS Node Group.
 Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 
 <h4 class="pdoc-member-header" id="NodeGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L165">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L165">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets m
 Key-value mapping of resource tags.
 
 <h4 class="pdoc-member-header" id="NodeGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L74">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L74">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -754,7 +754,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="NodeGroup-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L169">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L169">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -764,7 +764,7 @@ Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider wi
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L30">
         Function <strong>getCluster</strong>
     </a>
 </h3>
@@ -794,7 +794,7 @@ export const identity_oidc_issuer = example.identities[0].oidcs[0].issuer;
 ```
 
 <h3 class="pdoc-module-header" id="getClusterAuth" data-link-title="getClusterAuth">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getClusterAuth.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getClusterAuth.ts#L17">
         Function <strong>getClusterAuth</strong>
     </a>
 </h3>
@@ -813,7 +813,7 @@ server configured.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L302">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L302">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -823,7 +823,7 @@ server configured.
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enabledClusterLogTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L306">property <b>enabledClusterLogTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L306">property <b>enabledClusterLogTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledClusterLogTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -831,7 +831,7 @@ The set of arguments for constructing a Cluster resource.
 A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
 
 <h4 class="pdoc-member-header" id="ClusterArgs-encryptionConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L310">property <b>encryptionConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L310">property <b>encryptionConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEncryptionConfig'>ClusterEncryptionConfig</a>&gt;;</code></pre>
@@ -839,7 +839,7 @@ A list of the desired control plane logging to enable. For more information, see
 Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L314">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L314">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +847,7 @@ Configuration block with encryption configuration for the cluster. Only availabl
 Name of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L318">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L318">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -855,7 +855,7 @@ Name of the cluster.
 The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L322">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L322">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -863,7 +863,7 @@ The Amazon Resource Name (ARN) of the IAM role that provides permissions for the
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L326">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L326">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -871,7 +871,7 @@ Key-value map of resource tags.
 Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L330">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L330">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterVpcConfig'>ClusterVpcConfig</a>&gt;;</code></pre>
@@ -879,7 +879,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
 Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L243">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -889,7 +889,7 @@ Nested argument for the VPC associated with your cluster. Amazon EKS VPC resourc
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L247">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L247">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ Input properties used for looking up and filtering Cluster resources.
 The Amazon Resource Name (ARN) of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-certificateAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L251">property <b>certificateAuthority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L251">property <b>certificateAuthority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateAuthority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCertificateAuthority'>ClusterCertificateAuthority</a>&gt;;</code></pre>
@@ -905,12 +905,12 @@ The Amazon Resource Name (ARN) of the cluster.
 Nested attribute containing `certificate-authority-data` for your cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L252">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L252">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-enabledClusterLogTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L256">property <b>enabledClusterLogTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L256">property <b>enabledClusterLogTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledClusterLogTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -918,7 +918,7 @@ Nested attribute containing `certificate-authority-data` for your cluster.
 A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
 
 <h4 class="pdoc-member-header" id="ClusterState-encryptionConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L260">property <b>encryptionConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L260">property <b>encryptionConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEncryptionConfig'>ClusterEncryptionConfig</a>&gt;;</code></pre>
@@ -926,7 +926,7 @@ A list of the desired control plane logging to enable. For more information, see
 Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 
 <h4 class="pdoc-member-header" id="ClusterState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L264">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L264">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -934,7 +934,7 @@ Configuration block with encryption configuration for the cluster. Only availabl
 The endpoint for your Kubernetes API server.
 
 <h4 class="pdoc-member-header" id="ClusterState-identities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L268">property <b>identities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L268">property <b>identities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterIdentity'>ClusterIdentity</a>&gt;[]&gt;;</code></pre>
@@ -942,7 +942,7 @@ The endpoint for your Kubernetes API server.
 Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
 
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L272">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L272">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -950,7 +950,7 @@ Nested attribute containing identity provider information for your cluster. Only
 Name of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-platformVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L276">property <b>platformVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L276">property <b>platformVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -958,7 +958,7 @@ Name of the cluster.
 The platform version for the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L280">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L280">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -966,7 +966,7 @@ The platform version for the cluster.
 The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) if using the `aws.iam.RolePolicy` resource) or `aws.iam.RolePolicyAttachment` resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.
 
 <h4 class="pdoc-member-header" id="ClusterState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L284">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L284">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -974,7 +974,7 @@ The Amazon Resource Name (ARN) of the IAM role that provides permissions for the
 The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L288">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L288">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -982,7 +982,7 @@ The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="ClusterState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L292">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L292">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -990,7 +990,7 @@ Key-value map of resource tags.
 Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
 
 <h4 class="pdoc-member-header" id="ClusterState-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/cluster.ts#L296">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/cluster.ts#L296">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterVpcConfig'>ClusterVpcConfig</a>&gt;;</code></pre>
@@ -998,7 +998,7 @@ Desired Kubernetes master version. If you do not specify a value, the latest ava
 Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 
 <h3 class="pdoc-module-header" id="FargateProfileArgs" data-link-title="FargateProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L205">
         interface <strong>FargateProfileArgs</strong>
     </a>
 </h3>
@@ -1008,7 +1008,7 @@ Nested argument for the VPC associated with your cluster. Amazon EKS VPC resourc
 The set of arguments for constructing a FargateProfile resource.
 
 <h4 class="pdoc-member-header" id="FargateProfileArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L209">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L209">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1016,7 +1016,7 @@ The set of arguments for constructing a FargateProfile resource.
 Name of the EKS Cluster.
 
 <h4 class="pdoc-member-header" id="FargateProfileArgs-fargateProfileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L213">property <b>fargateProfileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L213">property <b>fargateProfileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fargateProfileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ Name of the EKS Cluster.
 Name of the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfileArgs-podExecutionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L217">property <b>podExecutionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L217">property <b>podExecutionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podExecutionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,7 +1032,7 @@ Name of the EKS Fargate Profile.
 Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfileArgs-selectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L221">property <b>selectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L221">property <b>selectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selectors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FargateProfileSelector'>FargateProfileSelector</a>&gt;[]&gt;;</code></pre>
@@ -1040,7 +1040,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
 
 <h4 class="pdoc-member-header" id="FargateProfileArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L225">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L225">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fa
 Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 
 <h4 class="pdoc-member-header" id="FargateProfileArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L229">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L229">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. Th
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="FargateProfileState" data-link-title="FargateProfileState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L167">
         interface <strong>FargateProfileState</strong>
     </a>
 </h3>
@@ -1066,7 +1066,7 @@ Key-value map of resource tags.
 Input properties used for looking up and filtering FargateProfile resources.
 
 <h4 class="pdoc-member-header" id="FargateProfileState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L171">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L171">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1074,7 +1074,7 @@ Input properties used for looking up and filtering FargateProfile resources.
 Amazon Resource Name (ARN) of the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfileState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L175">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L175">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1082,7 +1082,7 @@ Amazon Resource Name (ARN) of the EKS Fargate Profile.
 Name of the EKS Cluster.
 
 <h4 class="pdoc-member-header" id="FargateProfileState-fargateProfileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L179">property <b>fargateProfileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L179">property <b>fargateProfileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fargateProfileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ Name of the EKS Cluster.
 Name of the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfileState-podExecutionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L183">property <b>podExecutionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L183">property <b>podExecutionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podExecutionRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1098,7 +1098,7 @@ Name of the EKS Fargate Profile.
 Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfileState-selectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L187">property <b>selectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L187">property <b>selectors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selectors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FargateProfileSelector'>FargateProfileSelector</a>&gt;[]&gt;;</code></pre>
@@ -1106,7 +1106,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
 
 <h4 class="pdoc-member-header" id="FargateProfileState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L191">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L191">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1114,7 +1114,7 @@ Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fa
 Status of the EKS Fargate Profile.
 
 <h4 class="pdoc-member-header" id="FargateProfileState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L195">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L195">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ Status of the EKS Fargate Profile.
 Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 
 <h4 class="pdoc-member-header" id="FargateProfileState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/fargateProfile.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/fargateProfile.ts#L199">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1130,7 +1130,7 @@ Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. Th
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L47">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -1140,7 +1140,7 @@ Key-value map of resource tags.
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1148,7 +1148,7 @@ A collection of arguments for invoking getCluster.
 The name of the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L55">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L55">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1156,7 +1156,7 @@ The name of the cluster
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="GetClusterAuthArgs" data-link-title="GetClusterAuthArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getClusterAuth.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getClusterAuth.ts#L33">
         interface <strong>GetClusterAuthArgs</strong>
     </a>
 </h3>
@@ -1166,7 +1166,7 @@ Key-value map of resource tags.
 A collection of arguments for invoking getClusterAuth.
 
 <h4 class="pdoc-member-header" id="GetClusterAuthArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getClusterAuth.ts#L37">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getClusterAuth.ts#L37">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1174,7 +1174,7 @@ A collection of arguments for invoking getClusterAuth.
 The name of the cluster
 
 <h3 class="pdoc-module-header" id="GetClusterAuthResult" data-link-title="GetClusterAuthResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getClusterAuth.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getClusterAuth.ts#L43">
         interface <strong>GetClusterAuthResult</strong>
     </a>
 </h3>
@@ -1184,7 +1184,7 @@ The name of the cluster
 A collection of values returned by getClusterAuth.
 
 <h4 class="pdoc-member-header" id="GetClusterAuthResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getClusterAuth.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getClusterAuth.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1192,12 +1192,12 @@ A collection of values returned by getClusterAuth.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterAuthResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getClusterAuth.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getClusterAuth.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterAuthResult-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getClusterAuth.ts#L52">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getClusterAuth.ts#L52">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1205,7 +1205,7 @@ The provider-assigned unique ID for this managed resource.
 The token to use to authenticate with the cluster.
 
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L61">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -1215,7 +1215,7 @@ The token to use to authenticate with the cluster.
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L65">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L65">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1223,7 +1223,7 @@ A collection of values returned by getCluster.
 The Amazon Resource Name (ARN) of the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-certificateAuthority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L69">property <b>certificateAuthority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L69">property <b>certificateAuthority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateAuthority: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCertificateAuthority'>GetClusterCertificateAuthority</a>;</code></pre>
@@ -1231,7 +1231,7 @@ The Amazon Resource Name (ARN) of the cluster.
 Nested attribute containing `certificate-authority-data` for your cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L73">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L73">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1239,7 +1239,7 @@ Nested attribute containing `certificate-authority-data` for your cluster.
 The Unix epoch time stamp in seconds for when the cluster was created.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-enabledClusterLogTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L77">property <b>enabledClusterLogTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L77">property <b>enabledClusterLogTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledClusterLogTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1247,7 +1247,7 @@ The Unix epoch time stamp in seconds for when the cluster was created.
 The enabled control plane logs.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L81">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L81">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1255,7 +1255,7 @@ The enabled control plane logs.
 The endpoint for your Kubernetes API server.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1263,7 +1263,7 @@ The endpoint for your Kubernetes API server.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-identities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L89">property <b>identities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L89">property <b>identities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterIdentity'>GetClusterIdentity</a>[];</code></pre>
@@ -1271,12 +1271,12 @@ The provider-assigned unique ID for this managed resource.
 Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-platformVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L94">property <b>platformVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L94">property <b>platformVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1284,7 +1284,7 @@ Nested attribute containing identity provider information for your cluster. Only
 The platform version for the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L98">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L98">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1292,7 +1292,7 @@ The platform version for the cluster.
 The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L102">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L102">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1300,7 +1300,7 @@ The Amazon Resource Name (ARN) of the IAM role that provides permissions for the
 The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L106">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L106">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1308,7 +1308,7 @@ The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L110">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L110">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1316,7 +1316,7 @@ Key-value map of resource tags.
 The Kubernetes server version for the cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/getCluster.ts#L114">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/getCluster.ts#L114">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterVpcConfig'>GetClusterVpcConfig</a>;</code></pre>
@@ -1324,7 +1324,7 @@ The Kubernetes server version for the cluster.
 Nested list containing VPC configuration for the cluster.
 
 <h3 class="pdoc-module-header" id="NodeGroupArgs" data-link-title="NodeGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L320">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L320">
         interface <strong>NodeGroupArgs</strong>
     </a>
 </h3>
@@ -1334,7 +1334,7 @@ Nested list containing VPC configuration for the cluster.
 The set of arguments for constructing a NodeGroup resource.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-amiType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L324">property <b>amiType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L324">property <b>amiType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>amiType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1342,7 +1342,7 @@ The set of arguments for constructing a NodeGroup resource.
 Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L328">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L328">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1350,7 +1350,7 @@ Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults 
 Name of the EKS Cluster.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L332">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L332">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1358,7 +1358,7 @@ Name of the EKS Cluster.
 Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-forceUpdateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L336">property <b>forceUpdateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L336">property <b>forceUpdateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceUpdateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1366,7 +1366,7 @@ Disk size in GiB for worker nodes. Defaults to `20`. This provider will only per
 Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L340">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L340">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1374,7 +1374,7 @@ Force version update if existing pods are unable to be drained due to a pod disr
 Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L344">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L344">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1382,7 +1382,7 @@ Set of instance types associated with the EKS Node Group. Defaults to `["t3.medi
 Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-nodeGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L348">property <b>nodeGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L348">property <b>nodeGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1390,7 +1390,7 @@ Key-value map of Kubernetes labels. Only labels that are applied with the EKS AP
 Name of the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-nodeRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L352">property <b>nodeRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L352">property <b>nodeRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1398,7 +1398,7 @@ Name of the EKS Node Group.
 Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-releaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L356">property <b>releaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L356">property <b>releaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1406,7 +1406,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-remoteAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L360">property <b>remoteAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L360">property <b>remoteAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remoteAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupRemoteAccess'>NodeGroupRemoteAccess</a>&gt;;</code></pre>
@@ -1414,7 +1414,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
 Configuration block with remote access settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-scalingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L364">property <b>scalingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L364">property <b>scalingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig'>NodeGroupScalingConfig</a>&gt;;</code></pre>
@@ -1422,7 +1422,7 @@ Configuration block with remote access settings. Detailed below.
 Configuration block with scaling settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L368">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L368">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1430,7 +1430,7 @@ Configuration block with scaling settings. Detailed below.
 Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L372">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L372">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1438,7 +1438,7 @@ Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets m
 Key-value mapping of resource tags.
 
 <h4 class="pdoc-member-header" id="NodeGroupArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L376">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L376">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1446,7 +1446,7 @@ Key-value mapping of resource tags.
 Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 
 <h3 class="pdoc-module-header" id="NodeGroupState" data-link-title="NodeGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L246">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L246">
         interface <strong>NodeGroupState</strong>
     </a>
 </h3>
@@ -1456,7 +1456,7 @@ Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider wi
 Input properties used for looking up and filtering NodeGroup resources.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-amiType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L250">property <b>amiType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L250">property <b>amiType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>amiType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1464,7 +1464,7 @@ Input properties used for looking up and filtering NodeGroup resources.
 Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L254">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L254">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1472,7 +1472,7 @@ Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults 
 Amazon Resource Name (ARN) of the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L258">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L258">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1480,7 +1480,7 @@ Amazon Resource Name (ARN) of the EKS Node Group.
 Name of the EKS Cluster.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L262">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L262">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1488,7 +1488,7 @@ Name of the EKS Cluster.
 Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-forceUpdateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L266">property <b>forceUpdateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L266">property <b>forceUpdateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceUpdateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1496,7 +1496,7 @@ Disk size in GiB for worker nodes. Defaults to `20`. This provider will only per
 Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L270">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L270">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1504,7 +1504,7 @@ Force version update if existing pods are unable to be drained due to a pod disr
 Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L274">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L274">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1512,7 +1512,7 @@ Set of instance types associated with the EKS Node Group. Defaults to `["t3.medi
 Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-nodeGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L278">property <b>nodeGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L278">property <b>nodeGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1520,7 +1520,7 @@ Key-value map of Kubernetes labels. Only labels that are applied with the EKS AP
 Name of the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-nodeRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L282">property <b>nodeRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L282">property <b>nodeRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1528,7 +1528,7 @@ Name of the EKS Node Group.
 Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-releaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L286">property <b>releaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L286">property <b>releaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1536,7 +1536,7 @@ Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS
 AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-remoteAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L290">property <b>remoteAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L290">property <b>remoteAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remoteAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupRemoteAccess'>NodeGroupRemoteAccess</a>&gt;;</code></pre>
@@ -1544,7 +1544,7 @@ AMI version of the EKS Node Group. Defaults to latest version for Kubernetes ver
 Configuration block with remote access settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L294">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L294">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupResource'>NodeGroupResource</a>&gt;[]&gt;;</code></pre>
@@ -1552,7 +1552,7 @@ Configuration block with remote access settings. Detailed below.
 List of objects containing information about underlying resources.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-scalingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L298">property <b>scalingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L298">property <b>scalingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig'>NodeGroupScalingConfig</a>&gt;;</code></pre>
@@ -1560,7 +1560,7 @@ List of objects containing information about underlying resources.
 Configuration block with scaling settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L302">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L302">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1568,7 +1568,7 @@ Configuration block with scaling settings. Detailed below.
 Status of the EKS Node Group.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L306">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L306">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1576,7 +1576,7 @@ Status of the EKS Node Group.
 Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 
 <h4 class="pdoc-member-header" id="NodeGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L310">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L310">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1584,7 +1584,7 @@ Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets m
 Key-value mapping of resource tags.
 
 <h4 class="pdoc-member-header" id="NodeGroupState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/eks/nodeGroup.ts#L314">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/eks/nodeGroup.ts#L314">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

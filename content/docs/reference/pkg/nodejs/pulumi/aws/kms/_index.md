@@ -3,7 +3,7 @@ title: "Module kms"
 title_tag: "Module kms | Package @pulumi/aws | Node.js SDK"
 linktitle: "kms"
 meta_desc: "Explore members of the kms module in the @pulumi/aws package."
-git_sha: "c672e225a765b11b07ea23e7b1b411483d7f38da"
+git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
 block_external_search_index: true
 ---
 
@@ -67,7 +67,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Alias" data-link-title="Alias">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L26">
         Resource <strong>Alias</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ const alias = new aws.kms.Alias("a", {
 ```
 
 <h4 class="pdoc-member-header" id="Alias-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Create a Alias resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Alias-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -118,14 +118,14 @@ Get an existing Alias resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Alias-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Alias-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -136,7 +136,7 @@ Returns true if the given object is an instance of Alias.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Alias-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L57">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the key alias.
 
 <h4 class="pdoc-member-header" id="Alias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Alias-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
 
 <h4 class="pdoc-member-header" id="Alias-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L66">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L66">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="Alias-targetKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L70">property <b>targetKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L70">property <b>targetKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
 The Amazon Resource Name (ARN) of the target key identifier.
 
 <h4 class="pdoc-member-header" id="Alias-targetKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L74">property <b>targetKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L74">property <b>targetKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ The Amazon Resource Name (ARN) of the target key identifier.
 Identifier for the key for which the alias is for, can be either an ARN or key_id.
 
 <h4 class="pdoc-member-header" id="Alias-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -195,7 +195,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Ciphertext" data-link-title="Ciphertext">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L37">
         Resource <strong>Ciphertext</strong>
     </a>
 </h3>
@@ -232,7 +232,7 @@ const oauth = new aws.kms.Ciphertext("oauth", {
 ```
 
 <h4 class="pdoc-member-header" id="Ciphertext-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -246,7 +246,7 @@ Create a Ciphertext resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Ciphertext-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -257,14 +257,14 @@ Get an existing Ciphertext resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Ciphertext-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Ciphertext-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -275,7 +275,7 @@ Returns true if the given object is an instance of Ciphertext.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Ciphertext-ciphertextBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L68">property <b>ciphertextBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L68">property <b>ciphertextBlob</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ciphertextBlob: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +283,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Base64 encoded ciphertext
 
 <h4 class="pdoc-member-header" id="Ciphertext-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L72">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L72">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>context: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ Base64 encoded ciphertext
 An optional mapping that makes up the encryption context.
 
 <h4 class="pdoc-member-header" id="Ciphertext-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -300,7 +300,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Ciphertext-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L76">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L76">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ deployments and may be missing (undefined) during planning phases.
 Globally unique key ID for the customer master key.
 
 <h4 class="pdoc-member-header" id="Ciphertext-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L80">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L80">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>plaintext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ Globally unique key ID for the customer master key.
 Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
 
 <h4 class="pdoc-member-header" id="Ciphertext-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -325,7 +325,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ExternalKey" data-link-title="ExternalKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L25">
         Resource <strong>ExternalKey</strong>
     </a>
 </h3>
@@ -350,7 +350,7 @@ const example = new aws.kms.ExternalKey("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ExternalKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -364,7 +364,7 @@ Create a ExternalKey resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ExternalKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -375,14 +375,14 @@ Get an existing ExternalKey resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ExternalKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ExternalKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -393,7 +393,7 @@ Returns true if the given object is an instance of ExternalKey.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ExternalKey-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L56">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L56">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the key.
 
 <h4 class="pdoc-member-header" id="ExternalKey-deletionWindowInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L60">property <b>deletionWindowInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L60">property <b>deletionWindowInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionWindowInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ The Amazon Resource Name (ARN) of the key.
 Duration in days after which the key is deleted after destruction of the resource. Must be between `7` and `30` days. Defaults to `30`.
 
 <h4 class="pdoc-member-header" id="ExternalKey-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ Duration in days after which the key is deleted after destruction of the resourc
 Description of the key.
 
 <h4 class="pdoc-member-header" id="ExternalKey-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L68">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L68">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ Description of the key.
 Specifies whether the key is enabled. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
 
 <h4 class="pdoc-member-header" id="ExternalKey-expirationModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L72">property <b>expirationModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L72">property <b>expirationModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationModel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ Specifies whether the key is enabled. Keys pending import can only be `false`. I
 Whether the key material expires. Empty when pending key material import, otherwise `KEY_MATERIAL_EXPIRES` or `KEY_MATERIAL_DOES_NOT_EXPIRE`.
 
 <h4 class="pdoc-member-header" id="ExternalKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -442,7 +442,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ExternalKey-keyMaterialBase64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L76">property <b>keyMaterialBase64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L76">property <b>keyMaterialBase64</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyMaterialBase64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -450,7 +450,7 @@ deployments and may be missing (undefined) during planning phases.
 Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
 
 <h4 class="pdoc-member-header" id="ExternalKey-keyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L80">property <b>keyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L80">property <b>keyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ Base64 encoded 256-bit symmetric encryption key material to import. The CMK is p
 The state of the CMK.
 
 <h4 class="pdoc-member-header" id="ExternalKey-keyUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L84">property <b>keyUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L84">property <b>keyUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyUsage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -466,7 +466,7 @@ The state of the CMK.
 The cryptographic operations for which you can use the CMK.
 
 <h4 class="pdoc-member-header" id="ExternalKey-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L88">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L88">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -474,7 +474,7 @@ The cryptographic operations for which you can use the CMK.
 A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.
 
 <h4 class="pdoc-member-header" id="ExternalKey-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L92">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L92">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -482,7 +482,7 @@ A key policy JSON document. If you do not provide a key policy, AWS KMS attaches
 A key-value map of tags to assign to the key.
 
 <h4 class="pdoc-member-header" id="ExternalKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -491,7 +491,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ExternalKey-validTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L96">property <b>validTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L96">property <b>validTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -499,7 +499,7 @@ deployments.
 Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 
 <h3 class="pdoc-module-header" id="Grant" data-link-title="Grant">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L53">
         Resource <strong>Grant</strong>
     </a>
 </h3>
@@ -550,7 +550,7 @@ const grant = new aws.kms.Grant("a", {
 ```
 
 <h4 class="pdoc-member-header" id="Grant-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L121"> <b>constructor</b></a>
 </h4>
 
 
@@ -564,7 +564,7 @@ Create a Grant resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Grant-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L63">method <b>get</b></a>
 </h4>
 
 
@@ -575,14 +575,14 @@ Get an existing Grant resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Grant-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L53">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L53">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Grant-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L74">method <b>isInstance</b></a>
 </h4>
 
 
@@ -593,7 +593,7 @@ Returns true if the given object is an instance of Grant.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Grant-constraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L84">property <b>constraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L84">property <b>constraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>constraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GrantConstraint'>GrantConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -601,7 +601,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 
 <h4 class="pdoc-member-header" id="Grant-grantCreationTokens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L88">property <b>grantCreationTokens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L88">property <b>grantCreationTokens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>grantCreationTokens: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -609,7 +609,7 @@ A structure that you can use to allow certain operations in the grant only when 
 A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
 
 <h4 class="pdoc-member-header" id="Grant-grantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L92">property <b>grantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L92">property <b>grantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>grantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -617,7 +617,7 @@ A list of grant tokens to be used when creating the grant. See [Grant Tokens](ht
 The unique identifier for the grant.
 
 <h4 class="pdoc-member-header" id="Grant-grantToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L96">property <b>grantToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L96">property <b>grantToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>grantToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -625,7 +625,7 @@ The unique identifier for the grant.
 The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
 
 <h4 class="pdoc-member-header" id="Grant-granteePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L100">property <b>granteePrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L100">property <b>granteePrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>granteePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ The grant token for the created grant. For more information, see [Grant Tokens](
 The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.
 
 <h4 class="pdoc-member-header" id="Grant-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -642,7 +642,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Grant-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L104">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L104">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ deployments and may be missing (undefined) during planning phases.
 The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
 
 <h4 class="pdoc-member-header" id="Grant-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ The unique identifier for the customer master key (CMK) that the grant applies t
 A friendly name for identifying the grant.
 
 <h4 class="pdoc-member-header" id="Grant-operations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L112">property <b>operations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L112">property <b>operations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -666,7 +666,7 @@ A friendly name for identifying the grant.
 A list of operations that the grant permits. The permitted values are: `Decrypt, Encrypt, GenerateDataKey, GenerateDataKeyWithoutPlaintext, ReEncryptFrom, ReEncryptTo, CreateGrant, RetireGrant, DescribeKey`
 
 <h4 class="pdoc-member-header" id="Grant-retireOnDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L117">property <b>retireOnDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L117">property <b>retireOnDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retireOnDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ A list of operations that the grant permits. The permitted values are: `Decrypt,
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
 
 <h4 class="pdoc-member-header" id="Grant-retiringPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L121">property <b>retiringPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L121">property <b>retiringPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retiringPrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.
 
 <h4 class="pdoc-member-header" id="Grant-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -692,7 +692,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Key" data-link-title="Key">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L24">
         Resource <strong>Key</strong>
     </a>
 </h3>
@@ -716,7 +716,7 @@ const key = new aws.kms.Key("a", {
 ```
 
 <h4 class="pdoc-member-header" id="Key-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -730,7 +730,7 @@ Create a Key resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Key-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -741,14 +741,14 @@ Get an existing Key resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Key-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Key-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -759,7 +759,7 @@ Returns true if the given object is an instance of Key.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Key-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the key.
 
 <h4 class="pdoc-member-header" id="Key-customerMasterKeySpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L60">property <b>customerMasterKeySpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L60">property <b>customerMasterKeySpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customerMasterKeySpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -776,7 +776,7 @@ Specifies whether the key contains a symmetric key or an asymmetric key pair and
 Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIST_P256`, `ECC_NIST_P384`, `ECC_NIST_P521`, or `ECC_SECG_P256K1`. Defaults to `SYMMETRIC_DEFAULT`. For help with choosing a key spec, see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html).
 
 <h4 class="pdoc-member-header" id="Key-deletionWindowInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L65">property <b>deletionWindowInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L65">property <b>deletionWindowInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionWindowInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -785,7 +785,7 @@ Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 
 <h4 class="pdoc-member-header" id="Key-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -793,7 +793,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
 The description of the key as viewed in AWS console.
 
 <h4 class="pdoc-member-header" id="Key-enableKeyRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L74">property <b>enableKeyRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L74">property <b>enableKeyRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableKeyRotation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developer
 is enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Key-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -811,7 +811,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Key-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L78">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L78">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -819,7 +819,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies whether the key is enabled. Defaults to true.
 
 <h4 class="pdoc-member-header" id="Key-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L82">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L82">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -827,7 +827,7 @@ Specifies whether the key is enabled. Defaults to true.
 The globally unique identifier for the key.
 
 <h4 class="pdoc-member-header" id="Key-keyUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L87">property <b>keyUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L87">property <b>keyUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyUsage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ Specifies the intended use of the key. Valid values: `ENCRYPT_DECRYPT` or `SIGN_
 Defaults to `ENCRYPT_DECRYPT`.
 
 <h4 class="pdoc-member-header" id="Key-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L91">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L91">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ Defaults to `ENCRYPT_DECRYPT`.
 A valid policy JSON document.
 
 <h4 class="pdoc-member-header" id="Key-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ A valid policy JSON document.
 A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="Key-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -863,7 +863,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAlias" data-link-title="getAlias">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L27">
         Function <strong>getAlias</strong>
     </a>
 </h3>
@@ -890,7 +890,7 @@ const s3 = pulumi.output(aws.kms.getAlias({
 ```
 
 <h3 class="pdoc-module-header" id="getCipherText" data-link-title="getCipherText">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L37">
         Function <strong>getCipherText</strong>
     </a>
 </h3>
@@ -927,7 +927,7 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
 ```
 
 <h3 class="pdoc-module-header" id="getKey" data-link-title="getKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L28">
         Function <strong>getKey</strong>
     </a>
 </h3>
@@ -955,7 +955,7 @@ const foo = pulumi.output(aws.kms.getKey({
 ```
 
 <h3 class="pdoc-module-header" id="getSecret" data-link-title="getSecret">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecret.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecret.ts#L9">
         Function <strong>getSecret</strong>
     </a>
 </h3>
@@ -964,7 +964,7 @@ const foo = pulumi.output(aws.kms.getKey({
 <pre class="highlight"><code><span class='kd'></span>getSecret(args: <a href='#GetSecretArgs'>GetSecretArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSecretResult'>GetSecretResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getSecrets" data-link-title="getSecrets">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecrets.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecrets.ts#L12">
         Function <strong>getSecrets</strong>
     </a>
 </h3>
@@ -978,7 +978,7 @@ Decrypt multiple secrets from data encrypted with the AWS KMS service.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AliasArgs" data-link-title="AliasArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L145">
         interface <strong>AliasArgs</strong>
     </a>
 </h3>
@@ -988,7 +988,7 @@ Decrypt multiple secrets from data encrypted with the AWS KMS service.
 The set of arguments for constructing a Alias resource.
 
 <h4 class="pdoc-member-header" id="AliasArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L149">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -996,7 +996,7 @@ The set of arguments for constructing a Alias resource.
 The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
 
 <h4 class="pdoc-member-header" id="AliasArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L154">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L154">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1005,7 +1005,7 @@ Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="AliasArgs-targetKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L158">property <b>targetKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L158">property <b>targetKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1013,7 +1013,7 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
 Identifier for the key for which the alias is for, can be either an ARN or key_id.
 
 <h3 class="pdoc-module-header" id="AliasState" data-link-title="AliasState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L118">
         interface <strong>AliasState</strong>
     </a>
 </h3>
@@ -1023,7 +1023,7 @@ Identifier for the key for which the alias is for, can be either an ARN or key_i
 Input properties used for looking up and filtering Alias resources.
 
 <h4 class="pdoc-member-header" id="AliasState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L122">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L122">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1031,7 +1031,7 @@ Input properties used for looking up and filtering Alias resources.
 The Amazon Resource Name (ARN) of the key alias.
 
 <h4 class="pdoc-member-header" id="AliasState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ The Amazon Resource Name (ARN) of the key alias.
 The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
 
 <h4 class="pdoc-member-header" id="AliasState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L131">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L131">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ Creates an unique alias beginning with the specified prefix.
 The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="AliasState-targetKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L135">property <b>targetKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L135">property <b>targetKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
 The Amazon Resource Name (ARN) of the target key identifier.
 
 <h4 class="pdoc-member-header" id="AliasState-targetKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/alias.ts#L139">property <b>targetKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/alias.ts#L139">property <b>targetKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1064,7 +1064,7 @@ The Amazon Resource Name (ARN) of the target key identifier.
 Identifier for the key for which the alias is for, can be either an ARN or key_id.
 
 <h3 class="pdoc-module-header" id="CiphertextArgs" data-link-title="CiphertextArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L147">
         interface <strong>CiphertextArgs</strong>
     </a>
 </h3>
@@ -1074,7 +1074,7 @@ Identifier for the key for which the alias is for, can be either an ARN or key_i
 The set of arguments for constructing a Ciphertext resource.
 
 <h4 class="pdoc-member-header" id="CiphertextArgs-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L151">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L151">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1082,7 +1082,7 @@ The set of arguments for constructing a Ciphertext resource.
 An optional mapping that makes up the encryption context.
 
 <h4 class="pdoc-member-header" id="CiphertextArgs-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L155">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L155">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ An optional mapping that makes up the encryption context.
 Globally unique key ID for the customer master key.
 
 <h4 class="pdoc-member-header" id="CiphertextArgs-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L159">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L159">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1098,7 +1098,7 @@ Globally unique key ID for the customer master key.
 Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
 
 <h3 class="pdoc-module-header" id="CiphertextState" data-link-title="CiphertextState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L125">
         interface <strong>CiphertextState</strong>
     </a>
 </h3>
@@ -1108,7 +1108,7 @@ Data to be encrypted. Note that this may show up in logs, and it will be stored 
 Input properties used for looking up and filtering Ciphertext resources.
 
 <h4 class="pdoc-member-header" id="CiphertextState-ciphertextBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L129">property <b>ciphertextBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L129">property <b>ciphertextBlob</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertextBlob?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1116,7 +1116,7 @@ Input properties used for looking up and filtering Ciphertext resources.
 Base64 encoded ciphertext
 
 <h4 class="pdoc-member-header" id="CiphertextState-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L133">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L133">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1124,7 +1124,7 @@ Base64 encoded ciphertext
 An optional mapping that makes up the encryption context.
 
 <h4 class="pdoc-member-header" id="CiphertextState-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L137">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L137">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1132,7 +1132,7 @@ An optional mapping that makes up the encryption context.
 Globally unique key ID for the customer master key.
 
 <h4 class="pdoc-member-header" id="CiphertextState-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/ciphertext.ts#L141">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/ciphertext.ts#L141">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1140,7 +1140,7 @@ Globally unique key ID for the customer master key.
 Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
 
 <h3 class="pdoc-module-header" id="ExternalKeyArgs" data-link-title="ExternalKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L199">
         interface <strong>ExternalKeyArgs</strong>
     </a>
 </h3>
@@ -1150,7 +1150,7 @@ Data to be encrypted. Note that this may show up in logs, and it will be stored 
 The set of arguments for constructing a ExternalKey resource.
 
 <h4 class="pdoc-member-header" id="ExternalKeyArgs-deletionWindowInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L203">property <b>deletionWindowInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L203">property <b>deletionWindowInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionWindowInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1158,7 +1158,7 @@ The set of arguments for constructing a ExternalKey resource.
 Duration in days after which the key is deleted after destruction of the resource. Must be between `7` and `30` days. Defaults to `30`.
 
 <h4 class="pdoc-member-header" id="ExternalKeyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L207">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L207">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1166,7 +1166,7 @@ Duration in days after which the key is deleted after destruction of the resourc
 Description of the key.
 
 <h4 class="pdoc-member-header" id="ExternalKeyArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L211">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L211">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1174,7 +1174,7 @@ Description of the key.
 Specifies whether the key is enabled. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
 
 <h4 class="pdoc-member-header" id="ExternalKeyArgs-keyMaterialBase64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L215">property <b>keyMaterialBase64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L215">property <b>keyMaterialBase64</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyMaterialBase64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1182,7 +1182,7 @@ Specifies whether the key is enabled. Keys pending import can only be `false`. I
 Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
 
 <h4 class="pdoc-member-header" id="ExternalKeyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L219">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L219">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1190,7 +1190,7 @@ Base64 encoded 256-bit symmetric encryption key material to import. The CMK is p
 A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.
 
 <h4 class="pdoc-member-header" id="ExternalKeyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L223">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L223">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1198,7 +1198,7 @@ A key policy JSON document. If you do not provide a key policy, AWS KMS attaches
 A key-value map of tags to assign to the key.
 
 <h4 class="pdoc-member-header" id="ExternalKeyArgs-validTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L227">property <b>validTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L227">property <b>validTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1206,7 +1206,7 @@ A key-value map of tags to assign to the key.
 Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 
 <h3 class="pdoc-module-header" id="ExternalKeyState" data-link-title="ExternalKeyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L149">
         interface <strong>ExternalKeyState</strong>
     </a>
 </h3>
@@ -1216,7 +1216,7 @@ Time at which the imported key material expires. When the key material expires, 
 Input properties used for looking up and filtering ExternalKey resources.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L153">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L153">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1224,7 +1224,7 @@ Input properties used for looking up and filtering ExternalKey resources.
 The Amazon Resource Name (ARN) of the key.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-deletionWindowInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L157">property <b>deletionWindowInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L157">property <b>deletionWindowInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionWindowInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1232,7 +1232,7 @@ The Amazon Resource Name (ARN) of the key.
 Duration in days after which the key is deleted after destruction of the resource. Must be between `7` and `30` days. Defaults to `30`.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L161">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1240,7 +1240,7 @@ Duration in days after which the key is deleted after destruction of the resourc
 Description of the key.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L165">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L165">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1248,7 +1248,7 @@ Description of the key.
 Specifies whether the key is enabled. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-expirationModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L169">property <b>expirationModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L169">property <b>expirationModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationModel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1256,7 +1256,7 @@ Specifies whether the key is enabled. Keys pending import can only be `false`. I
 Whether the key material expires. Empty when pending key material import, otherwise `KEY_MATERIAL_EXPIRES` or `KEY_MATERIAL_DOES_NOT_EXPIRE`.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-keyMaterialBase64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L173">property <b>keyMaterialBase64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L173">property <b>keyMaterialBase64</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyMaterialBase64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1264,7 +1264,7 @@ Whether the key material expires. Empty when pending key material import, otherw
 Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-keyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L177">property <b>keyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L177">property <b>keyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1272,7 +1272,7 @@ Base64 encoded 256-bit symmetric encryption key material to import. The CMK is p
 The state of the CMK.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-keyUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L181">property <b>keyUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L181">property <b>keyUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyUsage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1280,7 +1280,7 @@ The state of the CMK.
 The cryptographic operations for which you can use the CMK.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L185">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L185">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1288,7 +1288,7 @@ The cryptographic operations for which you can use the CMK.
 A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L189">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L189">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1296,7 +1296,7 @@ A key policy JSON document. If you do not provide a key policy, AWS KMS attaches
 A key-value map of tags to assign to the key.
 
 <h4 class="pdoc-member-header" id="ExternalKeyState-validTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/externalKey.ts#L193">property <b>validTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/externalKey.ts#L193">property <b>validTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1304,7 +1304,7 @@ A key-value map of tags to assign to the key.
 Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 
 <h3 class="pdoc-module-header" id="GetAliasArgs" data-link-title="GetAliasArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L43">
         interface <strong>GetAliasArgs</strong>
     </a>
 </h3>
@@ -1314,7 +1314,7 @@ Time at which the imported key material expires. When the key material expires, 
 A collection of arguments for invoking getAlias.
 
 <h4 class="pdoc-member-header" id="GetAliasArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L47">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1322,7 +1322,7 @@ A collection of arguments for invoking getAlias.
 The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
 
 <h3 class="pdoc-module-header" id="GetAliasResult" data-link-title="GetAliasResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L53">
         interface <strong>GetAliasResult</strong>
     </a>
 </h3>
@@ -1332,7 +1332,7 @@ The display name of the alias. The name must start with the word "alias" followe
 A collection of values returned by getAlias.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L57">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1340,7 +1340,7 @@ A collection of values returned by getAlias.
 The Amazon Resource Name(ARN) of the key alias.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1348,12 +1348,12 @@ The Amazon Resource Name(ARN) of the key alias.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAliasResult-targetKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L66">property <b>targetKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L66">property <b>targetKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetKeyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1361,7 +1361,7 @@ The provider-assigned unique ID for this managed resource.
 ARN pointed to by the alias.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-targetKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getAlias.ts#L70">property <b>targetKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getAlias.ts#L70">property <b>targetKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1369,7 +1369,7 @@ ARN pointed to by the alias.
 Key identifier pointed to by the alias.
 
 <h3 class="pdoc-module-header" id="GetCipherTextArgs" data-link-title="GetCipherTextArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L55">
         interface <strong>GetCipherTextArgs</strong>
     </a>
 </h3>
@@ -1379,7 +1379,7 @@ Key identifier pointed to by the alias.
 A collection of arguments for invoking getCipherText.
 
 <h4 class="pdoc-member-header" id="GetCipherTextArgs-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L59">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L59">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1387,7 +1387,7 @@ A collection of arguments for invoking getCipherText.
 An optional mapping that makes up the encryption context.
 
 <h4 class="pdoc-member-header" id="GetCipherTextArgs-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L63">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L63">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1395,7 +1395,7 @@ An optional mapping that makes up the encryption context.
 Globally unique key ID for the customer master key.
 
 <h4 class="pdoc-member-header" id="GetCipherTextArgs-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L67">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L67">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1403,7 +1403,7 @@ Globally unique key ID for the customer master key.
 Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
 
 <h3 class="pdoc-module-header" id="GetCipherTextResult" data-link-title="GetCipherTextResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L73">
         interface <strong>GetCipherTextResult</strong>
     </a>
 </h3>
@@ -1413,7 +1413,7 @@ Data to be encrypted. Note that this may show up in logs, and it will be stored 
 A collection of values returned by getCipherText.
 
 <h4 class="pdoc-member-header" id="GetCipherTextResult-ciphertextBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L77">property <b>ciphertextBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L77">property <b>ciphertextBlob</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertextBlob: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1421,12 +1421,12 @@ A collection of values returned by getCipherText.
 Base64 encoded ciphertext
 
 <h4 class="pdoc-member-header" id="GetCipherTextResult-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L78">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L78">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetCipherTextResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1434,17 +1434,17 @@ Base64 encoded ciphertext
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCipherTextResult-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L83">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L83">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCipherTextResult-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getCipherText.ts#L84">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getCipherText.ts#L84">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKeyArgs" data-link-title="GetKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L45">
         interface <strong>GetKeyArgs</strong>
     </a>
 </h3>
@@ -1454,7 +1454,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getKey.
 
 <h4 class="pdoc-member-header" id="GetKeyArgs-grantTokens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L49">property <b>grantTokens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L49">property <b>grantTokens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTokens?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1462,7 +1462,7 @@ A collection of arguments for invoking getKey.
 List of grant tokens
 
 <h4 class="pdoc-member-header" id="GetKeyArgs-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L57">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L57">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1474,7 +1474,7 @@ Key identifier which can be one of the following format:
 * Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
 
 <h3 class="pdoc-module-header" id="GetKeyResult" data-link-title="GetKeyResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L63">
         interface <strong>GetKeyResult</strong>
     </a>
 </h3>
@@ -1484,52 +1484,52 @@ Key identifier which can be one of the following format:
 A collection of values returned by getKey.
 
 <h4 class="pdoc-member-header" id="GetKeyResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L64">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L64">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-awsAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L65">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L65">property <b>awsAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L66">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L66">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-customerMasterKeySpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L67">property <b>customerMasterKeySpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L67">property <b>customerMasterKeySpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerMasterKeySpec: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-deletionDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L68">property <b>deletionDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L68">property <b>deletionDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L70">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L70">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-expirationModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L71">property <b>expirationModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L71">property <b>expirationModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationModel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-grantTokens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L72">property <b>grantTokens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L72">property <b>grantTokens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTokens?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1537,37 +1537,37 @@ A collection of values returned by getKey.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKeyResult-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L77">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L77">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-keyManager">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L78">property <b>keyManager</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L78">property <b>keyManager</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyManager: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-keyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L79">property <b>keyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L79">property <b>keyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-keyUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L80">property <b>keyUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L80">property <b>keyUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyUsage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L81">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L81">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-validTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getKey.ts#L82">property <b>validTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getKey.ts#L82">property <b>validTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validTo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSecretArgs" data-link-title="GetSecretArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecret.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecret.ts#L25">
         interface <strong>GetSecretArgs</strong>
     </a>
 </h3>
@@ -1577,12 +1577,12 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getSecret.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-secrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecret.ts#L26">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecret.ts#L26">property <b>secrets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecretSecret'>GetSecretSecret</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetSecretResult" data-link-title="GetSecretResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecret.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecret.ts#L32">
         interface <strong>GetSecretResult</strong>
     </a>
 </h3>
@@ -1592,7 +1592,7 @@ A collection of arguments for invoking getSecret.
 A collection of values returned by getSecret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecret.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecret.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1600,12 +1600,12 @@ A collection of values returned by getSecret.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-secrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecret.ts#L37">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecret.ts#L37">property <b>secrets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretSecret'>GetSecretSecret</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetSecretsArgs" data-link-title="GetSecretsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecrets.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecrets.ts#L28">
         interface <strong>GetSecretsArgs</strong>
     </a>
 </h3>
@@ -1615,7 +1615,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getSecrets.
 
 <h4 class="pdoc-member-header" id="GetSecretsArgs-secrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecrets.ts#L32">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecrets.ts#L32">property <b>secrets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecretsSecret'>GetSecretsSecret</a>[];</code></pre>
@@ -1623,7 +1623,7 @@ A collection of arguments for invoking getSecrets.
 One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.
 
 <h3 class="pdoc-module-header" id="GetSecretsResult" data-link-title="GetSecretsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecrets.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecrets.ts#L38">
         interface <strong>GetSecretsResult</strong>
     </a>
 </h3>
@@ -1633,7 +1633,7 @@ One or more encrypted payload definitions from the KMS service. See the Secret D
 A collection of values returned by getSecrets.
 
 <h4 class="pdoc-member-header" id="GetSecretsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecrets.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecrets.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1641,7 +1641,7 @@ A collection of values returned by getSecrets.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSecretsResult-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecrets.ts#L46">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecrets.ts#L46">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1649,12 +1649,12 @@ The provider-assigned unique ID for this managed resource.
 Map containing each `secret` `name` as the key with its decrypted plaintext value
 
 <h4 class="pdoc-member-header" id="GetSecretsResult-secrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/getSecrets.ts#L47">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/getSecrets.ts#L47">property <b>secrets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secrets: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretsSecret'>GetSecretsSecret</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GrantArgs" data-link-title="GrantArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L228">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L228">
         interface <strong>GrantArgs</strong>
     </a>
 </h3>
@@ -1664,7 +1664,7 @@ Map containing each `secret` `name` as the key with its decrypted plaintext valu
 The set of arguments for constructing a Grant resource.
 
 <h4 class="pdoc-member-header" id="GrantArgs-constraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L232">property <b>constraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L232">property <b>constraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>constraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GrantConstraint'>GrantConstraint</a>&gt;[]&gt;;</code></pre>
@@ -1672,7 +1672,7 @@ The set of arguments for constructing a Grant resource.
 A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 
 <h4 class="pdoc-member-header" id="GrantArgs-grantCreationTokens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L236">property <b>grantCreationTokens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L236">property <b>grantCreationTokens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantCreationTokens?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1680,7 +1680,7 @@ A structure that you can use to allow certain operations in the grant only when 
 A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
 
 <h4 class="pdoc-member-header" id="GrantArgs-granteePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L240">property <b>granteePrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L240">property <b>granteePrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>granteePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1688,7 +1688,7 @@ A list of grant tokens to be used when creating the grant. See [Grant Tokens](ht
 The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.
 
 <h4 class="pdoc-member-header" id="GrantArgs-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L244">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L244">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1696,7 +1696,7 @@ The principal that is given permission to perform the operations that the grant 
 The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
 
 <h4 class="pdoc-member-header" id="GrantArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L248">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L248">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1704,7 +1704,7 @@ The unique identifier for the customer master key (CMK) that the grant applies t
 A friendly name for identifying the grant.
 
 <h4 class="pdoc-member-header" id="GrantArgs-operations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L252">property <b>operations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L252">property <b>operations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1712,7 +1712,7 @@ A friendly name for identifying the grant.
 A list of operations that the grant permits. The permitted values are: `Decrypt, Encrypt, GenerateDataKey, GenerateDataKeyWithoutPlaintext, ReEncryptFrom, ReEncryptTo, CreateGrant, RetireGrant, DescribeKey`
 
 <h4 class="pdoc-member-header" id="GrantArgs-retireOnDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L257">property <b>retireOnDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L257">property <b>retireOnDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retireOnDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1721,7 +1721,7 @@ A list of operations that the grant permits. The permitted values are: `Decrypt,
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
 
 <h4 class="pdoc-member-header" id="GrantArgs-retiringPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L261">property <b>retiringPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L261">property <b>retiringPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retiringPrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,7 +1729,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.
 
 <h3 class="pdoc-module-header" id="GrantState" data-link-title="GrantState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L181">
         interface <strong>GrantState</strong>
     </a>
 </h3>
@@ -1739,7 +1739,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
 Input properties used for looking up and filtering Grant resources.
 
 <h4 class="pdoc-member-header" id="GrantState-constraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L185">property <b>constraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L185">property <b>constraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>constraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GrantConstraint'>GrantConstraint</a>&gt;[]&gt;;</code></pre>
@@ -1747,7 +1747,7 @@ Input properties used for looking up and filtering Grant resources.
 A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
 
 <h4 class="pdoc-member-header" id="GrantState-grantCreationTokens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L189">property <b>grantCreationTokens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L189">property <b>grantCreationTokens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantCreationTokens?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1755,7 +1755,7 @@ A structure that you can use to allow certain operations in the grant only when 
 A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
 
 <h4 class="pdoc-member-header" id="GrantState-grantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L193">property <b>grantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L193">property <b>grantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1763,7 +1763,7 @@ A list of grant tokens to be used when creating the grant. See [Grant Tokens](ht
 The unique identifier for the grant.
 
 <h4 class="pdoc-member-header" id="GrantState-grantToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L197">property <b>grantToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L197">property <b>grantToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1771,7 +1771,7 @@ The unique identifier for the grant.
 The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
 
 <h4 class="pdoc-member-header" id="GrantState-granteePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L201">property <b>granteePrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L201">property <b>granteePrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>granteePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1779,7 +1779,7 @@ The grant token for the created grant. For more information, see [Grant Tokens](
 The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.
 
 <h4 class="pdoc-member-header" id="GrantState-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L205">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L205">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1787,7 +1787,7 @@ The principal that is given permission to perform the operations that the grant 
 The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
 
 <h4 class="pdoc-member-header" id="GrantState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L209">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L209">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1795,7 +1795,7 @@ The unique identifier for the customer master key (CMK) that the grant applies t
 A friendly name for identifying the grant.
 
 <h4 class="pdoc-member-header" id="GrantState-operations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L213">property <b>operations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L213">property <b>operations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1803,7 +1803,7 @@ A friendly name for identifying the grant.
 A list of operations that the grant permits. The permitted values are: `Decrypt, Encrypt, GenerateDataKey, GenerateDataKeyWithoutPlaintext, ReEncryptFrom, ReEncryptTo, CreateGrant, RetireGrant, DescribeKey`
 
 <h4 class="pdoc-member-header" id="GrantState-retireOnDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L218">property <b>retireOnDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L218">property <b>retireOnDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retireOnDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1812,7 +1812,7 @@ A list of operations that the grant permits. The permitted values are: `Decrypt,
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
 
 <h4 class="pdoc-member-header" id="GrantState-retiringPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/grant.ts#L222">property <b>retiringPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/grant.ts#L222">property <b>retiringPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retiringPrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1820,7 +1820,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.
 
 <h3 class="pdoc-module-header" id="KeyArgs" data-link-title="KeyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L196">
         interface <strong>KeyArgs</strong>
     </a>
 </h3>
@@ -1830,7 +1830,7 @@ The principal that is given permission to retire the grant by using RetireGrant 
 The set of arguments for constructing a Key resource.
 
 <h4 class="pdoc-member-header" id="KeyArgs-customerMasterKeySpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L201">property <b>customerMasterKeySpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L201">property <b>customerMasterKeySpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerMasterKeySpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1839,7 +1839,7 @@ Specifies whether the key contains a symmetric key or an asymmetric key pair and
 Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIST_P256`, `ECC_NIST_P384`, `ECC_NIST_P521`, or `ECC_SECG_P256K1`. Defaults to `SYMMETRIC_DEFAULT`. For help with choosing a key spec, see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html).
 
 <h4 class="pdoc-member-header" id="KeyArgs-deletionWindowInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L206">property <b>deletionWindowInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L206">property <b>deletionWindowInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionWindowInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1848,7 +1848,7 @@ Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 
 <h4 class="pdoc-member-header" id="KeyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L210">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L210">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1856,7 +1856,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
 The description of the key as viewed in AWS console.
 
 <h4 class="pdoc-member-header" id="KeyArgs-enableKeyRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L215">property <b>enableKeyRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L215">property <b>enableKeyRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableKeyRotation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1865,7 +1865,7 @@ Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developer
 is enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="KeyArgs-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L219">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L219">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1873,7 +1873,7 @@ is enabled. Defaults to false.
 Specifies whether the key is enabled. Defaults to true.
 
 <h4 class="pdoc-member-header" id="KeyArgs-keyUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L224">property <b>keyUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L224">property <b>keyUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyUsage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1882,7 +1882,7 @@ Specifies the intended use of the key. Valid values: `ENCRYPT_DECRYPT` or `SIGN_
 Defaults to `ENCRYPT_DECRYPT`.
 
 <h4 class="pdoc-member-header" id="KeyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L228">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L228">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1890,7 +1890,7 @@ Defaults to `ENCRYPT_DECRYPT`.
 A valid policy JSON document.
 
 <h4 class="pdoc-member-header" id="KeyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L232">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L232">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1898,7 +1898,7 @@ A valid policy JSON document.
 A map of tags to assign to the object.
 
 <h3 class="pdoc-module-header" id="KeyState" data-link-title="KeyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L146">
         interface <strong>KeyState</strong>
     </a>
 </h3>
@@ -1908,7 +1908,7 @@ A map of tags to assign to the object.
 Input properties used for looking up and filtering Key resources.
 
 <h4 class="pdoc-member-header" id="KeyState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L150">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L150">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1916,7 +1916,7 @@ Input properties used for looking up and filtering Key resources.
 The Amazon Resource Name (ARN) of the key.
 
 <h4 class="pdoc-member-header" id="KeyState-customerMasterKeySpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L155">property <b>customerMasterKeySpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L155">property <b>customerMasterKeySpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerMasterKeySpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1925,7 +1925,7 @@ Specifies whether the key contains a symmetric key or an asymmetric key pair and
 Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIST_P256`, `ECC_NIST_P384`, `ECC_NIST_P521`, or `ECC_SECG_P256K1`. Defaults to `SYMMETRIC_DEFAULT`. For help with choosing a key spec, see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html).
 
 <h4 class="pdoc-member-header" id="KeyState-deletionWindowInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L160">property <b>deletionWindowInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L160">property <b>deletionWindowInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionWindowInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1934,7 +1934,7 @@ Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 
 <h4 class="pdoc-member-header" id="KeyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L164">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L164">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1942,7 +1942,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
 The description of the key as viewed in AWS console.
 
 <h4 class="pdoc-member-header" id="KeyState-enableKeyRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L169">property <b>enableKeyRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L169">property <b>enableKeyRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableKeyRotation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1951,7 +1951,7 @@ Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developer
 is enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="KeyState-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L173">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L173">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1959,7 +1959,7 @@ is enabled. Defaults to false.
 Specifies whether the key is enabled. Defaults to true.
 
 <h4 class="pdoc-member-header" id="KeyState-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L177">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L177">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1967,7 +1967,7 @@ Specifies whether the key is enabled. Defaults to true.
 The globally unique identifier for the key.
 
 <h4 class="pdoc-member-header" id="KeyState-keyUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L182">property <b>keyUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L182">property <b>keyUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyUsage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1976,7 +1976,7 @@ Specifies the intended use of the key. Valid values: `ENCRYPT_DECRYPT` or `SIGN_
 Defaults to `ENCRYPT_DECRYPT`.
 
 <h4 class="pdoc-member-header" id="KeyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L186">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L186">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1984,7 +1984,7 @@ Defaults to `ENCRYPT_DECRYPT`.
 A valid policy JSON document.
 
 <h4 class="pdoc-member-header" id="KeyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/kms/key.ts#L190">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/kms/key.ts#L190">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>

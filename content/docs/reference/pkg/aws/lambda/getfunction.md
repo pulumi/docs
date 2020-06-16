@@ -342,6 +342,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="filesystemconfigs_csharp">
+<a href="#filesystemconfigs_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionfilesystemconfig">List&lt;Get<wbr>Function<wbr>File<wbr>System<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda EFS configuration settings.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="functionname_csharp">
 <a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
 </span> 
@@ -606,6 +617,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionenvironment">Get<wbr>Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="filesystemconfigs_go">
+<a href="#filesystemconfigs_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionfilesystemconfig">[]Get<wbr>Function<wbr>File<wbr>System<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda EFS configuration settings.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -878,6 +900,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="filesystemconfigs_nodejs">
+<a href="#filesystemconfigs_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionfilesystemconfig">Get<wbr>Function<wbr>File<wbr>System<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda EFS configuration settings.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="functionname_nodejs">
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
 </span> 
@@ -1142,6 +1175,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionenvironment">Dict[Get<wbr>Function<wbr>Environment]</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="file_system_configs_python">
+<a href="#file_system_configs_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionfilesystemconfig">List[Get<wbr>Function<wbr>File<wbr>System<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda EFS configuration settings.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1536,6 +1580,136 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getfunctionfilesystemconfig">Get<wbr>Function<wbr>File<wbr>System<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionFileSystemConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#GetFunctionFileSystemConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.GetFunctionFileSystemConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localmountpath_csharp">
+<a href="#localmountpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Mount<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localmountpath_go">
+<a href="#localmountpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Mount<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localmountpath_nodejs">
+<a href="#localmountpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Mount<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localmountpath_python">
+<a href="#localmountpath_python" style="color: inherit; text-decoration: inherit;">local<wbr>Mount<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -3,7 +3,7 @@ title: "Module ses"
 title_tag: "Module ses | Package @pulumi/aws | Node.js SDK"
 linktitle: "ses"
 meta_desc: "Explore members of the ses module in the @pulumi/aws package."
-git_sha: "c672e225a765b11b07ea23e7b1b411483d7f38da"
+git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
 block_external_search_index: true
 ---
 
@@ -79,7 +79,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ActiveReceiptRuleSet" data-link-title="ActiveReceiptRuleSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L23">
         Resource <strong>ActiveReceiptRuleSet</strong>
     </a>
 </h3>
@@ -102,7 +102,7 @@ const main = new aws.ses.ActiveReceiptRuleSet("main", {
 ```
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -116,7 +116,7 @@ Create a ActiveReceiptRuleSet resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -127,14 +127,14 @@ Get an existing ActiveReceiptRuleSet resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -145,7 +145,7 @@ Returns true if the given object is an instance of ActiveReceiptRuleSet.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -154,7 +154,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSet-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L54">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L54">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the rule set
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -171,7 +171,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ConfgurationSet" data-link-title="ConfgurationSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L10">
         Resource <strong>ConfgurationSet</strong>
     </a>
 </h3>
@@ -182,7 +182,7 @@ aws.ses.ConfgurationSet has been deprecated in favor of aws.ses.ConfigurationSet
 </div>
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ConfgurationSet</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ConfgurationSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L39"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L39"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -197,7 +197,7 @@ aws.ses.ConfgurationSet has been deprecated in favor of aws.ses.ConfigurationSet
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ConfgurationSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ConfgurationSetArgs'>ConfgurationSetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfgurationSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -208,14 +208,14 @@ Get an existing ConfgurationSet resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConfgurationSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfgurationSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -226,7 +226,7 @@ Returns true if the given object is an instance of ConfgurationSet.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfgurationSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -235,12 +235,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfgurationSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfgurationSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -249,7 +249,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ConfigurationSet" data-link-title="ConfigurationSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L21">
         Resource <strong>ConfigurationSet</strong>
     </a>
 </h3>
@@ -270,7 +270,7 @@ const test = new aws.ses.ConfigurationSet("test", {});
 ```
 
 <h4 class="pdoc-member-header" id="ConfigurationSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L52"> <b>constructor</b></a>
 </h4>
 
 
@@ -284,7 +284,7 @@ Create a ConfigurationSet resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigurationSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -295,14 +295,14 @@ Get an existing ConfigurationSet resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConfigurationSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigurationSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -313,7 +313,7 @@ Returns true if the given object is an instance of ConfigurationSet.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigurationSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -322,7 +322,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfigurationSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the configuration set
 
 <h4 class="pdoc-member-header" id="ConfigurationSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -339,7 +339,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainDkim" data-link-title="DomainDkim">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L38">
         Resource <strong>DomainDkim</strong>
     </a>
 </h3>
@@ -377,7 +377,7 @@ for (let i = 0; i < 3; i++) {
 ```
 
 <h4 class="pdoc-member-header" id="DomainDkim-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -391,7 +391,7 @@ Create a DomainDkim resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainDkim-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -402,14 +402,14 @@ Get an existing DomainDkim resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainDkim-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainDkim-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -420,7 +420,7 @@ Returns true if the given object is an instance of DomainDkim.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainDkim-dkimTokens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L74">property <b>dkimTokens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L74">property <b>dkimTokens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dkimTokens: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -433,7 +433,7 @@ Find out more about verifying domains in Amazon SES
 in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html).
 
 <h4 class="pdoc-member-header" id="DomainDkim-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L78">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L78">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -441,7 +441,7 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 Verified domain name to generate DKIM tokens for.
 
 <h4 class="pdoc-member-header" id="DomainDkim-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -450,7 +450,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainDkim-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -459,7 +459,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainIdentity" data-link-title="DomainIdentity">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L30">
         Resource <strong>DomainIdentity</strong>
     </a>
 </h3>
@@ -489,7 +489,7 @@ const exampleAmazonsesVerificationRecord = new aws.route53.Record("example_amazo
 ```
 
 <h4 class="pdoc-member-header" id="DomainIdentity-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -503,7 +503,7 @@ Create a DomainIdentity resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainIdentity-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -514,14 +514,14 @@ Get an existing DomainIdentity resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainIdentity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainIdentity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -532,7 +532,7 @@ Returns true if the given object is an instance of DomainIdentity.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainIdentity-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L61">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the domain identity.
 
 <h4 class="pdoc-member-header" id="DomainIdentity-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L65">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L65">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -548,7 +548,7 @@ The ARN of the domain identity.
 The domain name to assign to SES
 
 <h4 class="pdoc-member-header" id="DomainIdentity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -557,7 +557,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainIdentity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -566,7 +566,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DomainIdentity-verificationToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L75">property <b>verificationToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L75">property <b>verificationToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verificationToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -580,7 +580,7 @@ more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
 
 <h3 class="pdoc-module-header" id="DomainIdentityVerification" data-link-title="DomainIdentityVerification">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L39">
         Resource <strong>DomainIdentityVerification</strong>
     </a>
 </h3>
@@ -619,7 +619,7 @@ const exampleVerification = new aws.ses.DomainIdentityVerification("example_veri
 ```
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerification-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -633,7 +633,7 @@ Create a DomainIdentityVerification resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerification-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -644,14 +644,14 @@ Get an existing DomainIdentityVerification resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerification-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerification-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -662,7 +662,7 @@ Returns true if the given object is an instance of DomainIdentityVerification.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerification-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L70">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L70">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the domain identity.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerification-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L74">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L74">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -678,7 +678,7 @@ The ARN of the domain identity.
 The domain name of the SES domain identity to verify.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerification-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -687,7 +687,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerification-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -696,7 +696,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EmailIdentity" data-link-title="EmailIdentity">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L23">
         Resource <strong>EmailIdentity</strong>
     </a>
 </h3>
@@ -719,7 +719,7 @@ const example = new aws.ses.EmailIdentity("example", {
 ```
 
 <h4 class="pdoc-member-header" id="EmailIdentity-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -733,7 +733,7 @@ Create a EmailIdentity resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EmailIdentity-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -744,14 +744,14 @@ Get an existing EmailIdentity resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EmailIdentity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EmailIdentity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -762,7 +762,7 @@ Returns true if the given object is an instance of EmailIdentity.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EmailIdentity-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L54">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the email identity.
 
 <h4 class="pdoc-member-header" id="EmailIdentity-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L58">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L58">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ The ARN of the email identity.
 The email address to assign to SES
 
 <h4 class="pdoc-member-header" id="EmailIdentity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -787,7 +787,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EmailIdentity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -796,7 +796,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventDestination" data-link-title="EventDestination">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L74">
         Resource <strong>EventDestination</strong>
     </a>
 </h3>
@@ -868,7 +868,7 @@ const sns = new aws.ses.EventDestination("sns", {
 ```
 
 <h4 class="pdoc-member-header" id="EventDestination-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L129"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L129"> <b>constructor</b></a>
 </h4>
 
 
@@ -882,7 +882,7 @@ Create a EventDestination resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventDestination-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L84">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L84">method <b>get</b></a>
 </h4>
 
 
@@ -893,14 +893,14 @@ Get an existing EventDestination resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventDestination-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L74">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L74">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventDestination-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L95">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L95">method <b>isInstance</b></a>
 </h4>
 
 
@@ -911,7 +911,7 @@ Returns true if the given object is an instance of EventDestination.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventDestination-cloudwatchDestinations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L105">property <b>cloudwatchDestinations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L105">property <b>cloudwatchDestinations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudwatchDestinations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationCloudwatchDestination'>EventDestinationCloudwatchDestination</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -919,7 +919,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 CloudWatch destination for the events
 
 <h4 class="pdoc-member-header" id="EventDestination-configurationSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L109">property <b>configurationSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L109">property <b>configurationSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurationSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +927,7 @@ CloudWatch destination for the events
 The name of the configuration set
 
 <h4 class="pdoc-member-header" id="EventDestination-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L113">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L113">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ The name of the configuration set
 If true, the event destination will be enabled
 
 <h4 class="pdoc-member-header" id="EventDestination-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -944,7 +944,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventDestination-kinesisDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L117">property <b>kinesisDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L117">property <b>kinesisDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kinesisDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationKinesisDestination'>EventDestinationKinesisDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -952,7 +952,7 @@ deployments and may be missing (undefined) during planning phases.
 Send the events to a kinesis firehose destination
 
 <h4 class="pdoc-member-header" id="EventDestination-matchingTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L121">property <b>matchingTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L121">property <b>matchingTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>matchingTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -960,7 +960,7 @@ Send the events to a kinesis firehose destination
 A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 
 <h4 class="pdoc-member-header" id="EventDestination-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L125">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -968,7 +968,7 @@ A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"comp
 The name of the event destination
 
 <h4 class="pdoc-member-header" id="EventDestination-snsDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L129">property <b>snsDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L129">property <b>snsDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventDestinationSnsDestination'>EventDestinationSnsDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -976,7 +976,7 @@ The name of the event destination
 Send the events to an SNS Topic destination
 
 <h4 class="pdoc-member-header" id="EventDestination-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L74">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L74">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -985,7 +985,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IdentityNotificationTopic" data-link-title="IdentityNotificationTopic">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L26">
         Resource <strong>IdentityNotificationTopic</strong>
     </a>
 </h3>
@@ -1011,7 +1011,7 @@ const test = new aws.ses.IdentityNotificationTopic("test", {
 ```
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -1025,7 +1025,7 @@ Create a IdentityNotificationTopic resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -1036,14 +1036,14 @@ Get an existing IdentityNotificationTopic resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1054,7 +1054,7 @@ Returns true if the given object is an instance of IdentityNotificationTopic.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1063,7 +1063,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L57">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L57">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1071,7 +1071,7 @@ deployments and may be missing (undefined) during planning phases.
 The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-includeOriginalHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L61">property <b>includeOriginalHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L61">property <b>includeOriginalHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includeOriginalHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1079,7 +1079,7 @@ The identity for which the Amazon SNS topic will be set. You can specify an iden
 Whether SES should include original email headers in SNS notifications of this type. *false* by default.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-notificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L65">property <b>notificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L65">property <b>notificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1087,7 +1087,7 @@ Whether SES should include original email headers in SNS notifications of this t
 The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-topicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L69">property <b>topicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L69">property <b>topicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1095,7 +1095,7 @@ The type of notifications that will be published to the specified Amazon SNS top
 The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1104,7 +1104,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IdentityPolicy" data-link-title="IdentityPolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L40">
         Resource <strong>IdentityPolicy</strong>
     </a>
 </h3>
@@ -1144,7 +1144,7 @@ const exampleIdentityPolicy = new aws.ses.IdentityPolicy("example", {
 ```
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -1158,7 +1158,7 @@ Create a IdentityPolicy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1169,14 +1169,14 @@ Get an existing IdentityPolicy resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1187,7 +1187,7 @@ Returns true if the given object is an instance of IdentityPolicy.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1196,7 +1196,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L71">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L71">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1204,7 +1204,7 @@ deployments and may be missing (undefined) during planning phases.
 Name or Amazon Resource Name (ARN) of the SES Identity.
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ Name or Amazon Resource Name (ARN) of the SES Identity.
 Name of the policy.
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L79">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L79">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ Name of the policy.
 JSON string of the policy.
 
 <h4 class="pdoc-member-header" id="IdentityPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MailFrom" data-link-title="MailFrom">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L46">
         Resource <strong>MailFrom</strong>
     </a>
 </h3>
@@ -1275,7 +1275,7 @@ const exampleSesDomainMailFromTxt = new aws.route53.Record("example_ses_domain_m
 ```
 
 <h4 class="pdoc-member-header" id="MailFrom-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -1289,7 +1289,7 @@ Create a MailFrom resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MailFrom-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -1300,14 +1300,14 @@ Get an existing MailFrom resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MailFrom-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MailFrom-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1318,7 +1318,7 @@ Returns true if the given object is an instance of MailFrom.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MailFrom-behaviorOnMxFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L77">property <b>behaviorOnMxFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L77">property <b>behaviorOnMxFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>behaviorOnMxFailure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1326,7 +1326,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to `UseDefaultValue`. See the [SES API documentation](https://docs.aws.amazon.com/ses/latest/APIReference/API_SetIdentityMailFromDomain.html) for more information.
 
 <h4 class="pdoc-member-header" id="MailFrom-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L81">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L81">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1334,7 +1334,7 @@ The action that you want Amazon SES to take if it cannot successfully read the r
 Verified domain name to generate DKIM tokens for.
 
 <h4 class="pdoc-member-header" id="MailFrom-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1343,7 +1343,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MailFrom-mailFromDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L85">property <b>mailFromDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L85">property <b>mailFromDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mailFromDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1351,7 +1351,7 @@ deployments and may be missing (undefined) during planning phases.
 Subdomain (of above domain) which is to be used as MAIL FROM address (Required for DMARC validation)
 
 <h4 class="pdoc-member-header" id="MailFrom-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1360,7 +1360,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReceiptFilter" data-link-title="ReceiptFilter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L24">
         Resource <strong>ReceiptFilter</strong>
     </a>
 </h3>
@@ -1384,7 +1384,7 @@ const filter = new aws.ses.ReceiptFilter("filter", {
 ```
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -1398,7 +1398,7 @@ Create a ReceiptFilter resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -1409,14 +1409,14 @@ Get an existing ReceiptFilter resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1427,7 +1427,7 @@ Returns true if the given object is an instance of ReceiptFilter.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L55">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L55">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1435,7 +1435,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The IP address or address range to filter, in CIDR notation
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1444,7 +1444,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1452,7 +1452,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the filter
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L63">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L63">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1460,7 +1460,7 @@ The name of the filter
 Block or Allow
 
 <h4 class="pdoc-member-header" id="ReceiptFilter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReceiptRule" data-link-title="ReceiptRule">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L38">
         Resource <strong>ReceiptRule</strong>
     </a>
 </h3>
@@ -1505,7 +1505,7 @@ const store = new aws.ses.ReceiptRule("store", {
 ```
 
 <h4 class="pdoc-member-header" id="ReceiptRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L121"> <b>constructor</b></a>
 </h4>
 
 
@@ -1519,7 +1519,7 @@ Create a ReceiptRule resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -1530,14 +1530,14 @@ Get an existing ReceiptRule resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReceiptRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1548,7 +1548,7 @@ Returns true if the given object is an instance of ReceiptRule.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-addHeaderActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L69">property <b>addHeaderActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L69">property <b>addHeaderActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addHeaderActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleAddHeaderAction'>ReceiptRuleAddHeaderAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1556,7 +1556,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of Add Header Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-after">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L73">property <b>after</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L73">property <b>after</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>after: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1564,7 +1564,7 @@ A list of Add Header Action blocks. Documented below.
 The name of the rule to place this rule after
 
 <h4 class="pdoc-member-header" id="ReceiptRule-bounceActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L77">property <b>bounceActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L77">property <b>bounceActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bounceActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleBounceAction'>ReceiptRuleBounceAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1572,7 +1572,7 @@ The name of the rule to place this rule after
 A list of Bounce Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L81">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L81">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1580,7 +1580,7 @@ A list of Bounce Action blocks. Documented below.
 If true, the rule will be enabled
 
 <h4 class="pdoc-member-header" id="ReceiptRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1589,7 +1589,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-lambdaActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L85">property <b>lambdaActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L85">property <b>lambdaActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lambdaActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleLambdaAction'>ReceiptRuleLambdaAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1597,7 +1597,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of Lambda Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1605,7 +1605,7 @@ A list of Lambda Action blocks. Documented below.
 The name of the rule
 
 <h4 class="pdoc-member-header" id="ReceiptRule-recipients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L93">property <b>recipients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L93">property <b>recipients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recipients: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1613,7 +1613,7 @@ The name of the rule
 A list of email addresses
 
 <h4 class="pdoc-member-header" id="ReceiptRule-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L97">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L97">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1621,7 +1621,7 @@ A list of email addresses
 The name of the rule set
 
 <h4 class="pdoc-member-header" id="ReceiptRule-s3Actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L101">property <b>s3Actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L101">property <b>s3Actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleS3Action'>ReceiptRuleS3Action</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1629,7 +1629,7 @@ The name of the rule set
 A list of S3 Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-scanEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L105">property <b>scanEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L105">property <b>scanEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scanEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1637,7 +1637,7 @@ A list of S3 Action blocks. Documented below.
 If true, incoming emails will be scanned for spam and viruses
 
 <h4 class="pdoc-member-header" id="ReceiptRule-snsActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L109">property <b>snsActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L109">property <b>snsActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleSnsAction'>ReceiptRuleSnsAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1645,7 +1645,7 @@ If true, incoming emails will be scanned for spam and viruses
 A list of SNS Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-stopActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L113">property <b>stopActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L113">property <b>stopActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stopActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleStopAction'>ReceiptRuleStopAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1653,7 +1653,7 @@ A list of SNS Action blocks. Documented below.
 A list of Stop Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-tlsPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L117">property <b>tlsPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L117">property <b>tlsPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1661,7 +1661,7 @@ A list of Stop Action blocks. Documented below.
 Require or Optional
 
 <h4 class="pdoc-member-header" id="ReceiptRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1670,7 +1670,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ReceiptRule-workmailActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L121">property <b>workmailActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L121">property <b>workmailActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workmailActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReceiptRuleWorkmailAction'>ReceiptRuleWorkmailAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1678,7 +1678,7 @@ deployments.
 A list of WorkMail Action blocks. Documented below.
 
 <h3 class="pdoc-module-header" id="ReceiptRuleSet" data-link-title="ReceiptRuleSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L23">
         Resource <strong>ReceiptRuleSet</strong>
     </a>
 </h3>
@@ -1701,7 +1701,7 @@ const main = new aws.ses.ReceiptRuleSet("main", {
 ```
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -1715,7 +1715,7 @@ Create a ReceiptRuleSet resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -1726,14 +1726,14 @@ Get an existing ReceiptRuleSet resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1744,7 +1744,7 @@ Returns true if the given object is an instance of ReceiptRuleSet.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSet-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L54">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L54">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1761,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the rule set
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1770,7 +1770,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Template" data-link-title="Template">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L26">
         Resource <strong>Template</strong>
     </a>
 </h3>
@@ -1796,7 +1796,7 @@ Your favorite animal is {{favoriteanimal}}.`,
 ```
 
 <h4 class="pdoc-member-header" id="Template-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -1810,7 +1810,7 @@ Create a Template resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Template-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -1821,14 +1821,14 @@ Get an existing Template resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Template-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Template-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1839,7 +1839,7 @@ Returns true if the given object is an instance of Template.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Template-html">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L57">property <b>html</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L57">property <b>html</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>html: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1847,7 +1847,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
 
 <h4 class="pdoc-member-header" id="Template-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1856,7 +1856,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Template-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1864,7 +1864,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
 
 <h4 class="pdoc-member-header" id="Template-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L65">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L65">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1872,7 +1872,7 @@ The name of the template. Cannot exceed 64 characters. You will refer to this na
 The subject line of the email.
 
 <h4 class="pdoc-member-header" id="Template-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L69">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L69">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>text: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1880,7 +1880,7 @@ The subject line of the email.
 The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
 
 <h4 class="pdoc-member-header" id="Template-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1892,7 +1892,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ActiveReceiptRuleSetArgs" data-link-title="ActiveReceiptRuleSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L100">
         interface <strong>ActiveReceiptRuleSetArgs</strong>
     </a>
 </h3>
@@ -1902,7 +1902,7 @@ deployments.
 The set of arguments for constructing a ActiveReceiptRuleSet resource.
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSetArgs-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L104">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L104">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1910,7 +1910,7 @@ The set of arguments for constructing a ActiveReceiptRuleSet resource.
 The name of the rule set
 
 <h3 class="pdoc-module-header" id="ActiveReceiptRuleSetState" data-link-title="ActiveReceiptRuleSetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L90">
         interface <strong>ActiveReceiptRuleSetState</strong>
     </a>
 </h3>
@@ -1920,7 +1920,7 @@ The name of the rule set
 Input properties used for looking up and filtering ActiveReceiptRuleSet resources.
 
 <h4 class="pdoc-member-header" id="ActiveReceiptRuleSetState-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/activeReceiptRuleSet.ts#L94">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/activeReceiptRuleSet.ts#L94">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleSetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1928,7 +1928,7 @@ Input properties used for looking up and filtering ActiveReceiptRuleSet resource
 The name of the rule set
 
 <h3 class="pdoc-module-header" id="ConfgurationSetArgs" data-link-title="ConfgurationSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L82">
         interface <strong>ConfgurationSetArgs</strong>
     </a>
 </h3>
@@ -1938,12 +1938,12 @@ The name of the rule set
 The set of arguments for constructing a ConfgurationSet resource.
 
 <h4 class="pdoc-member-header" id="ConfgurationSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConfgurationSetState" data-link-title="ConfgurationSetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L75">
         interface <strong>ConfgurationSetState</strong>
     </a>
 </h3>
@@ -1953,12 +1953,12 @@ The set of arguments for constructing a ConfgurationSet resource.
 Input properties used for looking up and filtering ConfgurationSet resources.
 
 <h4 class="pdoc-member-header" id="ConfgurationSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/confgurationSet.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/confgurationSet.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConfigurationSetArgs" data-link-title="ConfigurationSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L97">
         interface <strong>ConfigurationSetArgs</strong>
     </a>
 </h3>
@@ -1968,7 +1968,7 @@ Input properties used for looking up and filtering ConfgurationSet resources.
 The set of arguments for constructing a ConfigurationSet resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1976,7 +1976,7 @@ The set of arguments for constructing a ConfigurationSet resource.
 The name of the configuration set
 
 <h3 class="pdoc-module-header" id="ConfigurationSetState" data-link-title="ConfigurationSetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L87">
         interface <strong>ConfigurationSetState</strong>
     </a>
 </h3>
@@ -1986,7 +1986,7 @@ The name of the configuration set
 Input properties used for looking up and filtering ConfigurationSet resources.
 
 <h4 class="pdoc-member-header" id="ConfigurationSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/configurationSet.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/configurationSet.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1994,7 +1994,7 @@ Input properties used for looking up and filtering ConfigurationSet resources.
 The name of the configuration set
 
 <h3 class="pdoc-module-header" id="DomainDkimArgs" data-link-title="DomainDkimArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L135">
         interface <strong>DomainDkimArgs</strong>
     </a>
 </h3>
@@ -2004,7 +2004,7 @@ The name of the configuration set
 The set of arguments for constructing a DomainDkim resource.
 
 <h4 class="pdoc-member-header" id="DomainDkimArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L139">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L139">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2012,7 +2012,7 @@ The set of arguments for constructing a DomainDkim resource.
 Verified domain name to generate DKIM tokens for.
 
 <h3 class="pdoc-module-header" id="DomainDkimState" data-link-title="DomainDkimState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L116">
         interface <strong>DomainDkimState</strong>
     </a>
 </h3>
@@ -2022,7 +2022,7 @@ Verified domain name to generate DKIM tokens for.
 Input properties used for looking up and filtering DomainDkim resources.
 
 <h4 class="pdoc-member-header" id="DomainDkimState-dkimTokens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L125">property <b>dkimTokens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L125">property <b>dkimTokens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dkimTokens?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2035,7 +2035,7 @@ Find out more about verifying domains in Amazon SES
 in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html).
 
 <h4 class="pdoc-member-header" id="DomainDkimState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainDkim.ts#L129">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainDkim.ts#L129">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2043,7 +2043,7 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 Verified domain name to generate DKIM tokens for.
 
 <h3 class="pdoc-module-header" id="DomainIdentityArgs" data-link-title="DomainIdentityArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L139">
         interface <strong>DomainIdentityArgs</strong>
     </a>
 </h3>
@@ -2053,7 +2053,7 @@ Verified domain name to generate DKIM tokens for.
 The set of arguments for constructing a DomainIdentity resource.
 
 <h4 class="pdoc-member-header" id="DomainIdentityArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L143">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L143">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2061,7 +2061,7 @@ The set of arguments for constructing a DomainIdentity resource.
 The domain name to assign to SES
 
 <h3 class="pdoc-module-header" id="DomainIdentityState" data-link-title="DomainIdentityState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L115">
         interface <strong>DomainIdentityState</strong>
     </a>
 </h3>
@@ -2071,7 +2071,7 @@ The domain name to assign to SES
 Input properties used for looking up and filtering DomainIdentity resources.
 
 <h4 class="pdoc-member-header" id="DomainIdentityState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L119">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L119">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2079,7 +2079,7 @@ Input properties used for looking up and filtering DomainIdentity resources.
 The ARN of the domain identity.
 
 <h4 class="pdoc-member-header" id="DomainIdentityState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L123">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L123">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2087,7 +2087,7 @@ The ARN of the domain identity.
 The domain name to assign to SES
 
 <h4 class="pdoc-member-header" id="DomainIdentityState-verificationToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentity.ts#L133">property <b>verificationToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentity.ts#L133">property <b>verificationToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verificationToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2101,7 +2101,7 @@ more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
 
 <h3 class="pdoc-module-header" id="DomainIdentityVerificationArgs" data-link-title="DomainIdentityVerificationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L126">
         interface <strong>DomainIdentityVerificationArgs</strong>
     </a>
 </h3>
@@ -2111,7 +2111,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
 The set of arguments for constructing a DomainIdentityVerification resource.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerificationArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L130">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L130">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2119,7 +2119,7 @@ The set of arguments for constructing a DomainIdentityVerification resource.
 The domain name of the SES domain identity to verify.
 
 <h3 class="pdoc-module-header" id="DomainIdentityVerificationState" data-link-title="DomainIdentityVerificationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L112">
         interface <strong>DomainIdentityVerificationState</strong>
     </a>
 </h3>
@@ -2129,7 +2129,7 @@ The domain name of the SES domain identity to verify.
 Input properties used for looking up and filtering DomainIdentityVerification resources.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerificationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L116">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L116">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2137,7 +2137,7 @@ Input properties used for looking up and filtering DomainIdentityVerification re
 The ARN of the domain identity.
 
 <h4 class="pdoc-member-header" id="DomainIdentityVerificationState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/domainIdentityVerification.ts#L120">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/domainIdentityVerification.ts#L120">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2145,7 +2145,7 @@ The ARN of the domain identity.
 The domain name of the SES domain identity to verify.
 
 <h3 class="pdoc-module-header" id="EmailIdentityArgs" data-link-title="EmailIdentityArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L110">
         interface <strong>EmailIdentityArgs</strong>
     </a>
 </h3>
@@ -2155,7 +2155,7 @@ The domain name of the SES domain identity to verify.
 The set of arguments for constructing a EmailIdentity resource.
 
 <h4 class="pdoc-member-header" id="EmailIdentityArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L114">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L114">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2163,7 +2163,7 @@ The set of arguments for constructing a EmailIdentity resource.
 The email address to assign to SES
 
 <h3 class="pdoc-module-header" id="EmailIdentityState" data-link-title="EmailIdentityState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L96">
         interface <strong>EmailIdentityState</strong>
     </a>
 </h3>
@@ -2173,7 +2173,7 @@ The email address to assign to SES
 Input properties used for looking up and filtering EmailIdentity resources.
 
 <h4 class="pdoc-member-header" id="EmailIdentityState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L100">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L100">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2181,7 +2181,7 @@ Input properties used for looking up and filtering EmailIdentity resources.
 The ARN of the email identity.
 
 <h4 class="pdoc-member-header" id="EmailIdentityState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/emailIdentity.ts#L104">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/emailIdentity.ts#L104">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2189,7 +2189,7 @@ The ARN of the email identity.
 The email address to assign to SES
 
 <h3 class="pdoc-module-header" id="EventDestinationArgs" data-link-title="EventDestinationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L214">
         interface <strong>EventDestinationArgs</strong>
     </a>
 </h3>
@@ -2199,7 +2199,7 @@ The email address to assign to SES
 The set of arguments for constructing a EventDestination resource.
 
 <h4 class="pdoc-member-header" id="EventDestinationArgs-cloudwatchDestinations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L218">property <b>cloudwatchDestinations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L218">property <b>cloudwatchDestinations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudwatchDestinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationCloudwatchDestination'>EventDestinationCloudwatchDestination</a>&gt;[]&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ The set of arguments for constructing a EventDestination resource.
 CloudWatch destination for the events
 
 <h4 class="pdoc-member-header" id="EventDestinationArgs-configurationSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L222">property <b>configurationSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L222">property <b>configurationSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2215,7 +2215,7 @@ CloudWatch destination for the events
 The name of the configuration set
 
 <h4 class="pdoc-member-header" id="EventDestinationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L226">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L226">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2223,7 +2223,7 @@ The name of the configuration set
 If true, the event destination will be enabled
 
 <h4 class="pdoc-member-header" id="EventDestinationArgs-kinesisDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L230">property <b>kinesisDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L230">property <b>kinesisDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesisDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationKinesisDestination'>EventDestinationKinesisDestination</a>&gt;;</code></pre>
@@ -2231,7 +2231,7 @@ If true, the event destination will be enabled
 Send the events to a kinesis firehose destination
 
 <h4 class="pdoc-member-header" id="EventDestinationArgs-matchingTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L234">property <b>matchingTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L234">property <b>matchingTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchingTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2239,7 +2239,7 @@ Send the events to a kinesis firehose destination
 A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 
 <h4 class="pdoc-member-header" id="EventDestinationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L238">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L238">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2247,7 +2247,7 @@ A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"comp
 The name of the event destination
 
 <h4 class="pdoc-member-header" id="EventDestinationArgs-snsDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L242">property <b>snsDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L242">property <b>snsDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationSnsDestination'>EventDestinationSnsDestination</a>&gt;;</code></pre>
@@ -2255,7 +2255,7 @@ The name of the event destination
 Send the events to an SNS Topic destination
 
 <h3 class="pdoc-module-header" id="EventDestinationState" data-link-title="EventDestinationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L180">
         interface <strong>EventDestinationState</strong>
     </a>
 </h3>
@@ -2265,7 +2265,7 @@ Send the events to an SNS Topic destination
 Input properties used for looking up and filtering EventDestination resources.
 
 <h4 class="pdoc-member-header" id="EventDestinationState-cloudwatchDestinations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L184">property <b>cloudwatchDestinations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L184">property <b>cloudwatchDestinations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudwatchDestinations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationCloudwatchDestination'>EventDestinationCloudwatchDestination</a>&gt;[]&gt;;</code></pre>
@@ -2273,7 +2273,7 @@ Input properties used for looking up and filtering EventDestination resources.
 CloudWatch destination for the events
 
 <h4 class="pdoc-member-header" id="EventDestinationState-configurationSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L188">property <b>configurationSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L188">property <b>configurationSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationSetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2281,7 +2281,7 @@ CloudWatch destination for the events
 The name of the configuration set
 
 <h4 class="pdoc-member-header" id="EventDestinationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L192">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L192">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2289,7 +2289,7 @@ The name of the configuration set
 If true, the event destination will be enabled
 
 <h4 class="pdoc-member-header" id="EventDestinationState-kinesisDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L196">property <b>kinesisDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L196">property <b>kinesisDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesisDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationKinesisDestination'>EventDestinationKinesisDestination</a>&gt;;</code></pre>
@@ -2297,7 +2297,7 @@ If true, the event destination will be enabled
 Send the events to a kinesis firehose destination
 
 <h4 class="pdoc-member-header" id="EventDestinationState-matchingTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L200">property <b>matchingTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L200">property <b>matchingTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchingTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2305,7 +2305,7 @@ Send the events to a kinesis firehose destination
 A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 
 <h4 class="pdoc-member-header" id="EventDestinationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2313,7 +2313,7 @@ A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"comp
 The name of the event destination
 
 <h4 class="pdoc-member-header" id="EventDestinationState-snsDestination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/eventDestination.ts#L208">property <b>snsDestination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/eventDestination.ts#L208">property <b>snsDestination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventDestinationSnsDestination'>EventDestinationSnsDestination</a>&gt;;</code></pre>
@@ -2321,7 +2321,7 @@ The name of the event destination
 Send the events to an SNS Topic destination
 
 <h3 class="pdoc-module-header" id="IdentityNotificationTopicArgs" data-link-title="IdentityNotificationTopicArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L136">
         interface <strong>IdentityNotificationTopicArgs</strong>
     </a>
 </h3>
@@ -2331,7 +2331,7 @@ Send the events to an SNS Topic destination
 The set of arguments for constructing a IdentityNotificationTopic resource.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopicArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L140">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L140">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2339,7 +2339,7 @@ The set of arguments for constructing a IdentityNotificationTopic resource.
 The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopicArgs-includeOriginalHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L144">property <b>includeOriginalHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L144">property <b>includeOriginalHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeOriginalHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2347,7 +2347,7 @@ The identity for which the Amazon SNS topic will be set. You can specify an iden
 Whether SES should include original email headers in SNS notifications of this type. *false* by default.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopicArgs-notificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L148">property <b>notificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L148">property <b>notificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2355,7 +2355,7 @@ Whether SES should include original email headers in SNS notifications of this t
 The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopicArgs-topicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L152">property <b>topicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L152">property <b>topicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2363,7 +2363,7 @@ The type of notifications that will be published to the specified Amazon SNS top
 The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
 
 <h3 class="pdoc-module-header" id="IdentityNotificationTopicState" data-link-title="IdentityNotificationTopicState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L114">
         interface <strong>IdentityNotificationTopicState</strong>
     </a>
 </h3>
@@ -2373,7 +2373,7 @@ The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an emp
 Input properties used for looking up and filtering IdentityNotificationTopic resources.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopicState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L118">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L118">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2381,7 +2381,7 @@ Input properties used for looking up and filtering IdentityNotificationTopic res
 The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopicState-includeOriginalHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L122">property <b>includeOriginalHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L122">property <b>includeOriginalHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeOriginalHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2389,7 +2389,7 @@ The identity for which the Amazon SNS topic will be set. You can specify an iden
 Whether SES should include original email headers in SNS notifications of this type. *false* by default.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopicState-notificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L126">property <b>notificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L126">property <b>notificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2397,7 +2397,7 @@ Whether SES should include original email headers in SNS notifications of this t
 The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
 
 <h4 class="pdoc-member-header" id="IdentityNotificationTopicState-topicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityNotificationTopic.ts#L130">property <b>topicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityNotificationTopic.ts#L130">property <b>topicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2405,7 +2405,7 @@ The type of notifications that will be published to the specified Amazon SNS top
 The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
 
 <h3 class="pdoc-module-header" id="IdentityPolicyArgs" data-link-title="IdentityPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L140">
         interface <strong>IdentityPolicyArgs</strong>
     </a>
 </h3>
@@ -2415,7 +2415,7 @@ The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an emp
 The set of arguments for constructing a IdentityPolicy resource.
 
 <h4 class="pdoc-member-header" id="IdentityPolicyArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L144">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L144">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2423,7 +2423,7 @@ The set of arguments for constructing a IdentityPolicy resource.
 Name or Amazon Resource Name (ARN) of the SES Identity.
 
 <h4 class="pdoc-member-header" id="IdentityPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2431,7 +2431,7 @@ Name or Amazon Resource Name (ARN) of the SES Identity.
 Name of the policy.
 
 <h4 class="pdoc-member-header" id="IdentityPolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L152">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L152">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2439,7 +2439,7 @@ Name of the policy.
 JSON string of the policy.
 
 <h3 class="pdoc-module-header" id="IdentityPolicyState" data-link-title="IdentityPolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L122">
         interface <strong>IdentityPolicyState</strong>
     </a>
 </h3>
@@ -2449,7 +2449,7 @@ JSON string of the policy.
 Input properties used for looking up and filtering IdentityPolicy resources.
 
 <h4 class="pdoc-member-header" id="IdentityPolicyState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L126">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L126">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2457,7 +2457,7 @@ Input properties used for looking up and filtering IdentityPolicy resources.
 Name or Amazon Resource Name (ARN) of the SES Identity.
 
 <h4 class="pdoc-member-header" id="IdentityPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2465,7 +2465,7 @@ Name or Amazon Resource Name (ARN) of the SES Identity.
 Name of the policy.
 
 <h4 class="pdoc-member-header" id="IdentityPolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/identityPolicy.ts#L134">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/identityPolicy.ts#L134">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2473,7 +2473,7 @@ Name of the policy.
 JSON string of the policy.
 
 <h3 class="pdoc-module-header" id="MailFromArgs" data-link-title="MailFromArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L146">
         interface <strong>MailFromArgs</strong>
     </a>
 </h3>
@@ -2483,7 +2483,7 @@ JSON string of the policy.
 The set of arguments for constructing a MailFrom resource.
 
 <h4 class="pdoc-member-header" id="MailFromArgs-behaviorOnMxFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L150">property <b>behaviorOnMxFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L150">property <b>behaviorOnMxFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>behaviorOnMxFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2491,7 +2491,7 @@ The set of arguments for constructing a MailFrom resource.
 The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to `UseDefaultValue`. See the [SES API documentation](https://docs.aws.amazon.com/ses/latest/APIReference/API_SetIdentityMailFromDomain.html) for more information.
 
 <h4 class="pdoc-member-header" id="MailFromArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L154">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L154">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2499,7 +2499,7 @@ The action that you want Amazon SES to take if it cannot successfully read the r
 Verified domain name to generate DKIM tokens for.
 
 <h4 class="pdoc-member-header" id="MailFromArgs-mailFromDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L158">property <b>mailFromDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L158">property <b>mailFromDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mailFromDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2507,7 +2507,7 @@ Verified domain name to generate DKIM tokens for.
 Subdomain (of above domain) which is to be used as MAIL FROM address (Required for DMARC validation)
 
 <h3 class="pdoc-module-header" id="MailFromState" data-link-title="MailFromState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L128">
         interface <strong>MailFromState</strong>
     </a>
 </h3>
@@ -2517,7 +2517,7 @@ Subdomain (of above domain) which is to be used as MAIL FROM address (Required f
 Input properties used for looking up and filtering MailFrom resources.
 
 <h4 class="pdoc-member-header" id="MailFromState-behaviorOnMxFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L132">property <b>behaviorOnMxFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L132">property <b>behaviorOnMxFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>behaviorOnMxFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2525,7 +2525,7 @@ Input properties used for looking up and filtering MailFrom resources.
 The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to `UseDefaultValue`. See the [SES API documentation](https://docs.aws.amazon.com/ses/latest/APIReference/API_SetIdentityMailFromDomain.html) for more information.
 
 <h4 class="pdoc-member-header" id="MailFromState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L136">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L136">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2533,7 +2533,7 @@ The action that you want Amazon SES to take if it cannot successfully read the r
 Verified domain name to generate DKIM tokens for.
 
 <h4 class="pdoc-member-header" id="MailFromState-mailFromDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/mailFrom.ts#L140">property <b>mailFromDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/mailFrom.ts#L140">property <b>mailFromDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mailFromDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2541,7 +2541,7 @@ Verified domain name to generate DKIM tokens for.
 Subdomain (of above domain) which is to be used as MAIL FROM address (Required for DMARC validation)
 
 <h3 class="pdoc-module-header" id="ReceiptFilterArgs" data-link-title="ReceiptFilterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L124">
         interface <strong>ReceiptFilterArgs</strong>
     </a>
 </h3>
@@ -2551,7 +2551,7 @@ Subdomain (of above domain) which is to be used as MAIL FROM address (Required f
 The set of arguments for constructing a ReceiptFilter resource.
 
 <h4 class="pdoc-member-header" id="ReceiptFilterArgs-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L128">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L128">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2559,7 +2559,7 @@ The set of arguments for constructing a ReceiptFilter resource.
 The IP address or address range to filter, in CIDR notation
 
 <h4 class="pdoc-member-header" id="ReceiptFilterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2567,7 +2567,7 @@ The IP address or address range to filter, in CIDR notation
 The name of the filter
 
 <h4 class="pdoc-member-header" id="ReceiptFilterArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L136">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L136">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2575,7 +2575,7 @@ The name of the filter
 Block or Allow
 
 <h3 class="pdoc-module-header" id="ReceiptFilterState" data-link-title="ReceiptFilterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L106">
         interface <strong>ReceiptFilterState</strong>
     </a>
 </h3>
@@ -2585,7 +2585,7 @@ Block or Allow
 Input properties used for looking up and filtering ReceiptFilter resources.
 
 <h4 class="pdoc-member-header" id="ReceiptFilterState-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L110">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L110">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2593,7 +2593,7 @@ Input properties used for looking up and filtering ReceiptFilter resources.
 The IP address or address range to filter, in CIDR notation
 
 <h4 class="pdoc-member-header" id="ReceiptFilterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L114">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2601,7 +2601,7 @@ The IP address or address range to filter, in CIDR notation
 The name of the filter
 
 <h4 class="pdoc-member-header" id="ReceiptFilterState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptFilter.ts#L118">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptFilter.ts#L118">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2609,7 +2609,7 @@ The name of the filter
 Block or Allow
 
 <h3 class="pdoc-module-header" id="ReceiptRuleArgs" data-link-title="ReceiptRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L245">
         interface <strong>ReceiptRuleArgs</strong>
     </a>
 </h3>
@@ -2619,7 +2619,7 @@ Block or Allow
 The set of arguments for constructing a ReceiptRule resource.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-addHeaderActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L249">property <b>addHeaderActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L249">property <b>addHeaderActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addHeaderActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleAddHeaderAction'>ReceiptRuleAddHeaderAction</a>&gt;[]&gt;;</code></pre>
@@ -2627,7 +2627,7 @@ The set of arguments for constructing a ReceiptRule resource.
 A list of Add Header Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-after">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L253">property <b>after</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L253">property <b>after</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>after?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2635,7 +2635,7 @@ A list of Add Header Action blocks. Documented below.
 The name of the rule to place this rule after
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-bounceActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L257">property <b>bounceActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L257">property <b>bounceActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bounceActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleBounceAction'>ReceiptRuleBounceAction</a>&gt;[]&gt;;</code></pre>
@@ -2643,7 +2643,7 @@ The name of the rule to place this rule after
 A list of Bounce Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L261">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L261">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2651,7 +2651,7 @@ A list of Bounce Action blocks. Documented below.
 If true, the rule will be enabled
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-lambdaActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L265">property <b>lambdaActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L265">property <b>lambdaActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleLambdaAction'>ReceiptRuleLambdaAction</a>&gt;[]&gt;;</code></pre>
@@ -2659,7 +2659,7 @@ If true, the rule will be enabled
 A list of Lambda Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L269">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L269">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2667,7 +2667,7 @@ A list of Lambda Action blocks. Documented below.
 The name of the rule
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-recipients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L273">property <b>recipients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L273">property <b>recipients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipients?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2675,7 +2675,7 @@ The name of the rule
 A list of email addresses
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L277">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L277">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2683,7 +2683,7 @@ A list of email addresses
 The name of the rule set
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-s3Actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L281">property <b>s3Actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L281">property <b>s3Actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleS3Action'>ReceiptRuleS3Action</a>&gt;[]&gt;;</code></pre>
@@ -2691,7 +2691,7 @@ The name of the rule set
 A list of S3 Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-scanEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L285">property <b>scanEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L285">property <b>scanEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scanEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2699,7 +2699,7 @@ A list of S3 Action blocks. Documented below.
 If true, incoming emails will be scanned for spam and viruses
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-snsActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L289">property <b>snsActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L289">property <b>snsActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleSnsAction'>ReceiptRuleSnsAction</a>&gt;[]&gt;;</code></pre>
@@ -2707,7 +2707,7 @@ If true, incoming emails will be scanned for spam and viruses
 A list of SNS Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-stopActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L293">property <b>stopActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L293">property <b>stopActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stopActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleStopAction'>ReceiptRuleStopAction</a>&gt;[]&gt;;</code></pre>
@@ -2715,7 +2715,7 @@ A list of SNS Action blocks. Documented below.
 A list of Stop Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-tlsPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L297">property <b>tlsPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L297">property <b>tlsPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2723,7 +2723,7 @@ A list of Stop Action blocks. Documented below.
 Require or Optional
 
 <h4 class="pdoc-member-header" id="ReceiptRuleArgs-workmailActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L301">property <b>workmailActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L301">property <b>workmailActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workmailActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleWorkmailAction'>ReceiptRuleWorkmailAction</a>&gt;[]&gt;;</code></pre>
@@ -2731,7 +2731,7 @@ Require or Optional
 A list of WorkMail Action blocks. Documented below.
 
 <h3 class="pdoc-module-header" id="ReceiptRuleSetArgs" data-link-title="ReceiptRuleSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L100">
         interface <strong>ReceiptRuleSetArgs</strong>
     </a>
 </h3>
@@ -2741,7 +2741,7 @@ A list of WorkMail Action blocks. Documented below.
 The set of arguments for constructing a ReceiptRuleSet resource.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSetArgs-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L104">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L104">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2749,7 +2749,7 @@ The set of arguments for constructing a ReceiptRuleSet resource.
 The name of the rule set
 
 <h3 class="pdoc-module-header" id="ReceiptRuleSetState" data-link-title="ReceiptRuleSetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L90">
         interface <strong>ReceiptRuleSetState</strong>
     </a>
 </h3>
@@ -2759,7 +2759,7 @@ The name of the rule set
 Input properties used for looking up and filtering ReceiptRuleSet resources.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleSetState-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRuleSet.ts#L94">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRuleSet.ts#L94">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleSetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2767,7 +2767,7 @@ Input properties used for looking up and filtering ReceiptRuleSet resources.
 The name of the rule set
 
 <h3 class="pdoc-module-header" id="ReceiptRuleState" data-link-title="ReceiptRuleState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L183">
         interface <strong>ReceiptRuleState</strong>
     </a>
 </h3>
@@ -2777,7 +2777,7 @@ The name of the rule set
 Input properties used for looking up and filtering ReceiptRule resources.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-addHeaderActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L187">property <b>addHeaderActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L187">property <b>addHeaderActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addHeaderActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleAddHeaderAction'>ReceiptRuleAddHeaderAction</a>&gt;[]&gt;;</code></pre>
@@ -2785,7 +2785,7 @@ Input properties used for looking up and filtering ReceiptRule resources.
 A list of Add Header Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-after">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L191">property <b>after</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L191">property <b>after</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>after?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2793,7 +2793,7 @@ A list of Add Header Action blocks. Documented below.
 The name of the rule to place this rule after
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-bounceActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L195">property <b>bounceActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L195">property <b>bounceActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bounceActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleBounceAction'>ReceiptRuleBounceAction</a>&gt;[]&gt;;</code></pre>
@@ -2801,7 +2801,7 @@ The name of the rule to place this rule after
 A list of Bounce Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L199">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L199">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2809,7 +2809,7 @@ A list of Bounce Action blocks. Documented below.
 If true, the rule will be enabled
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-lambdaActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L203">property <b>lambdaActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L203">property <b>lambdaActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleLambdaAction'>ReceiptRuleLambdaAction</a>&gt;[]&gt;;</code></pre>
@@ -2817,7 +2817,7 @@ If true, the rule will be enabled
 A list of Lambda Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2825,7 +2825,7 @@ A list of Lambda Action blocks. Documented below.
 The name of the rule
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-recipients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L211">property <b>recipients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L211">property <b>recipients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipients?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2833,7 +2833,7 @@ The name of the rule
 A list of email addresses
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-ruleSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L215">property <b>ruleSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L215">property <b>ruleSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleSetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2841,7 +2841,7 @@ A list of email addresses
 The name of the rule set
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-s3Actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L219">property <b>s3Actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L219">property <b>s3Actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleS3Action'>ReceiptRuleS3Action</a>&gt;[]&gt;;</code></pre>
@@ -2849,7 +2849,7 @@ The name of the rule set
 A list of S3 Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-scanEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L223">property <b>scanEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L223">property <b>scanEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scanEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2857,7 +2857,7 @@ A list of S3 Action blocks. Documented below.
 If true, incoming emails will be scanned for spam and viruses
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-snsActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L227">property <b>snsActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L227">property <b>snsActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleSnsAction'>ReceiptRuleSnsAction</a>&gt;[]&gt;;</code></pre>
@@ -2865,7 +2865,7 @@ If true, incoming emails will be scanned for spam and viruses
 A list of SNS Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-stopActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L231">property <b>stopActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L231">property <b>stopActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stopActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleStopAction'>ReceiptRuleStopAction</a>&gt;[]&gt;;</code></pre>
@@ -2873,7 +2873,7 @@ A list of SNS Action blocks. Documented below.
 A list of Stop Action blocks. Documented below.
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-tlsPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L235">property <b>tlsPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L235">property <b>tlsPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2881,7 +2881,7 @@ A list of Stop Action blocks. Documented below.
 Require or Optional
 
 <h4 class="pdoc-member-header" id="ReceiptRuleState-workmailActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/receiptRule.ts#L239">property <b>workmailActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/receiptRule.ts#L239">property <b>workmailActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workmailActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReceiptRuleWorkmailAction'>ReceiptRuleWorkmailAction</a>&gt;[]&gt;;</code></pre>
@@ -2889,7 +2889,7 @@ Require or Optional
 A list of WorkMail Action blocks. Documented below.
 
 <h3 class="pdoc-module-header" id="TemplateArgs" data-link-title="TemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L130">
         interface <strong>TemplateArgs</strong>
     </a>
 </h3>
@@ -2899,7 +2899,7 @@ A list of WorkMail Action blocks. Documented below.
 The set of arguments for constructing a Template resource.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-html">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L134">property <b>html</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L134">property <b>html</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>html?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2907,7 +2907,7 @@ The set of arguments for constructing a Template resource.
 The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2915,7 +2915,7 @@ The HTML body of the email. Must be less than 500KB in size, including both the 
 The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L142">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L142">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2923,7 +2923,7 @@ The name of the template. Cannot exceed 64 characters. You will refer to this na
 The subject line of the email.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L146">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L146">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>text?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2931,7 +2931,7 @@ The subject line of the email.
 The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
 
 <h3 class="pdoc-module-header" id="TemplateState" data-link-title="TemplateState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L108">
         interface <strong>TemplateState</strong>
     </a>
 </h3>
@@ -2941,7 +2941,7 @@ The email body that will be visible to recipients whose email clients do not dis
 Input properties used for looking up and filtering Template resources.
 
 <h4 class="pdoc-member-header" id="TemplateState-html">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L112">property <b>html</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L112">property <b>html</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>html?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2949,7 +2949,7 @@ Input properties used for looking up and filtering Template resources.
 The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
 
 <h4 class="pdoc-member-header" id="TemplateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2957,7 +2957,7 @@ The HTML body of the email. Must be less than 500KB in size, including both the 
 The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
 
 <h4 class="pdoc-member-header" id="TemplateState-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L120">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L120">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2965,7 +2965,7 @@ The name of the template. Cannot exceed 64 characters. You will refer to this na
 The subject line of the email.
 
 <h4 class="pdoc-member-header" id="TemplateState-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/ses/template.ts#L124">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/ses/template.ts#L124">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>text?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

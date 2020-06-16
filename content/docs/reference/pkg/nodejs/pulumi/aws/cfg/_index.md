@@ -3,7 +3,7 @@ title: "Module cfg"
 title_tag: "Module cfg | Package @pulumi/aws | Node.js SDK"
 linktitle: "cfg"
 meta_desc: "Explore members of the cfg module in the @pulumi/aws package."
-git_sha: "c672e225a765b11b07ea23e7b1b411483d7f38da"
+git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
 block_external_search_index: true
 ---
 
@@ -58,7 +58,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AggregateAuthorization" data-link-title="AggregateAuthorization">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L24">
         Resource <strong>AggregateAuthorization</strong>
     </a>
 </h3>
@@ -82,7 +82,7 @@ const example = new aws.cfg.AggregateAuthorization("example", {
 ```
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -96,7 +96,7 @@ Create a AggregateAuthorization resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -107,14 +107,14 @@ Get an existing AggregateAuthorization resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -125,7 +125,7 @@ Returns true if the given object is an instance of AggregateAuthorization.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L55">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L55">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Account ID
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ Account ID
 The ARN of the authorization
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L63">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L63">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ deployments and may be missing (undefined) during planning phases.
 Region
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ Region
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="AggregateAuthorization-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -175,7 +175,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ConfigurationAggregator" data-link-title="ConfigurationAggregator">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L62">
         Resource <strong>ConfigurationAggregator</strong>
     </a>
 </h3>
@@ -235,7 +235,7 @@ const organizationConfigurationAggregator = new aws.cfg.ConfigurationAggregator(
 ```
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -249,7 +249,7 @@ Create a ConfigurationAggregator resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L72">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -260,14 +260,14 @@ Get an existing ConfigurationAggregator resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L62">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L83">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -278,7 +278,7 @@ Returns true if the given object is an instance of ConfigurationAggregator.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-accountAggregationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L93">property <b>accountAggregationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L93">property <b>accountAggregationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountAggregationSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationAggregatorAccountAggregationSource'>ConfigurationAggregatorAccountAggregationSource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -286,7 +286,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The account(s) to aggregate config data from as documented below.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L97">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L97">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -294,7 +294,7 @@ The account(s) to aggregate config data from as documented below.
 The ARN of the aggregator
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -303,7 +303,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -311,7 +311,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the configuration aggregator.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-organizationAggregationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L105">property <b>organizationAggregationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L105">property <b>organizationAggregationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organizationAggregationSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationAggregatorOrganizationAggregationSource'>ConfigurationAggregatorOrganizationAggregationSource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ The name of the configuration aggregator.
 The organization to aggregate config data from as documented below.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L109">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L109">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -327,7 +327,7 @@ The organization to aggregate config data from as documented below.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregator-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L62">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -336,7 +336,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DeliveryChannel" data-link-title="DeliveryChannel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L68">
         Resource <strong>DeliveryChannel</strong>
     </a>
 </h3>
@@ -402,7 +402,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 ```
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -416,7 +416,7 @@ Create a DeliveryChannel resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -427,14 +427,14 @@ Get an existing DeliveryChannel resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L68">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L68">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L89">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L89">method <b>isInstance</b></a>
 </h4>
 
 
@@ -445,7 +445,7 @@ Returns true if the given object is an instance of DeliveryChannel.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -454,7 +454,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L103">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L103">property <b>s3BucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ The name of the delivery channel. Defaults to `default`. Changing it recreates t
 The name of the S3 bucket used to store the configuration history.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L107">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L107">property <b>s3KeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3KeyPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ The name of the S3 bucket used to store the configuration history.
 The prefix for the specified S3 bucket.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-snapshotDeliveryProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L111">property <b>snapshotDeliveryProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L111">property <b>snapshotDeliveryProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotDeliveryProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeliveryChannelSnapshotDeliveryProperties'>DeliveryChannelSnapshotDeliveryProperties</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -486,7 +486,7 @@ The prefix for the specified S3 bucket.
 Options for how AWS Config delivers configuration snapshots. See below
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L115">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L115">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -494,7 +494,7 @@ Options for how AWS Config delivers configuration snapshots. See below
 The ARN of the SNS topic that AWS Config delivers notifications to.
 
 <h4 class="pdoc-member-header" id="DeliveryChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L68">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L68">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -503,7 +503,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OrganizationCustomRule" data-link-title="OrganizationCustomRule">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L37">
         Resource <strong>OrganizationCustomRule</strong>
     </a>
 </h3>
@@ -540,7 +540,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
 ```
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -554,7 +554,7 @@ Create a OrganizationCustomRule resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -565,14 +565,14 @@ Get an existing OrganizationCustomRule resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -583,7 +583,7 @@ Returns true if the given object is an instance of OrganizationCustomRule.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L68">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L68">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L72">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L72">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ Amazon Resource Name (ARN) of the rule
 Description of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-excludedAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L76">property <b>excludedAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L76">property <b>excludedAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludedAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ Description of the rule
 List of AWS account identifiers to exclude from the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -616,7 +616,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L80">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L80">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ deployments and may be missing (undefined) during planning phases.
 A string in JSON format that is passed to the AWS Config Rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-lambdaFunctionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L84">property <b>lambdaFunctionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L84">property <b>lambdaFunctionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lambdaFunctionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ A string in JSON format that is passed to the AWS Config Rule Lambda Function
 Amazon Resource Name (ARN) of the rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L88">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L88">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumExecutionFrequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ Amazon Resource Name (ARN) of the rule Lambda Function
 The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule, if the 
 The name of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-resourceIdScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L96">property <b>resourceIdScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L96">property <b>resourceIdScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceIdScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -656,7 +656,7 @@ The name of the rule
 Identifier of the AWS resource to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-resourceTypesScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L100">property <b>resourceTypesScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L100">property <b>resourceTypesScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceTypesScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -664,7 +664,7 @@ Identifier of the AWS resource to evaluate
 List of types of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-tagKeyScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L104">property <b>tagKeyScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L104">property <b>tagKeyScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tagKeyScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -672,7 +672,7 @@ List of types of AWS resources to evaluate
 Tag key of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-tagValueScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L108">property <b>tagValueScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L108">property <b>tagValueScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tagValueScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -680,7 +680,7 @@ Tag key of AWS resources to evaluate
 Tag value of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-triggerTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L112">property <b>triggerTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L112">property <b>triggerTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggerTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -688,7 +688,7 @@ Tag value of AWS resources to evaluate
 List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -697,7 +697,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OrganizationManagedRule" data-link-title="OrganizationManagedRule">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L31">
         Resource <strong>OrganizationManagedRule</strong>
     </a>
 </h3>
@@ -728,7 +728,7 @@ const exampleOrganizationManagedRule = new aws.cfg.OrganizationManagedRule("exam
 ```
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -742,7 +742,7 @@ Create a OrganizationManagedRule resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -753,14 +753,14 @@ Get an existing OrganizationManagedRule resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -771,7 +771,7 @@ Returns true if the given object is an instance of OrganizationManagedRule.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L62">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L62">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -779,7 +779,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -787,7 +787,7 @@ Amazon Resource Name (ARN) of the rule
 Description of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-excludedAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L70">property <b>excludedAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L70">property <b>excludedAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludedAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -795,7 +795,7 @@ Description of the rule
 List of AWS account identifiers to exclude from the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -804,7 +804,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L74">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L74">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ deployments and may be missing (undefined) during planning phases.
 A string in JSON format that is passed to the AWS Config Rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L78">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L78">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumExecutionFrequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ A string in JSON format that is passed to the AWS Config Rule Lambda Function
 The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -828,7 +828,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule, if the 
 The name of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-resourceIdScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L86">property <b>resourceIdScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L86">property <b>resourceIdScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceIdScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ The name of the rule
 Identifier of the AWS resource to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-resourceTypesScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L90">property <b>resourceTypesScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L90">property <b>resourceTypesScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceTypesScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ Identifier of the AWS resource to evaluate
 List of types of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-ruleIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L94">property <b>ruleIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L94">property <b>ruleIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ List of types of AWS resources to evaluate
 Identifier of an available AWS Config Managed Rule to call. For available values, see the [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html) documentation
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-tagKeyScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L98">property <b>tagKeyScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L98">property <b>tagKeyScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tagKeyScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ Identifier of an available AWS Config Managed Rule to call. For available values
 Tag key of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-tagValueScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L102">property <b>tagValueScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L102">property <b>tagValueScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tagValueScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -868,7 +868,7 @@ Tag key of AWS resources to evaluate
 Tag value of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -877,7 +877,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Recorder" data-link-title="Recorder">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L43">
         Resource <strong>Recorder</strong>
     </a>
 </h3>
@@ -918,7 +918,7 @@ const foo = new aws.cfg.Recorder("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="Recorder-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -932,7 +932,7 @@ Create a Recorder resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Recorder-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -943,14 +943,14 @@ Get an existing Recorder resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Recorder-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Recorder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -961,7 +961,7 @@ Returns true if the given object is an instance of Recorder.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Recorder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -970,7 +970,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Recorder-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -978,7 +978,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the recorder. Defaults to `default`. Changing it recreates the resource.
 
 <h4 class="pdoc-member-header" id="Recorder-recordingGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L78">property <b>recordingGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L78">property <b>recordingGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recordingGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RecorderRecordingGroup'>RecorderRecordingGroup</a>&gt;;</code></pre>
@@ -986,7 +986,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
 Recording group - see below.
 
 <h4 class="pdoc-member-header" id="Recorder-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L84">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L84">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -996,7 +996,7 @@ used to make read or write requests to the delivery channel and to describe the 
 See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
 
 <h4 class="pdoc-member-header" id="Recorder-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1005,7 +1005,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RecorderStatus" data-link-title="RecorderStatus">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L71">
         Resource <strong>RecorderStatus</strong>
     </a>
 </h3>
@@ -1076,7 +1076,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 ```
 
 <h4 class="pdoc-member-header" id="RecorderStatus-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -1090,7 +1090,7 @@ Create a RecorderStatus resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RecorderStatus-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L81">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -1101,14 +1101,14 @@ Get an existing RecorderStatus resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RecorderStatus-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RecorderStatus-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L92">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1119,7 +1119,7 @@ Returns true if the given object is an instance of RecorderStatus.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RecorderStatus-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1128,7 +1128,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RecorderStatus-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L102">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L102">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1136,7 +1136,7 @@ deployments and may be missing (undefined) during planning phases.
 Whether the configuration recorder should be enabled or disabled.
 
 <h4 class="pdoc-member-header" id="RecorderStatus-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1144,7 +1144,7 @@ Whether the configuration recorder should be enabled or disabled.
 The name of the recorder
 
 <h4 class="pdoc-member-header" id="RecorderStatus-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1153,7 +1153,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Rule" data-link-title="Rule">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L85">
         Resource <strong>Rule</strong>
     </a>
 </h3>
@@ -1236,7 +1236,7 @@ const exampleRule = new aws.cfg.Rule("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Rule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L150"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L150"> <b>constructor</b></a>
 </h4>
 
 
@@ -1250,7 +1250,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Rule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L95">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L95">method <b>get</b></a>
 </h4>
 
 
@@ -1261,14 +1261,14 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Rule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L85">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L85">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Rule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L106">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L106">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1279,7 +1279,7 @@ Returns true if the given object is an instance of Rule.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Rule-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L116">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L116">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +1287,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the config rule
 
 <h4 class="pdoc-member-header" id="Rule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L120">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L120">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1295,7 +1295,7 @@ The ARN of the config rule
 Description of the rule
 
 <h4 class="pdoc-member-header" id="Rule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1304,7 +1304,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Rule-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L124">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L124">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1312,7 +1312,7 @@ deployments and may be missing (undefined) during planning phases.
 A string in JSON format that is passed to the AWS Config rule Lambda function.
 
 <h4 class="pdoc-member-header" id="Rule-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L129">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L129">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumExecutionFrequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1321,7 +1321,7 @@ The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
 
 <h4 class="pdoc-member-header" id="Rule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1329,7 +1329,7 @@ is triggered periodically. If specified, requires `messageType` to be `Scheduled
 The name of the rule
 
 <h4 class="pdoc-member-header" id="Rule-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L137">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L137">property <b>ruleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ The name of the rule
 The ID of the config rule
 
 <h4 class="pdoc-member-header" id="Rule-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L141">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L141">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleScope'>RuleScope</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1345,7 +1345,7 @@ The ID of the config rule
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
 <h4 class="pdoc-member-header" id="Rule-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L146">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L146">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleSource'>RuleSource</a>&gt;;</code></pre>
@@ -1354,7 +1354,7 @@ Source specifies the rule owner, the rule identifier, and the notifications that
 the function to evaluate your AWS resources as documented below.
 
 <h4 class="pdoc-member-header" id="Rule-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L150">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1362,7 +1362,7 @@ the function to evaluate your AWS resources as documented below.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Rule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L85">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L85">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1374,7 +1374,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AggregateAuthorizationArgs" data-link-title="AggregateAuthorizationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L134">
         interface <strong>AggregateAuthorizationArgs</strong>
     </a>
 </h3>
@@ -1384,7 +1384,7 @@ deployments.
 The set of arguments for constructing a AggregateAuthorization resource.
 
 <h4 class="pdoc-member-header" id="AggregateAuthorizationArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L138">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L138">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1392,7 @@ The set of arguments for constructing a AggregateAuthorization resource.
 Account ID
 
 <h4 class="pdoc-member-header" id="AggregateAuthorizationArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L142">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L142">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ Account ID
 Region
 
 <h4 class="pdoc-member-header" id="AggregateAuthorizationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L146">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L146">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1408,7 +1408,7 @@ Region
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="AggregateAuthorizationState" data-link-title="AggregateAuthorizationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L112">
         interface <strong>AggregateAuthorizationState</strong>
     </a>
 </h3>
@@ -1418,7 +1418,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering AggregateAuthorization resources.
 
 <h4 class="pdoc-member-header" id="AggregateAuthorizationState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L116">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L116">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1426,7 +1426,7 @@ Input properties used for looking up and filtering AggregateAuthorization resour
 Account ID
 
 <h4 class="pdoc-member-header" id="AggregateAuthorizationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L120">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L120">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1434,7 +1434,7 @@ Account ID
 The ARN of the authorization
 
 <h4 class="pdoc-member-header" id="AggregateAuthorizationState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L124">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L124">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1442,7 +1442,7 @@ The ARN of the authorization
 Region
 
 <h4 class="pdoc-member-header" id="AggregateAuthorizationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/aggregateAuthorization.ts#L128">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/aggregateAuthorization.ts#L128">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1450,7 +1450,7 @@ Region
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ConfigurationAggregatorArgs" data-link-title="ConfigurationAggregatorArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L176">
         interface <strong>ConfigurationAggregatorArgs</strong>
     </a>
 </h3>
@@ -1460,7 +1460,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a ConfigurationAggregator resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorArgs-accountAggregationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L180">property <b>accountAggregationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L180">property <b>accountAggregationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorAccountAggregationSource'>ConfigurationAggregatorAccountAggregationSource</a>&gt;;</code></pre>
@@ -1468,7 +1468,7 @@ The set of arguments for constructing a ConfigurationAggregator resource.
 The account(s) to aggregate config data from as documented below.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1476,7 +1476,7 @@ The account(s) to aggregate config data from as documented below.
 The name of the configuration aggregator.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorArgs-organizationAggregationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L188">property <b>organizationAggregationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L188">property <b>organizationAggregationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizationAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorOrganizationAggregationSource'>ConfigurationAggregatorOrganizationAggregationSource</a>&gt;;</code></pre>
@@ -1484,7 +1484,7 @@ The name of the configuration aggregator.
 The organization to aggregate config data from as documented below.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L192">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L192">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1492,7 +1492,7 @@ The organization to aggregate config data from as documented below.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ConfigurationAggregatorState" data-link-title="ConfigurationAggregatorState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L150">
         interface <strong>ConfigurationAggregatorState</strong>
     </a>
 </h3>
@@ -1502,7 +1502,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering ConfigurationAggregator resources.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorState-accountAggregationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L154">property <b>accountAggregationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L154">property <b>accountAggregationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorAccountAggregationSource'>ConfigurationAggregatorAccountAggregationSource</a>&gt;;</code></pre>
@@ -1510,7 +1510,7 @@ Input properties used for looking up and filtering ConfigurationAggregator resou
 The account(s) to aggregate config data from as documented below.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L158">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L158">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1518,7 +1518,7 @@ The account(s) to aggregate config data from as documented below.
 The ARN of the aggregator
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1526,7 +1526,7 @@ The ARN of the aggregator
 The name of the configuration aggregator.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorState-organizationAggregationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L166">property <b>organizationAggregationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L166">property <b>organizationAggregationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizationAggregationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorOrganizationAggregationSource'>ConfigurationAggregatorOrganizationAggregationSource</a>&gt;;</code></pre>
@@ -1534,7 +1534,7 @@ The name of the configuration aggregator.
 The organization to aggregate config data from as documented below.
 
 <h4 class="pdoc-member-header" id="ConfigurationAggregatorState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/configurationAggregator.ts#L170">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/configurationAggregator.ts#L170">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1542,7 +1542,7 @@ The organization to aggregate config data from as documented below.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DeliveryChannelArgs" data-link-title="DeliveryChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L185">
         interface <strong>DeliveryChannelArgs</strong>
     </a>
 </h3>
@@ -1552,7 +1552,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a DeliveryChannel resource.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L189">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L189">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1560,7 +1560,7 @@ The set of arguments for constructing a DeliveryChannel resource.
 The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L193">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L193">property <b>s3BucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1568,7 +1568,7 @@ The name of the delivery channel. Defaults to `default`. Changing it recreates t
 The name of the S3 bucket used to store the configuration history.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L197">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L197">property <b>s3KeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3KeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1576,7 +1576,7 @@ The name of the S3 bucket used to store the configuration history.
 The prefix for the specified S3 bucket.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-snapshotDeliveryProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L201">property <b>snapshotDeliveryProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L201">property <b>snapshotDeliveryProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotDeliveryProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeliveryChannelSnapshotDeliveryProperties'>DeliveryChannelSnapshotDeliveryProperties</a>&gt;;</code></pre>
@@ -1584,7 +1584,7 @@ The prefix for the specified S3 bucket.
 Options for how AWS Config delivers configuration snapshots. See below
 
 <h4 class="pdoc-member-header" id="DeliveryChannelArgs-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L205">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L205">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1592,7 +1592,7 @@ Options for how AWS Config delivers configuration snapshots. See below
 The ARN of the SNS topic that AWS Config delivers notifications to.
 
 <h3 class="pdoc-module-header" id="DeliveryChannelState" data-link-title="DeliveryChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L159">
         interface <strong>DeliveryChannelState</strong>
     </a>
 </h3>
@@ -1602,7 +1602,7 @@ The ARN of the SNS topic that AWS Config delivers notifications to.
 Input properties used for looking up and filtering DeliveryChannel resources.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L163">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1610,7 +1610,7 @@ Input properties used for looking up and filtering DeliveryChannel resources.
 The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L167">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L167">property <b>s3BucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3BucketName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1618,7 +1618,7 @@ The name of the delivery channel. Defaults to `default`. Changing it recreates t
 The name of the S3 bucket used to store the configuration history.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L171">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L171">property <b>s3KeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3KeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1626,7 +1626,7 @@ The name of the S3 bucket used to store the configuration history.
 The prefix for the specified S3 bucket.
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-snapshotDeliveryProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L175">property <b>snapshotDeliveryProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L175">property <b>snapshotDeliveryProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotDeliveryProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeliveryChannelSnapshotDeliveryProperties'>DeliveryChannelSnapshotDeliveryProperties</a>&gt;;</code></pre>
@@ -1634,7 +1634,7 @@ The prefix for the specified S3 bucket.
 Options for how AWS Config delivers configuration snapshots. See below
 
 <h4 class="pdoc-member-header" id="DeliveryChannelState-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/deliveryChannel.ts#L179">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/deliveryChannel.ts#L179">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1642,7 +1642,7 @@ Options for how AWS Config delivers configuration snapshots. See below
 The ARN of the SNS topic that AWS Config delivers notifications to.
 
 <h3 class="pdoc-module-header" id="OrganizationCustomRuleArgs" data-link-title="OrganizationCustomRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L227">
         interface <strong>OrganizationCustomRuleArgs</strong>
     </a>
 </h3>
@@ -1652,7 +1652,7 @@ The ARN of the SNS topic that AWS Config delivers notifications to.
 The set of arguments for constructing a OrganizationCustomRule resource.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L231">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L231">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1660,7 +1660,7 @@ The set of arguments for constructing a OrganizationCustomRule resource.
 Description of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-excludedAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L235">property <b>excludedAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L235">property <b>excludedAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludedAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1668,7 +1668,7 @@ Description of the rule
 List of AWS account identifiers to exclude from the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L239">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L239">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1676,7 +1676,7 @@ List of AWS account identifiers to exclude from the rule
 A string in JSON format that is passed to the AWS Config Rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-lambdaFunctionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L243">property <b>lambdaFunctionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L243">property <b>lambdaFunctionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaFunctionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1684,7 +1684,7 @@ A string in JSON format that is passed to the AWS Config Rule Lambda Function
 Amazon Resource Name (ARN) of the rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L247">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L247">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumExecutionFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1692,7 +1692,7 @@ Amazon Resource Name (ARN) of the rule Lambda Function
 The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1700,7 +1700,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule, if the 
 The name of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-resourceIdScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L255">property <b>resourceIdScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L255">property <b>resourceIdScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceIdScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1708,7 +1708,7 @@ The name of the rule
 Identifier of the AWS resource to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-resourceTypesScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L259">property <b>resourceTypesScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L259">property <b>resourceTypesScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTypesScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1716,7 +1716,7 @@ Identifier of the AWS resource to evaluate
 List of types of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-tagKeyScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L263">property <b>tagKeyScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L263">property <b>tagKeyScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagKeyScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1724,7 +1724,7 @@ List of types of AWS resources to evaluate
 Tag key of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-tagValueScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L267">property <b>tagValueScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L267">property <b>tagValueScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagValueScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1732,7 +1732,7 @@ Tag key of AWS resources to evaluate
 Tag value of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleArgs-triggerTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L271">property <b>triggerTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L271">property <b>triggerTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1740,7 +1740,7 @@ Tag value of AWS resources to evaluate
 List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 
 <h3 class="pdoc-module-header" id="OrganizationCustomRuleState" data-link-title="OrganizationCustomRuleState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L173">
         interface <strong>OrganizationCustomRuleState</strong>
     </a>
 </h3>
@@ -1750,7 +1750,7 @@ List of notification types that trigger AWS Config to run an evaluation for the 
 Input properties used for looking up and filtering OrganizationCustomRule resources.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L177">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L177">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1758,7 +1758,7 @@ Input properties used for looking up and filtering OrganizationCustomRule resour
 Amazon Resource Name (ARN) of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L181">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L181">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1766,7 +1766,7 @@ Amazon Resource Name (ARN) of the rule
 Description of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-excludedAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L185">property <b>excludedAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L185">property <b>excludedAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludedAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1774,7 +1774,7 @@ Description of the rule
 List of AWS account identifiers to exclude from the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L189">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L189">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1782,7 +1782,7 @@ List of AWS account identifiers to exclude from the rule
 A string in JSON format that is passed to the AWS Config Rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-lambdaFunctionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L193">property <b>lambdaFunctionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L193">property <b>lambdaFunctionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lambdaFunctionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1790,7 +1790,7 @@ A string in JSON format that is passed to the AWS Config Rule Lambda Function
 Amazon Resource Name (ARN) of the rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L197">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L197">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumExecutionFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1798,7 +1798,7 @@ Amazon Resource Name (ARN) of the rule Lambda Function
 The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L201">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1806,7 +1806,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule, if the 
 The name of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-resourceIdScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L205">property <b>resourceIdScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L205">property <b>resourceIdScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceIdScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1814,7 +1814,7 @@ The name of the rule
 Identifier of the AWS resource to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-resourceTypesScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L209">property <b>resourceTypesScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L209">property <b>resourceTypesScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTypesScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1822,7 +1822,7 @@ Identifier of the AWS resource to evaluate
 List of types of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-tagKeyScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L213">property <b>tagKeyScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L213">property <b>tagKeyScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagKeyScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1830,7 +1830,7 @@ List of types of AWS resources to evaluate
 Tag key of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-tagValueScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L217">property <b>tagValueScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L217">property <b>tagValueScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagValueScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1838,7 +1838,7 @@ Tag key of AWS resources to evaluate
 Tag value of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationCustomRuleState-triggerTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationCustomRule.ts#L221">property <b>triggerTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationCustomRule.ts#L221">property <b>triggerTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1846,7 +1846,7 @@ Tag value of AWS resources to evaluate
 List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 
 <h3 class="pdoc-module-header" id="OrganizationManagedRuleArgs" data-link-title="OrganizationManagedRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L208">
         interface <strong>OrganizationManagedRuleArgs</strong>
     </a>
 </h3>
@@ -1856,7 +1856,7 @@ List of notification types that trigger AWS Config to run an evaluation for the 
 The set of arguments for constructing a OrganizationManagedRule resource.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L212">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L212">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1864,7 +1864,7 @@ The set of arguments for constructing a OrganizationManagedRule resource.
 Description of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-excludedAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L216">property <b>excludedAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L216">property <b>excludedAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludedAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1872,7 +1872,7 @@ Description of the rule
 List of AWS account identifiers to exclude from the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L220">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L220">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1880,7 +1880,7 @@ List of AWS account identifiers to exclude from the rule
 A string in JSON format that is passed to the AWS Config Rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L224">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L224">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumExecutionFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1888,7 +1888,7 @@ A string in JSON format that is passed to the AWS Config Rule Lambda Function
 The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L228">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1896,7 +1896,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule, if the 
 The name of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-resourceIdScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L232">property <b>resourceIdScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L232">property <b>resourceIdScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceIdScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1904,7 +1904,7 @@ The name of the rule
 Identifier of the AWS resource to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-resourceTypesScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L236">property <b>resourceTypesScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L236">property <b>resourceTypesScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTypesScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1912,7 +1912,7 @@ Identifier of the AWS resource to evaluate
 List of types of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-ruleIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L240">property <b>ruleIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L240">property <b>ruleIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1920,7 +1920,7 @@ List of types of AWS resources to evaluate
 Identifier of an available AWS Config Managed Rule to call. For available values, see the [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html) documentation
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-tagKeyScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L244">property <b>tagKeyScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L244">property <b>tagKeyScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagKeyScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1928,7 +1928,7 @@ Identifier of an available AWS Config Managed Rule to call. For available values
 Tag key of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleArgs-tagValueScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L248">property <b>tagValueScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L248">property <b>tagValueScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagValueScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1936,7 +1936,7 @@ Tag key of AWS resources to evaluate
 Tag value of AWS resources to evaluate
 
 <h3 class="pdoc-module-header" id="OrganizationManagedRuleState" data-link-title="OrganizationManagedRuleState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L158">
         interface <strong>OrganizationManagedRuleState</strong>
     </a>
 </h3>
@@ -1946,7 +1946,7 @@ Tag value of AWS resources to evaluate
 Input properties used for looking up and filtering OrganizationManagedRule resources.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L162">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L162">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1954,7 +1954,7 @@ Input properties used for looking up and filtering OrganizationManagedRule resou
 Amazon Resource Name (ARN) of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L166">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L166">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1962,7 +1962,7 @@ Amazon Resource Name (ARN) of the rule
 Description of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-excludedAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L170">property <b>excludedAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L170">property <b>excludedAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludedAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1970,7 +1970,7 @@ Description of the rule
 List of AWS account identifiers to exclude from the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L174">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L174">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1978,7 +1978,7 @@ List of AWS account identifiers to exclude from the rule
 A string in JSON format that is passed to the AWS Config Rule Lambda Function
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L178">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L178">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumExecutionFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1986,7 +1986,7 @@ A string in JSON format that is passed to the AWS Config Rule Lambda Function
 The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1994,7 +1994,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule, if the 
 The name of the rule
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-resourceIdScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L186">property <b>resourceIdScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L186">property <b>resourceIdScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceIdScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2002,7 +2002,7 @@ The name of the rule
 Identifier of the AWS resource to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-resourceTypesScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L190">property <b>resourceTypesScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L190">property <b>resourceTypesScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTypesScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2010,7 +2010,7 @@ Identifier of the AWS resource to evaluate
 List of types of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-ruleIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L194">property <b>ruleIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L194">property <b>ruleIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2018,7 +2018,7 @@ List of types of AWS resources to evaluate
 Identifier of an available AWS Config Managed Rule to call. For available values, see the [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html) documentation
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-tagKeyScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L198">property <b>tagKeyScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L198">property <b>tagKeyScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagKeyScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2026,7 +2026,7 @@ Identifier of an available AWS Config Managed Rule to call. For available values
 Tag key of AWS resources to evaluate
 
 <h4 class="pdoc-member-header" id="OrganizationManagedRuleState-tagValueScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/organizationManagedRule.ts#L202">property <b>tagValueScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/organizationManagedRule.ts#L202">property <b>tagValueScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagValueScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2034,7 +2034,7 @@ Tag key of AWS resources to evaluate
 Tag value of AWS resources to evaluate
 
 <h3 class="pdoc-module-header" id="RecorderArgs" data-link-title="RecorderArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L144">
         interface <strong>RecorderArgs</strong>
     </a>
 </h3>
@@ -2044,7 +2044,7 @@ Tag value of AWS resources to evaluate
 The set of arguments for constructing a Recorder resource.
 
 <h4 class="pdoc-member-header" id="RecorderArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2052,7 +2052,7 @@ The set of arguments for constructing a Recorder resource.
 The name of the recorder. Defaults to `default`. Changing it recreates the resource.
 
 <h4 class="pdoc-member-header" id="RecorderArgs-recordingGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L152">property <b>recordingGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L152">property <b>recordingGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordingGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecorderRecordingGroup'>RecorderRecordingGroup</a>&gt;;</code></pre>
@@ -2060,7 +2060,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
 Recording group - see below.
 
 <h4 class="pdoc-member-header" id="RecorderArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L158">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L158">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2070,7 +2070,7 @@ used to make read or write requests to the delivery channel and to describe the 
 See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
 
 <h3 class="pdoc-module-header" id="RecorderState" data-link-title="RecorderState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L124">
         interface <strong>RecorderState</strong>
     </a>
 </h3>
@@ -2080,7 +2080,7 @@ See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-p
 Input properties used for looking up and filtering Recorder resources.
 
 <h4 class="pdoc-member-header" id="RecorderState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2088,7 +2088,7 @@ Input properties used for looking up and filtering Recorder resources.
 The name of the recorder. Defaults to `default`. Changing it recreates the resource.
 
 <h4 class="pdoc-member-header" id="RecorderState-recordingGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L132">property <b>recordingGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L132">property <b>recordingGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordingGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecorderRecordingGroup'>RecorderRecordingGroup</a>&gt;;</code></pre>
@@ -2096,7 +2096,7 @@ The name of the recorder. Defaults to `default`. Changing it recreates the resou
 Recording group - see below.
 
 <h4 class="pdoc-member-header" id="RecorderState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorder.ts#L138">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorder.ts#L138">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2106,7 +2106,7 @@ used to make read or write requests to the delivery channel and to describe the 
 See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
 
 <h3 class="pdoc-module-header" id="RecorderStatusArgs" data-link-title="RecorderStatusArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L158">
         interface <strong>RecorderStatusArgs</strong>
     </a>
 </h3>
@@ -2116,7 +2116,7 @@ See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-p
 The set of arguments for constructing a RecorderStatus resource.
 
 <h4 class="pdoc-member-header" id="RecorderStatusArgs-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L162">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L162">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2124,7 +2124,7 @@ The set of arguments for constructing a RecorderStatus resource.
 Whether the configuration recorder should be enabled or disabled.
 
 <h4 class="pdoc-member-header" id="RecorderStatusArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L166">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2132,7 +2132,7 @@ Whether the configuration recorder should be enabled or disabled.
 The name of the recorder
 
 <h3 class="pdoc-module-header" id="RecorderStatusState" data-link-title="RecorderStatusState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L144">
         interface <strong>RecorderStatusState</strong>
     </a>
 </h3>
@@ -2142,7 +2142,7 @@ The name of the recorder
 Input properties used for looking up and filtering RecorderStatus resources.
 
 <h4 class="pdoc-member-header" id="RecorderStatusState-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L148">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L148">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2150,7 +2150,7 @@ Input properties used for looking up and filtering RecorderStatus resources.
 Whether the configuration recorder should be enabled or disabled.
 
 <h4 class="pdoc-member-header" id="RecorderStatusState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/recorderStatus.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/recorderStatus.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2158,7 +2158,7 @@ Whether the configuration recorder should be enabled or disabled.
 The name of the recorder
 
 <h3 class="pdoc-module-header" id="RuleArgs" data-link-title="RuleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L246">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L246">
         interface <strong>RuleArgs</strong>
     </a>
 </h3>
@@ -2168,7 +2168,7 @@ The name of the recorder
 The set of arguments for constructing a Rule resource.
 
 <h4 class="pdoc-member-header" id="RuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L250">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L250">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2176,7 +2176,7 @@ The set of arguments for constructing a Rule resource.
 Description of the rule
 
 <h4 class="pdoc-member-header" id="RuleArgs-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L254">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L254">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2184,7 +2184,7 @@ Description of the rule
 A string in JSON format that is passed to the AWS Config rule Lambda function.
 
 <h4 class="pdoc-member-header" id="RuleArgs-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L259">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L259">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumExecutionFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2193,7 +2193,7 @@ The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
 
 <h4 class="pdoc-member-header" id="RuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L263">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L263">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2201,7 +2201,7 @@ is triggered periodically. If specified, requires `messageType` to be `Scheduled
 The name of the rule
 
 <h4 class="pdoc-member-header" id="RuleArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L267">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L267">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleScope'>RuleScope</a>&gt;;</code></pre>
@@ -2209,7 +2209,7 @@ The name of the rule
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
 <h4 class="pdoc-member-header" id="RuleArgs-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L272">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L272">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleSource'>RuleSource</a>&gt;;</code></pre>
@@ -2218,7 +2218,7 @@ Source specifies the rule owner, the rule identifier, and the notifications that
 the function to evaluate your AWS resources as documented below.
 
 <h4 class="pdoc-member-header" id="RuleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L276">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L276">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2226,7 +2226,7 @@ the function to evaluate your AWS resources as documented below.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="RuleState" data-link-title="RuleState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L202">
         interface <strong>RuleState</strong>
     </a>
 </h3>
@@ -2236,7 +2236,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering Rule resources.
 
 <h4 class="pdoc-member-header" id="RuleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L206">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L206">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2244,7 +2244,7 @@ Input properties used for looking up and filtering Rule resources.
 The ARN of the config rule
 
 <h4 class="pdoc-member-header" id="RuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L210">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L210">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2252,7 +2252,7 @@ The ARN of the config rule
 Description of the rule
 
 <h4 class="pdoc-member-header" id="RuleState-inputParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L214">property <b>inputParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L214">property <b>inputParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2260,7 +2260,7 @@ Description of the rule
 A string in JSON format that is passed to the AWS Config rule Lambda function.
 
 <h4 class="pdoc-member-header" id="RuleState-maximumExecutionFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L219">property <b>maximumExecutionFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L219">property <b>maximumExecutionFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumExecutionFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2269,7 +2269,7 @@ The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
 
 <h4 class="pdoc-member-header" id="RuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L223">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L223">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2277,7 +2277,7 @@ is triggered periodically. If specified, requires `messageType` to be `Scheduled
 The name of the rule
 
 <h4 class="pdoc-member-header" id="RuleState-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L227">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L227">property <b>ruleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2285,7 +2285,7 @@ The name of the rule
 The ID of the config rule
 
 <h4 class="pdoc-member-header" id="RuleState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L231">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L231">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleScope'>RuleScope</a>&gt;;</code></pre>
@@ -2293,7 +2293,7 @@ The ID of the config rule
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
 <h4 class="pdoc-member-header" id="RuleState-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L236">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L236">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleSource'>RuleSource</a>&gt;;</code></pre>
@@ -2302,7 +2302,7 @@ Source specifies the rule owner, the rule identifier, and the notifications that
 the function to evaluate your AWS resources as documented below.
 
 <h4 class="pdoc-member-header" id="RuleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/cfg/rule.ts#L240">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cfg/rule.ts#L240">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
