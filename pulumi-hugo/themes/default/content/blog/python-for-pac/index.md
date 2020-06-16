@@ -26,7 +26,7 @@ Pulumi supports two types of policies:
 - **ResourceValidationPolicy** validates individual resources in a stack and is run during preview.
 - **StackValidationPolicy** validates the stack as a whole and runs when the stack is deployed because some resources may need to exists to validate inputs or outputs.
 
-ResourceValidationPolicy and StackValidationPolicy both run during previews and updates.
+ResourceValidationPolicy and StackValidationPolicy validations run during previews and updates. During previews, resources aren't created or modified, so the ResourceValidationPolicy and StackValidationPolicy validations see a preview of what's going to happen (as best we can determine).
 With stack validation policies, the validation happens after resources have been created or modified. Modifications to resources can't be prevented, but using mandatory enforcement results in a deployment failing (despite the modified resources). If you run `pulumi preview` before an update and use a mandatory StackValidationPolicy, you can catch the problems before a real deployment occurs.
 
 The difference is described in this table:
