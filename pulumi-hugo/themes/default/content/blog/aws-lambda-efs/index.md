@@ -1,5 +1,5 @@
 ---
-title: "Using AWS Lambda with Amazon Elastic File Service (EFS)"
+title: "Using Amazon Elastic File System (EFS) with AWS Lambda"
 date: 2020-06-16
 meta_desc: "Pulumi supports Amazon EFS with Lambda and Fargate services."
 meta_image: aws-lambda-efs.png
@@ -39,8 +39,6 @@ To use an EFS file system from Lambda, we need a few things:
 
 Let's walk through how to build the required infrastructure.  We'll use Pulumi to provision the necessary resources.  You can check out the [full source code](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples.
 
-> Note: These examples depend on the newly added support for EFS with Lambda in the `2.10.0` release of the `pulumi-aws` package, which will be released later today.
-
 Because EFS is tied to a VPC, we can only access it from a Lambda running inside a VPC.  We should create a VPC with both public and private subnets to ensure the Lambda function can reach the internet (since Lambda functions inside VPCs are not assigned public IPs).  We could use an existing VPC or create a new one for our application.
 
 ```ts
@@ -52,40 +50,40 @@ An EFS FileSystem is a regional service, but accessing it requires adding mount 
 
 ```ts
 const filesystem = new aws.efs.FileSystem("filesystem");
-    const targets = [];
-    for (let i = 0; i < subnetIds.length; i++) {
-        targets.push(new aws.efs.MountTarget(`fs-mount-${i}`, {
-            fileSystemId: filesystem.id,
-            subnetId: subnetIds[i],
-            securityGroups: [vpc.vpc.defaultSecurityGroupId],
-        }));
-    }
-```
-
-To use EFS from our Lambda Function, we need to tell Lambda how to mount the NFS volume.  Specifically, what Unix user and group to use for access, and what folder and permissions to use as the root folder of the mount.  This is done using an EFS AccessPoint.
-
-```ts
-    const ap = new aws.efs.AccessPoint("ap", {
+const targets = [];
+for (let i = 0; i < subnetIds.length; i++) {
+    targets.push(new aws.efs.MountTarget(`fs-mount-${i}`, {
         fileSystemId: filesystem.id,
-        posixUser: { uid: 1000, gid: 1000 },
-        rootDirectory: { path: "/www", creationInfo: { ownerGid: 1000, ownerUid: 1000, permissions: "755" } },
-    }, { dependsOn: targets });
+        subnetId: subnetIds[i],
+        securityGroups: [vpc.vpc.defaultSecurityGroupId],
+    }));
+}
 ```
 
-Finally, each Lambda Function we want to run will need to be in our VPC, use our default security group, and mount the EFS file system via our AccessPoint.  We can write a small function that creates Lambda Functions with this configuration.  We can specify where we want to mount this into the Lambda Function - though we must mount it underneath `/mnt/`.
+To use EFS from our Lambda Function, we need to tell Lambda how to mount the NFS volume.  Specifically, we must specify the Unix user and group to use to enable access, and the location and permission scheme to use as the root folder of the mount.  This is done using an EFS AccessPoint.
 
 ```ts
-    function efsvpcCallback(name: string, f: aws.lambda.Callback<awsx.apigateway.Request, awsx.apigateway.Response>) {
-        return new aws.lambda.CallbackFunction(name, {
-            policies: [aws.iam.ManagedPolicies.AWSLambdaVPCAccessExecutionRole, aws.iam.ManagedPolicies.AWSLambdaFullAccess],
-            vpcConfig: {
-                subnetIds: vpc.privateSubnetIds,
-                securityGroupIds: [vpc.vpc.defaultSecurityGroupId],
-            },
-            fileSystemConfigs: [{ arn: ap.arn, localMountPath: "/mnt/storage" }],
-            callback: f,
-        });
-    }
+const ap = new aws.efs.AccessPoint("ap", {
+    fileSystemId: filesystem.id,
+    posixUser: { uid: 1000, gid: 1000 },
+    rootDirectory: { path: "/www", creationInfo: { ownerGid: 1000, ownerUid: 1000, permissions: "755" } },
+}, { dependsOn: targets });
+```
+
+Finally, each Lambda Function we want to run will need to be in our VPC, use our default security group, and mount the EFS file system via our AccessPoint.  We can write a small function that creates Lambda Functions with this configuration and we can specify where we want to mount this into the Lambda Function, though we must mount it underneath `/mnt/`.
+
+```ts
+function efsvpcCallback(name: string, f: aws.lambda.Callback<awsx.apigateway.Request, awsx.apigateway.Response>) {
+    return new aws.lambda.CallbackFunction(name, {
+        policies: [aws.iam.ManagedPolicies.AWSLambdaVPCAccessExecutionRole, aws.iam.ManagedPolicies.AWSLambdaFullAccess],
+        vpcConfig: {
+            subnetIds: vpc.privateSubnetIds,
+            securityGroupIds: [vpc.vpc.defaultSecurityGroupId],
+        },
+        fileSystemConfigs: [{ arn: ap.arn, localMountPath: "/mnt/storage" }],
+        callback: f,
+    });
+}
 ```
 
 We now have our infrastructure all set up to start using Lambda with EFS.  Let’s build an app!
@@ -95,8 +93,6 @@ We now have our infrastructure all set up to start using Lambda with EFS.  Let�
 For a first simple Lambda application, we'll expose an HTTP API that GETs files from, and POSTs files to, our EFS file system.  We'll implement this with API Gateway and two routes.  Using the helper we defined above, each of these is just a few lines of code.
 
 Note that we can use our normal Node.js `fs.readFileSync` and `fs.writeFileSync` APIs to interact with the EFS file system - no need for an AWS SDK to talk to EFS. This makes it easy to take existing software and libraries that can interact with the filesystem and run them inside Lambda.
-
-> Note: Yes, exposing this to the internet is insecure - it is recommended that you [add authentication or use a private endpoint](https://www.pulumi.com/docs/guides/crosswalk/aws/api-gateway/#controlling-and-managing-access-to-apis) before running this in production!
 
 ```ts
 const api = new awsx.apigateway.API("api", {
@@ -148,16 +144,17 @@ We can get more insight into what the file system looks like inside Lambda by ex
 
 ```ts
 ...
-{
-                method: "POST", path: "/", eventHandler: efsvpcCallback("postHandler", async (ev, ctx) => {
-                    const cmd = new Buffer(ev.body!, 'base64').toString()
-                    const buf = cp.execSync(cmd);
-                    return {
-                        statusCode: 200,
-                        body: buf.toString(),
-                    };
-                }),
-            },
+        {
+            method: "POST", path: "/", eventHandler: efsvpcCallback("postHandler", async (ev, ctx) => {
+                const cmd = new Buffer(ev.body!, 'base64').toString()
+                const buf = cp.execSync(cmd);
+                return {
+                    statusCode: 200,
+                    body: buf.toString(),
+                };
+            }),
+        },
+...
 ```
 
 We can now interact with our EFS file system by just running shell commands.  Since it’s a normal file system mount, all our standard Unix tools work as we expect.  Note that the files are owned by uid/gid `1000`/`1000`, and have the 755 permissions specified by our Access Point.
@@ -185,31 +182,31 @@ Now that we can read and write to our file system from Lambda, what about sharin
 First, we create an EFS volume configuration that describes the volume we want to mount in our Fargate Task.  This is similar to Lambda - we use the same AccessPoint and root directory.
 
 ```ts
-    const efsVolumeConfiguration: aws.types.input.ecs.TaskDefinitionVolumeEfsVolumeConfiguration = {
-        fileSystemId: filesystem.id,
-        authorizationConfig: { accessPointId: ap.id, },
-        rootDirectory: "/www",
-    };
+const efsVolumeConfiguration: aws.types.input.ecs.TaskDefinitionVolumeEfsVolumeConfiguration = {
+    fileSystemId: filesystem.id,
+    authorizationConfig: { accessPointId: ap.id, },
+    rootDirectory: "/www",
+};
 ```
 
 Then we can launch our `nginx` task.  We use our EFS volume configuration to define a volume named `efs` in the task, and then mount that volume into the `/usr/share/nginx/html` path in the `nginx` container so it can serve content directly from the EFS file system.  Note that we also have to explicitly set the `platformVersion` to `1.4.0` so that we can use EFS since `1.4.0` is not yet the default.  We ensure that we are using the same security group that can access the file system and that we’ve opened up access to port 80 for our nginx server.
 
 ```ts
-    const nginx = new awsx.ecs.FargateService("nginx", {
-        cluster: cluster,
-        taskDefinitionArgs: {
-            container: {
-                image: "nginx",
-                memory: 128,
-                portMappings: [{ containerPort: 80, hostPort: 80, protocol: "tcp" }],
-                mountPoints: [{ containerPath: "/usr/share/nginx/html", sourceVolume: "efs" }],
-            },
-            volumes: [{ name: "efs", efsVolumeConfiguration }],
+const nginx = new awsx.ecs.FargateService("nginx", {
+    cluster: cluster,
+    taskDefinitionArgs: {
+        container: {
+            image: "nginx",
+            memory: 128,
+            portMappings: [{ containerPort: 80, hostPort: 80, protocol: "tcp" }],
+            mountPoints: [{ containerPath: "/usr/share/nginx/html", sourceVolume: "efs" }],
         },
-        securityGroups: [vpc.vpc.defaultSecurityGroupId, ...cluster.securityGroups],
-        subnets: vpc.publicSubnetIds,
-        platformVersion: "1.4.0",
-    });
+        volumes: [{ name: "efs", efsVolumeConfiguration }],
+    },
+    securityGroups: [vpc.vpc.defaultSecurityGroupId, ...cluster.securityGroups],
+    subnets: vpc.publicSubnetIds,
+    platformVersion: "1.4.0",
+});
 ```
 
 Navigating to our Task’s public IP - we see the contents of the file we stored in our file system.
