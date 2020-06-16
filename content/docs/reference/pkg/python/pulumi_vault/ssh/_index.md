@@ -3,7 +3,10 @@ title: Module ssh
 title_tag: Module ssh | Package pulumi_vault | Python SDK
 linktitle: ssh
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="ssh">
 <h1>ssh<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h1>

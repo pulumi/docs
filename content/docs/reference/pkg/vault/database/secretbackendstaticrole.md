@@ -51,7 +51,7 @@ class MyStack : Stack
         {
             Backend = db.Path,
             DbName = postgres.Name,
-            RotationPeriod = "3600",
+            RotationPeriod = 3600,
             RotationStatements = 
             {
                 "ALTER USER \"{{name}}\" WITH PASSWORD '{{password}}';",

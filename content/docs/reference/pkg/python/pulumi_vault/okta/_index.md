@@ -3,7 +3,10 @@ title: Module okta
 title_tag: Module okta | Package pulumi_vault | Python SDK
 linktitle: okta
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="okta">
 <h1>okta<a class="headerlink" href="#okta" title="Permalink to this headline">¶</a></h1>

@@ -3,7 +3,10 @@ title: Module consul
 title_tag: Module consul | Package pulumi_vault | Python SDK
 linktitle: consul
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="consul">
 <h1>consul<a class="headerlink" href="#consul" title="Permalink to this headline">¶</a></h1>

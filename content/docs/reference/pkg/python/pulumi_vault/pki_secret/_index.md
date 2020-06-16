@@ -3,7 +3,10 @@ title: Module pki_secret
 title_tag: Module pki_secret | Package pulumi_vault | Python SDK
 linktitle: pki_secret
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="pki-secret">
 <h1>pki_secret<a class="headerlink" href="#pki-secret" title="Permalink to this headline">¶</a></h1>

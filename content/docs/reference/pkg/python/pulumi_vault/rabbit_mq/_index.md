@@ -3,7 +3,10 @@ title: Module rabbit_mq
 title_tag: Module rabbit_mq | Package pulumi_vault | Python SDK
 linktitle: rabbit_mq
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="rabbit-mq">
 <h1>rabbit_mq<a class="headerlink" href="#rabbit-mq" title="Permalink to this headline">¶</a></h1>

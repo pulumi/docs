@@ -3,7 +3,10 @@ title: Module tokenauth
 title_tag: Module tokenauth | Package pulumi_vault | Python SDK
 linktitle: tokenauth
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="tokenauth">
 <h1>tokenauth<a class="headerlink" href="#tokenauth" title="Permalink to this headline">¶</a></h1>

@@ -65,7 +65,7 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.2.1</dd>
 </dl>
 
 

@@ -3,7 +3,10 @@ title: Module ldap
 title_tag: Module ldap | Package pulumi_vault | Python SDK
 linktitle: ldap
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "vault" >}}
 
 <div class="section" id="ldap">
 <h1>ldap<a class="headerlink" href="#ldap" title="Permalink to this headline">¶</a></h1>
