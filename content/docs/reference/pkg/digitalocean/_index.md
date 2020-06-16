@@ -75,6 +75,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="getspacesbuckets" title="GetSpacesBuckets"><span class="symbol function"></span>GetSpacesBuckets</a></li>
     <li><a href="getsshkey" title="GetSshKey"><span class="symbol function"></span>GetSshKey</a></li>
     <li><a href="gettag" title="GetTag"><span class="symbol function"></span>GetTag</a></li>
+    <li><a href="gettags" title="GetTags"><span class="symbol function"></span>GetTags</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
     <li><a href="getvolumesnapshot" title="GetVolumeSnapshot"><span class="symbol function"></span>GetVolumeSnapshot</a></li>
     <li><a href="getvpc" title="GetVpc"><span class="symbol function"></span>GetVpc</a></li>
@@ -89,7 +90,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>2.5.2</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

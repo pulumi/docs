@@ -143,7 +143,12 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py class">
 <dt id="pulumi_digitalocean.AwaitableGetTagResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetTagResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetTagResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetTagResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">databases_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">droplets_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_resource_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_snapshots_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volumes_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetTagResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_digitalocean.AwaitableGetTagsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetTagsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetTagsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -3894,11 +3899,59 @@ the following attributes:</p>
 
 <dl class="py class">
 <dt id="pulumi_digitalocean.GetTagResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetTagResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetTagResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetTagResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">databases_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">droplets_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_resource_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_snapshots_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volumes_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetTagResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTag.</p>
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetTagResult.databases_count">
+<code class="sig-name descname">databases_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagResult.databases_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the database clusters that the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetTagResult.droplets_count">
+<code class="sig-name descname">droplets_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagResult.droplets_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the Droplets the tag is applied to.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_digitalocean.GetTagResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetTagResult.images_count">
+<code class="sig-name descname">images_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagResult.images_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the images that the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetTagResult.total_resource_count">
+<code class="sig-name descname">total_resource_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagResult.total_resource_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the total number of resources that the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetTagResult.volume_snapshots_count">
+<code class="sig-name descname">volume_snapshots_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagResult.volume_snapshots_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the volume snapshots that the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetTagResult.volumes_count">
+<code class="sig-name descname">volumes_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagResult.volumes_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the volumes that the tag is applied to.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_digitalocean.GetTagsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetTagsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetTagsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getTags.</p>
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.GetTagsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -5903,14 +5956,50 @@ configuration via their ID or name.</p>
 </dd>
 </dl>
 <dl class="py attribute">
+<dt id="pulumi_digitalocean.Tag.databases_count">
+<code class="sig-name descname">databases_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.databases_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the database clusters that the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.Tag.droplets_count">
+<code class="sig-name descname">droplets_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.droplets_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the Droplets the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.Tag.images_count">
+<code class="sig-name descname">images_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.images_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the images that the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_digitalocean.Tag.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the tag</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.Tag.total_resource_count">
+<code class="sig-name descname">total_resource_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.total_resource_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the total number of resources that the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.Tag.volume_snapshots_count">
+<code class="sig-name descname">volume_snapshots_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.volume_snapshots_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the volume snapshots that the tag is applied to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_digitalocean.Tag.volumes_count">
+<code class="sig-name descname">volumes_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.volumes_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A count of the volumes that the tag is applied to.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_digitalocean.Tag.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Tag.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">databases_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">droplets_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_resource_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_snapshots_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volumes_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Tag.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Tag resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5919,7 +6008,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>databases_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A count of the database clusters that the tag is applied to.</p></li>
+<li><p><strong>droplets_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A count of the Droplets the tag is applied to.</p></li>
+<li><p><strong>images_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A count of the images that the tag is applied to.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tag</p></li>
+<li><p><strong>total_resource_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A count of the total number of resources that the tag is applied to.</p></li>
+<li><p><strong>volume_snapshots_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A count of the volume snapshots that the tag is applied to.</p></li>
+<li><p><strong>volumes_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A count of the volumes that the tag is applied to.</p></li>
 </ul>
 </dd>
 </dl>
@@ -7262,6 +7357,35 @@ managed by this provider or you need validate if the tag exists in the account.<
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the tag.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_digitalocean.get_tags">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_tags</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sorts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of tags in your DigitalOcean account, with the ability to
+filter and sort the results. If no filters are specified, all tags will be
+returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Filter the results.
+The <code class="docutils literal notranslate"><span class="pre">filter</span></code> block is documented below.</p></li>
+<li><p><strong>sorts</strong> (<em>list</em>) – Sort the results.
+The <code class="docutils literal notranslate"><span class="pre">sort</span></code> block is documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Filter the tags by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">total_resource_count</span></code>,  <code class="docutils literal notranslate"><span class="pre">droplets_count</span></code>, <code class="docutils literal notranslate"><span class="pre">images_count</span></code>, <code class="docutils literal notranslate"><span class="pre">volumes_count</span></code>, <code class="docutils literal notranslate"><span class="pre">volume_snapshots_count</span></code>, or <code class="docutils literal notranslate"><span class="pre">databases_count</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Only retrieves tags which keys has value that matches
+one of the values provided here.</p></li>
+</ul>
+<p>The <strong>sorts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sort direction. This may be either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the tags by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">total_resource_count</span></code>,  <code class="docutils literal notranslate"><span class="pre">droplets_count</span></code>, <code class="docutils literal notranslate"><span class="pre">images_count</span></code>, <code class="docutils literal notranslate"><span class="pre">volumes_count</span></code>, <code class="docutils literal notranslate"><span class="pre">volume_snapshots_count</span></code>, or <code class="docutils literal notranslate"><span class="pre">databases_count</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py function">
