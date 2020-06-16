@@ -18,6 +18,9 @@ To get more information about Budget, see:
 * How-to Guides
     * [Creating a budget](https://cloud.google.com/billing/docs/how-to/budgets)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Budget Resource {#create}

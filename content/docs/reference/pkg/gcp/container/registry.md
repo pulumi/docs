@@ -16,7 +16,6 @@ This resource can be used to ensure that the GCS bucket exists prior to assignin
 
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,7 +42,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		registry, err := container.NewRegistry(ctx, "registry", &container.RegistryArgs{
+			Location: pulumi.String("EU"),
+			Project:  pulumi.String("my-project"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

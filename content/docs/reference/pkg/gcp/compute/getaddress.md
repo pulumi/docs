@@ -14,7 +14,6 @@ Get the IP address from a static address. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/addresses/get) documentation.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,7 +53,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myAddress, err := compute.LookupAddress(ctx, &compute.LookupAddressArgs{
+			Name: "foobar",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		prod, err := dns.NewManagedZone(ctx, "prod", &dns.ManagedZoneArgs{
+			DnsName: pulumi.String("prod.mydomain.com."),
+		})
+		if err != nil {
+			return err
+		}
+		frontend, err := dns.NewRecordSet(ctx, "frontend", &dns.RecordSetArgs{
+			Type:        pulumi.String("A"),
+			Ttl:         pulumi.Int(300),
+			ManagedZone: prod.Name,
+			Rrdatas: pulumi.StringArray{
+				pulumi.String(myAddress.Address),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

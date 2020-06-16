@@ -13,7 +13,6 @@ meta_desc: "Explore the IamAuditConfig resource of the organizations module, inc
 Allows management of audit logging config for a given service for a Google Cloud Platform Organization.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,7 +50,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		config, err := organizations.NewIamAuditConfig(ctx, "config", &organizations.IamAuditConfigArgs{
+			AuditLogConfigs: organizations.IamAuditConfigAuditLogConfigArray{
+				&organizations.IamAuditConfigAuditLogConfigArgs{
+					ExemptedMembers: pulumi.StringArray{
+						pulumi.String("user:joebloggs@hashicorp.com"),
+					},
+					LogType: pulumi.String("DATA_READ"),
+				},
+			},
+			OrgId:   pulumi.String("your-organization-id"),
+			Service: pulumi.String("allServices"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

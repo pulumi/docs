@@ -12,26 +12,13 @@ meta_desc: "Explore the GetNetblockIPRanges function of the compute module, incl
 
 Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
 
-## Example Usage - Cloud Ranges
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+{{% examples %}}
+## Example Usage
 
-const netblock = gcp.compute.getNetblockIPRanges({});
-export const cidrBlocks = netblock.then(netblock => netblock.cidrBlocks);
-export const cidrBlocksIpv4 = netblock.then(netblock => netblock.cidrBlocksIpv4s);
-export const cidrBlocksIpv6 = netblock.then(netblock => netblock.cidrBlocksIpv6s);
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-netblock = gcp.compute.get_netblock_ip_ranges()
-pulumi.export("cidrBlocks", netblock.cidr_blocks)
-pulumi.export("cidrBlocksIpv4", netblock.cidr_blocks_ipv4s)
-pulumi.export("cidrBlocksIpv6", netblock.cidr_blocks_ipv6s)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloud Ranges
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -54,7 +41,37 @@ class MyStack : Stack
     public Output<string> CidrBlocksIpv6 { get; set; }
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+netblock = gcp.compute.get_netblock_ip_ranges()
+pulumi.export("cidrBlocks", netblock.cidr_blocks)
+pulumi.export("cidrBlocksIpv4", netblock.cidr_blocks_ipv4s)
+pulumi.export("cidrBlocksIpv6", netblock.cidr_blocks_ipv6s)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const netblock = gcp.compute.getNetblockIPRanges({});
+export const cidrBlocks = netblock.then(netblock => netblock.cidrBlocks);
+export const cidrBlocksIpv4 = netblock.then(netblock => netblock.cidrBlocksIpv4s);
+export const cidrBlocksIpv6 = netblock.then(netblock => netblock.cidrBlocksIpv6s);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNetblockIPRanges {#using}

@@ -26,7 +26,6 @@ for an example of enabling notifications by granting the correct IAM permission.
 making this resource dependent on those IAM resources via `depends_on`. This will safeguard against errors due to IAM race conditions.
 
 
-
 {{% examples %}}
 ## Example Usage
 

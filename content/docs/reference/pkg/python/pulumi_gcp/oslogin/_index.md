@@ -3,6 +3,7 @@ title: Module oslogin
 title_tag: Module oslogin | Package pulumi_gcp | Python SDK
 linktitle: oslogin
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

@@ -18,6 +18,9 @@ To get more information about GameServerConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a GameServerConfig Resource {#create}

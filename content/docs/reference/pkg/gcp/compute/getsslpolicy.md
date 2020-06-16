@@ -14,7 +14,6 @@ Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Targe
     For more information see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies).
 
 
-
 {{% examples %}}
 ## Example Usage
 

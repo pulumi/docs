@@ -3,6 +3,7 @@ title: Module ml
 title_tag: Module ml | Package pulumi_gcp | Python SDK
 linktitle: ml
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

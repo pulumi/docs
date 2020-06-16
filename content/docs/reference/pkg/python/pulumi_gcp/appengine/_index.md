@@ -3,6 +3,7 @@ title: Module appengine
 title_tag: Module appengine | Package pulumi_gcp | Python SDK
 linktitle: appengine
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -1019,7 +1020,7 @@ It should have the App Engine Flexible Environment Service Agent role, which wil
 <li><p><strong>beta_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Metadata settings that are supplied to this version to enable beta runtime features.</p></li>
 <li><p><strong>default_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.</p></li>
-<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.</p></li>
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>endpoints_api_service</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.  Structure is documented below.</p></li>
@@ -1613,7 +1614,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>beta_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Metadata settings that are supplied to this version to enable beta runtime features.</p></li>
 <li><p><strong>default_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.</p></li>
-<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.</p></li>
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>endpoints_api_service</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.  Structure is documented below.</p></li>
@@ -1955,7 +1956,7 @@ Currently supporting Zip and File Containers.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>automatic_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.</p></li>
 <li><p><strong>basic_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.</p></li>
-<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.</p></li>
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.  Structure is documented below.</p></li>
 <li><p><strong>env_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Environment variables available to the application.</p></li>
@@ -2282,7 +2283,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>automatic_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.</p></li>
 <li><p><strong>basic_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.  Structure is documented below.</p></li>
-<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>delete_service_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the service will be deleted if it is the last version.</p></li>
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.  Structure is documented below.</p></li>
 <li><p><strong>env_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Environment variables available to the application.</p></li>

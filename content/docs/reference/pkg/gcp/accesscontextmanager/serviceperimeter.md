@@ -27,76 +27,13 @@ To get more information about ServicePerimeter, see:
 * How-to Guides
     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
 
-## Example Usage - Access Context Manager Service Perimeter Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
-    parent: "organizations/123456789",
-    title: "my policy",
-});
-const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter", {
-    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
-    status: {
-        restrictedServices: ["storage.googleapis.com"],
-    },
-    title: "restrict_storage",
-});
-const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
-    basic: {
-        conditions: [{
-            devicePolicy: {
-                osConstraints: [{
-                    osType: "DESKTOP_CHROME_OS",
-                }],
-                requireScreenLock: false,
-            },
-            regions: [
-                "CH",
-                "IT",
-                "US",
-            ],
-        }],
-    },
-    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
-    title: "chromeos_no_lock",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
-    parent="organizations/123456789",
-    title="my policy")
-service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
-    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    status={
-        "restrictedServices": ["storage.googleapis.com"],
-    },
-    title="restrict_storage")
-access_level = gcp.accesscontextmanager.AccessLevel("access-level",
-    basic={
-        "conditions": [{
-            "devicePolicy": {
-                "osConstraints": [{
-                    "osType": "DESKTOP_CHROME_OS",
-                }],
-                "requireScreenLock": False,
-            },
-            "regions": [
-                "CH",
-                "IT",
-                "US",
-            ],
-        }],
-    },
-    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    title="chromeos_no_lock")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Access Context Manager Service Perimeter Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -157,9 +94,48 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Access Context Manager Service Perimeter Dry Run
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+    status={
+        "restrictedServices": ["storage.googleapis.com"],
+    },
+    title="restrict_storage")
+access_level = gcp.accesscontextmanager.AccessLevel("access-level",
+    basic={
+        "conditions": [{
+            "devicePolicy": {
+                "osConstraints": [{
+                    "osType": "DESKTOP_CHROME_OS",
+                }],
+                "requireScreenLock": False,
+            },
+            "regions": [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
+    },
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+    title="chromeos_no_lock")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -170,36 +146,35 @@ const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy",
 });
 const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter", {
     parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
-    // Service 'storage.googleapis.com' will be in dry-run mode.
-    spec: {
+    status: {
         restrictedServices: ["storage.googleapis.com"],
     },
-    // Service 'bigquery.googleapis.com' will be restricted.
-    status: {
-        restrictedServices: ["bigquery.googleapis.com"],
+    title: "restrict_storage",
+});
+const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
+    basic: {
+        conditions: [{
+            devicePolicy: {
+                osConstraints: [{
+                    osType: "DESKTOP_CHROME_OS",
+                }],
+                requireScreenLock: false,
+            },
+            regions: [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
     },
-    title: "restrict_bigquery_dryrun_storage",
-    useExplicitDryRunSpec: true,
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+    title: "chromeos_no_lock",
 });
 ```
-```python
-import pulumi
-import pulumi_gcp as gcp
+{{% /example %}}
 
-access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
-    parent="organizations/123456789",
-    title="my policy")
-service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
-    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    spec={
-        "restrictedServices": ["storage.googleapis.com"],
-    },
-    status={
-        "restrictedServices": ["bigquery.googleapis.com"],
-    },
-    title="restrict_bigquery_dryrun_storage",
-    use_explicit_dry_run_spec=True)
-```
+### Access Context Manager Service Perimeter Dry Run
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -237,7 +212,59 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
+    parent="organizations/123456789",
+    title="my policy")
+service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
+    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
+    spec={
+        "restrictedServices": ["storage.googleapis.com"],
+    },
+    status={
+        "restrictedServices": ["bigquery.googleapis.com"],
+    },
+    title="restrict_bigquery_dryrun_storage",
+    use_explicit_dry_run_spec=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
+const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter", {
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+    // Service 'storage.googleapis.com' will be in dry-run mode.
+    spec: {
+        restrictedServices: ["storage.googleapis.com"],
+    },
+    // Service 'bigquery.googleapis.com' will be restricted.
+    status: {
+        restrictedServices: ["bigquery.googleapis.com"],
+    },
+    title: "restrict_bigquery_dryrun_storage",
+    useExplicitDryRunSpec: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServicePerimeter Resource {#create}

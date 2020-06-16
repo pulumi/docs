@@ -3,6 +3,7 @@ title: Module bigquery
 title_tag: Module bigquery | Package pulumi_gcp | Python SDK
 linktitle: bigquery
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -1300,6 +1301,348 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_gcp.bigquery.DatasetIamBinding">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DatasetIamBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamBinding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Three different resources help you manage your IAM policy for BigQuery dataset. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code>: Authoritative. Sets the IAM policy for the dataset and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the dataset are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the dataset are preserved.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Note:</strong> These resources <strong>cannot</strong> be used with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetAccess</span></code> resources or the <code class="docutils literal notranslate"><span class="pre">access</span></code> field on <code class="docutils literal notranslate"><span class="pre">bigquery.Dataset</span></code> or they will fight over what the policy should be.</p>
+<p><strong>Note:</strong> Using any of these resources will remove any authorized view permissions from the dataset. To assign and preserve authorized view permissions use the <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetAccess</span></code> instead.</p>
+<p><strong>Note:</strong> Legacy BigQuery roles <code class="docutils literal notranslate"><span class="pre">OWNER</span></code> <code class="docutils literal notranslate"><span class="pre">WRITER</span></code> and <code class="docutils literal notranslate"><span class="pre">READER</span></code> <strong>cannot</strong> be used with any of these IAM resources. Instead use the full role form of: <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataOwner</span></code> <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataEditor</span></code> and <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataViewer</span></code>.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamBinding.dataset_id">
+<code class="sig-name descname">dataset_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamBinding.dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamBinding.etag">
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamBinding.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The etag of the dataset’s IAM policy.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamBinding.role">
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamBinding.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamBinding.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamBinding.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatasetIamBinding resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the dataset’s IAM policy.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamBinding.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamBinding.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamBinding.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamBinding.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_gcp.bigquery.DatasetIamMember">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DatasetIamMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Three different resources help you manage your IAM policy for BigQuery dataset. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code>: Authoritative. Sets the IAM policy for the dataset and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the dataset are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the dataset are preserved.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Note:</strong> These resources <strong>cannot</strong> be used with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetAccess</span></code> resources or the <code class="docutils literal notranslate"><span class="pre">access</span></code> field on <code class="docutils literal notranslate"><span class="pre">bigquery.Dataset</span></code> or they will fight over what the policy should be.</p>
+<p><strong>Note:</strong> Using any of these resources will remove any authorized view permissions from the dataset. To assign and preserve authorized view permissions use the <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetAccess</span></code> instead.</p>
+<p><strong>Note:</strong> Legacy BigQuery roles <code class="docutils literal notranslate"><span class="pre">OWNER</span></code> <code class="docutils literal notranslate"><span class="pre">WRITER</span></code> and <code class="docutils literal notranslate"><span class="pre">READER</span></code> <strong>cannot</strong> be used with any of these IAM resources. Instead use the full role form of: <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataOwner</span></code> <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataEditor</span></code> and <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataViewer</span></code>.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamMember.dataset_id">
+<code class="sig-name descname">dataset_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamMember.dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamMember.etag">
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamMember.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The etag of the dataset’s IAM policy.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamMember.role">
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamMember.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamMember.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamMember.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatasetIamMember resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the dataset’s IAM policy.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamMember.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamMember.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamMember.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamMember.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_gcp.bigquery.DatasetIamPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DatasetIamPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Three different resources help you manage your IAM policy for BigQuery dataset. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code>: Authoritative. Sets the IAM policy for the dataset and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the dataset are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the dataset are preserved.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Note:</strong> These resources <strong>cannot</strong> be used with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetAccess</span></code> resources or the <code class="docutils literal notranslate"><span class="pre">access</span></code> field on <code class="docutils literal notranslate"><span class="pre">bigquery.Dataset</span></code> or they will fight over what the policy should be.</p>
+<p><strong>Note:</strong> Using any of these resources will remove any authorized view permissions from the dataset. To assign and preserve authorized view permissions use the <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetAccess</span></code> instead.</p>
+<p><strong>Note:</strong> Legacy BigQuery roles <code class="docutils literal notranslate"><span class="pre">OWNER</span></code> <code class="docutils literal notranslate"><span class="pre">WRITER</span></code> and <code class="docutils literal notranslate"><span class="pre">READER</span></code> <strong>cannot</strong> be used with any of these IAM resources. Instead use the full role form of: <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataOwner</span></code> <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataEditor</span></code> and <code class="docutils literal notranslate"><span class="pre">roles/bigquery.dataViewer</span></code>.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamPolicy.dataset_id">
+<code class="sig-name descname">dataset_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamPolicy.dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamPolicy.etag">
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamPolicy.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The etag of the dataset’s IAM policy.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.DatasetIamPolicy.policy_data">
+<code class="sig-name descname">policy_data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamPolicy.policy_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamPolicy.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatasetIamPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID, in the form <code class="docutils literal notranslate"><span class="pre">projects/{project}/datasets/{dataset_id}</span></code></p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the dataset’s IAM policy.</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamPolicy.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.DatasetIamPolicy.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetIamPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

@@ -14,7 +14,6 @@ Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		central1b, err := compute.LookupNodeTypes(ctx, &compute.LookupNodeTypesArgs{
+			Zone: "us-central1-b",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		tmpl, err := compute.NewNodeTemplate(ctx, "tmpl", &compute.NodeTemplateArgs{
+			Region:   pulumi.String("us-central1"),
+			NodeType: pulumi.String(data.Google_compute_node_types.Types.Names[0]),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -56,7 +81,7 @@ import pulumi_gcp as gcp
 central1b = gcp.compute.get_node_types(zone="us-central1-b")
 tmpl = gcp.compute.NodeTemplate("tmpl",
     region="us-central1",
-    node_type=data["gcp.compute.getNodeTypes"]["types"]["names"])
+    node_type=data["google_compute_node_types"]["types"]["names"])
 ```
 {{% /example %}}
 

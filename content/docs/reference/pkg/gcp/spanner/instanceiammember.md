@@ -83,6 +83,40 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/editor",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		instance, err := spanner.NewInstanceIAMPolicy(ctx, "instance", &spanner.InstanceIAMPolicyArgs{
+			Instance:   pulumi.String("your-instance-name"),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_spanner\_instance\_iam\_binding
 
@@ -126,6 +160,30 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := spanner.NewInstanceIAMBinding(ctx, "instance", &spanner.InstanceIAMBindingArgs{
+			Instance: pulumi.String("your-instance-name"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/compute.networkUser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_spanner\_instance\_iam\_member
 
@@ -164,6 +222,28 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := spanner.NewInstanceIAMMember(ctx, "instance", &spanner.InstanceIAMMemberArgs{
+			Instance: pulumi.String("your-instance-name"),
+			Member:   pulumi.String("user:jane@example.com"),
+			Role:     pulumi.String("roles/compute.networkUser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

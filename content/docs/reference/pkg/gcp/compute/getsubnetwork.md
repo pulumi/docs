@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSubnetwork function of the compute module, including 
 Get a subnetwork within GCE from its name and region.
 
 
-
 {{% examples %}}
 ## Example Usage
 

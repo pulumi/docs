@@ -19,6 +19,9 @@ To get more information about Hl7V2Store, see:
 * How-to Guides
     * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Hl7Store Resource {#create}

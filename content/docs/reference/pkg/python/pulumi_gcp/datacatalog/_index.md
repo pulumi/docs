@@ -3,6 +3,7 @@ title: Module datacatalog
 title_tag: Module datacatalog | Package pulumi_gcp | Python SDK
 linktitle: datacatalog
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -449,18 +450,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_gcp.datacatalog.EntryGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.datacatalog.</code><code class="sig-name descname">EntryGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entry_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.EntryGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a EntryGroup resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
-:param pulumi.Input[str] display_name: A short name to identify the entry group, for example, “analytics data - jan 2011”.
-:param pulumi.Input[str] entry_group_id: The id of the entry group to create. The id must begin with a letter or underscore,</p>
-<blockquote>
-<div><p>contain only English letters, numbers and underscores, and be at most 64 characters.</p>
-</div></blockquote>
+<dd><p>An EntryGroup resource represents a logical grouping of zero or more Data Catalog Entry resources.</p>
+<p>To get more information about EntryGroup, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/data-catalog/docs">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic_entry_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">EntryGroup</span><span class="p">(</span><span class="s2">&quot;basicEntryGroup&quot;</span><span class="p">,</span> <span class="n">entry_group_id</span><span class="o">=</span><span class="s2">&quot;my_group&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">basic_entry_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">EntryGroup</span><span class="p">(</span><span class="s2">&quot;basicEntryGroup&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;entry group created by Terraform&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;terraform entry group&quot;</span><span class="p">,</span>
+    <span class="n">entry_group_id</span><span class="o">=</span><span class="s2">&quot;my_group&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short name to identify the entry group, for example, “analytics data - jan 2011”.</p></li>
+<li><p><strong>entry_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the entry group to create. The id must begin with a letter or underscore,
+contain only English letters, numbers and underscores, and be at most 64 characters.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EntryGroup location region.</p></li>
@@ -1008,6 +1031,199 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_gcp.datacatalog.EntryGroupIamPolicy.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.EntryGroupIamPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_gcp.datacatalog.Tag">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.datacatalog.</code><code class="sig-name descname">Tag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">column</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tags are used to attach custom metadata to Data Catalog resources. Tags conform to the specifications within their tag template.</p>
+<p>See <a class="reference external" href="https://cloud.google.com/data-catalog/docs/concepts/iam">Data Catalog IAM</a> for information on the permissions needed to create or view tags.</p>
+<p>To get more information about Tag, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.tags">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/data-catalog/docs">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>column</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
+individual column based on that schema.
+For attaching a tag to a nested column, use <code class="docutils literal notranslate"><span class="pre">.</span></code> to separate the column names. Example:
+<code class="docutils literal notranslate"><span class="pre">outer_column.inner_column</span></code></p></li>
+<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – This maps the ID of a tag field to the value of and additional information about that field.
+Valid field IDs are defined by the tag’s template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
+all entries in that group.</p></li>
+<li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the tag template that this tag uses. Example:
+projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
+This field cannot be modified after creation.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>fields</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">boolValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Holds the value for a tag field with boolean type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The display name of this field</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doubleValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Holds the value for a tag field with double type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enumValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.  Structure is documented below.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - -
+The order of this field with respect to other fields in this tag. For example, a higher value can indicate
+a more important field. The value can be negative. Multiple fields can have the same order, and field orders
+within a tag do not have to be sequential.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stringValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Holds the value for a tag field with string type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestampValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Holds the value for a tag field with timestamp type.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.Tag.column">
+<code class="sig-name descname">column</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
+individual column based on that schema.
+For attaching a tag to a nested column, use <code class="docutils literal notranslate"><span class="pre">.</span></code> to separate the column names. Example:
+<code class="docutils literal notranslate"><span class="pre">outer_column.inner_column</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.Tag.fields">
+<code class="sig-name descname">fields</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>This maps the ID of a tag field to the value of and additional information about that field.
+Valid field IDs are defined by the tag’s template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">boolValue</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Holds the value for a tag field with boolean type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
+The display name of this field</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doubleValue</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Holds the value for a tag field with double type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enumValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.  Structure is documented below.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - -
+The order of this field with respect to other fields in this tag. For example, a higher value can indicate
+a more important field. The value can be negative. Multiple fields can have the same order, and field orders
+within a tag do not have to be sequential.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stringValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Holds the value for a tag field with string type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestampValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Holds the value for a tag field with timestamp type.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.Tag.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the tag in URL format. Example:
+projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
+projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
+identifier. Note that this Tag may not actually be stored in the location in this name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.Tag.parent">
+<code class="sig-name descname">parent</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
+all entries in that group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.Tag.template">
+<code class="sig-name descname">template</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.template" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource name of the tag template that this tag uses. Example:
+projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
+This field cannot be modified after creation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.datacatalog.Tag.template_displayname">
+<code class="sig-name descname">template_displayname</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.template_displayname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display name of the tag template.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.datacatalog.Tag.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">column</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_displayname</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Tag resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>column</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
+individual column based on that schema.
+For attaching a tag to a nested column, use <code class="docutils literal notranslate"><span class="pre">.</span></code> to separate the column names. Example:
+<code class="docutils literal notranslate"><span class="pre">outer_column.inner_column</span></code></p></li>
+<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – This maps the ID of a tag field to the value of and additional information about that field.
+Valid field IDs are defined by the tag’s template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the tag in URL format. Example:
+projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
+projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
+identifier. Note that this Tag may not actually be stored in the location in this name.</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
+all entries in that group.</p></li>
+<li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the tag template that this tag uses. Example:
+projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
+This field cannot be modified after creation.</p></li>
+<li><p><strong>template_displayname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the tag template.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>fields</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">boolValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Holds the value for a tag field with boolean type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The display name of this field</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doubleValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Holds the value for a tag field with double type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enumValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.  Structure is documented below.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - -
+The order of this field with respect to other fields in this tag. For example, a higher value can indicate
+a more important field. The value can be negative. Multiple fields can have the same order, and field orders
+within a tag do not have to be sequential.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stringValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Holds the value for a tag field with string type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestampValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Holds the value for a tag field with timestamp type.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.datacatalog.Tag.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.datacatalog.Tag.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datacatalog.Tag.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

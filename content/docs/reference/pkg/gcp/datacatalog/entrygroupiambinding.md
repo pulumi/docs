@@ -82,6 +82,40 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/viewer",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		policy, err := datacatalog.NewEntryGroupIamPolicy(ctx, "policy", &datacatalog.EntryGroupIamPolicyArgs{
+			EntryGroup: pulumi.String(google_data_catalog_entry_group.Basic_entry_group.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_data\_catalog\_entry\_group\_iam\_binding
 
@@ -125,6 +159,30 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		binding, err := datacatalog.NewEntryGroupIamBinding(ctx, "binding", &datacatalog.EntryGroupIamBindingArgs{
+			EntryGroup: pulumi.String(google_data_catalog_entry_group.Basic_entry_group.Name),
+			Role:       pulumi.String("roles/viewer"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_data\_catalog\_entry\_group\_iam\_member
 
@@ -163,6 +221,28 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		member, err := datacatalog.NewEntryGroupIamMember(ctx, "member", &datacatalog.EntryGroupIamMemberArgs{
+			EntryGroup: pulumi.String(google_data_catalog_entry_group.Basic_entry_group.Name),
+			Role:       pulumi.String("roles/viewer"),
+			Member:     pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

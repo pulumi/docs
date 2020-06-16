@@ -80,6 +80,40 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/editor",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		dicomStore, err := healthcare.NewDicomStoreIamPolicy(ctx, "dicomStore", &healthcare.DicomStoreIamPolicyArgs{
+			DicomStoreId: pulumi.String("your-dicom-store-id"),
+			PolicyData:   pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_healthcare\_dicom\_store\_iam\_binding
 
@@ -123,6 +157,30 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dicomStore, err := healthcare.NewDicomStoreIamBinding(ctx, "dicomStore", &healthcare.DicomStoreIamBindingArgs{
+			DicomStoreId: pulumi.String("your-dicom-store-id"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_healthcare\_dicom\_store\_iam\_member
 
@@ -161,6 +219,28 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dicomStore, err := healthcare.NewDicomStoreIamMember(ctx, "dicomStore", &healthcare.DicomStoreIamMemberArgs{
+			DicomStoreId: pulumi.String("your-dicom-store-id"),
+			Member:       pulumi.String("user:jane@example.com"),
+			Role:         pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

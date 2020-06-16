@@ -28,6 +28,9 @@ To get more information about SecretCiphertext, see:
 > **Warning:** All arguments including `plaintext` and `additional_authenticated_data` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a SecretCiphertext Resource {#create}

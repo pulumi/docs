@@ -16,6 +16,7 @@ Explore the resources and functions of the datacatalog module in the GCP package
     <li><a href="entrygroupiambinding" title="EntryGroupIamBinding"><span class="symbol resource"></span>EntryGroupIamBinding</a></li>
     <li><a href="entrygroupiammember" title="EntryGroupIamMember"><span class="symbol resource"></span>EntryGroupIamMember</a></li>
     <li><a href="entrygroupiampolicy" title="EntryGroupIamPolicy"><span class="symbol resource"></span>EntryGroupIamPolicy</a></li>
+    <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
     <li><a href="tagtemplate" title="TagTemplate"><span class="symbol resource"></span>TagTemplate</a></li>
 </ul>
 
@@ -28,7 +29,7 @@ Explore the resources and functions of the datacatalog module in the GCP package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.9.0</dd>
+	<dd>3.10.0</dd>
 </dl>
 
 

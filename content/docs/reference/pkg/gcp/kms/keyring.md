@@ -24,23 +24,13 @@ To get more information about KeyRing, see:
 * How-to Guides
     * [Creating a key ring](https://cloud.google.com/kms/docs/creating-keys#create_a_key_ring)
 
-## Example Usage - Kms Key Ring Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example_keyring = new gcp.kms.KeyRing("example-keyring", {
-    location: "global",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example_keyring = gcp.kms.KeyRing("example-keyring", location="global")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Kms Key Ring Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -57,7 +47,33 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_keyring = gcp.kms.KeyRing("example-keyring", location="global")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example_keyring = new gcp.kms.KeyRing("example-keyring", {
+    location: "global",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a KeyRing Resource {#create}

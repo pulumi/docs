@@ -13,7 +13,6 @@ meta_desc: "Explore the GetClientConfig function of the organizations module, in
 Use this data source to access the configuration of the Google Cloud provider.
 
 
-
 {{% examples %}}
 ## Example Usage
 

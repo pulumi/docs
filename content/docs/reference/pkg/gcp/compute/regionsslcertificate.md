@@ -24,33 +24,13 @@ To get more information about RegionSslCertificate, see:
 > **Warning:** All arguments including `certificate` and `private_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - Region Ssl Certificate Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-import * from "fs";
-
-const _default = new gcp.compute.RegionSslCertificate("default", {
-    region: "us-central1",
-    namePrefix: "my-certificate-",
-    description: "a description",
-    privateKey: fs.readFileSync("path/to/private.key"),
-    certificate: fs.readFileSync("path/to/certificate.crt"),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.RegionSslCertificate("default",
-    region="us-central1",
-    name_prefix="my-certificate-",
-    description="a description",
-    private_key=(lambda path: open(path).read())("path/to/private.key"),
-    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Region Ssl Certificate Basic
+{{% example csharp %}}
 ```csharp
 using System.IO;
 using Pulumi;
@@ -72,7 +52,43 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.RegionSslCertificate("default",
+    region="us-central1",
+    name_prefix="my-certificate-",
+    description="a description",
+    private_key=(lambda path: open(path).read())("path/to/private.key"),
+    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const _default = new gcp.compute.RegionSslCertificate("default", {
+    region: "us-central1",
+    namePrefix: "my-certificate-",
+    description: "a description",
+    privateKey: fs.readFileSync("path/to/private.key"),
+    certificate: fs.readFileSync("path/to/certificate.crt"),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegionSslCertificate Resource {#create}

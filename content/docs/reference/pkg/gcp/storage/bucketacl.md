@@ -22,7 +22,6 @@ Permissions can be granted either by ACLs or Cloud IAM policies. In general, per
 **NOTE** This resource will not remove the `project-owners-<project_id>` entity from the `OWNER` role.
 
 
-
 {{% examples %}}
 ## Example Usage
 

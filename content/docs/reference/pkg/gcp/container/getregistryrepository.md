@@ -15,7 +15,6 @@ This data source fetches the project name, and provides the appropriate URLs to 
 The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
 
 
-
 {{% examples %}}
 ## Example Usage
 

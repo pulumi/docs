@@ -20,9 +20,6 @@ This resource is specifically to create a compute instance from a given
 `gcp.compute.Instance` resource.
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a InstanceFromTemplate Resource {#create}

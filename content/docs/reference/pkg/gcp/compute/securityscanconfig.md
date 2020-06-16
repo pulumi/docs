@@ -21,30 +21,13 @@ To get more information about ScanConfig, see:
 > **Warning:** All arguments including `authentication.google_account.password` and `authentication.custom_account.password` will be stored in the raw
 state as plain-text.[Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets)
 
-## Example Usage - Scan Config Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const scannerStaticIp = new gcp.compute.Address("scannerStaticIp", {});
-const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
-    displayName: "scan-config",
-    startingUrls: [pulumi.interpolate`http://${scannerStaticIp.address}`],
-    targetPlatforms: ["COMPUTE"],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-scanner_static_ip = gcp.compute.Address("scannerStaticIp")
-scan_config = gcp.compute.SecurityScanConfig("scan-config",
-    display_name="scan-config",
-    starting_urls=[scanner_static_ip.address.apply(lambda address: f"http://{address}")],
-    target_platforms=["COMPUTE"])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Scan Config Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -72,7 +55,40 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+scanner_static_ip = gcp.compute.Address("scannerStaticIp")
+scan_config = gcp.compute.SecurityScanConfig("scan-config",
+    display_name="scan-config",
+    starting_urls=[scanner_static_ip.address.apply(lambda address: f"http://{address}")],
+    target_platforms=["COMPUTE"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const scannerStaticIp = new gcp.compute.Address("scannerStaticIp", {});
+const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
+    displayName: "scan-config",
+    startingUrls: [pulumi.interpolate`http://${scannerStaticIp.address}`],
+    targetPlatforms: ["COMPUTE"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecurityScanConfig Resource {#create}

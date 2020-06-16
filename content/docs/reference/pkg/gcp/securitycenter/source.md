@@ -22,28 +22,13 @@ To get more information about Source, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
 
-## Example Usage - Scc Source Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const customSource = new gcp.securitycenter.Source("custom_source", {
-    description: "My custom Cloud Security Command Center Finding Source",
-    displayName: "My Source",
-    organization: "123456789",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-custom_source = gcp.securitycenter.Source("customSource",
-    description="My custom Cloud Security Command Center Finding Source",
-    display_name="My Source",
-    organization="123456789")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Scc Source Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -62,7 +47,59 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/securitycenter"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		customSource, err := securitycenter.NewSource(ctx, "customSource", &securitycenter.SourceArgs{
+			Description:  pulumi.String("My custom Cloud Security Command Center Finding Source"),
+			DisplayName:  pulumi.String("My Source"),
+			Organization: pulumi.String("123456789"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_source = gcp.securitycenter.Source("customSource",
+    description="My custom Cloud Security Command Center Finding Source",
+    display_name="My Source",
+    organization="123456789")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const customSource = new gcp.securitycenter.Source("custom_source", {
+    description: "My custom Cloud Security Command Center Finding Source",
+    displayName: "My Source",
+    organization: "123456789",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Source Resource {#create}

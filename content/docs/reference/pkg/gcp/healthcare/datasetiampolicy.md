@@ -80,6 +80,40 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/editor",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		dataset, err := healthcare.NewDatasetIamPolicy(ctx, "dataset", &healthcare.DatasetIamPolicyArgs{
+			DatasetId:  pulumi.String("your-dataset-id"),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_healthcare\_dataset\_iam\_binding
 
@@ -123,6 +157,30 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dataset, err := healthcare.NewDatasetIamBinding(ctx, "dataset", &healthcare.DatasetIamBindingArgs{
+			DatasetId: pulumi.String("your-dataset-id"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_healthcare\_dataset\_iam\_member
 
@@ -161,6 +219,28 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dataset, err := healthcare.NewDatasetIamMember(ctx, "dataset", &healthcare.DatasetIamMemberArgs{
+			DatasetId: pulumi.String("your-dataset-id"),
+			Member:    pulumi.String("user:jane@example.com"),
+			Role:      pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

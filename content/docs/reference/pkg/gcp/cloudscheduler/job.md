@@ -24,44 +24,13 @@ To get more information about Job, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/scheduler/)
 
-## Example Usage - Scheduler Job Http
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const job = new gcp.cloudscheduler.Job("job", {
-    attemptDeadline: "320s",
-    description: "test http job",
-    httpTarget: {
-        httpMethod: "POST",
-        uri: "https://example.com/ping",
-    },
-    retryConfig: {
-        retryCount: 1,
-    },
-    schedule: "*/8 * * * *",
-    timeZone: "America/New_York",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-job = gcp.cloudscheduler.Job("job",
-    attempt_deadline="320s",
-    description="test http job",
-    http_target={
-        "httpMethod": "POST",
-        "uri": "https://example.com/ping",
-    },
-    retry_config={
-        "retryCount": 1,
-    },
-    schedule="*/8 * * * *",
-    time_zone="America/New_York")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Scheduler Job Http
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -90,60 +59,84 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Scheduler Job App Engine
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const job = new gcp.cloudscheduler.Job("job", {
-    appEngineHttpTarget: {
-        appEngineRouting: {
-            instance: "my-instance-001",
-            service: "web",
-            version: "prod",
-        },
-        httpMethod: "POST",
-        relativeUri: "/ping",
-    },
-    attemptDeadline: "320s",
-    description: "test app engine job",
-    retryConfig: {
-        maxDoublings: 2,
-        maxRetryDuration: "10s",
-        minBackoffDuration: "1s",
-        retryCount: 3,
-    },
-    schedule: "*/4 * * * *",
-    timeZone: "Europe/London",
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		job, err := cloudscheduler.NewJob(ctx, "job", &cloudscheduler.JobArgs{
+			AttemptDeadline: pulumi.String("320s"),
+			Description:     pulumi.String("test http job"),
+			HttpTarget: &cloudscheduler.JobHttpTargetArgs{
+				HttpMethod: pulumi.String("POST"),
+				Uri:        pulumi.String("https://example.com/ping"),
+			},
+			RetryConfig: &cloudscheduler.JobRetryConfigArgs{
+				RetryCount: pulumi.Int(1),
+			},
+			Schedule: pulumi.String("*/8 * * * *"),
+			TimeZone: pulumi.String("America/New_York"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
 job = gcp.cloudscheduler.Job("job",
-    app_engine_http_target={
-        "appEngineRouting": {
-            "instance": "my-instance-001",
-            "service": "web",
-            "version": "prod",
-        },
-        "httpMethod": "POST",
-        "relativeUri": "/ping",
-    },
     attempt_deadline="320s",
-    description="test app engine job",
-    retry_config={
-        "maxDoublings": 2,
-        "maxRetryDuration": "10s",
-        "minBackoffDuration": "1s",
-        "retryCount": 3,
+    description="test http job",
+    http_target={
+        "httpMethod": "POST",
+        "uri": "https://example.com/ping",
     },
-    schedule="*/4 * * * *",
-    time_zone="Europe/London")
+    retry_config={
+        "retryCount": 1,
+    },
+    schedule="*/8 * * * *",
+    time_zone="America/New_York")
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const job = new gcp.cloudscheduler.Job("job", {
+    attemptDeadline: "320s",
+    description: "test http job",
+    httpTarget: {
+        httpMethod: "POST",
+        uri: "https://example.com/ping",
+    },
+    retryConfig: {
+        retryCount: 1,
+    },
+    schedule: "*/8 * * * *",
+    timeZone: "America/New_York",
+});
+```
+{{% /example %}}
+
+### Scheduler Job App Engine
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -181,7 +174,107 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudscheduler"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		job, err := cloudscheduler.NewJob(ctx, "job", &cloudscheduler.JobArgs{
+			AppEngineHttpTarget: &cloudscheduler.JobAppEngineHttpTargetArgs{
+				AppEngineRouting: &cloudscheduler.JobAppEngineHttpTargetAppEngineRoutingArgs{
+					Instance: pulumi.String("my-instance-001"),
+					Service:  pulumi.String("web"),
+					Version:  pulumi.String("prod"),
+				},
+				HttpMethod:  pulumi.String("POST"),
+				RelativeUri: pulumi.String("/ping"),
+			},
+			AttemptDeadline: pulumi.String("320s"),
+			Description:     pulumi.String("test app engine job"),
+			RetryConfig: &cloudscheduler.JobRetryConfigArgs{
+				MaxDoublings:       pulumi.Int(2),
+				MaxRetryDuration:   pulumi.String("10s"),
+				MinBackoffDuration: pulumi.String("1s"),
+				RetryCount:         pulumi.Int(3),
+			},
+			Schedule: pulumi.String("*/4 * * * *"),
+			TimeZone: pulumi.String("Europe/London"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+job = gcp.cloudscheduler.Job("job",
+    app_engine_http_target={
+        "appEngineRouting": {
+            "instance": "my-instance-001",
+            "service": "web",
+            "version": "prod",
+        },
+        "httpMethod": "POST",
+        "relativeUri": "/ping",
+    },
+    attempt_deadline="320s",
+    description="test app engine job",
+    retry_config={
+        "maxDoublings": 2,
+        "maxRetryDuration": "10s",
+        "minBackoffDuration": "1s",
+        "retryCount": 3,
+    },
+    schedule="*/4 * * * *",
+    time_zone="Europe/London")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const job = new gcp.cloudscheduler.Job("job", {
+    appEngineHttpTarget: {
+        appEngineRouting: {
+            instance: "my-instance-001",
+            service: "web",
+            version: "prod",
+        },
+        httpMethod: "POST",
+        relativeUri: "/ping",
+    },
+    attemptDeadline: "320s",
+    description: "test app engine job",
+    retryConfig: {
+        maxDoublings: 2,
+        maxRetryDuration: "10s",
+        minBackoffDuration: "1s",
+        retryCount: 3,
+    },
+    schedule: "*/4 * * * *",
+    timeZone: "Europe/London",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Job Resource {#create}

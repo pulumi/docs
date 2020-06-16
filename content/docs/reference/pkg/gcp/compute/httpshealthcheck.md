@@ -27,28 +27,13 @@ To get more information about HttpsHealthCheck, see:
 * How-to Guides
     * [Adding Health Checks](https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks)
 
-## Example Usage - Https Health Check Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
-    checkIntervalSec: 1,
-    requestPath: "/health_check",
-    timeoutSec: 1,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.HttpsHealthCheck("default",
-    check_interval_sec=1,
-    request_path="/health_check",
-    timeout_sec=1)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Https Health Check Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -67,7 +52,38 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.HttpsHealthCheck("default",
+    check_interval_sec=1,
+    request_path="/health_check",
+    timeout_sec=1)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
+    checkIntervalSec: 1,
+    requestPath: "/health_check",
+    timeoutSec: 1,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HttpsHealthCheck Resource {#create}

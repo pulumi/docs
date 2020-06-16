@@ -18,30 +18,13 @@ To get more information about Realm, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
-## Example Usage - Game Service Realm Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const _default = new gcp.gameservices.Realm("default", {
-    realmId: "tf-test-realm",
-    timeZone: "EST",
-    location: "global",
-    description: "one of the nine",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.gameservices.Realm("default",
-    realm_id="tf-test-realm",
-    time_zone="EST",
-    location="global",
-    description="one of the nine")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Game Service Realm Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -61,7 +44,40 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.gameservices.Realm("default",
+    realm_id="tf-test-realm",
+    time_zone="EST",
+    location="global",
+    description="one of the nine")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.gameservices.Realm("default", {
+    realmId: "tf-test-realm",
+    timeZone: "EST",
+    location: "global",
+    description: "one of the nine",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Realm Resource {#create}

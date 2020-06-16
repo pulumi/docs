@@ -3,6 +3,7 @@ title: Module datafusion
 title_tag: Module datafusion | Package pulumi_gcp | Python SDK
 linktitle: datafusion
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -41,18 +42,18 @@ anything, please consult the source <a class="reference external" href="https://
 
 <span class="n">extended_instance</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datafusion</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;extendedInstance&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My Data Fusion instance&quot;</span><span class="p">,</span>
-    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;BASIC&quot;</span><span class="p">,</span>
     <span class="n">enable_stackdriver_logging</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">enable_stackdriver_monitoring</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;example_key&quot;</span><span class="p">:</span> <span class="s2">&quot;example_value&quot;</span><span class="p">,</span>
     <span class="p">},</span>
-    <span class="n">private_instance</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">network_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ipAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;10.89.48.0/22&quot;</span><span class="p">,</span>
-    <span class="p">})</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">private_instance</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;BASIC&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

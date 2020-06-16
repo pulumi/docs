@@ -20,28 +20,13 @@ To get more information about Subscription, see:
 * How-to Guides
     * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
 
-## Example Usage - Pubsub Subscription Different Project
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {project: "topic-project"});
-const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
-    project: "subscription-project",
-    topic: exampleTopic.name,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example_topic = gcp.pubsub.Topic("exampleTopic", project="topic-project")
-example_subscription = gcp.pubsub.Subscription("exampleSubscription",
-    project="subscription-project",
-    topic=example_topic.name)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Pubsub Subscription Different Project
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -63,7 +48,64 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", &pubsub.TopicArgs{
+			Project: pulumi.String("topic-project"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubscription, err := pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
+			Project: pulumi.String("subscription-project"),
+			Topic:   exampleTopic.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic", project="topic-project")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    project="subscription-project",
+    topic=example_topic.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {project: "topic-project"});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    project: "subscription-project",
+    topic: exampleTopic.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Subscription Resource {#create}

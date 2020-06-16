@@ -19,40 +19,13 @@ To get more information about Trigger, see:
 * How-to Guides
     * [Automating builds using build triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds)
 
-## Example Usage - Cloudbuild Trigger Filename
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
-    filename: "cloudbuild.yaml",
-    substitutions: {
-        _BAZ: "qux",
-        _FOO: "bar",
-    },
-    triggerTemplate: {
-        branchName: "master",
-        repoName: "my-repo",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-filename_trigger = gcp.cloudbuild.Trigger("filename-trigger",
-    filename="cloudbuild.yaml",
-    substitutions={
-        "_BAZ": "qux",
-        "_FOO": "bar",
-    },
-    trigger_template={
-        "branchName": "master",
-        "repoName": "my-repo",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloudbuild Trigger Filename
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -79,7 +52,50 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+filename_trigger = gcp.cloudbuild.Trigger("filename-trigger",
+    filename="cloudbuild.yaml",
+    substitutions={
+        "_BAZ": "qux",
+        "_FOO": "bar",
+    },
+    trigger_template={
+        "branchName": "master",
+        "repoName": "my-repo",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
+    filename: "cloudbuild.yaml",
+    substitutions: {
+        _BAZ: "qux",
+        _FOO: "bar",
+    },
+    triggerTemplate: {
+        branchName: "master",
+        repoName: "my-repo",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Trigger Resource {#create}

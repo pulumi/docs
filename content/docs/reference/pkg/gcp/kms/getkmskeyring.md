@@ -19,7 +19,6 @@ A KeyRing is a grouping of CryptoKeys for organizational purposes. A KeyRing bel
 and resides in a specific location.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +45,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myKeyRing, err := kms.LookupKMSKeyRing(ctx, &kms.LookupKMSKeyRingArgs{
+			Location: "us-central1",
+			Name:     "my-key-ring",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

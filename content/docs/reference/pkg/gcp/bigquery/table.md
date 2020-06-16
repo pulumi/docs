@@ -15,9 +15,6 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 [API](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables).
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Table Resource {#create}

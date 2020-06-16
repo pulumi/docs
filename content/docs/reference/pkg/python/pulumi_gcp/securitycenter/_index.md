@@ -3,6 +3,7 @@ title: Module securitycenter
 title_tag: Module securitycenter | Package pulumi_gcp | Python SDK
 linktitle: securitycenter
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

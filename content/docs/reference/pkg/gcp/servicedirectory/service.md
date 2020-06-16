@@ -18,41 +18,13 @@ To get more information about Service, see:
 * How-to Guides
     * [Configuring a service](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_service)
 
-## Example Usage - Service Directory Service Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const exampleNamespace = new gcp.servicedirectory.Namespace("exampleNamespace", {
-    namespaceId: "example-namespace",
-    location: "us-central1",
-});
-const exampleService = new gcp.servicedirectory.Service("exampleService", {
-    serviceId: "example-service",
-    namespace: exampleNamespace.id,
-    metadata: {
-        stage: "prod",
-        region: "us-central1",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example_namespace = gcp.servicedirectory.Namespace("exampleNamespace",
-    namespace_id="example-namespace",
-    location="us-central1")
-example_service = gcp.servicedirectory.Service("exampleService",
-    service_id="example-service",
-    namespace=example_namespace.id,
-    metadata={
-        "stage": "prod",
-        "region": "us-central1",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Service Directory Service Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -80,7 +52,82 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/servicedirectory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleNamespace, err := servicedirectory.NewNamespace(ctx, "exampleNamespace", &servicedirectory.NamespaceArgs{
+			NamespaceId: pulumi.String("example-namespace"),
+			Location:    pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := servicedirectory.NewService(ctx, "exampleService", &servicedirectory.ServiceArgs{
+			ServiceId: pulumi.String("example-service"),
+			Namespace: exampleNamespace.ID(),
+			Metadata: map[string]interface{}{
+				"stage":  "prod",
+				"region": "us-central1",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_namespace = gcp.servicedirectory.Namespace("exampleNamespace",
+    namespace_id="example-namespace",
+    location="us-central1")
+example_service = gcp.servicedirectory.Service("exampleService",
+    service_id="example-service",
+    namespace=example_namespace.id,
+    metadata={
+        "stage": "prod",
+        "region": "us-central1",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleNamespace = new gcp.servicedirectory.Namespace("exampleNamespace", {
+    namespaceId: "example-namespace",
+    location: "us-central1",
+});
+const exampleService = new gcp.servicedirectory.Service("exampleService", {
+    serviceId: "example-service",
+    namespace: exampleNamespace.id,
+    metadata: {
+        stage: "prod",
+        region: "us-central1",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

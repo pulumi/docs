@@ -21,7 +21,6 @@ For more information see
 [the API reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount).
 
 
-
 {{% examples %}}
 ## Example Usage
 

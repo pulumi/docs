@@ -18,52 +18,13 @@ To get more information about Endpoint, see:
 * How-to Guides
     * [Configuring an endpoint](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_an_endpoint)
 
-## Example Usage - Service Directory Endpoint Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const exampleNamespace = new gcp.servicedirectory.Namespace("exampleNamespace", {
-    namespaceId: "example-namespace",
-    location: "us-central1",
-});
-const exampleService = new gcp.servicedirectory.Service("exampleService", {
-    serviceId: "example-service",
-    namespace: exampleNamespace.id,
-});
-const exampleEndpoint = new gcp.servicedirectory.Endpoint("exampleEndpoint", {
-    endpointId: "example-endpoint",
-    service: exampleService.id,
-    metadata: {
-        stage: "prod",
-        region: "us-central1",
-    },
-    address: "1.2.3.4",
-    port: 5353,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example_namespace = gcp.servicedirectory.Namespace("exampleNamespace",
-    namespace_id="example-namespace",
-    location="us-central1")
-example_service = gcp.servicedirectory.Service("exampleService",
-    service_id="example-service",
-    namespace=example_namespace.id)
-example_endpoint = gcp.servicedirectory.Endpoint("exampleEndpoint",
-    endpoint_id="example-endpoint",
-    service=example_service.id,
-    metadata={
-        "stage": "prod",
-        "region": "us-central1",
-    },
-    address="1.2.3.4",
-    port=5353)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Service Directory Endpoint Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -98,7 +59,102 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/servicedirectory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleNamespace, err := servicedirectory.NewNamespace(ctx, "exampleNamespace", &servicedirectory.NamespaceArgs{
+			NamespaceId: pulumi.String("example-namespace"),
+			Location:    pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := servicedirectory.NewService(ctx, "exampleService", &servicedirectory.ServiceArgs{
+			ServiceId: pulumi.String("example-service"),
+			Namespace: exampleNamespace.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		exampleEndpoint, err := servicedirectory.NewEndpoint(ctx, "exampleEndpoint", &servicedirectory.EndpointArgs{
+			EndpointId: pulumi.String("example-endpoint"),
+			Service:    exampleService.ID(),
+			Metadata: map[string]interface{}{
+				"stage":  "prod",
+				"region": "us-central1",
+			},
+			Address: pulumi.String("1.2.3.4"),
+			Port:    pulumi.Int(5353),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_namespace = gcp.servicedirectory.Namespace("exampleNamespace",
+    namespace_id="example-namespace",
+    location="us-central1")
+example_service = gcp.servicedirectory.Service("exampleService",
+    service_id="example-service",
+    namespace=example_namespace.id)
+example_endpoint = gcp.servicedirectory.Endpoint("exampleEndpoint",
+    endpoint_id="example-endpoint",
+    service=example_service.id,
+    metadata={
+        "stage": "prod",
+        "region": "us-central1",
+    },
+    address="1.2.3.4",
+    port=5353)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleNamespace = new gcp.servicedirectory.Namespace("exampleNamespace", {
+    namespaceId: "example-namespace",
+    location: "us-central1",
+});
+const exampleService = new gcp.servicedirectory.Service("exampleService", {
+    serviceId: "example-service",
+    namespace: exampleNamespace.id,
+});
+const exampleEndpoint = new gcp.servicedirectory.Endpoint("exampleEndpoint", {
+    endpointId: "example-endpoint",
+    service: exampleService.id,
+    metadata: {
+        stage: "prod",
+        region: "us-central1",
+    },
+    address: "1.2.3.4",
+    port: 5353,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Endpoint Resource {#create}

@@ -31,30 +31,13 @@ To get more information about DefaultObjectAccessControl, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
 
-## Example Usage - Storage Default Object Access Control Public
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const bucket = new gcp.storage.Bucket("bucket", {});
-const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
-    bucket: bucket.name,
-    role: "READER",
-    entity: "allUsers",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-bucket = gcp.storage.Bucket("bucket")
-public_rule = gcp.storage.DefaultObjectAccessControl("publicRule",
-    bucket=bucket.name,
-    role="READER",
-    entity="allUsers")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Storage Default Object Access Control Public
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -76,7 +59,65 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		publicRule, err := storage.NewDefaultObjectAccessControl(ctx, "publicRule", &storage.DefaultObjectAccessControlArgs{
+			Bucket: bucket.Name,
+			Role:   pulumi.String("READER"),
+			Entity: pulumi.String("allUsers"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bucket = gcp.storage.Bucket("bucket")
+public_rule = gcp.storage.DefaultObjectAccessControl("publicRule",
+    bucket=bucket.name,
+    role="READER",
+    entity="allUsers")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bucket = new gcp.storage.Bucket("bucket", {});
+const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
+    bucket: bucket.name,
+    role: "READER",
+    entity: "allUsers",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DefaultObjectAccessControl Resource {#create}

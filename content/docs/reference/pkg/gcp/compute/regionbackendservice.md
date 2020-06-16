@@ -20,6 +20,9 @@ To get more information about RegionBackendService, see:
 * How-to Guides
     * [Internal TCP/UDP Load Balancing](https://cloud.google.com/compute/docs/load-balancing/internal/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a RegionBackendService Resource {#create}

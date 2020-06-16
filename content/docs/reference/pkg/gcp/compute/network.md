@@ -19,21 +19,13 @@ To get more information about Network, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc)
 
-## Example Usage - Network Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const vpcNetwork = new gcp.compute.Network("vpc_network", {});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-vpc_network = gcp.compute.Network("vpcNetwork")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Network Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -49,7 +41,48 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpcNetwork, err := compute.NewNetwork(ctx, "vpcNetwork", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+vpc_network = gcp.compute.Network("vpcNetwork")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const vpcNetwork = new gcp.compute.Network("vpc_network", {});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Network Resource {#create}

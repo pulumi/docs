@@ -19,7 +19,6 @@ A CryptoKey is an interface to key material which can be used to encrypt and dec
 Google Cloud KMS KeyRing.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,7 +50,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myKeyRing, err := kms.LookupKMSKeyRing(ctx, &kms.LookupKMSKeyRingArgs{
+			Name:     "my-key-ring",
+			Location: "us-central1",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		myCryptoKey, err := kms.LookupKMSCryptoKey(ctx, &kms.LookupKMSCryptoKeyArgs{
+			Name:    "my-crypto-key",
+			KeyRing: myKeyRing.SelfLink,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

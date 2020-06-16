@@ -18,30 +18,13 @@ To get more information about Repository, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/artifact-registry/docs/overview)
 
-## Example Usage - Artifact Registry Repository Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const my_repo = new gcp.artifactregistry.Repository("my-repo", {
-    location: "us-central1",
-    repositoryId: "my-repository",
-    description: "example docker repository",
-    format: "DOCKER",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_repo = gcp.artifactregistry.Repository("my-repo",
-    location="us-central1",
-    repository_id="my-repository",
-    description="example docker repository",
-    format="DOCKER")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Artifact Registry Repository Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -61,30 +44,13 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Artifact Registry Repository Iam
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const my_repo = new gcp.artifactregistry.Repository("my-repo", {
-    location: "us-central1",
-    repositoryId: "my-repository",
-    description: "example docker repository with iam",
-    format: "DOCKER",
-});
-const test_account = new gcp.serviceAccount.Account("test-account", {
-    accountId: "my-account",
-    displayName: "Test Service Account",
-});
-const test_iam = new gcp.artifactregistry.RepositoryIamMember("test-iam", {
-    location: my_repo.location,
-    repository: my_repo.name,
-    role: "roles/artifactregistry.reader",
-    member: pulumi.interpolate`serviceAccount:${test_account.email}`,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -92,17 +58,27 @@ import pulumi_gcp as gcp
 my_repo = gcp.artifactregistry.Repository("my-repo",
     location="us-central1",
     repository_id="my-repository",
-    description="example docker repository with iam",
+    description="example docker repository",
     format="DOCKER")
-test_account = gcp.service_account.Account("test-account",
-    account_id="my-account",
-    display_name="Test Service Account")
-test_iam = gcp.artifactregistry.RepositoryIamMember("test-iam",
-    location=my_repo.location,
-    repository=my_repo.name,
-    role="roles/artifactregistry.reader",
-    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_repo = new gcp.artifactregistry.Repository("my-repo", {
+    location: "us-central1",
+    repositoryId: "my-repository",
+    description: "example docker repository",
+    format: "DOCKER",
+});
+```
+{{% /example %}}
+
+### Artifact Registry Repository Iam
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -134,7 +110,58 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_repo = gcp.artifactregistry.Repository("my-repo",
+    location="us-central1",
+    repository_id="my-repository",
+    description="example docker repository with iam",
+    format="DOCKER")
+test_account = gcp.service_account.Account("test-account",
+    account_id="my-account",
+    display_name="Test Service Account")
+test_iam = gcp.artifactregistry.RepositoryIamMember("test-iam",
+    location=my_repo.location,
+    repository=my_repo.name,
+    role="roles/artifactregistry.reader",
+    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_repo = new gcp.artifactregistry.Repository("my-repo", {
+    location: "us-central1",
+    repositoryId: "my-repository",
+    description: "example docker repository with iam",
+    format: "DOCKER",
+});
+const test_account = new gcp.serviceAccount.Account("test-account", {
+    accountId: "my-account",
+    displayName: "Test Service Account",
+});
+const test_iam = new gcp.artifactregistry.RepositoryIamMember("test-iam", {
+    location: my_repo.location,
+    repository: my_repo.name,
+    role: "roles/artifactregistry.reader",
+    member: pulumi.interpolate`serviceAccount:${test_account.email}`,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Repository Resource {#create}

@@ -14,33 +14,13 @@ Creates a Google Bigtable instance. For more information see
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
-## Example Usage - Development Instance
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+{{% examples %}}
+## Example Usage
 
-const development_instance = new gcp.bigtable.Instance("development-instance", {
-    clusters: [{
-        clusterId: "tf-instance-cluster",
-        storageType: "HDD",
-        zone: "us-central1-b",
-    }],
-    instanceType: "DEVELOPMENT",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-development_instance = gcp.bigtable.Instance("development-instance",
-    clusters=[{
-        "cluster_id": "tf-instance-cluster",
-        "storageType": "HDD",
-        "zone": "us-central1-b",
-    }],
-    instance_type="DEVELOPMENT")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Development Instance
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -66,7 +46,44 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+development_instance = gcp.bigtable.Instance("development-instance",
+    clusters=[{
+        "cluster_id": "tf-instance-cluster",
+        "storageType": "HDD",
+        "zone": "us-central1-b",
+    }],
+    instance_type="DEVELOPMENT")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const development_instance = new gcp.bigtable.Instance("development-instance", {
+    clusters: [{
+        clusterId: "tf-instance-cluster",
+        storageType: "HDD",
+        zone: "us-central1-b",
+    }],
+    instanceType: "DEVELOPMENT",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}

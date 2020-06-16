@@ -15,9 +15,6 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a GCPolicy Resource {#create}

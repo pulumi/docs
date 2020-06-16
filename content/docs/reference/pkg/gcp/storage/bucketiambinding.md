@@ -82,6 +82,40 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/storage.admin",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		policy, err := storage.NewBucketIAMPolicy(ctx, "policy", &storage.BucketIAMPolicyArgs{
+			Bucket:     pulumi.String(google_storage_bucket.Default.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 With IAM Conditions:
 
@@ -159,6 +193,45 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/storage.admin",
+					"members": []string{
+						"user:jane@example.com",
+					},
+					"condition": map[string]interface{}{
+						"title":       "expires_after_2019_12_31",
+						"description": "Expiring at midnight of 2019-12-31",
+						"expression":  "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		policy, err := storage.NewBucketIAMPolicy(ctx, "policy", &storage.BucketIAMPolicyArgs{
+			Bucket:     pulumi.String(google_storage_bucket.Default.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 ## google\_storage\_bucket\_iam\_binding
 
 ```typescript
@@ -199,6 +272,30 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		binding, err := storage.NewBucketIAMBinding(ctx, "binding", &storage.BucketIAMBindingArgs{
+			Bucket: pulumi.String(google_storage_bucket.Default.Name),
+			Role:   pulumi.String("roles/storage.admin"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
@@ -260,6 +357,35 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		binding, err := storage.NewBucketIAMBinding(ctx, "binding", &storage.BucketIAMBindingArgs{
+			Bucket: pulumi.String(google_storage_bucket.Default.Name),
+			Role:   pulumi.String("roles/storage.admin"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Condition: &storage.BucketIAMBindingConditionArgs{
+				Title:       pulumi.String("expires_after_2019_12_31"),
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 ## google\_storage\_bucket\_iam\_member
 
 ```typescript
@@ -297,6 +423,28 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		member, err := storage.NewBucketIAMMember(ctx, "member", &storage.BucketIAMMemberArgs{
+			Bucket: pulumi.String(google_storage_bucket.Default.Name),
+			Role:   pulumi.String("roles/storage.admin"),
+			Member: pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
@@ -353,6 +501,33 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		member, err := storage.NewBucketIAMMember(ctx, "member", &storage.BucketIAMMemberArgs{
+			Bucket: pulumi.String(google_storage_bucket.Default.Name),
+			Role:   pulumi.String("roles/storage.admin"),
+			Member: pulumi.String("user:jane@example.com"),
+			Condition: &storage.BucketIAMMemberConditionArgs{
+				Title:       pulumi.String("expires_after_2019_12_31"),
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

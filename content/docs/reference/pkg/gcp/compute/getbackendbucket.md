@@ -13,7 +13,6 @@ meta_desc: "Explore the GetBackendBucket function of the compute module, includi
 Get information about a BackendBucket.
 
 
-
 {{% examples %}}
 ## Example Usage
 

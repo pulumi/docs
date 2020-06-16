@@ -19,9 +19,6 @@ To get more information about Google Cloud Storage Transfer, see:
 * How-to Guides
     * [Configuring Access to Data Sources and Sinks](https://cloud.google.com/storage-transfer/docs/configure-access)
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a TransferJob Resource {#create}
@@ -2937,8 +2934,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+    <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
 
 </dl>
@@ -2989,8 +2985,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+    <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
 
 </dl>
@@ -3041,8 +3036,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+    <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
 
 </dl>
@@ -3093,8 +3087,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+    <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
 
 </dl>

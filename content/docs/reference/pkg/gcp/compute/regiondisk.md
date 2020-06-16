@@ -36,56 +36,13 @@ To get more information about RegionDisk, see:
 > **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - Region Disk Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const disk = new gcp.compute.Disk("disk", {
-    image: "debian-cloud/debian-9",
-    size: 50,
-    type: "pd-ssd",
-    zone: "us-central1-a",
-});
-const snapdisk = new gcp.compute.Snapshot("snapdisk", {
-    sourceDisk: disk.name,
-    zone: "us-central1-a",
-});
-const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
-    snapshot: snapdisk.id,
-    type: "pd-ssd",
-    region: "us-central1",
-    physicalBlockSizeBytes: 4096,
-    replicaZones: [
-        "us-central1-a",
-        "us-central1-f",
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-disk = gcp.compute.Disk("disk",
-    image="debian-cloud/debian-9",
-    size=50,
-    type="pd-ssd",
-    zone="us-central1-a")
-snapdisk = gcp.compute.Snapshot("snapdisk",
-    source_disk=disk.name,
-    zone="us-central1-a")
-regiondisk = gcp.compute.RegionDisk("regiondisk",
-    snapshot=snapdisk.id,
-    type="pd-ssd",
-    region="us-central1",
-    physical_block_size_bytes=4096,
-    replica_zones=[
-        "us-central1-a",
-        "us-central1-f",
-    ])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Region Disk Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -122,7 +79,108 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		disk, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			Image: pulumi.String("debian-cloud/debian-9"),
+			Size:  pulumi.Int(50),
+			Type:  pulumi.String("pd-ssd"),
+			Zone:  pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		snapdisk, err := compute.NewSnapshot(ctx, "snapdisk", &compute.SnapshotArgs{
+			SourceDisk: disk.Name,
+			Zone:       pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		regiondisk, err := compute.NewRegionDisk(ctx, "regiondisk", &compute.RegionDiskArgs{
+			Snapshot:               snapdisk.ID(),
+			Type:                   pulumi.String("pd-ssd"),
+			Region:                 pulumi.String("us-central1"),
+			PhysicalBlockSizeBytes: pulumi.Int(4096),
+			ReplicaZones: pulumi.StringArray{
+				pulumi.String("us-central1-a"),
+				pulumi.String("us-central1-f"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+disk = gcp.compute.Disk("disk",
+    image="debian-cloud/debian-9",
+    size=50,
+    type="pd-ssd",
+    zone="us-central1-a")
+snapdisk = gcp.compute.Snapshot("snapdisk",
+    source_disk=disk.name,
+    zone="us-central1-a")
+regiondisk = gcp.compute.RegionDisk("regiondisk",
+    snapshot=snapdisk.id,
+    type="pd-ssd",
+    region="us-central1",
+    physical_block_size_bytes=4096,
+    replica_zones=[
+        "us-central1-a",
+        "us-central1-f",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const disk = new gcp.compute.Disk("disk", {
+    image: "debian-cloud/debian-9",
+    size: 50,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+const snapdisk = new gcp.compute.Snapshot("snapdisk", {
+    sourceDisk: disk.name,
+    zone: "us-central1-a",
+});
+const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
+    snapshot: snapdisk.id,
+    type: "pd-ssd",
+    region: "us-central1",
+    physicalBlockSizeBytes: 4096,
+    replicaZones: [
+        "us-central1-a",
+        "us-central1-f",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegionDisk Resource {#create}

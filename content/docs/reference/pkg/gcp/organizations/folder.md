@@ -25,7 +25,6 @@ resource must have `roles/resourcemanager.folderCreator`. See the
 doc for more information.
 
 
-
 {{% examples %}}
 ## Example Usage
 

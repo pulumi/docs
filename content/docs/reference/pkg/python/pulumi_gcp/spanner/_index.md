@@ -3,6 +3,7 @@ title: Module spanner
 title_tag: Module spanner | Package pulumi_gcp | Python SDK
 linktitle: spanner
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

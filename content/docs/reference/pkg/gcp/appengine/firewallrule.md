@@ -20,44 +20,13 @@ To get more information about FirewallRule, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/creating-firewalls#creating_firewall_rules)
 
-## Example Usage - App Engine Firewall Rule Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myProject = new gcp.organizations.Project("myProject", {
-    projectId: "ae-project",
-    orgId: "123456789",
-});
-const app = new gcp.appengine.Application("app", {
-    project: myProject.projectId,
-    locationId: "us-central",
-});
-const rule = new gcp.appengine.FirewallRule("rule", {
-    project: app.project,
-    priority: 1000,
-    action: "ALLOW",
-    sourceRange: "*",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_project = gcp.organizations.Project("myProject",
-    project_id="ae-project",
-    org_id="123456789")
-app = gcp.appengine.Application("app",
-    project=my_project.project_id,
-    location_id="us-central")
-rule = gcp.appengine.FirewallRule("rule",
-    project=app.project,
-    priority=1000,
-    action="ALLOW",
-    source_range="*")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### App Engine Firewall Rule Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -87,7 +56,91 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myProject, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
+			ProjectId: pulumi.String("ae-project"),
+			OrgId:     pulumi.String("123456789"),
+		})
+		if err != nil {
+			return err
+		}
+		app, err := appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
+			Project:    myProject.ProjectId,
+			LocationId: pulumi.String("us-central"),
+		})
+		if err != nil {
+			return err
+		}
+		rule, err := appengine.NewFirewallRule(ctx, "rule", &appengine.FirewallRuleArgs{
+			Project:     app.Project,
+			Priority:    pulumi.Int(1000),
+			Action:      pulumi.String("ALLOW"),
+			SourceRange: pulumi.String("*"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="ae-project",
+    org_id="123456789")
+app = gcp.appengine.Application("app",
+    project=my_project.project_id,
+    location_id="us-central")
+rule = gcp.appengine.FirewallRule("rule",
+    project=app.project,
+    priority=1000,
+    action="ALLOW",
+    source_range="*")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "ae-project",
+    orgId: "123456789",
+});
+const app = new gcp.appengine.Application("app", {
+    project: myProject.projectId,
+    locationId: "us-central",
+});
+const rule = new gcp.appengine.FirewallRule("rule", {
+    project: app.project,
+    priority: 1000,
+    action: "ALLOW",
+    sourceRange: "*",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

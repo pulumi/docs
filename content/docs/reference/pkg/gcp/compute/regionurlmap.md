@@ -13,6 +13,9 @@ meta_desc: "Explore the RegionUrlMap resource of the compute module, including e
 UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a RegionUrlMap Resource {#create}

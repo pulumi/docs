@@ -3,6 +3,7 @@ title: Module servicedirectory
 title_tag: Module servicedirectory | Package pulumi_gcp | Python SDK
 linktitle: servicedirectory
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

@@ -23,6 +23,9 @@ To get more information about RegionAutoscaler, see:
 * How-to Guides
     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a RegionAutoscaler Resource {#create}

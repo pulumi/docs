@@ -14,23 +14,13 @@ A named resource to which messages are sent by publishers.
 
 
 
-## Example Usage - Queue Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultQueue = new gcp.cloudtasks.Queue("default", {
-    location: "us-central1",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.cloudtasks.Queue("default", location="us-central1")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Queue Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -47,7 +37,33 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudtasks.Queue("default", location="us-central1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultQueue = new gcp.cloudtasks.Queue("default", {
+    location: "us-central1",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Queue Resource {#create}

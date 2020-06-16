@@ -19,32 +19,13 @@ To get more information about Node, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/tpu/docs/)
 
-## Example Usage - TPU Node Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const available = gcp.tpu.getTensorflowVersions({});
-const tpu = new gcp.tpu.Node("tpu", {
-    zone: "us-central1-b",
-    acceleratorType: "v3-8",
-    tensorflowVersion: available.then(available => available.versions[0]),
-    cidrBlock: "10.2.0.0/29",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-available = gcp.tpu.get_tensorflow_versions()
-tpu = gcp.tpu.Node("tpu",
-    zone="us-central1-b",
-    accelerator_type="v3-8",
-    tensorflow_version=available.versions[0],
-    cidr_block="10.2.0.0/29")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TPU Node Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -65,7 +46,42 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+available = gcp.tpu.get_tensorflow_versions()
+tpu = gcp.tpu.Node("tpu",
+    zone="us-central1-b",
+    accelerator_type="v3-8",
+    tensorflow_version=available.versions[0],
+    cidr_block="10.2.0.0/29")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const available = gcp.tpu.getTensorflowVersions({});
+const tpu = new gcp.tpu.Node("tpu", {
+    zone: "us-central1-b",
+    acceleratorType: "v3-8",
+    tensorflowVersion: available.then(available => available.versions[0]),
+    cidrBlock: "10.2.0.0/29",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Node Resource {#create}

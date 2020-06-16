@@ -19,6 +19,9 @@ To get more information about DicomStore, see:
 * How-to Guides
     * [Creating a DICOM store](https://cloud.google.com/healthcare/docs/how-tos/dicom)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a DicomStore Resource {#create}

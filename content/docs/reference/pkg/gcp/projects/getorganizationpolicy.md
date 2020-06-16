@@ -15,7 +15,6 @@ Allows management of Organization policies for a Google Project. For more inform
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,7 +44,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		policy, err := projects.LookupOrganizationPolicy(ctx, &projects.LookupOrganizationPolicyArgs{
+			Project:    "project-id",
+			Constraint: "constraints/serviceuser.services",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("version", policy.Version)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

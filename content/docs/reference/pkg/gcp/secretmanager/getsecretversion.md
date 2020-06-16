@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSecretVersion function of the secretmanager module, i
 Get a Secret Manager secret's version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +38,25 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		basic, err := secretmanager.LookupSecretVersion(ctx, &secretmanager.LookupSecretVersionArgs{
+			Secret: "my-secret",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

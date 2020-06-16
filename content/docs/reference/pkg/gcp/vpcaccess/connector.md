@@ -19,28 +19,13 @@ To get more information about Connector, see:
 * How-to Guides
     * [Configuring Serverless VPC Access](https://cloud.google.com/vpc/docs/configure-serverless-vpc-access)
 
-## Example Usage - VPC Access Connector
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const connector = new gcp.vpcaccess.Connector("connector", {
-    ipCidrRange: "10.8.0.0/28",
-    network: "default",
-    region: "us-central1",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-connector = gcp.vpcaccess.Connector("connector",
-    ip_cidr_range="10.8.0.0/28",
-    network="default",
-    region="us-central1")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VPC Access Connector
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -59,7 +44,59 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/vpcaccess"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		connector, err := vpcaccess.NewConnector(ctx, "connector", &vpcaccess.ConnectorArgs{
+			IpCidrRange: pulumi.String("10.8.0.0/28"),
+			Network:     pulumi.String("default"),
+			Region:      pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+connector = gcp.vpcaccess.Connector("connector",
+    ip_cidr_range="10.8.0.0/28",
+    network="default",
+    region="us-central1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const connector = new gcp.vpcaccess.Connector("connector", {
+    ipCidrRange: "10.8.0.0/28",
+    network: "default",
+    region: "us-central1",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connector Resource {#create}

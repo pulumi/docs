@@ -22,6 +22,9 @@ To get more information about BackendServiceSignedUrlKey, see:
 > **Warning:** All arguments including `key_value` will be stored in the raw
 state as plain-text.
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a BackendServiceSignedUrlKey Resource {#create}

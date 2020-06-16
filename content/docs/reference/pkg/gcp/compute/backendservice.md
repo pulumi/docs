@@ -24,30 +24,13 @@ To get more information about BackendService, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 
-## Example Usage - Backend Service Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
-    requestPath: "/",
-    checkIntervalSec: 1,
-    timeoutSec: 1,
-});
-const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.id]});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
-    request_path="/",
-    check_interval_sec=1,
-    timeout_sec=1)
-default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.id])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Backend Service Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -73,7 +56,69 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+			RequestPath:      pulumi.String("/"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHttpHealthCheck.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.id])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.id]});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackendService Resource {#create}

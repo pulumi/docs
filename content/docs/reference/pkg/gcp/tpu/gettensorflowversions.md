@@ -13,52 +13,6 @@ meta_desc: "Explore the GetTensorflowVersions function of the tpu module, includ
 Get TensorFlow versions available for a project. For more information see the [official documentation](https://cloud.google.com/tpu/docs/) and [API](https://cloud.google.com/tpu/docs/reference/rest/v1/projects.locations.tensorflowVersions).
 
 
-## Example Usage: Configure Basic TPU Node with available version
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const available = gcp.tpu.getTensorflowVersions({});
-const tpu = new gcp.tpu.Node("tpu", {
-    zone: "us-central1-b",
-    acceleratorType: "v3-8",
-    tensorflowVersion: available.then(available => available.versions[0]),
-    cidrBlock: "10.2.0.0/29",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-available = gcp.tpu.get_tensorflow_versions()
-tpu = gcp.tpu.Node("tpu",
-    zone="us-central1-b",
-    accelerator_type="v3-8",
-    tensorflow_version=available.versions[0],
-    cidr_block="10.2.0.0/29")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
-        var tpu = new Gcp.Tpu.Node("tpu", new Gcp.Tpu.NodeArgs
-        {
-            Zone = "us-central1-b",
-            AcceleratorType = "v3-8",
-            TensorflowVersion = available.Apply(available => available.Versions[0]),
-            CidrBlock = "10.2.0.0/29",
-        });
-    }
-
-}
-```
-
 {{% examples %}}
 ## Example Usage
 
@@ -99,6 +53,63 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const available = pulumi.output(gcp.tpu.getTensorflowVersions({ async: true }));
+```
+{{% /example %}}
+
+### Configure Basic TPU Node With Available Version
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var available = Output.Create(Gcp.Tpu.GetTensorflowVersions.InvokeAsync());
+        var tpu = new Gcp.Tpu.Node("tpu", new Gcp.Tpu.NodeArgs
+        {
+            Zone = "us-central1-b",
+            AcceleratorType = "v3-8",
+            TensorflowVersion = available.Apply(available => available.Versions[0]),
+            CidrBlock = "10.2.0.0/29",
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+available = gcp.tpu.get_tensorflow_versions()
+tpu = gcp.tpu.Node("tpu",
+    zone="us-central1-b",
+    accelerator_type="v3-8",
+    tensorflow_version=available.versions[0],
+    cidr_block="10.2.0.0/29")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const available = gcp.tpu.getTensorflowVersions({});
+const tpu = new gcp.tpu.Node("tpu", {
+    zone: "us-central1-b",
+    acceleratorType: "v3-8",
+    tensorflowVersion: available.then(available => available.versions[0]),
+    cidrBlock: "10.2.0.0/29",
+});
 ```
 {{% /example %}}
 

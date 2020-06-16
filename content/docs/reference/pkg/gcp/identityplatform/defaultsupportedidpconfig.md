@@ -18,30 +18,13 @@ the marketplace prior to using this resource.
 
 
 
-## Example Usage - Identity Platform Default Supported Idp Config Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const idpConfig = new gcp.identityplatform.DefaultSupportedIdpConfig("idp_config", {
-    clientId: "client-id",
-    clientSecret: "secret",
-    enabled: true,
-    idpId: "playgames.google.com",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-idp_config = gcp.identityplatform.DefaultSupportedIdpConfig("idpConfig",
-    client_id="client-id",
-    client_secret="secret",
-    enabled=True,
-    idp_id="playgames.google.com")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Identity Platform Default Supported Idp Config Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -61,7 +44,62 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		idpConfig, err := identityplatform.NewDefaultSupportedIdpConfig(ctx, "idpConfig", &identityplatform.DefaultSupportedIdpConfigArgs{
+			ClientId:     pulumi.String("client-id"),
+			ClientSecret: pulumi.String("secret"),
+			Enabled:      pulumi.Bool(true),
+			IdpId:        pulumi.String("playgames.google.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+idp_config = gcp.identityplatform.DefaultSupportedIdpConfig("idpConfig",
+    client_id="client-id",
+    client_secret="secret",
+    enabled=True,
+    idp_id="playgames.google.com")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const idpConfig = new gcp.identityplatform.DefaultSupportedIdpConfig("idp_config", {
+    clientId: "client-id",
+    clientSecret: "secret",
+    enabled: true,
+    idpId: "playgames.google.com",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DefaultSupportedIdpConfig Resource {#create}

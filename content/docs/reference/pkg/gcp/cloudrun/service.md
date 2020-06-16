@@ -33,112 +33,6 @@ To get more information about Service, see:
 
 
 
-## Example Usage - Cloud Run Service Traffic Split
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultService = new gcp.cloudrun.Service("default", {
-    location: "us-central1",
-    template: {
-        metadata: {
-            name: "cloudrun-srv-green",
-        },
-        spec: {
-            containers: [{
-                image: "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
-    traffics: [
-        {
-            percent: 25,
-            revisionName: "cloudrun-srv-green",
-        },
-        {
-            percent: 75,
-            // This revision needs to already exist
-            revisionName: "cloudrun-srv-blue",
-        },
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.cloudrun.Service("default",
-    location="us-central1",
-    template={
-        "metadata": {
-            "name": "cloudrun-srv-green",
-        },
-        "spec": {
-            "containers": [{
-                "image": "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
-    traffics=[
-        {
-            "percent": 25,
-            "revisionName": "cloudrun-srv-green",
-        },
-        {
-            "percent": 75,
-            "revisionName": "cloudrun-srv-blue",
-        },
-    ])
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
-        {
-            Location = "us-central1",
-            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
-            {
-                Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
-                {
-                    Name = "cloudrun-srv-green",
-                },
-                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
-                {
-                    Containers = 
-                    {
-                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
-                        {
-                            Image = "gcr.io/cloudrun/hello",
-                        },
-                    },
-                },
-            },
-            Traffics = 
-            {
-                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
-                {
-                    Percent = 25,
-                    RevisionName = "cloudrun-srv-green",
-                },
-                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
-                {
-                    Percent = 75,
-                    RevisionName = "cloudrun-srv-blue",
-                },
-            },
-        });
-    }
-
-}
-```
-
 {{% examples %}}
 ## Example Usage
 
@@ -468,6 +362,122 @@ const defaultService = new gcp.cloudrun.Service("default", {
         latestRevision: true,
         percent: 100,
     }],
+});
+```
+{{% /example %}}
+
+### Cloud Run Service Traffic Split
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+                {
+                    Name = "cloudrun-srv-green",
+                },
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 25,
+                    RevisionName = "cloudrun-srv-green",
+                },
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 75,
+                    RevisionName = "cloudrun-srv-blue",
+                },
+            },
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template={
+        "metadata": {
+            "name": "cloudrun-srv-green",
+        },
+        "spec": {
+            "containers": [{
+                "image": "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics=[
+        {
+            "percent": 25,
+            "revisionName": "cloudrun-srv-green",
+        },
+        {
+            "percent": 75,
+            "revisionName": "cloudrun-srv-blue",
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        metadata: {
+            name: "cloudrun-srv-green",
+        },
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics: [
+        {
+            percent: 25,
+            revisionName: "cloudrun-srv-green",
+        },
+        {
+            percent: 75,
+            // This revision needs to already exist
+            revisionName: "cloudrun-srv-blue",
+        },
+    ],
 });
 ```
 {{% /example %}}

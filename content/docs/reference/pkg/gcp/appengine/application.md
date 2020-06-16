@@ -21,7 +21,6 @@ Allows creation and management of an App Engine application.
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,7 +52,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myProject, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
+			ProjectId: pulumi.String("your-project-id"),
+			OrgId:     pulumi.String("1234567"),
+		})
+		if err != nil {
+			return err
+		}
+		app, err := appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
+			Project:    myProject.ProjectId,
+			LocationId: pulumi.String("us-central"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,6 +3,7 @@ title: Module dns
 title_tag: Module dns | Package pulumi_gcp | Python SDK
 linktitle: dns
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -129,10 +130,10 @@ hosted by the Cloud DNS service.</p>
     <span class="n">private_visibility_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;networks&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+                <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="p">},</span>
         <span class="p">],</span>
     <span class="p">})</span>
@@ -183,12 +184,12 @@ hosted by the Cloud DNS service.</p>
     <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
     <span class="n">private_visibility_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;networks&quot;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_source</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_source</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">}],</span>
     <span class="p">},</span>
     <span class="n">peering_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;target_network&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_target</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+            <span class="s2">&quot;networkUrl&quot;</span><span class="p">:</span> <span class="n">network_target</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">})</span>
 </pre></div>
@@ -280,8 +281,8 @@ to the Internet. When set to <code class="docutils literal notranslate"><span cl
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The network with which to peer.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/networks/{network}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
@@ -290,8 +291,8 @@ This should be formatted like
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of VPC networks that can see this zone. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/networks/{network}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
@@ -395,8 +396,8 @@ zone. The value of this field contains the network to peer with.  Structure is d
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The network with which to peer.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/networks/{network}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
@@ -411,8 +412,8 @@ resources that the zone is visible from.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of VPC networks that can see this zone. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/networks/{network}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
@@ -534,8 +535,8 @@ to the Internet. When set to <code class="docutils literal notranslate"><span cl
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The network with which to peer.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/networks/{network}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
@@ -544,8 +545,8 @@ This should be formatted like
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of VPC networks that can see this zone. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
-This should be formatted like
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id or fully qualified URL of the VPC network to forward queries to.
+This should be formatted like <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/networks/{network}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>

@@ -26,73 +26,9 @@ deployments in preview as recreate-only for any update operation other
 than actually deploying an in-preview deployment (i.e. `preview=true` to
 `preview=false`).
 
-## Example Usage - Deployment Manager Deployment Basic
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-import * from "fs";
-
-const deployment = new gcp.deploymentmanager.Deployment("deployment", {
-    target: {
-        config: {
-            content: fs.readFileSync("path/to/config.yml"),
-        },
-    },
-    labels: [{
-        key: "foo",
-        value: "bar",
-    }],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-deployment = gcp.deploymentmanager.Deployment("deployment",
-    target={
-        "config": {
-            "content": (lambda path: open(path).read())("path/to/config.yml"),
-        },
-    },
-    labels=[{
-        "key": "foo",
-        "value": "bar",
-    }])
-```
-```csharp
-using System.IO;
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var deployment = new Gcp.DeploymentManager.Deployment("deployment", new Gcp.DeploymentManager.DeploymentArgs
-        {
-            Target = new Gcp.DeploymentManager.Inputs.DeploymentTargetArgs
-            {
-                Config = new Gcp.DeploymentManager.Inputs.DeploymentTargetConfigArgs
-                {
-                    Content = File.ReadAllText("path/to/config.yml"),
-                },
-            },
-            Labels = 
-            {
-                new Gcp.DeploymentManager.Inputs.DeploymentLabelArgs
-                {
-                    Key = "foo",
-                    Value = "bar",
-                },
-            },
-        });
-    }
-
-}
-```
-
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Deployment Resource {#create}

@@ -3,6 +3,7 @@ title: Module firestore
 title_tag: Module firestore | Package pulumi_gcp | Python SDK
 linktitle: firestore
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

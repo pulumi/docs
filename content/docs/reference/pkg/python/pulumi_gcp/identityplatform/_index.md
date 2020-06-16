@@ -3,6 +3,7 @@ title: Module identityplatform
 title_tag: Module identityplatform | Package pulumi_gcp | Python SDK
 linktitle: identityplatform
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

@@ -17,6 +17,9 @@ To get more information about ApplicationUrlDispatchRules, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps#UrlDispatchRule)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a ApplicationUrlDispatchRules Resource {#create}

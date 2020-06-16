@@ -20,21 +20,13 @@ To get more information about GlobalAddress, see:
 * How-to Guides
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address)
 
-## Example Usage - Global Address Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.GlobalAddress("default")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Global Address Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -50,7 +42,31 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.GlobalAddress("default")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GlobalAddress Resource {#create}

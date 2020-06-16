@@ -3,6 +3,7 @@ title: Module servicenetworking
 title_tag: Module servicenetworking | Package pulumi_gcp | Python SDK
 linktitle: servicenetworking
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

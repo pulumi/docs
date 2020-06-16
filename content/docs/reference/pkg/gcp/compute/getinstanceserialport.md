@@ -13,9 +13,6 @@ meta_desc: "Explore the GetInstanceSerialPort function of the compute module, in
 Get the serial port output from a Compute Instance. For more information see
 the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetInstanceSerialPort {#using}

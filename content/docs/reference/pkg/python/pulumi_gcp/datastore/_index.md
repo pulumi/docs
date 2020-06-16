@@ -3,6 +3,7 @@ title: Module datastore
 title_tag: Module datastore | Package pulumi_gcp | Python SDK
 linktitle: datastore
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

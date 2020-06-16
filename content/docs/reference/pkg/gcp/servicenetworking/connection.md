@@ -15,40 +15,13 @@ Manages a private VPC connection with a GCP service provider. For more informati
 and
 [API](https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections).
 
-## Example usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+{{% examples %}}
+## Example Usage
 
-const peeringNetwork = new gcp.compute.Network("peeringNetwork", {});
-const privateIpAlloc = new gcp.compute.GlobalAddress("privateIpAlloc", {
-    purpose: "VPC_PEERING",
-    addressType: "INTERNAL",
-    prefixLength: 16,
-    network: peeringNetwork.id,
-});
-const foobar = new gcp.servicenetworking.Connection("foobar", {
-    network: peeringNetwork.id,
-    service: "servicenetworking.googleapis.com",
-    reservedPeeringRanges: [privateIpAlloc.name],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-peering_network = gcp.compute.Network("peeringNetwork")
-private_ip_alloc = gcp.compute.GlobalAddress("privateIpAlloc",
-    purpose="VPC_PEERING",
-    address_type="INTERNAL",
-    prefix_length=16,
-    network=peering_network.id)
-foobar = gcp.servicenetworking.Connection("foobar",
-    network=peering_network.id,
-    service="servicenetworking.googleapis.com",
-    reserved_peering_ranges=[private_ip_alloc.name])
-```
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -80,7 +53,88 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/servicenetworking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		peeringNetwork, err := compute.NewNetwork(ctx, "peeringNetwork", nil)
+		if err != nil {
+			return err
+		}
+		privateIpAlloc, err := compute.NewGlobalAddress(ctx, "privateIpAlloc", &compute.GlobalAddressArgs{
+			Purpose:      pulumi.String("VPC_PEERING"),
+			AddressType:  pulumi.String("INTERNAL"),
+			PrefixLength: pulumi.Int(16),
+			Network:      peeringNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		foobar, err := servicenetworking.NewConnection(ctx, "foobar", &servicenetworking.ConnectionArgs{
+			Network: peeringNetwork.ID(),
+			Service: pulumi.String("servicenetworking.googleapis.com"),
+			ReservedPeeringRanges: pulumi.StringArray{
+				privateIpAlloc.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+peering_network = gcp.compute.Network("peeringNetwork")
+private_ip_alloc = gcp.compute.GlobalAddress("privateIpAlloc",
+    purpose="VPC_PEERING",
+    address_type="INTERNAL",
+    prefix_length=16,
+    network=peering_network.id)
+foobar = gcp.servicenetworking.Connection("foobar",
+    network=peering_network.id,
+    service="servicenetworking.googleapis.com",
+    reserved_peering_ranges=[private_ip_alloc.name])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const peeringNetwork = new gcp.compute.Network("peeringNetwork", {});
+const privateIpAlloc = new gcp.compute.GlobalAddress("privateIpAlloc", {
+    purpose: "VPC_PEERING",
+    addressType: "INTERNAL",
+    prefixLength: 16,
+    network: peeringNetwork.id,
+});
+const foobar = new gcp.servicenetworking.Connection("foobar", {
+    network: peeringNetwork.id,
+    service: "servicenetworking.googleapis.com",
+    reservedPeeringRanges: [privateIpAlloc.name],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connection Resource {#create}

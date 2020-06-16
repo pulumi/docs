@@ -43,8 +43,28 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		group, err := compute.LookupRegionInstanceGroup(ctx, &compute.LookupRegionInstanceGroupArgs{
+			Name: "instance-group-name",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:
+
 
 
 

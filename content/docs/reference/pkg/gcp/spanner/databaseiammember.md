@@ -86,6 +86,41 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/editor",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		database, err := spanner.NewDatabaseIAMPolicy(ctx, "database", &spanner.DatabaseIAMPolicyArgs{
+			Instance:   pulumi.String("your-instance-name"),
+			Database:   pulumi.String("your-database-name"),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_spanner\_database\_iam\_binding
 
@@ -132,6 +167,31 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		database, err := spanner.NewDatabaseIAMBinding(ctx, "database", &spanner.DatabaseIAMBindingArgs{
+			Database: pulumi.String("your-database-name"),
+			Instance: pulumi.String("your-instance-name"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/compute.networkUser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## google\_spanner\_database\_iam\_member
 
@@ -173,6 +233,29 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		database, err := spanner.NewDatabaseIAMMember(ctx, "database", &spanner.DatabaseIAMMemberArgs{
+			Database: pulumi.String("your-database-name"),
+			Instance: pulumi.String("your-instance-name"),
+			Member:   pulumi.String("user:jane@example.com"),
+			Role:     pulumi.String("roles/compute.networkUser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 

@@ -3,6 +3,7 @@ title: Module bigtable
 title_tag: Module bigtable | Package pulumi_gcp | Python SDK
 linktitle: bigtable
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

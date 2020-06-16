@@ -35,32 +35,13 @@ To get more information about NotificationChannel, see:
     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
-## Example Usage - Notification Channel Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const basic = new gcp.monitoring.NotificationChannel("basic", {
-    displayName: "Test Notification Channel",
-    labels: {
-        email_address: "fake_email@blahblah.com",
-    },
-    type: "email",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-basic = gcp.monitoring.NotificationChannel("basic",
-    display_name="Test Notification Channel",
-    labels={
-        "email_address": "fake_email@blahblah.com",
-    },
-    type="email")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Notification Channel Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -82,38 +63,66 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Notification Channel Sensitive
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
 
-const defaultNotificationChannel = new gcp.monitoring.NotificationChannel("default", {
-    displayName: "Test Slack Channel",
-    labels: {
-        channel_name: "#foobar",
-    },
-    sensitiveLabels: {
-        authToken: "one",
-    },
-    type: "slack",
-});
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		basic, err := monitoring.NewNotificationChannel(ctx, "basic", &monitoring.NotificationChannelArgs{
+			DisplayName: pulumi.String("Test Notification Channel"),
+			Labels: map[string]interface{}{
+				"email_address": "fake_email@blahblah.com",
+			},
+			Type: pulumi.String("email"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 ```
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-default = gcp.monitoring.NotificationChannel("default",
-    display_name="Test Slack Channel",
+basic = gcp.monitoring.NotificationChannel("basic",
+    display_name="Test Notification Channel",
     labels={
-        "channel_name": "#foobar",
+        "email_address": "fake_email@blahblah.com",
     },
-    sensitive_labels={
-        "authToken": "one",
-    },
-    type="slack")
+    type="email")
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = new gcp.monitoring.NotificationChannel("basic", {
+    displayName: "Test Notification Channel",
+    labels: {
+        email_address: "fake_email@blahblah.com",
+    },
+    type: "email",
+});
+```
+{{% /example %}}
+
+### Notification Channel Sensitive
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -139,7 +148,48 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.monitoring.NotificationChannel("default",
+    display_name="Test Slack Channel",
+    labels={
+        "channel_name": "#foobar",
+    },
+    sensitive_labels={
+        "authToken": "one",
+    },
+    type="slack")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNotificationChannel = new gcp.monitoring.NotificationChannel("default", {
+    displayName: "Test Slack Channel",
+    labels: {
+        channel_name: "#foobar",
+    },
+    sensitiveLabels: {
+        authToken: "one",
+    },
+    type: "slack",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NotificationChannel Resource {#create}

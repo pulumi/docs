@@ -22,6 +22,9 @@ To get more information about InstanceGroupNamedPort, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/instance-groups/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a InstanceGroupNamedPort Resource {#create}

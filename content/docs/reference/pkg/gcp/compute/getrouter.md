@@ -13,7 +13,6 @@ meta_desc: "Explore the GetRouter function of the compute module, including exam
 Get a router within GCE from its name and VPC.
 
 
-
 {{% examples %}}
 ## Example Usage
 

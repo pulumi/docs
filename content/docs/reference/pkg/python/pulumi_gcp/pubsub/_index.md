@@ -3,6 +3,7 @@ title: Module pubsub
 title_tag: Module pubsub | Package pulumi_gcp | Python SDK
 linktitle: pubsub
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -28,8 +29,9 @@ To get more information about Subscription, see:
 * How-to Guides
     * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
 
-## Example Usage - Pubsub Subscription Push
+## Example Usage
 
+### Pubsub Subscription Push
 
 ```python
 import pulumi
@@ -49,8 +51,8 @@ example_subscription = gcp.pubsub.Subscription(&quot;exampleSubscription&quot;,
         },
     })
 ```
-## Example Usage - Pubsub Subscription Pull
 
+### Pubsub Subscription Pull
 
 ```python
 import pulumi
@@ -69,8 +71,8 @@ example_subscription = gcp.pubsub.Subscription(&quot;exampleSubscription&quot;,
         &quot;ttl&quot;: &quot;300000.5s&quot;,
     })
 ```
-## Example Usage - Pubsub Subscription Different Project
 
+### Pubsub Subscription Different Project
 
 ```python
 import pulumi
@@ -81,8 +83,8 @@ example_subscription = gcp.pubsub.Subscription(&quot;exampleSubscription&quot;,
     project=&quot;subscription-project&quot;,
     topic=example_topic.name)
 ```
-## Example Usage - Pubsub Subscription Dead Letter
 
+### Pubsub Subscription Dead Letter
 
 ```python
 import pulumi

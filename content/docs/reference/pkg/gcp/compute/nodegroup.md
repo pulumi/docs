@@ -24,41 +24,13 @@ number of nodes in a node group and changes to node group size either
 through provider config or through external changes will cause
 the provider to delete and recreate the node group.
 
-## Example Usage - Node Group Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const central1a = gcp.compute.getNodeTypes({
-    zone: "us-central1-a",
-});
-const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
-    region: "us-central1",
-    nodeType: central1a.then(central1a => central1a.names[0]),
-});
-const nodes = new gcp.compute.NodeGroup("nodes", {
-    zone: "us-central1-a",
-    description: "example gcp.compute.NodeGroup for the Google Provider",
-    size: 1,
-    nodeTemplate: soletenant_tmpl.id,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-central1a = gcp.compute.get_node_types(zone="us-central1-a")
-soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
-    region="us-central1",
-    node_type=central1a.names[0])
-nodes = gcp.compute.NodeGroup("nodes",
-    zone="us-central1-a",
-    description="example gcp.compute.NodeGroup for the Google Provider",
-    size=1,
-    node_template=soletenant_tmpl.id)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Node Group Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -79,7 +51,7 @@ class MyStack : Stack
         var nodes = new Gcp.Compute.NodeGroup("nodes", new Gcp.Compute.NodeGroupArgs
         {
             Zone = "us-central1-a",
-            Description = "example gcp.compute.NodeGroup for the Google Provider",
+            Description = "example google_compute_node_group for the Google Provider",
             Size = 1,
             NodeTemplate = soletenant_tmpl.Id,
         });
@@ -87,7 +59,51 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1a = gcp.compute.get_node_types(zone="us-central1-a")
+soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
+    region="us-central1",
+    node_type=central1a.names[0])
+nodes = gcp.compute.NodeGroup("nodes",
+    zone="us-central1-a",
+    description="example google_compute_node_group for the Google Provider",
+    size=1,
+    node_template=soletenant_tmpl.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1a = gcp.compute.getNodeTypes({
+    zone: "us-central1-a",
+});
+const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
+    region: "us-central1",
+    nodeType: central1a.then(central1a => central1a.names[0]),
+});
+const nodes = new gcp.compute.NodeGroup("nodes", {
+    zone: "us-central1-a",
+    description: "example google_compute_node_group for the Google Provider",
+    size: 1,
+    nodeTemplate: soletenant_tmpl.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NodeGroup Resource {#create}

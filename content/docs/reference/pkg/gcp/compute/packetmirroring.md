@@ -20,6 +20,9 @@ To get more information about PacketMirroring, see:
 * How-to Guides
     * [Using Packet Mirroring](https://cloud.google.com/vpc/docs/using-packet-mirroring#creating)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a PacketMirroring Resource {#create}

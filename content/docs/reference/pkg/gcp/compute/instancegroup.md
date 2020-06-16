@@ -15,27 +15,13 @@ For more information, see [the official documentation](https://cloud.google.com/
 and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 
 
-## Example Usage - Empty instance group
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+{{% examples %}}
+## Example Usage
 
-const test = new gcp.compute.InstanceGroup("test", {
-    description: "Test instance group",
-    zone: "us-central1-a",
-    network: google_compute_network["default"].id,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-test = gcp.compute.InstanceGroup("test",
-    description="Test instance group",
-    zone="us-central1-a",
-    network=google_compute_network["default"]["id"])
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Empty Instance Group
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -54,7 +40,59 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := compute.NewInstanceGroup(ctx, "test", &compute.InstanceGroupArgs{
+			Description: pulumi.String("Test instance group"),
+			Zone:        pulumi.String("us-central1-a"),
+			Network:     pulumi.String(google_compute_network.Default.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test = gcp.compute.InstanceGroup("test",
+    description="Test instance group",
+    zone="us-central1-a",
+    network=google_compute_network["default"]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.compute.InstanceGroup("test", {
+    description: "Test instance group",
+    zone: "us-central1-a",
+    network: google_compute_network["default"].id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InstanceGroup Resource {#create}

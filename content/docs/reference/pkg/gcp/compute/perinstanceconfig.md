@@ -19,6 +19,9 @@ To get more information about PerInstanceConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/instance-groups/stateful-migs#per-instance_configs)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a PerInstanceConfig Resource {#create}

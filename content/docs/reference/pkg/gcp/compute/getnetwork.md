@@ -13,7 +13,6 @@ meta_desc: "Explore the GetNetwork function of the compute module, including exa
 Get a network within GCE from its name.
 
 
-
 {{% examples %}}
 ## Example Usage
 

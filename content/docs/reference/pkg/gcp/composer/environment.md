@@ -34,7 +34,6 @@ To get more information about Environments, see:
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,7 +59,26 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := composer.NewEnvironment(ctx, "test", &composer.EnvironmentArgs{
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -245,7 +263,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/composer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		test, err := composer.NewEnvironment(ctx, "test", &composer.EnvironmentArgs{
+			Config: &composer.EnvironmentConfigArgs{
+				SoftwareConfig: &composer.EnvironmentConfigSoftwareConfigArgs{
+					AirflowConfigOverrides: map[string]interface{}{
+						"core-loadExample": "True",
+					},
+					EnvVariables: map[string]interface{}{
+						"FOO": "bar",
+					},
+					PypiPackages: map[string]interface{}{
+						"numpy": "",
+						"scipy": "==1.1.0",
+					},
+				},
+			},
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}
@@ -2797,20 +2848,35 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
 They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
 `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
 ```
-AIRFLOW_HOME
-C_FORCE_ROOT
-CONTAINER_NAME
-DAGS_FOLDER
-GCP_PROJECT
-GCS_BUCKET
-GKE_CLUSTER_NAME
-SQL_DATABASE
-SQL_INSTANCE
-SQL_PASSWORD
-SQL_PROJECT
-SQL_REGION
-SQL_USER
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
 ```
 {{% /md %}}</dd>
 
@@ -2891,20 +2957,35 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
 They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
 `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
 ```
-AIRFLOW_HOME
-C_FORCE_ROOT
-CONTAINER_NAME
-DAGS_FOLDER
-GCP_PROJECT
-GCS_BUCKET
-GKE_CLUSTER_NAME
-SQL_DATABASE
-SQL_INSTANCE
-SQL_PASSWORD
-SQL_PROJECT
-SQL_REGION
-SQL_USER
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
 ```
 {{% /md %}}</dd>
 
@@ -2985,20 +3066,35 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
 They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
 `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
 ```
-AIRFLOW_HOME
-C_FORCE_ROOT
-CONTAINER_NAME
-DAGS_FOLDER
-GCP_PROJECT
-GCS_BUCKET
-GKE_CLUSTER_NAME
-SQL_DATABASE
-SQL_INSTANCE
-SQL_PASSWORD
-SQL_PROJECT
-SQL_REGION
-SQL_USER
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
 ```
 {{% /md %}}</dd>
 
@@ -3079,20 +3175,35 @@ separated by a hyphen, for example "core-dags_are_paused_at_creation".
 Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
 They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
 `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
 ```
-AIRFLOW_HOME
-C_FORCE_ROOT
-CONTAINER_NAME
-DAGS_FOLDER
-GCP_PROJECT
-GCS_BUCKET
-GKE_CLUSTER_NAME
-SQL_DATABASE
-SQL_INSTANCE
-SQL_PASSWORD
-SQL_PROJECT
-SQL_REGION
-SQL_USER
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
 ```
 {{% /md %}}</dd>
 

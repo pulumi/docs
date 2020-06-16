@@ -18,26 +18,13 @@ To get more information about GameServerDeployment, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
-## Example Usage - Game Service Deployment Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const _default = new gcp.gameservices.GameServerDeployment("default", {
-    deploymentId: "tf-test-deployment",
-    description: "a deployment description",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.gameservices.GameServerDeployment("default",
-    deployment_id="tf-test-deployment",
-    description="a deployment description")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Game Service Deployment Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -55,7 +42,36 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.gameservices.GameServerDeployment("default",
+    deployment_id="tf-test-deployment",
+    description="a deployment description")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.gameservices.GameServerDeployment("default", {
+    deploymentId: "tf-test-deployment",
+    description: "a deployment description",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GameServerDeployment Resource {#create}

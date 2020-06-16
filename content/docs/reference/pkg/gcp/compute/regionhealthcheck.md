@@ -29,32 +29,13 @@ To get more information about RegionHealthCheck, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/health-checks)
 
-## Example Usage - Region Health Check Tcp
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-health-check", {
-    checkIntervalSec: 1,
-    tcpHealthCheck: {
-        port: 80,
-    },
-    timeoutSec: 1,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check",
-    check_interval_sec=1,
-    tcp_health_check={
-        "port": "80",
-    },
-    timeout_sec=1)
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Region Health Check Tcp
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -76,46 +57,43 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Tcp Full
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via tcp",
-    healthyThreshold: 4,
-    tcpHealthCheck: {
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        request: "ARE YOU HEALTHY?",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
 tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check",
     check_interval_sec=1,
-    description="Health check via tcp",
-    healthy_threshold=4,
     tcp_health_check={
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request": "ARE YOU HEALTHY?",
-        "response": "I AM HEALTHY",
+        "port": "80",
     },
-    timeout_sec=1,
-    unhealthy_threshold=5)
+    timeout_sec=1)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-health-check", {
+    checkIntervalSec: 1,
+    tcpHealthCheck: {
+        port: 80,
+    },
+    timeoutSec: 1,
+});
+```
+{{% /example %}}
+
+### Region Health Check Tcp Full
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -144,32 +122,57 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Ssl
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-health-check", {
-    checkIntervalSec: 1,
-    sslHealthCheck: {
-        port: 443,
-    },
-    timeoutSec: 1,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check",
+tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check",
     check_interval_sec=1,
-    ssl_health_check={
-        "port": "443",
+    description="Health check via tcp",
+    healthy_threshold=4,
+    tcp_health_check={
+        "port_name": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxy_header": "NONE",
+        "request": "ARE YOU HEALTHY?",
+        "response": "I AM HEALTHY",
     },
-    timeout_sec=1)
+    timeout_sec=1,
+    unhealthy_threshold=5)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via tcp",
+    healthyThreshold: 4,
+    tcpHealthCheck: {
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        request: "ARE YOU HEALTHY?",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+{{% /example %}}
+
+### Region Health Check Ssl
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -191,46 +194,43 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Ssl Full
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via ssl",
-    healthyThreshold: 4,
-    sslHealthCheck: {
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        request: "ARE YOU HEALTHY?",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
 ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check",
     check_interval_sec=1,
-    description="Health check via ssl",
-    healthy_threshold=4,
     ssl_health_check={
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request": "ARE YOU HEALTHY?",
-        "response": "I AM HEALTHY",
+        "port": "443",
     },
-    timeout_sec=1,
-    unhealthy_threshold=5)
+    timeout_sec=1)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-health-check", {
+    checkIntervalSec: 1,
+    sslHealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+{{% /example %}}
+
+### Region Health Check Ssl Full
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -259,32 +259,57 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Http
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
-    checkIntervalSec: 1,
-    httpHealthCheck: {
-        port: 80,
-    },
-    timeoutSec: 1,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
+ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check",
     check_interval_sec=1,
-    http_health_check={
-        "port": "80",
+    description="Health check via ssl",
+    healthy_threshold=4,
+    ssl_health_check={
+        "port_name": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxy_header": "NONE",
+        "request": "ARE YOU HEALTHY?",
+        "response": "I AM HEALTHY",
     },
-    timeout_sec=1)
+    timeout_sec=1,
+    unhealthy_threshold=5)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via ssl",
+    healthyThreshold: 4,
+    sslHealthCheck: {
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        request: "ARE YOU HEALTHY?",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+{{% /example %}}
+
+### Region Health Check Http
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -306,48 +331,43 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Http Full
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via http",
-    healthyThreshold: 4,
-    httpHealthCheck: {
-        host: "1.2.3.4",
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        requestPath: "/mypath",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
 http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
     check_interval_sec=1,
-    description="Health check via http",
-    healthy_threshold=4,
     http_health_check={
-        "host": "1.2.3.4",
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request_path": "/mypath",
-        "response": "I AM HEALTHY",
+        "port": "80",
     },
-    timeout_sec=1,
-    unhealthy_threshold=5)
+    timeout_sec=1)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
+    checkIntervalSec: 1,
+    httpHealthCheck: {
+        port: 80,
+    },
+    timeoutSec: 1,
+});
+```
+{{% /example %}}
+
+### Region Health Check Http Full
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -377,32 +397,59 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Https
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const https_region_health_check = new gcp.compute.RegionHealthCheck("https-region-health-check", {
-    checkIntervalSec: 1,
-    httpsHealthCheck: {
-        port: 443,
-    },
-    timeoutSec: 1,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-check",
+http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
     check_interval_sec=1,
-    https_health_check={
-        "port": "443",
+    description="Health check via http",
+    healthy_threshold=4,
+    http_health_check={
+        "host": "1.2.3.4",
+        "port_name": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxy_header": "NONE",
+        "request_path": "/mypath",
+        "response": "I AM HEALTHY",
     },
-    timeout_sec=1)
+    timeout_sec=1,
+    unhealthy_threshold=5)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via http",
+    healthyThreshold: 4,
+    httpHealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+{{% /example %}}
+
+### Region Health Check Https
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -424,48 +471,43 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Https Full
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const https_region_health_check = new gcp.compute.RegionHealthCheck("https-region-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via https",
-    healthyThreshold: 4,
-    httpsHealthCheck: {
-        host: "1.2.3.4",
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        requestPath: "/mypath",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
 https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-check",
     check_interval_sec=1,
-    description="Health check via https",
-    healthy_threshold=4,
     https_health_check={
-        "host": "1.2.3.4",
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request_path": "/mypath",
-        "response": "I AM HEALTHY",
+        "port": "443",
     },
-    timeout_sec=1,
-    unhealthy_threshold=5)
+    timeout_sec=1)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const https_region_health_check = new gcp.compute.RegionHealthCheck("https-region-health-check", {
+    checkIntervalSec: 1,
+    httpsHealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+{{% /example %}}
+
+### Region Health Check Https Full
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -495,32 +537,59 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Http2
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-region-health-check", {
-    checkIntervalSec: 1,
-    http2HealthCheck: {
-        port: 443,
-    },
-    timeoutSec: 1,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-check",
+https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-check",
     check_interval_sec=1,
-    http2_health_check={
-        "port": "443",
+    description="Health check via https",
+    healthy_threshold=4,
+    https_health_check={
+        "host": "1.2.3.4",
+        "port_name": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxy_header": "NONE",
+        "request_path": "/mypath",
+        "response": "I AM HEALTHY",
     },
-    timeout_sec=1)
+    timeout_sec=1,
+    unhealthy_threshold=5)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const https_region_health_check = new gcp.compute.RegionHealthCheck("https-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via https",
+    healthyThreshold: 4,
+    httpsHealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+{{% /example %}}
+
+### Region Health Check Http2
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -542,48 +611,43 @@ class MyStack : Stack
 
 }
 ```
-## Example Usage - Region Health Check Http2 Full
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-region-health-check", {
-    checkIntervalSec: 1,
-    description: "Health check via http2",
-    healthyThreshold: 4,
-    http2HealthCheck: {
-        host: "1.2.3.4",
-        portName: "health-check-port",
-        portSpecification: "USE_NAMED_PORT",
-        proxyHeader: "NONE",
-        requestPath: "/mypath",
-        response: "I AM HEALTHY",
-    },
-    timeoutSec: 1,
-    unhealthyThreshold: 5,
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
 http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-check",
     check_interval_sec=1,
-    description="Health check via http2",
-    healthy_threshold=4,
     http2_health_check={
-        "host": "1.2.3.4",
-        "port_name": "health-check-port",
-        "portSpecification": "USE_NAMED_PORT",
-        "proxy_header": "NONE",
-        "request_path": "/mypath",
-        "response": "I AM HEALTHY",
+        "port": "443",
     },
-    timeout_sec=1,
-    unhealthy_threshold=5)
+    timeout_sec=1)
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-region-health-check", {
+    checkIntervalSec: 1,
+    http2HealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+{{% /example %}}
+
+### Region Health Check Http2 Full
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -613,7 +677,58 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-check",
+    check_interval_sec=1,
+    description="Health check via http2",
+    healthy_threshold=4,
+    http2_health_check={
+        "host": "1.2.3.4",
+        "port_name": "health-check-port",
+        "portSpecification": "USE_NAMED_PORT",
+        "proxy_header": "NONE",
+        "request_path": "/mypath",
+        "response": "I AM HEALTHY",
+    },
+    timeout_sec=1,
+    unhealthy_threshold=5)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-region-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via http2",
+    healthyThreshold: 4,
+    http2HealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegionHealthCheck Resource {#create}

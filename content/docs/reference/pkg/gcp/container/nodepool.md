@@ -14,6 +14,9 @@ Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see [the official documentation](https://cloud.google.com/container-engine/docs/node-pools)
 and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools).
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a NodePool Resource {#create}
@@ -327,8 +330,7 @@ update the number of nodes per instance group but should not be used alongside `
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
+    <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 `node_locations` will be used.
@@ -512,8 +514,7 @@ update the number of nodes per instance group but should not be used alongside `
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
+    <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 `node_locations` will be used.
@@ -697,8 +698,7 @@ update the number of nodes per instance group but should not be used alongside `
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
+    <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 `node_locations` will be used.
@@ -882,8 +882,7 @@ update the number of nodes per instance group but should not be used alongside `
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
+    <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 `node_locations` will be used.
@@ -1327,8 +1326,7 @@ update the number of nodes per instance group but should not be used alongside `
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
+    <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 `node_locations` will be used.
@@ -1523,8 +1521,7 @@ update the number of nodes per instance group but should not be used alongside `
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
+    <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 `node_locations` will be used.
@@ -1719,8 +1716,7 @@ update the number of nodes per instance group but should not be used alongside `
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
+    <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 `node_locations` will be used.
@@ -1915,8 +1911,7 @@ update the number of nodes per instance group but should not be used alongside `
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
+    <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 `node_locations` will be used.

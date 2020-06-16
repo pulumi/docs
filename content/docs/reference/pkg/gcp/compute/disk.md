@@ -36,36 +36,13 @@ To get more information about Disk, see:
 > **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - Disk Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultDisk = new gcp.compute.Disk("default", {
-    image: "debian-8-jessie-v20170523",
-    labels: {
-        environment: "dev",
-    },
-    physicalBlockSizeBytes: 4096,
-    type: "pd-ssd",
-    zone: "us-central1-a",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.Disk("default",
-    image="debian-8-jessie-v20170523",
-    labels={
-        "environment": "dev",
-    },
-    physical_block_size_bytes=4096,
-    type="pd-ssd",
-    zone="us-central1-a")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Disk Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -89,7 +66,46 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.Disk("default",
+    image="debian-8-jessie-v20170523",
+    labels={
+        "environment": "dev",
+    },
+    physical_block_size_bytes=4096,
+    type="pd-ssd",
+    zone="us-central1-a")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultDisk = new gcp.compute.Disk("default", {
+    image: "debian-8-jessie-v20170523",
+    labels: {
+        environment: "dev",
+    },
+    physicalBlockSizeBytes: 4096,
+    type: "pd-ssd",
+    zone: "us-central1-a",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Disk Resource {#create}

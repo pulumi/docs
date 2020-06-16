@@ -13,7 +13,6 @@ meta_desc: "Explore the GetCertificate function of the compute module, including
 Get info about a Google Compute SSL Certificate from its name.
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +47,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myCert, err := compute.LookupCertificate(ctx, &compute.LookupCertificateArgs{
+			Name: "my-cert",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("certificate", myCert.Certificate)
+		ctx.Export("certificateId", myCert.CertificateId)
+		ctx.Export("selfLink", myCert.SelfLink)
+		return nil
+	})
+}
+```
 {{% /example %}}
 
 {{% example python %}}

@@ -3,6 +3,7 @@ title: Module iot
 title_tag: Module iot | Package pulumi_gcp | Python SDK
 linktitle: iot
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

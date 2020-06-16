@@ -3,6 +3,7 @@ title: Module artifactregistry
 title_tag: Module artifactregistry | Package pulumi_gcp | Python SDK
 linktitle: artifactregistry
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

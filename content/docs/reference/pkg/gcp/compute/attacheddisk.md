@@ -25,9 +25,6 @@ To get more information about attaching disks, see:
 
 **Note:** When using `gcp.compute.AttachedDisk` you **must** use `lifecycle.ignore_changes = ["attached_disk"]` on the `gcp.compute.Instance` resource that has the disks attached. Otherwise the two resources will fight for control of the attached disk block.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a AttachedDisk Resource {#create}

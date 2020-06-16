@@ -20,45 +20,13 @@ To get more information about SslPolicy, see:
 * How-to Guides
     * [Using SSL Policies](https://cloud.google.com/compute/docs/load-balancing/ssl-policies)
 
-## Example Usage - Ssl Policy Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const prod_ssl_policy = new gcp.compute.SSLPolicy("prod-ssl-policy", {
-    profile: "MODERN",
-});
-const nonprod_ssl_policy = new gcp.compute.SSLPolicy("nonprod-ssl-policy", {
-    minTlsVersion: "TLS_1_2",
-    profile: "MODERN",
-});
-const custom_ssl_policy = new gcp.compute.SSLPolicy("custom-ssl-policy", {
-    customFeatures: [
-        "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
-        "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
-    ],
-    minTlsVersion: "TLS_1_2",
-    profile: "CUSTOM",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-prod_ssl_policy = gcp.compute.SSLPolicy("prod-ssl-policy", profile="MODERN")
-nonprod_ssl_policy = gcp.compute.SSLPolicy("nonprod-ssl-policy",
-    min_tls_version="TLS_1_2",
-    profile="MODERN")
-custom_ssl_policy = gcp.compute.SSLPolicy("custom-ssl-policy",
-    custom_features=[
-        "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
-        "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
-    ],
-    min_tls_version="TLS_1_2",
-    profile="CUSTOM")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Ssl Policy Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -90,7 +58,55 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+prod_ssl_policy = gcp.compute.SSLPolicy("prod-ssl-policy", profile="MODERN")
+nonprod_ssl_policy = gcp.compute.SSLPolicy("nonprod-ssl-policy",
+    min_tls_version="TLS_1_2",
+    profile="MODERN")
+custom_ssl_policy = gcp.compute.SSLPolicy("custom-ssl-policy",
+    custom_features=[
+        "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+        "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+    ],
+    min_tls_version="TLS_1_2",
+    profile="CUSTOM")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const prod_ssl_policy = new gcp.compute.SSLPolicy("prod-ssl-policy", {
+    profile: "MODERN",
+});
+const nonprod_ssl_policy = new gcp.compute.SSLPolicy("nonprod-ssl-policy", {
+    minTlsVersion: "TLS_1_2",
+    profile: "MODERN",
+});
+const custom_ssl_policy = new gcp.compute.SSLPolicy("custom-ssl-policy", {
+    customFeatures: [
+        "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+        "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+    ],
+    minTlsVersion: "TLS_1_2",
+    profile: "CUSTOM",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SSLPolicy Resource {#create}

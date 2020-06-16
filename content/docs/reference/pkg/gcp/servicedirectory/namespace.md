@@ -19,34 +19,13 @@ To get more information about Namespace, see:
 * How-to Guides
     * [Configuring a namespace](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_namespace)
 
-## Example Usage - Service Directory Namespace Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const example = new gcp.servicedirectory.Namespace("example", {
-    namespaceId: "example-namespace",
-    location: "us-central1",
-    labels: {
-        key: "value",
-        foo: "bar",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example = gcp.servicedirectory.Namespace("example",
-    namespace_id="example-namespace",
-    location="us-central1",
-    labels={
-        "key": "value",
-        "foo": "bar",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Service Directory Namespace Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -69,7 +48,68 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/servicedirectory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := servicedirectory.NewNamespace(ctx, "example", &servicedirectory.NamespaceArgs{
+			NamespaceId: pulumi.String("example-namespace"),
+			Location:    pulumi.String("us-central1"),
+			Labels: map[string]interface{}{
+				"key": "value",
+				"foo": "bar",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.servicedirectory.Namespace("example",
+    namespace_id="example-namespace",
+    location="us-central1",
+    labels={
+        "key": "value",
+        "foo": "bar",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.servicedirectory.Namespace("example", {
+    namespaceId: "example-namespace",
+    location: "us-central1",
+    labels: {
+        key: "value",
+        foo: "bar",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Namespace Resource {#create}

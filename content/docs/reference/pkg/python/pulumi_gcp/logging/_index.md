@@ -3,6 +3,7 @@ title: Module logging
 title_tag: Module logging | Package pulumi_gcp | Python SDK
 linktitle: logging
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

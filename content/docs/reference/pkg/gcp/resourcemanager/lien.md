@@ -14,61 +14,9 @@ A Lien represents an encumbrance on the actions that can be performed on a resou
 
 
 
-## Example Usage - Resource Manager Lien
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const project = new gcp.organizations.Project("project", {
-    projectId: "staging-project",
-});
-const lien = new gcp.resourcemanager.Lien("lien", {
-    origin: "machine-readable-explanation",
-    parent: pulumi.interpolate`projects/${project.number}`,
-    reason: "This project is an important environment",
-    restrictions: ["resourcemanager.projects.delete"],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-project = gcp.organizations.Project("project", project_id="staging-project")
-lien = gcp.resourcemanager.Lien("lien",
-    origin="machine-readable-explanation",
-    parent=project.number.apply(lambda number: f"projects/{number}"),
-    reason="This project is an important environment",
-    restrictions=["resourcemanager.projects.delete"])
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var project = new Gcp.Organizations.Project("project", new Gcp.Organizations.ProjectArgs
-        {
-            ProjectId = "staging-project",
-        });
-        var lien = new Gcp.ResourceManager.Lien("lien", new Gcp.ResourceManager.LienArgs
-        {
-            Origin = "machine-readable-explanation",
-            Parent = project.Number.Apply(number => $"projects/{number}"),
-            Reason = "This project is an important environment",
-            Restrictions = 
-            {
-                "resourcemanager.projects.delete",
-            },
-        });
-    }
-
-}
-```
-
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a Lien Resource {#create}

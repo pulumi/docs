@@ -18,74 +18,13 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 passwords as well as certificate outputs will be stored in the raw state as
 plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-## Example Usage - with the default node pool
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+{{% examples %}}
+## Example Usage
 
-const primary = new gcp.container.Cluster("primary", {
-    initialNodeCount: 3,
-    location: "us-central1-a",
-    masterAuth: {
-        clientCertificateConfig: {
-            issueClientCertificate: false,
-        },
-        password: "",
-        username: "",
-    },
-    nodeConfig: {
-        labels: {
-            foo: "bar",
-        },
-        metadata: {
-            "disable-legacy-endpoints": "true",
-        },
-        oauthScopes: [
-            "https://www.googleapis.com/auth/logging.write",
-            "https://www.googleapis.com/auth/monitoring",
-        ],
-        tags: [
-            "foo",
-            "bar",
-        ],
-    },
-}, { timeouts: {
-    create: "30m",
-    update: "40m",
-} });
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-primary = gcp.container.Cluster("primary",
-    initial_node_count=3,
-    location="us-central1-a",
-    master_auth={
-        "clientCertificateConfig": {
-            "issueClientCertificate": False,
-        },
-        "password": "",
-        "username": "",
-    },
-    node_config={
-        "labels": {
-            "foo": "bar",
-        },
-        "metadata": {
-            "disable-legacy-endpoints": "true",
-        },
-        "oauthScopes": [
-            "https://www.googleapis.com/auth/logging.write",
-            "https://www.googleapis.com/auth/monitoring",
-        ],
-        "tags": [
-            "foo",
-            "bar",
-        ],
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### With The Default Node Pool
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -133,7 +72,128 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
+			InitialNodeCount: pulumi.Int(3),
+			Location:         pulumi.String("us-central1-a"),
+			MasterAuth: &container.ClusterMasterAuthArgs{
+				ClientCertificateConfig: &container.ClusterMasterAuthClientCertificateConfigArgs{
+					IssueClientCertificate: pulumi.Bool(false),
+				},
+				Password: pulumi.String(""),
+				Username: pulumi.String(""),
+			},
+			NodeConfig: &container.ClusterNodeConfigArgs{
+				Labels: map[string]interface{}{
+					"foo": "bar",
+				},
+				Metadata: map[string]interface{}{
+					"disable-legacy-endpoints": "true",
+				},
+				OauthScopes: pulumi.StringArray{
+					pulumi.String("https://www.googleapis.com/auth/logging.write"),
+					pulumi.String("https://www.googleapis.com/auth/monitoring"),
+				},
+				Tags: pulumi.StringArray{
+					pulumi.String("foo"),
+					pulumi.String("bar"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+primary = gcp.container.Cluster("primary",
+    initial_node_count=3,
+    location="us-central1-a",
+    master_auth={
+        "clientCertificateConfig": {
+            "issueClientCertificate": False,
+        },
+        "password": "",
+        "username": "",
+    },
+    node_config={
+        "labels": {
+            "foo": "bar",
+        },
+        "metadata": {
+            "disable-legacy-endpoints": "true",
+        },
+        "oauthScopes": [
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+        "tags": [
+            "foo",
+            "bar",
+        ],
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const primary = new gcp.container.Cluster("primary", {
+    initialNodeCount: 3,
+    location: "us-central1-a",
+    masterAuth: {
+        clientCertificateConfig: {
+            issueClientCertificate: false,
+        },
+        password: "",
+        username: "",
+    },
+    nodeConfig: {
+        labels: {
+            foo: "bar",
+        },
+        metadata: {
+            "disable-legacy-endpoints": "true",
+        },
+        oauthScopes: [
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+        tags: [
+            "foo",
+            "bar",
+        ],
+    },
+}, { timeouts: {
+    create: "30m",
+    update: "40m",
+} });
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -145,7 +205,7 @@ class MyStack : Stack
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>subnetwork=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>cluster_telemetry=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>subnetwork=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -350,8 +410,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+    <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -370,6 +429,19 @@ for more details. Structure is documented below.
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
 automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustertelemetry_csharp">
+<a href="#clustertelemetry_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Telemetry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -429,8 +501,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+    <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,8 +905,7 @@ subnetwork in which the cluster's instances are launched.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+    <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -847,8 +917,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+    <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
 Structure is documented below.
 {{% /md %}}</dd>
@@ -893,8 +962,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
     </dt>
-    <dd>{{% md %}}
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+    <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -913,6 +981,19 @@ for more details. Structure is documented below.
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
 automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustertelemetry_go">
+<a href="#clustertelemetry_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Telemetry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -972,8 +1053,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+    <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1377,8 +1457,7 @@ subnetwork in which the cluster's instances are launched.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
-    <dd>{{% md %}}
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+    <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1390,8 +1469,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+    <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
 Structure is documented below.
 {{% /md %}}</dd>
@@ -1436,8 +1514,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
     </dt>
-    <dd>{{% md %}}
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+    <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -1456,6 +1533,19 @@ for more details. Structure is documented below.
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
 automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clustertelemetry_nodejs">
+<a href="#clustertelemetry_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Telemetry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1515,8 +1605,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+    <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1920,8 +2009,7 @@ subnetwork in which the cluster's instances are launched.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
-    <dd>{{% md %}}
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+    <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1933,8 +2021,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+    <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
 Structure is documented below.
 {{% /md %}}</dd>
@@ -1979,8 +2066,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterautoscaling">Dict[Cluster<wbr>Cluster<wbr>Autoscaling]</a></span>
     </dt>
-    <dd>{{% md %}}
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+    <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -1999,6 +2085,19 @@ for more details. Structure is documented below.
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
 automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_telemetry_python">
+<a href="#cluster_telemetry_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>telemetry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Dict[Cluster<wbr>Cluster<wbr>Telemetry]</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2058,8 +2157,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+    <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2463,8 +2561,7 @@ subnetwork in which the cluster's instances are launched.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterverticalpodautoscaling">Dict[Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling]</a></span>
     </dt>
-    <dd>{{% md %}}
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+    <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -2476,8 +2573,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterworkloadidentityconfig">Dict[Cluster<wbr>Workload<wbr>Identity<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+    <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
 Structure is documented below.
 {{% /md %}}</dd>
@@ -2916,7 +3012,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>endpoint=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>instance_group_urls=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>master_version=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>operation=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>services_ipv4_cidr=None<span class="p">, </span>subnetwork=None<span class="p">, </span>tpu_ipv4_cidr_block=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>cluster_telemetry=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>endpoint=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>instance_group_urls=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>master_version=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>operation=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>services_ipv4_cidr=None<span class="p">, </span>subnetwork=None<span class="p">, </span>tpu_ipv4_cidr_block=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3063,8 +3159,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+    <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -3083,6 +3178,19 @@ for more details. Structure is documented below.
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
 automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clustertelemetry_csharp">
+<a href="#state_clustertelemetry_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Telemetry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3142,8 +3250,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+    <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3631,8 +3738,7 @@ notation (e.g. `1.2.3.4/29`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+    <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -3644,8 +3750,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+    <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
 Structure is documented below.
 {{% /md %}}</dd>
@@ -3690,8 +3795,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
     </dt>
-    <dd>{{% md %}}
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+    <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -3710,6 +3814,19 @@ for more details. Structure is documented below.
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
 automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clustertelemetry_go">
+<a href="#state_clustertelemetry_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Telemetry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3769,8 +3886,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+    <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4258,8 +4374,7 @@ notation (e.g. `1.2.3.4/29`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
-    <dd>{{% md %}}
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+    <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -4271,8 +4386,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+    <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
 Structure is documented below.
 {{% /md %}}</dd>
@@ -4317,8 +4431,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
     </dt>
-    <dd>{{% md %}}
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+    <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -4337,6 +4450,19 @@ for more details. Structure is documented below.
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
 automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clustertelemetry_nodejs">
+<a href="#state_clustertelemetry_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Telemetry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4396,8 +4522,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+    <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4885,8 +5010,7 @@ notation (e.g. `1.2.3.4/29`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
-    <dd>{{% md %}}
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+    <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -4898,8 +5022,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+    <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
 Structure is documented below.
 {{% /md %}}</dd>
@@ -4944,8 +5067,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterautoscaling">Dict[Cluster<wbr>Cluster<wbr>Autoscaling]</a></span>
     </dt>
-    <dd>{{% md %}}
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+    <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -4964,6 +5086,19 @@ for more details. Structure is documented below.
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
 automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
 only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cluster_telemetry_python">
+<a href="#state_cluster_telemetry_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>telemetry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Dict[Cluster<wbr>Cluster<wbr>Telemetry]</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5023,8 +5158,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+    <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5512,8 +5646,7 @@ notation (e.g. `1.2.3.4/29`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterverticalpodautoscaling">Dict[Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling]</a></span>
     </dt>
-    <dd>{{% md %}}
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+    <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -5525,8 +5658,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterworkloadidentityconfig">Dict[Cluster<wbr>Workload<wbr>Identity<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+    <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
 Structure is documented below.
 {{% /md %}}</dd>
@@ -7701,6 +7833,96 @@ for a list of types.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum amount of the resource in the cluster.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterTelemetry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterTelemetry">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterTelemetryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterClusterTelemetryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterClusterTelemetryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterClusterTelemetry.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
 
 </dl>

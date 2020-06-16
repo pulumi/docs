@@ -19,30 +19,13 @@ To get more information about DomainMapping, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains)
 
-## Example Usage - App Engine Domain Mapping Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
-    domainName: "verified-domain.com",
-    sslSettings: {
-        sslManagementType: "AUTOMATIC",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-domain_mapping = gcp.appengine.DomainMapping("domainMapping",
-    domain_name="verified-domain.com",
-    ssl_settings={
-        "sslManagementType": "AUTOMATIC",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### App Engine Domain Mapping Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -63,7 +46,62 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		domainMapping, err := appengine.NewDomainMapping(ctx, "domainMapping", &appengine.DomainMappingArgs{
+			DomainName: pulumi.String("verified-domain.com"),
+			SslSettings: &appengine.DomainMappingSslSettingsArgs{
+				SslManagementType: pulumi.String("AUTOMATIC"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+domain_mapping = gcp.appengine.DomainMapping("domainMapping",
+    domain_name="verified-domain.com",
+    ssl_settings={
+        "sslManagementType": "AUTOMATIC",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
+    domainName: "verified-domain.com",
+    sslSettings: {
+        sslManagementType: "AUTOMATIC",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DomainMapping Resource {#create}

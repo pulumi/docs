@@ -21,26 +21,13 @@ the Cloud Console prior to creating tenants.
 
 
 
-## Example Usage - Identity Platform Tenant Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const tenant = new gcp.identityplatform.Tenant("tenant", {
-    allowPasswordSignup: true,
-    displayName: "tenant",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-tenant = gcp.identityplatform.Tenant("tenant",
-    allow_password_signup=True,
-    display_name="tenant")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Identity Platform Tenant Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -58,7 +45,56 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tenant, err := identityplatform.NewTenant(ctx, "tenant", &identityplatform.TenantArgs{
+			AllowPasswordSignup: pulumi.Bool(true),
+			DisplayName:         pulumi.String("tenant"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant",
+    allow_password_signup=True,
+    display_name="tenant")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {
+    allowPasswordSignup: true,
+    displayName: "tenant",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Tenant Resource {#create}

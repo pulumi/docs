@@ -13,7 +13,6 @@ meta_desc: "Explore the User resource of the sql module, including examples, inp
 Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/users).
 
 
-
 {{% examples %}}
 ## Example Usage
 

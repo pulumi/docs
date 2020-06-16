@@ -24,59 +24,13 @@ and
 determined which will require enabling the compute api.
 
 
-## Example Usage - creating a private bucket in standard storage, in the EU region. Bucket configured as static website and CORS configurations
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
+{{% examples %}}
+## Example Usage
 
-const static_site = new gcp.storage.Bucket("static-site", {
-    bucketPolicyOnly: true,
-    cors: [{
-        maxAgeSeconds: 3600,
-        methods: [
-            "GET",
-            "HEAD",
-            "PUT",
-            "POST",
-            "DELETE",
-        ],
-        origins: ["http://image-store.com"],
-        responseHeaders: ["*"],
-    }],
-    forceDestroy: true,
-    location: "EU",
-    website: {
-        mainPageSuffix: "index.html",
-        notFoundPage: "404.html",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-static_site = gcp.storage.Bucket("static-site",
-    bucket_policy_only=True,
-    cors=[{
-        "maxAgeSeconds": 3600,
-        "method": [
-            "GET",
-            "HEAD",
-            "PUT",
-            "POST",
-            "DELETE",
-        ],
-        "origin": ["http://image-store.com"],
-        "responseHeader": ["*"],
-    }],
-    force_destroy=True,
-    location="EU",
-    website={
-        "mainPageSuffix": "index.html",
-        "notFoundPage": "404.html",
-    })
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creating A Private Bucket In Standard Storage, In The EU Region. Bucket Configured As Static Website And CORS Configurations
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -123,42 +77,71 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
-## Example Usage - Life cycle settings for storage bucket objects
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const auto_expire = new gcp.storage.Bucket("auto-expire", {
-    forceDestroy: true,
-    lifecycleRules: [{
-        action: {
-            type: "Delete",
-        },
-        condition: {
-            age: 3,
-        },
-    }],
-    location: "US",
-});
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_gcp as gcp
 
-auto_expire = gcp.storage.Bucket("auto-expire",
-    force_destroy=True,
-    lifecycle_rules=[{
-        "action": {
-            "type": "Delete",
-        },
-        "condition": {
-            "age": "3",
-        },
+static_site = gcp.storage.Bucket("static-site",
+    bucket_policy_only=True,
+    cors=[{
+        "maxAgeSeconds": 3600,
+        "method": [
+            "GET",
+            "HEAD",
+            "PUT",
+            "POST",
+            "DELETE",
+        ],
+        "origin": ["http://image-store.com"],
+        "responseHeader": ["*"],
     }],
-    location="US")
+    force_destroy=True,
+    location="EU",
+    website={
+        "mainPageSuffix": "index.html",
+        "notFoundPage": "404.html",
+    })
 ```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const static_site = new gcp.storage.Bucket("static-site", {
+    bucketPolicyOnly: true,
+    cors: [{
+        maxAgeSeconds: 3600,
+        methods: [
+            "GET",
+            "HEAD",
+            "PUT",
+            "POST",
+            "DELETE",
+        ],
+        origins: ["http://image-store.com"],
+        responseHeaders: ["*"],
+    }],
+    forceDestroy: true,
+    location: "EU",
+    website: {
+        mainPageSuffix: "index.html",
+        notFoundPage: "404.html",
+    },
+});
+```
+{{% /example %}}
+
+### Life Cycle Settings For Storage Bucket Objects
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -190,7 +173,52 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+auto_expire = gcp.storage.Bucket("auto-expire",
+    force_destroy=True,
+    lifecycle_rules=[{
+        "action": {
+            "type": "Delete",
+        },
+        "condition": {
+            "age": "3",
+        },
+    }],
+    location="US")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const auto_expire = new gcp.storage.Bucket("auto-expire", {
+    forceDestroy: true,
+    lifecycleRules: [{
+        action: {
+            type: "Delete",
+        },
+        condition: {
+            age: 3,
+        },
+    }],
+    location: "US",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Bucket Resource {#create}

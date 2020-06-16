@@ -16,43 +16,13 @@ A secret version resource.
 state as plain-text.
 
 
-## Example Usage - Secret Version Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
-    secretId: "secret-version",
-    labels: {
-        label: "my-label",
-    },
-    replication: {
-        automatic: true,
-    },
-});
-const secret_version_basic = new gcp.secretmanager.SecretVersion("secret-version-basic", {
-    secret: secret_basic.id,
-    secretData: "secret-data",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-secret_basic = gcp.secretmanager.Secret("secret-basic",
-    secret_id="secret-version",
-    labels={
-        "label": "my-label",
-    },
-    replication={
-        "automatic": True,
-    })
-secret_version_basic = gcp.secretmanager.SecretVersion("secret-version-basic",
-    secret=secret_basic.id,
-    secret_data="secret-data")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Secret Version Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -82,7 +52,53 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+secret_basic = gcp.secretmanager.Secret("secret-basic",
+    secret_id="secret-version",
+    labels={
+        "label": "my-label",
+    },
+    replication={
+        "automatic": True,
+    })
+secret_version_basic = gcp.secretmanager.SecretVersion("secret-version-basic",
+    secret=secret_basic.id,
+    secret_data="secret-data")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
+    secretId: "secret-version",
+    labels: {
+        label: "my-label",
+    },
+    replication: {
+        automatic: true,
+    },
+});
+const secret_version_basic = new gcp.secretmanager.SecretVersion("secret-version-basic", {
+    secret: secret_basic.id,
+    secretData: "secret-data",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecretVersion Resource {#create}

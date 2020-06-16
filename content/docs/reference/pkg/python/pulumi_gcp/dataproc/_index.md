@@ -3,6 +3,7 @@ title: Module dataproc
 title_tag: Module dataproc | Package pulumi_gcp | Python SDK
 linktitle: dataproc
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

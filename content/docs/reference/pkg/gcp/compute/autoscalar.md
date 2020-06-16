@@ -23,6 +23,9 @@ To get more information about Autoscaler, see:
 * How-to Guides
     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}gcp.compute.Autoscalar has been deprecated in favor of gcp.compute.Autoscaler{{% /md %}}</p>
 
 

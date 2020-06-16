@@ -3,6 +3,7 @@ title: Module tpu
 title_tag: Module tpu | Package pulumi_gcp | Python SDK
 linktitle: tpu
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}

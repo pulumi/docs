@@ -20,30 +20,13 @@ To get more information about Intent, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
 
-## Example Usage - Dialogflow Intent Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const basicAgent = new gcp.diagflow.Agent("basicAgent", {
-    displayName: "example_agent",
-    defaultLanguageCode: "en",
-    timeZone: "America/New_York",
-});
-const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-intent"});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-basic_agent = gcp.diagflow.Agent("basicAgent",
-    display_name="example_agent",
-    default_language_code="en",
-    time_zone="America/New_York")
-basic_intent = gcp.diagflow.Intent("basicIntent", display_name="basic-intent")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dialogflow Intent Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -66,7 +49,67 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/diagflow"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		basicAgent, err := diagflow.NewAgent(ctx, "basicAgent", &diagflow.AgentArgs{
+			DisplayName:         pulumi.String("example_agent"),
+			DefaultLanguageCode: pulumi.String("en"),
+			TimeZone:            pulumi.String("America/New_York"),
+		})
+		if err != nil {
+			return err
+		}
+		basicIntent, err := diagflow.NewIntent(ctx, "basicIntent", &diagflow.IntentArgs{
+			DisplayName: pulumi.String("basic-intent"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+basic_agent = gcp.diagflow.Agent("basicAgent",
+    display_name="example_agent",
+    default_language_code="en",
+    time_zone="America/New_York")
+basic_intent = gcp.diagflow.Intent("basicIntent", display_name="basic-intent")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basicAgent = new gcp.diagflow.Agent("basicAgent", {
+    displayName: "example_agent",
+    defaultLanguageCode: "en",
+    timeZone: "America/New_York",
+});
+const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-intent"});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Intent Resource {#create}

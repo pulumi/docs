@@ -24,6 +24,9 @@ To get more information about TargetInstance, see:
 * How-to Guides
     * [Using Protocol Forwarding](https://cloud.google.com/compute/docs/protocol-forwarding)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a TargetInstance Resource {#create}

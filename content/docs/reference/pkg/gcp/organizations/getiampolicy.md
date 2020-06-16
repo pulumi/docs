@@ -139,6 +139,57 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			AuditConfigs: organizations.getIAMPolicyAuditConfigArray{
+				&organizations.LookupIAMPolicyAuditConfig{
+					AuditLogConfigs: organizations.getIAMPolicyAuditConfigAuditLogConfigArray{
+						&organizations.LookupIAMPolicyAuditConfigAuditLogConfig{
+							ExemptedMembers: []string{
+								"user:you@domain.com",
+							},
+							LogType: "DATA_READ",
+						},
+						&organizations.LookupIAMPolicyAuditConfigAuditLogConfig{
+							LogType: "DATA_WRITE",
+						},
+						&organizations.LookupIAMPolicyAuditConfigAuditLogConfig{
+							LogType: "ADMIN_READ",
+						},
+					},
+					Service: "cloudkms.googleapis.com",
+				},
+			},
+			Bindings: organizations.getIAMPolicyBindingArray{
+				&organizations.LookupIAMPolicyBinding{
+					Members: []string{
+						"serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com",
+					},
+					Role: "roles/compute.instanceAdmin",
+				},
+				&organizations.LookupIAMPolicyBinding{
+					Members: []string{
+						"user:alice@gmail.com",
+					},
+					Role: "roles/storage.objectViewer",
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 This data source is used to define IAM policies to apply to other resources.
 Currently, defining a policy through a datasource and referencing that policy

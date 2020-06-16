@@ -17,6 +17,12 @@ which will be applied to this disk for scheduling snapshot creation.
 
 
 
+
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
+
+
 ## Create a RegionDiskResourcePolicyAttachment Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

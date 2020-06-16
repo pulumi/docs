@@ -17,6 +17,9 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceG
 
 > **Note:** Use [gcp.compute.InstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html) to create a single-zone instance group manager.
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a RegionInstanceGroupManager Resource {#create}

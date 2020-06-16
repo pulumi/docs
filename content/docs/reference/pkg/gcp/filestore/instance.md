@@ -21,42 +21,13 @@ To get more information about Instance, see:
     * [Use with Kubernetes](https://cloud.google.com/filestore/docs/accessing-fileshares)
     * [Copying Data In/Out](https://cloud.google.com/filestore/docs/copying-data)
 
-## Example Usage - Filestore Instance Basic
 
+{{% examples %}}
+## Example Usage
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.filestore.Instance("instance", {
-    fileShares: {
-        capacityGb: 2660,
-        name: "share1",
-    },
-    networks: [{
-        modes: ["MODE_IPV4"],
-        network: "default",
-    }],
-    tier: "PREMIUM",
-    zone: "us-central1-b",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-instance = gcp.filestore.Instance("instance",
-    file_shares={
-        "capacityGb": 2660,
-        "name": "share1",
-    },
-    networks=[{
-        "modes": ["MODE_IPV4"],
-        "network": "default",
-    }],
-    tier="PREMIUM",
-    zone="us-central1-b")
-```
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Filestore Instance Basic
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -90,7 +61,84 @@ class MyStack : Stack
 
 }
 ```
+{{% /example %}}
 
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := filestore.NewInstance(ctx, "instance", &filestore.InstanceArgs{
+			FileShares: &filestore.InstanceFileSharesArgs{
+				CapacityGb: pulumi.Int(2660),
+				Name:       pulumi.String("share1"),
+			},
+			Networks: filestore.InstanceNetworkArray{
+				&filestore.InstanceNetworkArgs{
+					Modes: pulumi.StringArray{
+						pulumi.String("MODE_IPV4"),
+					},
+					Network: pulumi.String("default"),
+				},
+			},
+			Tier: pulumi.String("PREMIUM"),
+			Zone: pulumi.String("us-central1-b"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.filestore.Instance("instance",
+    file_shares={
+        "capacityGb": 2660,
+        "name": "share1",
+    },
+    networks=[{
+        "modes": ["MODE_IPV4"],
+        "network": "default",
+    }],
+    tier="PREMIUM",
+    zone="us-central1-b")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.filestore.Instance("instance", {
+    fileShares: {
+        capacityGb: 2660,
+        name: "share1",
+    },
+    networks: [{
+        modes: ["MODE_IPV4"],
+        network: "default",
+    }],
+    tier: "PREMIUM",
+    zone: "us-central1-b",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}

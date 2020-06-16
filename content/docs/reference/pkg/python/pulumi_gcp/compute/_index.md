@@ -3,6 +3,7 @@ title: Module compute
 title_tag: Module compute | Package pulumi_gcp | Python SDK
 linktitle: compute
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "gcp" >}}
@@ -10805,8 +10806,8 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <span class="n">webservers</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;webservers&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test instance group&quot;</span><span class="p">,</span>
     <span class="n">instances</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test2&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
     <span class="p">],</span>
     <span class="n">named_port</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
@@ -10821,9 +10822,6 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Recreating an instance group that’s in use by another resource will give a
-<code class="docutils literal notranslate"><span class="pre">resourceInUseByAnotherResource</span></code> error. Use <code class="docutils literal notranslate"><span class="pre">lifecycle.create_before_destroy</span></code>
-as shown in this example to avoid this type of error.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
@@ -10842,7 +10840,7 @@ as shown in this example to avoid this type of error.</p>
     <span class="p">}])</span>
 <span class="n">staging_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;stagingGroup&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-c&quot;</span><span class="p">,</span>
-    <span class="n">instances</span><span class="o">=</span><span class="p">[</span><span class="n">staging_vm</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">instances</span><span class="o">=</span><span class="p">[</span><span class="n">staging_vm</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
     <span class="n">named_port</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
@@ -14941,7 +14939,7 @@ the provider to delete and recreate the node group.</p>
     <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeGroup</span><span class="p">(</span><span class="s2">&quot;nodes&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example compute.NodeGroup for the Google Provider&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example google_compute_node_group for the Google Provider&quot;</span><span class="p">,</span>
     <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">node_template</span><span class="o">=</span><span class="n">soletenant_tmpl</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
@@ -14955,7 +14953,7 @@ the provider to delete and recreate the node group.</p>
     <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeGroup</span><span class="p">(</span><span class="s2">&quot;nodes&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example compute.NodeGroup for the Google Provider&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example google_compute_node_group for the Google Provider&quot;</span><span class="p">,</span>
     <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">node_template</span><span class="o">=</span><span class="n">soletenant_tmpl</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">autoscaling_policy</span><span class="o">=</span><span class="p">{</span>
@@ -27096,7 +27094,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP region for this subnetwork.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
@@ -27243,7 +27241,7 @@ If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Subnetwork.region">
 <code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL of the GCP region for this subnetwork.</p>
+<dd><p>The GCP region for this subnetwork.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -27324,7 +27322,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP region for this subnetwork.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
@@ -27519,7 +27517,7 @@ Structure is documented below.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p></li>
@@ -27564,7 +27562,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding.region">
 <code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL of the GCP region for this subnetwork.
+<dd><p>The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p>
@@ -27601,7 +27599,7 @@ Structure is documented below.</p>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p></li>
@@ -27771,7 +27769,7 @@ Structure is documented below.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p></li>
@@ -27816,7 +27814,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember.region">
 <code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL of the GCP region for this subnetwork.
+<dd><p>The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p>
@@ -27853,7 +27851,7 @@ Structure is documented below.</p>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p></li>
@@ -28022,7 +28020,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p></li>
@@ -28053,7 +28051,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy.region">
 <code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL of the GCP region for this subnetwork.
+<dd><p>The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p>
@@ -28081,7 +28079,7 @@ properties used to qualify the lookup.</p>
 a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP region for this subnetwork.
 Used to find the parent resource to bind the IAM policy to. If not specified,
 the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
 region is specified, it is taken from the provider configuration.</p></li>
@@ -29347,7 +29345,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.URLMap">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">URLMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_url_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">URLMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_route_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_url_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.</p>
 <p>To get more information about UrlMap, see:</p>
@@ -29703,14 +29701,20 @@ that you define for the host and path of an incoming URL.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_route_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.</p></li>
 <li><p><strong>default_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend service or backend bucket to use when none of the given paths match.</p></li>
 <li><p><strong>default_url_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of this test case.</p></li>
 <li><p><strong>header_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p></li>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p></li>
 <li><p><strong>host_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of HostRules to use against the URL.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.</p></li>
@@ -29724,6 +29728,158 @@ tests per UrlMap.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_route_action</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
+The value must be between 0 and 1000</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>default_url_redirect</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
@@ -29760,29 +29916,26 @@ This field is required to ensure an empty block is not set. The normal default v
 </ul>
 <p>The <strong>header_action</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 <p>The <strong>host_rules</strong> object supports the following:</p>
 <ul class="simple">
@@ -29795,6 +29948,163 @@ hostRule matches the URL’s host portion.</p></li>
 </ul>
 <p>The <strong>path_matchers</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default_route_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
+The value must be between 0 and 1000</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The backend service or backend bucket to use when none of the given paths match.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -29835,32 +30145,30 @@ This field is required to ensure an empty block is not set. The normal default v
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the query parameter to match. The query parameter must exist in the
@@ -29886,182 +30194,152 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:</p>
-<ul>
-<li><p>5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.</p></li>
-<li><p>gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.</p></li>
-<li><p>connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.</p></li>
-<li><p>retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.</p></li>
-<li><p>refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.</p></li>
-<li><p>cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled</p></li>
-<li><p>deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded</p></li>
-<li><p>resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted</p></li>
-<li><p>unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching
-portion of the request’s path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user’s request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService’s session affinity policy.
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
 The value must be between 0 and 1000</p></li>
 </ul>
 </li>
@@ -30115,32 +30393,30 @@ routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">matchRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The rules for determining a match.  Structure is documented below.</p>
@@ -30156,7 +30432,7 @@ headers in the request.  Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">exactMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">invertMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.</p></li>
@@ -30267,182 +30543,152 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:</p>
-<ul>
-<li><p>5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.</p></li>
-<li><p>gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.</p></li>
-<li><p>connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.</p></li>
-<li><p>retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.</p></li>
-<li><p>refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.</p></li>
-<li><p>cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled</p></li>
-<li><p>deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded</p></li>
-<li><p>resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted</p></li>
-<li><p>unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching
-portion of the request’s path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user’s request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService’s session affinity policy.
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
 The value must be between 0 and 1000</p></li>
 </ul>
 </li>
@@ -30500,6 +30746,167 @@ This field is required to ensure an empty block is not set. The normal default v
 <dt id="pulumi_gcp.compute.URLMap.creation_timestamp">
 <code class="sig-name descname">creation_timestamp</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.URLMap.creation_timestamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creation timestamp in RFC3339 text format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.URLMap.default_route_action">
+<code class="sig-name descname">default_route_action</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.URLMap.default_route_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
+The value must be between 0 and 1000</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -30565,32 +30972,30 @@ This field is required to ensure an empty block is not set. The normal default v
 <dt id="pulumi_gcp.compute.URLMap.header_action">
 <code class="sig-name descname">header_action</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.URLMap.header_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </dd></dl>
 
@@ -30627,6 +31032,163 @@ request, in the absence of which the request match fails.</p>
 <dd><p>The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL’s host portion.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default_route_action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
+The value must be between 0 and 1000</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The backend service or backend bucket to use when none of the given paths match.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -30667,32 +31229,30 @@ This field is required to ensure an empty block is not set. The normal default v
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the query parameter to match. The query parameter must exist in the
@@ -30718,182 +31278,152 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the policy on how requests intended for the route’s backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the allowed number retries. This number must be &gt; 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:</p>
-<ul>
-<li><p>5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.</p></li>
-<li><p>gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.</p></li>
-<li><p>connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.</p></li>
-<li><p>retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.</p></li>
-<li><p>refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.</p></li>
-<li><p>cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled</p></li>
-<li><p>deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded</p></li>
-<li><p>resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted</p></li>
-<li><p>unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected service, the request’s host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected backend service, the matching
-portion of the request’s path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user’s request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService’s session affinity policy.
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
 The value must be between 0 and 1000</p></li>
 </ul>
 </li>
@@ -30947,32 +31477,30 @@ routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">matchRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The rules for determining a match.  Structure is documented below.</p>
@@ -30988,7 +31516,7 @@ headers in the request.  Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">exactMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">invertMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.</p></li>
@@ -31099,182 +31627,152 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the policy on how requests intended for the route’s backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the allowed number retries. This number must be &gt; 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:</p>
-<ul>
-<li><p>5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.</p></li>
-<li><p>gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.</p></li>
-<li><p>connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.</p></li>
-<li><p>retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.</p></li>
-<li><p>refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.</p></li>
-<li><p>cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled</p></li>
-<li><p>deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded</p></li>
-<li><p>resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted</p></li>
-<li><p>unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected service, the request’s host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prior to forwarding the request to the selected backend service, the matching
-portion of the request’s path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user’s request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService’s session affinity policy.
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
 The value must be between 0 and 1000</p></li>
 </ul>
 </li>
@@ -31352,7 +31850,7 @@ tests per UrlMap.  Structure is documented below.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.URLMap.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_url_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_route_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_url_redirect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_matchers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tests</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing URLMap resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -31362,6 +31860,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
+<li><p><strong>default_route_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.</p></li>
 <li><p><strong>default_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend service or backend bucket to use when none of the given paths match.</p></li>
 <li><p><strong>default_url_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -31369,8 +31872,9 @@ defaultRouteAction must not be set.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of this test case.</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.</p></li>
 <li><p><strong>header_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p></li>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p></li>
 <li><p><strong>host_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of HostRules to use against the URL.  Structure is documented below.</p></li>
 <li><p><strong>map_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique identifier for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the query parameter to match. The query parameter must exist in the
@@ -31386,6 +31890,158 @@ tests per UrlMap.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_route_action</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
+The value must be between 0 and 1000</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>default_url_redirect</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">hostRedirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host that will be used in the redirect response instead of the one that was
@@ -31422,29 +32078,26 @@ This field is required to ensure an empty block is not set. The normal default v
 </ul>
 <p>The <strong>header_action</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 <p>The <strong>host_rules</strong> object supports the following:</p>
 <ul class="simple">
@@ -31457,6 +32110,163 @@ hostRule matches the URL’s host portion.</p></li>
 </ul>
 <p>The <strong>path_matchers</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default_route_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
+The value must be between 0 and 1000</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The backend service or backend bucket to use when none of the given paths match.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_url_redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -31497,32 +32307,30 @@ This field is required to ensure an empty block is not set. The normal default v
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of this test case.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the query parameter to match. The query parameter must exist in the
@@ -31548,182 +32356,152 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:</p>
-<ul>
-<li><p>5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.</p></li>
-<li><p>gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.</p></li>
-<li><p>connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.</p></li>
-<li><p>retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.</p></li>
-<li><p>refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.</p></li>
-<li><p>cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled</p></li>
-<li><p>deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded</p></li>
-<li><p>resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted</p></li>
-<li><p>unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching
-portion of the request’s path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user’s request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService’s session affinity policy.
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
 The value must be between 0 and 1000</p></li>
 </ul>
 </li>
@@ -31777,32 +32555,30 @@ routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">matchRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The rules for determining a match.  Structure is documented below.</p>
@@ -31818,7 +32594,7 @@ headers in the request.  Structure is documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">exactMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">invertMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.</p></li>
@@ -31929,182 +32705,152 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for allowing client side cross-origin requests. Please see
+<a class="reference external" href="https://www.w3.org/TR/cors/">W3C Recommendation for Cross Origin Resource Sharing</a>  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Headers header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Allow-Methods header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOriginRegexes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exposeHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the content for the Access-Control-Expose-Headers header.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">faultInjectionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">abort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are aborted as part of fault injection.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fixedDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the value of the fixed delay interval.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestMirrorPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the policy on how requests intended for the route’s backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the retry policy associated with this route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">perTryTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:</p>
-<ul>
-<li><p>5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.</p></li>
-<li><p>gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.</p></li>
-<li><p>connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.</p></li>
-<li><p>retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
-Currently the only retriable error supported is 409.</p></li>
-<li><p>refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.</p></li>
-<li><p>cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled</p></li>
-<li><p>deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded</p></li>
-<li><p>resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted</p></li>
-<li><p>unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryConditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Span of time that’s a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 <code class="docutils literal notranslate"><span class="pre">seconds</span></code> field and a positive
-<code class="docutils literal notranslate"><span class="pre">nanos</span></code> field. Must be from 0 to 999,999,999 inclusive.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching portion of the
+request’s path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">hostRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected service, the request’s host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathPrefixRewrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prior to forwarding the request to the selected backend service, the matching
-portion of the request’s path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedBackendServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial URL to the BackendService resource being mirrored to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToAdds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Headers to add the response prior to sending the response back to the client.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeadersToRemoves</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user’s request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService’s session affinity policy.
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user’s request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService’s session affinity policy.
 The value must be between 0 and 1000</p></li>
 </ul>
 </li>
@@ -33162,7 +33908,7 @@ for a given project. For more information, see <a class="reference external" hre
 <span class="n">central1b</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-b&quot;</span><span class="p">)</span>
 <span class="n">tmpl</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;tmpl&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">node_type</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;compute.getNodeTypes&quot;</span><span class="p">][</span><span class="s2">&quot;types&quot;</span><span class="p">][</span><span class="s2">&quot;names&quot;</span><span class="p">])</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;google_compute_node_types&quot;</span><span class="p">][</span><span class="s2">&quot;types&quot;</span><span class="p">][</span><span class="s2">&quot;names&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

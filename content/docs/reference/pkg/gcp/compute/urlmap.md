@@ -18,6 +18,9 @@ To get more information about UrlMap, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/urlMaps)
 
+{{% examples %}}
+## Example Usage
+{{% /examples %}}
 
 
 ## Create a URLMap Resource {#create}
@@ -29,7 +32,7 @@ To get more information about UrlMap, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#URLMap">URLMap</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_service=None<span class="p">, </span>default_url_redirect=None<span class="p">, </span>description=None<span class="p">, </span>header_action=None<span class="p">, </span>host_rules=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>tests=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#URLMap">URLMap</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_route_action=None<span class="p">, </span>default_service=None<span class="p">, </span>default_url_redirect=None<span class="p">, </span>description=None<span class="p">, </span>header_action=None<span class="p">, </span>host_rules=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>tests=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -203,6 +206,21 @@ The URLMap resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultrouteaction_csharp">
+<a href="#defaultrouteaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultservice_csharp">
 <a href="#defaultservice_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
 </span> 
@@ -245,8 +263,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -318,6 +337,21 @@ tests per UrlMap.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultrouteaction_go">
+<a href="#defaultrouteaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultservice_go">
 <a href="#defaultservice_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
 </span> 
@@ -360,8 +394,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,6 +468,21 @@ tests per UrlMap.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultrouteaction_nodejs">
+<a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultservice_nodejs">
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span> 
@@ -475,8 +525,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -548,6 +599,21 @@ tests per UrlMap.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="default_route_action_python">
+<a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="default_service_python">
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span> 
@@ -590,8 +656,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmapheaderaction">Dict[URLMap<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -928,7 +995,7 @@ Get an existing URLMap resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>default_service=None<span class="p">, </span>default_url_redirect=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>header_action=None<span class="p">, </span>host_rules=None<span class="p">, </span>map_id=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>tests=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>default_route_action=None<span class="p">, </span>default_service=None<span class="p">, </span>default_url_redirect=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>header_action=None<span class="p">, </span>host_rules=None<span class="p">, </span>map_id=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>tests=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1055,6 +1122,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_defaultrouteaction_csharp">
+<a href="#state_defaultrouteaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultservice_csharp">
 <a href="#state_defaultservice_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
 </span> 
@@ -1108,8 +1190,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1214,6 +1297,21 @@ tests per UrlMap.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_defaultrouteaction_go">
+<a href="#state_defaultrouteaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultservice_go">
 <a href="#state_defaultservice_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
 </span> 
@@ -1267,8 +1365,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1373,6 +1472,21 @@ tests per UrlMap.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_defaultrouteaction_nodejs">
+<a href="#state_defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultservice_nodejs">
 <a href="#state_defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span> 
@@ -1426,8 +1540,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1532,6 +1647,21 @@ tests per UrlMap.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_default_route_action_python">
+<a href="#state_default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_default_service_python">
 <a href="#state_default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span> 
@@ -1585,8 +1715,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmapheaderaction">Dict[URLMap<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1684,6 +1815,2964 @@ tests per UrlMap.  Structure is documented below.
 
 
 ## Supporting Types
+
+
+<h4 id="urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteAction">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteAction.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corspolicy_csharp">
+<a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultinjectionpolicy_csharp">
+<a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmirrorpolicy_csharp">
+<a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlrewrite_csharp">
+<a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedbackendservices_csharp">
+<a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corspolicy_go">
+<a href="#corspolicy_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultinjectionpolicy_go">
+<a href="#faultinjectionpolicy_go" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmirrorpolicy_go">
+<a href="#requestmirrorpolicy_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlrewrite_go">
+<a href="#urlrewrite_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+    </dt>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedbackendservices_go">
+<a href="#weightedbackendservices_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">[]URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corspolicy_nodejs">
+<a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultinjectionpolicy_nodejs">
+<a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmirrorpolicy_nodejs">
+<a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlrewrite_nodejs">
+<a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+    </dt>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedbackendservices_nodejs">
+<a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corspolicy_python">
+<a href="#corspolicy_python" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultinjectionpolicy_python">
+<a href="#faultinjectionpolicy_python" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmirrorpolicy_python">
+<a href="#requestmirrorpolicy_python" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_python">
+<a href="#retrypolicy_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlrewrite_python">
+<a href="#urlrewrite_python" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite]</a></span>
+    </dt>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedbackendservices_python">
+<a href="#weightedbackendservices_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">List[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionCorsPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionCorsPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionCorsPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionCorsPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionCorsPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionCorsPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_csharp">
+<a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_csharp">
+<a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_csharp">
+<a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworiginregexes_csharp">
+<a href="#alloworiginregexes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_csharp">
+<a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_csharp">
+<a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_go">
+<a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_go">
+<a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_go">
+<a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworiginregexes_go">
+<a href="#alloworiginregexes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_go">
+<a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_go">
+<a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_nodejs">
+<a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_nodejs">
+<a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_nodejs">
+<a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworiginregexes_nodejs">
+<a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_nodejs">
+<a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_nodejs">
+<a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_python">
+<a href="#allowcredentials_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_python">
+<a href="#allowheaders_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_python">
+<a href="#allowmethods_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworiginregexes_python">
+<a href="#alloworiginregexes_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_python">
+<a href="#alloworigins_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_python">
+<a href="#exposeheaders_python" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_python">
+<a href="#maxage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionFaultInjectionPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionFaultInjectionPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionFaultInjectionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionFaultInjectionPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionFaultInjectionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionFaultInjectionPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="abort_csharp">
+<a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delay_csharp">
+<a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="abort_go">
+<a href="#abort_go" style="color: inherit; text-decoration: inherit;">Abort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delay_go">
+<a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="abort_nodejs">
+<a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delay_nodejs">
+<a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="abort_python">
+<a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delay_python">
+<a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionFaultInjectionPolicyAbort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionFaultInjectionPolicyAbort">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionFaultInjectionPolicyAbortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionFaultInjectionPolicyAbortOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionFaultInjectionPolicyAbortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionFaultInjectionPolicyAbort.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpstatus_csharp">
+<a href="#httpstatus_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_csharp">
+<a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpstatus_go">
+<a href="#httpstatus_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_go">
+<a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpstatus_nodejs">
+<a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_nodejs">
+<a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpstatus_python">
+<a href="#httpstatus_python" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_python">
+<a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionFaultInjectionPolicyDelay">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionFaultInjectionPolicyDelay">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionFaultInjectionPolicyDelayOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionFaultInjectionPolicyDelay.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixeddelay_csharp">
+<a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_csharp">
+<a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixeddelay_go">
+<a href="#fixeddelay_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_go">
+<a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixeddelay_nodejs">
+<a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_nodejs">
+<a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixeddelay_python">
+<a href="#fixeddelay_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_python">
+<a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_csharp">
+<a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_csharp">
+<a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_go">
+<a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_go">
+<a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_nodejs">
+<a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_nodejs">
+<a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_python">
+<a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_python">
+<a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionRequestMirrorPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionRequestMirrorPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionRequestMirrorPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionRequestMirrorPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionRequestMirrorPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionRequestMirrorPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendservice_csharp">
+<a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendservice_go">
+<a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendservice_nodejs">
+<a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backend_service_python">
+<a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionRetryPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionRetryPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionRetryPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionRetryPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionRetryPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numretries_csharp">
+<a href="#numretries_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pertrytimeout_csharp">
+<a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryconditions_csharp">
+<a href="#retryconditions_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numretries_go">
+<a href="#numretries_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pertrytimeout_go">
+<a href="#pertrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryconditions_go">
+<a href="#retryconditions_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numretries_nodejs">
+<a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pertrytimeout_nodejs">
+<a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryconditions_nodejs">
+<a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numretries_python">
+<a href="#numretries_python" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pertrytimeout_python">
+<a href="#pertrytimeout_python" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryconditions_python">
+<a href="#retryconditions_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionRetryPolicyPerTryTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionRetryPolicyPerTryTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionRetryPolicyPerTryTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionRetryPolicyPerTryTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionRetryPolicyPerTryTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionRetryPolicyPerTryTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_csharp">
+<a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_csharp">
+<a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_go">
+<a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_go">
+<a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_nodejs">
+<a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_nodejs">
+<a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_python">
+<a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_python">
+<a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_csharp">
+<a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_csharp">
+<a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_go">
+<a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_go">
+<a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_nodejs">
+<a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_nodejs">
+<a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_python">
+<a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_python">
+<a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionUrlRewrite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionUrlRewrite">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionUrlRewriteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionUrlRewriteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionUrlRewriteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionUrlRewrite.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostrewrite_csharp">
+<a href="#hostrewrite_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pathprefixrewrite_csharp">
+<a href="#pathprefixrewrite_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostrewrite_go">
+<a href="#hostrewrite_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pathprefixrewrite_go">
+<a href="#pathprefixrewrite_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostrewrite_nodejs">
+<a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pathprefixrewrite_nodejs">
+<a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostrewrite_python">
+<a href="#hostrewrite_python" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pathprefixrewrite_python">
+<a href="#pathprefixrewrite_python" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionweightedbackendservice">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionWeightedBackendService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionWeightedBackendService">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionWeightedBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionWeightedBackendServiceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionWeightedBackendServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionWeightedBackendService.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendservice_csharp">
+<a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headeraction_csharp">
+<a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendservice_go">
+<a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headeraction_go">
+<a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendservice_nodejs">
+<a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headeraction_nodejs">
+<a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_service_python">
+<a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="header_action_python">
+<a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">Dict[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionWeightedBackendServiceHeaderAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionWeightedBackendServiceHeaderAction">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderAction.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoadds_csharp">
+<a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoremoves_csharp">
+<a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoadds_csharp">
+<a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoremoves_csharp">
+<a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoadds_go">
+<a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">[]URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoremoves_go">
+<a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoadds_go">
+<a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">[]URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoremoves_go">
+<a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoadds_nodejs">
+<a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoremoves_nodejs">
+<a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoadds_nodejs">
+<a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoremoves_nodejs">
+<a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoadds_python">
+<a href="#requestheaderstoadds_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoremoves_python">
+<a href="#requestheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoadds_python">
+<a href="#responseheaderstoadds_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoremoves_python">
+<a href="#responseheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_csharp">
+<a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_csharp">
+<a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_go">
+<a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_go">
+<a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_nodejs">
+<a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_nodejs">
+<a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_python">
+<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_python">
+<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_python">
+<a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_csharp">
+<a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_csharp">
+<a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_go">
+<a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_go">
+<a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_nodejs">
+<a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_nodejs">
+<a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_python">
+<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_python">
+<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_python">
+<a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect</h4>
@@ -2110,8 +5199,7 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2122,8 +5210,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2145,8 +5233,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -2164,8 +5252,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">[]URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2176,8 +5263,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2199,8 +5286,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -2218,8 +5305,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2230,8 +5316,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2253,8 +5339,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -2272,8 +5358,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">List[URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2284,8 +5369,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2307,8 +5392,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -2344,7 +5429,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2366,9 +5451,8 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -2386,7 +5470,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2408,9 +5492,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -2428,7 +5511,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2450,9 +5533,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -2470,7 +5552,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2492,9 +5574,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -2530,7 +5611,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2552,9 +5633,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -2572,7 +5652,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2594,9 +5674,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -2614,7 +5693,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2636,9 +5715,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -2656,7 +5734,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2678,9 +5756,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -2912,6 +5989,21 @@ request, in the absence of which the request match fails.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultrouteaction_csharp">
+<a href="#defaultrouteaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultservice_csharp">
 <a href="#defaultservice_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
 </span> 
@@ -2954,8 +6046,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3011,6 +6104,21 @@ request, in the absence of which the request match fails.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultrouteaction_go">
+<a href="#defaultrouteaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultservice_go">
 <a href="#defaultservice_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
 </span> 
@@ -3053,8 +6161,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3110,6 +6219,21 @@ request, in the absence of which the request match fails.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultrouteaction_nodejs">
+<a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultservice_nodejs">
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span> 
@@ -3152,8 +6276,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3209,6 +6334,21 @@ request, in the absence of which the request match fails.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="default_route_action_python">
+<a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+Only one of defaultRouteAction or defaultUrlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="default_service_python">
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span> 
@@ -3251,8 +6391,9 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-type"><a href="#urlmappathmatcherheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3285,6 +6426,2964 @@ routeRules matters: the first rule that matches will cause its specified routing
 action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteAction">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteAction.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corspolicy_csharp">
+<a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultinjectionpolicy_csharp">
+<a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmirrorpolicy_csharp">
+<a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlrewrite_csharp">
+<a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedbackendservices_csharp">
+<a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corspolicy_go">
+<a href="#corspolicy_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultinjectionpolicy_go">
+<a href="#faultinjectionpolicy_go" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmirrorpolicy_go">
+<a href="#requestmirrorpolicy_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlrewrite_go">
+<a href="#urlrewrite_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+    </dt>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedbackendservices_go">
+<a href="#weightedbackendservices_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">[]URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corspolicy_nodejs">
+<a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultinjectionpolicy_nodejs">
+<a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmirrorpolicy_nodejs">
+<a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlrewrite_nodejs">
+<a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+    </dt>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedbackendservices_nodejs">
+<a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="corspolicy_python">
+<a href="#corspolicy_python" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultinjectionpolicy_python">
+<a href="#faultinjectionpolicy_python" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmirrorpolicy_python">
+<a href="#requestmirrorpolicy_python" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_python">
+<a href="#retrypolicy_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="urlrewrite_python">
+<a href="#urlrewrite_python" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite]</a></span>
+    </dt>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedbackendservices_python">
+<a href="#weightedbackendservices_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">List[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionCorsPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionCorsPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionCorsPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionCorsPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionCorsPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionCorsPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_csharp">
+<a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_csharp">
+<a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_csharp">
+<a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworiginregexes_csharp">
+<a href="#alloworiginregexes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_csharp">
+<a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_csharp">
+<a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_go">
+<a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_go">
+<a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_go">
+<a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworiginregexes_go">
+<a href="#alloworiginregexes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_go">
+<a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_go">
+<a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_nodejs">
+<a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_nodejs">
+<a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_nodejs">
+<a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworiginregexes_nodejs">
+<a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_nodejs">
+<a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_nodejs">
+<a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowcredentials_python">
+<a href="#allowcredentials_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowheaders_python">
+<a href="#allowheaders_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmethods_python">
+<a href="#allowmethods_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworiginregexes_python">
+<a href="#alloworiginregexes_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alloworigins_python">
+<a href="#alloworigins_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exposeheaders_python">
+<a href="#exposeheaders_python" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxage_python">
+<a href="#maxage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="abort_csharp">
+<a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delay_csharp">
+<a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="abort_go">
+<a href="#abort_go" style="color: inherit; text-decoration: inherit;">Abort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delay_go">
+<a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="abort_nodejs">
+<a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delay_nodejs">
+<a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="abort_python">
+<a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delay_python">
+<a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay]</a></span>
+    </dt>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpstatus_csharp">
+<a href="#httpstatus_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_csharp">
+<a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpstatus_go">
+<a href="#httpstatus_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_go">
+<a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpstatus_nodejs">
+<a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_nodejs">
+<a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpstatus_python">
+<a href="#httpstatus_python" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_python">
+<a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixeddelay_csharp">
+<a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_csharp">
+<a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixeddelay_go">
+<a href="#fixeddelay_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_go">
+<a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixeddelay_nodejs">
+<a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_nodejs">
+<a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixeddelay_python">
+<a href="#fixeddelay_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_python">
+<a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_csharp">
+<a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_csharp">
+<a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_go">
+<a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_go">
+<a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_nodejs">
+<a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_nodejs">
+<a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_python">
+<a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_python">
+<a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionRequestMirrorPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionRequestMirrorPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionRequestMirrorPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendservice_csharp">
+<a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendservice_go">
+<a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendservice_nodejs">
+<a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backend_service_python">
+<a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionRetryPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionRetryPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionRetryPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionRetryPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionRetryPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numretries_csharp">
+<a href="#numretries_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pertrytimeout_csharp">
+<a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryconditions_csharp">
+<a href="#retryconditions_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numretries_go">
+<a href="#numretries_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pertrytimeout_go">
+<a href="#pertrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryconditions_go">
+<a href="#retryconditions_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numretries_nodejs">
+<a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pertrytimeout_nodejs">
+<a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryconditions_nodejs">
+<a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numretries_python">
+<a href="#numretries_python" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pertrytimeout_python">
+<a href="#pertrytimeout_python" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retryconditions_python">
+<a href="#retryconditions_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_csharp">
+<a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_csharp">
+<a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_go">
+<a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_go">
+<a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_nodejs">
+<a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_nodejs">
+<a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_python">
+<a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_python">
+<a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionTimeout">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionTimeoutOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_csharp">
+<a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_csharp">
+<a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_go">
+<a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_go">
+<a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_nodejs">
+<a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_nodejs">
+<a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nanos_python">
+<a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="seconds_python">
+<a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionUrlRewrite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionUrlRewrite">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionUrlRewriteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionUrlRewriteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionUrlRewriteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionUrlRewrite.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostrewrite_csharp">
+<a href="#hostrewrite_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pathprefixrewrite_csharp">
+<a href="#pathprefixrewrite_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostrewrite_go">
+<a href="#hostrewrite_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pathprefixrewrite_go">
+<a href="#pathprefixrewrite_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostrewrite_nodejs">
+<a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pathprefixrewrite_nodejs">
+<a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostrewrite_python">
+<a href="#hostrewrite_python" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pathprefixrewrite_python">
+<a href="#pathprefixrewrite_python" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionWeightedBackendService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionWeightedBackendService">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionWeightedBackendService.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendservice_csharp">
+<a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headeraction_csharp">
+<a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendservice_go">
+<a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headeraction_go">
+<a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendservice_nodejs">
+<a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headeraction_nodejs">
+<a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_service_python">
+<a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="header_action_python">
+<a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderAction">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderAction.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoadds_csharp">
+<a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoremoves_csharp">
+<a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoadds_csharp">
+<a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoremoves_csharp">
+<a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoadds_go">
+<a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoremoves_go">
+<a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoadds_go">
+<a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoremoves_go">
+<a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoadds_nodejs">
+<a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoremoves_nodejs">
+<a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoadds_nodejs">
+<a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoremoves_nodejs">
+<a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoadds_python">
+<a href="#requestheaderstoadds_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestheaderstoremoves_python">
+<a href="#requestheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoadds_python">
+<a href="#responseheaderstoadds_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
+    </dt>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderstoremoves_python">
+<a href="#responseheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_csharp">
+<a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_csharp">
+<a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_go">
+<a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_go">
+<a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_nodejs">
+<a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_nodejs">
+<a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_python">
+<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_python">
+<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_python">
+<a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_csharp">
+<a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_csharp">
+<a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_go">
+<a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_go">
+<a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_nodejs">
+<a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_nodejs">
+<a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headername_python">
+<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headervalue_python">
+<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replace_python">
+<a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -3718,8 +9817,7 @@ the request method will be retained.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3730,8 +9828,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3753,8 +9851,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -3772,8 +9870,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3784,8 +9881,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3807,8 +9904,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -3826,8 +9923,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3838,8 +9934,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3861,8 +9957,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -3880,8 +9976,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3892,8 +9987,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3915,8 +10010,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -3952,7 +10047,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3974,9 +10069,8 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -3994,7 +10088,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4016,9 +10110,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -4036,7 +10129,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4058,9 +10151,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -4078,7 +10170,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4100,9 +10192,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -4138,7 +10229,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4160,9 +10251,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -4180,7 +10270,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4202,9 +10292,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -4222,7 +10311,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4244,9 +10333,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -4264,7 +10352,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4286,9 +10374,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -4586,8 +10673,8 @@ set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4598,13 +10685,11 @@ Recommendation for Cross Origin Resource Sharing  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4615,10 +10700,9 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4640,10 +10724,9 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4654,8 +10737,7 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4666,14 +10748,13 @@ the matched service  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4691,8 +10772,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4703,13 +10784,11 @@ Recommendation for Cross Origin Resource Sharing  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4720,10 +10799,9 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4745,10 +10823,9 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4759,8 +10836,7 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
-    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4771,14 +10847,13 @@ the matched service  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">[]URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4796,8 +10871,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4808,13 +10883,11 @@ Recommendation for Cross Origin Resource Sharing  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4825,10 +10898,9 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4850,10 +10922,9 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4864,8 +10935,7 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
-    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4876,14 +10946,13 @@ the matched service  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4901,8 +10970,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4913,13 +10982,11 @@ Recommendation for Cross Origin Resource Sharing  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4930,10 +10997,9 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4955,10 +11021,9 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4969,8 +11034,7 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite]</a></span>
     </dt>
-    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4981,14 +11045,13 @@ the matched service  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
     </dt>
-    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5024,8 +11087,7 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5036,9 +11098,8 @@ which indicates that the CORS policy is in effect. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5071,9 +11132,9 @@ Control-Allow-Credentials header. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5084,8 +11145,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5107,8 +11168,8 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
 {{% /md %}}</dd>
 
 </dl>
@@ -5126,8 +11187,7 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5138,9 +11198,8 @@ which indicates that the CORS policy is in effect. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5173,9 +11232,9 @@ Control-Allow-Credentials header. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5186,8 +11245,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5209,8 +11268,8 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
 {{% /md %}}</dd>
 
 </dl>
@@ -5228,8 +11287,7 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5240,9 +11298,8 @@ which indicates that the CORS policy is in effect. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5275,9 +11332,9 @@ Control-Allow-Credentials header. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5288,8 +11345,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5311,8 +11368,8 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
 {{% /md %}}</dd>
 
 </dl>
@@ -5330,8 +11387,7 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5342,9 +11398,8 @@ which indicates that the CORS policy is in effect. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5377,9 +11432,9 @@ Control-Allow-Credentials header. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5390,8 +11445,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5413,8 +11468,8 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
 {{% /md %}}</dd>
 
 </dl>
@@ -5450,8 +11505,7 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5462,8 +11516,7 @@ injection.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5481,8 +11534,7 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5493,8 +11545,7 @@ injection.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5512,8 +11563,7 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5524,8 +11574,7 @@ injection.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5543,8 +11592,7 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort]</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5555,8 +11603,7 @@ injection.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay]</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5592,8 +11639,8 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5604,9 +11651,8 @@ and 599 inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5624,8 +11670,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5636,9 +11682,8 @@ and 599 inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5656,8 +11701,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5668,9 +11713,8 @@ and 599 inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5688,8 +11732,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5700,9 +11744,8 @@ and 599 inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5749,9 +11792,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5780,9 +11822,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5811,9 +11852,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5842,9 +11882,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5880,8 +11919,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5892,9 +11931,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5912,8 +11950,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5924,9 +11962,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5944,8 +11981,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5956,9 +11993,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -5976,8 +12012,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5988,9 +12024,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6026,9 +12061,7 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
 </dl>
@@ -6046,9 +12079,7 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
 </dl>
@@ -6066,9 +12097,7 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
 </dl>
@@ -6086,9 +12115,7 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
 </dl>
@@ -6124,7 +12151,7 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6136,8 +12163,8 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6149,26 +12176,20 @@ is not set, will use the largest timeout among all backend services associated w
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -6186,7 +12207,7 @@ the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6198,8 +12219,8 @@ the response header is set to unavailable
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6211,26 +12232,20 @@ is not set, will use the largest timeout among all backend services associated w
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -6248,7 +12263,7 @@ the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6260,8 +12275,8 @@ the response header is set to unavailable
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6273,26 +12288,20 @@ is not set, will use the largest timeout among all backend services associated w
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -6310,7 +12319,7 @@ the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6322,8 +12331,8 @@ the response header is set to unavailable
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6335,26 +12344,20 @@ is not set, will use the largest timeout among all backend services associated w
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -6390,8 +12393,8 @@ the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6402,9 +12405,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6422,8 +12424,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6434,9 +12436,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6454,8 +12455,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6466,9 +12467,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6486,8 +12486,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6498,9 +12498,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6536,8 +12535,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6548,9 +12547,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6568,8 +12566,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6580,9 +12578,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6600,8 +12597,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6612,9 +12609,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6632,8 +12628,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6644,9 +12640,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -6682,9 +12677,9 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6695,9 +12690,9 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -6715,9 +12710,9 @@ be between 1 and 1024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6728,9 +12723,9 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -6748,9 +12743,9 @@ be between 1 and 1024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6761,9 +12756,9 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -6781,9 +12776,9 @@ be between 1 and 1024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6794,9 +12789,9 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -6832,9 +12827,7 @@ be between 1 and 1024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6845,11 +12838,11 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 {{% /md %}}</dd>
 
@@ -6862,8 +12855,9 @@ The value must be between 0 and 1000
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -6881,9 +12875,7 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6894,11 +12886,11 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 {{% /md %}}</dd>
 
@@ -6911,8 +12903,9 @@ The value must be between 0 and 1000
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -6930,9 +12923,7 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6943,11 +12934,11 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 {{% /md %}}</dd>
 
@@ -6960,8 +12951,9 @@ The value must be between 0 and 1000
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -6979,9 +12971,7 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6992,11 +12982,11 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 {{% /md %}}</dd>
 
@@ -7009,8 +12999,9 @@ The value must be between 0 and 1000
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -7046,8 +13037,7 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7058,8 +13048,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7081,8 +13071,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -7100,8 +13090,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7112,8 +13101,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7135,8 +13124,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -7154,8 +13143,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7166,8 +13154,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7189,8 +13177,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -7208,8 +13196,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7220,8 +13207,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7243,8 +13230,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -7280,7 +13267,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7302,9 +13289,8 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -7322,7 +13308,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7344,9 +13330,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -7364,7 +13349,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7386,9 +13371,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -7406,7 +13390,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7428,9 +13412,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -7466,7 +13449,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7488,9 +13471,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -7508,7 +13490,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7530,9 +13512,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -7550,7 +13531,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7572,9 +13553,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -7592,7 +13572,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7614,9 +13594,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -8074,8 +14053,9 @@ future without any impact on existing rules.
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8168,8 +14148,9 @@ future without any impact on existing rules.
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8262,8 +14243,9 @@ future without any impact on existing rules.
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8356,8 +14338,9 @@ future without any impact on existing rules.
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8444,8 +14427,7 @@ set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8456,8 +14438,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8479,8 +14461,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -8498,8 +14480,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8510,8 +14491,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8533,8 +14514,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -8552,8 +14533,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8564,8 +14544,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8587,8 +14567,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -8606,8 +14586,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8618,8 +14597,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8641,8 +14620,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -8678,7 +14657,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8700,9 +14679,8 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -8720,7 +14698,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8742,9 +14720,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -8762,7 +14739,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8784,9 +14761,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -8804,7 +14780,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8826,9 +14802,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -8864,7 +14839,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8886,9 +14861,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -8906,7 +14880,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8928,9 +14902,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -8948,7 +14921,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8970,9 +14943,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -8990,7 +14962,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -9012,9 +14984,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -9492,7 +15463,7 @@ exactMatch and regexMatch must be set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9605,7 +15576,7 @@ must be set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9718,7 +15689,7 @@ must be set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9831,7 +15802,7 @@ must be set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10654,8 +16625,8 @@ exactMatch and regexMatch must be set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10666,13 +16637,11 @@ Recommendation for Cross Origin Resource Sharing  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10683,10 +16652,9 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10708,10 +16676,9 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10722,8 +16689,7 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10734,14 +16700,13 @@ the matched service  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10759,8 +16724,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10771,13 +16736,11 @@ Recommendation for Cross Origin Resource Sharing  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10788,10 +16751,9 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10813,10 +16775,9 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10827,8 +16788,7 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
-    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10839,14 +16799,13 @@ the matched service  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10864,8 +16823,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10876,13 +16835,11 @@ Recommendation for Cross Origin Resource Sharing  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10893,10 +16850,9 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10918,10 +16874,9 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10932,8 +16887,7 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
-    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10944,14 +16898,13 @@ the matched service  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10969,8 +16922,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10981,13 +16934,11 @@ Recommendation for Cross Origin Resource Sharing  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
-resiliency of clients to backend service failure. As part of fault injection,
-when clients send requests to a backend service, delays can be introduced by
-Loadbalancer on a percentage of requests before sending those request to the
-backend service. Similarly requests from clients can be aborted by the
-Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+by the Loadbalancer for a percentage of requests.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10998,10 +16949,9 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
-shadowed to a separate mirrored backend service. Loadbalancer does not wait for
-responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
+Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+the host / authority header is suffixed with -shadow.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11023,10 +16973,9 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
-the request is has been fully processed (i.e. end-of-stream) up until the
-response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+If not specified, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11037,8 +16986,7 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite]</a></span>
     </dt>
-    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11049,14 +16997,13 @@ the matched service  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
     </dt>
-    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
-occurs. The weights determine the fraction of traffic that flows to their
-corresponding backend service. If all traffic needs to go to a single backend
-service, there must be one  weightedBackendService with weight set to a non 0
-number. Once a backendService is identified and before forwarding the request to
-the backend service, advanced routing actions like Url rewrites and header
-transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
+The weights determine the fraction of traffic that flows to their corresponding backend service.
+If all traffic needs to go to a single backend service, there must be one weightedBackendService
+with weight set to a non 0 number.
+Once a backendService is identified and before forwarding the request to the backend service,
+advanced routing actions like Url rewrites and header transformations are applied depending on
+additional settings specified in this HttpRouteAction.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11092,9 +17039,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11127,9 +17073,9 @@ Control-Allow-Credentials header. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11140,8 +17086,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11152,8 +17098,7 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11175,8 +17120,8 @@ which indicates that the CORS policy is in effect. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
 {{% /md %}}</dd>
 
 </dl>
@@ -11194,9 +17139,8 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11229,9 +17173,9 @@ Control-Allow-Credentials header. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11242,8 +17186,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11254,8 +17198,7 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11277,8 +17220,8 @@ which indicates that the CORS policy is in effect. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
 {{% /md %}}</dd>
 
 </dl>
@@ -11296,9 +17239,8 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11331,9 +17273,9 @@ Control-Allow-Credentials header. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11344,8 +17286,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11356,8 +17298,7 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11379,8 +17320,8 @@ which indicates that the CORS policy is in effect. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
 {{% /md %}}</dd>
 
 </dl>
@@ -11398,9 +17339,8 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
-actual request can include user credentials. This translates to the Access-
-Control-Allow-Credentials header. Defaults to false.
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
+This translates to the Access-Control-Allow-Credentials header.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11433,9 +17373,9 @@ Control-Allow-Credentials header. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
-regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
-An origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
+please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11446,8 +17386,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
-origin is allowed if it matches either allow_origins or allow_origin_regex.
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
+An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11458,8 +17398,7 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
-which indicates that the CORS policy is in effect. Defaults to false.
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11481,8 +17420,8 @@ which indicates that the CORS policy is in effect. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
-translates to the content for the Access-Control-Max-Age header.
+    <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
+This translates to the Access-Control-Max-Age header.
 {{% /md %}}</dd>
 
 </dl>
@@ -11518,8 +17457,7 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11530,8 +17468,7 @@ injection.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11549,8 +17486,7 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11561,8 +17497,7 @@ injection.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11580,8 +17515,7 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11592,8 +17526,7 @@ injection.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11611,8 +17544,7 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort]</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11623,8 +17555,7 @@ injection.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay]</a></span>
     </dt>
-    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11660,8 +17591,8 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11672,9 +17603,8 @@ and 599 inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11692,8 +17622,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11704,9 +17634,8 @@ and 599 inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11724,8 +17653,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11736,9 +17665,8 @@ and 599 inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11756,8 +17684,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
-and 599 inclusive.
+    <dd>{{% md %}}The HTTP status code used to abort the request.
+The value must be between 200 and 599 inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11768,9 +17696,8 @@ and 599 inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11817,9 +17744,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11848,9 +17774,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11879,9 +17804,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11910,9 +17834,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
-be introduced as part of fault injection. The value must be between 0.0 and
-100.0 inclusive.
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+The value must be between 0.0 and 100.0 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11948,8 +17871,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11960,9 +17883,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -11980,8 +17902,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11992,9 +17914,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12012,8 +17933,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12024,9 +17945,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12044,8 +17964,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12056,9 +17976,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12094,9 +18013,7 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
 </dl>
@@ -12114,9 +18031,7 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
 </dl>
@@ -12134,9 +18049,7 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
 </dl>
@@ -12154,9 +18067,7 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
 </dl>
@@ -12192,7 +18103,7 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12204,8 +18115,8 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12217,26 +18128,20 @@ is not set, will use the largest timeout among all backend services associated w
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -12254,7 +18159,7 @@ the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12266,8 +18171,8 @@ the response header is set to unavailable
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12279,26 +18184,20 @@ is not set, will use the largest timeout among all backend services associated w
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -12316,7 +18215,7 @@ the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12328,8 +18227,8 @@ the response header is set to unavailable
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12341,26 +18240,20 @@ is not set, will use the largest timeout among all backend services associated w
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -12378,7 +18271,7 @@ the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12390,8 +18283,8 @@ the response header is set to unavailable
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
-If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
+will use the largest timeout among all backend services associated with the route.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12403,26 +18296,20 @@ is not set, will use the largest timeout among all backend services associated w
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
-- 5xx: Loadbalancer will attempt a retry if the backend service responds with
-any 5xx response code, or if the backend service does not respond at all,
-example: disconnects, reset, read timeout, connection failure, and refused
-streams.
-- gateway-error: Similar to 5xx, but only applies to response codes
-502, 503 or 504.
-- connect-failure: Loadbalancer will retry on failures
-connecting to backend services, for example due to connection timeouts.
-- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
+or if the backend service does not respond at all, example: disconnects, reset, read timeout,
+connection failure, and refused streams.
+gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504.
+connect-failure: Loadbalancer will retry on failures connecting to backend services,
+for example due to connection timeouts.
+retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
 Currently the only retriable error supported is 409.
-- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
-REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
-- cancelled: Loadbalancer will retry if the gRPC status code in the response
-header is set to cancelled
-- deadline-exceeded: Loadbalancer will retry if the
-gRPC status code in the response header is set to deadline-exceeded
-- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
-header is set to resource-exhausted
-- unavailable: Loadbalancer will retry if the gRPC status code in
-the response header is set to unavailable
+refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.
+This reset type indicates that it is safe to retry.
+cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled
+deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
+resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
+unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
 {{% /md %}}</dd>
 
 </dl>
@@ -12458,8 +18345,8 @@ the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12470,9 +18357,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12490,8 +18376,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12502,9 +18388,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12522,8 +18407,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12534,9 +18419,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12554,8 +18438,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12566,9 +18450,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12604,8 +18487,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12616,9 +18499,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12636,8 +18518,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12648,9 +18530,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12668,8 +18549,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12680,9 +18561,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12700,8 +18580,8 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
-inclusive.
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12712,9 +18592,8 @@ inclusive.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
-less than one second are represented with a 0 `seconds` field and a positive
-`nanos` field. Must be from 0 to 999,999,999 inclusive.
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
 
 </dl>
@@ -12750,9 +18629,9 @@ less than one second are represented with a 0 `seconds` field and a positive
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12763,9 +18642,9 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -12783,9 +18662,9 @@ be between 1 and 1024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12796,9 +18675,9 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -12816,9 +18695,9 @@ be between 1 and 1024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12829,9 +18708,9 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -12849,9 +18728,9 @@ be between 1 and 1024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
-header is replaced with contents of hostRewrite. The value must be between 1 and
-255 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
+with contents of hostRewrite.
+The value must be between 1 and 255 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -12862,9 +18741,9 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
-portion of the request's path is replaced by pathPrefixRewrite. The value must
-be between 1 and 1024 characters.
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
+request's path is replaced by pathPrefixRewrite.
+The value must be between 1 and 1024 characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -12900,9 +18779,7 @@ be between 1 and 1024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -12913,11 +18790,11 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 {{% /md %}}</dd>
 
@@ -12930,8 +18807,9 @@ The value must be between 0 and 1000
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -12949,9 +18827,7 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -12962,11 +18838,11 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 {{% /md %}}</dd>
 
@@ -12979,8 +18855,9 @@ The value must be between 0 and 1000
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -12998,9 +18875,7 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13011,11 +18886,11 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 {{% /md %}}</dd>
 
@@ -13028,8 +18903,9 @@ The value must be between 0 and 1000
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -13047,9 +18923,7 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default BackendService resource. Before
-forwarding the request to backendService, the loadbalancer applies any relevant
-headerActions specified as part of this backendServiceWeight.
+    <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13060,11 +18934,11 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
-(sum of all weightedBackendService weights in routeAction) . The selection of a
-backend service is determined only for new traffic. Once a user's request has
-been directed to a backendService, subsequent requests will be sent to the same
-backendService as determined by the BackendService's session affinity policy.
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
+weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request
+has been directed to a backendService, subsequent requests will be sent to the same backendService
+as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
 {{% /md %}}</dd>
 
@@ -13077,8 +18951,9 @@ The value must be between 0 and 1000
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
-the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+the selected backendService.
+headerAction specified here take effect before headerAction in the enclosing
+HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -13114,8 +18989,7 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13126,8 +19000,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13149,8 +19023,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -13168,8 +19042,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13180,8 +19053,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13203,8 +19076,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -13222,8 +19095,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13234,8 +19106,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13257,8 +19129,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -13276,8 +19148,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13288,8 +19159,8 @@ backendService.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
-prior to forwarding the request to the backendService.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
+forwarding the request to the backendService.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -13311,8 +19182,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
-prior to sending the response back to the client.
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
+response back to the client.
 {{% /md %}}</dd>
 
 </dl>
@@ -13348,7 +19219,7 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13370,9 +19241,8 @@ prior to sending the response back to the client.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -13390,7 +19260,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13412,9 +19282,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -13432,7 +19301,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13454,9 +19323,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -13474,7 +19342,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13496,9 +19364,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -13534,7 +19401,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13556,9 +19423,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -13576,7 +19442,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13598,9 +19464,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -13618,7 +19483,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13640,9 +19505,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>
@@ -13660,7 +19524,7 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the header.
+    <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -13682,9 +19546,8 @@ were set for that header.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
-header. If true, headerValue is set for the header, discarding any values that
-were set for that header.
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
+If true, headerValue is set for the header, discarding any values that were set for that header.
 {{% /md %}}</dd>
 
 </dl>

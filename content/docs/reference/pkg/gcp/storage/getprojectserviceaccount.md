@@ -19,7 +19,6 @@ For more information see
 [the API reference](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
 
 
-
 {{% examples %}}
 ## Example Usage
 
