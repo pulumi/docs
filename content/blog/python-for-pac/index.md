@@ -18,7 +18,7 @@ Devops benefits greatly from policy as code because policies can use software de
 
 ## How Policy as Code Works
 
-Policies enforce specific criteria for a resource or for a set of resources (stacks)). For example, a common policy is to ensure that storage is not publicly accessible over the Internet or to ensure that virtual machines must have a firewall.
+Policies enforce specific criteria for a resource or for a set of resources (stacks). For example, a common policy is to ensure that storage is not publicly accessible over the Internet or to ensure that virtual machines must have a firewall.
 
 Pulumi supports two types of polices:
 
