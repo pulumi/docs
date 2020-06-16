@@ -3,6 +3,7 @@ title: Module plugins
 title_tag: Module plugins | Package pulumi_newrelic | Python SDK
 linktitle: plugins
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "newrelic" >}}

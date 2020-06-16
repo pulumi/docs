@@ -3,6 +3,7 @@ title: Module synthetics
 title_tag: Module synthetics | Package pulumi_newrelic | Python SDK
 linktitle: synthetics
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "newrelic" >}}

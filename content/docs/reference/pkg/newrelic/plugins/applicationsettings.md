@@ -38,9 +38,9 @@ class MyStack : Stack
     {
         var app = new NewRelic.Plugins.ApplicationSettings("app", new NewRelic.Plugins.ApplicationSettingsArgs
         {
-            AppApdexThreshold = "0.7",
+            AppApdexThreshold = 0.7,
             EnableRealUserMonitoring = false,
-            EndUserApdexThreshold = "0.8",
+            EndUserApdexThreshold = 0.8,
         });
     }
 

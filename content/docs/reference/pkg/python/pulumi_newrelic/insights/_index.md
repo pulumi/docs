@@ -3,6 +3,7 @@ title: Module insights
 title_tag: Module insights | Package pulumi_newrelic | Python SDK
 linktitle: insights
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "newrelic" >}}
