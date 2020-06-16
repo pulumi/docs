@@ -3,7 +3,10 @@ title: Package pulumi_random
 title_tag: Package pulumi_random | Python SDK
 linktitle: pulumi_random
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "random" >}}
 
 <div class="section" id="pulumi-random">
 <h1>Pulumi Random<a class="headerlink" href="#pulumi-random" title="Permalink to this headline">¶</a></h1>
@@ -245,7 +248,7 @@ exist concurrently.</p>
     <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">alb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
     <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;target_group_arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;target_group_arn&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;target_group_arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">listener_arn</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;listener_arn&quot;</span><span class="p">],</span>
