@@ -3,7 +3,10 @@ title: Module gcp
 title_tag: Module gcp | Package pulumi_spotinst | Python SDK
 linktitle: gcp
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "spotinst" >}}
 
 <div class="section" id="gcp">
 <h1>gcp<a class="headerlink" href="#gcp" title="Permalink to this headline">¶</a></h1>

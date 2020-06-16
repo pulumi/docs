@@ -3,7 +3,10 @@ title: Module multai
 title_tag: Module multai | Package pulumi_spotinst | Python SDK
 linktitle: multai
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "spotinst" >}}
 
 <div class="section" id="multai">
 <h1>multai<a class="headerlink" href="#multai" title="Permalink to this headline">¶</a></h1>
