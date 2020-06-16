@@ -3,7 +3,10 @@ title: Package pulumi_github
 title_tag: Package pulumi_github | Python SDK
 linktitle: pulumi_github
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "github" >}}
 
 <div class="section" id="pulumi-github">
 <h1>Pulumi GitHub<a class="headerlink" href="#pulumi-github" title="Permalink to this headline">¶</a></h1>
