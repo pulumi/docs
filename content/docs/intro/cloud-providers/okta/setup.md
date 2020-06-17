@@ -12,20 +12,20 @@ The [Pulumi Okta provider]({{< relref "./" >}}) uses the Okta SDK to manage reso
 
 Once obtained, there are two ways to communicate your configuration tokens to Pulumi:
 
-1. Set the environment variables `OKTA_ORG_NAME`, `OKTA_BASE_URL` and `OKTA_API_KEY`:
+1. Set the environment variables `OKTA_ORG_NAME`, `OKTA_BASE_URL` and `OKTA_API_TOKEN`:
 
-    ```bash
+    ```console
     $ export OKTA_ORG_NAME=XXXXXX
     $ export OKTA_BASE_URL=YYYYYY
-    $ export OKTA_API_KEY=ZZZZZZ
+    $ export OKTA_API_TOKEN=ZZZZZZ
     ```
 
 2. Set them using configuration, if you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
 
-    ```bash
+    ```console
     $ pulumi config set okta:orgName XXXXXX
     $ pulumi config set okta:baseUrl YYYYYY
-    $ pulumi config set okta:apiKey ZZZZZZ
+    $ pulumi config set --secret okta:apiToken ZZZZZZ
     ```
 
-Remember to pass `--secret` when setting `apiKey` so that it is properly encrypted.
+Remember to pass `--secret` when setting `apiToken` so that it is properly encrypted.
