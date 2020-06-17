@@ -3,6 +3,7 @@ title: Package pulumi_kubernetes
 title_tag: Package pulumi_kubernetes | Python SDK
 linktitle: pulumi_kubernetes
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

@@ -3,6 +3,7 @@ title: Module yaml
 title_tag: Module yaml | Package pulumi_kubernetes | Python SDK
 linktitle: yaml
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

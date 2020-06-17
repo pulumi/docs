@@ -3,6 +3,7 @@ title: Module meta
 title_tag: Module meta | Package pulumi_kubernetes | Python SDK
 linktitle: meta
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

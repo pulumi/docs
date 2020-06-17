@@ -3,6 +3,7 @@ title: Module node
 title_tag: Module node | Package pulumi_kubernetes | Python SDK
 linktitle: node
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

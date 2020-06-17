@@ -3,6 +3,7 @@ title: Module rbac
 title_tag: Module rbac | Package pulumi_kubernetes | Python SDK
 linktitle: rbac
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

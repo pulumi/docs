@@ -3,6 +3,7 @@ title: Module v1beta1
 title_tag: Module v1beta1 | Package pulumi_kubernetes | Python SDK
 linktitle: v1beta1
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

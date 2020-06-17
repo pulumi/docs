@@ -3,6 +3,7 @@ title: Module autoscaling
 title_tag: Module autoscaling | Package pulumi_kubernetes | Python SDK
 linktitle: autoscaling
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

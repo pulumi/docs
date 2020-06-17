@@ -3,6 +3,7 @@ title: Module batch
 title_tag: Module batch | Package pulumi_kubernetes | Python SDK
 linktitle: batch
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}
