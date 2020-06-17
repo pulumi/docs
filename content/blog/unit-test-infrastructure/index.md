@@ -136,8 +136,8 @@ This is the same example, but written in Go using the stretchr framework for uni
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 type infrastructure struct {
@@ -210,9 +210,9 @@ import (
     "sync"
     "testing"
 
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
-    "github.com/pulumi/pulumi/pkg/resource"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/v2/go/common/resource"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
     "github.com/stretchr/testify/assert"
 )
 

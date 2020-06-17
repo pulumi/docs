@@ -96,8 +96,8 @@ server = ec2.Instance('web-server-www;',
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 type infrastructure struct {
@@ -276,17 +276,17 @@ pulumi.runtime.set_mocks(MyMocks())
 
 ```go
 import (
-    "github.com/pulumi/pulumi/pkg/resource"
+   "github.com/pulumi/pulumi/sdk/v2/go/common/resource"
 )
 
 type mocks int
 
 func (mocks) NewResource(typeToken, name string, inputs resource.PropertyMap, provider, id string) (string, resource.PropertyMap, error) {
-    return name + "_id", inputs, nil
+	return name + "_id", inputs, nil
 }
 
 func (mocks) Call(token string, args resource.PropertyMap, provider string) (resource.PropertyMap, error) {
-    return args, nil
+	return args, nil
 }
 ```
 
@@ -384,13 +384,13 @@ The overall structure and scaffolding of our tests will look like any ordinary G
 package main
 
 import (
-    "sync"
-    "testing"
+	"sync"
+	"testing"
 
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
-    "github.com/pulumi/pulumi/pkg/resource"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
-    "github.com/stretchr/testify/assert"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/stretchr/testify/assert"
 )
 
 // ... mocks as shown above
