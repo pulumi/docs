@@ -8,8 +8,8 @@ date: "2018-07-05"
 meta_image: "code-completion.gif"
 ---
 
-In this tutorial, we'll use Pulumi, to build a
-complete serverless application using JavaScript. When we say 'using
+In this tutorial, we'll use Pulumi to build a
+complete serverless application using only JavaScript. When we say 'using
 only JavaScript', we're not kidding:
 
 - write code just like an Express app... but end up with a fully
@@ -29,7 +29,7 @@ need for building cloud applications. Better than that, you can even
 ## Our first serverless app in 5 lines of JavaScript
 
 After [installing the Pulumi CLI]({{< relref "/docs/get-started/install" >}}), just run
-the following to create a new app:
+the following to create your new serverless JavaScript app:
 
     mkdir firstapp && cd firstapp
     pulumi new hello-aws-javascript
@@ -75,7 +75,7 @@ open it up in your browser:
 
 ![stack output](./stack-output.png)
 
-With Pulumi, we've built a serverless app in just a few lines of code.
+With Pulumi, we've built a serverless JavaScript app in just a few lines of code.
 This approach avoided significant amounts of configuration (YAML, or
 point-and-click). Pulumi also supports containers (including
 Kubernetes), managed services, infrastructure and everything else in
@@ -101,10 +101,10 @@ and using esoteric YAML configuration files to tell the cloud platform
 how to run your app. Often, the work needed to configure the app can
 outweigh the work needed to code the app.
 
-Pulumi changes that, and lets you build serverless
+Pulumi changes that, and lets you create serverless
 cloud applications using **only** JavaScript (or TypeScript). These
-applications can use all the features of cloud platforms like AWS, Azure
-or GCP - but exposed as simple JavaScript APIs on NPM.
+applications can use all the features of cloud platforms like Amazon Web Services (AWS), Azure
+or Google Cloud Platform (GCP) - but exposed as simple JavaScript APIs on NPM.
 
 This means that you can write code that contains logic alongside code
 that defines the services and infrastructure needed to run it and Pulumi
@@ -138,3 +138,5 @@ To learn more take a look at more tutorials and example code:
 - [Pulumi Quickstart]({{< relref "/docs/get-started" >}})
 - [Pulumi Community Slack](https://slack.pulumi.com)
 - [Pulumi Examples on GitHub](https://github.com/pulumi/examples)
+- [Node.js and Pulumi](https://www.pulumi.com/docs/intro/languages/javascript/)
+- [Node.js Examples for AWS and Azure](https://www.pulumi.com/blog/running-a-serverles-nodejs-http-server-on-aws-and-azure/)
