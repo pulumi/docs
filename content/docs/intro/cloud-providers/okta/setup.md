@@ -14,7 +14,7 @@ Once obtained, there are two ways to communicate your configuration tokens to Pu
 
 1. Set the environment variables `OKTA_ORG_NAME`, `OKTA_BASE_URL` and `OKTA_API_TOKEN`:
 
-    ```console
+    ```bash
     $ export OKTA_ORG_NAME=XXXXXX
     $ export OKTA_BASE_URL=YYYYYY
     $ export OKTA_API_TOKEN=ZZZZZZ
@@ -22,7 +22,7 @@ Once obtained, there are two ways to communicate your configuration tokens to Pu
 
 2. Set them using configuration, if you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
 
-    ```console
+    ```bash
     $ pulumi config set okta:orgName XXXXXX
     $ pulumi config set okta:baseUrl YYYYYY
     $ pulumi config set --secret okta:apiToken ZZZZZZ
