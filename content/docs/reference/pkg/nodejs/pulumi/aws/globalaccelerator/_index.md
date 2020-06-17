@@ -3,7 +3,7 @@ title: "Module globalaccelerator"
 title_tag: "Module globalaccelerator | Package @pulumi/aws | Node.js SDK"
 linktitle: "globalaccelerator"
 meta_desc: "Explore members of the globalaccelerator module in the @pulumi/aws package."
-git_sha: "c672e225a765b11b07ea23e7b1b411483d7f38da"
+git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
 block_external_search_index: true
 ---
 
@@ -43,7 +43,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Accelerator" data-link-title="Accelerator">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L31">
         Resource <strong>Accelerator</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Accelerator-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +86,7 @@ Create a Accelerator resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Accelerator-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +97,14 @@ Get an existing Accelerator resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Accelerator-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Accelerator-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -115,7 +115,7 @@ Returns true if the given object is an instance of Accelerator.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Accelerator-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L62">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L62">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorAttributes'>AcceleratorAttributes</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The attributes of the accelerator. Fields documented below.
 
 <h4 class="pdoc-member-header" id="Accelerator-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L69">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L69">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -134,7 +134,7 @@ route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 <h4 class="pdoc-member-header" id="Accelerator-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L73">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L73">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -142,12 +142,12 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 
 <h4 class="pdoc-member-header" id="Accelerator-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L74">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L74">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostedZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Accelerator-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -156,7 +156,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Accelerator-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L78">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L78">property <b>ipAddressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddressType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ deployments and may be missing (undefined) during planning phases.
 The value for the address type must be `IPV4`.
 
 <h4 class="pdoc-member-header" id="Accelerator-ipSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L82">property <b>ipSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L82">property <b>ipSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorIpSet'>AcceleratorIpSet</a>[]&gt;;</code></pre>
@@ -172,7 +172,7 @@ The value for the address type must be `IPV4`.
 IP address set associated with the accelerator.
 
 <h4 class="pdoc-member-header" id="Accelerator-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ IP address set associated with the accelerator.
 The name of the accelerator.
 
 <h4 class="pdoc-member-header" id="Accelerator-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L90">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L90">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ The name of the accelerator.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Accelerator-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -197,7 +197,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EndpointGroup" data-link-title="EndpointGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L29">
         Resource <strong>EndpointGroup</strong>
     </a>
 </h3>
@@ -224,7 +224,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 ```
 
 <h4 class="pdoc-member-header" id="EndpointGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -238,7 +238,7 @@ Create a EndpointGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -249,14 +249,14 @@ Get an existing EndpointGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EndpointGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -267,7 +267,7 @@ Returns true if the given object is an instance of EndpointGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-endpointConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L60">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L60">property <b>endpointConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -275,7 +275,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The list of endpoint objects. Fields documented below.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-endpointGroupRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L64">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L64">property <b>endpointGroupRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointGroupRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +283,7 @@ The list of endpoint objects. Fields documented below.
 The name of the AWS Region where the endpoint group is located.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L68">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L68">property <b>healthCheckIntervalSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckIntervalSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ The name of the AWS Region where the endpoint group is located.
 The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L72">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L72">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -299,7 +299,7 @@ The time—10 seconds or 30 seconds—between each health check for an endpoint.
 If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
 
 <h4 class="pdoc-member-header" id="EndpointGroup-healthCheckPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L76">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L76">property <b>healthCheckPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -307,7 +307,7 @@ If the protocol is HTTP/S, then this specifies the path that is the destination 
 The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-healthCheckProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L80">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L80">property <b>healthCheckProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -315,7 +315,7 @@ The port that AWS Global Accelerator uses to check the health of endpoints that 
 The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -324,7 +324,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-listenerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L84">property <b>listenerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L84">property <b>listenerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listenerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ deployments and may be missing (undefined) during planning phases.
 The Amazon Resource Name (ARN) of the listener.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-thresholdCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L88">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L88">property <b>thresholdCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thresholdCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ The Amazon Resource Name (ARN) of the listener.
 The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-trafficDialPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L92">property <b>trafficDialPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L92">property <b>trafficDialPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trafficDialPercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -348,7 +348,7 @@ The number of consecutive health checks required to set the state of a healthy e
 The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -357,7 +357,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Listener" data-link-title="Listener">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L40">
         Resource <strong>Listener</strong>
     </a>
 </h3>
@@ -395,7 +395,7 @@ const exampleListener = new aws.globalaccelerator.Listener("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Listener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -409,7 +409,7 @@ Create a Listener resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Listener-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -420,14 +420,14 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Listener-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Listener-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -438,7 +438,7 @@ Returns true if the given object is an instance of Listener.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Listener-acceleratorArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L71">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L71">property <b>acceleratorArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acceleratorArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of your accelerator.
 
 <h4 class="pdoc-member-header" id="Listener-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L75">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L75">property <b>clientAffinity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientAffinity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ The Amazon Resource Name (ARN) of your accelerator.
 Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
 
 <h4 class="pdoc-member-header" id="Listener-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -463,7 +463,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Listener-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L79">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L79">property <b>portRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerPortRange'>ListenerPortRange</a>[]&gt;;</code></pre>
@@ -471,7 +471,7 @@ deployments and may be missing (undefined) during planning phases.
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 
 <h4 class="pdoc-member-header" id="Listener-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L83">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L83">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ The list of port ranges for the connections from clients to the accelerator. Fie
 The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
 
 <h4 class="pdoc-member-header" id="Listener-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -491,7 +491,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AcceleratorArgs" data-link-title="AcceleratorArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L175">
         interface <strong>AcceleratorArgs</strong>
     </a>
 </h3>
@@ -501,7 +501,7 @@ deployments.
 The set of arguments for constructing a Accelerator resource.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L179">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L179">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes'>AcceleratorAttributes</a>&gt;;</code></pre>
@@ -509,7 +509,7 @@ The set of arguments for constructing a Accelerator resource.
 The attributes of the accelerator. Fields documented below.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L183">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L183">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ The attributes of the accelerator. Fields documented below.
 Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L187">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L187">property <b>ipAddressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +525,7 @@ Indicates whether the accelerator is enabled. The value is true or false. The de
 The value for the address type must be `IPV4`.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L191">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L191">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ The value for the address type must be `IPV4`.
 The name of the accelerator.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L195">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L195">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -541,7 +541,7 @@ The name of the accelerator.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="AcceleratorState" data-link-title="AcceleratorState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L137">
         interface <strong>AcceleratorState</strong>
     </a>
 </h3>
@@ -551,7 +551,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering Accelerator resources.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L141">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L141">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes'>AcceleratorAttributes</a>&gt;;</code></pre>
@@ -559,7 +559,7 @@ Input properties used for looking up and filtering Accelerator resources.
 The attributes of the accelerator. Fields documented below.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L148">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L148">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -570,7 +570,7 @@ route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L152">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L152">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -578,12 +578,12 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L153">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L153">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AcceleratorState-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L157">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L157">property <b>ipAddressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ Indicates whether the accelerator is enabled. The value is true or false. The de
 The value for the address type must be `IPV4`.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-ipSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L161">property <b>ipSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L161">property <b>ipSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorIpSet'>AcceleratorIpSet</a>&gt;[]&gt;;</code></pre>
@@ -599,7 +599,7 @@ The value for the address type must be `IPV4`.
 IP address set associated with the accelerator.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L165">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L165">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ IP address set associated with the accelerator.
 The name of the accelerator.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/accelerator.ts#L169">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/accelerator.ts#L169">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -615,7 +615,7 @@ The name of the accelerator.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EndpointGroupArgs" data-link-title="EndpointGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L186">
         interface <strong>EndpointGroupArgs</strong>
     </a>
 </h3>
@@ -625,7 +625,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a EndpointGroup resource.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-endpointConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L190">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L190">property <b>endpointConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</code></pre>
@@ -633,7 +633,7 @@ The set of arguments for constructing a EndpointGroup resource.
 The list of endpoint objects. Fields documented below.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-endpointGroupRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L194">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L194">property <b>endpointGroupRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointGroupRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +641,7 @@ The list of endpoint objects. Fields documented below.
 The name of the AWS Region where the endpoint group is located.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L198">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L198">property <b>healthCheckIntervalSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckIntervalSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -649,7 +649,7 @@ The name of the AWS Region where the endpoint group is located.
 The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L202">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L202">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ The time—10 seconds or 30 seconds—between each health check for an endpoint.
 If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L206">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L206">property <b>healthCheckPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ If the protocol is HTTP/S, then this specifies the path that is the destination 
 The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L210">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L210">property <b>healthCheckProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ The port that AWS Global Accelerator uses to check the health of endpoints that 
 The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-listenerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L214">property <b>listenerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L214">property <b>listenerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ The protocol that AWS Global Accelerator uses to check the health of endpoints t
 The Amazon Resource Name (ARN) of the listener.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-thresholdCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L218">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L218">property <b>thresholdCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholdCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ The Amazon Resource Name (ARN) of the listener.
 The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-trafficDialPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L222">property <b>trafficDialPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L222">property <b>trafficDialPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trafficDialPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ The number of consecutive health checks required to set the state of a healthy e
 The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 
 <h3 class="pdoc-module-header" id="EndpointGroupState" data-link-title="EndpointGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L144">
         interface <strong>EndpointGroupState</strong>
     </a>
 </h3>
@@ -707,7 +707,7 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
 Input properties used for looking up and filtering EndpointGroup resources.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-endpointConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L148">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L148">property <b>endpointConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</code></pre>
@@ -715,7 +715,7 @@ Input properties used for looking up and filtering EndpointGroup resources.
 The list of endpoint objects. Fields documented below.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-endpointGroupRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L152">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L152">property <b>endpointGroupRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointGroupRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ The list of endpoint objects. Fields documented below.
 The name of the AWS Region where the endpoint group is located.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L156">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L156">property <b>healthCheckIntervalSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckIntervalSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -731,7 +731,7 @@ The name of the AWS Region where the endpoint group is located.
 The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L160">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L160">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -739,7 +739,7 @@ The time—10 seconds or 30 seconds—between each health check for an endpoint.
 If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-healthCheckPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L164">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L164">property <b>healthCheckPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ If the protocol is HTTP/S, then this specifies the path that is the destination 
 The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-healthCheckProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L168">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L168">property <b>healthCheckProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ The port that AWS Global Accelerator uses to check the health of endpoints that 
 The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-listenerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L172">property <b>listenerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L172">property <b>listenerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -763,7 +763,7 @@ The protocol that AWS Global Accelerator uses to check the health of endpoints t
 The Amazon Resource Name (ARN) of the listener.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-thresholdCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L176">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L176">property <b>thresholdCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholdCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -771,7 +771,7 @@ The Amazon Resource Name (ARN) of the listener.
 The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-trafficDialPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/endpointGroup.ts#L180">property <b>trafficDialPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/endpointGroup.ts#L180">property <b>trafficDialPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trafficDialPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -779,7 +779,7 @@ The number of consecutive health checks required to set the state of a healthy e
 The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 
 <h3 class="pdoc-module-header" id="ListenerArgs" data-link-title="ListenerArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L153">
         interface <strong>ListenerArgs</strong>
     </a>
 </h3>
@@ -789,7 +789,7 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
 The set of arguments for constructing a Listener resource.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-acceleratorArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L157">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L157">property <b>acceleratorArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -797,7 +797,7 @@ The set of arguments for constructing a Listener resource.
 The Amazon Resource Name (ARN) of your accelerator.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L161">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L161">property <b>clientAffinity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ The Amazon Resource Name (ARN) of your accelerator.
 Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L165">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L165">property <b>portRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerPortRange'>ListenerPortRange</a>&gt;[]&gt;;</code></pre>
@@ -813,7 +813,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L169">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L169">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -821,7 +821,7 @@ The list of port ranges for the connections from clients to the accelerator. Fie
 The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
 
 <h3 class="pdoc-module-header" id="ListenerState" data-link-title="ListenerState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L131">
         interface <strong>ListenerState</strong>
     </a>
 </h3>
@@ -831,7 +831,7 @@ The protocol for the connections from clients to the accelerator. Valid values a
 Input properties used for looking up and filtering Listener resources.
 
 <h4 class="pdoc-member-header" id="ListenerState-acceleratorArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L135">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L135">property <b>acceleratorArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -839,7 +839,7 @@ Input properties used for looking up and filtering Listener resources.
 The Amazon Resource Name (ARN) of your accelerator.
 
 <h4 class="pdoc-member-header" id="ListenerState-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L139">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L139">property <b>clientAffinity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +847,7 @@ The Amazon Resource Name (ARN) of your accelerator.
 Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
 
 <h4 class="pdoc-member-header" id="ListenerState-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L143">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L143">property <b>portRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerPortRange'>ListenerPortRange</a>&gt;[]&gt;;</code></pre>
@@ -855,7 +855,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 
 <h4 class="pdoc-member-header" id="ListenerState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/globalaccelerator/listener.ts#L147">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/globalaccelerator/listener.ts#L147">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

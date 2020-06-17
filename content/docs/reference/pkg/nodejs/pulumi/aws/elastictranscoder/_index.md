@@ -3,7 +3,7 @@ title: "Module elastictranscoder"
 title_tag: "Module elastictranscoder | Package @pulumi/aws | Node.js SDK"
 linktitle: "elastictranscoder"
 meta_desc: "Explore members of the elastictranscoder module in the @pulumi/aws package."
-git_sha: "c672e225a765b11b07ea23e7b1b411483d7f38da"
+git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
 block_external_search_index: true
 ---
 
@@ -40,7 +40,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Pipeline" data-link-title="Pipeline">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L34">
         Resource <strong>Pipeline</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 ```
 
 <h4 class="pdoc-member-header" id="Pipeline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +86,7 @@ Create a Pipeline resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Pipeline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +97,14 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Pipeline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Pipeline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -115,12 +115,12 @@ Returns true if the given object is an instance of Pipeline.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Pipeline-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L62">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L62">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Pipeline-awsKmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L66">property <b>awsKmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L66">property <b>awsKmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>awsKmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 
 <h4 class="pdoc-member-header" id="Pipeline-contentConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L70">property <b>contentConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L70">property <b>contentConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineContentConfig'>PipelineContentConfig</a>&gt;;</code></pre>
@@ -136,7 +136,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
 The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 
 <h4 class="pdoc-member-header" id="Pipeline-contentConfigPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L74">property <b>contentConfigPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L74">property <b>contentConfigPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentConfigPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineContentConfigPermission'>PipelineContentConfigPermission</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
 The permissions for the `contentConfig` object. (documented below)
 
 <h4 class="pdoc-member-header" id="Pipeline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Pipeline-inputBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L78">property <b>inputBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L78">property <b>inputBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ deployments and may be missing (undefined) during planning phases.
 The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 
 <h4 class="pdoc-member-header" id="Pipeline-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ The Amazon S3 bucket in which you saved the media files that you want to transco
 The name of the pipeline. Maximum 40 characters
 
 <h4 class="pdoc-member-header" id="Pipeline-notifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L86">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L86">property <b>notifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineNotifications'>PipelineNotifications</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ The name of the pipeline. Maximum 40 characters
 The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 
 <h4 class="pdoc-member-header" id="Pipeline-outputBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L90">property <b>outputBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L90">property <b>outputBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ The Amazon Simple Notification Service (Amazon SNS) topic that you want to notif
 The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 
 <h4 class="pdoc-member-header" id="Pipeline-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L94">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L94">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded
 The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 
 <h4 class="pdoc-member-header" id="Pipeline-thumbnailConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L98">property <b>thumbnailConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L98">property <b>thumbnailConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thumbnailConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineThumbnailConfig'>PipelineThumbnailConfig</a>&gt;;</code></pre>
@@ -201,7 +201,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
 The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 
 <h4 class="pdoc-member-header" id="Pipeline-thumbnailConfigPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L102">property <b>thumbnailConfigPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L102">property <b>thumbnailConfigPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thumbnailConfigPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineThumbnailConfigPermission'>PipelineThumbnailConfigPermission</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
 The permissions for the `thumbnailConfig` object. (documented below)
 
 <h4 class="pdoc-member-header" id="Pipeline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -218,7 +218,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Preset" data-link-title="Preset">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L76">
         Resource <strong>Preset</strong>
     </a>
 </h3>
@@ -292,7 +292,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
 ```
 
 <h4 class="pdoc-member-header" id="Preset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L141"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L141"> <b>constructor</b></a>
 </h4>
 
 
@@ -306,7 +306,7 @@ Create a Preset resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Preset-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L86">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L86">method <b>get</b></a>
 </h4>
 
 
@@ -317,14 +317,14 @@ Get an existing Preset resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Preset-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L76">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L76">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Preset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L97">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L97">method <b>isInstance</b></a>
 </h4>
 
 
@@ -335,12 +335,12 @@ Returns true if the given object is an instance of Preset.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Preset-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L104">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L104">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Preset-audio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L108">property <b>audio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L108">property <b>audio</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>audio: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PresetAudio'>PresetAudio</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -348,7 +348,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Audio parameters object (documented below).
 
 <h4 class="pdoc-member-header" id="Preset-audioCodecOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L112">property <b>audioCodecOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L112">property <b>audioCodecOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>audioCodecOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PresetAudioCodecOptions'>PresetAudioCodecOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -356,7 +356,7 @@ Audio parameters object (documented below).
 Codec options for the audio parameters (documented below)
 
 <h4 class="pdoc-member-header" id="Preset-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L116">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L116">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -364,7 +364,7 @@ Codec options for the audio parameters (documented below)
 The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 
 <h4 class="pdoc-member-header" id="Preset-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L120">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L120">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -372,7 +372,7 @@ The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, 
 A description of the preset (maximum 255 characters)
 
 <h4 class="pdoc-member-header" id="Preset-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -381,7 +381,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Preset-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the preset. (maximum 40 characters)
 
 <h4 class="pdoc-member-header" id="Preset-thumbnails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L128">property <b>thumbnails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L128">property <b>thumbnails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thumbnails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PresetThumbnails'>PresetThumbnails</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -397,12 +397,12 @@ The name of the preset. (maximum 40 characters)
 Thumbnail parameters object (documented below)
 
 <h4 class="pdoc-member-header" id="Preset-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L129">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L129">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Preset-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L76">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L76">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -411,7 +411,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Preset-video">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L133">property <b>video</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L133">property <b>video</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>video: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PresetVideo'>PresetVideo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -419,7 +419,7 @@ deployments.
 Video parameters object (documented below)
 
 <h4 class="pdoc-member-header" id="Preset-videoCodecOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L137">property <b>videoCodecOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L137">property <b>videoCodecOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>videoCodecOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ Video parameters object (documented below)
 Codec options for the video parameters
 
 <h4 class="pdoc-member-header" id="Preset-videoWatermarks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L141">property <b>videoWatermarks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L141">property <b>videoWatermarks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>videoWatermarks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PresetVideoWatermark'>PresetVideoWatermark</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ Watermark parameters for the video parameters (documented below)
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="PipelineArgs" data-link-title="PipelineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L208">
         interface <strong>PipelineArgs</strong>
     </a>
 </h3>
@@ -448,7 +448,7 @@ Watermark parameters for the video parameters (documented below)
 The set of arguments for constructing a Pipeline resource.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-awsKmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L212">property <b>awsKmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L212">property <b>awsKmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsKmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ The set of arguments for constructing a Pipeline resource.
 The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-contentConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L216">property <b>contentConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L216">property <b>contentConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineContentConfig'>PipelineContentConfig</a>&gt;;</code></pre>
@@ -464,7 +464,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
 The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 
 <h4 class="pdoc-member-header" id="PipelineArgs-contentConfigPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L220">property <b>contentConfigPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L220">property <b>contentConfigPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentConfigPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineContentConfigPermission'>PipelineContentConfigPermission</a>&gt;[]&gt;;</code></pre>
@@ -472,7 +472,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
 The permissions for the `contentConfig` object. (documented below)
 
 <h4 class="pdoc-member-header" id="PipelineArgs-inputBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L224">property <b>inputBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L224">property <b>inputBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ The permissions for the `contentConfig` object. (documented below)
 The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L228">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -488,7 +488,7 @@ The Amazon S3 bucket in which you saved the media files that you want to transco
 The name of the pipeline. Maximum 40 characters
 
 <h4 class="pdoc-member-header" id="PipelineArgs-notifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L232">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L232">property <b>notifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineNotifications'>PipelineNotifications</a>&gt;;</code></pre>
@@ -496,7 +496,7 @@ The name of the pipeline. Maximum 40 characters
 The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 
 <h4 class="pdoc-member-header" id="PipelineArgs-outputBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L236">property <b>outputBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L236">property <b>outputBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -504,7 +504,7 @@ The Amazon Simple Notification Service (Amazon SNS) topic that you want to notif
 The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L240">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L240">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded
 The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-thumbnailConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L244">property <b>thumbnailConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L244">property <b>thumbnailConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbnailConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineThumbnailConfig'>PipelineThumbnailConfig</a>&gt;;</code></pre>
@@ -520,7 +520,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
 The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 
 <h4 class="pdoc-member-header" id="PipelineArgs-thumbnailConfigPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L248">property <b>thumbnailConfigPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L248">property <b>thumbnailConfigPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbnailConfigPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineThumbnailConfigPermission'>PipelineThumbnailConfigPermission</a>&gt;[]&gt;;</code></pre>
@@ -528,7 +528,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
 The permissions for the `thumbnailConfig` object. (documented below)
 
 <h3 class="pdoc-module-header" id="PipelineState" data-link-title="PipelineState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L161">
         interface <strong>PipelineState</strong>
     </a>
 </h3>
@@ -538,12 +538,12 @@ The permissions for the `thumbnailConfig` object. (documented below)
 Input properties used for looking up and filtering Pipeline resources.
 
 <h4 class="pdoc-member-header" id="PipelineState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L162">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L162">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PipelineState-awsKmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L166">property <b>awsKmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L166">property <b>awsKmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsKmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ Input properties used for looking up and filtering Pipeline resources.
 The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineState-contentConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L170">property <b>contentConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L170">property <b>contentConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineContentConfig'>PipelineContentConfig</a>&gt;;</code></pre>
@@ -559,7 +559,7 @@ The AWS Key Management Service (AWS KMS) key that you want to use with this pipe
 The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 
 <h4 class="pdoc-member-header" id="PipelineState-contentConfigPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L174">property <b>contentConfigPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L174">property <b>contentConfigPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentConfigPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineContentConfigPermission'>PipelineContentConfigPermission</a>&gt;[]&gt;;</code></pre>
@@ -567,7 +567,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
 The permissions for the `contentConfig` object. (documented below)
 
 <h4 class="pdoc-member-header" id="PipelineState-inputBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L178">property <b>inputBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L178">property <b>inputBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ The permissions for the `contentConfig` object. (documented below)
 The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
 
 <h4 class="pdoc-member-header" id="PipelineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -583,7 +583,7 @@ The Amazon S3 bucket in which you saved the media files that you want to transco
 The name of the pipeline. Maximum 40 characters
 
 <h4 class="pdoc-member-header" id="PipelineState-notifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L186">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L186">property <b>notifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineNotifications'>PipelineNotifications</a>&gt;;</code></pre>
@@ -591,7 +591,7 @@ The name of the pipeline. Maximum 40 characters
 The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 
 <h4 class="pdoc-member-header" id="PipelineState-outputBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L190">property <b>outputBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L190">property <b>outputBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ The Amazon Simple Notification Service (Amazon SNS) topic that you want to notif
 The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
 
 <h4 class="pdoc-member-header" id="PipelineState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L194">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L194">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded
 The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineState-thumbnailConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L198">property <b>thumbnailConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L198">property <b>thumbnailConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbnailConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineThumbnailConfig'>PipelineThumbnailConfig</a>&gt;;</code></pre>
@@ -615,7 +615,7 @@ The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder
 The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 
 <h4 class="pdoc-member-header" id="PipelineState-thumbnailConfigPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/pipeline.ts#L202">property <b>thumbnailConfigPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/pipeline.ts#L202">property <b>thumbnailConfigPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbnailConfigPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineThumbnailConfigPermission'>PipelineThumbnailConfigPermission</a>&gt;[]&gt;;</code></pre>
@@ -623,7 +623,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
 The permissions for the `thumbnailConfig` object. (documented below)
 
 <h3 class="pdoc-module-header" id="PresetArgs" data-link-title="PresetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L241">
         interface <strong>PresetArgs</strong>
     </a>
 </h3>
@@ -633,7 +633,7 @@ The permissions for the `thumbnailConfig` object. (documented below)
 The set of arguments for constructing a Preset resource.
 
 <h4 class="pdoc-member-header" id="PresetArgs-audio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L245">property <b>audio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L245">property <b>audio</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audio?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetAudio'>PresetAudio</a>&gt;;</code></pre>
@@ -641,7 +641,7 @@ The set of arguments for constructing a Preset resource.
 Audio parameters object (documented below).
 
 <h4 class="pdoc-member-header" id="PresetArgs-audioCodecOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L249">property <b>audioCodecOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L249">property <b>audioCodecOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audioCodecOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetAudioCodecOptions'>PresetAudioCodecOptions</a>&gt;;</code></pre>
@@ -649,7 +649,7 @@ Audio parameters object (documented below).
 Codec options for the audio parameters (documented below)
 
 <h4 class="pdoc-member-header" id="PresetArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L253">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L253">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ Codec options for the audio parameters (documented below)
 The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 
 <h4 class="pdoc-member-header" id="PresetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L257">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L257">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, 
 A description of the preset (maximum 255 characters)
 
 <h4 class="pdoc-member-header" id="PresetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L261">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L261">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ A description of the preset (maximum 255 characters)
 The name of the preset. (maximum 40 characters)
 
 <h4 class="pdoc-member-header" id="PresetArgs-thumbnails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L265">property <b>thumbnails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L265">property <b>thumbnails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbnails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetThumbnails'>PresetThumbnails</a>&gt;;</code></pre>
@@ -681,12 +681,12 @@ The name of the preset. (maximum 40 characters)
 Thumbnail parameters object (documented below)
 
 <h4 class="pdoc-member-header" id="PresetArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L266">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L266">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PresetArgs-video">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L270">property <b>video</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L270">property <b>video</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>video?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetVideo'>PresetVideo</a>&gt;;</code></pre>
@@ -694,7 +694,7 @@ Thumbnail parameters object (documented below)
 Video parameters object (documented below)
 
 <h4 class="pdoc-member-header" id="PresetArgs-videoCodecOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L274">property <b>videoCodecOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L274">property <b>videoCodecOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>videoCodecOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -702,7 +702,7 @@ Video parameters object (documented below)
 Codec options for the video parameters
 
 <h4 class="pdoc-member-header" id="PresetArgs-videoWatermarks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L278">property <b>videoWatermarks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L278">property <b>videoWatermarks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>videoWatermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetVideoWatermark'>PresetVideoWatermark</a>&gt;[]&gt;;</code></pre>
@@ -710,7 +710,7 @@ Codec options for the video parameters
 Watermark parameters for the video parameters (documented below)
 
 <h3 class="pdoc-module-header" id="PresetState" data-link-title="PresetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L197">
         interface <strong>PresetState</strong>
     </a>
 </h3>
@@ -720,12 +720,12 @@ Watermark parameters for the video parameters (documented below)
 Input properties used for looking up and filtering Preset resources.
 
 <h4 class="pdoc-member-header" id="PresetState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L198">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L198">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PresetState-audio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L202">property <b>audio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L202">property <b>audio</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audio?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetAudio'>PresetAudio</a>&gt;;</code></pre>
@@ -733,7 +733,7 @@ Input properties used for looking up and filtering Preset resources.
 Audio parameters object (documented below).
 
 <h4 class="pdoc-member-header" id="PresetState-audioCodecOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L206">property <b>audioCodecOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L206">property <b>audioCodecOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audioCodecOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetAudioCodecOptions'>PresetAudioCodecOptions</a>&gt;;</code></pre>
@@ -741,7 +741,7 @@ Audio parameters object (documented below).
 Codec options for the audio parameters (documented below)
 
 <h4 class="pdoc-member-header" id="PresetState-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L210">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L210">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ Codec options for the audio parameters (documented below)
 The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 
 <h4 class="pdoc-member-header" id="PresetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L214">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L214">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, 
 A description of the preset (maximum 255 characters)
 
 <h4 class="pdoc-member-header" id="PresetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L218">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L218">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -765,7 +765,7 @@ A description of the preset (maximum 255 characters)
 The name of the preset. (maximum 40 characters)
 
 <h4 class="pdoc-member-header" id="PresetState-thumbnails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L222">property <b>thumbnails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L222">property <b>thumbnails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbnails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetThumbnails'>PresetThumbnails</a>&gt;;</code></pre>
@@ -773,12 +773,12 @@ The name of the preset. (maximum 40 characters)
 Thumbnail parameters object (documented below)
 
 <h4 class="pdoc-member-header" id="PresetState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L223">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L223">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PresetState-video">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L227">property <b>video</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L227">property <b>video</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>video?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetVideo'>PresetVideo</a>&gt;;</code></pre>
@@ -786,7 +786,7 @@ Thumbnail parameters object (documented below)
 Video parameters object (documented below)
 
 <h4 class="pdoc-member-header" id="PresetState-videoCodecOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L231">property <b>videoCodecOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L231">property <b>videoCodecOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>videoCodecOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -794,7 +794,7 @@ Video parameters object (documented below)
 Codec options for the video parameters
 
 <h4 class="pdoc-member-header" id="PresetState-videoWatermarks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c672e225a765b11b07ea23e7b1b411483d7f38da/sdk/nodejs/elastictranscoder/preset.ts#L235">property <b>videoWatermarks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/elastictranscoder/preset.ts#L235">property <b>videoWatermarks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>videoWatermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PresetVideoWatermark'>PresetVideoWatermark</a>&gt;[]&gt;;</code></pre>

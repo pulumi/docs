@@ -124,7 +124,7 @@ const exampleFunction = new aws.lambda.Function("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#Function">Function</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>code=None<span class="p">, </span>dead_letter_config=None<span class="p">, </span>description=None<span class="p">, </span>environment=None<span class="p">, </span>handler=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>layers=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>publish=None<span class="p">, </span>reserved_concurrent_executions=None<span class="p">, </span>role=None<span class="p">, </span>runtime=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>tracing_config=None<span class="p">, </span>vpc_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#Function">Function</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>code=None<span class="p">, </span>dead_letter_config=None<span class="p">, </span>description=None<span class="p">, </span>environment=None<span class="p">, </span>file_system_configs=None<span class="p">, </span>handler=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>layers=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>publish=None<span class="p">, </span>reserved_concurrent_executions=None<span class="p">, </span>role=None<span class="p">, </span>runtime=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>tracing_config=None<span class="p">, </span>vpc_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -375,6 +375,17 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="filesystemconfigs_csharp">
+<a href="#filesystemconfigs_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">List&lt;Function<wbr>File<wbr>System<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="kmskeyarn_csharp">
 <a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
 </span> 
@@ -608,6 +619,17 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesystemconfigs_go">
+<a href="#filesystemconfigs_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">[]Function<wbr>File<wbr>System<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -849,6 +871,17 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="filesystemconfigs_nodejs">
+<a href="#filesystemconfigs_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="kmskeyarn_nodejs">
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span> 
@@ -1086,6 +1119,17 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="file_system_configs_python">
+<a href="#file_system_configs_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">List[Function<wbr>File<wbr>System<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="kms_key_arn_python">
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span> 
@@ -1263,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1347,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1431,7 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1515,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1603,7 +1647,7 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>code=None<span class="p">, </span>dead_letter_config=None<span class="p">, </span>description=None<span class="p">, </span>environment=None<span class="p">, </span>handler=None<span class="p">, </span>invoke_arn=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>last_modified=None<span class="p">, </span>layers=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>publish=None<span class="p">, </span>qualified_arn=None<span class="p">, </span>reserved_concurrent_executions=None<span class="p">, </span>role=None<span class="p">, </span>runtime=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>source_code_size=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>tracing_config=None<span class="p">, </span>version=None<span class="p">, </span>vpc_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>code=None<span class="p">, </span>dead_letter_config=None<span class="p">, </span>description=None<span class="p">, </span>environment=None<span class="p">, </span>file_system_configs=None<span class="p">, </span>handler=None<span class="p">, </span>invoke_arn=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>last_modified=None<span class="p">, </span>layers=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>publish=None<span class="p">, </span>qualified_arn=None<span class="p">, </span>reserved_concurrent_executions=None<span class="p">, </span>role=None<span class="p">, </span>runtime=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>source_code_size=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>tracing_config=None<span class="p">, </span>version=None<span class="p">, </span>vpc_config=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1725,7 +1769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1770,6 +1814,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filesystemconfigs_csharp">
+<a href="#state_filesystemconfigs_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">List&lt;Function<wbr>File<wbr>System<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2029,7 +2084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2074,6 +2129,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filesystemconfigs_go">
+<a href="#state_filesystemconfigs_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">[]Function<wbr>File<wbr>System<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2333,7 +2399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2378,6 +2444,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filesystemconfigs_nodejs">
+<a href="#state_filesystemconfigs_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2637,7 +2714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function.
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2682,6 +2759,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionenvironment">Dict[Function<wbr>Environment]</a></span>
     </dt>
     <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_file_system_configs_python">
+<a href="#state_file_system_configs_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">List[Function<wbr>File<wbr>System<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3124,6 +3212,140 @@ which service is targeted.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionFileSystemConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionFileSystemConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionFileSystemConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionFileSystemConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionFileSystemConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionFileSystemConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localmountpath_csharp">
+<a href="#localmountpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Mount<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path where the function can access the file system, starting with `/mnt/`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localmountpath_go">
+<a href="#localmountpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Mount<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path where the function can access the file system, starting with `/mnt/`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localmountpath_nodejs">
+<a href="#localmountpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Mount<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path where the function can access the file system, starting with `/mnt/`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localmountpath_python">
+<a href="#localmountpath_python" style="color: inherit; text-decoration: inherit;">local<wbr>Mount<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path where the function can access the file system, starting with `/mnt/`.
 {{% /md %}}</dd>
 
 </dl>
