@@ -3,6 +3,7 @@ title: Module apiextensions
 title_tag: Module apiextensions | Package pulumi_kubernetes | Python SDK
 linktitle: apiextensions
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

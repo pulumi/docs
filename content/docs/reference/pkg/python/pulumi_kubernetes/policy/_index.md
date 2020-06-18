@@ -3,6 +3,7 @@ title: Module policy
 title_tag: Module policy | Package pulumi_kubernetes | Python SDK
 linktitle: policy
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

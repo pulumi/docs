@@ -3,6 +3,7 @@ title: Module networking
 title_tag: Module networking | Package pulumi_kubernetes | Python SDK
 linktitle: networking
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

@@ -3,6 +3,7 @@ title: Module provider
 title_tag: Module provider | Package pulumi_kubernetes | Python SDK
 linktitle: provider
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

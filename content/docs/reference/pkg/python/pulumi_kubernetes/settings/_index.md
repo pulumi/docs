@@ -3,6 +3,7 @@ title: Module settings
 title_tag: Module settings | Package pulumi_kubernetes | Python SDK
 linktitle: settings
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

@@ -3,6 +3,7 @@ title: Module storage
 title_tag: Module storage | Package pulumi_kubernetes | Python SDK
 linktitle: storage
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

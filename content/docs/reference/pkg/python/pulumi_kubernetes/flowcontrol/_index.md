@@ -3,6 +3,7 @@ title: Module flowcontrol
 title_tag: Module flowcontrol | Package pulumi_kubernetes | Python SDK
 linktitle: flowcontrol
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

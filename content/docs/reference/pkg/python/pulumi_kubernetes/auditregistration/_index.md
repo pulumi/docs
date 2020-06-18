@@ -3,6 +3,7 @@ title: Module auditregistration
 title_tag: Module auditregistration | Package pulumi_kubernetes | Python SDK
 linktitle: auditregistration
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

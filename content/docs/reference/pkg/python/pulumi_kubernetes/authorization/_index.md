@@ -3,6 +3,7 @@ title: Module authorization
 title_tag: Module authorization | Package pulumi_kubernetes | Python SDK
 linktitle: authorization
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}

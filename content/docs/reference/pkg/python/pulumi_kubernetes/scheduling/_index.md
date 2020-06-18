@@ -3,6 +3,7 @@ title: Module scheduling
 title_tag: Module scheduling | Package pulumi_kubernetes | Python SDK
 linktitle: scheduling
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "kubernetes" >}}
