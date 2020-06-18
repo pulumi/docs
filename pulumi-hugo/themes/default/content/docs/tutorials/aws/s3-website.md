@@ -120,7 +120,7 @@ $ aws s3 ls $(pulumi stack output bucketName)
 
 ### Step 8: Add S3 website support
 
-Next, configure the S3 bucket to serve the files on a browser. To do this, you use the [aws.s3.Bucket.websites] property and attach an [aws.s3.BucketPolicy] object.
+Next, configure the S3 bucket to serve the files on a browser. To do this, you use the [aws.s3.Bucket.website] property and attach an [aws.s3.BucketPolicy] object.
 
 Change the declaration of `siteBucket` to specify an `indexDocument`:
 
@@ -229,13 +229,13 @@ You also learned how to work with the Pulumi CLI. To recap:
 - [API Gateways and Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}})
 
 <!-- markdownlint-disable url -->
-[@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
-[aws.s3.Bucket]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
-[aws.s3.Bucket.bucket]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
-[aws.s3.BucketObject]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#BucketObject" >}}
+[@pulumi/aws]: {{< relref "/docs/reference/pkg/aws" >}}
+[aws.s3.Bucket]: {{< relref "/docs/reference/pkg/aws/s3/bucket" >}}
+[aws.s3.Bucket.bucket]: {{< relref "/docs/reference/pkg/aws/s3/bucket#bucket_nodejs" >}}
+[aws.s3.BucketObject]: {{< relref "/docs/reference/pkg/aws/s3/bucketobject" >}}
 [pulumi.asset.FileAsset]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset#FileAsset" >}}
-[aws.s3.BucketPolicy]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#BucketPolicy" >}}
-[aws.s3.Bucket.websites]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
+[aws.s3.BucketPolicy]: {{< relref "/docs/reference/pkg/aws/s3/bucketpolicy" >}}
+[aws.s3.Bucket.website]: {{< relref "/docs/reference/pkg/aws/s3/bucket#state_website_nodejs" >}}
 [pulumi.Output]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
 [pulumi.Output.apply]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
 [pulumi.Input]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}
