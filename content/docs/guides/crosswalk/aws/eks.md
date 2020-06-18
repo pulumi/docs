@@ -673,7 +673,7 @@ const chart = new k8s.helm.v2.Chart("empty1", {
 
 [Pulumi Crosswalk for AWS ECR]({{< relref "ecr" >}}) enables you to build, publish, and consume private Docker
 images easily using Amazon's Elastic Container Registry (ECR). The [`aws.ecr.buildAndPushImage` function](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ecr#buildAndPushImage" >}}) takes a name and a relative location on disk, and will
+{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ecr#buildAndPushImage" >}}) takes a name and a relative location on disk, and will
 
 * Provision a private ECR registry using that name
 * Build the `Dockerfile` found at the relative location supplied

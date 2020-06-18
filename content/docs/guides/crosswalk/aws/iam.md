@@ -143,7 +143,7 @@ const userPolicy = new aws.iam.UserPolicy("webmasterPolicy", {
 ```
 
 For more options available when configuring IAM users, please see the [API documentation](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/aws/iam#User" >}}).
+{{< relref "/docs/reference/pkg/aws/iam/user" >}}).
 
 If you'd like to configure non-service account users that can login to the
 AWS console, see [`UserLoginProfile`]({{< relref "/docs/reference/pkg/aws/iam/userloginprofile" >}}),
