@@ -139,4 +139,4 @@ To learn more take a look at more tutorials and example code:
 - [Pulumi Community Slack](https://slack.pulumi.com)
 - [Pulumi Examples on GitHub](https://github.com/pulumi/examples)
 - [Node.js and Pulumi]({{< relref "/docs/intro/languages/javascript" >}})
-- [Node.js Examples for AWS and Azure](https://www.pulumi.com/blog/running-a-serverles-nodejs-http-server-on-aws-and-azure/)
+- [Node.js Examples for AWS and Azure]({{< relref "/blog/running-a-serverles-nodejs-http-server-on-aws-and-azure" >}})
