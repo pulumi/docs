@@ -63,7 +63,11 @@ within a [generic CI/CD system]({{< relref "other" >}}).
     <a href="{{< relref teamcity >}}">
             <img src="/logos/tech/ci-cd/teamcity.svg" alt="JetBrains TeamCity">
             <h4 class="no-anchor">JetBrains TeamCity</h4>
-        </a>
+    </a>
+    <a href="{{< relref spinnaker>}}">
+        <img src="/logos/tech/ci-cd/spinnaker.svg" alt="Spinnaker">
+        <h4 class="no-anchor">Spinnaker</h4>
+    </a>
     <a href="{{< relref travis >}}">
         <img src="/logos/tech/ci-cd/travis-ci.svg" alt="TravisCI">
         <h4 class="no-anchor">TravisCI</h4>
