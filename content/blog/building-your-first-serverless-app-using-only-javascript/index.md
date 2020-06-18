@@ -138,5 +138,5 @@ To learn more take a look at more tutorials and example code:
 - [Pulumi Quickstart]({{< relref "/docs/get-started" >}})
 - [Pulumi Community Slack](https://slack.pulumi.com)
 - [Pulumi Examples on GitHub](https://github.com/pulumi/examples)
-- [Node.js and Pulumi](https://www.pulumi.com/docs/intro/languages/javascript/)
+- [Node.js and Pulumi]({{< relref "/docs/intro/languages/javascript" >}})
 - [Node.js Examples for AWS and Azure](https://www.pulumi.com/blog/running-a-serverles-nodejs-http-server-on-aws-and-azure/)
