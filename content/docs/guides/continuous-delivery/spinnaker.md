@@ -125,7 +125,7 @@ hal deploy apply
 
 > Depending on your Spinnaker installation you might have to run the above commands using `sudo`.
 
-**NoteE** Before you can access the newly-added plugin in the Deck UI, you must wait for the old `orca` Pod to be replaced with a new one in your cluster. This can take anywhere from a minute to a few depending on the size of your cluster.
+**Note** Before you can access the newly-added plugin in the Deck UI, you must wait for the old `orca` Pod to be replaced with a new one in your cluster. This can take anywhere from a minute to a few depending on the size of your cluster.
 To check the state of the running pods you may run `kubectl -n spinnaker get pods`. This will print the pods in the `Spinnaker` namespace as well as the age of the pod.
 
 ## Plugin Configuration
