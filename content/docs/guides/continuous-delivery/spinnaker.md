@@ -122,7 +122,7 @@ hal plugins add Pulumi.PreConfiguredJobPlugin --enabled true --version 0.0.1 --e
 # Apply the updates
 hal deploy apply
 ```
- 
+
 > Depending on your Spinnaker installation you might have to run the above commands using `sudo`.
 
 **NoteE** Before you can access the newly-added plugin in the Deck UI, you must wait for the old `orca` Pod to be replaced with a new one in your cluster. This can take anywhere from a minute to a few depending on the size of your cluster.
@@ -160,7 +160,7 @@ Spinnaker Pipelines support [pipeline expressions](https://www.spinnaker.io/guid
 
 > The following steps assume that you have cloned this Kubernetes [example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) into your own repo.
 
-Creating a Pipeline in Spinnaker is easy and offers many integration options for your GitOps workflow. 
+Creating a Pipeline in Spinnaker is easy and offers many integration options for your GitOps workflow.
 In the sample pipeline, however, we will show you how to add the Pulumi stage and create a Kubernetes resource.
 
 * Create a new Pipeline and click the **Add Stage** button. This will allow you to pick from a list of available stages, including the Pulumi stage which you would have added above.
