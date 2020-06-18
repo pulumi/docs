@@ -411,7 +411,7 @@ const example = new aws.glue.Trigger("example", {
 ```
 {{% /example %}}
 
-### Conditional Trigger with Crawler Condition 
+### Conditional Trigger with Crawler Condition
 {{% example csharp %}}
 ```csharp
 using Pulumi;
