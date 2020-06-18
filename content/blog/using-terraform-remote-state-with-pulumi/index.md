@@ -25,13 +25,13 @@ type from the Pulumi SDK. Integration with the most popular
 cloud-specific tools have been supported by Pulumi since the earliest
 days:
 
-- The [`aws.cloudformation.getStack()`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudformation#getStack" >}})
+- The [`aws.cloudformation.getStack()`]({{< relref "/docs/reference/pkg/aws/cloudformation/getstack" >}})
   function can be used to obtain the outputs from a CloudFormation
   Stack.
 
-- The [`get`]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}})
+- The [`get`]({{< relref "/docs/reference/pkg/azure/core/templatedeployment#look-up" >}})
   method of the
-  [`azure.core.TemplateDeployment`]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}})
+  [`azure.core.TemplateDeployment`]({{< relref "/docs/reference/pkg/azure/core/templatedeployment" >}})
   class can be used to obtain the outputs of an ARM Template Deployment.
 
 We recently added similar support for reading the outputs of a Terraform

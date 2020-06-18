@@ -235,12 +235,12 @@ class MyStack : Stack
 
 > **Note:** The example configuration is designed to work on most EC2 accounts, with access to a default VPC. For EC2 Classic users, please use t1.micro for `size`.
 
-This example uses the [`@pulumi/aws`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}) package in JavaScript and TypeScript code and the [`pulumi_aws`]({{< relref "/docs/reference/pkg/python/pulumi_aws" >}}) package in Python code to create two resources:
+This example uses the [`ec2` module of the `aws` package]({{< relref "/docs/reference/pkg/aws/ec2" >}}) to create two resources:
 
-| AWS Resource | Description | TypeScript / JavaScript Resource | Python Resource |
-|--------------|---------|----------------------------------|-----------------|
-| Security Group | Created for allowing incoming SSH access | [aws.ec2.SecurityGroup][Security Group] | [ec2.SecurityGroup]({{< relref "/docs/reference/pkg/python/pulumi_aws/ec2#pulumi_aws.ec2.SecurityGroup" >}}) |
-| EC2 Instance | Created in that security group using the appropriate Amazon Machine Image (AMI) for the region where you deploy the program | [aws.ec2.Instance][EC2 Instance] | [ec2.Instance]({{< relref "/docs/reference/pkg/python/pulumi_aws/ec2#pulumi_aws.ec2.Instance" >}}) |
+| AWS Resource | Description | Resource |
+|--------------|-------------|----------|
+| Security Group | Created for allowing incoming SSH access | [aws.ec2.SecurityGroup][Security Group] |
+| EC2 Instance | Created in that security group using the appropriate Amazon Machine Image (AMI) for the region where you deploy the program | [aws.ec2.Instance][EC2 Instance] |
 
 ### Step 3: Preview and deploy your resources
 
@@ -548,9 +548,8 @@ In this tutorial, we showed you how to use Pulumi programs to create and manage 
 {{< /summary >}}
 
 <!-- Common links -->
-[EC2 Instance]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#Instance" >}}
-[Security Group]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#SecurityGroup" >}}
-[@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
+[EC2 Instance]: {{< relref "/docs/reference/pkg/aws/ec2/instance" >}}
+[Security Group]: {{< relref "/docs/reference/pkg/aws/ec2/securitygroup" >}}
 <!-- End common links -->
 
 ## Next Steps
