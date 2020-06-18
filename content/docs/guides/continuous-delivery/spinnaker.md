@@ -42,6 +42,10 @@ The sample pipeline (shown later) below acts on a hypothetical stack: `dev`.
   
 The source code for the stack is in a repository in GitHub cloned from this [example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) and uses `TypeScript` as the language.
 The example infrastructure code creates a Kubernetes `Deployment` using the `nginx` container image.
+If you modify the sample app or wish to create the `Deployment` resource in a different Kubernetes cluster, follow the setup guide for the [Kubernetes provider](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/setup/)
+to ensure that Pulumi can access that Kubernetes cluster.
+
+> While the example shows you how to deploy a Kubernetes resource, there are many other [cloud providers](https://www.pulumi.com/docs/intro/cloud-providers/) that Pulumi supports.
 
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
@@ -49,7 +53,12 @@ You may choose a naming convention that best suits your organization.
 ## Pulumi Plugin For Spinnaker
 
 The Pulumi plugin executes a pre-configured job as a Kubernetes batch job. The job runs whichever container image you choose to use for executing the Pulumi apps. The only requirement for the image that the batch job uses is that it should contain the Pulumi CLI, and any necessary language runtime tools, such as `node`, `python`, `dotnet`, or `go`.
-By default, the plugin uses the [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) container image available publicly on Docker Hub. If you would like to use a private image you can do so, ensuring that your Spinnaker cluster has the right credentials to pull an image from a private registry. Please contact your Spinnaker administrator if you are unsure whether you can use a public image.
+By default, the plugin suggests using the [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) container image available publicly on Docker Hub.
+Alternatively, you can also try to use one of the other language-specific images that are available under the [`pulumi`](https://hub.docker.com/u/pulumi) org on Docker Hub.
+
+If you would like to use a private image for the job you can do so, but ensure that your Spinnaker cluster has the right credentials to pull an image from a private registry.
+Please contact your Spinnaker administrator if you are unsure whether you can use a public image.
+
 The pre-configured job will also need to access your VCS to clone the repo into the container. See the next section about configuring secrets to learn how you can use private repos with the plugin.
 
 ### Secrets
@@ -78,6 +87,8 @@ data:
   PULUMI_ACCESS_TOKEN: <base64EncodedValue>
   AWS_ACCESS_KEY_ID: <base64EncodedValue>
   AWS_SECRET_ACCESS_KEY: <base64EncodedValue>
+  ...
+  ...
   # If your Pulumi app is stored in a private repo, you may specify the username/password
   # here and then use the corresponding "key" names as placeholders in the URL you specify
   # later in the Pipeline Stage.
@@ -155,21 +166,32 @@ In the sample pipeline, however, we will show you how to add the Pulumi stage an
 * Create a new Pipeline and click the **Add Stage** button. This will allow you to pick from a list of available stages, including the Pulumi stage which you would have added above.
 * Configure the inputs for the Pulumi stage accordingly.
   * As previously mentioned in this guide, you can use [pipeline expressions](https://www.spinnaker.io/guides/user/pipeline/expressions/) for your stage inputs.
+* Note that we are setting the value of the **Command** input to `preview`.
 
 ![Pulumi Stage](/images/docs/guides/continuous-delivery/spinnaker/pipeline-stage.png)
 
-You can add additional stages if you would like in your pipeline.
-You can also mix in [Manual Judgement](https://www.spinnaker.io/guides/tutorials/codelabs/safe-deployments/#adding-a-manual-judgment-to-deployment-pipelines) stages in your pipeline to create custom orchestrations that require admin approval for deployments.
+Add a [Manual Judgement](https://www.spinnaker.io/guides/tutorials/codelabs/safe-deployments/#adding-a-manual-judgment-to-deployment-pipelines) stage to the pipeline and then let's add the Pulumi stage again, but this time we'll set the **Command** input to `up` instead of `preview`.
+In the end, your pipeline should look like this:
+
+![Full Pipeline](/images/docs/guides/continuous-delivery/spinnaker/full-pipeline.png)
 
 Go back to the main Pipelines view and click on the **Start Manual Execution** link next to your pipeline.
 Check the logs from Pulumi as the Pulumi stage runs. The logs update in near real-time.
 
 ![Pulumi Stage](/images/docs/guides/continuous-delivery/spinnaker/pipeline-logs.png)
 
+Once the pipeline is complete, assuming you have not modified the example app, the `nginx` container would have been deployed to the `default` namespace.
+Get the pod IP by running a `kubectl` command and `curl`-ing the IP to see the response:
+
+```
+kubectl get pods -o wide
+
+curl http://POD_IP
+```
+
 ## Next Steps
 
 We showed you a simple example of how you can get started with using Pulumi in your Spinnaker instance.
-
 
 * Checkout more detailed examples for Pulumi [here](https://www.pulumi.com/docs/tutorials/).
 * Learn how to use the multitude of providers available with Pulumi [here](https://www.pulumi.com/docs/reference/pkg/).
