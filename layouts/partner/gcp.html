@@ -6,7 +6,7 @@
                 <div class="flex flex-col md:flex-row">
                     <p class="md:w-3/4 mr-4">
                         Pulumi's infrastructure as code SDK helps create, deploy, and manage
-                        GCP containers, serverless functions, and infrastructure using real
+                        Google Cloud Platform containers, serverless functions, and infrastructure using real
                         programming languages.
                     </p>
                     <div class="top-0">
@@ -152,7 +152,7 @@ export let kubeConfig = k8sConfig;` }}
                 <div class="md:w-1/2 md:mr-4">
                     <h2>Creating a Simple Web Server</h2>
                     <p>
-                        Pulumi gives you a way to express infrastructure configuration
+                        Pulumi gives you a way to express infrastructure configuration on Google Cloud
                         using your favorite programming language.
                     </p>
                     <p>
@@ -213,7 +213,7 @@ exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessC
                 <div class="md:w-1/2 md:mr-4">
                     <h2>Creating a Google Cloud Function</h2>
                     <p>
-                        With Pulumi, you can combine infrastructure definitions and application code in one program. This example shows how to create a simple Google Cloud Function that returns a message when invoked.
+                        With Pulumi, you can combine Google Cloud infrastructure definitions and application code in one program. This example shows how to create a simple Google Cloud Function that returns a message when invoked.
                     </p>
                     <p>
                         <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
