@@ -13,7 +13,6 @@ meta_desc: "Explore the TransitVirtualInterface resource of the directconnect mo
 Provides a Direct Connect transit virtual interface resource.
 A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +93,11 @@ example_transit_virtual_interface = aws.directconnect.TransitVirtualInterface("e
     dx_gateway_id=example_gateway.id,
     vlan=4094)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,6 +113,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
     vlan: 4094,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

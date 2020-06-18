@@ -18,7 +18,6 @@ This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +86,11 @@ if lb_name is None:
 test = aws.lb.get_load_balancer(arn=lb_arn,
     name=lb_name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -101,6 +104,7 @@ const test = pulumi.output(aws.lb.getLoadBalancer({
     name: lbName,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

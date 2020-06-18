@@ -12,7 +12,6 @@ meta_desc: "Explore the InternetGateway resource of the ec2 module, including ex
 
 Provides a resource to create a VPC Internet Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ gw = aws.ec2.InternetGateway("gw",
     },
     vpc_id=aws_vpc["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const gw = new aws.ec2.InternetGateway("gw", {
     vpcId: aws_vpc_main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

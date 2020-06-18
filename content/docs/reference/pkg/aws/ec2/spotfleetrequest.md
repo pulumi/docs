@@ -13,7 +13,6 @@ meta_desc: "Explore the SpotFleetRequest resource of the ec2 module, including e
 Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -75,6 +74,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -130,6 +130,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -171,9 +172,11 @@ cheap_compute = aws.ec2.SpotFleetRequest("cheapCompute",
     target_capacity=6,
     valid_until="2019-11-04T20:44:20Z")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -213,6 +216,7 @@ const cheapCompute = new aws.ec2.SpotFleetRequest("cheap_compute", {
     validUntil: "2019-11-04T20:44:20Z",
 });
 ```
+
 {{% /example %}}
 
 ### Using multiple launch specifications
@@ -253,6 +257,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -293,6 +298,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -320,9 +326,11 @@ foo = aws.ec2.SpotFleetRequest("foo",
     target_capacity=2,
     valid_until="2019-11-04T20:44:20Z")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -348,6 +356,7 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
     validUntil: "2019-11-04T20:44:20Z",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

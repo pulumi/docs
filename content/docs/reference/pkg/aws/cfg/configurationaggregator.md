@@ -12,7 +12,6 @@ meta_desc: "Explore the ConfigurationAggregator resource of the cfg module, incl
 
 Manages an AWS Config Configuration Aggregator
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -87,9 +88,11 @@ account = aws.cfg.ConfigurationAggregator("account", account_aggregation_source=
     "regions": ["us-west-2"],
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -101,6 +104,7 @@ const account = new aws.cfg.ConfigurationAggregator("account", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

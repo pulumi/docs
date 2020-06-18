@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityNotificationTopic resource of the ses module, in
 
 Resource for managing SES Identity Notification Topics
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ test = aws.ses.IdentityNotificationTopic("test",
     notification_type="Bounce",
     topic_arn=aws_sns_topic["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const test = new aws.ses.IdentityNotificationTopic("test", {
     topicArn: aws_sns_topic_example.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

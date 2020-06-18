@@ -12,7 +12,6 @@ meta_desc: "Explore the SmsPreferences resource of the sns module, including exa
 
 Provides a way to set SNS SMS preferences.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,6 +55,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,15 +65,18 @@ import pulumi_aws as aws
 
 update_sms_prefs = aws.sns.SmsPreferences("updateSmsPrefs")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

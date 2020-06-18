@@ -12,7 +12,6 @@ meta_desc: "Explore the StaticWebLayer resource of the opsworks module, includin
 
 Provides an OpsWorks static web server layer resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_aws as aws
 
 web = aws.opsworks.StaticWebLayer("web", stack_id=aws_opsworks_stack["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +81,7 @@ const web = new aws.opsworks.StaticWebLayer("web", {
     stackId: aws_opsworks_stack_main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

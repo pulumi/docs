@@ -14,7 +14,6 @@ Manages an Amazon API Gateway Version 2 API.
 
 > **Note:** Amazon API Gateway Version 2 resources are used for creating and deploying WebSocket and HTTP APIs. To create and deploy REST APIs, use Amazon API Gateway Version 1.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_aws as aws
 
 example = aws.apigatewayv2.Api("example", protocol_type="HTTP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -80,6 +83,7 @@ const example = new aws.apigatewayv2.Api("example", {
     protocolType: "HTTP",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

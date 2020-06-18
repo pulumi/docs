@@ -12,7 +12,6 @@ meta_desc: "Explore the NetworkInterface resource of the ec2 module, including e
 
 Provides an Elastic network interface (ENI) resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +71,11 @@ test = aws.ec2.NetworkInterface("test",
     security_groups=[aws_security_group["web"]["id"]],
     subnet_id=aws_subnet["public_a"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +90,7 @@ const test = new aws.ec2.NetworkInterface("test", {
     subnetId: aws_subnet_public_a.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

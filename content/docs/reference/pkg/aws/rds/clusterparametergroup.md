@@ -15,7 +15,6 @@ Provides an RDS DB cluster parameter group resource. Documentation of the availa
 * [Aurora MySQL Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html)
 * [Aurora PostgreSQL Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,9 +77,11 @@ default = aws.rds.ClusterParameterGroup("default",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -99,6 +101,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

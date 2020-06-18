@@ -17,7 +17,6 @@ The `aws.ec2.DefaultSubnet` behaves differently from normal resources, in that
 this provider does not _create_ this resource, but instead "adopts" it
 into management.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,6 +70,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +84,11 @@ default_az1 = aws.ec2.DefaultSubnet("defaultAz1",
         "Name": "Default subnet for us-west-2a",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,6 +100,7 @@ const defaultAz1 = new aws.ec2.DefaultSubnet("default_az1", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualService resource of the appmesh module, including
 
 Provides an AWS App Mesh virtual service resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +93,11 @@ servicea = aws.appmesh.VirtualService("servicea",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,6 +113,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Virtual Router Provider
@@ -140,6 +144,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -170,6 +175,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -187,9 +193,11 @@ servicea = aws.appmesh.VirtualService("servicea",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -205,6 +213,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

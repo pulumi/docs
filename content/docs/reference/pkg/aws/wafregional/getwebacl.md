@@ -12,7 +12,6 @@ meta_desc: "Explore the GetWebAcl function of the wafregional module, including 
 
 `aws.wafregional.WebAcl` Retrieves a WAF Regional Web ACL Resource Id.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 example = aws.wafregional.get_web_acl(name="tfWAFRegionalWebACL")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const example = pulumi.output(aws.wafregional.getWebAcl({
     name: "tfWAFRegionalWebACL",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

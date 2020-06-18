@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSecurityGroups function of the ec2 module, including 
 Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of this provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ test = aws.ec2.get_security_groups(tags={
     "Environment": "dev",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const test = pulumi.output(aws.ec2.getSecurityGroups({
     },
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

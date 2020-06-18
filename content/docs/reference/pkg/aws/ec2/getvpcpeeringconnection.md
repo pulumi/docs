@@ -13,7 +13,6 @@ meta_desc: "Explore the GetVpcPeeringConnection function of the ec2 module, incl
 The VPC Peering Connection data source provides details about
 a specific VPC peering connection.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,9 +105,11 @@ route = aws.ec2.Route("route",
     route_table_id=rt.id,
     vpc_peering_connection_id=pc.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -127,6 +130,7 @@ const route = new aws.ec2.Route("r", {
     vpcPeeringConnectionId: pc.id!,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

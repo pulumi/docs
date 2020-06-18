@@ -12,7 +12,6 @@ meta_desc: "Explore the Plan resource of the backup module, including examples, 
 
 Provides an AWS Backup plan resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +86,11 @@ example = aws.backup.Plan("example", rules=[{
     "targetVaultName": aws_backup_vault["test"]["name"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -100,6 +103,7 @@ const example = new aws.backup.Plan("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

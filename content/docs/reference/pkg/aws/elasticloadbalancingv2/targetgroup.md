@@ -14,7 +14,6 @@ Provides a Target Group resource for use with Load Balancer resources.
 
 > **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ test = aws.lb.TargetGroup("test",
     protocol="HTTP",
     vpc_id=main.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,6 +107,7 @@ const test = new aws.lb.TargetGroup("test", {
     vpcId: main.id,
 });
 ```
+
 {{% /example %}}
 
 ### IP Target Group
@@ -131,6 +135,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -149,9 +154,11 @@ ip_example = aws.lb.TargetGroup("ip-example",
     target_type="ip",
     vpc_id=main.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -166,6 +173,7 @@ const ip_example = new aws.lb.TargetGroup("ip-example", {
     vpcId: main.id,
 });
 ```
+
 {{% /example %}}
 
 ### Lambda Target Group
@@ -186,6 +194,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -199,9 +208,11 @@ import pulumi_aws as aws
 
 lambda_example = aws.lb.TargetGroup("lambda-example", target_type="lambda")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -210,6 +221,7 @@ const lambda_example = new aws.lb.TargetGroup("lambda-example", {
     targetType: "lambda",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

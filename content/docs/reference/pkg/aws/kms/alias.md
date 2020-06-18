@@ -14,7 +14,6 @@ Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 map
 but API (hence this provider too) allows you to create as many aliases as
 the [account limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits.html) allow you.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ import pulumi_aws as aws
 key = aws.kms.Key("key")
 alias = aws.kms.Alias("alias", target_key_id=key.key_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,6 +92,7 @@ const alias = new aws.kms.Alias("a", {
     targetKeyId: key.keyId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

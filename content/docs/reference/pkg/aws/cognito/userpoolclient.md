@@ -12,7 +12,6 @@ meta_desc: "Explore the UserPoolClient resource of the cognito module, including
 
 Provides a Cognito User Pool Client resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ import pulumi_aws as aws
 pool = aws.cognito.UserPool("pool")
 client = aws.cognito.UserPoolClient("client", user_pool_id=pool.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const client = new aws.cognito.UserPoolClient("client", {
     userPoolId: pool.id,
 });
 ```
+
 {{% /example %}}
 
 ### Create a user pool client with no SRP authentication
@@ -115,6 +119,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -146,6 +151,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -159,9 +165,11 @@ client = aws.cognito.UserPoolClient("client",
     generate_secret=True,
     user_pool_id=pool.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -173,6 +181,7 @@ const client = new aws.cognito.UserPoolClient("client", {
     userPoolId: pool.id,
 });
 ```
+
 {{% /example %}}
 
 ### Create a user pool client with pinpoint analytics
@@ -249,6 +258,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -304,9 +314,11 @@ test_user_pool_client = aws.cognito.UserPoolClient("testUserPoolClient",
     },
     user_pool_id=test_user_pool.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -357,6 +369,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
     userPoolId: testUserPool.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

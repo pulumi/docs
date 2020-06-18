@@ -12,7 +12,6 @@ meta_desc: "Explore the ReplicationInstance resource of the dms module, includin
 
 Provides a DMS (Data Migration Service) replication instance resource. DMS replication instances can be created, updated, deleted, and imported.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -106,6 +105,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -155,9 +155,11 @@ test = aws.dms.ReplicationInstance("test",
     },
     vpc_security_group_ids=["sg-12345678"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -212,6 +214,7 @@ const test = new aws.dms.ReplicationInstance("test", {
     vpcSecurityGroupIds: ["sg-12345678"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

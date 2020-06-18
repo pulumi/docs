@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDocument function of the ssm module, including exampl
 
 Gets the contents of the specified Systems Manager document.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> Content { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ foo = aws.ssm.get_document(document_format="YAML",
     name="AWS-GatherSoftwareInventory")
 pulumi.export("content", foo.content)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +91,7 @@ const foo = pulumi.output(aws.ssm.getDocument({
 
 export const content = foo.content;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

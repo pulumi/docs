@@ -13,6 +13,7 @@ meta_desc: "Explore the EndpointSliceList resource of the discovery.k8s.io/v1bet
 EndpointSliceList represents a list of endpoint slices
 
 
+
 ## Create a EndpointSliceList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

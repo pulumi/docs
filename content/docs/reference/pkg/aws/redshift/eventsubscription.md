@@ -11,8 +11,6 @@ meta_desc: "Explore the EventSubscription resource of the redshift module, inclu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Redshift event subscription resource.
-
-
 ## Attributes
 
 The following additional atttributes are provided:
@@ -68,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -117,6 +116,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -143,9 +143,11 @@ default_event_subscription = aws.redshift.EventSubscription("defaultEventSubscri
         "Name": "default",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -171,6 +173,7 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

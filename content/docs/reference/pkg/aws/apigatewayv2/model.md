@@ -12,9 +12,6 @@ meta_desc: "Explore the Model resource of the apigatewayv2 module, including exa
 
 Manages an Amazon API Gateway Version 2 [model](https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models).
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a Model Resource {#create}

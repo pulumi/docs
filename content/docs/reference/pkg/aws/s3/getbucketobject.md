@@ -15,7 +15,6 @@ _optionally_ (see below) content of an object stored inside S3 bucket.
 
 > **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -91,9 +92,11 @@ example = aws.ec2.Instance("example",
     instance_type="t2.micro",
     user_data=bootstrap_script.body)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +111,7 @@ const example = new aws.ec2.Instance("example", {
     userData: bootstrapScript.body,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the AccessPoint resource of the s3 module, including example
 
 Provides a resource to manage an S3 Access Point.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ import pulumi_aws as aws
 example_bucket = aws.s3.Bucket("exampleBucket")
 example_access_point = aws.s3.AccessPoint("exampleAccessPoint", bucket=example_bucket.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -85,6 +88,7 @@ import * as aws from "@pulumi/aws";
 const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
 const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {bucket: exampleBucket.id});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

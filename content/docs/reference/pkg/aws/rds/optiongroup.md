@@ -17,7 +17,6 @@ Provides an RDS DB option group resource. Documentation of the available options
 * [MySQL Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html)
 * [Oracle Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -73,6 +72,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -121,6 +121,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -152,9 +153,11 @@ example = aws.rds.OptionGroup("example",
     ],
     option_group_description="Option Group")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -184,6 +187,7 @@ const example = new aws.rds.OptionGroup("example", {
     optionGroupDescription: "Option Group",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

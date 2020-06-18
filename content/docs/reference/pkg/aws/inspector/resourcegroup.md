@@ -12,7 +12,6 @@ meta_desc: "Explore the ResourceGroup resource of the inspector module, includin
 
 Provides an Amazon Inspector resource group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = aws.inspector.ResourceGroup("example", tags={
     "Name": "foo",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const example = new aws.inspector.ResourceGroup("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

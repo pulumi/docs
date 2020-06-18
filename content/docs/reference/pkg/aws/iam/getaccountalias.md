@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAccountAlias function of the iam module, including ex
 The IAM Account Alias data source allows access to the account alias
 for the effective account in which this provider is working.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
     public Output<string> AccountId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +50,11 @@ import pulumi_aws as aws
 current = aws.iam.get_account_alias()
 pulumi.export("accountId", current.account_alias)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -61,6 +63,7 @@ const current = pulumi.output(aws.iam.getAccountAlias({ async: true }));
 
 export const accountId = current.accountAlias;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

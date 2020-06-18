@@ -12,7 +12,6 @@ meta_desc: "Explore the GetCustomerGateway function of the ec2 module, including
 
 Get an existing AWS Customer Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,6 +103,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -123,9 +124,11 @@ transit = aws.ec2.VpnConnection("transit",
     type=foo.type,
     vpn_gateway_id=main.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -147,6 +150,7 @@ const transit = new aws.ec2.VpnConnection("transit", {
     vpnGatewayId: main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

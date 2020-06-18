@@ -15,7 +15,6 @@ EC2-Classic Platform. For instances inside a VPC, use the
 `aws_db_instance.vpc_security_group_ids`
 attribute instead.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +59,11 @@ default = aws.rds.SecurityGroup("default", ingress=[{
     "cidr": "10.0.0.0/24",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,6 +74,7 @@ const defaultSecurityGroup = new aws.rds.SecurityGroup("default", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

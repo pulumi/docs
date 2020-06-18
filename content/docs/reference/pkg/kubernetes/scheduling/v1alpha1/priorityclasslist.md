@@ -13,6 +13,7 @@ meta_desc: "Explore the PriorityClassList resource of the scheduling.k8s.io/v1al
 PriorityClassList is a collection of priority classes.
 
 
+
 ## Create a PriorityClassList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -14,7 +14,6 @@ Provides an API Gateway API Key.
 
 > **NOTE:** Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now **required** to associate an API key with an API stage.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,15 +67,18 @@ import pulumi_aws as aws
 
 my_demo_api_key = aws.apigateway.ApiKey("myDemoApiKey")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const myDemoApiKey = new aws.apigateway.ApiKey("MyDemoApiKey", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

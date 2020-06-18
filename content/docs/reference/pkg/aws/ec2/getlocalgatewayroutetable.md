@@ -15,7 +15,6 @@ Provides details about an EC2 Local Gateway Route Table.
 This data source can prove useful when a module accepts a local gateway route table id as
 an input variable and needs to, for example, find the associated Outpost or Local Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -73,9 +74,11 @@ config = pulumi.Config()
 aws_ec2_local_gateway_route_table = config.require_object("awsEc2LocalGatewayRouteTable")
 selected = aws.ec2.get_local_gateway_route_table(local_gateway_route_table_id=aws_ec2_local_gateway_route_table)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const selected = pulumi.output(aws.ec2.getLocalGatewayRouteTable({
     localGatewayRouteTableId: awsEc2LocalGatewayRouteTable,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

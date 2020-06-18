@@ -12,7 +12,6 @@ meta_desc: "Explore the App resource of the pinpoint module, including examples,
 
 Provides a Pinpoint App resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ example = aws.pinpoint.App("example",
         "start": "00:00",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -105,6 +108,7 @@ const example = new aws.pinpoint.App("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

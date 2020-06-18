@@ -12,7 +12,6 @@ meta_desc: "Explore the EndpointConfiguration resource of the sagemaker module, 
 
 Provides a SageMaker endpoint configuration resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,6 +81,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ ec = aws.sagemaker.EndpointConfiguration("ec",
         "Name": "foo",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -118,6 +121,7 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

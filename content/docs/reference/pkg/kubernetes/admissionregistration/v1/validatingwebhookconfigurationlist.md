@@ -13,6 +13,7 @@ meta_desc: "Explore the ValidatingWebhookConfigurationList resource of the admis
 ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 
 
+
 ## Create a ValidatingWebhookConfigurationList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

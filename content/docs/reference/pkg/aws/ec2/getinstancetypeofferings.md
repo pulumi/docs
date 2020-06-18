@@ -12,7 +12,6 @@ meta_desc: "Explore the GetInstanceTypeOfferings function of the ec2 module, inc
 
 Information about EC2 Instance Type Offerings.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,6 +92,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +115,11 @@ example = aws.ec2.get_instance_type_offerings(filters=[
     ],
     location_type="availability-zone-id")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -138,6 +141,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOfferings({
     locationType: "availability-zone-id",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Domain resource of the elasticsearch module, including e
 
 Manages an AWS Elasticsearch Domain.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -98,9 +99,11 @@ example = aws.elasticsearch.Domain("example",
         "Domain": "TestDomain",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -118,6 +121,7 @@ const example = new aws.elasticsearch.Domain("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Access Policy
@@ -162,6 +166,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -196,9 +201,11 @@ example = aws.elasticsearch.Domain("example", access_policies=f"""{{
 
 """)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -226,6 +233,7 @@ const example = new aws.elasticsearch.Domain("example", {
 `,
 });
 ```
+
 {{% /example %}}
 
 ### VPC based ES
@@ -334,6 +342,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -404,9 +413,11 @@ es_domain = aws.elasticsearch.Domain("esDomain",
         ],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -476,6 +487,7 @@ const esDomain = new aws.elasticsearch.Domain("es", {
     },
 }, { dependsOn: [esServiceLinkedRole] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

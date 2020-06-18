@@ -12,7 +12,6 @@ meta_desc: "Explore the ParameterGroup resource of the neptune module, including
 
 Manages a Neptune Parameter Group
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +87,11 @@ example = aws.neptune.ParameterGroup("example",
         "value": "25",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -101,6 +104,7 @@ const example = new aws.neptune.ParameterGroup("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Secret resource of the secretsmanager module, including 
 
 Provides a resource to manage AWS Secrets Manager secret metadata. To manage a secret value, see the `aws.secretsmanager.SecretVersion` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,6 +55,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,15 +65,18 @@ import pulumi_aws as aws
 
 example = aws.secretsmanager.Secret("example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.secretsmanager.Secret("example", {});
 ```
+
 {{% /example %}}
 
 ### Rotation Configuration
@@ -97,6 +101,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -114,9 +119,11 @@ rotation_example = aws.secretsmanager.Secret("rotation-example",
         "automaticallyAfterDays": 7,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -128,6 +135,7 @@ const rotation_example = new aws.secretsmanager.Secret("rotation-example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

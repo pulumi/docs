@@ -20,8 +20,6 @@ provides both a standalone ELB Attachment resource
 `instances` defined in-line. At this time you cannot use an ELB with in-line
 instances in conjunction with a ELB Attachment resources. Doing so will cause a
 conflict and will overwrite attachments.
-
-
 ## Note on ECDSA Key Algorithm
 
 If the ARN of the `ssl_certificate_id` that is pointed to references a
@@ -102,6 +100,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -156,9 +155,11 @@ bar = aws.elb.LoadBalancer("bar",
         "Name": "foobar-elb",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -207,6 +208,7 @@ const bar = new aws.elb.LoadBalancer("bar", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

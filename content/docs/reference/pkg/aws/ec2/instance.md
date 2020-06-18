@@ -13,7 +13,6 @@ meta_desc: "Explore the Instance resource of the ec2 module, including examples,
 Provides an EC2 instance resource. This allows instances to be created, updated,
 and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,9 +98,11 @@ web = aws.ec2.Instance("web",
         "Name": "HelloWorld",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -127,6 +129,7 @@ const web = new aws.ec2.Instance("web", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Provides a CodePipeline.
 
 > **NOTE on `aws.codepipeline.Pipeline`:** - the `GITHUB_TOKEN` environment variable must be set if the GitHub provider is specified.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -191,6 +190,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -310,9 +310,11 @@ codepipeline = aws.codepipeline.Pipeline("codepipeline",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -431,6 +433,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

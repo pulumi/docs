@@ -16,7 +16,6 @@ This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +94,11 @@ route = aws.ec2.Route("route",
     route_table_id=selected.id,
     vpc_peering_connection_id="pcx-45ff3dc1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -112,6 +115,7 @@ const route = new aws.ec2.Route("route", {
     vpcPeeringConnectionId: "pcx-45ff3dc1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

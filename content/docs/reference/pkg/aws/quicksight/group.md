@@ -12,7 +12,6 @@ meta_desc: "Explore the Group resource of the quicksight module, including examp
 
 Resource for managing QuickSight Group
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_aws as aws
 
 example = aws.quicksight.Group("example", group_name="tf-example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +81,7 @@ const example = new aws.quicksight.Group("example", {
     groupName: "tf-example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

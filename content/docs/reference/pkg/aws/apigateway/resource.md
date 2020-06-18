@@ -12,7 +12,6 @@ meta_desc: "Explore the Resource resource of the apigateway module, including ex
 
 Provides an API Gateway Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +86,11 @@ my_demo_resource = aws.apigateway.Resource("myDemoResource",
     path_part="mydemoresource",
     rest_api=my_demo_api.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -101,6 +104,7 @@ const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
     restApi: myDemoAPI.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

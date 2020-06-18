@@ -12,7 +12,6 @@ meta_desc: "Explore the WebAcl resource of the waf module, including examples, i
 
 Provides a WAF Web ACL Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -76,6 +75,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -136,6 +136,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -168,9 +169,11 @@ waf_acl = aws.waf.WebAcl("wafAcl",
         "type": "REGULAR",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -204,6 +207,7 @@ const wafAcl = new aws.waf.WebAcl("waf_acl", {
     }],
 }, { dependsOn: [ipset, wafrule] });
 ```
+
 {{% /example %}}
 
 ### Logging
@@ -242,6 +246,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -278,6 +283,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -300,9 +306,11 @@ example = aws.waf.WebAcl("example", logging_configuration={
     },
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -325,6 +333,7 @@ const example = new aws.waf.WebAcl("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

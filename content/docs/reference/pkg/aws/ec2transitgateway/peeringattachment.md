@@ -13,7 +13,6 @@ meta_desc: "Explore the PeeringAttachment resource of the ec2transitgateway modu
 Manages an EC2 Transit Gateway Peering Attachment.
 For examples of custom route table association and propagation, see the [EC2 Transit Gateway Networking Examples Guide](https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -66,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,9 +96,11 @@ example = aws.ec2transitgateway.PeeringAttachment("example",
         "Name": "TGW Peering Requestor",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -122,6 +124,7 @@ const example = new aws.ec2transitgateway.PeeringAttachment("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

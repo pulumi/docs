@@ -12,7 +12,6 @@ meta_desc: "Explore the Workgroup resource of the athena module, including examp
 
 Provides an Athena Workgroup.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,6 +81,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -100,9 +101,11 @@ example = aws.athena.Workgroup("example", configuration={
     },
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -121,6 +124,7 @@ const example = new aws.athena.Workgroup("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -18,7 +18,6 @@ The requester can use the `aws.ec2transitgateway.VpcAttachment` resource to mana
 and the accepter can use the `aws.ec2transitgateway.VpcAttachmentAccepter` resource to "adopt" its side of the
 connection into management.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,9 +85,11 @@ example = aws.ec2transitgateway.VpcAttachmentAccepter("example",
     },
     transit_gateway_attachment_id=aws_ec2_transit_gateway_vpc_attachment["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -98,6 +101,7 @@ const example = new aws.ec2transitgateway.VpcAttachmentAccepter("example", {
     transitGatewayAttachmentId: aws_ec2_transit_gateway_vpc_attachment_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

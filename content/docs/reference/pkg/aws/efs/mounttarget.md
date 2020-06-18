@@ -12,7 +12,6 @@ meta_desc: "Explore the MountTarget resource of the efs module, including exampl
 
 Provides an Elastic File System (EFS) mount target.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ alpha_mount_target = aws.efs.MountTarget("alphaMountTarget",
     file_system_id=aws_efs_file_system["foo"]["id"],
     subnet_id=alpha_subnet.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -121,6 +124,7 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
     subnetId: alphaSubnet.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

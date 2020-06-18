@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRegions function of the AWS package, including exampl
 
 Provides information about AWS Regions. Can be used to filter regions i.e. by Opt-In status or only regions enabled for current account. To get details like endpoint and description of each region the data source can be combined with the `aws.getRegion` data source.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -32,6 +31,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -45,15 +45,18 @@ import pulumi_aws as aws
 
 current = aws.get_regions()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const current = pulumi.output(aws.getRegions({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

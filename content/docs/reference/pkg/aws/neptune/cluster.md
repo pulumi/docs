@@ -20,7 +20,6 @@ phase because a modification has not yet taken place. You can use the
 `apply_immediately` flag to instruct the service to apply the change immediately
 (see documentation below).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +69,11 @@ default = aws.neptune.Cluster("default",
     preferred_backup_window="07:00-09:00",
     skip_final_snapshot=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -86,6 +88,7 @@ const defaultCluster = new aws.neptune.Cluster("default", {
     skipFinalSnapshot: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

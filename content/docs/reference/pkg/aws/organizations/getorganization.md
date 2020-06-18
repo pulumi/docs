@@ -12,7 +12,6 @@ meta_desc: "Explore the GetOrganization function of the organizations module, in
 
 Get information about the organization that the user's account belongs to
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
     public Output<string> AccountIds { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +50,11 @@ import pulumi_aws as aws
 example = aws.organizations.get_organization()
 pulumi.export("accountIds", [__item["id"] for __item in example.accounts])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -60,6 +62,7 @@ import * as aws from "@pulumi/aws";
 const example = aws.organizations.getOrganization({});
 export const accountIds = example.then(example => example.accounts.map(__item => __item.id));
 ```
+
 {{% /example %}}
 
 ### SNS topic that can be interacted by the organization only
@@ -132,6 +135,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -166,9 +170,11 @@ sns_topic_policy_topic_policy = aws.sns.TopicPolicy("snsTopicPolicyTopicPolicy",
     arn=sns_topic.arn,
     policy=sns_topic_policy_policy_document.json)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -199,6 +205,7 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
     policy: snsTopicPolicyPolicyDocument.json,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

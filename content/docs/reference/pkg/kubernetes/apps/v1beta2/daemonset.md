@@ -11,6 +11,7 @@ meta_desc: "Explore the DaemonSet resource of the apps/v1beta2 module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 DaemonSet represents the configuration of a daemon set.
+
 <p class="resource-deprecated">Deprecated: {{% md %}}apps/v1beta2/DaemonSet is deprecated by apps/v1/DaemonSet and not supported by Kubernetes v1.16&#43; clusters.{{% /md %}}</p>
 
 

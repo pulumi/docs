@@ -14,7 +14,6 @@ Provides a DMS (Data Migration Service) endpoint resource. DMS endpoints can be 
 
 > **Note:** All arguments including the password will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -115,9 +116,11 @@ test = aws.dms.Endpoint("test",
     },
     username="test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -141,6 +144,7 @@ const test = new aws.dms.Endpoint("test", {
     username: "test",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

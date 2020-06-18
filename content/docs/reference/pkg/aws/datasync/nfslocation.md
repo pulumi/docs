@@ -14,7 +14,6 @@ Manages an NFS Location within AWS DataSync.
 
 > **NOTE:** The DataSync Agents must be available before creating this resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,6 +74,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ example = aws.datasync.NfsLocation("example",
     server_hostname="nfs.example.com",
     subdirectory="/exported/path")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -103,6 +106,7 @@ const example = new aws.datasync.NfsLocation("example", {
     subdirectory: "/exported/path",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

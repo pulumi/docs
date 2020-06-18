@@ -14,8 +14,6 @@ Provides a AWS Transfer User resource. Managing SSH keys can be accomplished wit
 
 
 
-
-
 ## Create a User Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

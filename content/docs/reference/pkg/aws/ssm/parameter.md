@@ -12,7 +12,6 @@ meta_desc: "Explore the Parameter resource of the ssm module, including examples
 
 Provides an SSM Parameter resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ foo = aws.ssm.Parameter("foo",
     type="String",
     value="bar")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const foo = new aws.ssm.Parameter("foo", {
     value: "bar",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

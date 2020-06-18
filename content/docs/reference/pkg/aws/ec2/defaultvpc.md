@@ -21,7 +21,6 @@ The `aws.ec2.DefaultVpc` behaves differently from normal resources, in that
 this provider does not _create_ this resource, but instead "adopts" it
 into management.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +62,11 @@ default = aws.ec2.DefaultVpc("default", tags={
     "Name": "Default VPC",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -75,6 +77,7 @@ const defaultDefaultVpc = new aws.ec2.DefaultVpc("default", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the PrivateVirtualInterface resource of the directconnect mo
 
 Provides a Direct Connect private virtual interface resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ foo = aws.directconnect.PrivateVirtualInterface("foo",
     connection_id="dxcon-zzzzzzzz",
     vlan=4094)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const foo = new aws.directconnect.PrivateVirtualInterface("foo", {
     vlan: 4094,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

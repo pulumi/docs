@@ -11,8 +11,6 @@ meta_desc: "Explore the Rule resource of the wafregional module, including examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an WAF Regional Rule Resource for use with Application Load Balancer.
-
-
 ## Nested Fields
 
 ### `predicate`
@@ -67,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,6 +107,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -127,9 +127,11 @@ wafrule = aws.wafregional.Rule("wafrule",
         "type": "IPMatch",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -149,6 +151,7 @@ const wafrule = new aws.wafregional.Rule("wafrule", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

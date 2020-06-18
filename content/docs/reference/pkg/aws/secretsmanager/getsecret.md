@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSecret function of the secretsmanager module, includi
 
 Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion`.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_aws as aws
 
 by_arn = aws.secretsmanager.get_secret(arn="arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,6 +61,7 @@ const by_arn = pulumi.output(aws.secretsmanager.getSecret({
     arn: "arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Name
@@ -79,6 +82,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,9 +96,11 @@ import pulumi_aws as aws
 
 by_name = aws.secretsmanager.get_secret(name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -103,6 +109,7 @@ const by_name = pulumi.output(aws.secretsmanager.getSecret({
     name: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

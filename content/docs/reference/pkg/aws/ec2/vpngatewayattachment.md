@@ -17,7 +17,6 @@ hardware VPN gateway to be attached and/or detached from a VPC.
 resource can also automatically attach the Virtual Private Gateway it creates
 to an existing VPC by setting the `vpc_id` attribute accordingly.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ vpn_attachment = aws.ec2.VpnGatewayAttachment("vpnAttachment",
     vpc_id=network.id,
     vpn_gateway_id=vpn.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -125,6 +128,7 @@ const vpnAttachment = new aws.ec2.VpnGatewayAttachment("vpn_attachment", {
     vpnGatewayId: vpn.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

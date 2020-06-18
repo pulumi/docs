@@ -12,7 +12,6 @@ meta_desc: "Explore the ConnectionAssociation resource of the directconnect modu
 
 Associates a Direct Connect Connection with a LAG.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -84,6 +84,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ example_connection_association = aws.directconnect.ConnectionAssociation("exampl
     connection_id=example_connection.id,
     lag_id=example_link_aggregation_group.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -121,6 +124,7 @@ const exampleConnectionAssociation = new aws.directconnect.ConnectionAssociation
     lagId: exampleLinkAggregationGroup.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

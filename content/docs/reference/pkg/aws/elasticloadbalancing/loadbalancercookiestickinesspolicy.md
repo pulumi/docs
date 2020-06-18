@@ -12,7 +12,6 @@ meta_desc: "Explore the LoadBalancerCookieStickinessPolicy resource of the elast
 
 Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -115,9 +116,11 @@ foo = aws.elb.LoadBalancerCookieStickinessPolicy("foo",
     lb_port=80,
     load_balancer=lb.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -137,6 +140,7 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
     loadBalancer: lb.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

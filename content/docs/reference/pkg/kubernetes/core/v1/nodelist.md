@@ -13,6 +13,7 @@ meta_desc: "Explore the NodeList resource of the core/v1 module, including examp
 NodeList is the whole list of all Nodes which have been registered with master.
 
 
+
 ## Create a NodeList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

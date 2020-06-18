@@ -12,7 +12,6 @@ meta_desc: "Explore the ClusterSnapshot resource of the neptune module, includin
 
 Manages a Neptune database cluster snapshot.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ example = aws.neptune.ClusterSnapshot("example",
     db_cluster_identifier=aws_neptune_cluster["example"]["id"],
     db_cluster_snapshot_identifier="resourcetestsnapshot1234")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const example = new aws.neptune.ClusterSnapshot("example", {
     dbClusterSnapshotIdentifier: "resourcetestsnapshot1234",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Repository resource of the ecr module, including example
 
 Provides an Elastic Container Registry Repository.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ foo = aws.ecr.Repository("foo",
     },
     image_tag_mutability="MUTABLE")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const foo = new aws.ecr.Repository("foo", {
     imageTagMutability: "MUTABLE",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

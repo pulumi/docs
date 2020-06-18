@@ -12,7 +12,6 @@ meta_desc: "Explore the RuleGroup resource of the wafregional module, including 
 
 Provides a WAF Regional Rule Group Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -107,9 +108,11 @@ example_rule_group = aws.wafregional.RuleGroup("exampleRuleGroup",
     }],
     metric_name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -128,6 +131,7 @@ const exampleRuleGroup = new aws.wafregional.RuleGroup("example", {
     metricName: "example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

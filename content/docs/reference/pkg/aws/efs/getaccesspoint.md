@@ -12,7 +12,6 @@ meta_desc: "Explore the GetAccessPoint function of the efs module, including exa
 
 Provides information about an Elastic File System (EFS) Access Point.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 test = aws.efs.get_access_point(access_point_id="fsap-12345678")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const test = pulumi.output(aws.efs.getAccessPoint({
     accessPointId: "fsap-12345678",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

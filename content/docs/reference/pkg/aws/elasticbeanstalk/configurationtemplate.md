@@ -13,8 +13,6 @@ meta_desc: "Explore the ConfigurationTemplate resource of the elasticbeanstalk m
 Provides an Elastic Beanstalk Configuration Template, which are associated with
 a specific application and are used to deploy different versions of the
 application with the same configuration settings.
-
-
 ## Option Settings
 
 The `setting` field supports the following format:
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +93,11 @@ tf_template = aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate",
     application=tftest.name,
     solution_stack_name="64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +110,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tf_template",
     solutionStackName: "64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

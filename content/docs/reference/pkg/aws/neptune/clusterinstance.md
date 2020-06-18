@@ -15,8 +15,6 @@ A Cluster Instance Resource defines attributes that are specific to a single ins
 You can simply add neptune instances and Neptune manages the replication. You can use the [count](https://www.terraform.io/docs/configuration/resources.html#count)
 meta-parameter to make multiple instances and join them all to the same Neptune Cluster, or you may specify different Cluster Instance resources with various `instance_class` sizes.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,9 +84,11 @@ for range in [{"value": i} for i in range(0, 2)]:
         engine="neptune",
         instance_class="db.r4.large"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -111,6 +112,7 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

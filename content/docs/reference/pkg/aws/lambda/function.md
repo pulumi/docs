@@ -15,8 +15,6 @@ Provides a Lambda Function resource. Lambda allows you to trigger execution of c
 For information about Lambda and how to use it, see [What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
 
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
-
-
 ## Specifying the Deployment Package
 
 AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which `runtime` is in use.
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +86,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +97,11 @@ import pulumi_aws as aws
 example_layer_version = aws.lambda_.LayerVersion("exampleLayerVersion")
 example_function = aws.lambda_.Function("exampleFunction", layers=[example_layer_version.arn])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,6 +112,7 @@ const exampleFunction = new aws.lambda.Function("example", {
     layers: [exampleLayerVersion.arn],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

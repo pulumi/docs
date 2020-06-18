@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPeeringAttachment function of the ec2transitgateway m
 
 Get information on an EC2 Transit Gateway Peering Attachment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,6 +74,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +87,11 @@ example = aws.ec2transitgateway.get_peering_attachment(filters=[{
     "values": ["tgw-attach-12345678"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -100,6 +103,7 @@ const example = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### By Identifier
@@ -120,6 +124,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -142,6 +147,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -151,9 +157,11 @@ import pulumi_aws as aws
 
 attachment = aws.ec2transitgateway.get_peering_attachment(id="tgw-attach-12345678")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -162,6 +170,7 @@ const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
     id: "tgw-attach-12345678",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

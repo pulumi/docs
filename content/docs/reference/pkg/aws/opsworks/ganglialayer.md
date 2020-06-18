@@ -12,7 +12,6 @@ meta_desc: "Explore the GangliaLayer resource of the opsworks module, including 
 
 Provides an OpsWorks Ganglia layer resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ monitor = aws.opsworks.GangliaLayer("monitor",
     password="foobarbaz",
     stack_id=aws_opsworks_stack["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const monitor = new aws.opsworks.GangliaLayer("monitor", {
     stackId: aws_opsworks_stack_main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

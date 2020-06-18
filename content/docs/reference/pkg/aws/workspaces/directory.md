@@ -12,7 +12,6 @@ meta_desc: "Explore the Directory resource of the workspaces module, including e
 
 Provides a directory registration in AWS WorkSpaces Service
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,6 +69,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,9 +107,11 @@ main_workspaces_directory_directory = aws.workspaces.Directory("mainWorkspaces/d
         "rebuildWorkspace": True,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -146,6 +148,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

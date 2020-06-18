@@ -18,7 +18,6 @@ or to make it easier for an operator to connect through bastion host(s).
 instances (e.g. managed via autoscaling group), as the output may change at any time
 and you'd need to re-run `apply` every time an instance comes up or dies.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -80,6 +79,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -106,9 +106,11 @@ test_eip = []
 for range in [{"value": i} for i in range(0, len(test_instances.ids))]:
     test_eip.append(aws.ec2.Eip(f"testEip-{range['value']}", instance=test_instances.ids[range["value"]]))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -133,6 +135,7 @@ for (let i = 0; i < testInstances.apply(testInstances => testInstances.ids.lengt
     }));
 }
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,6 +13,7 @@ meta_desc: "Explore the ClusterRoleBindingList resource of the rbac.authorizatio
 ClusterRoleBindingList is a collection of ClusterRoleBindings. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoleBindings, and will no longer be served in v1.20.
 
 
+
 ## Create a ClusterRoleBindingList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

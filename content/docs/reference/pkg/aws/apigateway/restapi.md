@@ -14,7 +14,6 @@ Provides an API Gateway REST API.
 
 > **Note:** Amazon API Gateway Version 1 resources are used for creating and deploying REST APIs. To create and deploy WebSocket and HTTP APIs, use Amazon API Gateway Version 2.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_aws as aws
 
 my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -80,6 +83,7 @@ const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
     description: "This is my API for demonstration purposes",
 });
 ```
+
 {{% /example %}}
 
 ### Regional Endpoint Type
@@ -103,6 +107,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -128,6 +133,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -139,9 +145,11 @@ example = aws.apigateway.RestApi("example", endpoint_configuration={
     "types": "REGIONAL",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -152,6 +160,7 @@ const example = new aws.apigateway.RestApi("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

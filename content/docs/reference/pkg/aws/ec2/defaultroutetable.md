@@ -41,8 +41,6 @@ defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite routes.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -73,6 +71,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,9 +90,11 @@ default_route_table = aws.ec2.DefaultRouteTable("defaultRouteTable",
         "Name": "default table",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -106,6 +107,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

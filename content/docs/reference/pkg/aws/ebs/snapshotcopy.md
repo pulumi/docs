@@ -12,7 +12,6 @@ meta_desc: "Explore the SnapshotCopy resource of the ebs module, including examp
 
 Creates a Snapshot of a snapshot.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,6 +103,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -128,9 +129,11 @@ example_copy = aws.ebs.SnapshotCopy("exampleCopy",
         "Name": "HelloWorld_copy_snap",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -156,6 +159,7 @@ const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -18,7 +18,6 @@ disassociate Elastic IPs from AWS Instances and Network Interfaces.
 > **NOTE:** `aws.ec2.EipAssociation` is useful in scenarios where EIPs are either
 pre-existing or distributed to customers or users and therefore cannot be changed.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +97,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +117,11 @@ eip_assoc = aws.ec2.EipAssociation("eipAssoc",
     allocation_id=example.id,
     instance_id=web.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -139,6 +142,7 @@ const eipAssoc = new aws.ec2.EipAssociation("eip_assoc", {
     instanceId: web.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

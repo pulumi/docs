@@ -12,7 +12,6 @@ meta_desc: "Explore the EventSubscription resource of the dms module, including 
 
 Provides a DMS (Data Migration Service) event subscription resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +74,11 @@ example = aws.dms.EventSubscription("example",
         "Name": "example",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -95,6 +97,7 @@ const example = new aws.dms.EventSubscription("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

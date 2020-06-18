@@ -13,8 +13,6 @@ meta_desc: "Explore the ClusterEndpoint resource of the rds module, including ex
 Manages an RDS Aurora Cluster Endpoint.
 You can refer to the [User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -91,6 +89,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -146,9 +145,11 @@ static = aws.rds.ClusterEndpoint("static",
         test3.id,
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -203,6 +204,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

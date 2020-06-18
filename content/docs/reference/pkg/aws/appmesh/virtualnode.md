@@ -23,7 +23,6 @@ setting `virtual_service_name` to the name of the service.
 
 The state associated with existing resources will automatically be migrated.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -74,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -117,6 +117,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -145,9 +146,11 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -174,6 +177,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### AWS Cloud Map Service Discovery
@@ -230,6 +234,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -282,6 +287,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -315,9 +321,11 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -349,6 +357,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Listener Health Check
@@ -406,6 +415,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -457,6 +467,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -493,9 +504,11 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -530,6 +543,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Logging
@@ -588,6 +602,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -638,6 +653,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -673,9 +689,11 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -709,6 +727,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

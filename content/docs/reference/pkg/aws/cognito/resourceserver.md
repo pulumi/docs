@@ -12,7 +12,6 @@ meta_desc: "Explore the ResourceServer resource of the cognito module, including
 
 Provides a Cognito Resource Server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ resource = aws.cognito.ResourceServer("resource",
     identifier="https://example.com",
     user_pool_id=pool.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const resource = new aws.cognito.ResourceServer("resource", {
     userPoolId: pool.id,
 });
 ```
+
 {{% /example %}}
 
 ### Create a resource server with sample-scope
@@ -124,6 +128,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -158,6 +163,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -174,9 +180,11 @@ resource = aws.cognito.ResourceServer("resource",
     }],
     user_pool_id=pool.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -191,6 +199,7 @@ const resource = new aws.cognito.ResourceServer("resource", {
     userPoolId: pool.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

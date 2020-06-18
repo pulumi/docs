@@ -12,7 +12,6 @@ meta_desc: "Explore the Association resource of the ssm module, including exampl
 
 Associates an SSM Document to an instance or EC2 tag.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +61,11 @@ example = aws.ssm.Association("example", targets=[{
     "values": [aws_instance["example"]["id"]],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -75,6 +77,7 @@ const example = new aws.ssm.Association("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

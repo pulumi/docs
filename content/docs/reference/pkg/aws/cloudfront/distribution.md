@@ -22,7 +22,6 @@ after creation or modification. During this time, deletes to resources will be
 blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the `retain_on_delete` flag.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -200,6 +199,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -353,6 +353,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -484,9 +485,11 @@ s3_distribution = aws.cloudfront.Distribution("s3Distribution",
         "cloudfrontDefaultCertificate": True,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -619,6 +622,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

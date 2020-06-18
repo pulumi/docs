@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityProvider resource of the cognito module, includi
 
 Provides a Cognito User Identity Provider resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +97,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,9 +120,11 @@ example_provider = aws.cognito.IdentityProvider("exampleProvider",
     provider_type="Google",
     user_pool_id=example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -144,6 +147,7 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
     userPoolId: example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

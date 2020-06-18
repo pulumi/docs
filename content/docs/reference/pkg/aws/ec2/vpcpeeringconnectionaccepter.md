@@ -19,7 +19,6 @@ The requester can use the `aws.ec2.VpcPeeringConnection` resource to manage its 
 and the accepter can use the `aws.ec2.VpcPeeringConnectionAccepter` resource to "adopt" its side of the
 connection into management.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -74,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,9 +108,11 @@ peer_vpc_peering_connection_accepter = aws.ec2.VpcPeeringConnectionAccepter("pee
     },
     vpc_peering_connection_id=peer_vpc_peering_connection.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -145,6 +147,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
     vpcPeeringConnectionId: peerVpcPeeringConnection.id,
 }, { provider: peer });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

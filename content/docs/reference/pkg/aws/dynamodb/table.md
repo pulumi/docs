@@ -14,7 +14,6 @@ Provides a DynamoDB table resource
 
 > **Note:** It is recommended to use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) for `read_capacity` and/or `write_capacity` if there's `autoscaling policy` attached to the table.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -85,6 +84,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -134,9 +134,11 @@ basic_dynamodb_table = aws.dynamodb.Table("basic-dynamodb-table",
     },
     write_capacity=20)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -180,6 +182,7 @@ const basic_dynamodb_table = new aws.dynamodb.Table("basic-dynamodb-table", {
     writeCapacity: 20,
 });
 ```
+
 {{% /example %}}
 
 ### Global Tables
@@ -222,6 +225,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -262,6 +266,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -287,9 +292,11 @@ example = aws.dynamodb.Table("example",
     stream_enabled=True,
     stream_view_type="NEW_AND_OLD_IMAGES")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -313,6 +320,7 @@ const example = new aws.dynamodb.Table("example", {
     streamViewType: "NEW_AND_OLD_IMAGES",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

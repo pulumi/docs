@@ -13,6 +13,7 @@ meta_desc: "Explore the HorizontalPodAutoscaler resource of the autoscaling/v1 m
 configuration of a horizontal pod autoscaler.
 
 
+
 ## Create a HorizontalPodAutoscaler Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

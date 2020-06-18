@@ -11,8 +11,6 @@ meta_desc: "Explore the GetResourceShare function of the ram module, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
-
-
 ## Search by filters
 
 ```typescript
@@ -119,6 +117,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -142,6 +141,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -152,9 +152,11 @@ import pulumi_aws as aws
 example = aws.ram.get_resource_share(name="example",
     resource_owner="SELF")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -164,6 +166,7 @@ const example = pulumi.output(aws.ram.getResourceShare({
     resourceOwner: "SELF",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

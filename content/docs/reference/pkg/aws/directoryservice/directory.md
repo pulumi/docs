@@ -14,7 +14,6 @@ Provides a Simple or Managed Microsoft directory in AWS Directory Service.
 
 > **Note:** All arguments including the password and customer username will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -124,6 +124,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -154,9 +155,11 @@ bar_directory = aws.directoryservice.Directory("barDirectory",
         "vpc_id": main.id,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -189,6 +192,7 @@ const barDirectory = new aws.directoryservice.Directory("bar", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Microsoft Active Directory (MicrosoftAD)
@@ -240,6 +244,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -298,6 +303,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -329,9 +335,11 @@ bar_directory = aws.directoryservice.Directory("barDirectory",
         "vpc_id": main.id,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -365,6 +373,7 @@ const barDirectory = new aws.directoryservice.Directory("bar", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Microsoft Active Directory Connector (ADConnector)
@@ -417,6 +426,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -476,6 +486,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -506,9 +517,11 @@ connector = aws.directoryservice.Directory("connector",
     size="Small",
     type="ADConnector")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -541,6 +554,7 @@ const connector = new aws.directoryservice.Directory("connector", {
     type: "ADConnector",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

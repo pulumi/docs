@@ -19,7 +19,6 @@ meta-parameter to make multiple instances and join them all to the same DocDB
 Cluster, or you may specify different Cluster Instance resources with various
 `instance_class` sizes.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,9 +89,11 @@ for range in [{"value": i} for i in range(0, 2)]:
         identifier=f"docdb-cluster-demo-{range['value']}",
         instance_class="db.r5.large"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -115,6 +117,7 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

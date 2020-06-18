@@ -12,7 +12,6 @@ meta_desc: "Explore the Thing resource of the iot module, including examples, in
 
 Creates and manages an AWS IoT Thing.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = aws.iot.Thing("example", attributes={
     "First": "examplevalue",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const example = new aws.iot.Thing("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

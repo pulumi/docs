@@ -13,6 +13,7 @@ meta_desc: "Explore the DaemonSet resource of the apps/v1 module, including exam
 DaemonSet represents the configuration of a daemon set.
 
 
+
 ## Create a DaemonSet Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

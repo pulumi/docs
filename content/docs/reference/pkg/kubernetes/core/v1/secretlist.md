@@ -13,6 +13,7 @@ meta_desc: "Explore the SecretList resource of the core/v1 module, including exa
 SecretList is a list of Secret.
 
 
+
 ## Create a SecretList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

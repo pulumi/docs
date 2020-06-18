@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDetector function of the guardduty module, including 
 
 Retrieve information about a GuardDuty detector.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -32,6 +31,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -45,15 +45,18 @@ import pulumi_aws as aws
 
 example = aws.guardduty.get_detector()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.guardduty.getDetector({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the BucketPublicAccessBlock resource of the s3 module, inclu
 
 Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -82,9 +83,11 @@ example_bucket_public_access_block = aws.s3.BucketPublicAccessBlock("exampleBuck
     block_public_policy=True,
     bucket=example_bucket.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     bucket: exampleBucket.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

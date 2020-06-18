@@ -14,7 +14,6 @@ Provides a Kinesis Video Stream resource. Amazon Kinesis Video Streams makes it 
 
 For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +62,11 @@ default = aws.kinesis.VideoStream("default",
         "Name": "kinesis-video-stream",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +80,7 @@ const defaultVideoStream = new aws.kinesis.VideoStream("default", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,7 +16,6 @@ This data source can prove useful when a module accepts a coip pool id as
 an input variable and needs to, for example, determine the CIDR block of that
 COIP Pool.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ config = pulumi.Config()
 coip_pool_id = config.require_object("coipPoolId")
 selected = aws.ec2.get_coip_pool(id=coip_pool_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +91,7 @@ const selected = pulumi.output(aws.ec2.getCoipPool({
     id: coipPoolId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

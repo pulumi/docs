@@ -12,7 +12,6 @@ meta_desc: "Explore the AggregateAuthorization resource of the cfg module, inclu
 
 Manages an AWS Config Aggregate Authorization
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ example = aws.cfg.AggregateAuthorization("example",
     account_id="123456789012",
     region="eu-west-2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const example = new aws.cfg.AggregateAuthorization("example", {
     region: "eu-west-2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

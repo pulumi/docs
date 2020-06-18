@@ -12,7 +12,6 @@ meta_desc: "Explore the Volume resource of the ebs module, including examples, i
 
 Manages a single EBS volume.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +82,11 @@ example = aws.ebs.Volume("example",
         "Name": "HelloWorld",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const example = new aws.ebs.Volume("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -21,7 +21,6 @@ place. You can use the `apply_immediately` flag to instruct the service to apply
 change immediately. Using `apply_immediately` can result in a brief downtime as the server reboots.
 See the AWS Docs on [Modifying an ElastiCache Cache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Modify.html) for more information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ example = aws.elasticache.Cluster("example",
     parameter_group_name="default.memcached1.4",
     port=11211)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,6 +107,7 @@ const example = new aws.elasticache.Cluster("example", {
     port: 11211,
 });
 ```
+
 {{% /example %}}
 
 ### Redis Instance
@@ -129,6 +133,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -157,6 +162,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -172,9 +178,11 @@ example = aws.elasticache.Cluster("example",
     parameter_group_name="default.redis3.2",
     port=6379)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -188,6 +196,7 @@ const example = new aws.elasticache.Cluster("example", {
     port: 6379,
 });
 ```
+
 {{% /example %}}
 
 ### Redis Cluster Mode Disabled Read Replica Instance
@@ -208,6 +217,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -231,6 +241,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -240,9 +251,11 @@ import pulumi_aws as aws
 
 replica = aws.elasticache.Cluster("replica", replication_group_id=aws_elasticache_replication_group["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -251,6 +264,7 @@ const replica = new aws.elasticache.Cluster("replica", {
     replicationGroupId: aws_elasticache_replication_group_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

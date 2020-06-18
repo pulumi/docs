@@ -12,7 +12,6 @@ meta_desc: "Explore the OrganizationAdminAccount resource of the guardduty modul
 
 Manages a GuardDuty Organization Admin Account. The AWS account utilizing this resource must be an Organizations master account. More information about Organizations support in GuardDuty can be found in the [GuardDuty User Guide](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_organization = aws.organizations.Organization("exampleOrganization",
 example_detector = aws.guardduty.Detector("exampleDetector")
 example_organization_admin_account = aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", admin_account_id="123456789012")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,6 +113,7 @@ const exampleOrganization = new aws.organizations.Organization("exampleOrganizat
 const exampleDetector = new aws.guardduty.Detector("exampleDetector", {});
 const exampleOrganizationAdminAccount = new aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", {adminAccountId: "123456789012"});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

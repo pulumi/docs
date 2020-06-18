@@ -13,8 +13,6 @@ meta_desc: "Explore the Group resource of the autoscaling module, including exam
 Provides an AutoScaling Group resource.
 
 > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
-
-
 ## Waiting for Capacity
 
 A newly-created ASG is initially empty and begins to scale to `min_size` (or
@@ -147,6 +145,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -198,9 +197,11 @@ bar = aws.autoscaling.Group("bar",
         aws_subnet["example2"]["id"],
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -249,6 +250,7 @@ const bar = new aws.autoscaling.Group("bar", {
     delete: "15m",
 } });
 ```
+
 {{% /example %}}
 
 ### Mixed Instances Policy
@@ -304,6 +306,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -358,6 +361,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -392,9 +396,11 @@ example_group = aws.autoscaling.Group("exampleGroup",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -428,6 +434,7 @@ const exampleGroup = new aws.autoscaling.Group("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

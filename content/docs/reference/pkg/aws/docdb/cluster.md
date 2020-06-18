@@ -20,8 +20,7 @@ phase because a modification has not yet taken place. You can use the
 (see documentation below).
 
 > **Note:** using `apply_immediately` can result in a brief downtime as the server reboots.
-> **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
-
+**Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
 {{% examples %}}
 ## Example Usage
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ docdb = aws.docdb.Cluster("docdb",
     preferred_backup_window="07:00-09:00",
     skip_final_snapshot=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -113,6 +116,7 @@ const docdb = new aws.docdb.Cluster("docdb", {
     skipFinalSnapshot: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

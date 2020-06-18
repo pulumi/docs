@@ -12,7 +12,6 @@ meta_desc: "Explore the Permission resource of the opsworks module, including ex
 
 Provides an OpsWorks permission resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ my_stack_permission = aws.opsworks.Permission("myStackPermission",
     stack_id=aws_opsworks_stack["stack"]["id"],
     user_arn=aws_iam_user["user"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -95,6 +98,7 @@ const myStackPermission = new aws.opsworks.Permission("my_stack_permission", {
     userArn: aws_iam_user_user.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -26,7 +26,6 @@ brief downtime as the broker reboots.
 
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,6 +108,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -130,9 +131,11 @@ example = aws.mq.Broker("example",
         "username": "ExampleUser",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -153,6 +156,7 @@ const example = new aws.mq.Broker("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the FargateProfile resource of the eks module, including exa
 
 Manages an EKS Fargate Profile.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -84,9 +84,11 @@ example__amazon_eks_fargate_pod_execution_role_policy = aws.iam.RolePolicyAttach
     policy_arn="arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy",
     role=example.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -106,6 +108,7 @@ const example_AmazonEKSFargatePodExecutionRolePolicy = new aws.iam.RolePolicyAtt
     role: example.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

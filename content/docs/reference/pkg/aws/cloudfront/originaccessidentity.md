@@ -16,8 +16,6 @@ For information about CloudFront distributions, see the
 [Amazon CloudFront Developer Guide](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html). For more information on generating
 origin access identities, see
 [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].
-
-
 ## Using With CloudFront
 
 Normally, when referencing an origin access identity in CloudFront, you need to
@@ -214,6 +212,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -237,6 +236,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -246,9 +246,11 @@ import pulumi_aws as aws
 
 origin_access_identity = aws.cloudfront.OriginAccessIdentity("originAccessIdentity", comment="Some comment")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -257,6 +259,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     comment: "Some comment",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

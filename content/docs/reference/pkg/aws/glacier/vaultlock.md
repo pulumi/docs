@@ -16,7 +16,6 @@ Manages a Glacier Vault Lock. You can refer to the [Glacier Developer Guide](htt
 
 !> **WARNING:** Once a Glacier Vault Lock is completed, it is immutable. The deletion of the Glacier Vault Lock is not be possible and attempting to remove it from this provider will return an error. Set the `ignore_deletion_error` argument to `true` and apply this configuration before attempting to delete this resource via this provider or remove this resource from this provider's management.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -74,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -105,6 +105,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -128,9 +129,11 @@ example_vault_lock = aws.glacier.VaultLock("exampleVaultLock",
     policy=example_policy_document.json,
     vault_name=example_vault.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -154,6 +157,7 @@ const exampleVaultLock = new aws.glacier.VaultLock("example", {
     vaultName: exampleVault.name,
 });
 ```
+
 {{% /example %}}
 
 ### Permanently Applying Glacier Vault Lock Policy
@@ -176,6 +180,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -201,6 +206,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -213,9 +219,11 @@ example = aws.glacier.VaultLock("example",
     policy=data["aws_iam_policy_document"]["example"]["json"],
     vault_name=aws_glacier_vault["example"]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -226,6 +234,7 @@ const example = new aws.glacier.VaultLock("example", {
     vaultName: aws_glacier_vault_example.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

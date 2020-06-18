@@ -14,7 +14,6 @@ Manages an AWS Storage Gateway file, tape, or volume gateway in the provider reg
 
 > NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ example = aws.storagegateway.Gateway("example",
     gateway_timezone="GMT",
     gateway_type="FILE_S3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -93,6 +96,7 @@ const example = new aws.storagegateway.Gateway("example", {
     gatewayType: "FILE_S3",
 });
 ```
+
 {{% /example %}}
 
 ### Volume Gateway (Cached)
@@ -116,6 +120,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -142,6 +147,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -155,9 +161,11 @@ example = aws.storagegateway.Gateway("example",
     gateway_timezone="GMT",
     gateway_type="CACHED")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -169,6 +177,7 @@ const example = new aws.storagegateway.Gateway("example", {
     gatewayType: "CACHED",
 });
 ```
+
 {{% /example %}}
 
 ### Volume Gateway (Stored)
@@ -192,6 +201,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -218,6 +228,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -231,9 +242,11 @@ example = aws.storagegateway.Gateway("example",
     gateway_timezone="GMT",
     gateway_type="STORED")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -245,6 +258,7 @@ const example = new aws.storagegateway.Gateway("example", {
     gatewayType: "STORED",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

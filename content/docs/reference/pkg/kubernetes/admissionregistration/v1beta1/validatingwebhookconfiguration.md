@@ -13,6 +13,7 @@ meta_desc: "Explore the ValidatingWebhookConfiguration resource of the admission
 ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and object without changing it. Deprecated in v1.16, planned for removal in v1.19. Use admissionregistration.k8s.io/v1 ValidatingWebhookConfiguration instead.
 
 
+
 ## Create a ValidatingWebhookConfiguration Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

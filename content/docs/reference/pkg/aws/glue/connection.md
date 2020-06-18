@@ -12,7 +12,6 @@ meta_desc: "Explore the Connection resource of the glue module, including exampl
 
 Provides a Glue Connection resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ example = aws.glue.Connection("example", connection_properties={
     "USERNAME": "exampleusername",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -95,6 +98,7 @@ const example = new aws.glue.Connection("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

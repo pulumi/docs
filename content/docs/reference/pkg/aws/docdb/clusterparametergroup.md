@@ -12,7 +12,6 @@ meta_desc: "Explore the ClusterParameterGroup resource of the docdb module, incl
 
 Manages a DocumentDB Cluster Parameter Group
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,6 +74,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ example = aws.docdb.ClusterParameterGroup("example",
         "value": "enabled",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -105,6 +108,7 @@ const example = new aws.docdb.ClusterParameterGroup("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

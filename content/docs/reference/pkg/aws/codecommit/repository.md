@@ -12,7 +12,6 @@ meta_desc: "Explore the Repository resource of the codecommit module, including 
 
 Provides a CodeCommit Repository Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ test = aws.codecommit.Repository("test",
     description="This is the Sample App Repository",
     repository_name="MyTestRepository")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const test = new aws.codecommit.Repository("test", {
     repositoryName: "MyTestRepository",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

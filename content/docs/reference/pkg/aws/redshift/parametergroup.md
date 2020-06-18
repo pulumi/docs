@@ -12,7 +12,6 @@ meta_desc: "Explore the ParameterGroup resource of the redshift module, includin
 
 Provides a Redshift Cluster parameter group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +115,11 @@ bar = aws.redshift.ParameterGroup("bar",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -139,6 +142,7 @@ const bar = new aws.redshift.ParameterGroup("bar", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,7 +16,6 @@ To create a cross-account association, create an `aws.directconnect.GatewayAssoc
 in the AWS account that owns the VGW or transit gateway and then accept the proposal in the AWS account that owns the Direct Connect Gateway
 by creating an `aws.directconnect.GatewayAssociation` resource with the `proposal_id` and `associated_gateway_owner_account_id` attributes set.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,9 +110,11 @@ example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatew
     associated_gateway_id=example_vpn_gateway.id,
     dx_gateway_id=example_gateway.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -130,6 +133,7 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
     dxGatewayId: exampleGateway.id,
 });
 ```
+
 {{% /example %}}
 
 ### Transit Gateway Association
@@ -163,6 +167,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -202,6 +207,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -219,9 +225,11 @@ example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatew
     associated_gateway_id=example_transit_gateway.id,
     dx_gateway_id=example_gateway.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -239,6 +247,7 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
     dxGatewayId: exampleGateway.id,
 });
 ```
+
 {{% /example %}}
 
 ### Allowed Prefixes
@@ -277,6 +286,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -324,6 +334,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -342,9 +353,11 @@ example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatew
     associated_gateway_id=example_vpn_gateway.id,
     dx_gateway_id=example_gateway.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -367,6 +380,7 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
     dxGatewayId: exampleGateway.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

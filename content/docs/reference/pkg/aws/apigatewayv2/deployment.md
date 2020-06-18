@@ -15,7 +15,6 @@ More information can be found in the [Amazon API Gateway Developer Guide](https:
 
 > **Note:** Creating a deployment for an API requires at least one `aws.apigatewayv2.Route` resource associated with that API. To avoid race conditions when all resources are being created together, you need to add implicit resource references via the `triggers` argument or explicit resource references using the [resource `dependsOn` meta-argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = aws.apigatewayv2.Deployment("example",
     api_id=aws_apigatewayv2_route["example"]["api_id"],
     description="Example deployment")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -86,6 +89,7 @@ const example = new aws.apigatewayv2.Deployment("example", {
     description: "Example deployment",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Fleet resource of the gamelift module, including example
 
 Provides a Gamelift Fleet resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,6 +81,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ example = aws.gamelift.Fleet("example",
         }],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -118,6 +121,7 @@ const example = new aws.gamelift.Fleet("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

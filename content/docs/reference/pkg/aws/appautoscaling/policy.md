@@ -12,7 +12,6 @@ meta_desc: "Explore the Policy resource of the appautoscaling module, including 
 
 Provides an Application AutoScaling Policy resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -121,9 +122,11 @@ dynamodb_table_read_policy = aws.appautoscaling.Policy("dynamodbTableReadPolicy"
         "targetValue": 70,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -148,6 +151,7 @@ const dynamodbTableReadPolicy = new aws.appautoscaling.Policy("dynamodb_table_re
     },
 });
 ```
+
 {{% /example %}}
 
 ### ECS Service Autoscaling
@@ -193,6 +197,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -240,6 +245,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -268,9 +274,11 @@ ecs_policy = aws.appautoscaling.Policy("ecsPolicy",
         }],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -298,6 +306,7 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

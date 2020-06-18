@@ -13,7 +13,6 @@ meta_desc: "Explore the GetVpnGateway function of the ec2 module, including exam
 The VPN Gateway data source provides details about
 a specific VPN gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
     public Output<string> VpnGatewayId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +93,11 @@ selected = aws.ec2.get_vpn_gateway(filters=[{
 }])
 pulumi.export("vpnGatewayId", selected.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +111,7 @@ const selected = pulumi.output(aws.ec2.getVpnGateway({
 
 export const vpnGatewayId = selected.id!;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

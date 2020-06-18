@@ -14,7 +14,6 @@ Use this data source to get the ARN and URL of queue in AWS Simple Queue Service
 By using this data source, you can reference SQS queues without having to hardcode
 the ARNs as input.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,9 +69,11 @@ import pulumi_aws as aws
 
 example = aws.sqs.get_queue(name="queue")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -79,6 +82,7 @@ const example = pulumi.output(aws.sqs.getQueue({
     name: "queue",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

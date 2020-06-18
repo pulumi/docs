@@ -17,8 +17,6 @@ provides both a standalone Route resource and a Route Table resource with routes
 defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
-
-
 ## Example IPv6 Usage
 
 ```typescript
@@ -138,6 +136,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -163,6 +162,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -175,9 +175,11 @@ route = aws.ec2.Route("route",
     destination_cidr_block="10.0.1.0/22",
     vpc_peering_connection_id="pcx-45ff3dc1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -188,6 +190,7 @@ const route = new aws.ec2.Route("route", {
     vpcPeeringConnectionId: "pcx-45ff3dc1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

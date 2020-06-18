@@ -13,6 +13,7 @@ meta_desc: "Explore the Binding resource of the core/v1 module, including exampl
 Binding ties one object to another; for example, a pod is bound to a node by a scheduler. Deprecated in 1.7, please use the bindings subresource of pods instead.
 
 
+
 ## Create a Binding Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

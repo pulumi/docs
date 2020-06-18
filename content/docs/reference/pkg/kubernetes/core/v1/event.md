@@ -13,6 +13,7 @@ meta_desc: "Explore the Event resource of the core/v1 module, including examples
 Event is a report of an event somewhere in the cluster.
 
 
+
 ## Create a Event Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

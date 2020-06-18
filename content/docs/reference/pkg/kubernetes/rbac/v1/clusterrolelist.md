@@ -13,6 +13,7 @@ meta_desc: "Explore the ClusterRoleList resource of the rbac.authorization.k8s.i
 ClusterRoleList is a collection of ClusterRoles
 
 
+
 ## Create a ClusterRoleList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

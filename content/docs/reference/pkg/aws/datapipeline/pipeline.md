@@ -12,7 +12,6 @@ meta_desc: "Explore the Pipeline resource of the datapipeline module, including 
 
 Provides a Data Pipeline resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -47,15 +47,18 @@ import pulumi_aws as aws
 
 default = aws.datapipeline.Pipeline("default")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const defaultPipeline = new aws.datapipeline.Pipeline("default", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

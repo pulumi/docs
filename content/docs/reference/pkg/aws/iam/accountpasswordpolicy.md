@@ -16,7 +16,6 @@ Manages Password Policy for the AWS Account.
 See more about [Account Password Policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html)
 in the official AWS docs.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -87,9 +88,11 @@ strict = aws.iam.AccountPasswordPolicy("strict",
     require_symbols=True,
     require_uppercase_characters=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -103,6 +106,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     requireUppercaseCharacters: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

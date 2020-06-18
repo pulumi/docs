@@ -15,7 +15,6 @@ Provides a Lambda event source mapping. This allows Lambda functions to get even
 For information about Lambda and how to use it, see [What is AWS Lambda?](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html).
 For information about event source mappings, see [CreateEventSourceMapping](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html) in the API docs.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = aws.lambda_.EventSourceMapping("example",
     function_name=aws_lambda_function["example"]["arn"],
     starting_position="LATEST")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -90,6 +93,7 @@ const example = new aws.lambda.EventSourceMapping("example", {
     startingPosition: "LATEST",
 });
 ```
+
 {{% /example %}}
 
 ### Kinesis
@@ -112,6 +116,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -137,6 +142,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -149,9 +155,11 @@ example = aws.lambda_.EventSourceMapping("example",
     function_name=aws_lambda_function["example"]["arn"],
     starting_position="LATEST")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -162,6 +170,7 @@ const example = new aws.lambda.EventSourceMapping("example", {
     startingPosition: "LATEST",
 });
 ```
+
 {{% /example %}}
 
 ### SQS
@@ -183,6 +192,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -207,6 +217,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -218,9 +229,11 @@ example = aws.lambda_.EventSourceMapping("example",
     event_source_arn=aws_sqs_queue["sqs_queue_test"]["arn"],
     function_name=aws_lambda_function["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -230,6 +243,7 @@ const example = new aws.lambda.EventSourceMapping("example", {
     functionName: aws_lambda_function_example.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

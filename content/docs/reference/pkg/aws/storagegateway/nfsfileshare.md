@@ -12,7 +12,6 @@ meta_desc: "Explore the NfsFileShare resource of the storagegateway module, incl
 
 Manages an AWS Storage Gateway NFS File Share.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -82,9 +83,11 @@ example = aws.storagegateway.NfsFileShare("example",
     location_arn=aws_s3_bucket["example"]["arn"],
     role_arn=aws_iam_role["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
     roleArn: aws_iam_role_example.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

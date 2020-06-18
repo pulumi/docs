@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAutoscalingGroups function of the AWS package, includ
 The Autoscaling Groups data source allows access to the list of AWS
 ASGs within a specific region. This will allow you to pass a list of AutoScaling Groups to other resources.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -66,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,9 +97,11 @@ slack_notifications = aws.autoscaling.Notification("slackNotifications",
     ],
     topic_arn="TOPIC ARN")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -127,6 +129,7 @@ const slackNotifications = new aws.autoscaling.Notification("slack_notifications
     topicArn: "TOPIC ARN",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

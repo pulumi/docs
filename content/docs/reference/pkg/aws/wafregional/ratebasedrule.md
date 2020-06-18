@@ -12,7 +12,6 @@ meta_desc: "Explore the RateBasedRule resource of the wafregional module, includ
 
 Provides a WAF Rate Based Rule Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,6 +100,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -121,9 +122,11 @@ wafrule = aws.wafregional.RateBasedRule("wafrule",
     rate_key="IP",
     rate_limit=100)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -145,6 +148,7 @@ const wafrule = new aws.wafregional.RateBasedRule("wafrule", {
     rateLimit: 100,
 }, { dependsOn: [ipset] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

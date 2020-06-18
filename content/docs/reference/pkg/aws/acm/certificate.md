@@ -28,7 +28,6 @@ of this provider.
 It's recommended to specify `create_before_destroy = true` in a [lifecycle](https://www.terraform.io/docs/configuration/resources.html#lifecycle) block to replace a certificate
 which is currently in use (eg, by `aws.lb.Listener`).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ cert = aws.acm.Certificate("cert",
     },
     validation_method="DNS")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -112,6 +115,7 @@ const cert = new aws.acm.Certificate("cert", {
     validationMethod: "DNS",
 });
 ```
+
 {{% /example %}}
 
 ### Importing an existing certificate
@@ -158,6 +162,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -188,9 +193,11 @@ cert = aws.acm.Certificate("cert",
     certificate_body=example_self_signed_cert.cert_pem,
     private_key=example_private_key.private_key_pem)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -218,6 +225,7 @@ const cert = new aws.acm.Certificate("cert", {
     privateKey: examplePrivateKey.privateKeyPem,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

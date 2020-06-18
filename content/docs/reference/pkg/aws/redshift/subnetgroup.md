@@ -12,7 +12,6 @@ meta_desc: "Explore the SubnetGroup resource of the redshift module, including e
 
 Creates a new Amazon Redshift subnet group. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud (Amazon VPC) when creating Amazon Redshift subnet group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,6 +125,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -156,9 +157,11 @@ foo_subnet_group = aws.redshift.SubnetGroup("fooSubnetGroup",
         "environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -192,6 +195,7 @@ const fooSubnetGroup = new aws.redshift.SubnetGroup("foo", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

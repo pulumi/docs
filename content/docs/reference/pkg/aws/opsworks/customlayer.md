@@ -12,7 +12,6 @@ meta_desc: "Explore the CustomLayer resource of the opsworks module, including e
 
 Provides an OpsWorks custom layer resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ custlayer = aws.opsworks.CustomLayer("custlayer",
     short_name="awesome",
     stack_id=aws_opsworks_stack["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const custlayer = new aws.opsworks.CustomLayer("custlayer", {
     stackId: aws_opsworks_stack_main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

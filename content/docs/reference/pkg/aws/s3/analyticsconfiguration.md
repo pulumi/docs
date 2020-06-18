@@ -12,7 +12,6 @@ meta_desc: "Explore the AnalyticsConfiguration resource of the s3 module, includ
 
 Provides a S3 bucket [analytics configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +69,11 @@ example_filtered = aws.s3.AnalyticsConfiguration("example-filtered",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +90,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

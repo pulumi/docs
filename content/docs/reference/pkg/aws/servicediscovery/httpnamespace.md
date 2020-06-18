@@ -33,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -65,9 +67,11 @@ import pulumi_aws as aws
 
 example = aws.servicediscovery.HttpNamespace("example", description="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -76,6 +80,7 @@ const example = new aws.servicediscovery.HttpNamespace("example", {
     description: "example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

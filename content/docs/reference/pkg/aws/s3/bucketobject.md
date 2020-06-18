@@ -12,9 +12,6 @@ meta_desc: "Explore the BucketObject resource of the s3 module, including exampl
 
 Provides a S3 bucket object resource.
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a BucketObject Resource {#create}

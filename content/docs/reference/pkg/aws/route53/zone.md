@@ -12,7 +12,6 @@ meta_desc: "Explore the Zone resource of the route53 module, including examples,
 
 Manages a Route53 Hosted Zone.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,6 +55,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,15 +65,18 @@ import pulumi_aws as aws
 
 primary = aws.route53.Zone("primary")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const primary = new aws.route53.Zone("primary", {});
 ```
+
 {{% /example %}}
 
 ### Public Subdomain Zone
@@ -113,6 +117,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -140,9 +145,11 @@ dev_ns = aws.route53.Record("dev-ns",
     type="NS",
     zone_id=main.zone_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -166,6 +173,7 @@ const dev_ns = new aws.route53.Record("dev-ns", {
     zoneId: main.zoneId,
 });
 ```
+
 {{% /example %}}
 
 ### Private Zone
@@ -192,6 +200,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -219,6 +228,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -230,9 +240,11 @@ private = aws.route53.Zone("private", vpcs=[{
     "vpc_id": aws_vpc["example"]["id"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -243,6 +255,7 @@ const privateZone = new aws.route53.Zone("private", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

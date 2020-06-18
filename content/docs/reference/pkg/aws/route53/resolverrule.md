@@ -12,7 +12,6 @@ meta_desc: "Explore the ResolverRule resource of the route53 module, including e
 
 Provides a Route53 Resolver rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ sys = aws.route53.ResolverRule("sys",
     domain_name="subdomain.example.com",
     rule_type="SYSTEM")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const sys = new aws.route53.ResolverRule("sys", {
     ruleType: "SYSTEM",
 });
 ```
+
 {{% /example %}}
 
 ### Forward rule
@@ -116,6 +120,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -149,6 +154,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -167,9 +173,11 @@ fwd = aws.route53.ResolverRule("fwd",
         "ip": "123.45.67.89",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -186,6 +194,7 @@ const fwd = new aws.route53.ResolverRule("fwd", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

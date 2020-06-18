@@ -12,7 +12,6 @@ meta_desc: "Explore the GetServiceQuota function of the servicequotas module, in
 
 Retrieve information about a Service Quota.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +84,11 @@ by_quota_code = aws.servicequotas.get_service_quota(quota_code="L-F678F1CE",
 by_quota_name = aws.servicequotas.get_service_quota(quota_name="VPCs per Region",
     service_code="vpc")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -99,6 +102,7 @@ const byQuotaName = pulumi.output(aws.servicequotas.getServiceQuota({
     serviceCode: "vpc",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

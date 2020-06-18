@@ -12,7 +12,6 @@ meta_desc: "Explore the Service resource of the servicediscovery module, includi
 
 Provides a Service Discovery Service resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,6 +113,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -140,9 +141,11 @@ example_service = aws.servicediscovery.Service("exampleService",
         "failure_threshold": 1,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -170,6 +173,7 @@ const exampleService = new aws.servicediscovery.Service("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

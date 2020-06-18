@@ -12,7 +12,6 @@ meta_desc: "Explore the DocumentationVersion resource of the apigateway module, 
 
 Provides a resource to manage an API Gateway Documentation Version.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +88,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -107,9 +108,11 @@ example_documentation_part = aws.apigateway.DocumentationPart("exampleDocumentat
     properties="{\"description\":\"Example\"}",
     rest_api_id=example_rest_api.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -128,6 +131,7 @@ const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("exa
     version: "example_version",
 }, { dependsOn: [exampleDocumentationPart] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

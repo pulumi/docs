@@ -14,7 +14,6 @@ Provides an AWS Config Rule.
 
 > **Note:** Config Rule requires an existing `Configuration Recorder` to be present. Use of `depends_on` is recommended (as shown below) to avoid race conditions.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +115,11 @@ example_rule = aws.cfg.Rule("exampleRule", source={
     "sourceIdentifier": example_function.arn,
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -135,6 +138,7 @@ const exampleRule = new aws.cfg.Rule("example", {
     },
 }, { dependsOn: [exampleRecorder, examplePermission] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

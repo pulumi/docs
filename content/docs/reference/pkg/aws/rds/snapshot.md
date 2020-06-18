@@ -12,7 +12,6 @@ meta_desc: "Explore the Snapshot resource of the rds module, including examples,
 
 Manages an RDS database instance snapshot. For managing RDS database cluster snapshots, see the `aws.rds.ClusterSnapshot` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +88,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -110,9 +111,11 @@ test = aws.rds.Snapshot("test",
     db_instance_identifier=bar.id,
     db_snapshot_identifier="testsnapshot1234")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -134,6 +137,7 @@ const test = new aws.rds.Snapshot("test", {
     dbSnapshotIdentifier: "testsnapshot1234",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

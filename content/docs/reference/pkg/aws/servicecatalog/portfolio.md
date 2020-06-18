@@ -12,7 +12,6 @@ meta_desc: "Explore the Portfolio resource of the servicecatalog module, includi
 
 Provides a resource to create a Service Catalog Portfolio.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ portfolio = aws.servicecatalog.Portfolio("portfolio",
     description="List of my organizations apps",
     provider_name="Brett")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const portfolio = new aws.servicecatalog.Portfolio("portfolio", {
     providerName: "Brett",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

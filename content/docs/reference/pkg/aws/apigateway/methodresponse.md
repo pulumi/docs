@@ -12,7 +12,6 @@ meta_desc: "Explore the MethodResponse resource of the apigateway module, includ
 
 Provides an HTTP Method Response for an API Gateway Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -120,6 +120,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -148,9 +149,11 @@ response200 = aws.apigateway.MethodResponse("response200",
     rest_api=my_demo_api.id,
     status_code="200")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -182,6 +185,7 @@ const response200 = new aws.apigateway.MethodResponse("response_200", {
     statusCode: "200",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

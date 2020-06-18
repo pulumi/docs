@@ -12,7 +12,6 @@ meta_desc: "Explore the GetAlias function of the lambda module, including exampl
 
 Provides information about a Lambda Alias.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_aws as aws
 production = aws.lambda.get_alias(function_name="my-lambda-func",
     name="production")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,6 +84,7 @@ const production = pulumi.output(aws.lambda.getAlias({
     name: "production",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

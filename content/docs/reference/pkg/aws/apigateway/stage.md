@@ -12,7 +12,6 @@ meta_desc: "Explore the Stage resource of the apigateway module, including examp
 
 Provides an API Gateway Stage.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -82,6 +81,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -124,9 +124,11 @@ test_integration = aws.apigateway.Integration("testIntegration",
     rest_api=test_rest_api.id,
     type="MOCK")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -170,6 +172,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
     stageName: testStage.stageName,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

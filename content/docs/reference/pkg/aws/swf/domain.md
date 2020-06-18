@@ -12,7 +12,6 @@ meta_desc: "Explore the Domain resource of the swf module, including examples, i
 
 Provides an SWF Domain resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ foo = aws.swf.Domain("foo",
     description="SWF Domain",
     workflow_execution_retention_period_in_days=30)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const foo = new aws.swf.Domain("foo", {
     workflowExecutionRetentionPeriodInDays: "30",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

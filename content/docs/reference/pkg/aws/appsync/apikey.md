@@ -12,7 +12,6 @@ meta_desc: "Explore the ApiKey resource of the appsync module, including example
 
 Provides an AppSync API Key.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,6 +70,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -82,9 +83,11 @@ example_api_key = aws.appsync.ApiKey("exampleApiKey",
     api_id=example_graph_ql_api.id,
     expires="2018-05-03T04:00:00Z")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,6 +100,7 @@ const exampleApiKey = new aws.appsync.ApiKey("example", {
     expires: "2018-05-03T04:00:00Z",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

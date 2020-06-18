@@ -19,7 +19,6 @@ an ELB), and an Elastic Load Balancer resource with
 instances in conjunction with an ELB Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ baz = aws.elb.Attachment("baz",
     elb=aws_elb["bar"]["id"],
     instance=aws_instance["foo"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -93,6 +96,7 @@ const baz = new aws.elb.Attachment("baz", {
     instance: aws_instance_foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

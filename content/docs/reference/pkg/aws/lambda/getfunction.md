@@ -12,7 +12,6 @@ meta_desc: "Explore the GetFunction function of the lambda module, including exa
 
 Provides information about a Lambda Function.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,9 +71,11 @@ config = pulumi.Config()
 function_name = config.require_object("functionName")
 existing = aws.lambda.get_function(function_name=function_name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -84,6 +87,7 @@ const existing = pulumi.output(aws.lambda.getFunction({
     functionName: functionName,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

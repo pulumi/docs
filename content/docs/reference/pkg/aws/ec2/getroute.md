@@ -16,7 +16,6 @@ This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +68,11 @@ route = aws.ec2.get_route(destination_cidr_block="10.0.1.0/24",
     route_table_id=aws_route_table["selected"]["id"])
 interface = aws.ec2.get_network_interface(network_interface_id=route.network_interface_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,6 +91,7 @@ const interfaceNetworkInterface = route.apply(route => aws.ec2.getNetworkInterfa
     networkInterfaceId: route.networkInterfaceId!,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,6 +13,7 @@ meta_desc: "Explore the ReplicaSet resource of the apps/v1 module, including exa
 ReplicaSet ensures that a specified number of pod replicas are running at any given time.
 
 
+
 ## Create a ReplicaSet Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

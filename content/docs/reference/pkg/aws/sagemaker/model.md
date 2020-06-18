@@ -12,7 +12,6 @@ meta_desc: "Explore the Model resource of the sagemaker module, including exampl
 
 Provides a SageMaker model resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -120,6 +120,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -141,9 +142,11 @@ assume_role = aws.iam.get_policy_document(statements=[{
 }])
 role = aws.iam.Role("role", assume_role_policy=assume_role.json)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -167,6 +170,7 @@ const role = new aws.iam.Role("r", {
     assumeRolePolicy: assumeRole.json,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

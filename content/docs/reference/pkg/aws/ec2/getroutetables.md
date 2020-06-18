@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRouteTables function of the ec2 module, including exa
 
 This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,9 +91,11 @@ for range in [{"value": i} for i in range(0, len(rts.ids))]:
         route_table_id=rts.ids[range["value"]],
         vpc_peering_connection_id="pcx-0e9a7a9ecd137dc54"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -114,6 +116,7 @@ for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
     }));
 }
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

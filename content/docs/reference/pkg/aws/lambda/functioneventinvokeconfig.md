@@ -12,7 +12,6 @@ meta_desc: "Explore the FunctionEventInvokeConfig resource of the lambda module,
 
 Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = aws.lambda_.FunctionEventInvokeConfig("example",
     maximum_event_age_in_seconds=60,
     maximum_retry_attempts=0)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
     maximumRetryAttempts: 0,
 });
 ```
+
 {{% /example %}}
 
 ### Configuration for Alias Name
@@ -109,6 +113,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -133,6 +138,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -145,9 +151,11 @@ example = aws.lambda_.FunctionEventInvokeConfig("example",
     qualifier=aws_lambda_alias["example"]["name"])
 # ... other configuration ...
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -158,6 +166,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 });
 // ... other configuration ...
 ```
+
 {{% /example %}}
 
 ### Configuration for Function Published Version
@@ -180,6 +189,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -204,6 +214,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -216,9 +227,11 @@ example = aws.lambda_.FunctionEventInvokeConfig("example",
     qualifier=aws_lambda_function["example"]["version"])
 # ... other configuration ...
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -229,6 +242,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 });
 // ... other configuration ...
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

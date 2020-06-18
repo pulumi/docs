@@ -12,7 +12,6 @@ meta_desc: "Explore the GetElasticIp function of the AWS package, including exam
 
 `aws.ec2.Eip` provides details about a specific Elastic IP.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_aws as aws
 
 by_allocation_id = aws.get_elastic_ip(id="eipalloc-12345678")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,6 +61,7 @@ const byAllocationId = pulumi.output(aws.getElasticIp({
     id: "eipalloc-12345678",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Search By Filters (EC2-Classic or VPC)
@@ -89,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -105,9 +109,11 @@ by_filter = aws.get_elastic_ip(filters=[{
     "values": ["exampleNameTagValue"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -119,6 +125,7 @@ const byFilter = pulumi.output(aws.getElasticIp({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Search By Public IP (EC2-Classic or VPC)
@@ -139,6 +146,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -152,9 +160,11 @@ import pulumi_aws as aws
 
 by_public_ip = aws.get_elastic_ip(public_ip="1.2.3.4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -163,6 +173,7 @@ const byPublicIp = pulumi.output(aws.getElasticIp({
     publicIp: "1.2.3.4",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Search By Tags (EC2-Classic or VPC)
@@ -186,6 +197,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -201,9 +213,11 @@ by_tags = aws.get_elastic_ip(tags={
     "Name": "exampleNameTagValue",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -214,6 +228,7 @@ const byTags = pulumi.output(aws.getElasticIp({
     },
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

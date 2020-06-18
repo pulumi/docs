@@ -13,6 +13,7 @@ meta_desc: "Explore the RoleBindingList resource of the rbac.authorization.k8s.i
 RoleBindingList is a collection of RoleBindings
 
 
+
 ## Create a RoleBindingList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

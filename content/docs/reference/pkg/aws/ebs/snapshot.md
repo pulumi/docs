@@ -12,7 +12,6 @@ meta_desc: "Explore the Snapshot resource of the ebs module, including examples,
 
 Creates a Snapshot of an EBS Volume.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -84,6 +84,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -103,9 +104,11 @@ example_snapshot = aws.ebs.Snapshot("exampleSnapshot",
     },
     volume_id=example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -124,6 +127,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
     volumeId: example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

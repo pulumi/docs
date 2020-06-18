@@ -12,7 +12,6 @@ meta_desc: "Explore the GetBroker function of the mq module, including examples,
 
 Provides information about a MQ Broker.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,6 +70,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -87,9 +88,11 @@ if broker_name is None:
 by_id = aws.mq.get_broker(broker_id=broker_id)
 by_name = aws.mq.get_broker(broker_name=broker_name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -105,6 +108,7 @@ const byName = pulumi.output(aws.mq.getBroker({
     brokerName: brokerName,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the AccessPoint resource of the efs module, including exampl
 
 Provides an Elastic File System (EFS) access point.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_aws as aws
 
 test = aws.efs.AccessPoint("test", file_system_id=aws_efs_file_system["foo"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +81,7 @@ const test = new aws.efs.AccessPoint("test", {
     fileSystemId: aws_efs_file_system_foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.
 
 > **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -82,9 +83,11 @@ example = aws.fsx.WindowsFileSystem("example",
     subnet_ids=aws_subnet["example"]["id"],
     throughput_capacity=1024)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,6 +100,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
     throughputCapacity: 1024,
 });
 ```
+
 {{% /example %}}
 
 ### Using a Self-Managed Microsoft Active Directory
@@ -131,6 +135,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -166,6 +171,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -188,9 +194,11 @@ example = aws.fsx.WindowsFileSystem("example",
     subnet_ids=aws_subnet["example"]["id"],
     throughput_capacity=1024)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -211,6 +219,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
     throughputCapacity: 1024,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

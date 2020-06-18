@@ -13,7 +13,6 @@ meta_desc: "Explore the HostedPrivateVirtualInterfaceAccepter resource of the di
 Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.
 This resource accepts ownership of a private virtual interface created by another AWS account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,9 +88,11 @@ accepter_hosted_private_virtual_interface_accepter = aws.directconnect.HostedPri
     virtual_interface_id=creator.id,
     vpn_gateway_id=vpn_gw.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -115,6 +117,7 @@ const accepterHostedPrivateVirtualInterfaceAccepter = new aws.directconnect.Host
     vpnGatewayId: vpnGw.id,
 }, { provider: accepter });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

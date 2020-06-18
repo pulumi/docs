@@ -14,7 +14,6 @@ Provides a Load Balancer resource.
 
 > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -84,9 +84,11 @@ test = aws.lb.LoadBalancer("test",
         "Environment": "production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -107,6 +109,7 @@ const test = new aws.lb.LoadBalancer("test", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Network Load Balancer
@@ -138,6 +141,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -158,9 +162,11 @@ test = aws.lb.LoadBalancer("test",
         "Environment": "production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -175,6 +181,7 @@ const test = new aws.lb.LoadBalancer("test", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Specifying Elastic IPs
@@ -208,6 +215,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -241,6 +249,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -261,9 +270,11 @@ example = aws.lb.LoadBalancer("example",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -282,6 +293,7 @@ const example = new aws.lb.LoadBalancer("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

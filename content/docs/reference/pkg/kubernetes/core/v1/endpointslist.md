@@ -13,6 +13,7 @@ meta_desc: "Explore the EndpointsList resource of the core/v1 module, including 
 EndpointsList is a list of endpoints.
 
 
+
 ## Create a EndpointsList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Organization resource of the organizations module, inclu
 
 Provides a resource to create an organization.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +82,11 @@ org = aws.organizations.Organization("org",
     ],
     feature_set="ALL")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const org = new aws.organizations.Organization("org", {
     featureSet: "ALL",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

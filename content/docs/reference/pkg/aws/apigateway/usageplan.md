@@ -12,7 +12,6 @@ meta_desc: "Explore the UsagePlan resource of the apigateway module, including e
 
 Provides an API Gateway Usage Plan.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -73,6 +72,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -134,6 +134,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -171,9 +172,11 @@ my_usage_plan = aws.apigateway.UsagePlan("myUsagePlan",
         "rate_limit": 10,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -211,6 +214,7 @@ const myUsagePlan = new aws.apigateway.UsagePlan("MyUsagePlan", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

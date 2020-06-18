@@ -12,7 +12,6 @@ meta_desc: "Explore the Cluster resource of the eks module, including examples, 
 
 Manages an EKS Cluster.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,9 +90,11 @@ example__amazon_eks_service_policy = aws.iam.RolePolicyAttachment("example-Amazo
     policy_arn="arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
     role=example.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -121,6 +123,7 @@ const example_AmazonEKSServicePolicy = new aws.iam.RolePolicyAttachment("example
     role: example.name,
 });
 ```
+
 {{% /example %}}
 
 ### Enabling Control Plane Logging
@@ -151,6 +154,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -184,6 +188,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -201,9 +206,11 @@ example_cluster = aws.eks.Cluster("exampleCluster", enabled_cluster_log_types=[
 ])
 example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=7)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -221,6 +228,7 @@ const exampleCluster = new aws.eks.Cluster("example", {
     ],
 }, { dependsOn: [exampleLogGroup] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

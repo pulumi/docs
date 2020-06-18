@@ -14,7 +14,6 @@ Provides a static IP address attachment - relationship between a Lightsail stati
 
 > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -102,9 +103,11 @@ test_static_ip_attachment = aws.lightsail.StaticIpAttachment("testStaticIpAttach
     instance_name=test_instance.id,
     static_ip_name=test_static_ip.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -121,6 +124,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
     staticIpName: testStaticIp.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

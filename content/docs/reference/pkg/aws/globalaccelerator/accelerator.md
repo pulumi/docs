@@ -12,7 +12,6 @@ meta_desc: "Explore the Accelerator resource of the globalaccelerator module, in
 
 Creates a Global Accelerator accelerator.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -87,9 +88,11 @@ example = aws.globalaccelerator.Accelerator("example",
     enabled=True,
     ip_address_type="IPV4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,6 +107,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     ipAddressType: "IPV4",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

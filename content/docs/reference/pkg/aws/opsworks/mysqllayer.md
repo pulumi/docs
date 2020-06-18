@@ -14,7 +14,6 @@ Provides an OpsWorks MySQL layer resource.
 
 > **Note:** All arguments including the root password will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_aws as aws
 
 db = aws.opsworks.MysqlLayer("db", stack_id=aws_opsworks_stack["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -80,6 +83,7 @@ const db = new aws.opsworks.MysqlLayer("db", {
     stackId: aws_opsworks_stack_main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

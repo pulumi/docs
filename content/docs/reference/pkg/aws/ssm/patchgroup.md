@@ -12,7 +12,6 @@ meta_desc: "Explore the PatchGroup resource of the ssm module, including example
 
 Provides an SSM Patch Group resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -87,9 +88,11 @@ patchgroup = aws.ssm.PatchGroup("patchgroup",
     baseline_id=production.id,
     patch_group="patch-group-name")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -102,6 +105,7 @@ const patchgroup = new aws.ssm.PatchGroup("patchgroup", {
     patchGroup: "patch-group-name",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

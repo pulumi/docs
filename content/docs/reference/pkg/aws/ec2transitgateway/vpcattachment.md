@@ -12,7 +12,6 @@ meta_desc: "Explore the VpcAttachment resource of the ec2transitgateway module, 
 
 Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ example = aws.ec2transitgateway.VpcAttachment("example",
     transit_gateway_id=aws_ec2_transit_gateway["example"]["id"],
     vpc_id=aws_vpc["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const example = new aws.ec2transitgateway.VpcAttachment("example", {
     vpcId: aws_vpc_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

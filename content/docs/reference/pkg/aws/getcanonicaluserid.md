@@ -11,8 +11,7 @@ meta_desc: "Explore the GetCanonicalUserId function of the AWS package, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
-for the effective account in which this provider is working.  
-
+for the effective account in which this provider is working.
 
 {{% examples %}}
 ## Example Usage
@@ -36,6 +35,7 @@ class MyStack : Stack
     public Output<string> CanonicalUserId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +50,11 @@ import pulumi_aws as aws
 current = aws.get_canonical_user_id()
 pulumi.export("canonicalUserId", current.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -61,6 +63,7 @@ const current = pulumi.output(aws.getCanonicalUserId({ async: true }));
 
 export const canonicalUserId = current.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

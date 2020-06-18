@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSnapshot function of the ebs module, including exampl
 
 Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +97,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -117,9 +118,11 @@ ebs_volume = aws.ebs.get_snapshot(filters=[
     most_recent=True,
     owners=["self"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -139,6 +142,7 @@ const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
     owners: ["self"],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

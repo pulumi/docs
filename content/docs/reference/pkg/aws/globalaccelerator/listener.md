@@ -12,7 +12,6 @@ meta_desc: "Explore the Listener resource of the globalaccelerator module, inclu
 
 Provides a Global Accelerator listener.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -123,9 +124,11 @@ example_listener = aws.globalaccelerator.Listener("exampleListener",
     }],
     protocol="TCP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -149,6 +152,7 @@ const exampleListener = new aws.globalaccelerator.Listener("example", {
     protocol: "TCP",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

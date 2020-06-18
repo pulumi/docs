@@ -12,7 +12,6 @@ meta_desc: "Explore the GetInternetGateway function of the ec2 module, including
 
 `aws.ec2.InternetGateway` provides details about a specific Internet Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,9 +65,11 @@ default = aws.ec2.get_internet_gateway(filters=[{
     "values": [vpc_id],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -82,6 +84,7 @@ const defaultInternetGateway = pulumi.output(aws.ec2.getInternetGateway({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

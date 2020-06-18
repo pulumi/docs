@@ -11,8 +11,6 @@ meta_desc: "Explore the Instance resource of the opsworks module, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an OpsWorks instance resource.
-
-
 ## Block devices
 
 Each of the `*_block_device` attributes controls a portion of the AWS
@@ -96,6 +94,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -114,9 +113,11 @@ my_instance = aws.opsworks.Instance("my-instance",
     stack_id=aws_opsworks_stack["main"]["id"],
     state="stopped")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -129,6 +130,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     state: "stopped",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

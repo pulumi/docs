@@ -12,7 +12,6 @@ meta_desc: "Explore the VpnGateway resource of the ec2 module, including example
 
 Provides a resource to create a VPC VPN Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ vpn_gw = aws.ec2.VpnGateway("vpnGw",
     },
     vpc_id=aws_vpc["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const vpnGw = new aws.ec2.VpnGateway("vpn_gw", {
     vpcId: aws_vpc_main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

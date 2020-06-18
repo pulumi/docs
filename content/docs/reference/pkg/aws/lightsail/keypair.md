@@ -15,8 +15,6 @@ are separate from EC2 Key Pairs, and must be created or imported for use with
 Lightsail.
 
 > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
-
-
 ## Create new Key Pair, encrypting the private key with a PGP Key
 
 ```typescript
@@ -92,6 +90,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,6 +112,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -123,9 +123,11 @@ import pulumi_aws as aws
 # Create a new Lightsail Key Pair
 lg_key_pair = aws.lightsail.KeyPair("lgKeyPair")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -133,6 +135,7 @@ import * as aws from "@pulumi/aws";
 // Create a new Lightsail Key Pair
 const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

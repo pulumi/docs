@@ -33,6 +33,7 @@ class MyStack : Stack
     public Output<string> Example { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,9 +70,11 @@ import pulumi_aws as aws
 example_network_interfaces = aws.ec2.get_network_interfaces()
 pulumi.export("example", example_network_interfaces.ids)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -79,6 +83,7 @@ const exampleNetworkInterfaces = pulumi.output(aws.ec2.getNetworkInterfaces({ as
 
 export const example = exampleNetworkInterfaces.ids;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

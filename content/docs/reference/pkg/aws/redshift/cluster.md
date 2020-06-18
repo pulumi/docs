@@ -14,7 +14,6 @@ Provides a Redshift Cluster Resource.
 
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +61,11 @@ default = aws.redshift.Cluster("default",
     master_username="foo",
     node_type="dc1.large")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +79,7 @@ const defaultCluster = new aws.redshift.Cluster("default", {
     nodeType: "dc1.large",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,6 +13,7 @@ meta_desc: "Explore the RoleBindingList resource of the rbac.authorization.k8s.i
 RoleBindingList is a collection of RoleBindings Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleBindingList, and will no longer be served in v1.20.
 
 
+
 ## Create a RoleBindingList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

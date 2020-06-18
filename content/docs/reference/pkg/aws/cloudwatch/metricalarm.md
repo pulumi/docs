@@ -11,8 +11,6 @@ meta_desc: "Explore the MetricAlarm resource of the cloudwatch module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a CloudWatch Metric Alarm resource.
-
-
 ## Example in Conjunction with Scaling Policies
 
 ```typescript
@@ -261,6 +259,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -292,6 +291,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -310,9 +310,11 @@ foobar = aws.cloudwatch.MetricAlarm("foobar",
     statistic="Average",
     threshold="80")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -329,6 +331,7 @@ const foobar = new aws.cloudwatch.MetricAlarm("foobar", {
     threshold: 80,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

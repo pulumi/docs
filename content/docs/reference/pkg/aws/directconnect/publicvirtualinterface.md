@@ -12,7 +12,6 @@ meta_desc: "Explore the PublicVirtualInterface resource of the directconnect mod
 
 Provides a Direct Connect public virtual interface resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ foo = aws.directconnect.PublicVirtualInterface("foo",
     ],
     vlan=4094)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -116,6 +119,7 @@ const foo = new aws.directconnect.PublicVirtualInterface("foo", {
     vlan: 4094,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

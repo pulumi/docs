@@ -18,7 +18,6 @@ To configure [Instance Groups](https://docs.aws.amazon.com/emr/latest/Management
 
 > Support for [Instance Fleets](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-fleets) will be made available in an upcoming release.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +80,11 @@ example_cluster = aws.emr.Cluster("exampleCluster",
     release_label="emr-5.24.1",
     termination_protection=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +110,7 @@ const exampleCluster = new aws.emr.Cluster("example", {
     terminationProtection: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -22,7 +22,6 @@ actual modification has not yet taken place. You can use the
 immediately. Using `apply_immediately` can result in a brief downtime as
 servers reboots.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -103,9 +104,11 @@ baz = aws.elasticache.ReplicationGroup("baz",
     port=6379,
     replication_group_description="test description")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -122,6 +125,7 @@ const baz = new aws.elasticache.ReplicationGroup("baz", {
     replicationGroupDescription: "test description",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

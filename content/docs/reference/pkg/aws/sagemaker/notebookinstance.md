@@ -12,7 +12,6 @@ meta_desc: "Explore the NotebookInstance resource of the sagemaker module, inclu
 
 Provides a Sagemaker Notebook Instance resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +82,11 @@ ni = aws.sagemaker.NotebookInstance("ni",
         "Name": "foo",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const ni = new aws.sagemaker.NotebookInstance("ni", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

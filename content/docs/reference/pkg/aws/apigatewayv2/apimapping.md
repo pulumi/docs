@@ -13,7 +13,6 @@ meta_desc: "Explore the ApiMapping resource of the apigatewayv2 module, includin
 Manages an Amazon API Gateway Version 2 API mapping.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ example = aws.apigatewayv2.ApiMapping("example",
     domain_name=aws_apigatewayv2_domain_name["example"]["id"],
     stage=aws_apigatewayv2_stage["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +91,7 @@ const example = new aws.apigatewayv2.ApiMapping("example", {
     stage: aws_apigatewayv2_stage_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

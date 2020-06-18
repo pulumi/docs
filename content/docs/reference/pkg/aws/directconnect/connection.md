@@ -12,7 +12,6 @@ meta_desc: "Explore the Connection resource of the directconnect module, includi
 
 Provides a Connection of Direct Connect.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ hoge = aws.directconnect.Connection("hoge",
     bandwidth="1Gbps",
     location="EqDC2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const hoge = new aws.directconnect.Connection("hoge", {
     location: "EqDC2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

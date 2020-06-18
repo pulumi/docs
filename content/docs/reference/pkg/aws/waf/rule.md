@@ -12,7 +12,6 @@ meta_desc: "Explore the Rule resource of the waf module, including examples, inp
 
 Provides a WAF Rule Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -115,9 +116,11 @@ wafrule = aws.waf.Rule("wafrule",
         "type": "IPMatch",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -137,6 +140,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
     }],
 }, { dependsOn: [ipset] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

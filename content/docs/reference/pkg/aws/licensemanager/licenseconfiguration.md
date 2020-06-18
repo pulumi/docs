@@ -13,8 +13,6 @@ meta_desc: "Explore the LicenseConfiguration resource of the licensemanager modu
 Provides a License Manager license configuration resource.
 
 > **Note:** Removing the `license_count` attribute is not supported by the License Manager API - recreate the resource instead.
-
-
 ## Rules
 
 License rules should be in the format of `#RuleType=RuleValue`. Supported rule types:
@@ -60,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,6 +91,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,9 +109,11 @@ example = aws.licensemanager.LicenseConfiguration("example",
         "foo": "barr",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -127,6 +129,7 @@ const example = new aws.licensemanager.LicenseConfiguration("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the Endpoint resource of the ec2clientvpn module, including 
 Provides an AWS Client VPN endpoint for OpenVPN clients. For more information on usage, please see the
 [AWS Client VPN Administrator's Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +88,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,9 +110,11 @@ example = aws.ec2clientvpn.Endpoint("example",
     description="clientvpn-example",
     server_certificate_arn=aws_acm_certificate["cert"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -131,6 +134,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
     serverCertificateArn: aws_acm_certificate_cert.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

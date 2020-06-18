@@ -12,7 +12,6 @@ meta_desc: "Explore the LogMetricFilter resource of the cloudwatch module, inclu
 
 Provides a CloudWatch Log Metric Filter resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -95,9 +96,11 @@ yada = aws.cloudwatch.LogMetricFilter("yada",
     },
     pattern="")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -113,6 +116,7 @@ const yada = new aws.cloudwatch.LogMetricFilter("yada", {
     pattern: "",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

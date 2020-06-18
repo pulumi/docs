@@ -12,7 +12,6 @@ meta_desc: "Explore the IpGroup resource of the workspaces module, including exa
 
 Provides an IP access control group in AWS WorkSpaces Service
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_aws as aws
 
 contractors = aws.workspaces.IpGroup("contractors", description="Contractors IP access control group")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +81,7 @@ const contractors = new aws.workspaces.IpGroup("contractors", {
     description: "Contractors IP access control group",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

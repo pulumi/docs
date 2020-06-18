@@ -12,7 +12,6 @@ meta_desc: "Explore the Trigger resource of the glue module, including examples,
 
 Manages a Glue Trigger resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,9 +109,11 @@ example = aws.glue.Trigger("example",
     },
     type="CONDITIONAL")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -128,6 +131,7 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
+
 {{% /example %}}
 
 ### On-Demand Trigger
@@ -155,6 +159,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -183,6 +188,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -196,9 +202,11 @@ example = aws.glue.Trigger("example",
     }],
     type="ON_DEMAND")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -210,6 +218,7 @@ const example = new aws.glue.Trigger("example", {
     type: "ON_DEMAND",
 });
 ```
+
 {{% /example %}}
 
 ### Scheduled Trigger
@@ -238,6 +247,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -267,6 +277,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -281,9 +292,11 @@ example = aws.glue.Trigger("example",
     schedule="cron(15 12 * * ? *)",
     type="SCHEDULED")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -296,6 +309,7 @@ const example = new aws.glue.Trigger("example", {
     type: "SCHEDULED",
 });
 ```
+
 {{% /example %}}
 
 ### Conditional Trigger with Crawler Action
@@ -334,6 +348,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -370,6 +385,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -389,9 +405,11 @@ example = aws.glue.Trigger("example",
     },
     type="CONDITIONAL")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -409,6 +427,7 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
+
 {{% /example %}}
 
 ### Conditional Trigger with Crawler Condition
@@ -447,6 +466,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -483,6 +503,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -502,9 +523,11 @@ example = aws.glue.Trigger("example",
     },
     type="CONDITIONAL")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -522,6 +545,7 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

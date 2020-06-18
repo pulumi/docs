@@ -12,7 +12,6 @@ meta_desc: "Explore the ReplicationSubnetGroup resource of the dms module, inclu
 
 Provides a DMS (Data Migration Service) replication subnet group resource. DMS replication subnet groups can be created, updated, deleted, and imported.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -91,9 +92,11 @@ test = aws.dms.ReplicationSubnetGroup("test",
         "Name": "test",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +111,7 @@ const test = new aws.dms.ReplicationSubnetGroup("test", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

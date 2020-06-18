@@ -13,6 +13,7 @@ meta_desc: "Explore the ComponentStatus resource of the core/v1 module, includin
 ComponentStatus (and ComponentStatusList) holds the cluster validation info.
 
 
+
 ## Create a ComponentStatus Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

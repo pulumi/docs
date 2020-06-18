@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityPool resource of the cognito module, including e
 
 Provides an AWS Cognito Identity Pool.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,9 +103,11 @@ main = aws.cognito.IdentityPool("main",
         "graph.facebook.com": "7346241598935552",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -137,6 +139,7 @@ const main = new aws.cognito.IdentityPool("main", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

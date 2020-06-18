@@ -16,7 +16,6 @@ Manages S3 account-level Public Access Block configuration. For more information
 
 > Advanced usage: To use a custom API endpoint for this resource, use the `s3control` endpoint provider configuration, not the `s3` endpoint provider configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ example = aws.s3.AccountPublicAccessBlock("example",
     block_public_acls=True,
     block_public_policy=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const example = new aws.s3.AccountPublicAccessBlock("example", {
     blockPublicPolicy: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

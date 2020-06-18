@@ -16,7 +16,6 @@ Provides an ECS service - effectively a task that is expected to run until an er
 
 See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ bar = aws.ecs.Service("bar",
     scheduling_strategy="DAEMON",
     task_definition=aws_ecs_task_definition["bar"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const bar = new aws.ecs.Service("bar", {
     taskDefinition: aws_ecs_task_definition_bar.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

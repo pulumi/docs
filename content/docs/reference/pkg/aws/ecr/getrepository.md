@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRepository function of the ecr module, including exam
 
 The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 service = aws.ecr.get_repository(name="ecr-repository")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const service = pulumi.output(aws.ecr.getRepository({
     name: "ecr-repository",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

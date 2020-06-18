@@ -12,7 +12,6 @@ meta_desc: "Explore the AssessmentTemplate resource of the inspector module, inc
 
 Provides a Inspector assessment template
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,9 +91,11 @@ example = aws.inspector.AssessmentTemplate("example",
     ],
     target_arn=aws_inspector_assessment_target["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +111,7 @@ const example = new aws.inspector.AssessmentTemplate("example", {
     targetArn: aws_inspector_assessment_target_example.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

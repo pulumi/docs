@@ -13,6 +13,7 @@ meta_desc: "Explore the IngressList resource of the extensions/v1beta1 module, i
 IngressList is a collection of Ingress.
 
 
+
 ## Create a IngressList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

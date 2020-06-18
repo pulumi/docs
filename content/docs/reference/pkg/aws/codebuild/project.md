@@ -12,7 +12,6 @@ meta_desc: "Explore the Project resource of the codebuild module, including exam
 
 Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` resource, which manages the webhook to the source (e.g. the "rebuild every time a code change is pushed" option in the CodeBuild web console).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -243,6 +242,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -425,9 +425,11 @@ project_with_cache = aws.codebuild.Project("project-with-cache",
         "Environment": "Test",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -608,6 +610,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the IpSet resource of the wafv2 module, including examples, 
 
 Provides a WAFv2 IP Set Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -100,9 +101,11 @@ example = aws.wafv2.IpSet("example",
         "Tag2": "Value2",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -121,6 +124,7 @@ const example = new aws.wafv2.IpSet("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

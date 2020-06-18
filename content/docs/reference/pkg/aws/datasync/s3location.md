@@ -12,7 +12,6 @@ meta_desc: "Explore the S3Location resource of the datasync module, including ex
 
 Manages an S3 Location within AWS DataSync.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +82,11 @@ example = aws.datasync.S3Location("example",
     },
     subdirectory="/example/prefix")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const example = new aws.datasync.S3Location("example", {
     subdirectory: "/example/prefix",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

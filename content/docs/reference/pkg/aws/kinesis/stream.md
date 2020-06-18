@@ -15,7 +15,6 @@ scales elastically for real-time processing of streaming big data.
 
 For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ test_stream = aws.kinesis.Stream("testStream",
         "Environment": "test",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -116,6 +119,7 @@ const testStream = new aws.kinesis.Stream("test_stream", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

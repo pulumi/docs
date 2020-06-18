@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRouteTable function of the ec2transitgateway module, 
 
 Get information on an EC2 Transit Gateway Route Table.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +88,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -106,9 +107,11 @@ example = aws.ec2transitgateway.get_route_table(filters=[
     },
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -126,6 +129,7 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
     ],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### By Identifier
@@ -146,6 +150,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -168,6 +173,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -177,9 +183,11 @@ import pulumi_aws as aws
 
 example = aws.ec2transitgateway.get_route_table(id="tgw-rtb-12345678")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -188,6 +196,7 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
     id: "tgw-rtb-12345678",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

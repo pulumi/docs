@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLaunchTemplate function of the ec2 module, including 
 
 Provides information about a Launch Template.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_aws as aws
 
 default = aws.ec2.get_launch_template(name="my-launch-template")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,6 +61,7 @@ const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
     name: "my-launch-template",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Filter
@@ -89,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -118,6 +122,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -130,9 +135,11 @@ test = aws.ec2.get_launch_template(filters=[{
     "values": ["some-template"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -144,6 +151,7 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -36,7 +36,6 @@ Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
 and Burstable Performance. For more information please read the AWS RDS documentation
 about [DB Instance Class Types](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,9 +89,11 @@ default = aws.rds.Instance("default",
     storage_type="gp2",
     username="foo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +110,7 @@ const defaultInstance = new aws.rds.Instance("default", {
     username: "foo",
 });
 ```
+
 {{% /example %}}
 
 ### Storage Autoscaling
@@ -129,6 +132,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -153,6 +157,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -164,9 +169,11 @@ example = aws.rds.Instance("example",
     allocated_storage=50,
     max_allocated_storage=100)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -176,6 +183,7 @@ const example = new aws.rds.Instance("example", {
     maxAllocatedStorage: 100,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

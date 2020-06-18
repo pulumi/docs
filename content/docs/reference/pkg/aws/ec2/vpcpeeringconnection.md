@@ -23,8 +23,6 @@ management of the VPC Peering Connection and allows options to be set correctly 
 > **Note:** For cross-account (requester's AWS account differs from the accepter's AWS account) or inter-region
 VPC Peering Connections use the `aws.ec2.VpcPeeringConnection` resource to manage the requester's side of the
 connection and use the `aws.ec2.VpcPeeringConnectionAccepter` resource to manage the accepter's side of the connection.
-
-
 ## Notes
 
 If both VPCs are not in the same AWS account do not enable the `auto_accept` attribute.
@@ -55,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +70,11 @@ foo = aws.ec2.VpcPeeringConnection("foo",
     peer_vpc_id=aws_vpc["bar"]["id"],
     vpc_id=aws_vpc["foo"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -84,6 +85,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     vpcId: aws_vpc_foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

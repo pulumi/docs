@@ -12,7 +12,6 @@ meta_desc: "Explore the HealthCheck resource of the route53 module, including ex
 
 Provides a Route53 health check.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +94,11 @@ example = aws.route53.HealthCheck("example",
     },
     type="HTTP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -112,6 +115,7 @@ const example = new aws.route53.HealthCheck("example", {
     type: "HTTP",
 });
 ```
+
 {{% /example %}}
 
 ### Connectivity and String Matching Check
@@ -138,6 +142,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -167,6 +172,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -183,9 +189,11 @@ example = aws.route53.HealthCheck("example",
     search_string="example",
     type="HTTPS_STR_MATCH")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -200,6 +208,7 @@ const example = new aws.route53.HealthCheck("example", {
     type: "HTTPS_STR_MATCH",
 });
 ```
+
 {{% /example %}}
 
 ### Aggregate Check
@@ -229,6 +238,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -248,9 +258,11 @@ parent = aws.route53.HealthCheck("parent",
     },
     type="CALCULATED")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -264,6 +276,7 @@ const parent = new aws.route53.HealthCheck("parent", {
     type: "CALCULATED",
 });
 ```
+
 {{% /example %}}
 
 ### CloudWatch Alarm Check
@@ -298,6 +311,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -338,6 +352,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -360,9 +375,11 @@ foo = aws.route53.HealthCheck("foo",
     insufficient_data_health_status="Healthy",
     type="CLOUDWATCH_METRIC")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -384,6 +401,7 @@ const foo = new aws.route53.HealthCheck("foo", {
     type: "CLOUDWATCH_METRIC",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

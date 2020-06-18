@@ -15,7 +15,6 @@ Provides an API Gateway VPC Link.
 > **Note:** Amazon API Gateway Version 1 VPC Links enable private integrations that connect REST APIs to private resources in a VPC.
 To enable private integration for HTTP APIs, use the `Amazon API Gateway Version 2 VPC Link` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +88,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ example_vpc_link = aws.apigateway.VpcLink("exampleVpcLink",
     description="example description",
     target_arn=example_load_balancer.arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -124,6 +127,7 @@ const exampleVpcLink = new aws.apigateway.VpcLink("example", {
     targetArn: exampleLoadBalancer.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

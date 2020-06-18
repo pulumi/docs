@@ -12,7 +12,6 @@ meta_desc: "Explore the GetArn function of the AWS package, including examples, 
 
 Parses an Amazon Resource Name (ARN) into its constituent parts.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_aws as aws
 
 db_instance = aws.get_arn(arn="arn:aws:rds:eu-west-1:123456789012:db:mysql-db")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,6 +61,7 @@ const dbInstance = pulumi.output(aws.getArn({
     arn: "arn:aws:rds:eu-west-1:123456789012:db:mysql-db",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Provides an AWS Config Delivery Channel.
 
 > **Note:** Delivery Channel requires a `Configuration Recorder` to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -89,6 +88,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -138,9 +138,11 @@ role_policy = aws.iam.RolePolicy("rolePolicy",
 """),
     role=role.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -190,6 +192,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
     role: role.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

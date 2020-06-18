@@ -12,7 +12,6 @@ meta_desc: "Explore the LogDestination resource of the cloudwatch module, includ
 
 Provides a CloudWatch Logs destination resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ test_destination = aws.cloudwatch.LogDestination("testDestination",
     role_arn=aws_iam_role["iam_for_cloudwatch"]["arn"],
     target_arn=aws_kinesis_stream["kinesis_for_cloudwatch"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const testDestination = new aws.cloudwatch.LogDestination("test_destination", {
     targetArn: aws_kinesis_stream_kinesis_for_cloudwatch.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetMountTarget function of the efs module, including exa
 
 Provides information about an Elastic File System Mount Target (EFS).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,9 +73,11 @@ if mount_target_id is None:
     mount_target_id = ""
 by_id = aws.efs.get_mount_target(mount_target_id=mount_target_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -86,6 +89,7 @@ const byId = pulumi.output(aws.efs.getMountTarget({
     mountTargetId: mountTargetId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

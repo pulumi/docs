@@ -12,7 +12,6 @@ meta_desc: "Explore the Cluster resource of the dax module, including examples, 
 
 Provides a DAX Cluster resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ bar = aws.dax.Cluster("bar",
     node_type="dax.r4.large",
     replication_factor=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const bar = new aws.dax.Cluster("bar", {
     replicationFactor: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

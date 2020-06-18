@@ -14,7 +14,6 @@ Provides a Load Balancer Listener Rule resource.
 
 > **Note:** `aws.alb.ListenerRule` is known as `aws.lb.ListenerRule`. The functionality is identical.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -247,6 +246,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -451,6 +451,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -578,9 +579,11 @@ admin = aws.lb.ListenerRule("admin",
     ],
     listener_arn=front_end_listener.arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -711,6 +714,7 @@ const admin = new aws.lb.ListenerRule("admin", {
     listenerArn: frontEndListener.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

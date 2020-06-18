@@ -12,7 +12,6 @@ meta_desc: "Explore the VpnConnectionRoute resource of the ec2 module, including
 
 Provides a static route between a VPN connection and a customer gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -110,6 +110,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -132,9 +133,11 @@ office = aws.ec2.VpnConnectionRoute("office",
     destination_cidr_block="192.168.10.0/24",
     vpn_connection_id=main.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -161,6 +164,7 @@ const office = new aws.ec2.VpnConnectionRoute("office", {
     vpnConnectionId: main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLocalGateways function of the ec2 module, including e
 
 Provides information for multiple EC2 Local Gateways, such as their identifiers.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
     public Output<string> Foo { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ foo_local_gateways = aws.ec2.get_local_gateways(tags={
 })
 pulumi.export("foo", foo_local_gateways.ids)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -93,6 +96,7 @@ const fooLocalGateways = pulumi.output(aws.ec2.getLocalGateways({
 
 export const foo = fooLocalGateways.ids;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

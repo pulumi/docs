@@ -12,7 +12,6 @@ meta_desc: "Explore the SmbFileShare resource of the storagegateway module, incl
 
 Manages an AWS Storage Gateway SMB File Share.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = aws.storagegateway.SmbFileShare("example",
     location_arn=aws_s3_bucket["example"]["arn"],
     role_arn=aws_iam_role["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
     roleArn: aws_iam_role_example.arn,
 });
 ```
+
 {{% /example %}}
 
 ### Guest Authentication
@@ -114,6 +118,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -140,6 +145,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -153,9 +159,11 @@ example = aws.storagegateway.SmbFileShare("example",
     location_arn=aws_s3_bucket["example"]["arn"],
     role_arn=aws_iam_role["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -167,6 +175,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
     roleArn: aws_iam_role_example.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

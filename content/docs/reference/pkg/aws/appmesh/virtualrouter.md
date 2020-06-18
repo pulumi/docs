@@ -24,7 +24,6 @@ These resource can be imported using `import`.
 
 The state associated with existing resources will automatically be migrated.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -107,9 +108,11 @@ serviceb = aws.appmesh.VirtualRouter("serviceb",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -126,6 +129,7 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the ConfigurationSet resource of the ses module, including e
 
 Provides an SES configuration set resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,6 +55,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,15 +65,18 @@ import pulumi_aws as aws
 
 test = aws.ses.ConfigurationSet("test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const test = new aws.ses.ConfigurationSet("test", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

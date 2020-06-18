@@ -11,8 +11,6 @@ meta_desc: "Explore the MainRouteTableAssociation resource of the ec2 module, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a resource for managing the main routing table of a VPC.
-
-
 ## Notes
 
 On VPC creation, the AWS API always creates an initial Main Route Table. This
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +80,11 @@ main_route_table_association = aws.ec2.MainRouteTableAssociation("mainRouteTable
     route_table_id=aws_route_table["bar"]["id"],
     vpc_id=aws_vpc["foo"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +94,7 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("a", {
     vpcId: aws_vpc_foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

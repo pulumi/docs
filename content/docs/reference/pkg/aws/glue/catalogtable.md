@@ -12,7 +12,6 @@ meta_desc: "Explore the CatalogTable resource of the glue module, including exam
 
 Provides a Glue Catalog Table Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ aws_glue_catalog_table = aws.glue.CatalogTable("awsGlueCatalogTable",
     database_name="MyCatalogDatabase",
     name="MyCatalogTable")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws_glue_catalog_table", 
     name: "MyCatalogTable",
 });
 ```
+
 {{% /example %}}
 
 ### Parquet Table for Athena
@@ -156,6 +160,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -222,6 +227,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -275,9 +281,11 @@ aws_glue_catalog_table = aws.glue.CatalogTable("awsGlueCatalogTable",
     },
     table_type="EXTERNAL_TABLE")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -329,6 +337,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws_glue_catalog_table", 
     tableType: "EXTERNAL_TABLE",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

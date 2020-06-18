@@ -12,7 +12,6 @@ meta_desc: "Explore the GeoMatchSet resource of the wafregional module, includin
 
 Provides a WAF Regional Geo Match Set Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ geo_match_set = aws.wafregional.GeoMatchSet("geoMatchSet", geo_match_constraints
     },
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -117,6 +120,7 @@ const geoMatchSet = new aws.wafregional.GeoMatchSet("geo_match_set", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

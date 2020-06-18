@@ -14,7 +14,6 @@ Provides a Direct Connect LAG. Connections can be added to the LAG via the `aws.
 
 > *NOTE:* When creating a LAG, Direct Connect requires creating a Connection. This provider will remove this unmanaged connection during resource creation.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -76,9 +77,11 @@ hoge = aws.directconnect.LinkAggregationGroup("hoge",
     force_destroy=True,
     location="EqDC2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,6 +92,7 @@ const hoge = new aws.directconnect.LinkAggregationGroup("hoge", {
     location: "EqDC2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

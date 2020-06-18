@@ -12,7 +12,6 @@ meta_desc: "Explore the PrivateDnsNamespace resource of the servicediscovery mod
 
 Provides a Service Discovery Private DNS Namespace resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +84,11 @@ example_private_dns_namespace = aws.servicediscovery.PrivateDnsNamespace("exampl
     description="example",
     vpc=example_vpc.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -98,6 +101,7 @@ const examplePrivateDnsNamespace = new aws.servicediscovery.PrivateDnsNamespace(
     vpc: exampleVpc.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

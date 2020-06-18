@@ -11,8 +11,6 @@ meta_desc: "Explore the VpcDhcpOptions resource of the ec2 module, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a VPC DHCP Options resource.
-
-
 ## Remarks
 
 * Notice that all arguments are optional but you have to specify at least one argument.
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +85,11 @@ dns_resolver = aws.ec2.VpcDhcpOptions("dnsResolver", domain_name_servers=[
     "8.8.4.4",
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -99,6 +101,7 @@ const dnsResolver = new aws.ec2.VpcDhcpOptions("dns_resolver", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

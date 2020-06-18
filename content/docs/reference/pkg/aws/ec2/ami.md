@@ -19,7 +19,6 @@ region, it's better to use `aws.ec2.AmiCopy` instead.
 If you just want to share an existing AMI with another AWS account,
 it's better to use `aws.ec2.AmiLaunchPermission` instead.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,6 +86,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ example = aws.ec2.Ami("example",
     root_device_name="/dev/xvda",
     virtualization_type="hvm")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -125,6 +128,7 @@ const example = new aws.ec2.Ami("example", {
     virtualizationType: "hvm",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

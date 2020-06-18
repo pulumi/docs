@@ -11,8 +11,6 @@ meta_desc: "Explore the Topic resource of the sns module, including examples, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an SNS topic resource
-
-
 ## Example with Server-side encryption (SSE)
 
 ```typescript
@@ -91,6 +89,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -112,6 +111,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -121,15 +121,18 @@ import pulumi_aws as aws
 
 user_updates = aws.sns.Topic("userUpdates")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const userUpdates = new aws.sns.Topic("user_updates", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Route resource of the appmesh module, including examples
 
 Provides an AWS App Mesh route resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -105,6 +105,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -135,9 +136,11 @@ serviceb = aws.appmesh.Route("serviceb",
     },
     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -166,6 +169,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
+
 {{% /example %}}
 
 ### HTTP Header Routing
@@ -221,6 +225,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -270,6 +275,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -302,9 +308,11 @@ serviceb = aws.appmesh.Route("serviceb",
     },
     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -335,6 +343,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
+
 {{% /example %}}
 
 ### TCP Routing
@@ -373,6 +382,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -409,6 +419,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -430,9 +441,11 @@ serviceb = aws.appmesh.Route("serviceb",
     },
     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -452,6 +465,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

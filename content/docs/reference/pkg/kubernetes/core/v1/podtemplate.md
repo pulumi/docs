@@ -13,6 +13,7 @@ meta_desc: "Explore the PodTemplate resource of the core/v1 module, including ex
 PodTemplate describes a template for creating copies of a predefined pod.
 
 
+
 ## Create a PodTemplate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

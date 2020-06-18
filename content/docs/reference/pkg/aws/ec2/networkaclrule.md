@@ -18,7 +18,6 @@ defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +88,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -106,9 +107,11 @@ bar_network_acl_rule = aws.ec2.NetworkAclRule("barNetworkAclRule",
     from_port=22,
     to_port=22)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -125,6 +128,7 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
     toPort: 22,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

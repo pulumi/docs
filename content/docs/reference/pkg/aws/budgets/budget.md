@@ -12,7 +12,6 @@ meta_desc: "Explore the Budget resource of the budgets module, including example
 
 Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,6 +100,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -125,9 +126,11 @@ ec2 = aws.budgets.Budget("ec2",
     time_period_start="2017-07-01_00:00",
     time_unit="MONTHLY")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -151,6 +154,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
     timeUnit: "MONTHLY",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,8 +16,6 @@ the infrastructure that runs those applications.
 
 Environments are often things such as `development`, `integration`, or
 `production`.
-
-
 ## Option Settings
 
 Some options can be stack-specific, check [AWS Docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html)
@@ -180,6 +178,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -210,6 +209,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -222,9 +222,11 @@ tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
     application=tftest.name,
     solution_stack_name="64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -237,6 +239,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the FileSystem resource of the efs module, including example
 
 Provides an Elastic File System (EFS) File System resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ foo = aws.efs.FileSystem("foo", tags={
     "Name": "MyProduct",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const foo = new aws.efs.FileSystem("foo", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Using lifecycle policy
@@ -110,6 +114,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -135,6 +140,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -146,9 +152,11 @@ foo_with_lifecyle_policy = aws.efs.FileSystem("fooWithLifecylePolicy", lifecycle
     "transitionToIa": "AFTER_30_DAYS",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -159,6 +167,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

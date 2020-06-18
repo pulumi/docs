@@ -11,6 +11,7 @@ meta_desc: "Explore the ReplicaSet resource of the apps/v1beta2 module, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ReplicaSet ensures that a specified number of pod replicas are running at any given time.
+
 <p class="resource-deprecated">Deprecated: {{% md %}}apps/v1beta2/ReplicaSet is deprecated by apps/v1/ReplicaSet and not supported by Kubernetes v1.16&#43; clusters.{{% /md %}}</p>
 
 

@@ -14,7 +14,6 @@ Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is
 
 For more details, see the [Amazon Kinesis Firehose Documentation](https://aws.amazon.com/documentation/firehose/).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -78,6 +77,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -123,9 +123,11 @@ test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
         "role_arn": aws_iam_role["firehose_role"]["arn"],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -166,6 +168,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Splunk Destination
@@ -202,6 +205,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -239,6 +243,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -263,9 +268,11 @@ test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
         "s3BackupMode": "FailedEventsOnly",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -288,6 +295,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,7 +16,6 @@ More information can be found in the [Amazon API Gateway Developer Guide](https:
 > **Note:** This resource establishes ownership of and the TLS settings for
 a particular domain name. An API stage can be associated with the domain name using the `aws.apigatewayv2.ApiMapping` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ example = aws.apigatewayv2.DomainName("example",
         "security_policy": "TLS_1_2",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,6 +107,7 @@ const example = new aws.apigatewayv2.DomainName("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

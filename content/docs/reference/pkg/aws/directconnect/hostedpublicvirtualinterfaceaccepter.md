@@ -13,7 +13,6 @@ meta_desc: "Explore the HostedPublicVirtualInterfaceAccepter resource of the dir
 Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.
 This resource accepts ownership of a public virtual interface created by another AWS account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -61,6 +60,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,9 +95,11 @@ accepter_hosted_public_virtual_interface_accepter = aws.directconnect.HostedPubl
     },
     virtual_interface_id=creator.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -126,6 +128,7 @@ const accepterHostedPublicVirtualInterfaceAccepter = new aws.directconnect.Hoste
     virtualInterfaceId: creator.id,
 }, { provider: accepter });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

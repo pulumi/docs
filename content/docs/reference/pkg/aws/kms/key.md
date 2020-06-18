@@ -12,7 +12,6 @@ meta_desc: "Explore the Key resource of the kms module, including examples, inpu
 
 Provides a KMS customer master key.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ key = aws.kms.Key("key",
     deletion_window_in_days=10,
     description="KMS key 1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const key = new aws.kms.Key("a", {
     description: "KMS key 1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

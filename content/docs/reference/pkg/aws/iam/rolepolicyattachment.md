@@ -14,7 +14,6 @@ Attaches a Managed IAM Policy to an IAM role
 
 > **NOTE:** The usage of this resource conflicts with the `aws.iam.PolicyAttachment` resource and will permanently show a difference if both are defined.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -74,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -120,9 +120,11 @@ test_attach = aws.iam.RolePolicyAttachment("test-attach",
     policy_arn=policy.arn,
     role=role.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -164,6 +166,7 @@ const test_attach = new aws.iam.RolePolicyAttachment("test-attach", {
     role: role.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the MaintenanceWindow resource of the ssm module, including 
 
 Provides an SSM Maintenance Window resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ production = aws.ssm.MaintenanceWindow("production",
     duration=3,
     schedule="cron(0 16 ? * TUE *)")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const production = new aws.ssm.MaintenanceWindow("production", {
     schedule: "cron(0 16 ? * TUE *)",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

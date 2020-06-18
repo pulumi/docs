@@ -12,7 +12,6 @@ meta_desc: "Explore the GameSessionQueue resource of the gamelift module, includ
 
 Provides an Gamelift Game Session Queue resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,9 +79,11 @@ test = aws.gamelift.GameSessionQueue("test",
     ],
     timeout_in_seconds=60)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -103,6 +105,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
     timeoutInSeconds: 60,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

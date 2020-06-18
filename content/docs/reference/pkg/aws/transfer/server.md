@@ -14,8 +14,6 @@ Provides a AWS Transfer Server resource.
 
 
 
-
-
 ## Create a Server Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

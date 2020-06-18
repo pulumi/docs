@@ -12,7 +12,6 @@ meta_desc: "Explore the Crawler resource of the glue module, including examples,
 
 Manages a Glue Crawler. More information can be found in the [AWS Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +87,11 @@ example = aws.glue.Crawler("example",
     }],
     role=aws_iam_role["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -101,6 +104,7 @@ const example = new aws.glue.Crawler("example", {
     role: aws_iam_role_example.arn,
 });
 ```
+
 {{% /example %}}
 
 ### Catalog Target
@@ -145,6 +149,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -175,9 +180,11 @@ example = aws.glue.Crawler("example",
         "deleteBehavior": "LOG",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -201,6 +208,7 @@ const example = new aws.glue.Crawler("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

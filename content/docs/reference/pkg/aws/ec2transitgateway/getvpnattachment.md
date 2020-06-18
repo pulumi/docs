@@ -12,7 +12,6 @@ meta_desc: "Explore the GetVpnAttachment function of the ec2transitgateway modul
 
 Get information on an EC2 Transit Gateway VPN Attachment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_aws as aws
 example = aws.ec2transitgateway.get_vpn_attachment(transit_gateway_id=aws_ec2_transit_gateway["example"]["id"],
     vpn_connection_id=aws_vpn_connection["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,6 +84,7 @@ const example = pulumi.all([aws_ec2_transit_gateway_example.id, aws_vpn_connecti
     vpnConnectionId: aws_vpn_connection_exampleId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Filter
@@ -111,6 +115,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -140,6 +145,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -152,9 +158,11 @@ test = aws.ec2transitgateway.get_vpn_attachment(filters=[{
     "values": ["some-resource"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -166,6 +174,7 @@ const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

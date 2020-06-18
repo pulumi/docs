@@ -12,7 +12,6 @@ meta_desc: "Explore the DeploymentConfig resource of the codedeploy module, incl
 
 Provides a CodeDeploy deployment config for an application
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -84,6 +83,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -148,6 +148,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -185,9 +186,11 @@ foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
         "triggerTargetArn": "foo-topic-arn",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -224,6 +227,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Lambda Usage
@@ -277,6 +281,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -329,6 +334,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -360,9 +366,11 @@ foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
     deployment_group_name="bar",
     service_role_arn=aws_iam_role["foo_role"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -393,6 +401,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
     serviceRoleArn: aws_iam_role_foo_role.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -15,8 +15,6 @@ with custom software already setup. See [What is Amazon Lightsail?](https://ligh
 for more information.
 
 > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
-
-
 ## Availability Zones
 
 Lightsail currently supports the following Availability Zones (e.g. `us-east-1a`):
@@ -130,6 +128,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -159,6 +158,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -176,9 +176,11 @@ gitlab_test = aws.lightsail.Instance("gitlabTest",
         "foo": "bar",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -194,6 +196,7 @@ const gitlabTest = new aws.lightsail.Instance("gitlab_test", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the LogGroup resource of the cloudwatch module, including ex
 
 Provides a CloudWatch Log Group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ yada = aws.cloudwatch.LogGroup("yada", tags={
     "Environment": "production",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const yada = new aws.cloudwatch.LogGroup("yada", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

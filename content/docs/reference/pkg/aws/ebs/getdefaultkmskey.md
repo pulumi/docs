@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDefaultKmsKey function of the ebs module, including e
 
 Use this data source to get the default EBS encryption KMS key in the current region.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +55,11 @@ example = aws.ebs.Volume("example",
     encrypted=True,
     kms_key_id=current.key_arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -69,6 +71,7 @@ const example = new aws.ebs.Volume("example", {
     kmsKeyId: current.keyArn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

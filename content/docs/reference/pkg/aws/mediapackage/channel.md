@@ -12,7 +12,6 @@ meta_desc: "Explore the Channel resource of the mediapackage module, including e
 
 Provides an AWS Elemental MediaPackage Channel.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ kittens = aws.mediapackage.Channel("kittens",
     channel_id="kitten-channel",
     description="A channel dedicated to amusing videos of kittens.")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
     description: "A channel dedicated to amusing videos of kittens.",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

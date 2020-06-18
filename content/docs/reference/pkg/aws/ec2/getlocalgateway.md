@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLocalGateway function of the ec2 module, including ex
 
 Provides details about an EC2 Local Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,9 +71,11 @@ config = pulumi.Config()
 local_gateway_id = config.require_object("localGatewayId")
 selected = aws.ec2.get_local_gateway(id=local_gateway_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -84,6 +87,7 @@ const selected = pulumi.output(aws.ec2.getLocalGateway({
     id: localGatewayId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

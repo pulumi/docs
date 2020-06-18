@@ -13,6 +13,7 @@ meta_desc: "Explore the Status resource of the meta/v1 module, including example
 Status is a return value for calls that don't return other objects.
 
 
+
 ## Create a Status Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

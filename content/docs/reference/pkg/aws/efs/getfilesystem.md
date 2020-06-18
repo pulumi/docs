@@ -12,7 +12,6 @@ meta_desc: "Explore the GetFileSystem function of the efs module, including exam
 
 Provides information about an Elastic File System (EFS) File System.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,9 +73,11 @@ if file_system_id is None:
     file_system_id = ""
 by_id = aws.efs.get_file_system(file_system_id=file_system_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -86,6 +89,7 @@ const byId = pulumi.output(aws.efs.getFileSystem({
     fileSystemId: fileSystemId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -18,7 +18,6 @@ This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ selected = aws.lb.get_load_balancer(name="default-public")
 selected443 = aws.lb.get_listener(load_balancer_arn=selected.arn,
     port=443)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -122,6 +125,7 @@ const selected443 = selected.apply(selected => aws.lb.getListener({
     port: 443,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

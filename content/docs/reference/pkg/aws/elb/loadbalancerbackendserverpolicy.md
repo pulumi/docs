@@ -12,8 +12,6 @@ meta_desc: "Explore the LoadBalancerBackendServerPolicy resource of the elb modu
 
 Attaches a load balancer policy to an ELB backend server.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -92,6 +90,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,6 +107,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -148,9 +148,11 @@ wu_tang_backend_auth_policies_443 = aws.elb.LoadBalancerBackendServerPolicy("wu-
     load_balancer_name=wu_tang.name,
     policy_names=[wu_tang_root_ca_backend_auth_policy.policy_name])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -193,6 +195,7 @@ const wu_tang_backend_auth_policies_443 = new aws.elb.LoadBalancerBackendServerP
     policyNames: [wu_tang_root_ca_backend_auth_policy.policyName],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

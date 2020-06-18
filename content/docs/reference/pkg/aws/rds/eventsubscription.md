@@ -11,8 +11,6 @@ meta_desc: "Explore the EventSubscription resource of the rds module, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DB event subscription resource.
-
-
 ## Attributes
 
 The following additional atttributes are provided:
@@ -76,6 +74,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -134,6 +133,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -169,9 +169,11 @@ default_event_subscription = aws.rds.EventSubscription("defaultEventSubscription
     source_ids=[default_instance.id],
     source_type="db-instance")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -206,6 +208,7 @@ const defaultEventSubscription = new aws.rds.EventSubscription("default", {
     sourceType: "db-instance",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

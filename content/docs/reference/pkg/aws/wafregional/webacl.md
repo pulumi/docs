@@ -12,7 +12,6 @@ meta_desc: "Explore the WebAcl resource of the wafregional module, including exa
 
 Provides a WAF Regional Web ACL Resource for use with Application Load Balancer.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -76,6 +75,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -136,6 +136,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -168,9 +169,11 @@ wafacl = aws.wafregional.WebAcl("wafacl",
         "type": "REGULAR",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -204,6 +207,7 @@ const wafacl = new aws.wafregional.WebAcl("wafacl", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Group Rule
@@ -241,6 +245,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -277,6 +282,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -298,9 +304,11 @@ example = aws.wafregional.WebAcl("example",
         "type": "GROUP",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -320,6 +328,7 @@ const example = new aws.wafregional.WebAcl("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Logging
@@ -358,6 +367,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -394,6 +404,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -416,9 +427,11 @@ example = aws.wafregional.WebAcl("example", logging_configuration={
     },
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -440,6 +453,7 @@ const example = new aws.wafregional.WebAcl("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

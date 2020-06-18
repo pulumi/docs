@@ -12,7 +12,6 @@ meta_desc: "Explore the SubnetGroup resource of the docdb module, including exam
 
 Provides an DocumentDB subnet group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +63,11 @@ default = aws.docdb.SubnetGroup("default",
         "Name": "My docdb subnet group",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -80,6 +82,7 @@ const defaultSubnetGroup = new aws.docdb.SubnetGroup("default", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

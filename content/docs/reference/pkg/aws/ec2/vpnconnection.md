@@ -17,7 +17,6 @@ Manages an EC2 VPN connection. These objects can be connected to customer gatewa
 > **Note:** The CIDR blocks in the arguments `tunnel1_inside_cidr` and `tunnel2_inside_cidr` must have a prefix of /30 and be a part of a specific range.
 [Read more about this in the AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -106,9 +107,11 @@ example_vpn_connection = aws.ec2.VpnConnection("exampleVpnConnection",
     transit_gateway_id=example_transit_gateway.id,
     type=example_customer_gateway.type)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -125,6 +128,7 @@ const exampleVpnConnection = new aws.ec2.VpnConnection("example", {
     type: exampleCustomerGateway.type,
 });
 ```
+
 {{% /example %}}
 
 ### Virtual Private Gateway
@@ -162,6 +166,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -208,6 +213,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -227,9 +233,11 @@ main = aws.ec2.VpnConnection("main",
     type="ipsec.1",
     vpn_gateway_id=vpn_gateway.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -252,6 +260,7 @@ const main = new aws.ec2.VpnConnection("main", {
     vpnGatewayId: vpnGateway.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

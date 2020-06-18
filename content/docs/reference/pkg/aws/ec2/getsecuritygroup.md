@@ -16,7 +16,6 @@ This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -76,6 +76,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,9 +91,11 @@ subnet = aws.ec2.Subnet("subnet",
     cidr_block="10.0.1.0/24",
     vpc_id=selected.vpc_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +111,7 @@ const subnet = new aws.ec2.Subnet("subnet", {
     vpcId: selected.vpcId!,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

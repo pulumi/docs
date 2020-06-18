@@ -12,7 +12,6 @@ meta_desc: "Explore the DocumentationPart resource of the apigateway module, inc
 
 Provides a settings of an API Gateway Documentation Part.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -95,9 +96,11 @@ example_documentation_part = aws.apigateway.DocumentationPart("exampleDocumentat
     properties="{\"description\":\"Example description\"}",
     rest_api_id=example_rest_api.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -113,6 +116,7 @@ const exampleDocumentationPart = new aws.apigateway.DocumentationPart("example",
     restApiId: exampleRestApi.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

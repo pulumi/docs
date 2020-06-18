@@ -12,7 +12,6 @@ meta_desc: "Explore the Record resource of the route53 module, including example
 
 Provides a Route53 record resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +60,11 @@ www = aws.route53.Record("www",
     type="A",
     zone_id=aws_route53_zone["primary"]["zone_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -75,6 +77,7 @@ const www = new aws.route53.Record("www", {
     zoneId: aws_route53_zone_primary.zoneId,
 });
 ```
+
 {{% /example %}}
 
 ### Weighted routing policy
@@ -129,6 +132,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -161,9 +165,11 @@ www_live = aws.route53.Record("www-live",
     }],
     zone_id=aws_route53_zone["primary"]["zone_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -191,6 +197,7 @@ const www_live = new aws.route53.Record("www-live", {
     zoneId: aws_route53_zone_primary.zoneId,
 });
 ```
+
 {{% /example %}}
 
 ### Alias record
@@ -239,6 +246,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -288,6 +296,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -313,9 +322,11 @@ www = aws.route53.Record("www",
     type="A",
     zone_id=aws_route53_zone["primary"]["zone_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -340,6 +351,7 @@ const www = new aws.route53.Record("www", {
     zoneId: aws_route53_zone_primary.zoneId,
 });
 ```
+
 {{% /example %}}
 
 ### NS and SOA Record Management
@@ -374,6 +386,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -419,6 +432,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -440,9 +454,11 @@ example_record = aws.route53.Record("exampleRecord",
     type="NS",
     zone_id=example_zone.zone_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -462,6 +478,7 @@ const exampleRecord = new aws.route53.Record("example", {
     zoneId: exampleZone.zoneId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,7 +16,6 @@ Provides a CloudTrail resource.
 
 > *NOTE:* For an organization trail, this resource must be in the master account of the organization.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -76,6 +75,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,9 +125,11 @@ foobar = aws.cloudtrail.Trail("foobar",
     s3_bucket_name=foo.id,
     s3_key_prefix="prefix")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -171,6 +173,7 @@ const foobar = new aws.cloudtrail.Trail("foobar", {
     s3KeyPrefix: "prefix",
 });
 ```
+
 {{% /example %}}
 
 ### Logging All Lambda Function Invocations
@@ -209,6 +212,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -245,6 +249,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -261,9 +266,11 @@ example = aws.cloudtrail.Trail("example", event_selectors=[{
     "readWriteType": "All",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -279,6 +286,7 @@ const example = new aws.cloudtrail.Trail("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Logging All S3 Bucket Object Events
@@ -317,6 +325,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -353,6 +362,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -369,9 +379,11 @@ example = aws.cloudtrail.Trail("example", event_selectors=[{
     "readWriteType": "All",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -387,6 +399,7 @@ const example = new aws.cloudtrail.Trail("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Logging Individual S3 Bucket Events
@@ -429,6 +442,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -450,9 +464,11 @@ example = aws.cloudtrail.Trail("example", event_selectors=[{
     "readWriteType": "All",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -473,6 +489,7 @@ const example = new aws.cloudtrail.Trail("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
