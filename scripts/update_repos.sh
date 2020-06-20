@@ -14,6 +14,7 @@ TOOLS_REPOS=(
     "pulumi-awsx"
     "pulumi-azure"
     "pulumi-azuread"
+    "pulumi-azuredevops"
     "pulumi-cloud"
     "pulumi-cloudamqp"
     "pulumi-cloudflare"
