@@ -34,6 +34,7 @@ aliases: ["/docs/reference/clouds/"]
 
 * [Aiven]({{< relref "./aiven" >}})
 * [Auth0]({{< relref "./auth0" >}})
+* [AzureDevOps]({{< relref "./azuredevops" >}})
 * [Consul]({{< relref "./consul" >}})
 * [Docker]({{< relref "./docker" >}})
 * [Kafka]({{< relref "./kafka" >}})
