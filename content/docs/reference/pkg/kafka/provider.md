@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kafka/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bootstrap_servers=None<span class="p">, </span>ca_cert=None<span class="p">, </span>ca_cert_file=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_cert_file=None<span class="p">, </span>client_key=None<span class="p">, </span>client_key_file=None<span class="p">, </span>sasl_mechanism=None<span class="p">, </span>sasl_password=None<span class="p">, </span>sasl_username=None<span class="p">, </span>skip_tls_verify=None<span class="p">, </span>timeout=None<span class="p">, </span>tls_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kafka/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bootstrap_servers=None<span class="p">, </span>ca_cert=None<span class="p">, </span>ca_cert_file=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_cert_file=None<span class="p">, </span>client_key=None<span class="p">, </span>client_key_file=None<span class="p">, </span>client_key_passphrase=None<span class="p">, </span>sasl_mechanism=None<span class="p">, </span>sasl_password=None<span class="p">, </span>sasl_username=None<span class="p">, </span>skip_tls_verify=None<span class="p">, </span>timeout=None<span class="p">, </span>tls_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -277,6 +277,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="clientkeypassphrase_csharp">
+<a href="#clientkeypassphrase_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key<wbr>Passphrase</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The passphrase for the private key that the certificate was issued for.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="saslmechanism_csharp">
 <a href="#saslmechanism_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Mechanism</a>
 </span> 
@@ -424,6 +435,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Path to a file containing the private key that the certificate was issued for.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkeypassphrase_go">
+<a href="#clientkeypassphrase_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key<wbr>Passphrase</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The passphrase for the private key that the certificate was issued for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -577,6 +599,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="clientkeypassphrase_nodejs">
+<a href="#clientkeypassphrase_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>Passphrase</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The passphrase for the private key that the certificate was issued for.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="saslmechanism_nodejs">
 <a href="#saslmechanism_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Mechanism</a>
 </span> 
@@ -724,6 +757,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Path to a file containing the private key that the certificate was issued for.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_key_passphrase_python">
+<a href="#client_key_passphrase_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>passphrase</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The passphrase for the private key that the certificate was issued for.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
