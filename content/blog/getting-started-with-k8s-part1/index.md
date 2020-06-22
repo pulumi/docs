@@ -252,7 +252,9 @@ You can try out the code by following the complete [tutorial]({{< relref "/docs/
 
 ## Conclusion
 
-This article covers how to set up a Kubernetes cluster on AWS, Azure, and GCP using Pulumi. Creating a cluster differs among cloud providers, but the process is generally the same. We defined configuration parameters such as node type, number of nodes, and passwords to instantiate the cluster then exported a kubeconfig file that we can use with kubectl. This is the first in a series of articles on using infrastructure as code for Kubernetes. In the next article, we'll cover basic Kubernetes objects such as pods, services, and volumes. We'll also cover higher-level abstractions such as deployments and replicasets. Stay tuned! In the meantime, learn more about Pulumi;
+This article covers how to set up a Kubernetes cluster on AWS, Azure, and GCP using Pulumi. Creating a cluster differs among cloud providers, but the process is generally the same. We defined configuration parameters such as node type, number of nodes, and passwords to instantiate the cluster then exported a kubeconfig file that we can use with kubectl.
+
+This is the first in a series of articles on using infrastructure as code for Kubernetes. In the next article, we'll cover basic Kubernetes objects such as pods, services, and volumes. We'll also cover higher-level abstractions such as deployments and replicasets. Stay tuned! In the meantime, learn more about Pulumi:
 
 - [Pulumi TV](https://www.youtube.com/pulumitv)
 - [Pulumi Kubernetes Overview](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/)
