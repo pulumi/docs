@@ -50,6 +50,12 @@
       "terraform_provider_name": "azuread"
     },
     {
+      "name": "Pulumi Azure DevOps",
+      "package_name": "pulumi_azuredevops",
+      "pulumi_provider_name": "azuredevops",
+      "terraform_provider_name": "azuredevops"
+    },
+    {
       "name": "Pulumi Cloudflare",
       "package_name": "pulumi_cloudflare",
       "pulumi_provider_name": "cloudflare",
