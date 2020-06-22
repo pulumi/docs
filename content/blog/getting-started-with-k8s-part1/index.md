@@ -10,7 +10,7 @@ tags:
 
 ---
 
-Containers solved the problem of moving software from one environment to another because they encapsulate all the software dependencies. However, an orchestration platform is needed to manage containers at scale. Kubernetes is a popular open-source solution that uses declarative configuration to specify the desired state of the application. Configuring and deploying an application on Kubernetes is often accomplished with YAML files to define the state and command line tools to manage and control the Kubernetes API. This article demonstrates how to use infrastructure as code to create [basic Kubernetes objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#kubernetes-objects) and higher-level abstractions that build upon the basic objects.
+Containers solved the problem of moving software from one environment to another because they encapsulate all the software dependencies. However, an orchestration platform is needed to manage containers at scale. [Kubernetes](https://kubernetes.io/) is a popular open-source solution that uses declarative configuration to specify the desired state of the application. Configuring and deploying an application on Kubernetes is often accomplished with YAML files to define the state and command line tools to manage and control the Kubernetes API. This article demonstrates how to use infrastructure as code to create [basic Kubernetes objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#kubernetes-objects) and higher-level abstractions that build upon the basic objects.
 
 <!--more-->
 
