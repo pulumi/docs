@@ -52,6 +52,7 @@ const cluster = new eks.Cluster("cluster", {
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig;
 ```
+
 You can try out the code by following the complete [tutorial]({{< relref "/docs/tutorials/kubernetes/eks" >}}).
 
 {{% /choosable %}}
@@ -66,9 +67,11 @@ $ pulumi config set nodeCount [value]
 $ pulumi config set nodeSize [value]
 $ pulumi config set sshPublicKey [value]
 ```
+
 We retrieve the values with `config.ts` for use in our main program.
 
 config.ts
+
 ```ts
 import * as azure from "@pulumi/azure";
 import * as pulumi from "@pulumi/pulumi";
@@ -86,6 +89,7 @@ export const resourceGroup = new azure.core.ResourceGroup("aks", { location });
 In Azure, we have to create a *service principal*, which is an identity for accessing Azure resources. Note that in this example, the service principal password is stored as a secret in the project config file. Azure allocates a VPC when creating a Kubernetes cluster based on the values set in the config file. For example, the default number of nodes is two and uses Standard_D2_v2 virtual machine if these are not set in the config file. We also export the [*kubeconfig*](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file which we can use with *kubectl* to communicate with our Kubernetes cluster.
 
 cluster.ts
+
 ```ts
 import * as azure from "@pulumi/azure";
 import * as azuread from "@pulumi/azuread";
@@ -129,6 +133,7 @@ export const k8sProvider = new k8s.Provider("aksK8s", {
     kubeconfig: k8sCluster.kubeConfigRaw,
 });
 ```
+
 The code above is an abbreviated example of this [AKS deployment](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm) on GitHub.
 
 {{% /choosable %}}
@@ -143,9 +148,11 @@ $ pulumi config set nodeMachineType [value]
 $ pulumi config set username [value]
 $ pulumi config set masterVersion [value]
 ```
+
 We retrieve the values with `config.ts` for use in our main program.
 
 config.ts
+
 ```ts
 import * as gcp from "@pulumi/gcp";
 import { Config } from "@pulumi/pulumi";
@@ -173,8 +180,8 @@ export const password = config.get("password") || new random.RandomPassword(
 export const masterVersion = config.get("masterVersion") ||
     gcp.container.getEngineVersions().then(it => it.latestMasterVersion);
 ```
-We create the Kubernetes cluster using the variables we set in the configuration file. Note that for the nodes, we specify the *oauthScopes*, which are the Google API scopes available to all of the node VMs under the "default" service account. Because GKE uses gcloud to authenticate to the service, we have to create a [*kubeconfig*](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file that uses gcloud. The kubeconfig file lets us communicate with our Kubernetes cluster.
 
+We create the Kubernetes cluster using the variables we set in the configuration file. Note that for the nodes, we specify the *oauthScopes*, which are the Google API scopes available to all of the node VMs under the "default" service account. Because GKE uses gcloud to authenticate to the service, we have to create a [*kubeconfig*](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file that uses gcloud. The kubeconfig file lets us communicate with our Kubernetes cluster.
 
 ```ts
 import * as gcp from "@pulumi/gcp";
@@ -237,6 +244,7 @@ export const k8sProvider = new k8s.Provider("gkeK8s", {
     kubeconfig: k8sConfig,
 });
 ```
+
 You can try out the code by following the complete [tutorial]({{< relref "/docs/tutorials/kubernetes/gke" >}}).
 
 {{% /choosable %}}
@@ -246,6 +254,6 @@ You can try out the code by following the complete [tutorial]({{< relref "/docs/
 
 This article covers how to set up a Kubernetes cluster on AWS, Azure, and GCP using Pulumi. Creating a cluster differs among cloud providers, but the process is generally the same. We defined configuration parameters such as node type, number of nodes, and passwords to instantiate the cluster then exported a kubeconfig file that we can use with kubectl. This is the first in a series of articles on using infrastructure as code for Kubernetes. In the next article, we'll cover basic Kubernetes objects such as pods, services, and volumes. We'll also cover higher-level abstractions such as deployments and replicasets. Stay tuned! In the meantime, learn more about Pulumi;
 
-Pulumi TV: https://www.youtube.com/pulumitv
-Pulumi Kubernetes Overview: https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/
-Kubernetes Tutorials: https://www.pulumi.com/docs/tutorials/kubernetes/
+- [Pulumi TV](https://www.youtube.com/pulumitv)
+- [Pulumi Kubernetes Overview](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/)
+- [Kubernetes Tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/)
