@@ -30,7 +30,7 @@ To create a cluster for Kubernetes on a cloud provider, we need to create a VPC 
 {{< chooser cloud "aws,azure,gcp" >}}
 {{% choosable cloud aws %}}
 
-We declare a VPC to host our Kubernetes cluster and specify a public subnet, which is the gateway for the Kube-APIServer. We create the Kubernetes cluster with the VPC we declared and the VPC's default public subnets. The `desiredCapacity` parameter sets the desired number of EC2 t2.medium nodes. We also export the [*kubeconfig*](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file which we can use with *kubectl* to communicate with our Kubernetes cluster.
+We declare a VPC to host our Kubernetes cluster and specify a public subnet, which is the gateway for the Kube-APIServer. We create the Kubernetes cluster with the VPC we declared and the VPC's default public subnets. The `desiredCapacity` parameter sets the desired number of EC2 `t2.medium` nodes. We also export the [*kubeconfig*](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file which we can use with *kubectl* to communicate with our Kubernetes cluster.
 
 ```ts
 import * as awsx from "@pulumi/awsx";
