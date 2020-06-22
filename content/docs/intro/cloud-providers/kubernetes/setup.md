@@ -99,4 +99,4 @@ to the constructor of a `new kubernetes.Provider` to construct a specific instan
 Each Kubernetes resource managed by Pulumi will have a link in the corresponding [Pulumi Console](https://app.pulumi.com")
 to view the resource in the cluster. These links are local, and require the client run `kubectl proxy` beforehand to access the resource.
 
-To learn more about `kubectl proxy` check out the [reference docs](https://kubernetes.io/docs/tasks/access-kubernetes-api/http-proxy-access-api/).
+To learn more about `kubectl proxy` check out the [reference docs](https://kubernetes.io/docs/concepts/cluster-administration/proxies/).
