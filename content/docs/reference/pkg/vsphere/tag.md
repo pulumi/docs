@@ -21,8 +21,6 @@ For more information about tags, click [here][ext-tags-general].
 > **NOTE:** Tagging support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,9 +77,11 @@ tag = vsphere.Tag("tag",
     category_id=category.id,
     description="Managed by Pulumi")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -98,6 +99,7 @@ const tag = new vsphere.Tag("tag", {
     description: "Managed by Pulumi",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

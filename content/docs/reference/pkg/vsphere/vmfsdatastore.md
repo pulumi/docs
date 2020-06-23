@@ -17,7 +17,7 @@ disks presented to a host or multiple hosts over Fibre Channel or iSCSI.
 Devices can be specified manually, or discovered using the
 [`vsphere..getVmfsDisks`][data-source-vmfs-disks] data source.
 
-[data-source-vmfs-disks]: /docs/providers/vsphere/d/vmfs_disks.html 
+[data-source-vmfs-disks]: /docs/providers/vsphere/d/vmfs_disks.html
 
 ## Auto-Mounting of Datastores Within vCenter
 
@@ -43,11 +43,9 @@ an already provisioned disk is currently not supported (but may be in future
 versions of this resource).
 
 > **NOTE:** You cannot decrease the size of a datastore. If the resource
-detects disks removed from the configuration, the provider will give an error. 
+detects disks removed from the configuration, the provider will give an error.
 
 [cmd-taint]: /docs/commands/taint.html
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -82,6 +80,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,9 +102,11 @@ datastore = vsphere.VmfsDatastore("datastore",
     ],
     host_system_id=esxi_host.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -123,6 +124,7 @@ const datastore = new vsphere.VmfsDatastore("datastore", {
     hostSystemId: esxiHost.id,
 });
 ```
+
 {{% /example %}}
 
 ### Auto-detection of disks via `vsphere..getVmfsDisks`
@@ -160,6 +162,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -182,9 +185,11 @@ datastore = vsphere.VmfsDatastore("datastore",
     folder="datastore-folder",
     host_system_id=esxi_host.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -207,6 +212,7 @@ const datastore = new vsphere.VmfsDatastore("datastore", {
     hostSystemId: esxiHost.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

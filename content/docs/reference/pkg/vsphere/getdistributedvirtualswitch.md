@@ -16,11 +16,8 @@ can then be used with resources or data sources that require a DVS, such as the
 `vsphere..DistributedPortGroup` resource, for which
 an example is shown below.
 
-
 > **NOTE:** This data source requires vCenter and is not available on direct
 ESXi connections.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -61,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +78,11 @@ pg = vsphere.DistributedPortGroup("pg",
     distributed_virtual_switch_uuid=dvs.id,
     standby_uplinks=[dvs.uplinks[1]])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -100,6 +100,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
     standbyUplinks: [dvs.apply(dvs => dvs.uplinks[1])],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

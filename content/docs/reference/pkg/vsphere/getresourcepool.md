@@ -13,9 +13,7 @@ meta_desc: "Explore the GetResourcePool function of the vSphere package, includi
 The `vsphere..ResourcePool` data source can be used to discover the ID of a
 resource pool in vSphere. This is useful to fetch the ID of a resource pool
 that you want to use to create virtual machines in using the
-`vsphere..VirtualMachine` resource. 
-
-
+`vsphere..VirtualMachine` resource.
 
 {{% examples %}}
 ## Example Usage
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ datacenter = vsphere.get_datacenter(name="dc1")
 pool = vsphere.get_resource_pool(datacenter_id=datacenter.id,
     name="resource-pool-1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -74,6 +75,7 @@ const pool = datacenter.apply(datacenter => vsphere.getResourcePool({
     name: "resource-pool-1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Specifying the root resource pool for a standalone host
@@ -95,6 +97,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -109,9 +112,11 @@ import pulumi_vsphere as vsphere
 pool = vsphere.get_resource_pool(datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
     name="esxi1/Resources")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -121,6 +126,7 @@ const pool = vsphere_datacenter_dc.id.apply(id => vsphere.getResourcePool({
     name: "esxi1/Resources",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

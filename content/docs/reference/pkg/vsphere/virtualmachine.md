@@ -22,7 +22,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#VirtualMachine">VirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>vapp=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#VirtualMachine">VirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>pci_device_ids=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>vapp=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -788,8 +788,20 @@ to this virtual machine. Default: `1`.
         <span class="property-type"><a href="#virtualmachineovfdeploy">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
-provided ovf template. See creating a virtual machine from a
-ovf template for more details.
+provided ovf/ova template. See creating a virtual machine from a
+ovf/ova template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pcideviceids_csharp">
+<a href="#pcideviceids_csharp" style="color: inherit; text-decoration: inherit;">Pci<wbr>Device<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of host PCI device IDs to create PCI
+passthroughs for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,7 +972,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1626,8 +1638,20 @@ to this virtual machine. Default: `1`.
         <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
-provided ovf template. See creating a virtual machine from a
-ovf template for more details.
+provided ovf/ova template. See creating a virtual machine from a
+ovf/ova template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pcideviceids_go">
+<a href="#pcideviceids_go" style="color: inherit; text-decoration: inherit;">Pci<wbr>Device<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of host PCI device IDs to create PCI
+passthroughs for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1798,7 +1822,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2464,8 +2488,20 @@ to this virtual machine. Default: `1`.
         <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
-provided ovf template. See creating a virtual machine from a
-ovf template for more details.
+provided ovf/ova template. See creating a virtual machine from a
+ovf/ova template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pcideviceids_nodejs">
+<a href="#pcideviceids_nodejs" style="color: inherit; text-decoration: inherit;">pci<wbr>Device<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of host PCI device IDs to create PCI
+passthroughs for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2636,7 +2672,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3302,8 +3338,20 @@ to this virtual machine. Default: `1`.
         <span class="property-type"><a href="#virtualmachineovfdeploy">Dict[Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy]</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
-provided ovf template. See creating a virtual machine from a
-ovf template for more details.
+provided ovf/ova template. See creating a virtual machine from a
+ovf/ova template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pci_device_ids_python">
+<a href="#pci_device_ids_python" style="color: inherit; text-decoration: inherit;">pci_<wbr>device_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of host PCI device IDs to create PCI
+passthroughs for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3474,7 +3522,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4165,7 +4213,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>change_version=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>default_ip_address=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>guest_ip_addresses=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>imported=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>moid=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>reboot_required=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>uuid=None<span class="p">, </span>vapp=None<span class="p">, </span>vapp_transports=None<span class="p">, </span>vmware_tools_status=None<span class="p">, </span>vmx_path=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>change_version=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>default_ip_address=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>guest_ip_addresses=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>imported=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>moid=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>pci_device_ids=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>reboot_required=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>uuid=None<span class="p">, </span>vapp=None<span class="p">, </span>vapp_transports=None<span class="p">, </span>vmware_tools_status=None<span class="p">, </span>vmx_path=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4929,8 +4977,20 @@ to this virtual machine. Default: `1`.
         <span class="property-type"><a href="#virtualmachineovfdeploy">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
-provided ovf template. See creating a virtual machine from a
-ovf template for more details.
+provided ovf/ova template. See creating a virtual machine from a
+ovf/ova template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_pcideviceids_csharp">
+<a href="#state_pcideviceids_csharp" style="color: inherit; text-decoration: inherit;">Pci<wbr>Device<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of host PCI device IDs to create PCI
+passthroughs for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5128,7 +5188,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5899,8 +5959,20 @@ to this virtual machine. Default: `1`.
         <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
-provided ovf template. See creating a virtual machine from a
-ovf template for more details.
+provided ovf/ova template. See creating a virtual machine from a
+ovf/ova template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_pcideviceids_go">
+<a href="#state_pcideviceids_go" style="color: inherit; text-decoration: inherit;">Pci<wbr>Device<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of host PCI device IDs to create PCI
+passthroughs for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6098,7 +6170,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6869,8 +6941,20 @@ to this virtual machine. Default: `1`.
         <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
-provided ovf template. See creating a virtual machine from a
-ovf template for more details.
+provided ovf/ova template. See creating a virtual machine from a
+ovf/ova template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_pcideviceids_nodejs">
+<a href="#state_pcideviceids_nodejs" style="color: inherit; text-decoration: inherit;">pci<wbr>Device<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of host PCI device IDs to create PCI
+passthroughs for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7068,7 +7152,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7839,8 +7923,20 @@ to this virtual machine. Default: `1`.
         <span class="property-type"><a href="#virtualmachineovfdeploy">Dict[Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy]</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
-provided ovf template. See creating a virtual machine from a
-ovf template for more details.
+provided ovf/ova template. See creating a virtual machine from a
+ovf/ova template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_pci_device_ids_python">
+<a href="#state_pci_device_ids_python" style="color: inherit; text-decoration: inherit;">pci_<wbr>device_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of host PCI device IDs to create PCI
+passthroughs for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8038,7 +8134,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of any tags to attach to this resource. 
+    <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11967,6 +12063,16 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowunverifiedsslcert_csharp">
+<a href="#allowunverifiedsslcert_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="diskprovisioning_csharp">
 <a href="#diskprovisioning_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Provisioning</a>
 </span> 
@@ -12031,6 +12137,16 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowunverifiedsslcert_go">
+<a href="#allowunverifiedsslcert_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -12101,6 +12217,16 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowunverifiedsslcert_nodejs">
+<a href="#allowunverifiedsslcert_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="diskprovisioning_nodejs">
 <a href="#diskprovisioning_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Provisioning</a>
 </span> 
@@ -12165,6 +12291,16 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowunverifiedsslcert_python">
+<a href="#allowunverifiedsslcert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

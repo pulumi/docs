@@ -13,10 +13,7 @@ meta_desc: "Explore the GetDatastore function of the vSphere package, including 
 The `vsphere..getDatastore` data source can be used to discover the ID of a
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
-`vsphere..VirtualMachine` resource. 
-
-
-
+`vsphere..VirtualMachine` resource.
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +58,11 @@ datacenter = vsphere.get_datacenter(name="dc1")
 datastore = vsphere.get_datastore(datacenter_id=datacenter.id,
     name="datastore1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -75,6 +75,7 @@ const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
     name: "datastore1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

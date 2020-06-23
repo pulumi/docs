@@ -16,8 +16,6 @@ the UUID of a template to be used as the source for cloning into a new
 `vsphere..VirtualMachine` resource. It also
 reads the guest ID so that can be supplied as well.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ datacenter = vsphere.get_datacenter(name="dc1")
 template = vsphere.get_virtual_machine(datacenter_id=datacenter.id,
     name="test-vm-template")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -75,6 +76,7 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
     name: "test-vm-template",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -27,8 +27,6 @@ connections.
 
 > **NOTE:** Storage DRS requires a vSphere Enterprise Plus license.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -101,6 +99,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -138,9 +137,11 @@ cluster_vm_anti_affinity_rule = vsphere.DatastoreClusterVmAntiAffinityRule("clus
     datastore_cluster_id=datastore_cluster.id,
     virtual_machine_ids=[__item.id for __item in vm])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -182,6 +183,7 @@ const clusterVmAntiAffinityRule = new vsphere.DatastoreClusterVmAntiAffinityRule
     virtualMachineIds: vm.map(v => v.id),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

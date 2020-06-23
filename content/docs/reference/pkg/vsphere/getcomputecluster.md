@@ -22,8 +22,6 @@ data source.
 `vsphere..ComputeCluster` resource for further
 details about clusters or how to work with them.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ datacenter = vsphere.get_datacenter(name="dc1")
 compute_cluster = vsphere.get_compute_cluster(datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
     name="compute-cluster1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -81,6 +82,7 @@ const computeCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getComputeCl
     name: "compute-cluster1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

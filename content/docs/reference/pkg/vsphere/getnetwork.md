@@ -16,8 +16,6 @@ network interface for `vsphere..VirtualMachine` or any other vSphere resource
 that requires a network. This includes standard (host-based) port groups, DVS
 port groups, or opaque networks such as those managed by NSX.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ datacenter = vsphere.get_datacenter(name="dc1")
 net = vsphere.get_network(datacenter_id=datacenter.id,
     name="test-net")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -75,6 +76,7 @@ const net = datacenter.apply(datacenter => vsphere.getNetwork({
     name: "test-net",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -24,8 +24,6 @@ resource.
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -131,6 +129,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -186,9 +185,11 @@ cluster_vm_dependency_rule = vsphere.ComputeClusterVmDependencyRule("clusterVmDe
     dependency_vm_group_name=cluster_vm_group1.name,
     vm_group_name=cluster_vm_group2.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -250,6 +251,7 @@ const clusterVmDependencyRule = new vsphere.ComputeClusterVmDependencyRule("clus
     vmGroupName: clusterVmGroup2.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

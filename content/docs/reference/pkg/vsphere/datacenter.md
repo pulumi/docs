@@ -13,8 +13,6 @@ meta_desc: "Explore the Datacenter resource of the vSphere package, including ex
 Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,15 +48,18 @@ import pulumi_vsphere as vsphere
 
 prod_datacenter = vsphere.Datacenter("prodDatacenter")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
 const prodDatacenter = new vsphere.Datacenter("prod_datacenter", {});
 ```
+
 {{% /example %}}
 
 ### Create datacenter on a subfolder
@@ -78,6 +80,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,9 +94,11 @@ import pulumi_vsphere as vsphere
 
 research_datacenter = vsphere.Datacenter("researchDatacenter", folder="/research/")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -102,6 +107,7 @@ const researchDatacenter = new vsphere.Datacenter("research_datacenter", {
     folder: "/research/",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

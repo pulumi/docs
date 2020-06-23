@@ -25,9 +25,6 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a DpmHostOverride Resource {#create}

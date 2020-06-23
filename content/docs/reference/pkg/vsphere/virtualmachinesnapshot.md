@@ -32,8 +32,6 @@ limitation of virtual machine snapshots, see [here][ext-vm-snap-limitations].
 
 [ext-vm-snap-limitations]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,6 +60,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -82,9 +81,11 @@ demo1 = vsphere.VirtualMachineSnapshot("demo1",
     snapshot_name="Snapshot Name",
     virtual_machine_uuid="9aac5551-a351-4158-8c5c-15a71e8ec5c9")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -99,6 +100,7 @@ const demo1 = new vsphere.VirtualMachineSnapshot("demo1", {
     virtualMachineUuid: "9aac5551-a351-4158-8c5c-15a71e8ec5c9",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

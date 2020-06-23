@@ -25,8 +25,6 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -99,6 +97,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -138,9 +137,11 @@ drs_vm_override = vsphere.DrsVmOverride("drsVmOverride",
     drs_enabled=False,
     virtual_machine_id=vm.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -185,6 +186,7 @@ const drsVmOverride = new vsphere.DrsVmOverride("drs_vm_override", {
     virtualMachineId: vm.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

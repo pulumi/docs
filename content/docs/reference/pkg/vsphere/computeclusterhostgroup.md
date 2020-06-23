@@ -15,7 +15,6 @@ of hosts in a cluster, either created by the
 `vsphere..ComputeCluster` resource or looked up
 by the `vsphere..ComputeCluster` data source.
 
-
 This resource mainly serves as an input to the
 `vsphere..ComputeClusterVmHostRule`
 resource - see the documentation for that resource for further details on how
@@ -25,9 +24,6 @@ to use host groups.
 connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
-
-{{% examples %}}
-{{% /examples %}}
 
 
 

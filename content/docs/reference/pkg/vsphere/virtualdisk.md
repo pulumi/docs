@@ -15,8 +15,6 @@ of any given `vsphere..VirtualMachine`
 resource. These disks can be attached to a virtual machine by creating a disk
 block with the `attach` parameter.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ my_disk = vsphere.VirtualDisk("myDisk",
     type="thin",
     vmdk_path="myDisk.vmdk")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -76,6 +77,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     vmdkPath: "myDisk.vmdk",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

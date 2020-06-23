@@ -19,8 +19,6 @@ then populated with the data found by the search.
 > **NOTE:** Tagging support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ import pulumi_vsphere as vsphere
 
 category = vsphere.get_tag_category(name="test-category")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -67,6 +68,7 @@ const category = pulumi.output(vsphere.getTagCategory({
     name: "test-category",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

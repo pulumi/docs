@@ -23,8 +23,6 @@ re-created. Depending on if destination parameters are being changed as well,
 this may result in the destination file either being overwritten or deleted at
 the old location.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,9 +66,11 @@ ubuntu_disk_upload = vsphere.File("ubuntuDiskUpload",
     destination_file="/my_path/disks/custom_ubuntu.vmdk",
     source_file="/home/ubuntu/my_disks/custom_ubuntu.vmdk")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -81,6 +82,7 @@ const ubuntuDiskUpload = new vsphere.File("ubuntu_disk_upload", {
     sourceFile: "/home/ubuntu/my_disks/custom_ubuntu.vmdk",
 });
 ```
+
 {{% /example %}}
 
 ### Copying a file
@@ -106,6 +108,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,9 +128,11 @@ ubuntu_disk_copy = vsphere.File("ubuntuDiskCopy",
     source_datastore="local",
     source_file="/my_path/disks/custom_ubuntu.vmdk")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -141,6 +146,7 @@ const ubuntuDiskCopy = new vsphere.File("ubuntu_disk_copy", {
     sourceFile: "/my_path/disks/custom_ubuntu.vmdk",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

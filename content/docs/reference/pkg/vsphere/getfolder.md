@@ -12,9 +12,7 @@ meta_desc: "Explore the GetFolder function of the vSphere package, including exa
 
 The `vsphere..Folder` data source can be used to get the general attributes of a
 vSphere inventory folder. Paths are absolute and include must include the
-datacenter.  
-
-
+datacenter.
 
 {{% examples %}}
 ## Example Usage
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_vsphere as vsphere
 
 folder = vsphere.get_folder(path="/dc1/datastore/folder1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -62,6 +63,7 @@ const folder = pulumi.output(vsphere.getFolder({
     path: "/dc1/datastore/folder1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

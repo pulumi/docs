@@ -19,9 +19,6 @@ datastore is only mounted on the hosts you choose to mount it on. To mount on
 multiple hosts, you must specify each host that you want to add in the
 `host_system_ids` argument.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a NasDatastore Resource {#create}

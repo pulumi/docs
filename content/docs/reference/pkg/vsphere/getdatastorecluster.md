@@ -16,9 +16,7 @@ cluster that you want to use to assign datastores to using the
 `vsphere..NasDatastore` or
 `vsphere..VmfsDatastore` resources, or create
 virtual machines in using the
-`vsphere..VirtualMachine` resource. 
-
-
+`vsphere..VirtualMachine` resource.
 
 {{% examples %}}
 ## Example Usage
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ datacenter = vsphere.get_datacenter(name="dc1")
 datastore_cluster = vsphere.get_datastore_cluster(datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
     name="datastore-cluster1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -77,6 +78,7 @@ const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatasto
     name: "datastore-cluster1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

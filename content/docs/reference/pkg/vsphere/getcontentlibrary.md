@@ -15,8 +15,6 @@ The `vsphere..ContentLibrary` data source can be used to discover the ID of a Co
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_vsphere as vsphere
 
 library = vsphere.get_content_library(name="Content Library Test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -63,6 +64,7 @@ const library = pulumi.output(vsphere.getContentLibrary({
     name: "Content Library Test",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

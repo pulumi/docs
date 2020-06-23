@@ -18,8 +18,6 @@ page][ref-vsphere-vapp].
 
 [ref-vsphere-vapp]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,9 +76,11 @@ compute_cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
     name=cluster)
 vapp_container = vsphere.VappContainer("vappContainer", parent_resource_pool_id=compute_cluster.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -99,6 +100,7 @@ const vappContainer = new vsphere.VappContainer("vapp_container", {
     parentResourcePoolId: computeCluster.id,
 });
 ```
+
 {{% /example %}}
 
 ### Example with virtual machine
@@ -164,6 +166,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -204,9 +207,11 @@ vm = vsphere.VirtualMachine("vm",
     num_cpus=2,
     resource_pool_id=vapp_container.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -248,6 +253,7 @@ const vm = new vsphere.VirtualMachine("vm", {
     resourcePoolId: vappContainer.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

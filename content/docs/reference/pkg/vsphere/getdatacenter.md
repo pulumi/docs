@@ -15,8 +15,6 @@ vSphere datacenter. This can then be used with resources or data sources that
 require a datacenter, such as the `vsphere..Host`
 data source.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_vsphere as vsphere
 
 datacenter = vsphere.get_datacenter(name="dc1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -63,6 +64,7 @@ const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

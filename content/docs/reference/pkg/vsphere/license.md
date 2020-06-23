@@ -12,8 +12,6 @@ meta_desc: "Explore the License resource of the vSphere package, including examp
 
 Provides a VMware vSphere license resource. This can be used to add and remove license keys.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ license_key = vsphere.License("licenseKey",
     },
     license_key="452CQ-2EK54-K8742-00000-00000")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -74,6 +75,7 @@ const licenseKey = new vsphere.License("licenseKey", {
     licenseKey: "452CQ-2EK54-K8742-00000-00000",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

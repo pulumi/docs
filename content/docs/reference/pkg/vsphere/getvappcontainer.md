@@ -13,9 +13,7 @@ meta_desc: "Explore the GetVappContainer function of the vSphere package, includ
 The `vsphere..VappContainer` data source can be used to discover the ID of a
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
-`vsphere..VirtualMachine` resource. 
-
-
+`vsphere..VirtualMachine` resource.
 
 {{% examples %}}
 ## Example Usage
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ datacenter = vsphere.get_datacenter(name="dc1")
 pool = vsphere.get_vapp_container(datacenter_id=datacenter.id,
     name="vapp-container-1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -74,6 +75,7 @@ const pool = datacenter.apply(datacenter => vsphere.getVappContainer({
     name: "vapp-container-1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

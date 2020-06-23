@@ -49,6 +49,7 @@ A Pulumi package for creating vsphere resources
     <li><a href="virtualdisk" title="VirtualDisk"><span class="symbol resource"></span>VirtualDisk</a></li>
     <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
     <li><a href="virtualmachinesnapshot" title="VirtualMachineSnapshot"><span class="symbol resource"></span>VirtualMachineSnapshot</a></li>
+    <li><a href="vmstoragepolicy" title="VmStoragePolicy"><span class="symbol resource"></span>VmStoragePolicy</a></li>
     <li><a href="vmfsdatastore" title="VmfsDatastore"><span class="symbol resource"></span>VmfsDatastore</a></li>
     <li><a href="vnic" title="Vnic"><span class="symbol resource"></span>Vnic</a></li>
 </ul>
@@ -63,8 +64,10 @@ A Pulumi package for creating vsphere resources
     <li><a href="getdatastore" title="GetDatastore"><span class="symbol function"></span>GetDatastore</a></li>
     <li><a href="getdatastorecluster" title="GetDatastoreCluster"><span class="symbol function"></span>GetDatastoreCluster</a></li>
     <li><a href="getdistributedvirtualswitch" title="GetDistributedVirtualSwitch"><span class="symbol function"></span>GetDistributedVirtualSwitch</a></li>
+    <li><a href="getdynamic" title="GetDynamic"><span class="symbol function"></span>GetDynamic</a></li>
     <li><a href="getfolder" title="GetFolder"><span class="symbol function"></span>GetFolder</a></li>
     <li><a href="gethost" title="GetHost"><span class="symbol function"></span>GetHost</a></li>
+    <li><a href="gethostpcidevice" title="GetHostPciDevice"><span class="symbol function"></span>GetHostPciDevice</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
     <li><a href="getresourcepool" title="GetResourcePool"><span class="symbol function"></span>GetResourcePool</a></li>
@@ -84,7 +87,7 @@ A Pulumi package for creating vsphere resources
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 	<dt>Version</dt>
-	<dd>2.3.5</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 
