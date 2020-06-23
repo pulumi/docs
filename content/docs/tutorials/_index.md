@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/tutorials/"]
 ---
 
-Please select from the following cloud providers or tutorials:
+From VMs to Serverless to Containers, our collection of tutorials below represents a great jumping-off point for cloud programmers of all kinds. You can deploy each of these tutorials as they are or use them as a foundation for your own applications and infrastructure.
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
