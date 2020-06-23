@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/tutorials/"]
 ---
 
-From VMs to Serverless to Containers, our collection of tutorials below represent a great jumping off point for cloud programmers of all shapes and sizes. You can deploy each of these tutorials as they are, or you can use them as a starting off point to deploy your own applications and infrastructure.
+From VMs to Serverless to Containers, our collection of tutorials below represents a great jumping-off point for cloud programmers of all kinds. You can deploy each of these tutorials as they are or use them as a foundation for your own applications and infrastructure.
 
 > **First time using Pulumi?** Visit our [Getting Started Guide]({{< relref "/docs/get-started" >}}) for a quick walk through of creating your first Pulumi program and the basic CRUD operations of the Pulumi CLI.
 
