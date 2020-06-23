@@ -8,7 +8,9 @@ menu:
     parent: crosswalk-aws
     weight: 6
 
-aliases: ["/docs/reference/crosswalk/aws/eks/"]
+aliases:
+    - "/docs/reference/crosswalk/aws/eks/"
+    - "/eks"
 ---
 
 <a href="{{< relref "./" >}}">
