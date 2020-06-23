@@ -83,4 +83,4 @@ We hope you like these helpers. If you're keen to get stuck in:
 - Try out the [many examples we have](https://app.pulumi.com), and
   [dive into the docs]({{< relref "/docs/reference" >}}).
 - [Submit new templates as PRs](https://github.com/pulumi/templates) -
-  contribution == [t-shirts at least](https://info.pulumi.com/community/give-me-a-tshirt).
+  contribution == t-shirts at least.
