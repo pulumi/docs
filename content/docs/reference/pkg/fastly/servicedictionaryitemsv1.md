@@ -12,9 +12,6 @@ meta_desc: "Explore the ServiceDictionaryItemsv1 resource of the Fastly package,
 
 Defines a map of Fastly dictionary items that can be used to populate a service dictionary.  This resource will populate a dictionary with the items and will track their state.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ServiceDictionaryItemsv1 Resource {#create}

@@ -12,9 +12,6 @@ meta_desc: "Explore the ServiceACLEntriesv1 resource of the Fastly package, incl
 
 Defines a set of Fastly ACL entries that can be used to populate a service ACL.  This resource will populate an ACL with the entries and will track their state.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a ServiceACLEntriesv1 Resource {#create}

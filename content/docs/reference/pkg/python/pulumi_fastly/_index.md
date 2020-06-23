@@ -3,7 +3,10 @@ title: Package pulumi_fastly
 title_tag: Package pulumi_fastly | Python SDK
 linktitle: pulumi_fastly
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "fastly" >}}
 
 <div class="section" id="pulumi-fastly">
 <h1>Pulumi Fastly<a class="headerlink" href="#pulumi-fastly" title="Permalink to this headline">¶</a></h1>
