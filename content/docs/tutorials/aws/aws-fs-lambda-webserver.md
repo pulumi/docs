@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "AWS F# Lambda Web Server | F#"
 h1: "AWS F# Lambda Web Server"
 linktitle: "AWS F# Lambda Web Server"
 no_edit_this_page: true

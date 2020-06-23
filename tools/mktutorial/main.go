@@ -179,6 +179,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			"go": "Go",
 			"py": "Python",
 			"cs": "C#",
+			"fs": "F#",
 		}
 		if val, ok := langMap[language]; ok {
 			title = fmt.Sprintf("%s | %s", h1, val)
