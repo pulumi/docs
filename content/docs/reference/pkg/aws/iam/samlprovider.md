@@ -12,7 +12,6 @@ meta_desc: "Explore the SamlProvider resource of the iam module, including examp
 
 Provides an IAM SAML provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +49,11 @@ import pulumi_aws as aws
 
 default = aws.iam.SamlProvider("default", saml_metadata_document=(lambda path: open(path).read())("saml-metadata.xml"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -61,6 +63,7 @@ const defaultSamlProvider = new aws.iam.SamlProvider("default", {
     samlMetadataDocument: fs.readFileSync("saml-metadata.xml", "utf-8"),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

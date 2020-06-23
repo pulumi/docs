@@ -12,7 +12,6 @@ meta_desc: "Explore the SecurityConfiguration resource of the glue module, inclu
 
 Manages a Glue Security Configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -84,6 +84,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,9 +105,11 @@ example = aws.glue.SecurityConfiguration("example", encryption_configuration={
     },
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -126,6 +129,7 @@ const example = new aws.glue.SecurityConfiguration("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

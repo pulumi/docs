@@ -16,7 +16,6 @@ Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)
 
 > **NOTE:** The usage of this resource conflicts with the `aws.iam.GroupPolicyAttachment`, `aws.iam.RolePolicyAttachment`, and `aws.iam.UserPolicyAttachment` resources and will permanently show a difference if both are defined.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -93,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -143,9 +143,11 @@ test_attach = aws.iam.PolicyAttachment("test-attach",
     roles=[role.name],
     users=[user.name])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -191,6 +193,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
     users: [user.name],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

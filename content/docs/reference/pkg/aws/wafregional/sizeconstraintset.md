@@ -12,7 +12,6 @@ meta_desc: "Explore the SizeConstraintSet resource of the wafregional module, in
 
 Provides a WAF Regional Size Constraint Set Resource for use with Application Load Balancer.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -95,9 +96,11 @@ size_constraint_set = aws.wafregional.SizeConstraintSet("sizeConstraintSet", siz
     "textTransformation": "NONE",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -113,6 +116,7 @@ const sizeConstraintSet = new aws.wafregional.SizeConstraintSet("size_constraint
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

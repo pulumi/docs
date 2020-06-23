@@ -18,7 +18,6 @@ when using autoscaling policies. It's good practice to pick either
 or [dynamic](https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html)
 (policy-based) scaling.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +97,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -118,9 +119,11 @@ bat = aws.autoscaling.Policy("bat",
     cooldown=300,
     scaling_adjustment=4)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -141,6 +144,7 @@ const bat = new aws.autoscaling.Policy("bat", {
     scalingAdjustment: 4,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the Instance resource of the ec2 module, including examples,
 Provides an EC2 instance resource. This allows instances to be created, updated,
 and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,9 +98,11 @@ web = aws.ec2.Instance("web",
         "Name": "HelloWorld",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -127,6 +129,7 @@ const web = new aws.ec2.Instance("web", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -643,7 +646,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -687,7 +690,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#volumetags_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -1040,7 +1043,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1084,7 +1087,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#volumetags_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -1437,7 +1440,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1481,7 +1484,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#volumetags_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -1834,7 +1837,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1878,7 +1881,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#volume_tags_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -2911,7 +2914,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2955,7 +2958,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#state_volumetags_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -3403,7 +3406,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3447,7 +3450,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#state_volumetags_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -3895,7 +3898,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3939,7 +3942,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#state_volumetags_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -4387,7 +4390,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -4431,7 +4434,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <a href="#state_volume_tags_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>

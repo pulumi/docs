@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDomain function of the elasticsearch module, includin
 
 Use this data source to get information about an Elasticsearch Domain
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 my_domain = aws.elasticsearch.get_domain(domain_name="my-domain-name")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const myDomain = pulumi.output(aws.elasticsearch.getDomain({
     domainName: "my-domain-name",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -137,7 +141,7 @@ The following arguments are supported:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -166,7 +170,7 @@ The following arguments are supported:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -195,7 +199,7 @@ The following arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -224,7 +228,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -266,7 +270,7 @@ The following output properties are available:
 <a href="#advancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
@@ -463,7 +467,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -503,7 +507,7 @@ The following output properties are available:
 <a href="#advancedoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
@@ -700,7 +704,7 @@ The following output properties are available:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -740,7 +744,7 @@ The following output properties are available:
 <a href="#advancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
@@ -937,7 +941,7 @@ The following output properties are available:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -977,7 +981,7 @@ The following output properties are available:
 <a href="#advanced_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
@@ -1174,7 +1178,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
@@ -1278,6 +1282,28 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="warmcount_csharp">
+<a href="#warmcount_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of warm nodes in the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="warmtype_csharp">
+<a href="#warmtype_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="zoneawarenessconfigs_csharp">
 <a href="#zoneawarenessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Configs</a>
 </span> 
@@ -1296,6 +1322,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="warmenabled_csharp">
+<a href="#warmenabled_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
 
 </dl>
@@ -1362,6 +1399,28 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="warmcount_go">
+<a href="#warmcount_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of warm nodes in the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="warmtype_go">
+<a href="#warmtype_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="zoneawarenessconfigs_go">
 <a href="#zoneawarenessconfigs_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Configs</a>
 </span> 
@@ -1380,6 +1439,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="warmenabled_go">
+<a href="#warmenabled_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
 
 </dl>
@@ -1446,6 +1516,28 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="warmcount_nodejs">
+<a href="#warmcount_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of warm nodes in the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="warmtype_nodejs">
+<a href="#warmtype_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="zoneawarenessconfigs_nodejs">
 <a href="#zoneawarenessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Configs</a>
 </span> 
@@ -1464,6 +1556,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="warmenabled_nodejs">
+<a href="#warmenabled_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
 
 </dl>
@@ -1530,6 +1633,28 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="warmcount_python">
+<a href="#warmcount_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of warm nodes in the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="warmtype_python">
+<a href="#warmtype_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="zoneawarenessconfigs_python">
 <a href="#zoneawarenessconfigs_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Configs</a>
 </span> 
@@ -1548,6 +1673,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="warmenabled_python">
+<a href="#warmenabled_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
 
 </dl>

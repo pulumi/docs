@@ -12,7 +12,6 @@ meta_desc: "Explore the Inventory resource of the s3 module, including examples,
 
 Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -117,9 +118,11 @@ test_inventory = aws.s3.Inventory("testInventory",
         "frequency": "Daily",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -140,6 +143,7 @@ const testInventory = new aws.s3.Inventory("test", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Add inventory configuration with S3 bucket object prefix
@@ -184,6 +188,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -214,9 +219,11 @@ test_prefix = aws.s3.Inventory("test-prefix",
         "frequency": "Daily",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -241,6 +248,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

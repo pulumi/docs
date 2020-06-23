@@ -15,7 +15,6 @@ by using an AWS KMS customer master key. The value returned by this data source
 changes every apply. For a stable ciphertext value, see the `aws.kms.Ciphertext`
 resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -91,9 +92,11 @@ oauth = oauth_config.key_id.apply(lambda key_id: aws.kms.get_cipher_text(key_id=
 
 """))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -111,6 +114,7 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
 `,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

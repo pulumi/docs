@@ -240,6 +240,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">GetBundleResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bundle_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_storages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_storages</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.GetBundleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBundle.</p>
 <dl class="py attribute">
+<dt id="pulumi_aws.workspaces.GetBundleResult.bundle_id">
+<code class="sig-name descname">bundle_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.GetBundleResult.bundle_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the bundle.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.workspaces.GetBundleResult.compute_types">
 <code class="sig-name descname">compute_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.workspaces.GetBundleResult.compute_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>The compute type. See supported fields below.</p>
@@ -573,17 +579,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_aws.workspaces.get_bundle">
-<code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">get_bundle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bundle_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.get_bundle" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.workspaces.</code><code class="sig-name descname">get_bundle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bundle_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.get_bundle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a WorkSpaces Bundle.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
-<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">get_bundle</span><span class="p">(</span><span class="n">bundle_id</span><span class="o">=</span><span class="s2">&quot;wsb-b0s22j3d7&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">get_bundle</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Value with Windows 10 and Office 2016&quot;</span><span class="p">,</span>
+    <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;AMAZON&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>bundle_id</strong> (<em>str</em>) – The ID of the bundle.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bundle_id</strong> (<em>str</em>) – The ID of the bundle.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the bundle. You cannot combine this parameter with <code class="docutils literal notranslate"><span class="pre">bundle_id</span></code>.</p></li>
+<li><p><strong>owner</strong> (<em>str</em>) – The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with <code class="docutils literal notranslate"><span class="pre">bundle_id</span></code>.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

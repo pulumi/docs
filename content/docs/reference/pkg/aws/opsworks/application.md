@@ -12,7 +12,6 @@ meta_desc: "Explore the Application resource of the opsworks module, including e
 
 Provides an OpsWorks application resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -74,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,9 +113,11 @@ foo_app = aws.opsworks.Application("foo-app",
     stack_id=aws_opsworks_stack["main"]["id"],
     type="rails")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -150,6 +152,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
     type: "rails",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

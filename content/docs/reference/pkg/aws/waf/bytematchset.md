@@ -12,7 +12,6 @@ meta_desc: "Explore the ByteMatchSet resource of the waf module, including examp
 
 Provides a WAF Byte Match Set Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,6 +81,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -98,9 +99,11 @@ byte_set = aws.waf.ByteMatchSet("byteSet", byte_match_tuples=[{
     "textTransformation": "NONE",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -117,6 +120,7 @@ const byteSet = new aws.waf.ByteMatchSet("byte_set", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,7 +13,6 @@ meta_desc: "Explore the Protection resource of the shield module, including exam
 Enables AWS Shield Advanced for a specific AWS resource.
 The resource can be an Amazon CloudFront distribution, Elastic Load Balancing load balancer, AWS Global Accelerator accelerator, Elastic IP Address, or an Amazon Route 53 hosted zone.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +66,11 @@ current_caller_identity = aws.get_caller_identity()
 foo_eip = aws.ec2.Eip("fooEip", vpc=True)
 foo_protection = aws.shield.Protection("fooProtection", resource_arn=foo_eip.id.apply(lambda id: f"arn:aws:ec2:{current_region.name}:{current_caller_identity.account_id}:eip-allocation/{id}"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +85,7 @@ const fooProtection = new aws.shield.Protection("foo", {
     resourceArn: pulumi.interpolate`arn:aws:ec2:${currentRegion.name!}:${currentCallerIdentity.accountId}:eip-allocation/${fooEip.id}`,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

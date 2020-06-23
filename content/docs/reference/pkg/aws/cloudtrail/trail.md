@@ -16,7 +16,6 @@ Provides a CloudTrail resource.
 
 > *NOTE:* For an organization trail, this resource must be in the master account of the organization.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -76,6 +75,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,9 +125,11 @@ foobar = aws.cloudtrail.Trail("foobar",
     s3_bucket_name=foo.id,
     s3_key_prefix="prefix")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -171,6 +173,7 @@ const foobar = new aws.cloudtrail.Trail("foobar", {
     s3KeyPrefix: "prefix",
 });
 ```
+
 {{% /example %}}
 
 ### Logging All Lambda Function Invocations
@@ -209,6 +212,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -245,6 +249,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -261,9 +266,11 @@ example = aws.cloudtrail.Trail("example", event_selectors=[{
     "readWriteType": "All",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -279,6 +286,7 @@ const example = new aws.cloudtrail.Trail("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Logging All S3 Bucket Object Events
@@ -317,6 +325,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -353,6 +362,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -369,9 +379,11 @@ example = aws.cloudtrail.Trail("example", event_selectors=[{
     "readWriteType": "All",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -387,6 +399,7 @@ const example = new aws.cloudtrail.Trail("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Logging Individual S3 Bucket Events
@@ -429,6 +442,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -450,9 +464,11 @@ example = aws.cloudtrail.Trail("example", event_selectors=[{
     "readWriteType": "All",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -473,6 +489,7 @@ const example = new aws.cloudtrail.Trail("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -816,7 +833,7 @@ defined for notification of log file delivery.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -985,7 +1002,7 @@ defined for notification of log file delivery.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -1154,7 +1171,7 @@ defined for notification of log file delivery.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -1323,7 +1340,7 @@ defined for notification of log file delivery.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -1807,7 +1824,7 @@ defined for notification of log file delivery.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -1998,7 +2015,7 @@ defined for notification of log file delivery.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -2189,7 +2206,7 @@ defined for notification of log file delivery.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -2380,7 +2397,7 @@ defined for notification of log file delivery.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>

@@ -18,7 +18,6 @@ This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ selected = aws.lb.get_load_balancer(name="default-public")
 selected443 = aws.lb.get_listener(load_balancer_arn=selected.arn,
     port=443)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -122,6 +125,7 @@ const selected443 = selected.apply(selected => aws.lb.getListener({
     port: 443,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -1047,7 +1051,7 @@ The following output properties are available:
 <a href="#authenticationrequestextraparams_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1134,7 +1138,7 @@ The following output properties are available:
 <a href="#authenticationrequestextraparams_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1221,7 +1225,7 @@ The following output properties are available:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1308,7 +1312,7 @@ The following output properties are available:
 <a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1413,7 +1417,7 @@ The following output properties are available:
 <a href="#authenticationrequestextraparams_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1530,7 +1534,7 @@ The following output properties are available:
 <a href="#authenticationrequestextraparams_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1647,7 +1651,7 @@ The following output properties are available:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1764,7 +1768,7 @@ The following output properties are available:
 <a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

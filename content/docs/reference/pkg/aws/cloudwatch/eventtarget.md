@@ -2273,7 +2273,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#inputpaths_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
 {{% /md %}}</dd>
@@ -2302,7 +2302,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#inputpaths_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
 {{% /md %}}</dd>
@@ -2331,7 +2331,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#inputpaths_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
 {{% /md %}}</dd>
@@ -2360,7 +2360,7 @@ that is used for extracting part of the matched event when passing it to the tar
 <a href="#inputpaths_python" style="color: inherit; text-decoration: inherit;">input<wbr>Paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
 {{% /md %}}</dd>

@@ -12,7 +12,6 @@ meta_desc: "Explore the StandardsSubscription resource of the securityhub module
 
 Subscribes to a Security Hub standard.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +87,11 @@ example = aws.securityhub.Account("example")
 cis = aws.securityhub.StandardsSubscription("cis", standards_arn="arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0")
 pci321 = aws.securityhub.StandardsSubscription("pci321", standards_arn="arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -101,6 +104,7 @@ const pci321 = new aws.securityhub.StandardsSubscription("pci_321", {
     standardsArn: "arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1",
 }, { dependsOn: [example] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

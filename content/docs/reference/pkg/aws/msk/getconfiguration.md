@@ -12,7 +12,6 @@ meta_desc: "Explore the GetConfiguration function of the msk module, including e
 
 Get information on an Amazon MSK Configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 example = aws.msk.get_configuration(name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const example = pulumi.output(aws.msk.getConfiguration({
     name: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

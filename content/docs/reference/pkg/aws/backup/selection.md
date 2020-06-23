@@ -12,7 +12,6 @@ meta_desc: "Explore the Selection resource of the backup module, including examp
 
 Manages selection conditions for AWS Backup plan resources.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -76,6 +76,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +93,11 @@ example = aws.backup.Selection("example",
         "value": "bar",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -109,6 +112,7 @@ const example = new aws.backup.Selection("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Selecting Backups By Resource
@@ -136,6 +140,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -156,9 +161,11 @@ example = aws.backup.Selection("example",
         aws_efs_file_system["example"]["arn"],
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -173,6 +180,7 @@ const example = new aws.backup.Selection("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

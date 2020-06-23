@@ -16,7 +16,6 @@ Use this data source to get information on an AWS Cost and Usage Report Definiti
 
 > *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,9 +71,11 @@ import pulumi_aws as aws
 
 report_definition = aws.cur.get_report_definition(report_name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,6 +84,7 @@ const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
     reportName: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,12 +12,14 @@ Explore the resources and functions of the secretsmanager module in the AWS pack
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
+    <li><a href="secretrotation" title="SecretRotation"><span class="symbol resource"></span>SecretRotation</a></li>
     <li><a href="secretversion" title="SecretVersion"><span class="symbol resource"></span>SecretVersion</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
+    <li><a href="getsecretrotation" title="GetSecretRotation"><span class="symbol function"></span>GetSecretRotation</a></li>
     <li><a href="getsecretversion" title="GetSecretVersion"><span class="symbol function"></span>GetSecretVersion</a></li>
 </ul>
 
@@ -30,7 +32,7 @@ Explore the resources and functions of the secretsmanager module in the AWS pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.9.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

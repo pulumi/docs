@@ -14,7 +14,6 @@ Provides a Load Balancer Listener resource.
 
 > **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +117,11 @@ front_end_listener = aws.lb.Listener("frontEndListener",
     protocol="HTTPS",
     ssl_policy="ELBSecurityPolicy-2016-08")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -137,6 +140,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     sslPolicy: "ELBSecurityPolicy-2016-08",
 });
 ```
+
 {{% /example %}}
 
 ### Redirect Action
@@ -175,6 +179,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -214,6 +219,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -235,9 +241,11 @@ front_end_listener = aws.lb.Listener("frontEndListener",
     port="80",
     protocol="HTTP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -257,6 +265,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
+
 {{% /example %}}
 
 ### Fixed-response Action
@@ -295,6 +304,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -334,6 +344,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -355,9 +366,11 @@ front_end_listener = aws.lb.Listener("frontEndListener",
     port="80",
     protocol="HTTP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -377,6 +390,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
+
 {{% /example %}}
 
 ### Authenticate-cognito Action
@@ -432,6 +446,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -492,6 +507,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -523,9 +539,11 @@ front_end_listener = aws.lb.Listener("frontEndListener",
     port="80",
     protocol="HTTP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -555,6 +573,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
+
 {{% /example %}}
 
 ### Authenticate-oidc Action
@@ -604,6 +623,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -654,6 +674,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -685,9 +706,11 @@ front_end_listener = aws.lb.Listener("frontEndListener",
     port="80",
     protocol="HTTP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -717,6 +740,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -2232,7 +2256,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2327,7 +2351,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2422,7 +2446,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2517,7 +2541,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2663,7 +2687,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2791,7 +2815,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2919,7 +2943,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -3047,7 +3071,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>

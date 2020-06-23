@@ -11,8 +11,6 @@ meta_desc: "Explore the Method resource of the apigateway module, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a HTTP Method for an API Gateway Resource.
-
-
 ## Usage with Cognito User Pool Authorizer
 
 ```typescript
@@ -207,6 +205,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -247,6 +246,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -265,9 +265,11 @@ my_demo_method = aws.apigateway.Method("myDemoMethod",
     resource_id=my_demo_resource.id,
     rest_api=my_demo_api.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -287,6 +289,7 @@ const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
     restApi: myDemoAPI.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

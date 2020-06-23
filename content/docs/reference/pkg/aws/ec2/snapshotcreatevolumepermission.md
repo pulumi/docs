@@ -12,7 +12,6 @@ meta_desc: "Explore the SnapshotCreateVolumePermission resource of the ec2 modul
 
 Adds permission to create volumes off of a given EBS Snapshot.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -98,9 +99,11 @@ example_perm = aws.ec2.SnapshotCreateVolumePermission("examplePerm",
     account_id="12345678",
     snapshot_id=example_snapshot.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -117,6 +120,7 @@ const examplePerm = new aws.ec2.SnapshotCreateVolumePermission("example_perm", {
     snapshotId: exampleSnapshot.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

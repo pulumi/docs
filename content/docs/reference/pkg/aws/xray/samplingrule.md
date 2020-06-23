@@ -12,7 +12,6 @@ meta_desc: "Explore the SamplingRule resource of the xray module, including exam
 
 Creates and manages an AWS XRay Sampling Rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,9 +109,11 @@ example = aws.xray.SamplingRule("example",
     url_path="*",
     version=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -132,6 +135,7 @@ const example = new aws.xray.SamplingRule("example", {
     version: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

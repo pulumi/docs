@@ -12,7 +12,6 @@ meta_desc: "Explore the Application resource of the codedeploy module, including
 
 Provides a CodeDeploy application to be used as a basis for deployments
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_aws as aws
 
 example = aws.codedeploy.Application("example", compute_platform="ECS")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +81,7 @@ const example = new aws.codedeploy.Application("example", {
     computePlatform: "ECS",
 });
 ```
+
 {{% /example %}}
 
 ### Lambda Application
@@ -98,6 +102,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -121,6 +126,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -130,9 +136,11 @@ import pulumi_aws as aws
 
 example = aws.codedeploy.Application("example", compute_platform="Lambda")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -141,6 +149,7 @@ const example = new aws.codedeploy.Application("example", {
     computePlatform: "Lambda",
 });
 ```
+
 {{% /example %}}
 
 ### Server Application
@@ -161,6 +170,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -184,6 +194,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -193,9 +204,11 @@ import pulumi_aws as aws
 
 example = aws.codedeploy.Application("example", compute_platform="Server")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -204,6 +217,7 @@ const example = new aws.codedeploy.Application("example", {
     computePlatform: "Server",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

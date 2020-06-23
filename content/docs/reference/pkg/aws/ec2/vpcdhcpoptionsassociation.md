@@ -11,8 +11,6 @@ meta_desc: "Explore the VpcDhcpOptionsAssociation resource of the ec2 module, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a VPC DHCP Options Association resource.
-
-
 ## Remarks
 
 * You can only associate one DHCP Options Set to a given VPC ID.
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -76,9 +76,11 @@ dns_resolver = aws.ec2.VpcDhcpOptionsAssociation("dnsResolver",
     dhcp_options_id=aws_vpc_dhcp_options["foo"]["id"],
     vpc_id=aws_vpc["foo"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +90,7 @@ const dnsResolver = new aws.ec2.VpcDhcpOptionsAssociation("dns_resolver", {
     vpcId: aws_vpc_foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

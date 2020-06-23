@@ -12,7 +12,6 @@ meta_desc: "Explore the VpcEndpointRouteTableAssociation resource of the ec2 mod
 
 Manages a VPC Endpoint Route Table Association
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ example = aws.ec2.VpcEndpointRouteTableAssociation("example",
     route_table_id=aws_route_table["example"]["id"],
     vpc_endpoint_id=aws_vpc_endpoint["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const example = new aws.ec2.VpcEndpointRouteTableAssociation("example", {
     vpcEndpointId: aws_vpc_endpoint_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

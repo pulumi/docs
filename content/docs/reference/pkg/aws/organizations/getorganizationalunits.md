@@ -12,7 +12,6 @@ meta_desc: "Explore the GetOrganizationalUnits function of the organizations mod
 
 Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +50,11 @@ import pulumi_aws as aws
 org = aws.organizations.get_organization()
 ou = aws.organizations.get_organizational_units(parent_id=org.roots[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,6 +64,7 @@ const ou = org.then(org => aws.organizations.getOrganizationalUnits({
     parentId: org.roots[0].id,
 }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

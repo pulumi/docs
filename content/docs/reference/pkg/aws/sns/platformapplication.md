@@ -12,7 +12,6 @@ meta_desc: "Explore the PlatformApplication resource of the sns module, includin
 
 Provides an SNS platform application resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ apns_application = aws.sns.PlatformApplication("apnsApplication",
     platform_credential="<APNS PRIVATE KEY>",
     platform_principal="<APNS CERTIFICATE>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const apnsApplication = new aws.sns.PlatformApplication("apns_application", {
     platformPrincipal: "<APNS CERTIFICATE>",
 });
 ```
+
 {{% /example %}}
 
 ### Google Cloud Messaging (GCM)
@@ -108,6 +112,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -132,6 +137,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -143,9 +149,11 @@ gcm_application = aws.sns.PlatformApplication("gcmApplication",
     platform="GCM",
     platform_credential="<GCM API KEY>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -155,6 +163,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     platformCredential: "<GCM API KEY>",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

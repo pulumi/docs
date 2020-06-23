@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityProvider resource of the cognito module, includi
 
 Provides a Cognito User Identity Provider resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +97,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,9 +120,11 @@ example_provider = aws.cognito.IdentityProvider("exampleProvider",
     provider_type="Google",
     user_pool_id=example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -144,6 +147,7 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
     userPoolId: example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -336,7 +340,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#providerdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The map of identity details, such as access token
 {{% /md %}}</dd>
@@ -409,7 +413,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#providerdetails_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The map of identity details, such as access token
 {{% /md %}}</dd>
@@ -482,7 +486,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#providerdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of identity details, such as access token
 {{% /md %}}</dd>
@@ -555,7 +559,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#provider_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of identity details, such as access token
 {{% /md %}}</dd>
@@ -855,7 +859,7 @@ The following state arguments are supported:
 <a href="#state_providerdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The map of identity details, such as access token
 {{% /md %}}</dd>
@@ -928,7 +932,7 @@ The following state arguments are supported:
 <a href="#state_providerdetails_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The map of identity details, such as access token
 {{% /md %}}</dd>
@@ -1001,7 +1005,7 @@ The following state arguments are supported:
 <a href="#state_providerdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of identity details, such as access token
 {{% /md %}}</dd>
@@ -1074,7 +1078,7 @@ The following state arguments are supported:
 <a href="#state_provider_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of identity details, such as access token
 {{% /md %}}</dd>

@@ -16,7 +16,6 @@ This resource is for additional certificates and does not replace the default ce
 
 > **Note:** `aws.alb.ListenerCertificate` is known as `aws.lb.ListenerCertificate`. The functionality is identical.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,6 +86,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -100,9 +101,11 @@ example_listener_certificate = aws.lb.ListenerCertificate("exampleListenerCertif
     certificate_arn=example_certificate.arn,
     listener_arn=front_end_listener.arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -115,6 +118,7 @@ const exampleListenerCertificate = new aws.lb.ListenerCertificate("example", {
     listenerArn: frontEndListener.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

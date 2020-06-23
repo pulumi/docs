@@ -12,7 +12,6 @@ meta_desc: "Explore the SecurityGroup resource of the redshift module, including
 
 Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +56,11 @@ default = aws.redshift.SecurityGroup("default", ingress=[{
     "cidr": "10.0.0.0/24",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -69,6 +71,7 @@ const defaultSecurityGroup = new aws.redshift.SecurityGroup("default", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

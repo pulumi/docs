@@ -16,7 +16,6 @@ Manages a CloudFormation StackSet Instance. Instances are managed in the account
 
 > **NOTE:** To retain the Stack during resource destroy, ensure `retain_stack` has been set to `true` in the state first. This must be completed _before_ a deployment that would destroy the resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ example = aws.cloudformation.StackSetInstance("example",
     region="us-east-1",
     stack_set_name=aws_cloudformation_stack_set["example"]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const example = new aws.cloudformation.StackSetInstance("example", {
     stackSetName: aws_cloudformation_stack_set_example.name,
 });
 ```
+
 {{% /example %}}
 
 ### Example IAM Setup in Target Account
@@ -161,6 +165,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -194,9 +199,11 @@ a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_role_poli
     policy=a_ws_cloud_formation_stack_set_execution_role_minimum_execution_policy_policy_document.json,
     role=a_ws_cloud_formation_stack_set_execution_role.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -232,6 +239,7 @@ const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = n
     role: aWSCloudFormationStackSetExecutionRole.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

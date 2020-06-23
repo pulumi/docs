@@ -22,7 +22,6 @@ When RAM Sharing with AWS Organizations is not enabled:
 - Organization and Organizational Unit principals cannot be used.
 - For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the `aws.ram.ResourceShareAccepter` resource to accept these invitations.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +93,11 @@ example_principal_association = aws.ram.PrincipalAssociation("examplePrincipalAs
     principal="111111111111",
     resource_share_arn=example_resource_share.arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +111,7 @@ const examplePrincipalAssociation = new aws.ram.PrincipalAssociation("example", 
     resourceShareArn: exampleResourceShare.arn,
 });
 ```
+
 {{% /example %}}
 
 ### AWS Organization
@@ -129,6 +133,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -153,6 +158,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -164,9 +170,11 @@ example = aws.ram.PrincipalAssociation("example",
     principal=aws_organizations_organization["example"]["arn"],
     resource_share_arn=aws_ram_resource_share["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -176,6 +184,7 @@ const example = new aws.ram.PrincipalAssociation("example", {
     resourceShareArn: aws_ram_resource_share_example.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

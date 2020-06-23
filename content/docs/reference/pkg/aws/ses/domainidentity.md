@@ -12,7 +12,6 @@ meta_desc: "Explore the DomainIdentity resource of the ses module, including exa
 
 Provides an SES domain identity resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -82,6 +82,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ example_amazonses_verification_record = aws.route53.Record("exampleAmazonsesVeri
     type="TXT",
     zone_id="ABCDEFGHIJ123")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -115,6 +118,7 @@ const exampleAmazonsesVerificationRecord = new aws.route53.Record("example_amazo
     zoneId: "ABCDEFGHIJ123",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

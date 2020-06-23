@@ -12,7 +12,6 @@ meta_desc: "Explore the GetParameter function of the ssm module, including examp
 
 Provides an SSM Parameter data source.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 foo = aws.ssm.get_parameter(name="foo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const foo = pulumi.output(aws.ssm.getParameter({
     name: "foo",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

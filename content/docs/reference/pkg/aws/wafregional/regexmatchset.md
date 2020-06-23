@@ -12,7 +12,6 @@ meta_desc: "Explore the RegexMatchSet resource of the wafregional module, includ
 
 Provides a WAF Regional Regex Match Set Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +117,11 @@ example_regex_match_set = aws.wafregional.RegexMatchSet("exampleRegexMatchSet", 
     "textTransformation": "NONE",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -140,6 +143,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

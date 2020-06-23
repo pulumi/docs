@@ -12,7 +12,6 @@ meta_desc: "Explore the GetReplicationGroup function of the elasticache module, 
 
 Use this data source to get information about an Elasticache Replication Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 bar = aws.elasticache.get_replication_group(replication_group_id="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const bar = pulumi.output(aws.elasticache.getReplicationGroup({
     replicationGroupId: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

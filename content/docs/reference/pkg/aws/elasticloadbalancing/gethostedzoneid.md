@@ -13,7 +13,6 @@ meta_desc: "Explore the GetHostedZoneId function of the elasticloadbalancing mod
 Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
 in a given region for the purpose of using in an AWS Route53 Alias.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +70,11 @@ www = aws.route53.Record("www",
     type="A",
     zone_id=aws_route53_zone["primary"]["zone_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,6 +91,7 @@ const www = new aws.route53.Record("www", {
     zoneId: aws_route53_zone_primary.zoneId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

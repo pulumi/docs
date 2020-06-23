@@ -12,7 +12,6 @@ meta_desc: "Explore the Plan resource of the backup module, including examples, 
 
 Provides an AWS Backup plan resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +86,11 @@ example = aws.backup.Plan("example", rules=[{
     "targetVaultName": aws_backup_vault["test"]["name"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -100,6 +103,7 @@ const example = new aws.backup.Plan("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -314,7 +318,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -354,7 +358,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -394,7 +398,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -434,7 +438,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -778,7 +782,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -840,7 +844,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -902,7 +906,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -964,7 +968,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
 {{% /md %}}</dd>
@@ -1074,7 +1078,7 @@ The following state arguments are supported:
 <a href="#recoverypointtags_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd>
@@ -1169,7 +1173,7 @@ The following state arguments are supported:
 <a href="#recoverypointtags_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd>
@@ -1264,7 +1268,7 @@ The following state arguments are supported:
 <a href="#recoverypointtags_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd>
@@ -1359,7 +1363,7 @@ The following state arguments are supported:
 <a href="#recoverypointtags_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
 {{% /md %}}</dd>

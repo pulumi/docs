@@ -12,7 +12,6 @@ meta_desc: "Explore the Hsm resource of the cloudhsmv2 module, including example
 
 Creates an HSM module in Amazon CloudHSM v2 cluster.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +56,11 @@ cloudhsm_v2_hsm = aws.cloudhsmv2.Hsm("cloudhsmV2Hsm",
     cluster_id=cluster.cluster_id,
     subnet_id=cluster.subnet_ids[0])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -71,6 +73,7 @@ const cloudhsmV2Hsm = new aws.cloudhsmv2.Hsm("cloudhsm_v2_hsm", {
     subnetId: cluster.apply(cluster => cluster.subnetIds[0]),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

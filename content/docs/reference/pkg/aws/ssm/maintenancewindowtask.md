@@ -12,7 +12,6 @@ meta_desc: "Explore the MaintenanceWindowTask resource of the ssm module, includ
 
 Provides an SSM Maintenance Window Task resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -82,6 +81,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -142,6 +142,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -179,9 +180,11 @@ example = aws.ssm.MaintenanceWindowTask("example",
     task_type="RUN_COMMAND",
     window_id=aws_ssm_maintenance_window["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -217,6 +220,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
+
 {{% /example %}}
 
 ### Step Function Tasks
@@ -262,6 +266,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -305,6 +310,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -331,9 +337,11 @@ example = aws.ssm.MaintenanceWindowTask("example",
     task_type="STEP_FUNCTIONS",
     window_id=aws_ssm_maintenance_window["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -358,6 +366,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

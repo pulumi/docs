@@ -12,7 +12,6 @@ meta_desc: "Explore the GetApplication function of the elasticbeanstalk module, 
 
 Retrieve information about an Elastic Beanstalk Application.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
     public Output<string> Description { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -76,9 +77,11 @@ example = aws.elasticbeanstalk.get_application(name="example")
 pulumi.export("arn", example.arn)
 pulumi.export("description", example.description)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -90,6 +93,7 @@ const example = pulumi.output(aws.elasticbeanstalk.getApplication({
 export const arn = example.arn;
 export const description = example.description;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

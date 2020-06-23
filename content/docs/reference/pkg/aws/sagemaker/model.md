@@ -12,7 +12,6 @@ meta_desc: "Explore the Model resource of the sagemaker module, including exampl
 
 Provides a SageMaker model resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -120,6 +120,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -141,9 +142,11 @@ assume_role = aws.iam.get_policy_document(statements=[{
 }])
 role = aws.iam.Role("role", assume_role_policy=assume_role.json)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -167,6 +170,7 @@ const role = new aws.iam.Role("r", {
     assumeRolePolicy: assumeRole.json,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -414,7 +418,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -498,7 +502,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -582,7 +586,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -666,7 +670,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1010,7 +1014,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1105,7 +1109,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1200,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1295,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1372,7 +1376,7 @@ The following state arguments are supported:
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1424,7 +1428,7 @@ A list of key value pairs.
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1476,7 +1480,7 @@ A list of key value pairs.
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1528,7 +1532,7 @@ A list of key value pairs.
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1598,7 +1602,7 @@ A list of key value pairs.
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1650,7 +1654,7 @@ A list of key value pairs.
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1702,7 +1706,7 @@ A list of key value pairs.
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1754,7 +1758,7 @@ A list of key value pairs.
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.

@@ -12,7 +12,6 @@ meta_desc: "Explore the IpSet resource of the waf module, including examples, in
 
 Provides a WAF IPSet Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ ipset = aws.waf.IpSet("ipset", ip_set_descriptors=[
     },
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -117,6 +120,7 @@ const ipset = new aws.waf.IpSet("ipset", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

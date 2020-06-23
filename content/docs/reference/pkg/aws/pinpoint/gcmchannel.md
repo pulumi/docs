@@ -14,7 +14,6 @@ Provides a Pinpoint GCM Channel resource.
 
 > **Note:** Api Key argument will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +82,11 @@ gcm = aws.pinpoint.GcmChannel("gcm",
     api_key="api_key",
     application_id=app.application_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -94,6 +97,7 @@ const gcm = new aws.pinpoint.GcmChannel("gcm", {
     applicationId: app.applicationId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

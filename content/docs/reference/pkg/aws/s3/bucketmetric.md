@@ -12,7 +12,6 @@ meta_desc: "Explore the BucketMetric resource of the s3 module, including exampl
 
 Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html) resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +52,11 @@ import pulumi_aws as aws
 example = aws.s3.Bucket("example")
 example_entire_bucket = aws.s3.BucketMetric("example-entire-bucket", bucket=example.bucket)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -64,6 +66,7 @@ const example_entire_bucket = new aws.s3.BucketMetric("example-entire-bucket", {
     bucket: example.bucket,
 });
 ```
+
 {{% /example %}}
 
 ### Add metrics configuration with S3 bucket object filter
@@ -96,6 +99,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -118,9 +122,11 @@ example_filtered = aws.s3.BucketMetric("example-filtered",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -137,6 +143,7 @@ const example_filtered = new aws.s3.BucketMetric("example-filtered", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -891,7 +898,7 @@ The following state arguments are supported:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Object tags for filtering (up to 10).
 {{% /md %}}</dd>
@@ -920,7 +927,7 @@ The following state arguments are supported:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Object tags for filtering (up to 10).
 {{% /md %}}</dd>
@@ -949,7 +956,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Object tags for filtering (up to 10).
 {{% /md %}}</dd>
@@ -978,7 +985,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Object tags for filtering (up to 10).
 {{% /md %}}</dd>

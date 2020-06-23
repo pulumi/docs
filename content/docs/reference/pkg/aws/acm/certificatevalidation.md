@@ -19,8 +19,6 @@ deploy the required validation records and wait for validation to complete.
 
 > **WARNING:** This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,6 +70,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,9 +98,11 @@ cert_certificate_validation = aws.acm.CertificateValidation("certCertificateVali
     validation_record_fqdns=[cert_validation.fqdn])
 front_end = aws.lb.Listener("frontEnd", certificate_arn=cert_certificate_validation.certificate_arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -130,6 +131,7 @@ const frontEnd = new aws.lb.Listener("front_end", {
     certificateArn: certCertificateValidation.certificateArn,
 });
 ```
+
 {{% /example %}}
 
 ### Alternative Domains DNS Validation with Route 53
@@ -213,6 +215,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -262,9 +265,11 @@ cert_certificate_validation = aws.acm.CertificateValidation("certCertificateVali
     ])
 front_end = aws.lb.Listener("frontEnd", certificate_arn=cert_certificate_validation.certificate_arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -319,6 +324,7 @@ const frontEnd = new aws.lb.Listener("front_end", {
     certificateArn: certCertificateValidation.certificateArn,
 });
 ```
+
 {{% /example %}}
 
 ### Email Validation
@@ -344,6 +350,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -374,6 +381,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -386,9 +394,11 @@ cert_certificate = aws.acm.Certificate("certCertificate",
     validation_method="EMAIL")
 cert_certificate_validation = aws.acm.CertificateValidation("certCertificateValidation", certificate_arn=cert_certificate.arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -401,6 +411,7 @@ const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

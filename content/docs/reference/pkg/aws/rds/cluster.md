@@ -29,7 +29,6 @@ for more information.
 
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -65,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,9 +91,11 @@ default = aws.rds.Cluster("default",
     master_username="foo",
     preferred_backup_window="07:00-09:00")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -114,6 +116,7 @@ const defaultCluster = new aws.rds.Cluster("default", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
+
 {{% /example %}}
 
 ### Aurora MySQL 1.x (MySQL 5.6)
@@ -145,6 +148,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -169,9 +173,11 @@ default = aws.rds.Cluster("default",
     master_username="foo",
     preferred_backup_window="07:00-09:00")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -190,6 +196,7 @@ const defaultCluster = new aws.rds.Cluster("default", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
+
 {{% /example %}}
 
 ### Aurora with PostgreSQL engine
@@ -222,6 +229,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -256,6 +264,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -277,9 +286,11 @@ postgresql = aws.rds.Cluster("postgresql",
     master_username="foo",
     preferred_backup_window="07:00-09:00")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -299,6 +310,7 @@ const postgresql = new aws.rds.Cluster("postgresql", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
+
 {{% /example %}}
 
 ### Aurora Multi-Master Cluster
@@ -324,6 +336,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -352,6 +365,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -367,9 +381,11 @@ example = aws.rds.Cluster("example",
     master_username="foo",
     skip_final_snapshot=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -383,6 +399,7 @@ const example = new aws.rds.Cluster("example", {
     skipFinalSnapshot: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -948,7 +965,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
@@ -1350,7 +1367,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
@@ -1752,7 +1769,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
@@ -2154,7 +2171,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
@@ -3041,7 +3058,7 @@ load-balanced across replicas
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
@@ -3499,7 +3516,7 @@ load-balanced across replicas
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
@@ -3957,7 +3974,7 @@ load-balanced across replicas
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
@@ -4415,7 +4432,7 @@ load-balanced across replicas
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>

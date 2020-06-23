@@ -14,7 +14,6 @@ Provides a DMS (Data Migration Service) certificate resource. DMS certificates c
 
 > **Note:** All arguments including the PEM encoded certificate will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ test = aws.dms.Certificate("test",
     certificate_id="test-dms-certificate-tf",
     certificate_pem="...")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +91,7 @@ const test = new aws.dms.Certificate("test", {
     certificatePem: "...",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

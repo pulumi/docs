@@ -12,7 +12,6 @@ meta_desc: "Explore the Association resource of the ssm module, including exampl
 
 Associates an SSM Document to an instance or EC2 tag.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +61,11 @@ example = aws.ssm.Association("example", targets=[{
     "values": [aws_instance["example"]["id"]],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -75,6 +77,7 @@ const example = new aws.ssm.Association("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -366,7 +369,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -505,7 +508,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -644,7 +647,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -783,7 +786,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -1182,7 +1185,7 @@ The following state arguments are supported:
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -1332,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -1482,7 +1485,7 @@ The following state arguments are supported:
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>
@@ -1632,7 +1635,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}</dd>

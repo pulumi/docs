@@ -12,7 +12,6 @@ meta_desc: "Explore the RouteTableAssociation resource of the ec2transitgateway 
 
 Manages an EC2 Transit Gateway Route Table association.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ example = aws.ec2transitgateway.RouteTableAssociation("example",
     transit_gateway_attachment_id=aws_ec2_transit_gateway_vpc_attachment["example"]["id"],
     transit_gateway_route_table_id=aws_ec2_transit_gateway_route_table["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const example = new aws.ec2transitgateway.RouteTableAssociation("example", {
     transitGatewayRouteTableId: aws_ec2_transit_gateway_route_table_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

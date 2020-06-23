@@ -12,7 +12,6 @@ meta_desc: "Explore the RequestValidator resource of the apigateway module, incl
 
 Manages an API Gateway Request Validator.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = aws.apigateway.RequestValidator("example",
     validate_request_body=True,
     validate_request_parameters=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const example = new aws.apigateway.RequestValidator("example", {
     validateRequestParameters: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

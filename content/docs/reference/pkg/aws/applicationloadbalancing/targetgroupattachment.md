@@ -13,8 +13,6 @@ meta_desc: "Explore the TargetGroupAttachment resource of the applicationloadbal
 Provides the ability to register instances and containers with an Application Load Balancer (ALB) or Network Load Balancer (NLB) target group. For attaching resources with Elastic Load Balancer (ELB), see the `aws.elb.Attachment` resource.
 
 > **Note:** `aws.alb.TargetGroupAttachment` is known as `aws.lb.TargetGroupAttachment`. The functionality is identical.
-
-
 ## Usage with lambda
 
 ```typescript
@@ -154,6 +152,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -188,6 +187,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -202,9 +202,11 @@ test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAtta
     target_group_arn=test_target_group.arn,
     target_id=test_instance.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -217,6 +219,7 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
     targetId: testInstance.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

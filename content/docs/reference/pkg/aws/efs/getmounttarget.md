@@ -12,7 +12,6 @@ meta_desc: "Explore the GetMountTarget function of the efs module, including exa
 
 Provides information about an Elastic File System Mount Target (EFS).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,9 +73,11 @@ if mount_target_id is None:
     mount_target_id = ""
 by_id = aws.efs.get_mount_target(mount_target_id=mount_target_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -86,6 +89,7 @@ const byId = pulumi.output(aws.efs.getMountTarget({
     mountTargetId: mountTargetId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -216,13 +220,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="availabilityzoneid_csharp">
+<a href="#availabilityzoneid_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="availabilityzonename_csharp">
+<a href="#availabilityzonename_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Availability Zone (AZ) that the mount target resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+    <dd>{{% md %}}The DNS name for the EFS file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -271,6 +297,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="mounttargetdnsname_csharp">
+<a href="#mounttargetdnsname_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Target<wbr>Dns<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="mounttargetid_csharp">
 <a href="#mounttargetid_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Target<wbr>Id</a>
 </span> 
@@ -288,6 +325,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ownerid_csharp">
+<a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}AWS account ID that owns the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -321,13 +369,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="availabilityzoneid_go">
+<a href="#availabilityzoneid_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="availabilityzonename_go">
+<a href="#availabilityzonename_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Availability Zone (AZ) that the mount target resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+    <dd>{{% md %}}The DNS name for the EFS file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -376,6 +446,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="mounttargetdnsname_go">
+<a href="#mounttargetdnsname_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Target<wbr>Dns<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="mounttargetid_go">
 <a href="#mounttargetid_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Target<wbr>Id</a>
 </span> 
@@ -393,6 +474,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ownerid_go">
+<a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AWS account ID that owns the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -426,13 +518,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="availabilityzoneid_nodejs">
+<a href="#availabilityzoneid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="availabilityzonename_nodejs">
+<a href="#availabilityzonename_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Availability Zone (AZ) that the mount target resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+    <dd>{{% md %}}The DNS name for the EFS file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -481,6 +595,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="mounttargetdnsname_nodejs">
+<a href="#mounttargetdnsname_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Target<wbr>Dns<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="mounttargetid_nodejs">
 <a href="#mounttargetid_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Target<wbr>Id</a>
 </span> 
@@ -498,6 +623,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ownerid_nodejs">
+<a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AWS account ID that owns the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -531,13 +667,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="availability_zone_id_python">
+<a href="#availability_zone_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="availability_zone_name_python">
+<a href="#availability_zone_name_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Availability Zone (AZ) that the mount target resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+    <dd>{{% md %}}The DNS name for the EFS file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -586,6 +744,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="mount_target_dns_name_python">
+<a href="#mount_target_dns_name_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>dns_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="mount_target_id_python">
 <a href="#mount_target_id_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>id</a>
 </span> 
@@ -603,6 +772,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="owner_id_python">
+<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}AWS account ID that owns the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"

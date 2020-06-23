@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAmi function of the AWS package, including examples, 
 Use this data source to get the ID of a registered AMI for use in other
 resources.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,6 +71,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -102,9 +102,11 @@ example = aws.get_ami(executable_users=["self"],
     name_regex="^myami-\\d{3}",
     owners=["self"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -130,6 +132,7 @@ const example = pulumi.output(aws.getAmi({
     owners: ["self"],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -240,7 +243,7 @@ options to narrow down the list AWS returns.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -323,7 +326,7 @@ options to narrow down the list AWS returns.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -406,7 +409,7 @@ options to narrow down the list AWS returns.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -489,7 +492,7 @@ options to narrow down the list AWS returns.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -796,7 +799,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#statereason_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
@@ -809,7 +812,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -1155,7 +1158,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#statereason_go" style="color: inherit; text-decoration: inherit;">State<wbr>Reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
@@ -1168,7 +1171,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -1514,7 +1517,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#statereason_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
@@ -1527,7 +1530,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -1873,7 +1876,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">state_<wbr>reason</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
@@ -1886,7 +1889,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -1992,7 +1995,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#ebs_csharp" style="color: inherit; text-decoration: inherit;">Ebs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2039,7 +2042,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#ebs_go" style="color: inherit; text-decoration: inherit;">Ebs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2086,7 +2089,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#ebs_nodejs" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2133,7 +2136,7 @@ is successfully registered and can be used to launch an instance.
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

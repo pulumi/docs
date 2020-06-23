@@ -12,7 +12,6 @@ meta_desc: "Explore the ScheduledAction resource of the appautoscaling module, i
 
 Provides an Application AutoScaling ScheduledAction resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,6 +91,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +115,11 @@ dynamodb_scheduled_action = aws.appautoscaling.ScheduledAction("dynamodbSchedule
     schedule="at(2006-01-02T15:04:05)",
     service_namespace=dynamodb_target.service_namespace)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -139,6 +142,7 @@ const dynamodbScheduledAction = new aws.appautoscaling.ScheduledAction("dynamodb
     serviceNamespace: dynamodbTarget.serviceNamespace,
 });
 ```
+
 {{% /example %}}
 
 ### ECS Service Autoscaling
@@ -175,6 +179,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -215,6 +220,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -238,9 +244,11 @@ ecs_scheduled_action = aws.appautoscaling.ScheduledAction("ecsScheduledAction",
     schedule="at(2006-01-02T15:04:05)",
     service_namespace=ecs_target.service_namespace)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -263,6 +271,7 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
     serviceNamespace: ecsTarget.serviceNamespace,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

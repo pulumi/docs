@@ -12,7 +12,6 @@ meta_desc: "Explore the AssessmentTarget resource of the inspector module, inclu
 
 Provides a Inspector assessment target
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ bar = aws.inspector.ResourceGroup("bar", tags={
 })
 foo = aws.inspector.AssessmentTarget("foo", resource_group_arn=bar.arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -105,6 +108,7 @@ const foo = new aws.inspector.AssessmentTarget("foo", {
     resourceGroupArn: bar.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

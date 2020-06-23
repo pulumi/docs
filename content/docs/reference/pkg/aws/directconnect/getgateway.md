@@ -12,7 +12,6 @@ meta_desc: "Explore the GetGateway function of the directconnect module, includi
 
 Retrieve information about a Direct Connect Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 example = aws.directconnect.get_gateway(name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const example = pulumi.output(aws.directconnect.getGateway({
     name: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

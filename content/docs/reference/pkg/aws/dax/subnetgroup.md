@@ -12,7 +12,6 @@ meta_desc: "Explore the SubnetGroup resource of the dax module, including exampl
 
 Provides a DAX Subnet Group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = aws.dax.SubnetGroup("example", subnet_ids=[
     aws_subnet["example2"]["id"],
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const example = new aws.dax.SubnetGroup("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

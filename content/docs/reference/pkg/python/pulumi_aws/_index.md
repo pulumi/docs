@@ -98,6 +98,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="neptune/">neptune</a></li>
 <li class="toctree-l1"><a class="reference internal" href="opsworks/">opsworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="organizations/">organizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outposts/">outposts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pinpoint/">pinpoint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pricing/">pricing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qldb/">qldb</a></li>

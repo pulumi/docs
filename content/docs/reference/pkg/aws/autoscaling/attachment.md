@@ -19,7 +19,6 @@ an ELB), and an AutoScaling Group resource with
 load balancers in conjunction with an ASG Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ asg_attachment_bar = aws.autoscaling.Attachment("asgAttachmentBar",
     autoscaling_group_name=aws_autoscaling_group["asg"]["id"],
     elb=aws_elb["bar"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -93,6 +96,7 @@ const asgAttachmentBar = new aws.autoscaling.Attachment("asg_attachment_bar", {
     elb: aws_elb_bar.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

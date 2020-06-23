@@ -288,7 +288,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#videocodecoptions_csharp" style="color: inherit; text-decoration: inherit;">Video<wbr>Codec<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#videocodecoptions_go" style="color: inherit; text-decoration: inherit;">Video<wbr>Codec<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -520,7 +520,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#videocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Codec<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -636,7 +636,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_codec_options_python" style="color: inherit; text-decoration: inherit;">video_<wbr>codec_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -1007,7 +1007,7 @@ The following state arguments are supported:
 <a href="#state_videocodecoptions_csharp" style="color: inherit; text-decoration: inherit;">Video<wbr>Codec<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
 <a href="#state_videocodecoptions_go" style="color: inherit; text-decoration: inherit;">Video<wbr>Codec<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_videocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Codec<wbr>Options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -1385,7 +1385,7 @@ The following state arguments are supported:
 <a href="#state_video_codec_options_python" style="color: inherit; text-decoration: inherit;">video_<wbr>codec_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>

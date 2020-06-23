@@ -12,7 +12,6 @@ meta_desc: "Explore the GetEncryptionByDefault function of the ebs module, inclu
 
 Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -32,6 +31,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -45,15 +45,18 @@ import pulumi_aws as aws
 
 current = aws.ebs.get_encryption_by_default()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const current = pulumi.output(aws.ebs.getEncryptionByDefault({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

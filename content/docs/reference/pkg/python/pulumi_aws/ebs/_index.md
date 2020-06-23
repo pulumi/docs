@@ -22,6 +22,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aws.ebs.AwaitableGetEbsVolumesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetEbsVolumesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetEbsVolumesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aws.ebs.AwaitableGetEncryptionByDefaultResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">AwaitableGetEncryptionByDefaultResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetEncryptionByDefaultResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -224,6 +229,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.GetDefaultKmsKeyResult.key_arn">
 <code class="sig-name descname">key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult.key_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the default KMS key uses to encrypt an EBS volume in this region when no key is specified in an API call that creates the volume and encryption by default is enabled.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ebs.GetEbsVolumesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">GetEbsVolumesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetEbsVolumesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getEbsVolumes.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ebs.GetEbsVolumesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetEbsVolumesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ebs.GetEbsVolumesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetEbsVolumesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of all the EBS Volume IDs found. This data source will fail if
+no volumes match the provided criteria.</p>
 </dd></dl>
 
 </dd></dl>
@@ -924,6 +948,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">kms_key_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">key_arn</span><span class="p">)</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ebs.get_ebs_volumes">
+<code class="sig-prename descclassname">pulumi_aws.ebs.</code><code class="sig-name descname">get_ebs_volumes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_ebs_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs.getEbsVolumes</span></code> provides identifying information for EBS volumes matching given criteria.</p>
+<p>This data source can be useful for getting a list of volume IDs with (for example) matching tags.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_ebs_volumes</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ebs</span><span class="o">.</span><span class="n">get_ebs_volumes</span><span class="p">(</span><span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;VolumeSet&quot;</span><span class="p">:</span> <span class="s2">&quot;TestVolumeSet&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">example_volume</span> <span class="o">=</span> <span class="p">[</span><span class="n">aws</span><span class="o">.</span><span class="n">ebs</span><span class="o">.</span><span class="n">get_volume</span><span class="p">(</span><span class="nb">filter</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;volume-id&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">each</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]],</span>
+<span class="p">}])</span> <span class="k">for</span> <span class="n">__key</span><span class="p">,</span> <span class="n">__value</span> <span class="ow">in</span> <span class="n">example_ebs_volumes</span><span class="o">.</span><span class="n">ids</span><span class="p">]</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;availabilityZoneToVolumeId&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">s</span><span class="o">.</span><span class="n">id</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">availability_zone</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">example_volume</span><span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
+a pair on the desired volumes.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVolumes.html">the underlying AWS API</a>.
+For example, if matching against the <code class="docutils literal notranslate"><span class="pre">size</span></code> filter, use:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+EBS Volume IDs will be selected if any one of the given values match.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py function">

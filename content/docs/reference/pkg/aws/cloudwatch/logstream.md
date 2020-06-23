@@ -12,7 +12,6 @@ meta_desc: "Explore the LogStream resource of the cloudwatch module, including e
 
 Provides a CloudWatch Log Stream resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ import pulumi_aws as aws
 yada = aws.cloudwatch.LogGroup("yada")
 foo = aws.cloudwatch.LogStream("foo", log_group_name=yada.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const foo = new aws.cloudwatch.LogStream("foo", {
     logGroupName: yada.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

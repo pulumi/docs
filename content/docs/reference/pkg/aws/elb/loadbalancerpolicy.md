@@ -12,7 +12,6 @@ meta_desc: "Explore the LoadBalancerPolicy resource of the elb module, including
 
 Provides a load balancer policy, which can be attached to an ELB listener or backend server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -133,6 +132,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -149,6 +149,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -215,9 +216,11 @@ wu_tang_listener_policies_443 = aws.elb.ListenerPolicy("wu-tang-listener-policie
     load_balancer_port=443,
     policy_names=[wu_tang_ssl.policy_name])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -289,6 +292,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
     policyNames: [wu_tang_ssl.policyName],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

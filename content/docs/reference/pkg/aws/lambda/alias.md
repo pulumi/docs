@@ -15,7 +15,6 @@ Creates a Lambda function alias. Creates an alias that points to the specified L
 For information about Lambda and how to use it, see [What is AWS Lambda?](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
 For information about function aliases, see [CreateAlias](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateAlias.html) and [AliasRoutingConfiguration](https://docs.aws.amazon.com/lambda/latest/dg/API_AliasRoutingConfiguration.html) in the API docs.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,7 +29,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var testAlias = new Aws.Lambda.Alias("testAlias", new Aws.Lambda.AliasArgs
+        var testLambdaAlias = new Aws.Lambda.Alias("testLambdaAlias", new Aws.Lambda.AliasArgs
         {
             Description = "a sample description",
             FunctionName = aws_lambda_function.Lambda_function_test.Arn,
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,7 +60,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		testAlias, err := lambda.NewAlias(ctx, "testAlias", &lambda.AliasArgs{
+		testLambdaAlias, err := lambda.NewAlias(ctx, "testLambdaAlias", &lambda.AliasArgs{
 			Description:     pulumi.String("a sample description"),
 			FunctionName:    pulumi.String(aws_lambda_function.Lambda_function_test.Arn),
 			FunctionVersion: pulumi.String("1"),
@@ -77,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,7 +85,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test_alias = aws.lambda_.Alias("testAlias",
+test_lambda_alias = aws.lambda_.Alias("testLambdaAlias",
     description="a sample description",
     function_name=aws_lambda_function["lambda_function_test"]["arn"],
     function_version="1",
@@ -94,14 +95,16 @@ test_alias = aws.lambda_.Alias("testAlias",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testAlias = new aws.lambda.Alias("test_alias", {
+const testLambdaAlias = new aws.lambda.Alias("test_lambda_alias", {
     description: "a sample description",
     functionName: aws_lambda_function_lambda_function_test.arn,
     functionVersion: "1",
@@ -112,6 +115,7 @@ const testAlias = new aws.lambda.Alias("test_alias", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Provides a CodeDeploy Deployment Group for a CodeDeploy Application
 
 > **NOTE on blue/green deployments:** When using `green_fleet_provisioning_option` with the `COPY_AUTO_SCALING_GROUP` action, CodeDeploy will create a new ASG with a different name. This ASG is _not_ managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as `DISCOVER_EXISTING` with separate blue and green ASG.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -98,6 +97,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -152,9 +152,11 @@ example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGrou
     },
     service_role_arn=aws_iam_role["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -205,6 +207,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
     serviceRoleArn: aws_iam_role_example.arn,
 });
 ```
+
 {{% /example %}}
 
 ### Blue Green Deployments with Servers and Classic ELB
@@ -261,6 +264,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -313,6 +317,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -347,9 +352,11 @@ example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGrou
     },
     service_role_arn=aws_iam_role["example"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -382,6 +389,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
     serviceRoleArn: aws_iam_role_example.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

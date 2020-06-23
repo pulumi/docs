@@ -12,11 +12,10 @@ meta_desc: "Explore the Deployment resource of the apigateway module, including 
 
 Provides an API Gateway REST Deployment.
 
-> **Note:** This resource depends on having at least one `aws.apigateway.Integration` created in the REST API, which 
-itself has other dependencies. To avoid race conditions when all resources are being created together, you need to add 
-implicit resource references via the `triggers` argument or explicit resource references using the 
+> **Note:** This resource depends on having at least one `aws.apigateway.Integration` created in the REST API, which
+itself has other dependencies. To avoid race conditions when all resources are being created together, you need to add
+implicit resource references via the `triggers` argument or explicit resource references using the
 [resource `dependsOn` meta-argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson).
-
 
 {{% examples %}}
 ## Example Usage
@@ -69,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -128,6 +128,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -157,9 +158,11 @@ my_demo_deployment = aws.apigateway.Deployment("myDemoDeployment",
         "answer": "42",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -190,6 +193,7 @@ const myDemoDeployment = new aws.apigateway.Deployment("myDemoDeployment", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

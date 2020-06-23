@@ -14,8 +14,6 @@ Provides a Pinpoint ADM (Amazon Device Messaging) Channel resource.
 
 > **Note:** All arguments including the Client ID and Client Secret will be stored in the raw state as plain-text.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +88,11 @@ channel = aws.pinpoint.AdmChannel("channel",
     client_secret="",
     enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -103,6 +105,7 @@ const channel = new aws.pinpoint.AdmChannel("channel", {
     enabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

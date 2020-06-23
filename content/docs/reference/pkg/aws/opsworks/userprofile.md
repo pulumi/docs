@@ -12,7 +12,6 @@ meta_desc: "Explore the UserProfile resource of the opsworks module, including e
 
 Provides an OpsWorks User Profile resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ my_profile = aws.opsworks.UserProfile("myProfile",
     ssh_username="my_user",
     user_arn=aws_iam_user["user"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
     userArn: aws_iam_user_user.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

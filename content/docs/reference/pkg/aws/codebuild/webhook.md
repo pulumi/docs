@@ -12,7 +12,6 @@ meta_desc: "Explore the Webhook resource of the codebuild module, including exam
 
 Manages a CodeBuild webhook, which is an endpoint accepted by the CodeBuild service to trigger builds from source code repositories. Depending on the source type of the CodeBuild project, the CodeBuild service may also automatically create and delete the actual repository webhook as well.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,6 +91,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example = aws.codebuild.Webhook("example",
     }],
     project_name=aws_codebuild_project["example"]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -136,6 +139,7 @@ const example = new aws.codebuild.Webhook("example", {
     projectName: aws_codebuild_project_example.name,
 });
 ```
+
 {{% /example %}}
 
 ### GitHub Enterprise
@@ -173,6 +177,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -197,9 +202,11 @@ example_repository_webhook = github.RepositoryWebhook("exampleRepositoryWebhook"
     events=["push"],
     repository=github_repository["example"]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -220,6 +227,7 @@ const exampleRepositoryWebhook = new github.RepositoryWebhook("example", {
     repository: github_repository_example.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

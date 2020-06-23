@@ -12,7 +12,6 @@ meta_desc: "Explore the OpenIdConnectProvider resource of the iam module, includ
 
 Provides an IAM OpenID Connect provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +56,11 @@ default = aws.iam.OpenIdConnectProvider("default",
     thumbprint_lists=[],
     url="https://accounts.google.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -69,6 +71,7 @@ const defaultOpenIdConnectProvider = new aws.iam.OpenIdConnectProvider("default"
     url: "https://accounts.google.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

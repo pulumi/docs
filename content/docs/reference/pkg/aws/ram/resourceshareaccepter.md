@@ -14,7 +14,6 @@ Manage accepting a Resource Access Manager (RAM) Resource Share invitation. From
 
 > **Note:** If both AWS accounts are in the same Organization and [RAM Sharing with AWS Organizations is enabled](https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs), this resource is not necessary as RAM Resource Share invitations are not used.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,9 +79,11 @@ sender_invite = aws.ram.PrincipalAssociation("senderInvite",
     resource_share_arn=sender_share.arn)
 receiver_accept = aws.ram.ResourceShareAccepter("receiverAccept", share_arn=sender_invite.resource_share_arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -104,6 +106,7 @@ const receiverAccept = new aws.ram.ResourceShareAccepter("receiver_accept", {
     shareArn: senderInvite.resourceShareArn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -17,7 +17,6 @@ clusters.
 ElastiCache cluster **outside** of a VPC. If you are using a VPC, see the
 ElastiCache Subnet Group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +60,11 @@ import pulumi_aws as aws
 bar_security_group = aws.ec2.SecurityGroup("barSecurityGroup")
 bar_elasticache_security_group_security_group = aws.elasticache.SecurityGroup("barElasticache/securityGroupSecurityGroup", security_group_names=[bar_security_group.name])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,6 +74,7 @@ const barSecurityGroup = new aws.elasticache.SecurityGroup("bar", {
     securityGroupNames: [barEc2SecurityGroup.name],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

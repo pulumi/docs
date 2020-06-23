@@ -14,9 +14,6 @@ Manages a S3 Bucket Notification Configuration. For additional information, see 
 
 > **NOTE:** S3 Buckets only support a single notification configuration. Declaring multiple `aws.s3.BucketNotification` resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example "Trigger multiple Lambda functions" for an option.
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a BucketNotification Resource {#create}

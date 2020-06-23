@@ -42,7 +42,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The POSIX group ID used for all file system operations using this access point.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secondaryGids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Secondary POSIX group IDs used for all file system operations using this access point.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - he POSIX user ID used for all file system operations using this access point.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The POSIX user ID used for all file system operations using this access point.</p></li>
 </ul>
 <p>The <strong>root_directory</strong> object supports the following:</p>
 <ul class="simple">
@@ -80,7 +80,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The POSIX group ID used for all file system operations using this access point.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secondaryGids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Secondary POSIX group IDs used for all file system operations using this access point.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - he POSIX user ID used for all file system operations using this access point.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The POSIX user ID used for all file system operations using this access point.</p></li>
 </ul>
 </dd></dl>
 
@@ -130,7 +130,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The POSIX group ID used for all file system operations using this access point.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secondaryGids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Secondary POSIX group IDs used for all file system operations using this access point.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - he POSIX user ID used for all file system operations using this access point.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The POSIX user ID used for all file system operations using this access point.</p></li>
 </ul>
 <p>The <strong>root_directory</strong> object supports the following:</p>
 <ul class="simple">
@@ -195,7 +195,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.efs.AwaitableGetMountTargetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">AwaitableGetMountTargetResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.AwaitableGetMountTargetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">AwaitableGetMountTargetResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_target_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.AwaitableGetMountTargetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -609,12 +609,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.efs.GetMountTargetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">GetMountTargetResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">GetMountTargetResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_target_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMountTarget.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.efs.GetMountTargetResult.availability_zone_id">
+<code class="sig-name descname">availability_zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.availability_zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.efs.GetMountTargetResult.availability_zone_name">
+<code class="sig-name descname">availability_zone_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.availability_zone_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Availability Zone (AZ) that the mount target resides in.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.dns_name">
 <code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.dns_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The DNS name for the given subnet/AZ per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
+<dd><p>The DNS name for the EFS file system.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -642,9 +654,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_aws.efs.GetMountTargetResult.mount_target_dns_name">
+<code class="sig-name descname">mount_target_dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.mount_target_dns_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS name for the given subnet/AZ per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.network_interface_id">
 <code class="sig-name descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.network_interface_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the network interface that Amazon EFS created when it created the mount target.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.efs.GetMountTargetResult.owner_id">
+<code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS account ID that owns the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -693,9 +717,21 @@ be for the same VPC as subnet specified) in effect for the mount target.</p></li
 </dd>
 </dl>
 <dl class="py attribute">
+<dt id="pulumi_aws.efs.MountTarget.availability_zone_id">
+<code class="sig-name descname">availability_zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.availability_zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.efs.MountTarget.availability_zone_name">
+<code class="sig-name descname">availability_zone_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.availability_zone_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Availability Zone (AZ) that the mount target resides in.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.efs.MountTarget.dns_name">
 <code class="sig-name descname">dns_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.dns_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The DNS name for the given subnet/AZ per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
+<dd><p>The DNS name for the EFS file system.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -718,9 +754,21 @@ which the file system may be mounted via the mount target.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_aws.efs.MountTarget.mount_target_dns_name">
+<code class="sig-name descname">mount_target_dns_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.mount_target_dns_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS name for the given subnet/AZ per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.efs.MountTarget.network_interface_id">
 <code class="sig-name descname">network_interface_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.network_interface_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the network interface that Amazon EFS created when it created the mount target.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.efs.MountTarget.owner_id">
+<code class="sig-name descname">owner_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS account ID that owns the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -738,7 +786,7 @@ be for the same VPC as subnet specified) in effect for the mount target.</p>
 
 <dl class="py method">
 <dt id="pulumi_aws.efs.MountTarget.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_target_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MountTarget resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -747,13 +795,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The DNS name for the given subnet/AZ per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
-</p></li>
+<li><p><strong>availability_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.</p></li>
+<li><p><strong>availability_zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Availability Zone (AZ) that the mount target resides in.</p></li>
+<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name for the EFS file system.</p></li>
 <li><p><strong>file_system_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name of the file system.</p></li>
 <li><p><strong>file_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the file system for which the mount target is intended.</p></li>
 <li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address (within the address range of the specified subnet) at
 which the file system may be mounted via the mount target.</p></li>
+<li><p><strong>mount_target_dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The DNS name for the given subnet/AZ per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
+</p></li>
 <li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network interface that Amazon EFS created when it created the mount target.</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID that owns the resource.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of up to 5 VPC security group IDs (that must
 be for the same VPC as subnet specified) in effect for the mount target.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet to add the mount target in.</p></li>

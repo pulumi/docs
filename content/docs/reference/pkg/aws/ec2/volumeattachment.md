@@ -15,7 +15,6 @@ detach volumes from AWS Instances.
 
 > **NOTE on EBS block devices:** If you use `ebs_block_device` on an `aws.ec2.Instance`, this provider will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, `ebs_block_device` cannot be mixed with external `aws.ebs.Volume` + `aws_ebs_volume_attachment` resources for a given instance.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -121,9 +122,11 @@ ebs_att = aws.ec2.VolumeAttachment("ebsAtt",
     instance_id=web.id,
     volume_id=example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -146,6 +149,7 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebs_att", {
     volumeId: example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

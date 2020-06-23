@@ -12,7 +12,6 @@ meta_desc: "Explore the SnapshotCopy resource of the ebs module, including examp
 
 Creates a Snapshot of a snapshot.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,6 +103,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -128,9 +129,11 @@ example_copy = aws.ebs.SnapshotCopy("exampleCopy",
         "Name": "HelloWorld_copy_snap",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -156,6 +159,7 @@ const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -403,7 +407,7 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
@@ -476,7 +480,7 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
@@ -549,7 +553,7 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
@@ -622,7 +626,7 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
@@ -1159,7 +1163,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
@@ -1288,7 +1292,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
@@ -1417,7 +1421,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
@@ -1546,7 +1550,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>

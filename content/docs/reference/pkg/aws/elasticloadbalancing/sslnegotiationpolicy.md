@@ -12,7 +12,6 @@ meta_desc: "Explore the SslNegotiationPolicy resource of the elasticloadbalancin
 
 Provides a load balancer SSL negotiation policy, which allows an ELB to control the ciphers and protocols that are supported during SSL negotiations between a client and a load balancer.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -92,6 +91,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -163,6 +163,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -213,9 +214,11 @@ foo = aws.elb.SslNegotiationPolicy("foo",
     lb_port=443,
     load_balancer=lb.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -265,6 +268,7 @@ const foo = new aws.elb.SslNegotiationPolicy("foo", {
     loadBalancer: lb.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

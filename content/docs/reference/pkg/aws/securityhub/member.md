@@ -12,7 +12,6 @@ meta_desc: "Explore the Member resource of the securityhub module, including exa
 
 Provides a Security Hub member resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -82,9 +83,11 @@ example_member = aws.securityhub.Member("exampleMember",
     email="example@example.com",
     invite=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const exampleMember = new aws.securityhub.Member("example", {
     invite: true,
 }, { dependsOn: [exampleAccount] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

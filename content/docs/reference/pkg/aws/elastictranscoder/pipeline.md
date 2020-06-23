@@ -12,7 +12,6 @@ meta_desc: "Explore the Pipeline resource of the elastictranscoder module, inclu
 
 Provides an Elastic Transcoder pipeline resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ bar = aws.elastictranscoder.Pipeline("bar",
         "storage_class": "Standard",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -117,6 +120,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

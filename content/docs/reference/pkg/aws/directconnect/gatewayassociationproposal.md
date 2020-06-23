@@ -12,7 +12,6 @@ meta_desc: "Explore the GatewayAssociationProposal resource of the directconnect
 
 Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the `aws.directconnect.GatewayAssociation` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = aws.directconnect.GatewayAssociationProposal("example",
     dx_gateway_id=aws_dx_gateway["example"]["id"],
     dx_gateway_owner_account_id=aws_dx_gateway["example"]["owner_account_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const example = new aws.directconnect.GatewayAssociationProposal("example", {
     dxGatewayOwnerAccountId: aws_dx_gateway_example.ownerAccountId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

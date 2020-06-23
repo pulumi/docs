@@ -16,7 +16,6 @@ Manages Cost and Usage Report Definitions.
 
 > *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +88,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,9 +109,11 @@ example_cur_report_definition = aws.cur.ReportDefinition("exampleCurReportDefini
     s3_region="us-east-1",
     time_unit="HOURLY")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -129,6 +132,7 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
     timeUnit: "HOURLY",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

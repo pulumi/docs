@@ -13,7 +13,6 @@ meta_desc: "Explore the IntegrationResponse resource of the apigatewayv2 module,
 Manages an Amazon API Gateway Version 2 integration response.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ example = aws.apigatewayv2.IntegrationResponse("example",
     integration_id=aws_apigatewayv2_integration["example"]["id"],
     integration_response_key="/200/")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +91,7 @@ const example = new aws.apigatewayv2.IntegrationResponse("example", {
     integrationResponseKey: "/200/",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

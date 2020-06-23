@@ -31,14 +31,13 @@ the `regional_domain_name` attribute.
 
 > **Note:** API Gateway requires the use of AWS Certificate Manager (ACM) certificates instead of Identity and Access Management (IAM) certificates in regions that support ACM. Regions that support ACM can be found in the [Regions and Endpoints Documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html#acm_region). To import an existing private key and certificate into ACM or request an ACM certificate, see the `aws.acm.Certificate` resource.
 
-> **Note:** The `aws.apigateway.DomainName` resource expects dependency on the `aws.acm.CertificateValidation` as 
-only verified certificates can be used. This can be made either explicitly by adding the 
-`depends_on = [aws_acm_certificate_validation.cert]` attribute. Or implicitly by referring certificate ARN 
-from the validation resource where it will be available after the resource creation: 
+> **Note:** The `aws.apigateway.DomainName` resource expects dependency on the `aws.acm.CertificateValidation` as
+only verified certificates can be used. This can be made either explicitly by adding the
+`depends_on = [aws_acm_certificate_validation.cert]` attribute. Or implicitly by referring certificate ARN
+from the validation resource where it will be available after the resource creation:
 `regional_certificate_arn = aws_acm_certificate_validation.cert.certificate_arn`.
 
 > **Note:** All arguments including the private key will be stored in the raw state as plain-text.
-
 
 {{% examples %}}
 ## Example Usage
@@ -80,6 +79,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -120,6 +120,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -142,9 +143,11 @@ example_record = aws.route53.Record("exampleRecord",
     type="A",
     zone_id=aws_route53_zone["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -166,6 +169,7 @@ const exampleRecord = new aws.route53.Record("example", {
     zoneId: aws_route53_zone_example.id,
 });
 ```
+
 {{% /example %}}
 
 ### Regional (ACM Certificate)
@@ -208,6 +212,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -251,6 +256,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -276,9 +282,11 @@ example_record = aws.route53.Record("exampleRecord",
     type="A",
     zone_id=aws_route53_zone["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -303,6 +311,7 @@ const exampleRecord = new aws.route53.Record("example", {
     zoneId: aws_route53_zone_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -614,7 +623,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -751,7 +760,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -888,7 +897,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1025,7 +1034,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1707,7 +1716,7 @@ that can be used to create a Route53 alias record for the distribution.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1912,7 +1921,7 @@ that can be used to create a Route53 alias record for the distribution.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2117,7 +2126,7 @@ that can be used to create a Route53 alias record for the distribution.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2322,7 +2331,7 @@ that can be used to create a Route53 alias record for the distribution.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>

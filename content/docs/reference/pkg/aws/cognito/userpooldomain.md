@@ -12,7 +12,6 @@ meta_desc: "Explore the UserPoolDomain resource of the cognito module, including
 
 Provides a Cognito User Pool Domain resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ main = aws.cognito.UserPoolDomain("main",
     domain="example-domain",
     user_pool_id=example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const main = new aws.cognito.UserPoolDomain("main", {
     userPoolId: example.id,
 });
 ```
+
 {{% /example %}}
 
 ### Custom Cognito domain
@@ -117,6 +121,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -146,6 +151,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -159,9 +165,11 @@ main = aws.cognito.UserPoolDomain("main",
     domain="example-domain.example.com",
     user_pool_id=example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -173,6 +181,7 @@ const main = new aws.cognito.UserPoolDomain("main", {
     userPoolId: example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

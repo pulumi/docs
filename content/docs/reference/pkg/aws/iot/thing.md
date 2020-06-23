@@ -12,7 +12,6 @@ meta_desc: "Explore the Thing resource of the iot module, including examples, in
 
 Creates and manages an AWS IoT Thing.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = aws.iot.Thing("example", attributes={
     "First": "examplevalue",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const example = new aws.iot.Thing("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -279,7 +283,7 @@ The Thing resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of attributes of the thing.
 {{% /md %}}</dd>
@@ -319,7 +323,7 @@ The Thing resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of attributes of the thing.
 {{% /md %}}</dd>
@@ -359,7 +363,7 @@ The Thing resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of attributes of the thing.
 {{% /md %}}</dd>
@@ -399,7 +403,7 @@ The Thing resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of attributes of the thing.
 {{% /md %}}</dd>
@@ -787,7 +791,7 @@ The following state arguments are supported:
 <a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of attributes of the thing.
 {{% /md %}}</dd>
@@ -860,7 +864,7 @@ The following state arguments are supported:
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of attributes of the thing.
 {{% /md %}}</dd>
@@ -933,7 +937,7 @@ The following state arguments are supported:
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of attributes of the thing.
 {{% /md %}}</dd>
@@ -1006,7 +1010,7 @@ The following state arguments are supported:
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of attributes of the thing.
 {{% /md %}}</dd>

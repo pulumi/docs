@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPatchBaseline function of the ssm module, including e
 
 Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,9 +73,11 @@ centos = aws.ssm.get_patch_baseline(name_prefix="AWS-",
     operating_system="CENTOS",
     owner="AWS")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -85,6 +88,7 @@ const centos = pulumi.output(aws.ssm.getPatchBaseline({
     owner: "AWS",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Provides a DynamoDB table resource
 
 > **Note:** It is recommended to use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) for `read_capacity` and/or `write_capacity` if there's `autoscaling policy` attached to the table.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -85,6 +84,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -134,9 +134,11 @@ basic_dynamodb_table = aws.dynamodb.Table("basic-dynamodb-table",
     },
     write_capacity=20)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -180,6 +182,7 @@ const basic_dynamodb_table = new aws.dynamodb.Table("basic-dynamodb-table", {
     writeCapacity: 20,
 });
 ```
+
 {{% /example %}}
 
 ### Global Tables
@@ -222,6 +225,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -262,6 +266,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -287,9 +292,11 @@ example = aws.dynamodb.Table("example",
     stream_enabled=True,
     stream_view_type="NEW_AND_OLD_IMAGES")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -313,6 +320,7 @@ const example = new aws.dynamodb.Table("example", {
     streamViewType: "NEW_AND_OLD_IMAGES",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -653,7 +661,7 @@ definition after you have created the resource.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -841,7 +849,7 @@ definition after you have created the resource.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -1029,7 +1037,7 @@ definition after you have created the resource.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -1217,7 +1225,7 @@ definition after you have created the resource.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -1790,7 +1798,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -2014,7 +2022,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -2238,7 +2246,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -2462,7 +2470,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>

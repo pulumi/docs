@@ -17,7 +17,6 @@ discover the name of the region configured within the provider. The latter
 can be useful in a child module which is inheriting an AWS provider
 configuration from its parent module.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,15 +50,18 @@ import pulumi_aws as aws
 
 current = aws.get_region()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const current = pulumi.output(aws.getRegion({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

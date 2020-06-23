@@ -12,7 +12,6 @@ meta_desc: "Explore the ReceiptRule resource of the ses module, including exampl
 
 Provides an SES receipt rule resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,6 +100,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -123,9 +124,11 @@ store = aws.ses.ReceiptRule("store",
     }],
     scan_enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -147,6 +150,7 @@ const store = new aws.ses.ReceiptRule("store", {
     scanEnabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

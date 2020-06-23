@@ -14,7 +14,6 @@ Provides a Load Balancer Listener Rule resource.
 
 > **Note:** `aws.alb.ListenerRule` is known as `aws.lb.ListenerRule`. The functionality is identical.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -247,6 +246,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -451,6 +451,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -578,9 +579,11 @@ admin = aws.lb.ListenerRule("admin",
     ],
     listener_arn=front_end_listener.arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -711,6 +714,7 @@ const admin = new aws.lb.ListenerRule("admin", {
     listenerArn: frontEndListener.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -2057,7 +2061,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2152,7 +2156,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2247,7 +2251,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2342,7 +2346,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2488,7 +2492,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2616,7 +2620,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2744,7 +2748,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
@@ -2872,7 +2876,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>

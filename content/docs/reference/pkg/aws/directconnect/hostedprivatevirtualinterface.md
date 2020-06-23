@@ -13,7 +13,6 @@ meta_desc: "Explore the HostedPrivateVirtualInterface resource of the directconn
 Provides a Direct Connect hosted private virtual interface resource. This resource represents the allocator's side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ foo = aws.directconnect.HostedPrivateVirtualInterface("foo",
     connection_id="dxcon-zzzzzzzz",
     vlan=4094)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     vlan: 4094,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

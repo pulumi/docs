@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSecret function of the secretsmanager module, includi
 
 Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion`.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_aws as aws
 
 by_arn = aws.secretsmanager.get_secret(arn="arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,6 +61,7 @@ const by_arn = pulumi.output(aws.secretsmanager.getSecret({
     arn: "arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Name
@@ -79,6 +82,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,9 +96,11 @@ import pulumi_aws as aws
 
 by_name = aws.secretsmanager.get_secret(name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -103,6 +109,7 @@ const by_name = pulumi.output(aws.secretsmanager.getSecret({
     name: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -340,8 +347,8 @@ The following output properties are available:
     <dd>{{% md %}}The resource-based policy document that's attached to the secret.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationenabled_csharp">
 <a href="#rotationenabled_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Enabled</a>
 </span> 
@@ -349,10 +356,10 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether rotation is enabled or not.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationlambdaarn_csharp">
 <a href="#rotationlambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Lambda<wbr>Arn</a>
 </span> 
@@ -360,10 +367,10 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationrules_csharp">
 <a href="#rotationrules_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Rules</a>
 </span> 
@@ -371,7 +378,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getsecretrotationrule">List&lt;Get<wbr>Secret<wbr>Rotation<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -379,7 +386,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
 {{% /md %}}</dd>
@@ -456,8 +463,8 @@ The following output properties are available:
     <dd>{{% md %}}The resource-based policy document that's attached to the secret.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationenabled_go">
 <a href="#rotationenabled_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Enabled</a>
 </span> 
@@ -465,10 +472,10 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether rotation is enabled or not.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationlambdaarn_go">
 <a href="#rotationlambdaarn_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Lambda<wbr>Arn</a>
 </span> 
@@ -476,10 +483,10 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationrules_go">
 <a href="#rotationrules_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Rules</a>
 </span> 
@@ -487,7 +494,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getsecretrotationrule">[]Get<wbr>Secret<wbr>Rotation<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -495,7 +502,7 @@ The following output properties are available:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
 {{% /md %}}</dd>
@@ -572,8 +579,8 @@ The following output properties are available:
     <dd>{{% md %}}The resource-based policy document that's attached to the secret.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationenabled_nodejs">
 <a href="#rotationenabled_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Enabled</a>
 </span> 
@@ -581,10 +588,10 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether rotation is enabled or not.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationlambdaarn_nodejs">
 <a href="#rotationlambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Lambda<wbr>Arn</a>
 </span> 
@@ -592,10 +599,10 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotationrules_nodejs">
 <a href="#rotationrules_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Rules</a>
 </span> 
@@ -603,7 +610,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getsecretrotationrule">Get<wbr>Secret<wbr>Rotation<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -611,7 +618,7 @@ The following output properties are available:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
 {{% /md %}}</dd>
@@ -688,8 +695,8 @@ The following output properties are available:
     <dd>{{% md %}}The resource-based policy document that's attached to the secret.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotation_enabled_python">
 <a href="#rotation_enabled_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>enabled</a>
 </span> 
@@ -697,10 +704,10 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether rotation is enabled or not.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotation_lambda_arn_python">
 <a href="#rotation_lambda_arn_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>lambda_<wbr>arn</a>
 </span> 
@@ -708,10 +715,10 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="rotation_rules_python">
 <a href="#rotation_rules_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>rules</a>
 </span> 
@@ -719,7 +726,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getsecretrotationrule">List[Get<wbr>Secret<wbr>Rotation<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -727,7 +734,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
 {{% /md %}}</dd>

@@ -12,7 +12,6 @@ meta_desc: "Explore the Trigger resource of the codecommit module, including exa
 
 Provides a CodeCommit Trigger Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ test_trigger = aws.codecommit.Trigger("testTrigger",
         "name": "all",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -124,6 +127,7 @@ const testTrigger = new aws.codecommit.Trigger("test", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

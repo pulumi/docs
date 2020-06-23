@@ -13,7 +13,6 @@ meta_desc: "Explore the TransitVirtualInterface resource of the directconnect mo
 Provides a Direct Connect transit virtual interface resource.
 A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +93,11 @@ example_transit_virtual_interface = aws.directconnect.TransitVirtualInterface("e
     dx_gateway_id=example_gateway.id,
     vlan=4094)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,6 +113,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
     vlan: 4094,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -413,7 +417,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -542,7 +546,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -671,7 +675,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -800,7 +804,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1338,7 +1342,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1510,7 +1514,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1682,7 +1686,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1854,7 +1858,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>

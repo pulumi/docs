@@ -12,7 +12,6 @@ meta_desc: "Explore the Database resource of the athena module, including exampl
 
 Provides an Athena database.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ hoge_database = aws.athena.Database("hogeDatabase",
     bucket=hoge_bucket.bucket,
     name="database_name")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -93,6 +96,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
     name: "database_name",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

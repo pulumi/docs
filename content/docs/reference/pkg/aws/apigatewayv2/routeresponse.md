@@ -13,9 +13,6 @@ meta_desc: "Explore the RouteResponse resource of the apigatewayv2 module, inclu
 Manages an Amazon API Gateway Version 2 route response.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a RouteResponse Resource {#create}

@@ -13,7 +13,6 @@ meta_desc: "Explore the GetProduct function of the pricing module, including exa
 Use this data source to get the pricing information of all products in AWS.
 This data source is only available in a us-east-1 or ap-south-1 provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -74,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -126,6 +126,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -165,9 +166,11 @@ example = aws.pricing.get_product(filters=[
     ],
     service_code="AmazonEC2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -206,6 +209,7 @@ const example = pulumi.output(aws.pricing.getProduct({
     serviceCode: "AmazonEC2",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

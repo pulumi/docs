@@ -12,7 +12,6 @@ meta_desc: "Explore the Zone resource of the route53 module, including examples,
 
 Manages a Route53 Hosted Zone.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,6 +55,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,15 +65,18 @@ import pulumi_aws as aws
 
 primary = aws.route53.Zone("primary")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const primary = new aws.route53.Zone("primary", {});
 ```
+
 {{% /example %}}
 
 ### Public Subdomain Zone
@@ -113,6 +117,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -140,9 +145,11 @@ dev_ns = aws.route53.Record("dev-ns",
     type="NS",
     zone_id=main.zone_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -166,6 +173,7 @@ const dev_ns = new aws.route53.Record("dev-ns", {
     zoneId: main.zoneId,
 });
 ```
+
 {{% /example %}}
 
 ### Private Zone
@@ -192,6 +200,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -219,6 +228,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -230,9 +240,11 @@ private = aws.route53.Zone("private", vpcs=[{
     "vpc_id": aws_vpc["example"]["id"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -243,6 +255,7 @@ const privateZone = new aws.route53.Zone("private", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -479,7 +492,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -552,7 +565,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -625,7 +638,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -698,7 +711,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -1080,7 +1093,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -1176,7 +1189,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -1272,7 +1285,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -1368,7 +1381,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>

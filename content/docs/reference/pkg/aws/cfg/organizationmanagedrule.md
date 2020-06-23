@@ -16,7 +16,6 @@ Manages a Config Organization Managed Rule. More information about these rules c
 
 > **NOTE:** Every Organization account except those configured in the `excluded_accounts` argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the `aws.cfg.Recorder` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +93,11 @@ example_organization = aws.organizations.Organization("exampleOrganization",
     feature_set="ALL")
 example_organization_managed_rule = aws.cfg.OrganizationManagedRule("exampleOrganizationManagedRule", rule_identifier="IAM_PASSWORD_POLICY")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -107,6 +110,7 @@ const exampleOrganizationManagedRule = new aws.cfg.OrganizationManagedRule("exam
     ruleIdentifier: "IAM_PASSWORD_POLICY",
 }, { dependsOn: [exampleOrganization] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

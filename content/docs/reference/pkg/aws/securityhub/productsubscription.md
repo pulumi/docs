@@ -12,7 +12,6 @@ meta_desc: "Explore the ProductSubscription resource of the securityhub module, 
 
 Subscribes to a Security Hub product.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +54,11 @@ example_account = aws.securityhub.Account("exampleAccount")
 current = aws.get_region()
 example_product_subscription = aws.securityhub.ProductSubscription("exampleProductSubscription", product_arn=f"arn:aws:securityhub:{current.name}:733251395267:product/alertlogic/althreatmanagement")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -67,6 +69,7 @@ const exampleProductSubscription = new aws.securityhub.ProductSubscription("exam
     productArn: pulumi.interpolate`arn:aws:securityhub:${current.name!}:733251395267:product/alertlogic/althreatmanagement`,
 }, { dependsOn: [exampleAccount] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
