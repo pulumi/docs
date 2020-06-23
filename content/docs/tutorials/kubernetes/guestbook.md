@@ -91,7 +91,7 @@ $ pulumi new kubernetes-csharp
 
     This command will initialize a fresh project in the `k8s-guestbook` newly-created directory.
 
-2. Next, replace the minimal contents of the template's main file with the full guestbook code:
+1. Next, replace the minimal contents of the template's main file with the full guestbook code:
 
     {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -409,7 +409,6 @@ else:
     frontend_ip = ingress.apply(lambda ingress: ingress.get("ip", ingress.get("hostname", "")))
 pulumi.export("frontend_ip", frontend_ip)
 ```
-
 
     {{% /choosable %}}
 
@@ -932,7 +931,7 @@ class Guestbook : Stack
 
     [Output] public Output<string> FrontendIp { get; set; }
 }
-``` 
+```
 
     {{% /choosable %}}
 
@@ -941,7 +940,7 @@ class Guestbook : Stack
     This code creates three Kubernetes Services, each with an associated Deployment. The full Kubernetes object model is
     available to us, giving us the full power of Kubernetes right away.
 
-3. (Optional) By default, our frontend Service will be of type `ClusterIP`. This will work on Minikube, but for most
+1. (Optional) By default, our frontend Service will be of type `ClusterIP`. This will work on Minikube, but for most
     production Kubernetes clusters, we will want it to be of type `LoadBalancer`, ensuring that a load balancer in your
     target cloud environment is allocated.
 
@@ -956,7 +955,7 @@ class Guestbook : Stack
 
     ### Deploying
 
-4. Now we're ready to deploy our code. To do so, simply run `pulumi up`:
+1. Now we're ready to deploy our code. To do so, simply run `pulumi up`:
 
     ```
     $ pulumi up
@@ -1020,7 +1019,7 @@ class Guestbook : Stack
 
     ### Viewing the Guestbook
 
-5. The application is now running in our cluster. Let's inspect our cluster state to validate the deployment.
+1. The application is now running in our cluster. Let's inspect our cluster state to validate the deployment.
 
     Use `kubectl` to see the deployed services:
 
@@ -1052,7 +1051,7 @@ class Guestbook : Stack
     10.102.193.86
     ```
 
-6. Now let's see our guestbook application in action.
+1. Now let's see our guestbook application in action.
 
     ![Guestbook in browser](/images/docs/quickstart/kubernetes/guestbook.png)
 
@@ -1100,7 +1099,7 @@ class Guestbook : Stack
     </html>
     ```
 
-7. We're almost done. To demonstrate incremental updates, however, Let's make an update to our program to scale
+1. We're almost done. To demonstrate incremental updates, however, Let's make an update to our program to scale
     the frontend from 3 replicas to 5. Find the line:
 
     {{< chooser language "typescript,python,go,csharp" >}}
@@ -1192,7 +1191,7 @@ Or simply run `sed -i "s/Replicas = 3/Replicas = 5/g" MyStack.cs`.
 
     ### Cleaning Up
 
-8. Feel free to experiment. As soon as you're done, let's clean up and destroy the resources and remove our stack:
+1. Feel free to experiment. As soon as you're done, let's clean up and destroy the resources and remove our stack:
 
     ```shell
     $ pulumi destroy --yes
