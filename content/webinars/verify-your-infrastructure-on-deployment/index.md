@@ -4,10 +4,10 @@ title: "Verify Infrastructure Deployments with Pulumi and CircleCI"
 meta_desc: "Angel Rivera and Chris Smith walk you through best practices for app developers, DevOps, and SREs to keep configuration mistakes from reaching production."
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -78,8 +78,8 @@ main:
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.
-    gotowebinar_key: "7364613951657082636"
+    gotowebinar_key: "7681423934923187215"
 
     # HubSpot form id.
-    hubspot_form_id: "d0544c16-826e-4e46-85b8-f7bee8f1ebdf"
+    hubspot_form_id: "eb943aca-0f5e-4b08-93a0-6afa6739e65c"
 ---
