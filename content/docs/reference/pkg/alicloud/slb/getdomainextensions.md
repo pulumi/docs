@@ -14,8 +14,6 @@ This data source provides the domain extensions associated with a server load ba
 
 > **NOTE:** Available in 1.60.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +57,7 @@ foo = alicloud.slb.get_domain_extensions(frontend_port="fake-port",
     ids=["fake-de-id"],
     load_balancer_id="fake-lb-id")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -71,6 +71,7 @@ const foo = pulumi.output(alicloud.slb.getDomainExtensions({
     loadBalancerId: "fake-lb-id",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

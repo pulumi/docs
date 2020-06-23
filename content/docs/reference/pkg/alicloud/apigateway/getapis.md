@@ -12,8 +12,6 @@ meta_desc: "Explore the GetApis function of the apigateway module, including exa
 
 This data source provides the apis of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstApiId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 data_apigatway_apis = alicloud.apigateway.get_apis(output_file="output_ApiGatawayApis")
 pulumi.export("firstApiId", data["alicloud.apigateway.getApis"]["data_apigatway"]["apis"][0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const dataApigatwayApis = pulumi.output(alicloud.apigateway.getApis({
 
 export const firstApiId = alicloud_api_gateway_apis_data_apigatway.apis.0.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

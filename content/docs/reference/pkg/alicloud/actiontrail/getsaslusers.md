@@ -14,8 +14,6 @@ This data source provides a list of ALIKAFKA Sasl users in an Alibaba Cloud acco
 
 > **NOTE:** Available in 1.66.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstSaslUsername { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ sasl_users_ds = alicloud.actiontrail.get_sasl_users(instance_id="xxx",
     output_file="saslUsers.txt")
 pulumi.export("firstSaslUsername", sasl_users_ds.users[0]["username"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const saslUsersDs = pulumi.output(alicloud.actiontrail.getSaslUsers({
 
 export const firstSaslUsername = saslUsersDs.users[0].username;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

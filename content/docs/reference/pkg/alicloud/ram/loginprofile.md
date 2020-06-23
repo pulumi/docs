@@ -12,9 +12,6 @@ meta_desc: "Explore the LoginProfile resource of the ram module, including examp
 
 Provides a RAM User Login Profile resource.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +67,11 @@ profile = alicloud.ram.LoginProfile("profile",
     password="Yourpassword1234",
     user_name=user.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -89,6 +89,7 @@ const profile = new alicloud.ram.LoginProfile("profile", {
     userName: user.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

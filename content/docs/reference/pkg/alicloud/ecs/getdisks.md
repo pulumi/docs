@@ -12,8 +12,6 @@ meta_desc: "Explore the GetDisks function of the ecs module, including examples,
 
 This data source provides the disks of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstDiskId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 disks_ds = alicloud.ecs.get_disks(name_regex="sample_disk")
 pulumi.export("firstDiskId", disks_ds.disks[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const disksDs = pulumi.output(alicloud.ecs.getDisks({
 
 export const firstDiskId = disksDs.disks[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

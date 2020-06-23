@@ -23,6 +23,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="alikafka/">alikafka</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apigateway/">apigateway</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cas/">cas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cassandra/">cassandra</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdn/">cdn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cen/">cen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cloudconnect/">cloudconnect</a></li>

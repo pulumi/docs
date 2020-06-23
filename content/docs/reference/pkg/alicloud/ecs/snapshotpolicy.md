@@ -16,8 +16,6 @@ For information about snapshot policy and how to use it, see [Snapshot](https://
 
 > **NOTE:** Available in 1.42.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -76,9 +75,11 @@ sp = alicloud.ecs.SnapshotPolicy("sp",
         "23",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -97,6 +98,7 @@ const sp = new alicloud.ecs.SnapshotPolicy("sp", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

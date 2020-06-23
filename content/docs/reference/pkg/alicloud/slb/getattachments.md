@@ -12,8 +12,6 @@ meta_desc: "Explore the GetAttachments function of the slb module, including exa
 
 This data source provides the server load balancer attachments of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstSlbAttachmentInstanceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 sample_ds = alicloud.slb.get_attachments(load_balancer_id=alicloud_slb["sample_slb"]["id"])
 pulumi.export("firstSlbAttachmentInstanceId", sample_ds.slb_attachments[0]["instance_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getAttachme
 
 export const firstSlbAttachmentInstanceId = sampleDs.slbAttachments[0].instanceId;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

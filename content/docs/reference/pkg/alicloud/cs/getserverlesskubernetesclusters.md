@@ -14,8 +14,6 @@ This data source provides a list Container Service Serverless Kubernetes Cluster
 
 > **NOTE:** Available in 1.58.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> Output { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ k8s_clusters = alicloud.cs.get_serverless_kubernetes_clusters(name_regex="my-fir
     output_file="my-first-k8s-json")
 pulumi.export("output", k8s_clusters.clusters)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const k8sClusters = pulumi.output(alicloud.cs.getServerlessKubernetesClusters({
 
 export const output = k8sClusters.clusters;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

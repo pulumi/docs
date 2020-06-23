@@ -16,8 +16,6 @@ For information about WAF and how to use it, see [What is Alibaba Cloud WAF](htt
 
 > **NOTE:** Available in 1.82.0+ .
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -61,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,9 +88,11 @@ domain = alicloud.waf.Domain("domain",
     }],
     source_ips=["1.1.1.1"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -114,6 +115,7 @@ const domain = new alicloud.waf.Domain("domain", {
     sourceIps: ["1.1.1.1"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

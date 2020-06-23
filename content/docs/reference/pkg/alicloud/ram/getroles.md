@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRoles function of the ram module, including examples,
 
 This data source provides a list of RAM Roles in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> FirstRoleId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ roles_ds = alicloud.ram.get_roles(name_regex=".*test.*",
     policy_type="Custom")
 pulumi.export("firstRoleId", roles_ds.roles[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,6 +76,7 @@ const rolesDs = pulumi.output(alicloud.ram.getRoles({
 
 export const firstRoleId = rolesDs.roles[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

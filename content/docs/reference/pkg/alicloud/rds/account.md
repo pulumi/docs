@@ -12,8 +12,6 @@ meta_desc: "Explore the Account resource of the rds module, including examples, 
 
 Provides an RDS account resource and used to manage databases.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -63,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,9 +97,11 @@ account = alicloud.rds.Account("account",
     instance_id=instance.id,
     password="Test12345")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -133,6 +134,7 @@ const account = new alicloud.rds.Account("account", {
     password: "Test12345",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

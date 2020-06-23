@@ -14,8 +14,6 @@ Provides a CEN instance resource. Cloud Enterprise Network (CEN) is a service th
 
 For information about CEN and how to use it, see [What is Cloud Enterprise Network](https://www.alibabacloud.com/help/doc-detail/59870.htm).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_alicloud as alicloud
 
 cen = alicloud.cen.Instance("cen", description="an example for cen")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -62,6 +63,7 @@ const cen = new alicloud.cen.Instance("cen", {
     description: "an example for cen",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

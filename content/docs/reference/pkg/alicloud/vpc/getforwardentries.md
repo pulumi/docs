@@ -14,8 +14,6 @@ This data source provides a list of Forward Entries owned by an Alibaba Cloud ac
 
 > **NOTE:** Available in 1.37.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -76,6 +74,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,9 +112,11 @@ default_forward_entry = alicloud.vpc.ForwardEntry("defaultForwardEntry",
     ip_protocol="tcp")
 default_forward_entries = default_forward_entry.forward_table_id.apply(lambda forward_table_id: alicloud.vpc.get_forward_entries(forward_table_id=forward_table_id))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -155,6 +156,7 @@ const defaultForwardEntries = defaultForwardEntry.forwardTableId.apply(forwardTa
     forwardTableId: forwardTableId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

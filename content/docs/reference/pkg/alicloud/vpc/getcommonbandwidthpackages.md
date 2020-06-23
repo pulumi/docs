@@ -13,12 +13,10 @@ meta_desc: "Explore the GetCommonBandwidthPackages function of the vpc module, i
 This data source provides a list of Common Bandwidth Packages owned by an Alibaba Cloud account.
 
 > **NOTE:** Available in 1.36.0+.
-
-
 ## Public ip addresses Block
-  
+
   The public ip addresses mapping supports the following:
-  
+
   * `ip_address`   - The address of the EIP.
   * `allocation_id` - The ID of the EIP instance.
 
@@ -53,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ foo_common_bandwith_package = alicloud.vpc.CommonBandwithPackage("fooCommonBandw
 foo_common_bandwidth_packages = foo_common_bandwith_package.id.apply(lambda id: alicloud.vpc.get_common_bandwidth_packages(ids=[id],
     name_regex="^tf-testAcc.*"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -86,6 +87,7 @@ const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicl
     nameRegex: "^tf-testAcc.*",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

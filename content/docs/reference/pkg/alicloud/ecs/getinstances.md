@@ -12,8 +12,6 @@ meta_desc: "Explore the GetInstances function of the ecs module, including examp
 
 The Instances data source list ECS instance resources according to their ID, name regex, image id, status and other fields.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> InstanceIds { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ instances_ds = alicloud.ecs.get_instances(name_regex="web_server",
 pulumi.export("firstInstanceId", instances_ds.instances[0]["id"])
 pulumi.export("instanceIds", instances_ds.ids)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const instancesDs = pulumi.output(alicloud.ecs.getInstances({
 export const firstInstanceId = instancesDs.instances[0].id;
 export const instanceIds = instancesDs.ids!;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ This data source provides a list of EDAS clusters in an Alibaba Cloud account ac
 
 > **NOTE:** Available in 1.82.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
     public Output<string> FirstClusterName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ clusters = alicloud.edas.get_clusters(logical_region_id="cn-shenzhen:xxx",
     output_file="clusters.txt")
 pulumi.export("firstClusterName", data["alicloud.actiontrail.getConsumerGroups"]["clusters"]["clusters"][0]["cluster_name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +77,7 @@ const clusters = alicloud.edas.getClusters({
 });
 export const firstClusterName = data.alicloud_alikafka_consumer_groups.clusters.clusters[0].cluster_name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

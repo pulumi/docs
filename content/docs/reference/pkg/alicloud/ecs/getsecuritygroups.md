@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSecurityGroups function of the ecs module, including 
 
 This data source provides a list of Security Groups in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
     public Output<string> FirstGroupId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ primary_vpc_ds = alicloud.vpc.Network("primaryVpcDs")
 primary_sec_groups_ds = primary_vpc_ds.id.apply(lambda id: alicloud.ecs.get_security_groups(vpc_id=id))
 pulumi.export("firstGroupId", primary_sec_groups_ds.groups[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -86,6 +87,7 @@ const primarySecGroupsDs = primaryVpcDs.id.apply(id => alicloud.ecs.getSecurityG
 
 export const firstGroupId = primarySecGroupsDs.groups[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

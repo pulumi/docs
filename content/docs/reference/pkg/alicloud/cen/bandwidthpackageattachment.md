@@ -12,8 +12,6 @@ meta_desc: "Explore the BandwidthPackageAttachment resource of the cen module, i
 
 Provides a CEN bandwidth package attachment resource. The resource can be used to bind a bandwidth package to a specified CEN instance.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +73,11 @@ foo = alicloud.cen.BandwidthPackageAttachment("foo",
     bandwidth_package_id=bwp.id,
     instance_id=cen.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -97,6 +98,7 @@ const foo = new alicloud.cen.BandwidthPackageAttachment("foo", {
     instanceId: cen.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

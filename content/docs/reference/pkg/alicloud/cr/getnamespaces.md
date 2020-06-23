@@ -14,8 +14,6 @@ This data source provides a list Container Registry namespaces on Alibaba Cloud.
 
 > **NOTE:** Available in v1.35.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> Output { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ my_namespaces = alicloud.cr.get_namespaces(name_regex="my-namespace",
     output_file="my-namespace-json")
 pulumi.export("output", my_namespaces.namespaces)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const myNamespaces = pulumi.output(alicloud.cr.getNamespaces({
 
 export const output = myNamespaces.namespaces;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

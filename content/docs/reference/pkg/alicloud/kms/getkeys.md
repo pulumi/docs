@@ -12,8 +12,6 @@ meta_desc: "Explore the GetKeys function of the kms module, including examples, 
 
 This data source provides a list of KMS keys in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstKeyId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ kms_keys_ds = alicloud.kms.get_keys(description_regex="Hello KMS",
     output_file="kms_keys.json")
 pulumi.export("firstKeyId", kms_keys_ds.keys[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -70,6 +71,7 @@ const kmsKeysDs = pulumi.output(alicloud.kms.getKeys({
 
 export const firstKeyId = kmsKeysDs.keys[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

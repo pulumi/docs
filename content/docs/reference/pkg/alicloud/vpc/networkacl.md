@@ -14,8 +14,6 @@ Provides a network acl resource to add network acls.
 
 > **NOTE:** Available in 1.43.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ default_network_acl = alicloud.vpc.NetworkAcl("defaultNetworkAcl",
     description="network_acl",
     vpc_id=default_network.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("default", {
     vpcId: defaultNetwork.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

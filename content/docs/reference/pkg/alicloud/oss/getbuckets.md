@@ -12,8 +12,6 @@ meta_desc: "Explore the GetBuckets function of the oss module, including example
 
 This data source provides the OSS buckets of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstOssBucketName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 oss_buckets_ds = alicloud.oss.get_buckets(name_regex="sample_oss_bucket")
 pulumi.export("firstOssBucketName", oss_buckets_ds.buckets[0]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const ossBucketsDs = pulumi.output(alicloud.oss.getBuckets({
 
 export const firstOssBucketName = ossBucketsDs.buckets[0].name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

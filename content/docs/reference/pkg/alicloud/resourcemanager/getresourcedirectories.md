@@ -14,8 +14,6 @@ This data source provides the Resource Manager Resource Directories of the curre
 
 > **NOTE:**  Available in 1.86.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,14 +28,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var defaule = Output.Create(AliCloud.ResourceManager.GetResourceDirectories.InvokeAsync());
-        this.ResourceDirectoryId = defaule.Apply(defaule => defaule.Directories[0].Id);
+        var @default = Output.Create(AliCloud.ResourceManager.GetResourceDirectories.InvokeAsync());
+        this.ResourceDirectoryId = @default.Apply(@default => @default.Directories[0].Id);
     }
 
     [Output("resourceDirectoryId")]
     public Output<string> ResourceDirectoryId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,20 +48,23 @@ Coming soon!
 import pulumi
 import pulumi_alicloud as alicloud
 
-defaule = alicloud.resourcemanager.get_resource_directories()
-pulumi.export("resourceDirectoryId", defaule.directories[0]["id"])
+default = alicloud.resourcemanager.get_resource_directories()
+pulumi.export("resourceDirectoryId", default.directories[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaule = pulumi.output(alicloud.resourcemanager.getResourceDirectories({ async: true }));
+const defaultResourceDirectories = pulumi.output(alicloud.resourcemanager.getResourceDirectories({ async: true }));
 
-export const resourceDirectoryId = defaule.directories[0].id;
+export const resourceDirectoryId = defaultResourceDirectories.directories[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

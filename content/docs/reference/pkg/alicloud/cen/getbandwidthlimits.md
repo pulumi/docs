@@ -12,8 +12,6 @@ meta_desc: "Explore the GetBandwidthLimits function of the cen module, including
 
 This data source provides CEN Bandwidth Limits available to the user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> FirstCenBandwidthLimitsLocalRegionId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ import pulumi_alicloud as alicloud
 bwl = alicloud.cen.get_bandwidth_limits(instance_ids=["cen-id1"])
 pulumi.export("firstCenBandwidthLimitsLocalRegionId", bwl.limits[0]["localRegionId"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const bwl = pulumi.output(alicloud.cen.getBandwidthLimits({
 
 export const firstCenBandwidthLimitsLocalRegionId = bwl.limits[0].localRegionId;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

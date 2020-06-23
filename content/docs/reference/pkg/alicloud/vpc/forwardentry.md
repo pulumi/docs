@@ -12,8 +12,6 @@ meta_desc: "Explore the ForwardEntry resource of the vpc module, including examp
 
 Provides a forward resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -106,9 +105,11 @@ default_forward_entry = alicloud.vpc.ForwardEntry("defaultForwardEntry",
     internal_port="8080",
     ip_protocol="tcp")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -145,6 +146,7 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
     ipProtocol: "tcp",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

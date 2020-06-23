@@ -15,8 +15,6 @@ Filters support regular expression for the cluster description, searches by tags
 
 > **NOTE:** Available in v1.71.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstAdbClusterId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ adb_clusters_ds = alicloud.adb.get_clusters(description_regex="am-\\w+",
     status="Running")
 pulumi.export("firstAdbClusterId", adb_clusters_ds.clusters[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const adbClustersDs = pulumi.output(alicloud.adb.getClusters({
 
 export const firstAdbClusterId = adbClustersDs.clusters[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

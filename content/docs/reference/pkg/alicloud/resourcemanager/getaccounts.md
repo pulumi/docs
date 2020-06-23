@@ -14,8 +14,6 @@ This data source provides the Resource Manager Accounts of the current Alibaba C
 
 > **NOTE:**  Available in 1.86.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
     public Output<string> FirstAccountId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_alicloud as alicloud
 default = alicloud.resourcemanager.get_accounts()
 pulumi.export("firstAccountId", default.accounts[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -63,6 +64,7 @@ const defaultAccounts = pulumi.output(alicloud.resourcemanager.getAccounts({ asy
 
 export const firstAccountId = defaultAccounts.accounts[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

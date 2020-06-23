@@ -12,8 +12,6 @@ meta_desc: "Explore the GetInstances function of the cen module, including examp
 
 This data source provides CEN instances available to the user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstCenInstanceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ cen_instances_ds = alicloud.cen.get_instances(ids=["cen-id1"],
     name_regex="^foo")
 pulumi.export("firstCenInstanceId", cen_instances_ds.instances[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const cenInstancesDs = pulumi.output(alicloud.cen.getInstances({
 
 export const firstCenInstanceId = cenInstancesDs.instances[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

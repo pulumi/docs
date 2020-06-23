@@ -19,8 +19,11 @@ Manage image sharing permissions. You can share your custom image to other Aliba
 > **NOTE:** After creating an ECS instance using a shared image, once the custom image owner releases the image sharing relationship or deletes the custom image, the instance cannot initialize the system disk.
 
 > **NOTE:** Available in 1.68.0+.
+## Attributes Reference0
 
+ The following attributes are exported:
 
+* `id` - ID of the image. It formats as `<image_id>:<account_id>`
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +64,11 @@ default = alicloud.ecs.ImageSharePermission("default",
     account_id="1234567890",
     image_id="m-bp1gxyh***")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +78,7 @@ const defaultImageSharePermission = new alicloud.ecs.ImageSharePermission("defau
     imageId: "m-bp1gxyh***",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

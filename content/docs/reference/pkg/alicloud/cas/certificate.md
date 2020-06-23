@@ -18,8 +18,6 @@ Provides a CAS Certificate resource.
 
 > **NOTE:** Available in 1.35.0+ .
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ cert = alicloud.cas.Certificate("cert",
     cert=(lambda path: open(path).read())(f"{path['module']}/test.crt"),
     key=(lambda path: open(path).read())(f"{path['module']}/test.key"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,6 +76,7 @@ const cert = new alicloud.cas.Certificate("cert", {
     key: fs.readFileSync(`./test.key`, "utf-8"),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

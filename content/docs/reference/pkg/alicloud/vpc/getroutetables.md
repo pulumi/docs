@@ -14,8 +14,6 @@ This data source provides a list of Route Tables owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.36.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +53,7 @@ class MyStack : Stack
     public Output<string> RouteTableIds { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,9 +76,11 @@ foo_route_table = alicloud.vpc.RouteTable("fooRouteTable",
 foo_route_tables = foo_route_table.id.apply(lambda id: alicloud.vpc.get_route_tables(ids=[id]))
 pulumi.export("routeTableIds", foo_route_tables.ids)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -100,6 +101,7 @@ const fooRouteTables = fooRouteTable.id.apply(id => alicloud.vpc.getRouteTables(
 
 export const routeTableIds = fooRouteTables.ids!;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

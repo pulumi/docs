@@ -12,9 +12,7 @@ meta_desc: "Explore the AccessKey resource of the ram module, including examples
 
 Provides a RAM User access key resource.
 
-> **NOTE:**  You should set the `secret_file` if you want to get the access key.  
-
-
+> **NOTE:**  You should set the `secret_file` if you want to get the access key.
 
 {{% examples %}}
 ## Example Usage
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ ak = alicloud.ram.AccessKey("ak",
     secret_file="/xxx/xxx/xxx.txt",
     user_name=user.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -90,6 +91,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
     userName: user.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

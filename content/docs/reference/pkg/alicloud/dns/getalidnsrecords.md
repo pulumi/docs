@@ -14,9 +14,6 @@ This data source provides a list of Alidns Domain Records in an Alibaba Cloud ac
 
 > **NOTE:**  Available in 1.86.0+.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetAlidnsRecords {#using}

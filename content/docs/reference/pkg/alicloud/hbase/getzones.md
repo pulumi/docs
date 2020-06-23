@@ -14,8 +14,6 @@ This data source provides availability zones for HBase that can be accessed by a
 
 > **NOTE:** Available in v1.73.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ zones_ids = alicloud.hbase.get_zones()
 hbase = alicloud.hbase.Instance("hbase", zone_id=zones_ids.zones[0]["id"])
 # Other properties...
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const zonesIds = alicloud.hbase.getZones({});
 const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
 // Other properties...
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

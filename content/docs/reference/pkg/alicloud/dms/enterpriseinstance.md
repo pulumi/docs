@@ -13,9 +13,7 @@ meta_desc: "Explore the EnterpriseInstance resource of the dms module, including
 Provides a DMS Enterprise Instance resource.
 
 > **NOTE:** API users must first register in DMS.
-> **NOTE:** Available in 1.81.0+.
-
-
+**NOTE:** Available in 1.81.0+.
 
 {{% examples %}}
 ## Example Usage
@@ -53,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,9 +80,11 @@ default = alicloud.dms.EnterpriseInstance("default",
     safe_rule="自由操作",
     tid="12345")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -106,6 +107,7 @@ const defaultEnterpriseInstance = new alicloud.dms.EnterpriseInstance("default",
     tid: 12345,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

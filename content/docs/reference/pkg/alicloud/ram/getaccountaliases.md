@@ -12,8 +12,6 @@ meta_desc: "Explore the GetAccountAliases function of the ram module, including 
 
 This data source provides an alias for the Alibaba Cloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> AccountAlias { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 alias_ds = alicloud.ram.get_account_aliases(output_file="alias.txt")
 pulumi.export("accountAlias", alias_ds.account_alias)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const aliasDs = pulumi.output(alicloud.ram.getAccountAliases({
 
 export const accountAlias = aliasDs.accountAlias;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

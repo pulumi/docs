@@ -12,11 +12,9 @@ meta_desc: "Explore the Group resource of the rocketmq module, including example
 
 Provides an ONS group resource.
 
-For more information about how to use it, see [RocketMQ Group Management API](https://www.alibabacloud.com/help/doc-detail/29616.html). 
+For more information about how to use it, see [RocketMQ Group Management API](https://www.alibabacloud.com/help/doc-detail/29616.html).
 
 > **NOTE:** Available in 1.53.0+
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ default_group = alicloud.rocketmq.Group("defaultGroup",
     instance_id=default_instance.id,
     remark="dafault_ons_group_remark")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -93,6 +94,7 @@ const defaultGroup = new alicloud.rocketmq.Group("default", {
     remark: "dafault_ons_group_remark",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

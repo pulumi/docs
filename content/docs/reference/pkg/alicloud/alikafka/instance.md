@@ -22,7 +22,6 @@ Provides an ALIKAFKA instance resource.
 > **NOTE:** Only the following regions support create alikafka post paid instance.
 [`cn-hangzhou`,`cn-beijing`,`cn-shenzhen`,`cn-shanghai`,`cn-qingdao`,`cn-hongkong`,`cn-huhehaote`,`cn-zhangjiakou`,`ap-southeast-1`]
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -66,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,9 +95,11 @@ default_instance = alicloud.alikafka.Instance("defaultInstance",
     topic_quota="50",
     vswitch_id=default_switch.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -125,6 +127,7 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
     vswitchId: defaultSwitch.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

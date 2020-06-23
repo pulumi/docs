@@ -12,8 +12,6 @@ meta_desc: "Explore the ReadWriteSplittingConnection resource of the rds module,
 
 Provides an RDS read write splitting connection resource to allocate an Intranet connection string for RDS instance.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -80,6 +78,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -129,9 +128,11 @@ default_read_write_splitting_connection = alicloud.rds.ReadWriteSplittingConnect
     distribution_type="Standard",
     instance_id=default_instance.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -179,6 +180,7 @@ const defaultReadWriteSplittingConnection = new alicloud.rds.ReadWriteSplittingC
     instanceId: defaultInstance.id,
 }, { dependsOn: [defaultReadOnlyInstance] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

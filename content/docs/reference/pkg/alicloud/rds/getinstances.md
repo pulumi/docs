@@ -13,8 +13,6 @@ meta_desc: "Explore the GetInstances function of the rds module, including examp
 The `alicloud.rds.getInstances` data source provides a collection of RDS instances available in Alibaba Cloud account.
 Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
     public Output<string> FirstDbInstanceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,9 +64,11 @@ db_instances_ds = alicloud.rds.get_instances(name_regex="data-\\d+",
     })
 pulumi.export("firstDbInstanceId", db_instances_ds.instances[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -83,6 +84,7 @@ const dbInstancesDs = pulumi.output(alicloud.rds.getInstances({
 
 export const firstDbInstanceId = dbInstancesDs.instances[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

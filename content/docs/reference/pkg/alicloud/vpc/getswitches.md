@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSwitches function of the vpc module, including exampl
 
 This data source provides a list of VSwitches owned by an Alibaba Cloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,9 +71,11 @@ vswitch = alicloud.vpc.Switch("vswitch",
     vpc_id=vpc.id)
 default_switches = vswitch.name.apply(lambda name: alicloud.vpc.get_switches(name_regex=name))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -95,6 +96,7 @@ const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
     nameRegex: name,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

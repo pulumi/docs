@@ -16,8 +16,6 @@ This data source provides the resource manager folders of the current Alibaba Cl
 
 > **NOTE:**  You can view only the information of the first-level child folders of the specified folder.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstFolderId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ import pulumi_alicloud as alicloud
 example = alicloud.resourcemanager.get_folders(name_regex="tftest")
 pulumi.export("firstFolderId", example.folders[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -70,6 +71,7 @@ const example = pulumi.output(alicloud.resourcemanager.getFolders({
 
 export const firstFolderId = example.folders[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

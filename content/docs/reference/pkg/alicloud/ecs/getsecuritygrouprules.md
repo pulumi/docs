@@ -14,8 +14,6 @@ The `alicloud.ecs.getSecurityGroupRules` data source provides a collection of se
 Each collection item represents a single `ingress` or `egress` permission rule.
 The ID of the security group can be provided via a variable or the result from the other data source `alicloud.ecs.getSecurityGroups`.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ ingress_rules_ds = alicloud.ecs.get_security_group_rules(direction="ingress",
 # Pass port_range to the backend service
 backend = alicloud.ecs.Instance("backend", user_data=f"config_service.sh --portrange={ingress_rules_ds.rules[0]['port_range']}")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -101,6 +102,7 @@ const backend = new alicloud.ecs.Instance("backend", {
     userData: pulumi.interpolate`config_service.sh --portrange=${ingressRulesDs.rules[0].portRange}`,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

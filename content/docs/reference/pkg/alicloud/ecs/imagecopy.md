@@ -19,8 +19,11 @@ Copies a custom image from one region to another. You can use copied images to p
 > **NOTE:** If the copying is not completed, you cannot call DeleteImage to delete the image but you can call CancelCopyImage to cancel the copying.
 
 > **NOTE:** Available in 1.66.0+.
+## Attributes Reference0
 
+ The following attributes are exported:
 
+* `id` - ID of the image.
 
 {{% examples %}}
 ## Example Usage
@@ -51,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +75,11 @@ default = alicloud.ecs.ImageCopy("default",
         "FinanceDept": "FinanceDeptJoshua",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -88,6 +94,7 @@ const defaultImageCopy = new alicloud.ecs.ImageCopy("default", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

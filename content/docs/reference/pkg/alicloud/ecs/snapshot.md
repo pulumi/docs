@@ -14,8 +14,6 @@ Provides an ECS snapshot resource.
 
 For information about snapshot and how to use it, see [Snapshot](https://www.alibabacloud.com/help/doc-detail/25460.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ snapshot = alicloud.ecs.Snapshot("snapshot",
         "version": "1.2",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +77,7 @@ const snapshot = new alicloud.ecs.Snapshot("snapshot", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

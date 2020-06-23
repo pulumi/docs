@@ -14,8 +14,6 @@ This data source provides the RDS instance classes resource available info of Al
 
 > **NOTE:** Available in v1.46.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
     public Output<string> FirstDbInstanceClass { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ resources = alicloud.rds.get_instance_classes(engine="MySQL",
     output_file="./classes.txt")
 pulumi.export("firstDbInstanceClass", resources.instance_classes[0]["instance_class"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -77,6 +78,7 @@ const resources = pulumi.output(alicloud.rds.getInstanceClasses({
 
 export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

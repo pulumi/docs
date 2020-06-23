@@ -14,8 +14,6 @@ This data source provides a list of EDAS deploy groups in an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.82.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
     public Output<string> FirstGroupName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ groups = alicloud.edas.get_deploy_groups(app_id="xxx",
     output_file="groups.txt")
 pulumi.export("firstGroupName", groups.groups[0]["group_name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +77,7 @@ const groups = alicloud.edas.getDeployGroups({
 });
 export const firstGroupName = groups.then(groups => groups.groups[0].groupName);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

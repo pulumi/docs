@@ -1693,6 +1693,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">})</span>
 </pre></div>
 </div>
+<blockquote>
+<div><p>The following attributes are exported:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - ID of the image.</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1865,6 +1871,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">oss_prefix</span><span class="o">=</span><span class="s2">&quot;ecsExport&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<blockquote>
+<div><p>The following attributes are exported:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - ID of the image.</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1977,6 +1989,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">platform</span><span class="o">=</span><span class="s2">&quot;Ubuntu&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<blockquote>
+<div><p>The following attributes are exported:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - ID of the image.</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2138,6 +2156,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">image_id</span><span class="o">=</span><span class="s2">&quot;m-bp1gxyh***&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<blockquote>
+<div><p>The following attributes are exported:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - ID of the image. It formats as <code class="docutils literal notranslate"><span class="pre">&lt;image_id&gt;:&lt;account_id&gt;</span></code></p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

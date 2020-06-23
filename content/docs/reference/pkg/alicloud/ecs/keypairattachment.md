@@ -14,8 +14,6 @@ Provides a key pair attachment resource to bind key pair for several ECS instanc
 
 > **NOTE:** After the key pair is attached with sone instances, there instances must be rebooted to make the key pair affect.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -100,6 +98,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -149,9 +148,11 @@ attachment = alicloud.ecs.KeyPairAttachment("attachment",
     instance_ids=[__item.id for __item in instance],
     key_name=pair.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -208,6 +209,7 @@ const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
     keyName: pair.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

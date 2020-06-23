@@ -12,8 +12,6 @@ meta_desc: "Explore the RoleAttachment resource of the ram module, including exa
 
 Provides a RAM role attachment resource to bind role for several ECS instances.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -123,6 +121,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -193,9 +192,11 @@ attach = alicloud.ram.RoleAttachment("attach",
     instance_ids=[[__item.id for __item in [foo]]],
     role_name=role.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -272,6 +273,7 @@ const attach = new alicloud.ram.RoleAttachment("attach", {
     roleName: role.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

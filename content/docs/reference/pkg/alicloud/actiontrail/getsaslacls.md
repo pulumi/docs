@@ -14,8 +14,6 @@ This data source provides a list of ALIKAFKA Sasl acls in an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.66.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
     public Output<string> FirstSaslAclUsername { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ sasl_acls_ds = alicloud.actiontrail.get_sasl_acls(acl_resource_name="testTopic",
     username="username")
 pulumi.export("firstSaslAclUsername", sasl_acls_ds.acls[0]["username"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -80,6 +81,7 @@ const saslAclsDs = pulumi.output(alicloud.actiontrail.getSaslAcls({
 
 export const firstSaslAclUsername = saslAclsDs.acls[0].username;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -21,6 +21,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
     <li><a href="privatezone" title="PrivateZone"><span class="symbol resource"></span>PrivateZone</a></li>
     <li><a href="routeentry" title="RouteEntry"><span class="symbol resource"></span>RouteEntry</a></li>
     <li><a href="routemap" title="RouteMap"><span class="symbol resource"></span>RouteMap</a></li>
+    <li><a href="vbrhealthcheck" title="VbrHealthCheck"><span class="symbol resource"></span>VbrHealthCheck</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -29,8 +30,10 @@ Explore the resources and functions of the cen module in the AliCloud package.
     <li><a href="getbandwidthpackages" title="GetBandwidthPackages"><span class="symbol function"></span>GetBandwidthPackages</a></li>
     <li><a href="getflowlogs" title="GetFlowlogs"><span class="symbol function"></span>GetFlowlogs</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getprivatezones" title="GetPrivateZones"><span class="symbol function"></span>GetPrivateZones</a></li>
     <li><a href="getregionrouteentries" title="GetRegionRouteEntries"><span class="symbol function"></span>GetRegionRouteEntries</a></li>
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>
+    <li><a href="getroutemaps" title="GetRouteMaps"><span class="symbol function"></span>GetRouteMaps</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -42,7 +45,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.8.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

@@ -16,8 +16,6 @@ This resource will help you to manager Container Registry namespaces.
 
 > **NOTE:** You need to set your registry password in Container Registry console before use this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ my_namespace = alicloud.cr.Namespace("my-namespace",
     auto_create=False,
     default_visibility="PUBLIC")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -68,6 +69,7 @@ const my_namespace = new alicloud.cr.Namespace("my-namespace", {
     defaultVisibility: "PUBLIC",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

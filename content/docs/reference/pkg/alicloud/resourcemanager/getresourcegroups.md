@@ -14,8 +14,6 @@ This data source provides resource groups of the current Alibaba Cloud user.
 
 > **NOTE:** Available in v1.84.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> FirstResourceGroupId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_alicloud as alicloud
 example = alicloud.resourcemanager.get_resource_groups(name_regex="tftest")
 pulumi.export("firstResourceGroupId", example.groups[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -68,6 +69,7 @@ const example = pulumi.output(alicloud.resourcemanager.getResourceGroups({
 
 export const firstResourceGroupId = example.groups[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

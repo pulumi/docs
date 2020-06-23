@@ -15,9 +15,6 @@ Filters support regular expression for the instance name, searches by tags, and 
 
 > **NOTE:** Available in 1.35.0+.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetInstances {#using}

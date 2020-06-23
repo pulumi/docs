@@ -12,8 +12,6 @@ meta_desc: "Explore the GetDomains function of the dns module, including example
 
 This data source provides a list of DNS Domains in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstDomainId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ domains_ds = alicloud.dns.get_domains(domain_name_regex="^hegu",
     output_file="domains.txt")
 pulumi.export("firstDomainId", domains_ds.domains[0]["domain_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const domainsDs = pulumi.output(alicloud.dns.getDomains({
 
 export const firstDomainId = domainsDs.domains[0].domainId;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -85,7 +87,7 @@ export const firstDomainId = domainsDs.domains[0].domainId;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_domains(</span>ali_domain=None<span class="p">, </span>domain_name_regex=None<span class="p">, </span>group_name_regex=None<span class="p">, </span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>version_code=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_domains(</span>ali_domain=None<span class="p">, </span>domain_name_regex=None<span class="p">, </span>group_id=None<span class="p">, </span>group_name_regex=None<span class="p">, </span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>key_word=None<span class="p">, </span>lang=None<span class="p">, </span>output_file=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>search_mode=None<span class="p">, </span>starmark=None<span class="p">, </span>tags=None<span class="p">, </span>version_code=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -134,6 +136,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Domain group ID, if not filled, the default is all groups.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="groupnameregex_csharp">
 <a href="#groupnameregex_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Regex</a>
 </span> 
@@ -167,6 +180,28 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="keyword_csharp">
+<a href="#keyword_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Word</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The keywords are searched according to the `%KeyWord%` mode, which is not case sensitive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lang_csharp">
+<a href="#lang_csharp" style="color: inherit; text-decoration: inherit;">Lang</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}User language.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span> 
@@ -184,6 +219,39 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the dns belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchmode_csharp">
+<a href="#searchmode_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Search mode, `LIKE` fuzzy search, `EXACT` exact search.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starmark_csharp">
+<a href="#starmark_csharp" style="color: inherit; text-decoration: inherit;">Starmark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to query the domain name star.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -228,6 +296,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Domain group ID, if not filled, the default is all groups.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="groupnameregex_go">
 <a href="#groupnameregex_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Regex</a>
 </span> 
@@ -261,6 +340,28 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="keyword_go">
+<a href="#keyword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Word</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The keywords are searched according to the `%KeyWord%` mode, which is not case sensitive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lang_go">
+<a href="#lang_go" style="color: inherit; text-decoration: inherit;">Lang</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}User language.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
 </span> 
@@ -278,6 +379,39 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the dns belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchmode_go">
+<a href="#searchmode_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Search mode, `LIKE` fuzzy search, `EXACT` exact search.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starmark_go">
+<a href="#starmark_go" style="color: inherit; text-decoration: inherit;">Starmark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to query the domain name star.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,6 +456,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Domain group ID, if not filled, the default is all groups.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="groupnameregex_nodejs">
 <a href="#groupnameregex_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name<wbr>Regex</a>
 </span> 
@@ -355,6 +500,28 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="keyword_nodejs">
+<a href="#keyword_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Word</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The keywords are searched according to the `%KeyWord%` mode, which is not case sensitive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lang_nodejs">
+<a href="#lang_nodejs" style="color: inherit; text-decoration: inherit;">lang</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}User language.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
 </span> 
@@ -372,6 +539,39 @@ The following arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the dns belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchmode_nodejs">
+<a href="#searchmode_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Search mode, `LIKE` fuzzy search, `EXACT` exact search.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starmark_nodejs">
+<a href="#starmark_nodejs" style="color: inherit; text-decoration: inherit;">starmark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to query the domain name star.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -416,6 +616,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Domain group ID, if not filled, the default is all groups.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="group_name_regex_python">
 <a href="#group_name_regex_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name_<wbr>regex</a>
 </span> 
@@ -449,6 +660,28 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="key_word_python">
+<a href="#key_word_python" style="color: inherit; text-decoration: inherit;">key_<wbr>word</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The keywords are searched according to the `%KeyWord%` mode, which is not case sensitive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lang_python">
+<a href="#lang_python" style="color: inherit; text-decoration: inherit;">lang</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}User language.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
 </span> 
@@ -466,6 +699,39 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the dns belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="search_mode_python">
+<a href="#search_mode_python" style="color: inherit; text-decoration: inherit;">search_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Search mode, `LIKE` fuzzy search, `EXACT` exact search.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starmark_python">
+<a href="#starmark_python" style="color: inherit; text-decoration: inherit;">starmark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to query the domain name star.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -566,6 +832,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of group that contains the domain.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="groupnameregex_csharp">
 <a href="#groupnameregex_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Regex</a>
 </span> 
@@ -584,6 +861,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cloud analysis product ID of the domain.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="keyword_csharp">
+<a href="#keyword_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Word</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lang_csharp">
+<a href="#lang_csharp" style="color: inherit; text-decoration: inherit;">Lang</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -608,13 +905,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="searchmode_csharp">
+<a href="#searchmode_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="starmark_csharp">
+<a href="#starmark_csharp" style="color: inherit; text-decoration: inherit;">Starmark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="versioncode_csharp">
 <a href="#versioncode_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Cloud analysis version code of the domain.
+    <dd>{{% md %}}Cloud resolution version ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -691,6 +1018,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of group that contains the domain.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="groupnameregex_go">
 <a href="#groupnameregex_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name<wbr>Regex</a>
 </span> 
@@ -709,6 +1047,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cloud analysis product ID of the domain.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="keyword_go">
+<a href="#keyword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Word</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lang_go">
+<a href="#lang_go" style="color: inherit; text-decoration: inherit;">Lang</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -733,13 +1091,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="searchmode_go">
+<a href="#searchmode_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="starmark_go">
+<a href="#starmark_go" style="color: inherit; text-decoration: inherit;">Starmark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="versioncode_go">
 <a href="#versioncode_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Cloud analysis version code of the domain.
+    <dd>{{% md %}}Cloud resolution version ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -816,6 +1204,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of group that contains the domain.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="groupnameregex_nodejs">
 <a href="#groupnameregex_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name<wbr>Regex</a>
 </span> 
@@ -834,6 +1233,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cloud analysis product ID of the domain.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="keyword_nodejs">
+<a href="#keyword_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Word</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lang_nodejs">
+<a href="#lang_nodejs" style="color: inherit; text-decoration: inherit;">lang</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -858,13 +1277,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="searchmode_nodejs">
+<a href="#searchmode_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="starmark_nodejs">
+<a href="#starmark_nodejs" style="color: inherit; text-decoration: inherit;">starmark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="versioncode_nodejs">
 <a href="#versioncode_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Cloud analysis version code of the domain.
+    <dd>{{% md %}}Cloud resolution version ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -941,6 +1390,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id of group that contains the domain.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="group_name_regex_python">
 <a href="#group_name_regex_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name_<wbr>regex</a>
 </span> 
@@ -959,6 +1419,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cloud analysis product ID of the domain.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="key_word_python">
+<a href="#key_word_python" style="color: inherit; text-decoration: inherit;">key_<wbr>word</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lang_python">
+<a href="#lang_python" style="color: inherit; text-decoration: inherit;">lang</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -983,13 +1463,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="search_mode_python">
+<a href="#search_mode_python" style="color: inherit; text-decoration: inherit;">search_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="starmark_python">
+<a href="#starmark_python" style="color: inherit; text-decoration: inherit;">starmark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="version_code_python">
 <a href="#version_code_python" style="color: inherit; text-decoration: inherit;">version_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Cloud analysis version code of the domain.
+    <dd>{{% md %}}Cloud resolution version ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -1042,7 +1552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}DNS list of the domain in the analysis system.
+    <dd>{{% md %}}DNS list of domain names in the resolution system.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1075,7 +1585,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of group that contains the domain.
+    <dd>{{% md %}}Domain group ID, if not filled, the default is all groups.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1091,6 +1601,39 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inblackhole_csharp">
+<a href="#inblackhole_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Black<wbr>Hole</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is in black hole.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inclean_csharp">
+<a href="#inclean_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Clean</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is cleaning.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
 </span> 
@@ -1098,6 +1641,27 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Cloud analysis product ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linetype_csharp">
+<a href="#linetype_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minttl_csharp">
+<a href="#minttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum TTL.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1113,6 +1677,61 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="recordlinetreejson_csharp">
+<a href="#recordlinetreejson_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Line<wbr>Tree<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tree-like analytical line list.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="regionlines_csharp">
+<a href="#regionlines_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Lines</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is a regional route.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remark_csharp">
+<a href="#remark_csharp" style="color: inherit; text-decoration: inherit;">Remark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which the dns belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="slavedns_csharp">
+<a href="#slavedns_csharp" style="color: inherit; text-decoration: inherit;">Slave<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to allow auxiliary dns.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="versioncode_csharp">
 <a href="#versioncode_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Code</a>
 </span> 
@@ -1121,6 +1740,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cloud analysis version code.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="versionname_csharp">
+<a href="#versionname_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1148,7 +1777,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}DNS list of the domain in the analysis system.
+    <dd>{{% md %}}DNS list of domain names in the resolution system.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1181,7 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of group that contains the domain.
+    <dd>{{% md %}}Domain group ID, if not filled, the default is all groups.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1197,6 +1826,39 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inblackhole_go">
+<a href="#inblackhole_go" style="color: inherit; text-decoration: inherit;">In<wbr>Black<wbr>Hole</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is in black hole.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inclean_go">
+<a href="#inclean_go" style="color: inherit; text-decoration: inherit;">In<wbr>Clean</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is cleaning.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
 </span> 
@@ -1204,6 +1866,27 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Cloud analysis product ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linetype_go">
+<a href="#linetype_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minttl_go">
+<a href="#minttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum TTL.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1219,6 +1902,61 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="recordlinetreejson_go">
+<a href="#recordlinetreejson_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Line<wbr>Tree<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tree-like analytical line list.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="regionlines_go">
+<a href="#regionlines_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Lines</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is a regional route.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remark_go">
+<a href="#remark_go" style="color: inherit; text-decoration: inherit;">Remark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which the dns belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="slavedns_go">
+<a href="#slavedns_go" style="color: inherit; text-decoration: inherit;">Slave<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to allow auxiliary dns.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="versioncode_go">
 <a href="#versioncode_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Code</a>
 </span> 
@@ -1227,6 +1965,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cloud analysis version code.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="versionname_go">
+<a href="#versionname_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1254,7 +2002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}DNS list of the domain in the analysis system.
+    <dd>{{% md %}}DNS list of domain names in the resolution system.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1287,7 +2035,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of group that contains the domain.
+    <dd>{{% md %}}Domain group ID, if not filled, the default is all groups.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1303,6 +2051,39 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inblackhole_nodejs">
+<a href="#inblackhole_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Black<wbr>Hole</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is in black hole.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inclean_nodejs">
+<a href="#inclean_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Clean</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is cleaning.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span> 
@@ -1310,6 +2091,27 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Cloud analysis product ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linetype_nodejs">
+<a href="#linetype_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minttl_nodejs">
+<a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum TTL.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1325,6 +2127,61 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="recordlinetreejson_nodejs">
+<a href="#recordlinetreejson_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Line<wbr>Tree<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tree-like analytical line list.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="regionlines_nodejs">
+<a href="#regionlines_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Lines</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is a regional route.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remark_nodejs">
+<a href="#remark_nodejs" style="color: inherit; text-decoration: inherit;">remark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which the dns belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="slavedns_nodejs">
+<a href="#slavedns_nodejs" style="color: inherit; text-decoration: inherit;">slave<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to allow auxiliary dns.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="versioncode_nodejs">
 <a href="#versioncode_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Code</a>
 </span> 
@@ -1333,6 +2190,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cloud analysis version code.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="versionname_nodejs">
+<a href="#versionname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1360,7 +2227,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}DNS list of the domain in the analysis system.
+    <dd>{{% md %}}DNS list of domain names in the resolution system.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1393,7 +2260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Id of group that contains the domain.
+    <dd>{{% md %}}Domain group ID, if not filled, the default is all groups.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1409,6 +2276,39 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inblackhole_python">
+<a href="#inblackhole_python" style="color: inherit; text-decoration: inherit;">in<wbr>Black<wbr>Hole</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is in black hole.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inclean_python">
+<a href="#inclean_python" style="color: inherit; text-decoration: inherit;">in<wbr>Clean</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is cleaning.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
@@ -1416,6 +2316,27 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Cloud analysis product ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linetype_python">
+<a href="#linetype_python" style="color: inherit; text-decoration: inherit;">line<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minttl_python">
+<a href="#minttl_python" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum TTL.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1431,6 +2352,61 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="recordlinetreejson_python">
+<a href="#recordlinetreejson_python" style="color: inherit; text-decoration: inherit;">record<wbr>Line<wbr>Tree<wbr>Json</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Tree-like analytical line list.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="regionlines_python">
+<a href="#regionlines_python" style="color: inherit; text-decoration: inherit;">region<wbr>Lines</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether it is a regional route.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remark_python">
+<a href="#remark_python" style="color: inherit; text-decoration: inherit;">remark</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which the dns belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="slavedns_python">
+<a href="#slavedns_python" style="color: inherit; text-decoration: inherit;">slave<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to allow auxiliary dns.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="version_code_python">
 <a href="#version_code_python" style="color: inherit; text-decoration: inherit;">version_<wbr>code</a>
 </span> 
@@ -1439,6 +2415,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Cloud analysis version code.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_name_python">
+<a href="#version_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

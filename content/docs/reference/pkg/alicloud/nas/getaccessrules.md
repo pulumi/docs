@@ -14,9 +14,6 @@ This data source provides AccessRule available to the user.
 
 > NOTE: Available in 1.35.0+
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetAccessRules {#using}

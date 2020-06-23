@@ -17,8 +17,6 @@ For information about Resource Manager Foler and how to use it, see [What is Res
 
 > **NOTE:** A maximum of five levels of folders can be created under the root folder.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ import pulumi_alicloud as alicloud
 
 example = alicloud.resourcemanager.Folder("example", folder_name="test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -65,6 +66,7 @@ const example = new alicloud.resourcemanager.Folder("example", {
     folderName: "test",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

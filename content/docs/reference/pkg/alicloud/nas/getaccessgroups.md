@@ -14,8 +14,6 @@ This data source provides user-available access groups. Use when you can create 
 
 > NOTE: Available in 1.35.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> AlicloudNasAccessGroupsId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ ag = alicloud.nas.get_access_groups(description="tf-testAccAccessGroupsdatasourc
     type="Classic")
 pulumi.export("alicloudNasAccessGroupsId", ag.groups[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const ag = pulumi.output(alicloud.nas.getAccessGroups({
 
 export const alicloudNasAccessGroupsId = ag.groups[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

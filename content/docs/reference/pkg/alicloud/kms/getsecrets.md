@@ -11,11 +11,8 @@ meta_desc: "Explore the GetSecrets function of the kms module, including example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This data source provides a list of KMS Secrets in an Alibaba Cloud account according to the specified filters.
- 
-> **NOTE:** Available in v1.86.0+.
 
-{{% examples %}}
-{{% /examples %}}
+> **NOTE:** Available in v1.86.0+.
 
 
 

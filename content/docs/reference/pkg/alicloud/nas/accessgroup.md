@@ -16,8 +16,6 @@ In NAS, the permission group acts as a whitelist that allows you to restrict fil
 
 > **NOTE:** Available in v1.33.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ foo = alicloud.nas.AccessGroup("foo",
     description="test_AccessG",
     type="Classic")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -68,6 +69,7 @@ const foo = new alicloud.nas.AccessGroup("foo", {
     type: "Classic",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

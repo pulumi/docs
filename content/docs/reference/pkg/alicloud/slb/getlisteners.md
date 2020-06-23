@@ -12,8 +12,6 @@ meta_desc: "Explore the GetListeners function of the slb module, including examp
 
 This data source provides the listeners related to a server load balancer of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstSlbListenerProtocol { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 sample_ds = alicloud.slb.get_listeners(load_balancer_id=alicloud_slb["sample_slb"]["id"])
 pulumi.export("firstSlbListenerProtocol", sample_ds.slb_listeners[0]["protocol"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getListener
 
 export const firstSlbListenerProtocol = sampleDs.slbListeners[0].protocol;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

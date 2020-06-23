@@ -12,9 +12,6 @@ meta_desc: "Explore the SnatEntry resource of the vpc module, including examples
 
 Provides a snat resource.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a SnatEntry Resource {#create}

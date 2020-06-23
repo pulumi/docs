@@ -12,8 +12,6 @@ meta_desc: "Explore the InstanceAttachment resource of the ots module, including
 
 This resource will help you to bind a VPC to an OTS instance.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -63,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,9 +92,11 @@ foo_instance_attachment = alicloud.ots.InstanceAttachment("fooInstanceAttachment
     vpc_name="attachment1",
     vswitch_id=foo_switch.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -126,6 +127,7 @@ const fooInstanceAttachment = new alicloud.ots.InstanceAttachment("foo", {
     vswitchId: fooSwitch.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

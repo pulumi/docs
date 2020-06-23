@@ -1350,6 +1350,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cassandra_csharp">
+<a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="cbn_csharp">
 <a href="#cbn_csharp" style="color: inherit; text-decoration: inherit;">Cbn</a>
 </span> 
@@ -1809,6 +1819,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cas_go">
 <a href="#cas_go" style="color: inherit; text-decoration: inherit;">Cas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cassandra_go">
+<a href="#cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2284,6 +2304,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cassandra_nodejs">
+<a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="cbn_nodejs">
 <a href="#cbn_nodejs" style="color: inherit; text-decoration: inherit;">cbn</a>
 </span> 
@@ -2743,6 +2773,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cas_python">
 <a href="#cas_python" style="color: inherit; text-decoration: inherit;">cas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cassandra_python">
+<a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

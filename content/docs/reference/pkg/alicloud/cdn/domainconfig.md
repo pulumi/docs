@@ -16,8 +16,6 @@ For information about domain config and how to use it, see [Batch set config](ht
 
 > **NOTE:** Available in v1.34.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,9 +94,11 @@ config = alicloud.cdn.DomainConfig("config",
     }],
     function_name="ip_allow_list_set")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -124,6 +125,7 @@ const config = new alicloud.cdn.DomainConfig("config", {
     functionName: "ip_allow_list_set",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,8 +16,6 @@ Provides a Alidns Record resource. For information about Alidns Domain Record an
 
 > **NOTE:** When the site is an international site, the `type` neither supports `REDIRECT_URL` nor `REDIRECT_URL`
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ record = alicloud.dns.AlidnsRecord("record",
     type="A",
     value="192.168.99.99")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -83,6 +84,7 @@ const record = new alicloud.dns.AlidnsRecord("record", {
     value: "192.168.99.99",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

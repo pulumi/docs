@@ -15,8 +15,6 @@ For information about Resource Manager Resoource Group and how to use it, see [W
 
 > **NOTE:** Available in v1.82.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_alicloud as alicloud
 
 example = alicloud.resourcemanager.ResourceGroup("example", display_name="testrd")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -63,6 +64,7 @@ const example = new alicloud.resourcemanager.ResourceGroup("example", {
     displayName: "testrd",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

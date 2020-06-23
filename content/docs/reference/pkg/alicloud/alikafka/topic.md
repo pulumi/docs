@@ -17,8 +17,6 @@ Provides an ALIKAFKA topic resource.
 > **NOTE:**  Only the following regions support create alikafka topic.
 [`cn-hangzhou`,`cn-beijing`,`cn-shenzhen`,`cn-shanghai`,`cn-qingdao`,`cn-hongkong`,`cn-huhehaote`,`cn-zhangjiakou`,`ap-southeast-1`,`ap-south-1`,`ap-southeast-5`]
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -71,6 +69,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,9 +106,11 @@ default_topic = alicloud.alikafka.Topic("defaultTopic",
     remark="dafault_kafka_topic_remark",
     topic=topic)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -145,6 +146,7 @@ const defaultTopic = new alicloud.alikafka.Topic("default", {
     topic: topic,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

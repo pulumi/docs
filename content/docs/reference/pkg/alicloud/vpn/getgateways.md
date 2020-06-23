@@ -12,8 +12,6 @@ meta_desc: "Explore the GetGateways function of the vpn module, including exampl
 
 The VPNs data source lists a number of VPNs resource information owned by an Alicloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ vpn_gateways = alicloud.vpn.get_gateways(business_status="Normal",
     status="active",
     vpc_id="fake-vpc-id")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -85,6 +86,7 @@ const vpnGateways = pulumi.output(alicloud.vpn.getGateways({
     vpcId: "fake-vpc-id",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

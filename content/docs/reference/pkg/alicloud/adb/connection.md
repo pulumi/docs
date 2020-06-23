@@ -17,8 +17,6 @@ Provides an ADB connection resource to allocate an Internet connection string fo
 
 > **NOTE:** Available in v1.81.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,9 +106,11 @@ connection = alicloud.adb.Connection("connection",
     connection_prefix="testabc",
     db_cluster_id=cluster.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -144,6 +145,7 @@ const connection = new alicloud.adb.Connection("connection", {
     dbClusterId: cluster.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

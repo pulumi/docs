@@ -14,9 +14,7 @@ Provides an ECS Elastic Network Interface resource.
 
 For information about Elastic Network Interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html).
 
-> **NOTE** Only one of private_ips or private_ips_count can be specified when assign private IPs. 
-
-
+> **NOTE** Only one of private_ips or private_ips_count can be specified when assign private IPs.
 
 {{% examples %}}
 ## Example Usage
@@ -66,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,9 +93,11 @@ default_network_interface = alicloud.vpc.NetworkInterface("defaultNetworkInterfa
     security_groups=[group.id],
     vswitch_id=vswitch.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -125,6 +126,7 @@ const defaultNetworkInterface = new alicloud.vpc.NetworkInterface("default", {
     vswitchId: vswitch.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

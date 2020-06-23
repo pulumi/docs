@@ -16,8 +16,6 @@ This resource will help you to manager a Swarm Cluster.
 
 > **NOTE:** Swarm cluster only supports VPC network and you can specify a VPC network by filed `vswitch_id`.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ my_cluster = alicloud.cs.Swarm("myCluster",
     password="Yourpassword1234",
     vswitch_id=var["vswitch_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -86,6 +87,7 @@ const myCluster = new alicloud.cs.Swarm("my_cluster", {
     vswitchId: var_vswitch_id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

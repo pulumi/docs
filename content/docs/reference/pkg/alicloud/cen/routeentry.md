@@ -14,8 +14,6 @@ Provides a CEN route entry resource. Cloud Enterprise Network (CEN) supports pub
 
 For information about CEN route entries publishment and how to use it, see [Manage network routes](https://www.alibabacloud.com/help/doc-detail/86980.htm).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -108,6 +106,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -165,9 +164,11 @@ foo = alicloud.cen.RouteEntry("foo",
     instance_id=cen.id,
     route_table_id=vpc.route_table_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -232,6 +233,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
     routeTableId: vpc.routeTableId,
 }, { provider: hz, dependsOn: [attach] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSslVpnServers function of the vpc module, including e
 
 The SSL-VPN servers data source lists lots of SSL-VPN servers resource information owned by an Alicloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ foo = alicloud.vpc.get_ssl_vpn_servers(ids=["fake-server-id"],
     output_file="/tmp/sslserver",
     vpn_gateway_id="fake-vpn-id")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const foo = pulumi.output(alicloud.vpc.getSslVpnServers({
     vpnGatewayId: "fake-vpn-id",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

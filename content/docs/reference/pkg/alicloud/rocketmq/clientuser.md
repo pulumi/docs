@@ -18,8 +18,6 @@ For information about Sag ClientUser and how to use it, see [What is Sag ClientU
 
 > **NOTE:** Only the following regions support. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ default = alicloud.rocketmq.ClientUser("default",
     user_mail="tftest-xxxxx@test.com",
     user_name="th-username-xxxxx")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -82,6 +83,7 @@ const defaultClientUser = new alicloud.rocketmq.ClientUser("default", {
     userName: "th-username-xxxxx",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

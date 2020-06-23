@@ -1132,7 +1132,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
+<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting <code class="docutils literal notranslate"><span class="pre">multi</span></code> to “true” in the data source <code class="docutils literal notranslate"><span class="pre">.getZones</span></code>.</p></li>
@@ -1324,7 +1324,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <dl class="py attribute">
 <dt id="pulumi_alicloud.rds.Instance.vswitch_id">
 <code class="sig-name descname">vswitch_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.rds.Instance.vswitch_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The virtual switch ID to launch DB instances in one VPC.</p>
+<dd><p>The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1421,7 +1421,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
+<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC. If there are multiple vswitches, separate them with commas.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to launch the DB instance. From version 1.8.1, it supports multiple zone.
 If it is a multi-zone and <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> is specified, the vswitch must in the one of them.
 The multiple zone ID can be retrieved by setting <code class="docutils literal notranslate"><span class="pre">multi</span></code> to “true” in the data source <code class="docutils literal notranslate"><span class="pre">.getZones</span></code>.</p></li>

@@ -16,8 +16,6 @@ This data source provides Sag Acls available to the user.
 
 > **NOTE:** Only the following regions support create Cloud Connect Network. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ default_acls = alicloud.sag.get_acls(ids=[alicloud_sag_acls["default"]["id"]],
     name_regex="^tf-testAcc.*")
 default_acl = alicloud.rocketmq.Acl("defaultAcl")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,6 +76,7 @@ const defaultAcls = alicloud_sag_acls_default.id.apply(id => alicloud.sag.getAcl
 }, { async: true }));
 const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

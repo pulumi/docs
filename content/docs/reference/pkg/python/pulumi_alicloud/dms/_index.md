@@ -17,6 +17,11 @@ block_external_search_index: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.dms"></span><dl class="py class">
+<dt id="pulumi_alicloud.dms.AwaitableGetEnterpriseInstancesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">AwaitableGetEnterpriseInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_alias_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">net_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.AwaitableGetEnterpriseInstancesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.dms.EnterpriseInstance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">EnterpriseInstance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_link_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dba_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dba_uid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ddl_online</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ecs_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ecs_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">safe_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">safe_rule_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_dsql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.EnterpriseInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS Enterprise Instance resource.</p>
@@ -287,6 +292,71 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.dms.GetEnterpriseInstancesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">GetEnterpriseInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_alias_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">net_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseInstancesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getEnterpriseInstances.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseInstancesResult.env_type">
+<code class="sig-name descname">env_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseInstancesResult.env_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the environment to which the database instance belongs..</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseInstancesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseInstancesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseInstancesResult.instance_source">
+<code class="sig-name descname">instance_source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseInstancesResult.instance_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the database instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseInstancesResult.instance_type">
+<code class="sig-name descname">instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseInstancesResult.instance_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the database instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseInstancesResult.instances">
+<code class="sig-name descname">instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseInstancesResult.instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KMS keys. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.dms.GetEnterpriseInstancesResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dms.GetEnterpriseInstancesResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the database instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.dms.get_enterprise_instances">
+<code class="sig-prename descclassname">pulumi_alicloud.dms.</code><code class="sig-name descname">get_enterprise_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_alias_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">net_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dms.get_enterprise_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of DMS Enterprise Instances in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.88.0+</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env_type</strong> (<em>str</em>) – The type of the environment to which the database instance belongs.</p></li>
+<li><p><strong>instance_alias_regex</strong> (<em>str</em>) – A regex string to filter the results by the DMS Enterprise Instance instance_alias.</p></li>
+<li><p><strong>instance_source</strong> (<em>str</em>) – The source of the database instance.</p></li>
+<li><p><strong>instance_type</strong> (<em>str</em>) – The ID of the database instance.</p></li>
+<li><p><strong>net_type</strong> (<em>str</em>) – The network type of the database instance. Valid values: CLASSIC and VPC. For more information about the valid values, see the description of the RegisterInstance operation.</p></li>
+<li><p><strong>search_key</strong> (<em>str</em>) – The keyword used to query database instances.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – Filter the results by status of the DMS Enterprise Instances. Valid values: <code class="docutils literal notranslate"><span class="pre">NORMAL</span></code>, <code class="docutils literal notranslate"><span class="pre">UNAVAILABLE</span></code>, <code class="docutils literal notranslate"><span class="pre">UNKNOWN</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETED</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLE</span></code>.</p></li>
+<li><p><strong>tid</strong> (<em>float</em>) – The ID of the tenant in Data Management (DMS) Enterprise.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

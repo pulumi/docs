@@ -13,8 +13,6 @@ meta_desc: "Explore the Instance resource of the ots module, including examples,
 This resource will help you to manager a [Table Store](https://www.alibabacloud.com/help/doc-detail/27280.htm) Instance.
 It is foundation of creating data table.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ foo = alicloud.ots.Instance("foo",
         "For": "Building table",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -81,6 +82,7 @@ const foo = new alicloud.ots.Instance("foo", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

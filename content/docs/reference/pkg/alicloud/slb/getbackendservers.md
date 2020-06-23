@@ -14,9 +14,6 @@ This data source provides the server load balancer backend servers related to a 
 
 > **NOTE:** Available in 1.53.0+
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetBackendServers {#using}

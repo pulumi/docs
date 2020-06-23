@@ -12,8 +12,6 @@ meta_desc: "Explore the GetCustomerGateways function of the vpn module, includin
 
 The VPN customers gateways data source lists a number of VPN customer gateways resource information owned by an Alicloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ foo = alicloud.vpn.get_customer_gateways(ids=[
     name_regex="testAcc*",
     output_file="/tmp/cgws")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +77,7 @@ const foo = pulumi.output(alicloud.vpn.getCustomerGateways({
     outputFile: "/tmp/cgws",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

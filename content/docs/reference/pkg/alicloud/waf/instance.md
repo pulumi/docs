@@ -16,8 +16,6 @@ For information about WAF and how to use it, see [What is Alibaba Cloud WAF](htt
 
 > **NOTE:** Available in 1.83.0+ .
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -76,9 +75,11 @@ default = alicloud.waf.Instance("default",
     subscription_type="Subscription",
     waf_log="false")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -98,6 +99,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     wafLog: "false",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

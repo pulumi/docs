@@ -12,8 +12,6 @@ meta_desc: "Explore the GetCaCertificates function of the slb module, including 
 
 This data source provides the CA certificate list.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
     public Output<string> FirstSlbCaCertificateId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +49,11 @@ import pulumi_alicloud as alicloud
 sample_ds = alicloud.slb.get_ca_certificates()
 pulumi.export("firstSlbCaCertificateId", sample_ds.certificates[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -61,6 +62,7 @@ const sampleDs = pulumi.output(alicloud.slb.getCaCertificates({ async: true }));
 
 export const firstSlbCaCertificateId = sampleDs.certificates[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

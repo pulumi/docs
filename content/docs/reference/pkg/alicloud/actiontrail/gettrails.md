@@ -12,8 +12,6 @@ meta_desc: "Explore the GetTrails function of the actiontrail module, including 
 
 This data source provides a list of action trail of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstTrailName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 trails = alicloud.actiontrail.get_trails(name_regex="tf-testacc-actiontrail")
 pulumi.export("firstTrailName", trails.actiontrails[0]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const trails = pulumi.output(alicloud.actiontrail.getTrails({
 
 export const firstTrailName = trails.actiontrails[0].name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

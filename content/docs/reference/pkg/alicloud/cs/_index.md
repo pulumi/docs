@@ -28,6 +28,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
     <li><a href="getmanagedkubernetesclusters" title="GetManagedKubernetesClusters"><span class="symbol function"></span>GetManagedKubernetesClusters</a></li>
     <li><a href="getregistryenterpriseinstances" title="GetRegistryEnterpriseInstances"><span class="symbol function"></span>GetRegistryEnterpriseInstances</a></li>
     <li><a href="getregistryenterprisenamespaces" title="GetRegistryEnterpriseNamespaces"><span class="symbol function"></span>GetRegistryEnterpriseNamespaces</a></li>
+    <li><a href="getregistryenterpriserepos" title="GetRegistryEnterpriseRepos"><span class="symbol function"></span>GetRegistryEnterpriseRepos</a></li>
     <li><a href="getserverlesskubernetesclusters" title="GetServerlessKubernetesClusters"><span class="symbol function"></span>GetServerlessKubernetesClusters</a></li>
 </ul>
 
@@ -40,7 +41,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.8.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

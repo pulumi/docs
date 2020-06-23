@@ -14,8 +14,6 @@ This data source provides a list Container Registry repositories on Alibaba Clou
 
 > **NOTE:** Available in v1.35.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> Output { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ my_repos = alicloud.cr.get_repos(name_regex="my-repos",
     output_file="my-repo-json")
 pulumi.export("output", my_repos.repos)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const myRepos = pulumi.output(alicloud.cr.getRepos({
 
 export const output = myRepos.repos;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

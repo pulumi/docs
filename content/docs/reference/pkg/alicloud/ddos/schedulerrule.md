@@ -14,8 +14,6 @@ Provides a DdosCoo Scheduler Rule resource. For information about DdosCoo Schedu
 
 > **NOTE:** Available in 1.86.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,9 +88,11 @@ example = alicloud.ddos.SchedulerRule("example",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -117,6 +118,7 @@ const example = new alicloud.ddos.SchedulerRule("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

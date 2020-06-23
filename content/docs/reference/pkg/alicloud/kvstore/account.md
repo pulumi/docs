@@ -14,8 +14,6 @@ Provides a kvstore account resource and used to manage databases.
 
 > **NOTE:** Available in 1.66.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,9 +106,11 @@ account = alicloud.kvstore.Account("account",
     account_password="Test12345",
     instance_id=default_instance.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -144,6 +145,7 @@ const account = new alicloud.kvstore.Account("account", {
     instanceId: defaultInstance.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -23,8 +23,6 @@ You can add forwarding rules to a listener to forward requests based on the doma
 
 > **NOTE:** Only rule's virtual server group can be modified.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -145,6 +143,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -222,9 +221,11 @@ default_rule = alicloud.slb.Rule("defaultRule",
     unhealthy_threshold=5,
     url="/image")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -311,6 +312,7 @@ const defaultRule = new alicloud.slb.Rule("default", {
     url: "/image",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

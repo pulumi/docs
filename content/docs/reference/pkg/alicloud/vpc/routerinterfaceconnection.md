@@ -21,8 +21,6 @@ After that, all of the two router interfaces will be active.
 
 > **NOTE:** Please remember to add a `depends_on` clause in the router interface connection from the InitiatingSide to the AcceptingSide, because the connection from the AcceptingSide to the InitiatingSide must be done first.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -82,6 +80,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,9 +124,11 @@ bar_router_interface_connection = alicloud.vpc.RouterInterfaceConnection("barRou
     interface_id=opposite.id,
     opposite_interface_id=initiate.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -169,6 +170,7 @@ const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection(
     oppositeInterfaceId: opposite.id,
 }, { dependsOn: [barRouterInterfaceConnection] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ This data source provides a list of ALIKAFKA Instances in an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.59.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +65,7 @@ class MyStack : Stack
     public Output<string> FirstInstanceName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,9 +98,11 @@ instances_ds = alicloud.actiontrail.get_instances(name_regex="alikafkaInstanceNa
     output_file="instances.txt")
 pulumi.export("firstInstanceName", instances_ds.instances[0]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -135,6 +136,7 @@ const instancesDs = pulumi.output(alicloud.actiontrail.getInstances({
 
 export const firstInstanceName = instancesDs.instances[0].name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

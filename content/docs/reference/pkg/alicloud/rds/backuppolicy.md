@@ -14,8 +14,6 @@ Provides an RDS instance backup policy resource and used to configure instance b
 
 > **NOTE:** Each DB instance has a backup policy and it will be set default values when destroying the resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,9 +96,11 @@ instance = alicloud.rds.Instance("instance",
     vswitch_id=default_switch.id)
 policy = alicloud.rds.BackupPolicy("policy", instance_id=instance.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -131,6 +132,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {
     instanceId: instance.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ Binds SLB to an EDAS application.
 
 > **NOTE:** Available in 1.82.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ default = alicloud.edas.SlbAttachment("default",
     listener_port=var["listener_port"],
     vserver_group_id=var["vserver_group_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -78,6 +79,7 @@ const _default = new alicloud.edas.SlbAttachment("default", {
     vserverGroupId: _var.vserver_group_id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

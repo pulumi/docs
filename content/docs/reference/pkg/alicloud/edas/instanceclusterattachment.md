@@ -14,9 +14,6 @@ Provides an EDAS instance cluster attachment resource.
 
 > **NOTE:** Available in 1.82.0+
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +53,11 @@ default = alicloud.edas.InstanceClusterAttachment("default",
     cluster_id=var["cluster_id"],
     instance_ids=var["instance_ids"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -67,6 +67,7 @@ const _default = new alicloud.edas.InstanceClusterAttachment("default", {
     instanceIds: _var.instance_ids,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

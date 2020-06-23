@@ -14,8 +14,6 @@ Provides a network acl attachment resource to associate network acls to vswitche
 
 > **NOTE:** Available in 1.44.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -66,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,9 +94,11 @@ default_network_acl_attachment = alicloud.vpc.NetworkAclAttachment("defaultNetwo
         "resourceType": "VSwitch",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -127,6 +128,7 @@ const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("defau
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetApps function of the apigateway module, including exa
 
 This data source provides the apps of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstAppId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 data_apigatway = alicloud.apigateway.get_apps(output_file="outapps")
 pulumi.export("firstAppId", data_apigatway.apps[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const dataApigatway = pulumi.output(alicloud.apigateway.getApps({
 
 export const firstAppId = dataApigatway.apps[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

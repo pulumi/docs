@@ -12,9 +12,7 @@ meta_desc: "Explore the Account resource of the adb module, including examples, 
 
 Provides a [ADB](https://www.alibabacloud.com/help/product/92664.htm) account resource and used to manage databases.
 
-> **NOTE:** Available in v1.71.0+. 
-
-
+> **NOTE:** Available in v1.71.0+.
 
 {{% examples %}}
 ## Example Usage
@@ -69,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,9 +107,11 @@ account = alicloud.adb.Account("account",
     account_password="Test12345",
     db_cluster_id=cluster.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -147,6 +148,7 @@ const account = new alicloud.adb.Account("account", {
     dbClusterId: cluster.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

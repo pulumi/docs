@@ -13,9 +13,6 @@ meta_desc: "Explore the Alarm resource of the cms module, including examples, in
 This resource provides a alarm rule resource and it can be used to monitor several cloud services according different metrics.
 Details for [alarm rule](https://www.alibabacloud.com/help/doc-detail/28608.htm).
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Alarm Resource {#create}

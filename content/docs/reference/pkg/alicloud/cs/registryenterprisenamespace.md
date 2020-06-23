@@ -18,8 +18,6 @@ For information about Container Registry Enterprise Edition namespaces and how t
 
 > **NOTE:** You need to set your registry password in Container Registry Enterprise Edition console before use this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ my_namespace = alicloud.cs.RegistryEnterpriseNamespace("my-namespace",
     default_visibility="PUBLIC",
     instance_id="cri-xxx")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -73,6 +74,7 @@ const my_namespace = new alicloud.cs.RegistryEnterpriseNamespace("my-namespace",
     instanceId: "cri-xxx",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

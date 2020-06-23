@@ -14,8 +14,6 @@ Provides an EDAS cluster resource.
 
 > **NOTE:** Available in 1.82.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ default = alicloud.edas.Cluster("default",
     logical_region_id=var["logical_region_id"],
     vpc_id=var["vpc_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,6 +76,7 @@ const _default = new alicloud.edas.Cluster("default", {
     vpcId: _var.vpc_id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

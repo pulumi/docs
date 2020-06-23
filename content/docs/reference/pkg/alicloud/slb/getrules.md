@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRules function of the slb module, including examples,
 
 This data source provides the rules associated with a server load balancer listener.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstSlbRuleId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ sample_ds = alicloud.slb.get_rules(frontend_port=80,
     load_balancer_id=alicloud_slb["sample_slb"]["id"])
 pulumi.export("firstSlbRuleId", sample_ds.slb_rules[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getRules({
 
 export const firstSlbRuleId = sampleDs.slbRules[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

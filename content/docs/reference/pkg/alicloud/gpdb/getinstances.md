@@ -15,8 +15,6 @@ Filters support regular expression for the instance name or availability_zone.
 
 > **NOTE:**  Available in 1.47.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
     public Output<string> InstanceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ gpdb = alicloud.gpdb.get_instances(availability_zone="cn-beijing-c",
     output_file="instances.txt")
 pulumi.export("instanceId", gpdb.instances[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,6 +76,7 @@ const gpdb = pulumi.output(alicloud.gpdb.getInstances({
 
 export const instanceId = gpdb.instances[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

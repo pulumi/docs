@@ -13,14 +13,12 @@ meta_desc: "Explore the BackendServer resource of the slb module, including exam
 Add a group of backend servers (ECS or ENI instance) to the Server Load Balancer or remove them from it.
 
 > **NOTE:** Available in 1.53.0+
-
-
 ## Block servers
 
 The servers mapping supports the following:
 
 * `server_id` - (Required) A list backend server ID (ECS instance ID).
-* `weight` - (Optional) Weight of the backend server. Valid value range: [0-100]. 
+* `weight` - (Optional) Weight of the backend server. Valid value range: [0-100].
 * `type` - (Optional) Type of the backend server. Valid value ecs, eni. Default to eni.
 
 {{% examples %}}
@@ -118,6 +116,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -174,9 +173,11 @@ default_backend_server = alicloud.slb.BackendServer("defaultBackendServer",
     ],
     load_balancer_id=default_load_balancer.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -241,6 +242,7 @@ const defaultBackendServer = new alicloud.slb.BackendServer("default", {
     loadBalancerId: defaultLoadBalancer.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetTopics function of the mns module, including examples
 
 This data source provides a list of MNS topics in an Alibaba Cloud account according to the specified parameters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstTopicId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 topics = alicloud.mns.get_topics(name_prefix="tf-")
 pulumi.export("firstTopicId", topics.topics[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const topics = pulumi.output(alicloud.mns.getTopics({
 
 export const firstTopicId = topics.topics[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

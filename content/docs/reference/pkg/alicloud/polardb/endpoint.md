@@ -15,9 +15,6 @@ Provides a PolarDB endpoint resource to allocate an Internet endpoint string for
 > **NOTE:** Available in v1.80.0+. Each PolarDB instance will allocate a intranet connection string automatically and its prefix is Cluster ID.
  To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Endpoint Resource {#create}

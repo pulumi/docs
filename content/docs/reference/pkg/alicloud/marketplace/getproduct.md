@@ -14,8 +14,6 @@ This data source provides the Market product item details of Alibaba Cloud.
 
 > **NOTE:** Available in 1.69.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
     public Output<string> FirstProductPackageVersion { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ pulumi.export("productName", default.products[0]["name"])
 pulumi.export("firstProductSkuCode", default.products[0]["skuses"][0]["skuCode"])
 pulumi.export("firstProductPackageVersion", default.products[0]["skuses"][0]["packageVersions"][0]["package_version"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -78,6 +79,7 @@ export const productName = defaultProduct.products[0].name;
 export const firstProductSkuCode = defaultProduct.products[0].skuses[0].skuCode;
 export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].packageVersions[0].packageVersion;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

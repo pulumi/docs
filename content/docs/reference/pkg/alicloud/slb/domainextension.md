@@ -17,8 +17,6 @@ Please refer to the [documentation](https://www.alibabacloud.com/help/doc-detail
 
 > **NOTE:** The instance with shared loadBalancerSpec doesn't support domainExtension.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -123,6 +121,7 @@ lFi0ODPAVyXjVypAiLguDxPn6AtDTdk9Iw9B19OD4NrzNRWgSSX5vuxo/VcRcgWk
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -213,9 +212,11 @@ example1 = alicloud.slb.DomainExtension("example1",
     load_balancer_id=instance.id,
     server_certificate_id=foo.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -301,6 +302,7 @@ const example1 = new alicloud.slb.DomainExtension("example1", {
     serverCertificateId: foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ This data source provides availability zones for RDS that can be accessed by an 
 
 > **NOTE:** Available in v1.73.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ zones_ids = alicloud.rds.get_zones()
 db = alicloud.rds.Instance("db", zone_id=zones_ids.zones[0])
 # Other properties...
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const zonesIds = alicloud.rds.getZones({});
 const db = new alicloud.rds.Instance("db", {zoneId: zonesIds.then(zonesIds => zonesIds.zones[0])});
 // Other properties...
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

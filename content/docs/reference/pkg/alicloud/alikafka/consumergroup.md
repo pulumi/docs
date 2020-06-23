@@ -17,8 +17,6 @@ Provides an ALIKAFKA consumer group resource.
 > **NOTE:**  Only the following regions support create alikafka consumer group.
 [`cn-hangzhou`,`cn-beijing`,`cn-shenzhen`,`cn-shanghai`,`cn-qingdao`,`cn-hongkong`,`cn-huhehaote`,`cn-zhangjiakou`,`ap-southeast-1`,`ap-south-1`,`ap-southeast-5`]
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,9 +98,11 @@ default_consumer_group = alicloud.alikafka.ConsumerGroup("defaultConsumerGroup",
     consumer_id=consumer_id,
     instance_id=default_instance.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -133,6 +134,7 @@ const defaultConsumerGroup = new alicloud.alikafka.ConsumerGroup("default", {
     instanceId: defaultInstance.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

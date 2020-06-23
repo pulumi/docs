@@ -14,8 +14,6 @@ This data source provides a list of Snat Entries owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.37.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -73,6 +71,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,9 +106,11 @@ foo_snat_entry = alicloud.vpc.SnatEntry("fooSnatEntry",
     source_vswitch_id=foo_switch.id)
 foo_snat_entries = foo_snat_entry.snat_table_id.apply(lambda snat_table_id: alicloud.vpc.get_snat_entries(snat_table_id=snat_table_id))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -146,6 +147,7 @@ const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vp
     snatTableId: snatTableId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ This data source provides a list of DNS instances in an Alibaba Cloud account ac
 
 > **NOTE:**  Available in 1.84.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
     public Output<string> FirstInstanceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ import pulumi_alicloud as alicloud
 example = alicloud.dns.get_instances(ids=["dns-cn-oew1npk****"])
 pulumi.export("firstInstanceId", example.instances[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -71,6 +72,7 @@ const example = pulumi.output(alicloud.dns.getInstances({
 
 export const firstInstanceId = example.instances[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

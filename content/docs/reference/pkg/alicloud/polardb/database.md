@@ -14,8 +14,6 @@ Provides a PolarDB database resource. A DB database deployed in a DB cluster. A 
 
 > **NOTE:** Available in v1.66.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ default = alicloud.polardb.Database("default",
     db_cluster_id=cluster.id,
     db_name="tftestdatabase")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -90,6 +91,7 @@ const defaultDatabase = new alicloud.polardb.Database("default", {
     dbName: "tftestdatabase",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

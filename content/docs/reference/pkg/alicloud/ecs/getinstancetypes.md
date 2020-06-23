@@ -16,8 +16,6 @@ This data source provides the ECS instance types of Alibaba Cloud.
 
 > **NOTE:** If one instance type is sold out, it will not be exported.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ types_ds = alicloud.ecs.get_instance_types(cpu_core_count=1,
     memory_size=2)
 instance = alicloud.ecs.Instance("instance", instance_type=types_ds.instance_types[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +77,7 @@ const instance = new alicloud.ecs.Instance("instance", {
     instanceType: typesDs.instanceTypes[0].id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

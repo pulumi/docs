@@ -18,8 +18,6 @@ Provides a network acl entries resource to create ingress and egress entries.
 
 > **NOTE:** Using this resource need to open a whitelist.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -100,6 +98,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -149,9 +148,11 @@ default_network_acl_entries = alicloud.vpc.NetworkAclEntries("defaultNetworkAclE
     }],
     network_acl_id=default_network_acl.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -202,6 +203,7 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
     networkAclId: defaultNetworkAcl.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
