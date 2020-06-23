@@ -1,5 +1,5 @@
 ---
-title: "Getting Started With K8s: Clusters and Nodes"
+title: "Getting Started With Kubernetes: Clusters and Nodes"
 date: 2020-06-23
 meta_desc: "A tutorial for getting started with Kubernetes using Infrastructure as Code."
 meta_image: getting-started.png
