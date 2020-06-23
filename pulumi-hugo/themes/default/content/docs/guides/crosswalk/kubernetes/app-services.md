@@ -389,7 +389,7 @@ nginx-ingress-controller-7dcc95dfbf-k99k6   1/1     Running   0          21s
 ```
 
 <!-- markdownlint-disable url -->
-[nginx-priv-use]: https://github.com/kubernetes/ingress-nginx/blob/master/deploy/static/mandatory.yaml#L229
+[nginx-priv-use]: https://github.com/kubernetes/ingress-nginx/blob/nginx-0.30.0/deploy/static/mandatory.yaml#L229
 [nginx-yaml]: https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md#prerequisite-generic-deployment-command
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 <!-- markdownlint-enable url -->
@@ -603,7 +603,7 @@ Delete the pod, service, and ingress controller.
 
 ```bash
 $ kubectl delete pod/kuard svc/kuard ingress/kuard
-$ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
+$ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/provider/cloud-generic.yaml
 ```
 
 {{% /choosable %}}
