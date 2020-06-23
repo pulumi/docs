@@ -19,7 +19,7 @@ no_edit_this_page: true
 </p>
 
 
-This example serves a static website using TypeScript and AWS.
+This example serves a static website using Python and AWS.
 
 This sample uses the following AWS products:
 

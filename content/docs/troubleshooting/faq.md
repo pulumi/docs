@@ -19,7 +19,7 @@ You can disable this "auto-naming" on a per-resource basis if this isn't right f
 
 To enable a new cloud, you need to create a Pulumi Resource Provider.  This requires a gRPC interface, and can be implemented directly; see [https://github.com/pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) for an example of this.
 
-If there is an existing Terraform Resource Provider for the target, you can also use Terraform Bridge;  see [https://github.com/pulumi/pulumi-terraform/blob/master/README.md](https://github.com/pulumi/pulumi-terraform/blob/master/README.md) for a description of the overall structure and process of adding a new provider using the bridge and [https://github.com/pulumi/pulumi-aws/blob/master/resources.go](https://github.com/pulumi/pulumi-aws/blob/master/resources.go) for a specific example.
+If there is an existing Terraform Resource Provider for the target, you can also use Terraform Bridge;  see [https://github.com/pulumi/pulumi-terraform/blob/master/README.md](https://github.com/pulumi/pulumi-terraform/blob/master/README.md) for a description of the overall structure and process of adding a new provider using the bridge and [https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go) for a specific example.
 
 ## How can I add support for my favorite language?
 

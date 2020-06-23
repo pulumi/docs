@@ -8,7 +8,7 @@ menu:
     weight: 2
 ---
 
-<img src="/logos/tech/azuredevops.svg" align="right" class="h-16 px-8 pb-4">
+<img src="/logos/tech/azuredevops.png" align="right" class="h-16 px-8 pb-4">
 
 The AzureDevOps provider for Pulumi can be used to provision any of the cloud resources available in [AzureDevOps](https://azure.microsoft.com/en-us/services/devops/).
 The AzureDevOps provider must be configured with credentials to deploy and update resources in AzureDevOps.

@@ -13,7 +13,7 @@ check_links() {
 	#     - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
 	#       although valid and publicly available, is reported as a broken link.
 	#     - A number of synthetic illustrative links come from our examples/tutorials.
-    ./node_modules/.bin/blc http://localhost:$HTTP_SERVER_PORT --recursive --follow \
+    ./node_modules/.bin/blc http://localhost:$HTTP_SERVER_PORT --recursive --follow --get \
         --exclude "/docs/reference/pkg" \
         --exclude "/docs/get-started/install/versions" \
         --exclude "https://api.pulumi.com/" \
@@ -30,8 +30,18 @@ check_links() {
         --exclude "https://www.mysql.com/" \
         --exclude "https://ksonnet.io/" \
         --exclude "https://www.latlong.net/" \
+        --exclude "https://www.packet.com/" \
+        --exclude "https://www.random.org" \
+        --exclude "https://mbrdna.com" \
         --exclude "https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf" \
-        --exclude "https://www.packet.com/"
+        --exclude "https://kubernetes-charts-incubator.storage.googleapis.com" \
+        --exclude "https://kubernetes-charts.storage.googleapis.com" \
+        --exclude "http://web-lb-23139b7-1806442625.us-east-1.elb.amazonaws.com" \
+        --exclude "https://ruby-app-7a54c5f5e006d5cf33c2-zgms4nzdba-uc.a.run.app" \
+        --exclude "https://hello-a28eea2-q1wszdxb2b-ew.a.run.app" \
+        --exclude "https://ruby-420a973-q1wszdxb2b-ew.a.run.app" \
+        --exclude "https://280f2167f1.execute-api.us-east-1.amazonaws.com" \
+        --exclude "http://my-bucket-1234567.s3-website.us-west-2.amazonaws.com"
 }
 
 check_get_pulumi_links() {
@@ -75,7 +85,7 @@ if [ $BUILD_TYPE = "pull_request" ]
 then
     echo "Checking only get.pulumi.com links"
     retry check_get_pulumi_links
-else 
+else
     echo "Checking all links"
     retry check_links
 fi
