@@ -1,7 +1,7 @@
 ---
-title: "Simple Guestbook App | Python"
-h1: "Simple Guestbook App"
-linktitle: "Simple Guestbook App"
+title: "Simple and Component-based Kubernetes Guestbook Apps | Python"
+h1: "Simple and Component-based Kubernetes Guestbook Apps"
+linktitle: "Simple and Component-based Kubernetes Guestbook Apps"
 no_edit_this_page: true
 ---
 
@@ -13,7 +13,7 @@ no_edit_this_page: true
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/kubernetes-py-guestbook/simple" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -26,4 +26,12 @@ Docker, and consists of three components:
 * A single-instance Redis master to store guestbook entries
 * Multiple replicated Redis instances to serve reads
 * Multiple web frontend instances
+
+In this directory, you will find two variants of the Guestbook:
+
+1. [simple/](https://github.com/pulumi/examples/blob/master/kubernetes-py-guestbook/simple) is a straight port of the original YAML.
+2. [components](https://github.com/pulumi/examples/blob/master/kubernetes-py-guestbook/components) demonstrates benefits of using a real language, namely eliminating boilerplate through
+   the use of real component abstractions.
+
+Both examples provision the exact same Kubernetes Guestbook application, but showcase different aspects of Pulumi.
 

@@ -26,7 +26,7 @@ The application shows several notable features:
 
 ## `CosmosApp` component
 
-The [`CosmosApp`](https://github.com/pulumi/examples/blob/master/azure-cs-cosmosapp-component/cosmosApp.cs) defines a skeleton for the application. While not limiting the type of compute resources, it creates the multi-regional pieces of the infrastructure:
+The [`CosmosApp`](https://github.com/pulumi/examples/blob/master/azure-cs-cosmosapp-component/CosmosApp.cs) defines a skeleton for the application. While not limiting the type of compute resources, it creates the multi-regional pieces of the infrastructure:
 
 ![Cosmos App](https://github.com/mikhailshilkov/pulumi-cosmos/raw/master/pictures/globalapp.png)
 

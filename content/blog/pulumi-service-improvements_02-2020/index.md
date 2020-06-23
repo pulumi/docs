@@ -37,12 +37,12 @@ added by Pulumi's first (and extremely awesome) intern, Tasia (👋)!
 Many people practice [continuous delivery using Pulumi]({{< relref "/docs/guides/continuous-delivery" >}}), automatically
 updating stacks in response to code check-ins or merges. We've now added support for deep links from the Pulumi Console back
 into your CI/CD tool of choice. So, for example, you'll now see links to the [Circle CI job](http://circleci.com) or
-[Travis CI build](http://travis-ci.com) from the Pulumi Console.
+[Travis CI build](https://travis-ci.com) from the Pulumi Console.
 
 {{< figure alt="Link to the Travis CI Build from the Pulumi Console" src="./deep-linking-cicd-providers.png" class="md:max-w-lg" >}}
 
 > Pulumi supports a variety of CI/CD providers, but if yours isn't listed in [our CI/CD guide]({{< relref "/docs/guides/continuous-delivery" >}})
-> [let us know](https://slack.pulumi.com) or [contribute it](https://github.com/pulumi/pulumi/tree/master/pkg/util/ciutil)
+> [let us know](https://slack.pulumi.com) or [contribute it](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil)
 > on your own.
 
 ## Pretty Printing JSON / Multi Configuration

@@ -251,7 +251,7 @@ use `pulumi login s3://my-pulumi-state-bucket`.
 
 The precise JSON format these checkpoint files use is not documented, but is
 defined in the [APIType source code](
-https://github.com/pulumi/pulumi/blob/master/pkg/apitype/) if you'd like to
+https://github.com/pulumi/pulumi/tree/master/sdk/go/common/apitype/) if you'd like to
 understand their contents. Note that this is the same JSON format used by the
 `pulumi stack export` and `pulumi stack import` commands.
 
