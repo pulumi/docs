@@ -12,8 +12,6 @@ meta_desc: "Explore the SpectrumApplication resource of the Cloudflare package, 
 
 Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare's DDoS, TLS, and IP Firewall to your other TCP-based services.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ ssh_proxy = cloudflare.SpectrumApplication("sshProxy",
     },
     origin_directs=["tcp://109.151.40.129:22"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -89,6 +90,7 @@ const sshProxy = new cloudflare.SpectrumApplication("sshProxy", {
     originDirects: ["tcp://109.151.40.129:22"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -15,8 +15,6 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
 
 Filter expressions needs to be created first before using Firewall Rule. See Filter.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ wordpress_firewall_rule = cloudflare.FirewallRule("wordpressFirewallRule",
     filter_id=wordpress_filter.id,
     action="block")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -88,6 +89,7 @@ const wordpressFirewallRule = new cloudflare.FirewallRule("wordpressFirewallRule
     action: "block",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

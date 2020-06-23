@@ -12,8 +12,6 @@ meta_desc: "Explore the LogpullRetention resource of the Cloudflare package, inc
 
 Allows management of the Logpull Retention settings used to control whether or not to retain HTTP request logs.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ example = cloudflare.LogpullRetention("example",
     enabled="true",
     zone_id="fb54f084ca7f7b732d3d3ecbd8ef7bf2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -64,6 +65,7 @@ const example = new cloudflare.LogpullRetention("example", {
     zoneId: "fb54f084ca7f7b732d3d3ecbd8ef7bf2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

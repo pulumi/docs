@@ -13,8 +13,6 @@ meta_desc: "Explore the AccessIdentityProvider resource of the Cloudflare packag
 Provides a Cloudflare Access Identity Provider resource. Identity Providers are
 used as an authentication or authorisation source within Access.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -79,6 +77,7 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -122,9 +121,11 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o
     name="JumpCloud SAML",
     type="saml")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -163,6 +164,7 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o`,
     type: "saml",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

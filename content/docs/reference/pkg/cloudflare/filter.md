@@ -12,8 +12,6 @@ meta_desc: "Explore the Filter resource of the Cloudflare package, including exa
 
 Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to [Wireshark Display Filter](https://www.wireshark.org/docs/man-pages/wireshark-filter.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ wordpress = cloudflare.Filter("wordpress",
     expression="(http.request.uri.path ~ \".*wp-login.php\" or http.request.uri.path ~ \".*xmlrpc.php\") and ip.src ne 192.0.2.1",
     zone_id="d41d8cd98f00b204e9800998ecf8427e")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -67,6 +68,7 @@ const wordpress = new cloudflare.Filter("wordpress", {
     zoneId: "d41d8cd98f00b204e9800998ecf8427e",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

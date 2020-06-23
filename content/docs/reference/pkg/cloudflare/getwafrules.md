@@ -12,8 +12,6 @@ meta_desc: "Explore the GetWafRules function of the Cloudflare package, includin
 
 Use this data source to look up [WAF Rules](https://api.cloudflare.com/#waf-rule-groups-properties).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +44,7 @@ class MyStack : Stack
     public Output<string> WafRules { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ test = cloudflare.get_waf_rules(zone_id="ae36f999674d196762efcc5abb06b345",
     })
 pulumi.export("wafRules", test.rules)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -84,6 +85,7 @@ const test = cloudflare.getWafRules({
 });
 export const wafRules = test.then(test => test.rules);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

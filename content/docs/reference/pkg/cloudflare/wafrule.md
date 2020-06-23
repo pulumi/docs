@@ -12,8 +12,6 @@ meta_desc: "Explore the WafRule resource of the Cloudflare package, including ex
 
 Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ _100000 = cloudflare.WafRule("100000",
     rule_id="100000",
     zone_id="ae36f999674d196762efcc5abb06b345")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -67,6 +68,7 @@ const _100000 = new cloudflare.WafRule("100000", {
     zoneId: "ae36f999674d196762efcc5abb06b345",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

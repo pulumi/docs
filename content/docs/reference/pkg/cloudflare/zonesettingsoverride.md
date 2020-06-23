@@ -12,8 +12,6 @@ meta_desc: "Explore the ZoneSettingsOverride resource of the Cloudflare package,
 
 Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,9 +86,11 @@ test = cloudflare.ZoneSettingsOverride("test",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -115,6 +116,7 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

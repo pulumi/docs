@@ -14,9 +14,6 @@ Provides a Cloudflare Origin CA certificate used to protect traffic to your orig
 
 **This resource requires you use your Origin CA Key as the `api_user_service_key`.**
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a OriginCaCertificate Resource {#create}

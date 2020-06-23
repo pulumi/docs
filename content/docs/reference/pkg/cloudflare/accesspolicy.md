@@ -14,9 +14,6 @@ Provides a Cloudflare Access Policy resource. Access Policies are used
 in conjunction with Access Applications to restrict access to a
 particular resource.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a AccessPolicy Resource {#create}

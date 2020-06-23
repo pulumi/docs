@@ -12,8 +12,6 @@ meta_desc: "Explore the LoadBalancerMonitor resource of the Cloudflare package, 
 
 If you're using Cloudflare's Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +84,7 @@ http_monitor = cloudflare.LoadBalancerMonitor("httpMonitor",
     timeout=7,
     type="http")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -110,6 +110,7 @@ const httpMonitor = new cloudflare.LoadBalancerMonitor("http_monitor", {
     type: "http",
 });
 ```
+
 {{% /example %}}
 
 ### TCP Monitor
@@ -135,6 +136,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -154,6 +156,7 @@ tcp_monitor = cloudflare.LoadBalancerMonitor("tcpMonitor",
     timeout=7,
     type="tcp")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -170,6 +173,7 @@ const tcpMonitor = new cloudflare.LoadBalancerMonitor("tcp_monitor", {
     type: "tcp",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

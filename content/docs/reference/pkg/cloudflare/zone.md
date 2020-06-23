@@ -12,8 +12,6 @@ meta_desc: "Explore the Zone resource of the Cloudflare package, including examp
 
 Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_cloudflare as cloudflare
 
 example = cloudflare.Zone("example", zone="example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -60,6 +61,7 @@ const example = new cloudflare.Zone("example", {
     zone: "example.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

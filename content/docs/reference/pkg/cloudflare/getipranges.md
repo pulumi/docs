@@ -12,9 +12,6 @@ meta_desc: "Explore the GetIpRanges function of the Cloudflare package, includin
 
 Use this data source to get the [IP ranges](https://www.cloudflare.com/ips/) of Cloudflare edge nodes.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetIpRanges {#using}

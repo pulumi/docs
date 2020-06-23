@@ -12,9 +12,6 @@ meta_desc: "Explore the GetWafGroups function of the Cloudflare package, includi
 
 Use this data source to look up [WAF Rule Groups](https://api.cloudflare.com/#waf-rule-groups-properties).
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetWafGroups {#using}

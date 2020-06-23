@@ -12,8 +12,6 @@ meta_desc: "Explore the WafGroup resource of the Cloudflare package, including e
 
 Provides a Cloudflare WAF rule group resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall groups.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ honey_pot = cloudflare.WafGroup("honeyPot",
     mode="on",
     zone_id="ae36f999674d196762efcc5abb06b345")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -67,6 +68,7 @@ const honeyPot = new cloudflare.WafGroup("honey_pot", {
     zoneId: "ae36f999674d196762efcc5abb06b345",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
