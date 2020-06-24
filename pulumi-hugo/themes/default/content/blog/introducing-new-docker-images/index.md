@@ -28,21 +28,191 @@ Pulumi has the unique ability to interact with cloud providers across many bound
 
 {{% choosable language typescript %}}
 ```typescript
-// Code will go here
+import * as digitalocean from "@pulumi/digitalocean";
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+
+const config = new pulumi.Config();
+const nodeCount = config.getNumber("nodeCount") || 1;
+
+// Create a Kubernetes Cluster in DigitalOcean
+const cluster = new digitalocean.KubernetesCluster("do-cluster", {
+  region: digitalocean.Regions.SFO2,
+  version: digitalocean.getKubernetesVersions({versionPrefix: "1.16"}).then(p => p.latestVersion),
+  nodePool: {
+      name: "default",
+      size: "s-1vcpu-2gb",
+      nodeCount: nodeCount,
+  },
+});
+
+// configure a kubernetes provider
+const provider = new k8s.Provider("k8s", { kubeconfig: cluster.kubeConfigs[0].rawConfig })
+
+const namespace = new k8s.core.v1.Namespace("ns", {
+    metadata: {
+        name: "nginx-ingress",
+    }
+}, { provider: provider });
+
+// deploy nginx-ingress with helm
+const nginx = new k8s.helm.v2.Chart("nginx-ingress",
+    {
+        namespace: namespace.metadata.name,
+        chart: "nginx-ingress",
+        version: "1.33.5",
+        fetchOpts: { repo: "https://kubernetes-charts.storage.googleapis.com/" },
+        values: {
+            controller: {
+                replicaCount: 1,
+                service: {
+                    type: "LoadBalancer",
+                },
+                publishService: {
+                    enabled: true,
+                },
+            },
+        }
+    },
+    { providers: { kubernetes: provider } },
+)
 ```
 {{% /choosable %}}
 
 {{% choosable language python %}}
 ```python
-""" 
-Code will go here
-"""
+"""A DigitalOcean Python Pulumi program"""
+
+import pulumi
+import pulumi_kubernetes as k8s
+import pulumi_digitalocean as do
+import pulumi_kubernetes.helm.v3 as helm
+from pulumi_kubernetes.core.v1 import Namespace
+
+config = pulumi.Config()
+node_count = config.get_float("nodeCount") or 1
+
+
+# Create a Kubernetes Cluster in DigitalOcean
+cluster = do.KubernetesCluster(
+    "do-cluster",
+    region="sfo2",
+    version="1.16",
+    node_pool={
+        "name": "default",
+        "size": "s-1vcpu-2gb",
+        "nodeCount": node_count
+    }
+
+)
+
+# Use the Kubeconfig output to create a k8s provider
+k8s_provider = k8s.Provider("k8s", kubeconfig=cluster.kube_configs[0]["rawConfig"])
+
+# Create a namespace using the previous retrieved kubernetes provider
+namespace = Namespace(
+    "ns",
+    metadata={
+        "name": "nginx-ingress"
+    }, opts=pulumi.ResourceOptions(provider=k8s_provider))
+
+chart = helm.Chart(
+    "nginx-ingress",
+    helm.ChartOpts(namespace="nginx-ingress",
+    chart="nginx-ingress",
+    version="1.33.5",
+    fetch_opts=k8s.helm.v3.FetchOpts(
+        repo="https://kubernetes-charts.storage.googleapis.com/"
+    ),
+    values={
+        "controller": {
+            "replicaCount": 1,
+            "service": {
+                "type": "LoadBalancer"
+            },
+            "publishService": {
+                "enabled": True,
+            }
+        }
+    }), pulumi.ResourceOptions(provider=k8s_provider)
+)
 ```
 {{% /choosable %}}
 
 {{% choosable language go %}}
 ```go
-// Code will go here
+package main
+
+import (
+	"fmt"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v2"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create a Kubernetes cluster in DigitalOcean
+
+		cluster, err := digitalocean.NewKubernetesCluster(ctx, "do-cluster", &digitalocean.KubernetesClusterArgs{
+			Region: pulumi.String("sfo2"),
+			Version: pulumi.String("1.16"),
+			NodePool: &digitalocean.KubernetesClusterNodePoolArgs{
+				Name: pulumi.String("default"),
+				Size: pulumi.String("s-1vcpu-2gb"),
+			},
+		})
+
+		if err != nil {
+			return fmt.Errorf("Error creating cluster: ", err)
+		}
+
+		provider, err := kubernetes.NewProvider(ctx, "k8s", &kubernetes.ProviderArgs{
+			Kubeconfig: cluster.KubeConfigs.Index(pulumi.Int(0)).RawConfig(),
+		})
+
+		if err != nil {
+			return fmt.Errorf("Error instantating Kubernetes provider: ", err)
+		}
+
+		ns, err := corev1.NewNamespace(ctx, "nginx-ingress", &corev1.NamespaceArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("nginx-ingress"),
+			},
+		}, pulumi.Provider(provider))
+
+		if err != nil {
+			return fmt.Errorf("Error creating Kubernetes namespace: ", err)
+		}
+
+		_, err = helm.NewChart(ctx, "nginx-ingress", helm.ChartArgs{
+			Chart: pulumi.String("nginx-ingress"),
+			Version: pulumi.String("1.33.5"),
+			Namespace: ns.Metadata.Name().Elem(),
+			FetchArgs: &helm.FetchArgs{
+				Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
+			},
+			Values: pulumi.Map{
+				"controller": pulumi.Map{
+					"replicaCount": pulumi.Int(1),
+					"service": pulumi.Map{
+						"type": pulumi.String("LoadBalancer"),
+					},
+					"publishService": pulumi.Map{
+						"enabled": pulumi.Bool(true),
+					},
+				},
+			},
+		}, pulumi.Provider(provider))
+
+
+		return nil
+	})
+}
+
 ```
 {{% /choosable %}}
 
