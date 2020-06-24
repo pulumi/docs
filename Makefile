@@ -65,7 +65,13 @@ build:
 
 .PHONY: test
 test:
-	./scripts/check-links.sh
+	$(MAKE) check_links_local
+
+.PHONY: check_links_local
+check_links_local::
+	$(MAKE) banner
+	$(MAKE) ensure
+	./scripts/check-links.sh local
 
 .PHONY: ci_push
 ci_push::
@@ -79,12 +85,11 @@ ci_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
 	$(MAKE) build
-	./scripts/check-links.sh pull_request
+	$(MAKE) test
 	./scripts/run-pulumi.sh preview production
 
-.PHONY: ci_cron
-ci_cron::
+.PHONY: ci_schedule
+ci_schedule::
 	$(MAKE) banner
 	$(MAKE) ensure
-	$(MAKE) build
-	$(MAKE) test
+	./scripts/check-links.sh www
