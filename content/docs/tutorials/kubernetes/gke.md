@@ -1,10 +1,10 @@
 ---
-title: Google Kubernetes Engine (GKE) - Hello World!
+title: Google Kubernetes Engine (GKE) Tutorial
 meta_desc: How to launch a new Managed Kubernetes Cluster in Google Kubernetes Engine (GKE) on GCP.
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-gke/"]
 ---
 
-In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubernetes Engine (GKE) on GCP. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-ts-gke-hello-world) is available on GitHub.
+In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubernetes Engine (GKE) on Google Cloud Platform (GCP). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-ts-gke-hello-world) is available on GitHub.
 
 ## Prerequisites
 
