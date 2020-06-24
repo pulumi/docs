@@ -1,6 +1,6 @@
 ---
 title: "Introducing New Slimmer Docker Images"
-date: 2020-06-22T17:42:22-07:00
+date: 2020-06-25
 draft: false
 meta_image: meta.png
 meta_desc: "Introducing new language specific Docker images which are smaller and more flexible than before"
@@ -12,7 +12,7 @@ tags:
 ---
 
 One of the most exciting aspects of using Pulumi can also present some interesting engineering challenges.
-Pulumi supports three operating systems, multiple programming languages and almost 40 different providers which means creating tooling that works effortlessly across all possible user scenarios can often throw unexpected challenges our way.
+Pulumi supports three operating systems, multiple programming languages, and almost 40 different providers. This means creating tooling that works effortlessly across all possible user scenarios can often throw unexpected challenges our way.
 
 Nowhere are these challenges more prevalent than in the Pulumi Docker containers.
 
@@ -23,7 +23,7 @@ In this post, I'll examine why this container has grown to the size that it is, 
 
 ## Anatomy of a Pulumi Program
 
-Pulumi has the unique ability to interact with cloud providers across many boundaries. As an example, you might want to provision a Kubernetes cluster, then install a Helm chart onto that cluster. Pulumi lets you do that from a single "Pulumi program", here's an example:
+Pulumi has the unique ability to interact with cloud providers across many boundaries. As an example, you might want to provision a Kubernetes cluster and install a Helm chart onto that cluster. Pulumi lets you do that from a single "Pulumi program", here's an example:
 
 {{< chooser language "typescript,python,go" >}}
 
@@ -224,27 +224,26 @@ func main() {
 {{< /chooser >}}
 
 To achieve this level of interoperability, however, we need to have some dependencies installed locally. These are:
-
  - the Pulumi binary
  - the Pulumi language runtime for our chosen language
- - the language binary (e.g. node, python, DotNet or Go)
- - the languages' dependency management tool (e.g., npm, yarn, PipEnv etc.)
+ - the language binary (e.g., node, python, DotNet or Go)
+ - the languages' dependency management tool (e.g., npm, yarn, PipEnv, etc.)
  - the Helm CLI for rendering the Helm chart to a template that Pulumi can then install
 
 This list of requirements is already getting lengthy, and we're only provisioning one piece of infrastructure. Alongside this, if you're using this container in your CI/CD pipeline, you might _also_ need to acquire credentials during the pulumi up process. When you consider that Pulumi's users could be using _any_ of our featured programming languages as well as one or many of our supported cloud providers, you'll begin to imagine how many dependencies are needed.
 
-To provide a seamless experience for our users, our existing [pulumi/pulumi Docker image](https://github.com/pulumi/pulumi/tree/master/dist/pulumi) contains every single possible dependency a user might need when provisioning cloud infrastructure. We install everything from the [Helm CLI](https://helm.sh/) to the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest) to ensure you can use the container for any Pulumi program. Unfortunately, as we began to support more cloud providers and more languages, the size of the image has grown considerably.
+To provide a seamless experience for our users, our existing [pulumi/pulumi Docker image](https://github.com/pulumi/pulumi/tree/master/dist/pulumi) contains every possible dependency a user might need when provisioning cloud infrastructure. We install everything from the [Helm CLI](https://helm.sh/) to the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest) to ensure you can use the container for any Pulumi program. Unfortunately, as we began to support more cloud providers and more languages, the size of the image has grown considerably.
 
-We've received [fantastic feedback from the community](https://github.com/pulumi/pulumi/issues/3789) that while this Docker image meets their needs, providing smaller images is desirable.  Not only do our users want to see images that are smaller in size, they also want a less opinionated image which provides the flexibility and customization needed to suit the complex workflows people can create with Pulumi.
+We've received [fantastic feedback from the community](https://github.com/pulumi/pulumi/issues/3789) that while this Docker image meets their needs, providing smaller images is desirable.  Not only do our users want to see images that are smaller in size, but they also want a less opinionated image that provides the flexibility and customization needed to suit the complex workflows people can create with Pulumi.
 
 ## Introducing new Language Specific Images
 
 Starting from Pulumi version 2.4.0, we'll be [publishing new, slimmer images in the DockerHub](https://hub.docker.com/u/pulumi) that contain fewer dependencies and are focused on individual specific languages. We've built these images to be usable from day 1, and many of our pioneering users have been using them successfully.
-Each image contains everything you need to use Pulumi for your programming language of choice, including the Pulumi CLI, the Pulumi language runtime and the language binary and dependency manager).
+Each image contains everything you need to use Pulumi for your programming language of choice, including the Pulumi CLI, the Pulumi language runtime, and the language binary and dependency manager).
 
 ## Reduced Size
 
-Removing a lot of the dependencies and only installing a single language SDK means we've seen a dramatic decrease in the uncompressed size of the images:
+Removing many dependencies and only installing a single language SDK means we've seen a dramatic decrease in the uncompressed size of the images:
 
 As you can see below, the uncompressed images are up to six times smaller than the pulumi/pulumi container, which means a much smaller surface area and considerably quicker pull times.
 
@@ -274,8 +273,8 @@ If you're using one of our cloud backends, you'll need to specify your cloud pro
 docker run -e AWS_REGION=<AWS_REGION> -e AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY> -e AWS_SECRET_ACCESS_KEY=<AWS_ACCESS_SECRET_ACCESS_KEY> -v "$(pwd)":/pulumi/projects pulumi/pulumi-nodejs:2.4.0 /bin/bash -c "pulumi login s3://<s3-bucket> && npm ci && pulumi preview -s <stack-name>"
 ```
 
-Pulumi's intelligent plugin acquisition should find and detect the required resource plugins for you to run your Pulumi program.
-If you need to additional CLI tools like Helm as part of your workflow, we recommend installing these tools as part of your CI/CD pipeline or using these images as a base image to build your own Docker images. Here's an example of installing Helm in our Go-based Docker image.
+Pulumi's intelligent plugin acquisition should find and detect the required resource plugins so you can run your Pulumi program.
+If you need additional CLI tools like Helm as part of your workflow, we recommend installing these tools as part of your CI/CD pipeline or using these images as a base image to build your own Docker images. Here's an example of installing Helm in our Go-based Docker image.
 
 ## Multiple Base Images
 
@@ -284,9 +283,9 @@ The default operating system for these new images is [Debian Buster](https://www
 ## A Note about Alpine Linux
 
 Many users are fans of [Alpine Linux's](https://alpinelinux.org/) small, lightweight footprint and its Docker focused design; however, we've made the decision not to publish Alpine based images at this moment.
-Alpine's usage of of [musl libc](https://alpinelinux.org/posts/Alpine-Linux-has-switched-to-musl-libc.html) rather than [glibc](https://www.gnu.org/software/libc/) means that Pulumi doesn't run without adding additional dependencies, which made it hard to justify introducing this extra source of potential bugs into our already broad surface area.
+Alpine's usage of [musl libc](https://alpinelinux.org/posts/Alpine-Linux-has-switched-to-musl-libc.html) rather than [glibc](https://www.gnu.org/software/libc/) means that Pulumi doesn't run without adding additional dependencies, which made it hard to justify introducing this extra source of potential bugs into our already broad surface area. 
 If you're interested in building and maintaining an Alpine based Pulumi image, we have skeleton Docker files available in the [Pulumi GitHub repo](https://github.com/pulumi/pulumi/tree/master/docker).
 
 ## Give them a spin!
 
-The new images are available now from the [DockerHub](https://hub.docker.com/u/pulumi), we'd love for you to give them a try! As always, if you find any issues, don't hesitate to open an [issue](https://github.com/pulumi/pulumi/issues)!
+The new images are available from [DockerHub](https://hub.docker.com/u/pulumi); we'd love for you to give them a try! As always, if you find any issues, don't hesitate to open an [issue](https://github.com/pulumi/pulumi/issues)!
