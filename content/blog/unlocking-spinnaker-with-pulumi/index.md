@@ -25,6 +25,6 @@ Here's a brief overview of the plugin.
 
 Here's a demo of the plugin from the Spinnaker.Live conference.
 
-{{< youtube V3FxNh6KQkE >}} 
+{{< youtube V3FxNh6KQkE >}}
 
 If you have any questions or feedback about the plugin, please feel free to open an [issue](https://github.com/pulumi/spinnaker-preconfigured-job-plugin/issues) in the repo or join the conversation on our [Community Slack](https://slack.pulumi.com) as always.
