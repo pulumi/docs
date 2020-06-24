@@ -13,9 +13,6 @@ meta_desc: "Explore the InterconnectAttachment resource of the compute module, i
 Represents an InterconnectAttachment (VLAN attachment) resource. For more
 information, see Creating VLAN Attachments.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +84,11 @@ on_prem = gcp.compute.InterconnectAttachment("onPrem",
     interconnect="my-interconnect-id",
     router=foobar.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -98,6 +99,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
     router: foobar.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

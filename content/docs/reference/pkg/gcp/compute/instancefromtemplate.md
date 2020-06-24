@@ -21,7 +21,6 @@ This resource is specifically to create a compute instance from a given
 
 
 
-
 ## Create a InstanceFromTemplate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -4800,6 +4799,16 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="minnodecpus_csharp">
+<a href="#minnodecpus_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="nodeaffinities_csharp">
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
 </span> 
@@ -4842,6 +4851,16 @@ Changing this forces a new resource to be created.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minnodecpus_go">
+<a href="#minnodecpus_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4894,6 +4913,16 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="minnodecpus_nodejs">
+<a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="nodeaffinities_nodejs">
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span> 
@@ -4936,6 +4965,16 @@ Changing this forces a new resource to be created.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minnodecpus_python">
+<a href="#minnodecpus_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

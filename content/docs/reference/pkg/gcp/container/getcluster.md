@@ -12,7 +12,6 @@ meta_desc: "Explore the GetCluster function of the container module, including e
 
 Get info about a GKE cluster from its name and location.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
     public Output<string> NodePools { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ pulumi.export("instanceGroupUrls", my_cluster.instance_group_urls)
 pulumi.export("nodeConfig", my_cluster.node_configs)
 pulumi.export("nodePools", my_cluster.node_pools)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -117,6 +120,7 @@ export const instanceGroupUrls = myCluster.then(myCluster => myCluster.instanceG
 export const nodeConfig = myCluster.then(myCluster => myCluster.nodeConfigs);
 export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -9861,6 +9865,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="masterglobalaccessconfigs_csharp">
+<a href="#masterglobalaccessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Global<wbr>Access<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">List&lt;Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="masteripv4cidrblock_csharp">
 <a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
 </span> 
@@ -9923,6 +9937,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="masterglobalaccessconfigs_go">
+<a href="#masterglobalaccessconfigs_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Global<wbr>Access<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">[]Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9995,6 +10019,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="masterglobalaccessconfigs_nodejs">
+<a href="#masterglobalaccessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Global<wbr>Access<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="masteripv4cidrblock_nodejs">
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
 </span> 
@@ -10062,6 +10096,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="masterglobalaccessconfigs_python">
+<a href="#masterglobalaccessconfigs_python" style="color: inherit; text-decoration: inherit;">master<wbr>Global<wbr>Access<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">List[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="masteripv4cidrblock_python">
 <a href="#masteripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
 </span> 
@@ -10097,6 +10141,92 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusterprivateclusterconfigmasterglobalaccessconfig">Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPrivateClusterConfigMasterGlobalAccessConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#GetClusterPrivateClusterConfigMasterGlobalAccessConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterPrivateClusterConfigMasterGlobalAccessConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

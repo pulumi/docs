@@ -13,19 +13,17 @@ meta_desc: "Explore the DataTransferConfig resource of the bigquery module, incl
 Represents a data transfer configuration. A transfer configuration
 contains all metadata needed to perform a data transfer.
 
-
 To get more information about Config, see:
 
 * [API documentation](https://cloud.google.com/bigquery/docs/reference/datatransfer/rest/v1/projects.locations.transferConfigs/create)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/bigquery/docs/reference/datatransfer/rest/)
 
-
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Scheduled Query
+### Bigquerydatatransfer Config Scheduled Query
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -57,7 +55,7 @@ class MyStack : Stack
             DestinationDatasetId = myDataset.DatasetId,
             Params = 
             {
-                { "destination_table_name_template", "my-table" },
+                { "destination_table_name_template", "my_table" },
                 { "write_disposition", "WRITE_APPEND" },
                 { "query", "SELECT name FROM tabl WHERE x = 'y'" },
             },
@@ -66,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,14 +92,16 @@ query_config = gcp.bigquery.DataTransferConfig("queryConfig",
     schedule="first sunday of quarter 00:00",
     destination_dataset_id=my_dataset.dataset_id,
     params={
-        "destination_table_name_template": "my-table",
+        "destination_table_name_template": "my_table",
         "write_disposition": "WRITE_APPEND",
         "query": "SELECT name FROM tabl WHERE x = 'y'",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -123,12 +124,13 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     schedule: "first sunday of quarter 00:00",
     destinationDatasetId: myDataset.datasetId,
     params: {
-        destination_table_name_template: "my-table",
+        destination_table_name_template: "my_table",
         write_disposition: "WRITE_APPEND",
         query: "SELECT name FROM tabl WHERE x = 'y'",
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

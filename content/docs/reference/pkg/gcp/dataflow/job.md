@@ -13,8 +13,6 @@ meta_desc: "Explore the Job resource of the dataflow module, including examples,
 Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine. For more information see
 the official documentation for
 [Beam](https://beam.apache.org) and [Dataflow](https://cloud.google.com/dataflow/).
-
-
 ## Note on "destroy" / "apply"
 
 There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -94,9 +94,11 @@ big_data_job = gcp.dataflow.Job("bigDataJob",
     temp_gcs_location="gs://my-bucket/tmp_dir",
     template_gcs_path="gs://my-bucket/templates/template_file")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -110,6 +112,7 @@ const bigDataJob = new gcp.dataflow.Job("big_data_job", {
     templateGcsPath: "gs://my-bucket/templates/template_file",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

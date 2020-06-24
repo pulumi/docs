@@ -13,11 +13,9 @@ meta_desc: "Explore the VPNGateway resource of the compute module, including exa
 Represents a VPN gateway running in GCP. This virtual device is managed
 by Google, but used only by you.
 
-
 To get more information about VpnGateway, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/targetVpnGateways)
-
 
 {{% examples %}}
 ## Example Usage
@@ -80,6 +78,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -154,6 +153,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -188,9 +188,11 @@ route1 = gcp.compute.Route("route1",
     priority=1000,
     next_hop_vpn_tunnel=tunnel1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -227,6 +229,7 @@ const route1 = new gcp.compute.Route("route1", {
     nextHopVpnTunnel: tunnel1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

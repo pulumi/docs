@@ -18,7 +18,6 @@ To get more information about Reservation, see:
 * How-to Guides
     * [Introduction to Reservations](https://cloud.google.com/bigquery/docs/reservations-intro)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ reservation = gcp.bigquery.Reservation("reservation",
     slot_capacity=0,
     ignore_idle_slots=False)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -93,6 +96,7 @@ const reservation = new gcp.bigquery.Reservation("reservation", {
     ignoreIdleSlots: false,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

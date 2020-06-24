@@ -12,13 +12,11 @@ meta_desc: "Explore the SshPublicKey resource of the oslogin module, including e
 
 The SSH public key information associated with a Google account.
 
-
 To get more information about SSHPublicKey, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/oslogin/rest)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/oslogin)
-
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ cache = gcp.oslogin.SshPublicKey("cache",
     user=me.email,
     key=(lambda path: open(path).read())("path/to/id_rsa.pub"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -75,6 +76,7 @@ const cache = new gcp.oslogin.SshPublicKey("cache", {
     key: fs.readFileSync("path/to/id_rsa.pub"),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

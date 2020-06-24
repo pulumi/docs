@@ -18,7 +18,6 @@ To get more information about Repository, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/artifact-registry/docs/overview)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +61,11 @@ my_repo = gcp.artifactregistry.Repository("my-repo",
     description="example docker repository",
     format="DOCKER")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -75,6 +77,7 @@ const my_repo = new gcp.artifactregistry.Repository("my-repo", {
     format: "DOCKER",
 });
 ```
+
 {{% /example %}}
 
 ### Artifact Registry Repository Iam
@@ -110,6 +113,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -135,9 +139,11 @@ test_iam = gcp.artifactregistry.RepositoryIamMember("test-iam",
     role="roles/artifactregistry.reader",
     member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -159,6 +165,7 @@ const test_iam = new gcp.artifactregistry.RepositoryIamMember("test-iam", {
     member: pulumi.interpolate`serviceAccount:${test_account.email}`,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

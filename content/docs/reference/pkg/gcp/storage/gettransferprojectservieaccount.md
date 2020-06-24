@@ -12,7 +12,6 @@ meta_desc: "Explore the GetTransferProjectServieAccount function of the storage 
 
 Use this data source to retrieve Storage Transfer service account for this project
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
     public Output<string> DefaultAccount { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +49,11 @@ import pulumi_gcp as gcp
 default = gcp.storage.get_transfer_project_servie_account()
 pulumi.export("defaultAccount", default.email)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -59,6 +61,7 @@ import * as gcp from "@pulumi/gcp";
 const default = gcp.storage.getTransferProjectServieAccount({});
 export const defaultAccount = _default.then(_default => _default.email);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

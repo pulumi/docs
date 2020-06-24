@@ -13,13 +13,11 @@ meta_desc: "Explore the Subscription resource of the pubsub module, including ex
 A named resource representing the stream of messages from a single,
 specific topic, to be delivered to the subscribing application.
 
-
 To get more information about Subscription, see:
 
 * [API documentation](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.subscriptions)
 * How-to Guides
     * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
-
 
 {{% examples %}}
 ## Example Usage
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,9 +90,11 @@ example_subscription = gcp.pubsub.Subscription("exampleSubscription",
     project="subscription-project",
     topic=example_topic.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -103,6 +105,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
     topic: exampleTopic.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

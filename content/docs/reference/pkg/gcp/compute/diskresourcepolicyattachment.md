@@ -16,10 +16,6 @@ which will be applied to this disk for scheduling snapshot creation.
 > **Note:** This resource does not support regional disks (`gcp.compute.RegionDisk`). For regional disks, please refer to the `gcp.compute.RegionDiskResourcePolicyAttachment` resource.
 
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
-
 
 ## Create a DiskResourcePolicyAttachment Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}

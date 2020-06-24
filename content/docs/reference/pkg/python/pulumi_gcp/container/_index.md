@@ -701,6 +701,12 @@ to private clusters, when <code class="docutils literal notranslate"><span class
 creating a private endpoint on the cluster. In a private cluster, nodes only
 have RFC 1918 private addresses and communicate with the master’s private
 endpoint via private networking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterGlobalAccessConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP range in CIDR notation to use for
 the hosted master network. This range will be used for assigning private IP
 addresses to the cluster master(s) and the ILB VIP. This range must not overlap
@@ -1475,6 +1481,12 @@ to private clusters, when <code class="docutils literal notranslate"><span class
 creating a private endpoint on the cluster. In a private cluster, nodes only
 have RFC 1918 private addresses and communicate with the master’s private
 endpoint via private networking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterGlobalAccessConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP range in CIDR notation to use for
 the hosted master network. This range will be used for assigning private IP
 addresses to the cluster master(s) and the ILB VIP. This range must not overlap
@@ -2229,6 +2241,12 @@ to private clusters, when <code class="docutils literal notranslate"><span class
 creating a private endpoint on the cluster. In a private cluster, nodes only
 have RFC 1918 private addresses and communicate with the master’s private
 endpoint via private networking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterGlobalAccessConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">masterIpv4CidrBlock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP range in CIDR notation to use for
 the hosted master network. This range will be used for assigning private IP
 addresses to the cluster master(s) and the ILB VIP. This range must not overlap

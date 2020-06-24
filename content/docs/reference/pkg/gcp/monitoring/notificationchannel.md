@@ -27,14 +27,12 @@ A list of supported channels per project the `list` endpoint can be
 accessed programmatically or through the api explorer at  https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list .
 This provides the channel type and all of the required labels that must be passed.
 
-
 To get more information about NotificationChannel, see:
 
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels)
 * How-to Guides
     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -63,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,9 +104,11 @@ basic = gcp.monitoring.NotificationChannel("basic",
     },
     type="email")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -119,6 +121,7 @@ const basic = new gcp.monitoring.NotificationChannel("basic", {
     type: "email",
 });
 ```
+
 {{% /example %}}
 
 ### Notification Channel Sensitive
@@ -148,6 +151,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -169,9 +173,11 @@ default = gcp.monitoring.NotificationChannel("default",
     },
     type="slack")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -187,6 +193,7 @@ const defaultNotificationChannel = new gcp.monitoring.NotificationChannel("defau
     type: "slack",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

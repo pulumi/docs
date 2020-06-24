@@ -19,9 +19,6 @@ To get more information about PerInstanceConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/instance-groups/stateful-migs#per-instance_configs)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a PerInstanceConfig Resource {#create}
@@ -33,7 +30,7 @@ To get more information about PerInstanceConfig, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#PerInstanceConfig">PerInstanceConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_group_manager=None<span class="p">, </span>minimal_action=None<span class="p">, </span>most_disruptive_allowed_action=None<span class="p">, </span>name=None<span class="p">, </span>preserved_state=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#PerInstanceConfig">PerInstanceConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_group_manager=None<span class="p">, </span>minimal_action=None<span class="p">, </span>most_disruptive_allowed_action=None<span class="p">, </span>name=None<span class="p">, </span>preserved_state=None<span class="p">, </span>project=None<span class="p">, </span>remove_instance_state_on_destroy=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -293,6 +290,19 @@ Default is `REPLACE`. Possible values are:
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="removeinstancestateondestroy_csharp">
+<a href="#removeinstancestateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -386,6 +396,19 @@ Default is `REPLACE`. Possible values are:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="removeinstancestateondestroy_go">
+<a href="#removeinstancestateondestroy_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
 
 </dl>
@@ -483,6 +506,19 @@ Default is `REPLACE`. Possible values are:
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="removeinstancestateondestroy_nodejs">
+<a href="#removeinstancestateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -576,6 +612,19 @@ Default is `REPLACE`. Possible values are:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remove_instance_state_on_destroy_python">
+<a href="#remove_instance_state_on_destroy_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>instance_<wbr>state_<wbr>on_<wbr>destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
 
 </dl>
@@ -676,7 +725,7 @@ Get an existing PerInstanceConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>instance_group_manager=None<span class="p">, </span>minimal_action=None<span class="p">, </span>most_disruptive_allowed_action=None<span class="p">, </span>name=None<span class="p">, </span>preserved_state=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>instance_group_manager=None<span class="p">, </span>minimal_action=None<span class="p">, </span>most_disruptive_allowed_action=None<span class="p">, </span>name=None<span class="p">, </span>preserved_state=None<span class="p">, </span>project=None<span class="p">, </span>remove_instance_state_on_destroy=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -869,6 +918,19 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_removeinstancestateondestroy_csharp">
+<a href="#state_removeinstancestateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span> 
@@ -960,6 +1022,19 @@ Default is `REPLACE`. Possible values are:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_removeinstancestateondestroy_go">
+<a href="#state_removeinstancestateondestroy_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,6 +1134,19 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_removeinstancestateondestroy_nodejs">
+<a href="#state_removeinstancestateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span> 
@@ -1150,6 +1238,19 @@ Default is `REPLACE`. Possible values are:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remove_instance_state_on_destroy_python">
+<a href="#state_remove_instance_state_on_destroy_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>instance_<wbr>state_<wbr>on_<wbr>destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

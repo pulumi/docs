@@ -36,9 +36,6 @@ certificates may entail some downtime while the certificate provisions.
 
 In conclusion: Be extremely cautious.
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a ManagedSslCertificate Resource {#create}

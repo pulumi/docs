@@ -20,9 +20,6 @@ To get more information about MachineImage, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/machine-images)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a MachineImage Resource {#create}

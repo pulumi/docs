@@ -12,13 +12,11 @@ meta_desc: "Explore the Node resource of the tpu module, including examples, inp
 
 A Cloud TPU instance.
 
-
 To get more information about Node, see:
 
 * [API documentation](https://cloud.google.com/tpu/docs/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/tpu/docs/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ tpu = gcp.tpu.Node("tpu",
     tensorflow_version=available.versions[0],
     cidr_block="10.2.0.0/29")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -79,6 +80,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     cidrBlock: "10.2.0.0/29",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

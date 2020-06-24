@@ -12,7 +12,6 @@ meta_desc: "Explore the BackendBucketSignedUrlKey resource of the compute module
 
 A key for signing Cloud CDN signed URLs for BackendBuckets.
 
-
 To get more information about BackendBucketSignedUrlKey, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/backendBuckets)
@@ -21,7 +20,6 @@ To get more information about BackendBucketSignedUrlKey, see:
 
 > **Warning:** All arguments including `key_value` will be stored in the raw
 state as plain-text.
-
 
 {{% examples %}}
 ## Example Usage
@@ -56,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +94,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -111,9 +111,11 @@ backend_key = gcp.compute.BackendBucketSignedUrlKey("backendKey",
     key_value="pPsVemX8GM46QVeezid6Rw==",
     backend_bucket=test_backend.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -129,6 +131,7 @@ const backendKey = new gcp.compute.BackendBucketSignedUrlKey("backendKey", {
     backendBucket: testBackend.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

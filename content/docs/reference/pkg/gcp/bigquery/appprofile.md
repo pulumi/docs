@@ -14,11 +14,6 @@ App profile is a configuration object describing how Cloud Bigtable should treat
 
 
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
-
-
 ## Create a AppProfile Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -15,13 +15,11 @@ establish BGP peering. This information must specify the peer ASN
 and either the interface name, IP address, or peer IP address.
 Please refer to RFC4273.
 
-
 To get more information about RouterBgpPeer, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/routers)
 * How-to Guides
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +93,11 @@ peer = gcp.compute.RouterPeer("peer",
     region="us-central1",
     router="my-router")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -109,6 +111,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     router: "my-router",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

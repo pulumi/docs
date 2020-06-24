@@ -16,8 +16,6 @@ target of a network load balancer (Forwarding Rule). For more information see
 documentation](https://cloud.google.com/compute/docs/load-balancing/network/target-pools)
 and [API](https://cloud.google.com/compute/docs/reference/latest/targetPools).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,9 +109,11 @@ default_target_pool = gcp.compute.TargetPool("defaultTargetPool",
     ],
     health_checks=[default_http_health_check.name])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -129,6 +131,7 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {
     healthChecks: [defaultHttpHealthCheck.name],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

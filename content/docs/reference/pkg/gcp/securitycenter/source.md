@@ -15,13 +15,11 @@ source is an entity or a mechanism that can produce a finding. A source is
 like a container of findings that come from the same scanner, logger,
 monitor, etc.
 
-
 To get more information about Source, see:
 
 * [API documentation](https://cloud.google.com/security-command-center/docs/reference/rest/v1beta1/organizations.sources)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,9 +84,11 @@ custom_source = gcp.securitycenter.Source("customSource",
     display_name="My Source",
     organization="123456789")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -97,6 +99,7 @@ const customSource = new gcp.securitycenter.Source("custom_source", {
     organization: "123456789",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

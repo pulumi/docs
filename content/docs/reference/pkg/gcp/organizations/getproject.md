@@ -14,7 +14,6 @@ Use this data source to get project details.
 For more information see
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
     public Output<string> ProjectNumber { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +51,11 @@ import pulumi_gcp as gcp
 project = gcp.organizations.get_project()
 pulumi.export("projectNumber", project.number)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -61,6 +63,7 @@ import * as gcp from "@pulumi/gcp";
 const project = gcp.organizations.getProject({});
 export const projectNumber = project.then(project => project.number);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -18,9 +18,6 @@ To get more information about WebApp, see:
 * How-to Guides
     * [Official Documentation](https://firebase.google.com/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a WebApp Resource {#create}

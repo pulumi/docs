@@ -17,7 +17,6 @@ for a project.
 For more information, see,
 [the Project API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/projects/setDefaultNetworkTier).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +53,11 @@ import pulumi_gcp as gcp
 
 default = gcp.compute.ProjectDefaultNetworkTier("default", network_tier="PREMIUM")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -64,6 +66,7 @@ const defaultProjectDefaultNetworkTier = new gcp.compute.ProjectDefaultNetworkTi
     networkTier: "PREMIUM",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

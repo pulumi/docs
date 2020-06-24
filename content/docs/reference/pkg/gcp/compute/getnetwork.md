@@ -12,7 +12,6 @@ meta_desc: "Explore the GetNetwork function of the compute module, including exa
 
 Get a network within GCE from its name.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_gcp as gcp
 
 my_network = gcp.compute.get_network(name="default-us-east1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -59,6 +61,7 @@ const my_network = pulumi.output(gcp.compute.getNetwork({
     name: "default-us-east1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

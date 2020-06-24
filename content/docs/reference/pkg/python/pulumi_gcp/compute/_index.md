@@ -3397,7 +3397,10 @@ If an unsupported value is requested, the error message will list
 the supported values for the caller’s project.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>resource_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Resource policies applied to this disk for automatic snapshot creations.</p></li>
+<li><p><strong>resource_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Resource policies applied to this disk for automatic snapshot creations. ~&gt;<strong>NOTE</strong> This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html">‘google_compute_disk_resource_policy_attachment’</a>
+to allow for updating the resource policy attached to the disk.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of the persistent disk, specified in GB. You can specify this
 field when creating a persistent disk using the <code class="docutils literal notranslate"><span class="pre">image</span></code> or
 <code class="docutils literal notranslate"><span class="pre">snapshot</span></code> parameter, or specify it alone to create an empty
@@ -3580,7 +3583,10 @@ If it is not provided, the provider project is used.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Disk.resource_policies">
 <code class="sig-name descname">resource_policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Disk.resource_policies" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource policies applied to this disk for automatic snapshot creations.</p>
+<dd><p>Resource policies applied to this disk for automatic snapshot creations. ~&gt;<strong>NOTE</strong> This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html">‘google_compute_disk_resource_policy_attachment’</a>
+to allow for updating the resource policy attached to the disk.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3741,7 +3747,11 @@ If an unsupported value is requested, the error message will list
 the supported values for the caller’s project.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>resource_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Resource policies applied to this disk for automatic snapshot creations.</p></li>
+<li><p><strong>resource_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Resource policies applied to this disk for automatic snapshot creations. ~&gt;<strong>NOTE</strong> This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html">‘google_compute_disk_resource_policy_attachment’</a>
+to allow for updating the resource policy attached to the disk.</p>
+</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of the persistent disk, specified in GB. You can specify this
 field when creating a persistent disk using the <code class="docutils literal notranslate"><span class="pre">image</span></code> or
@@ -4859,7 +4869,7 @@ of target virtual machines to forward a packet to if it matches the given
 <span class="n">rigm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionInstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;rigm&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;internal-glb&quot;</span><span class="p">,</span>
@@ -6857,7 +6867,7 @@ balancing.</p>
     <span class="p">}])</span>
 <span class="n">igm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;igm&quot;</span><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;internal-glb&quot;</span><span class="p">,</span>
@@ -9814,6 +9824,7 @@ field is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
@@ -10132,6 +10143,7 @@ this configuration option are detailed below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
@@ -10410,6 +10422,7 @@ field is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
@@ -10597,6 +10610,7 @@ Changing this forces a new resource to be created.</p></li>
 <p>The <strong>scheduling</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -10720,6 +10734,7 @@ Changing this forces a new resource to be created.</p></li>
 <p>The <strong>scheduling</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -10806,8 +10821,8 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <span class="n">webservers</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;webservers&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test instance group&quot;</span><span class="p">,</span>
     <span class="n">instances</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
-        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test2&quot;</span><span class="p">][</span><span class="s2">&quot;self_link&quot;</span><span class="p">],</span>
+        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="n">google_compute_instance</span><span class="p">[</span><span class="s2">&quot;test2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">],</span>
     <span class="n">named_port</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
@@ -10840,7 +10855,7 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
     <span class="p">}])</span>
 <span class="n">staging_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">InstanceGroup</span><span class="p">(</span><span class="s2">&quot;stagingGroup&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-c&quot;</span><span class="p">,</span>
-    <span class="n">instances</span><span class="o">=</span><span class="p">[</span><span class="n">staging_vm</span><span class="o">.</span><span class="n">self_link</span><span class="p">],</span>
+    <span class="n">instances</span><span class="o">=</span><span class="p">[</span><span class="n">staging_vm</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
     <span class="n">named_port</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
@@ -10869,7 +10884,7 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional textual description of the instance
 group.</p></li>
 <li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name which the port will be mapped to.</p></li>
 <li><p><strong>named_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The named port configuration. See the section below
@@ -10900,7 +10915,7 @@ group.</p>
 <dt id="pulumi_gcp.compute.InstanceGroup.instances">
 <code class="sig-name descname">instances</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroup.instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.</p>
 </dd></dl>
 
@@ -10969,7 +10984,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional textual description of the instance
 group.</p></li>
 <li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name which the port will be mapped to.</p></li>
 <li><p><strong>named_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The named port configuration. See the section below
@@ -12609,6 +12624,7 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
 terminated by a user). This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
@@ -12866,6 +12882,7 @@ this configuration option are detailed below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
 terminated by a user). This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
@@ -13093,6 +13110,7 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticRestart</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
 terminated by a user). This defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minNodeCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeAffinities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
@@ -14626,7 +14644,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.NetworkPeering">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">NetworkPeering</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_custom_routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_custom_routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">NetworkPeering</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_custom_routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_subnet_routes_with_public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_custom_routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_subnet_routes_with_public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a network peering within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/vpc/vpc-peering">the official documentation</a>
 and
@@ -14655,7 +14673,9 @@ to be functional.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>export_custom_routes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to export the custom routes to the peer network. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>export_subnet_routes_with_public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (<a class="reference external" href="https://en.wikipedia.org/wiki/IPv4#Special_addresses">https://en.wikipedia.org/wiki/IPv4#Special_addresses</a>) are always exported to peers and are not controlled by this field.</p></li>
 <li><p><strong>import_custom_routes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to export the custom routes from the peer network. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>import_subnet_routes_with_public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (<a class="reference external" href="https://en.wikipedia.org/wiki/IPv4#Special_addresses">https://en.wikipedia.org/wiki/IPv4#Special_addresses</a>) are always imported from peers and are not controlled by this field.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the peering.</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary network of the peering.</p></li>
 <li><p><strong>peer_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The peer network in the peering. The peer network
@@ -14670,9 +14690,21 @@ may belong to a different project.</p></li>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.compute.NetworkPeering.export_subnet_routes_with_public_ip">
+<code class="sig-name descname">export_subnet_routes_with_public_ip</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering.export_subnet_routes_with_public_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (<a class="reference external" href="https://en.wikipedia.org/wiki/IPv4#Special_addresses">https://en.wikipedia.org/wiki/IPv4#Special_addresses</a>) are always exported to peers and are not controlled by this field.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.compute.NetworkPeering.import_custom_routes">
 <code class="sig-name descname">import_custom_routes</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering.import_custom_routes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to export the custom routes from the peer network. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.NetworkPeering.import_subnet_routes_with_public_ip">
+<code class="sig-name descname">import_subnet_routes_with_public_ip</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering.import_subnet_routes_with_public_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (<a class="reference external" href="https://en.wikipedia.org/wiki/IPv4#Special_addresses">https://en.wikipedia.org/wiki/IPv4#Special_addresses</a>) are always imported from peers and are not controlled by this field.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -14709,7 +14741,7 @@ may belong to a different project.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.NetworkPeering.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_custom_routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_custom_routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_details</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_custom_routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_subnet_routes_with_public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_custom_routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_subnet_routes_with_public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_details</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkPeering resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -14719,7 +14751,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>export_custom_routes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to export the custom routes to the peer network. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>export_subnet_routes_with_public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (<a class="reference external" href="https://en.wikipedia.org/wiki/IPv4#Special_addresses">https://en.wikipedia.org/wiki/IPv4#Special_addresses</a>) are always exported to peers and are not controlled by this field.</p></li>
 <li><p><strong>import_custom_routes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to export the custom routes from the peer network. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>import_subnet_routes_with_public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (<a class="reference external" href="https://en.wikipedia.org/wiki/IPv4#Special_addresses">https://en.wikipedia.org/wiki/IPv4#Special_addresses</a>) are always imported from peers and are not controlled by this field.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the peering.</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary network of the peering.</p></li>
 <li><p><strong>peer_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The peer network in the peering. The peer network
@@ -14933,10 +14967,9 @@ the provider to delete and recreate the node group.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
-<span class="n">central1a</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
 <span class="n">soletenant_tmpl</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;soletenant-tmpl&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;n1-node-96-624&quot;</span><span class="p">)</span>
 <span class="n">nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeGroup</span><span class="p">(</span><span class="s2">&quot;nodes&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example google_compute_node_group for the Google Provider&quot;</span><span class="p">,</span>
@@ -14947,10 +14980,9 @@ the provider to delete and recreate the node group.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
-<span class="n">central1a</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
 <span class="n">soletenant_tmpl</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;soletenant-tmpl&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;n1-node-96-624&quot;</span><span class="p">)</span>
 <span class="n">nodes</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeGroup</span><span class="p">(</span><span class="s2">&quot;nodes&quot;</span><span class="p">,</span>
     <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example google_compute_node_group for the Google Provider&quot;</span><span class="p">,</span>
@@ -15161,7 +15193,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.NodeTemplate">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">NodeTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_affinity_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_type_flexibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_binding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">NodeTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_overcommit_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_affinity_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_type_flexibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_binding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a NodeTemplate resource. Node templates specify properties
 for creating sole-tenant nodes, such as node type, vCPU and memory
 requirements, node affinity labels, and region.</p>
@@ -15177,10 +15209,9 @@ requirements, node affinity labels, and region.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
 
-<span class="n">central1a</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
 <span class="n">template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">,</span>
-    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;n1-node-96-624&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -15189,7 +15220,7 @@ requirements, node affinity labels, and region.</p>
 <span class="n">central1a</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_node_types</span><span class="p">(</span><span class="n">zone</span><span class="o">=</span><span class="s2">&quot;us-central1-a&quot;</span><span class="p">)</span>
 <span class="n">template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">node_type</span><span class="o">=</span><span class="n">central1a</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;n1-node-96-624&quot;</span><span class="p">,</span>
     <span class="n">node_affinity_labels</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;baz&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -15203,6 +15234,7 @@ requirements, node affinity labels, and region.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cpu_overcommit_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CPU overcommit. Default value: “NONE” Possible values: [“ENABLED”, “NONE”]</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional textual description of the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource.</p></li>
 <li><p><strong>node_affinity_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to use for node affinity, which will be used in
@@ -15243,6 +15275,12 @@ such as physical sockets or cores, to avoid the need for
 additional licenses when maintenance occurs. However, VMs on such
 nodes will experience outages while maintenance is applied.</p></li>
 </ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.NodeTemplate.cpu_overcommit_type">
+<code class="sig-name descname">cpu_overcommit_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.cpu_overcommit_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>CPU overcommit. Default value: “NONE” Possible values: [“ENABLED”, “NONE”]</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.NodeTemplate.creation_timestamp">
 <code class="sig-name descname">creation_timestamp</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.creation_timestamp" title="Permalink to this definition">¶</a></dt>
@@ -15332,7 +15370,7 @@ nodes will experience outages while maintenance is applied.</p></li>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.NodeTemplate.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_affinity_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_type_flexibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_binding</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_overcommit_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_affinity_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_type_flexibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_binding</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NodeTemplate resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -15341,6 +15379,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cpu_overcommit_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CPU overcommit. Default value: “NONE” Possible values: [“ENABLED”, “NONE”]</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional textual description of the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource.</p></li>
@@ -15735,7 +15774,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.PerInstanceConfig">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">PerInstanceConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group_manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimal_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_disruptive_allowed_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserved_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.PerInstanceConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">PerInstanceConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group_manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimal_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_disruptive_allowed_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserved_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_instance_state_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.PerInstanceConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>A config defined for a single managed instance that belongs to an instance group manager. It preserves the instance name
 across instance group manager operations and can define stateful disks or metadata that are unique to the instance.</p>
 <p>To get more information about PerInstanceConfig, see:</p>
@@ -15783,6 +15822,9 @@ Default is <code class="docutils literal notranslate"><span class="pre">REPLACE<
 <li><p><strong>preserved_state</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The preserved state for this instance.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>remove_instance_state_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will <em>not</em> immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.</p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone where the containing instance group manager is located</p></li>
 </ul>
 </dd>
@@ -15872,6 +15914,14 @@ If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.compute.PerInstanceConfig.remove_instance_state_on_destroy">
+<code class="sig-name descname">remove_instance_state_on_destroy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.PerInstanceConfig.remove_instance_state_on_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will <em>not</em> immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.compute.PerInstanceConfig.zone">
 <code class="sig-name descname">zone</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.PerInstanceConfig.zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Zone where the containing instance group manager is located</p>
@@ -15879,7 +15929,7 @@ If it is not provided, the provider project is used.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.PerInstanceConfig.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group_manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimal_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_disruptive_allowed_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserved_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.PerInstanceConfig.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group_manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimal_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_disruptive_allowed_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserved_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_instance_state_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.PerInstanceConfig.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PerInstanceConfig resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -15919,6 +15969,9 @@ Default is <code class="docutils literal notranslate"><span class="pre">REPLACE<
 <li><p><strong>preserved_state</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The preserved state for this instance.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
+<li><p><strong>remove_instance_state_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will <em>not</em> immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.</p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone where the containing instance group manager is located</p></li>
 </ul>
 </dd>
@@ -16873,7 +16926,7 @@ machines that will serve traffic for load balancing.</p>
 <span class="n">rigm</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionInstanceGroupManager</span><span class="p">(</span><span class="s2">&quot;rigm&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">self_link</span><span class="p">,</span>
+        <span class="s2">&quot;instanceTemplate&quot;</span><span class="p">:</span> <span class="n">instance_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">base_instance_name</span><span class="o">=</span><span class="s2">&quot;internal-glb&quot;</span><span class="p">,</span>
@@ -19825,7 +19878,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.RegionPerInstanceConfig">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionPerInstanceConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimal_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_disruptive_allowed_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserved_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_instance_group_manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionPerInstanceConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionPerInstanceConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimal_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_disruptive_allowed_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserved_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_instance_group_manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_instance_state_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionPerInstanceConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>A config defined for a single managed instance that belongs to an instance group manager. It preserves the instance name
 across instance group manager operations and can define stateful disks or metadata that are unique to the instance.
 This resource works with regional instance group managers.</p>
@@ -19875,6 +19928,9 @@ Default is <code class="docutils literal notranslate"><span class="pre">REPLACE<
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where the containing instance group manager is located</p></li>
 <li><p><strong>region_instance_group_manager</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region instance group manager this instance config is part of.</p></li>
+<li><p><strong>remove_instance_state_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will <em>not</em> immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.</p></li>
 </ul>
 </dd>
 </dl>
@@ -19968,9 +20024,17 @@ If it is not provided, the provider project is used.</p>
 <dd><p>The region instance group manager this instance config is part of.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.RegionPerInstanceConfig.remove_instance_state_on_destroy">
+<code class="sig-name descname">remove_instance_state_on_destroy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionPerInstanceConfig.remove_instance_state_on_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will <em>not</em> immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_gcp.compute.RegionPerInstanceConfig.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimal_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_disruptive_allowed_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserved_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_instance_group_manager</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionPerInstanceConfig.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimal_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">most_disruptive_allowed_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserved_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_instance_group_manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_instance_state_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionPerInstanceConfig.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegionPerInstanceConfig resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -20011,6 +20075,9 @@ Default is <code class="docutils literal notranslate"><span class="pre">REPLACE<
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where the containing instance group manager is located</p></li>
 <li><p><strong>region_instance_group_manager</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region instance group manager this instance config is part of.</p></li>
+<li><p><strong>remove_instance_state_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will <em>not</em> immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.</p></li>
 </ul>
 </dd>
 </dl>
@@ -20380,7 +20447,7 @@ forwarding rules to route incoming HTTP requests to a URL map.</p>
     <span class="p">})</span>
 <span class="n">default_region_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">RegionTargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultRegionTargetHttpProxy&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
-    <span class="n">url_map</span><span class="o">=</span><span class="n">default_region_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+    <span class="n">url_map</span><span class="o">=</span><span class="n">default_region_url_map</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -28177,7 +28244,7 @@ forwarding rule to route incoming HTTP requests to a URL map.</p>
     <span class="s2">&quot;httpsRedirect&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="s2">&quot;stripQuery&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">})</span>
-<span class="n">default_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetHttpProxy&quot;</span><span class="p">,</span> <span class="n">url_map</span><span class="o">=</span><span class="n">default_url_map</span><span class="o">.</span><span class="n">self_link</span><span class="p">)</span>
+<span class="n">default_target_http_proxy</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">TargetHttpProxy</span><span class="p">(</span><span class="s2">&quot;defaultTargetHttpProxy&quot;</span><span class="p">,</span> <span class="n">url_map</span><span class="o">=</span><span class="n">default_url_map</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

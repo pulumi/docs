@@ -19,13 +19,11 @@ to enable them to be added separately.
 the service perimeter resource must have a `lifecycle` block with `ignore_changes = [status[0].resources]` so
 they don't fight over which resources should be in the policy.
 
-
 To get more information about ServicePerimeterResource, see:
 
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.servicePerimeters)
 * How-to Guides
     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
-
 
 {{% examples %}}
 ## Example Usage
@@ -67,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,9 +90,11 @@ service_perimeter_resource_service_perimeter_resource = gcp.accesscontextmanager
     perimeter_name=service_perimeter_resource_service_perimeter.name,
     resource="projects/987654321")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -114,6 +115,7 @@ const service_perimeter_resourceServicePerimeterResource = new gcp.accesscontext
     resource: "projects/987654321",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

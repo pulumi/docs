@@ -15,8 +15,6 @@ See [the official documentation](https://cloud.google.com/storage/docs/key-terms
 and
 [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -73,9 +73,11 @@ import pulumi_gcp as gcp
 picture = gcp.storage.get_bucket_object(bucket="image-store",
     name="folder/butterfly01.jpg")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -85,6 +87,7 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
     name: "folder/butterfly01.jpg",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

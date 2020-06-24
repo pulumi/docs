@@ -13,13 +13,11 @@ meta_desc: "Explore the GlobalAddress resource of the compute module, including 
 Represents a Global Address resource. Global addresses are used for
 HTTP(S) load balancing.
 
-
 To get more information about GlobalAddress, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/globalAddresses)
 * How-to Guides
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address)
-
 
 {{% examples %}}
 ## Example Usage
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,15 +54,18 @@ import pulumi_gcp as gcp
 
 default = gcp.compute.GlobalAddress("default")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

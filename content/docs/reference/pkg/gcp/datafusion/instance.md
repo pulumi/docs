@@ -18,7 +18,6 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ basic_instance = gcp.datafusion.Instance("basicInstance",
     region="us-central1",
     type="BASIC")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as google_beta from "@pulumi/google-beta";
@@ -89,6 +92,7 @@ const basicInstance = new google_beta.datafusion.Instance("basic_instance", {
     type: "BASIC",
 });
 ```
+
 {{% /example %}}
 
 ### Data Fusion Instance Full
@@ -123,6 +127,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -158,6 +163,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -180,9 +186,11 @@ extended_instance = gcp.datafusion.Instance("extendedInstance",
     region="us-central1",
     type="BASIC")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as google_beta from "@pulumi/google-beta";
@@ -203,6 +211,7 @@ const extendedInstance = new google_beta.datafusion.Instance("extended_instance"
     type: "BASIC",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

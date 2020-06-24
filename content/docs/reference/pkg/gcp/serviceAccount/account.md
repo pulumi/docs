@@ -16,7 +16,6 @@ Allows management of a [Google Cloud Platform service account](https://cloud.goo
 errors when you try to apply ACLs to service accounts immediately after
 creation.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ service_account = gcp.service_account.Account("serviceAccount",
     account_id="service_account_id",
     display_name="Service Account")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -87,6 +90,7 @@ const serviceAccount = new gcp.serviceAccount.Account("service_account", {
     displayName: "Service Account",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

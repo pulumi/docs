@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSecretVersion function of the monitoring module, incl
 
 Get a Secret Manager secret's version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_gcp as gcp
 
 basic = gcp.secretmanager.get_secret_version(secret="my-secret")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -77,6 +80,7 @@ const basic = pulumi.output(gcp.secretmanager.getSecretVersion({
     secret: "my-secret",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

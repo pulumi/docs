@@ -12,13 +12,11 @@ meta_desc: "Explore the Topic resource of the pubsub module, including examples,
 
 A named resource to which messages are sent by publishers.
 
-
 To get more information about Topic, see:
 
 * [API documentation](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics)
 * How-to Guides
     * [Managing Topics](https://cloud.google.com/pubsub/docs/admin#managing_topics)
-
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +81,11 @@ example = gcp.pubsub.Topic("example", labels={
     "foo": "bar",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -94,6 +96,7 @@ const example = new gcp.pubsub.Topic("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Pubsub Topic Cmek
@@ -122,6 +125,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -158,6 +162,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -169,9 +174,11 @@ key_ring = gcp.kms.KeyRing("keyRing", location="global")
 crypto_key = gcp.kms.CryptoKey("cryptoKey", key_ring=key_ring.id)
 example = gcp.pubsub.Topic("example", kms_key_name=crypto_key.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -180,6 +187,7 @@ const keyRing = new gcp.kms.KeyRing("keyRing", {location: "global"});
 const cryptoKey = new gcp.kms.CryptoKey("cryptoKey", {keyRing: keyRing.id});
 const example = new gcp.pubsub.Topic("example", {kmsKeyName: cryptoKey.id});
 ```
+
 {{% /example %}}
 
 ### Pubsub Topic Geo Restricted
@@ -206,6 +214,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -233,6 +242,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -244,9 +254,11 @@ example = gcp.pubsub.Topic("example", message_storage_policy={
     "allowedPersistenceRegions": ["europe-west3"],
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -257,6 +269,7 @@ const example = new gcp.pubsub.Topic("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

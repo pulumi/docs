@@ -12,13 +12,11 @@ meta_desc: "Explore the Repository resource of the sourcerepo module, including 
 
 A repository (or repo) is a Git repository storing versioned source content.
 
-
 To get more information about Repository, see:
 
 * [API documentation](https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/source-repositories/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,15 +53,18 @@ import pulumi_gcp as gcp
 
 my_repo = gcp.sourcerepo.Repository("my-repo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const my_repo = new gcp.sourcerepo.Repository("my-repo", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

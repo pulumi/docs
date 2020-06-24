@@ -20,7 +20,6 @@ Allows creation and management of an App Engine application.
 > **Warning:** All arguments including `iap.oauth2_client_secret` will be stored in the raw
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,6 +81,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -95,9 +96,11 @@ app = gcp.appengine.Application("app",
     project=my_project.project_id,
     location_id="us-central")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -111,6 +114,7 @@ const app = new gcp.appengine.Application("app", {
     locationId: "us-central",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

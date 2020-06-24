@@ -504,7 +504,7 @@ contains all metadata needed to perform a data transfer.</p>
     <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;first sunday of quarter 00:00&quot;</span><span class="p">,</span>
     <span class="n">destination_dataset_id</span><span class="o">=</span><span class="n">my_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">,</span>
     <span class="n">params</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;destination_table_name_template&quot;</span><span class="p">:</span> <span class="s2">&quot;my-table&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destination_table_name_template&quot;</span><span class="p">:</span> <span class="s2">&quot;my_table&quot;</span><span class="p">,</span>
         <span class="s2">&quot;write_disposition&quot;</span><span class="p">:</span> <span class="s2">&quot;WRITE_APPEND&quot;</span><span class="p">,</span>
         <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;SELECT name FROM tabl WHERE x = &#39;y&#39;&quot;</span><span class="p">,</span>
     <span class="p">})</span>
@@ -1334,6 +1334,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">owner</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/dataOwner&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamPolicy</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">owner</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">reader</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamBinding</span><span class="p">(</span><span class="s2">&quot;reader&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/bigquery.dataViewer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamMember</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/bigquery.dataEditor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1453,6 +1483,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">owner</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/dataOwner&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamPolicy</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">owner</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">reader</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamBinding</span><span class="p">(</span><span class="s2">&quot;reader&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/bigquery.dataViewer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamMember</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/bigquery.dataEditor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1572,6 +1632,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigquery.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">owner</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">organizations</span><span class="o">.</span><span class="n">get_iam_policy</span><span class="p">(</span><span class="n">binding</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;roles/dataOwner&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;members&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamPolicy</span><span class="p">(</span><span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">policy_data</span><span class="o">=</span><span class="n">owner</span><span class="o">.</span><span class="n">policy_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">reader</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamBinding</span><span class="p">(</span><span class="s2">&quot;reader&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">],</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/bigquery.dataViewer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">editor</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">bigquery</span><span class="o">.</span><span class="n">DatasetIamMember</span><span class="p">(</span><span class="s2">&quot;editor&quot;</span><span class="p">,</span>
+    <span class="n">dataset_id</span><span class="o">=</span><span class="s2">&quot;your-dataset-id&quot;</span><span class="p">,</span>
+    <span class="n">member</span><span class="o">=</span><span class="s2">&quot;user:jane@example.com&quot;</span><span class="p">,</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">&quot;roles/bigquery.dataEditor&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

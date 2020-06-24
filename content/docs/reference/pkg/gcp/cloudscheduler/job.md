@@ -17,13 +17,11 @@ To use Cloud Scheduler your project must contain an App Engine app
 that is located in one of the supported regions. If your project
 does not have an App Engine app, you must create one.
 
-
 To get more information about Job, see:
 
 * [API documentation](https://cloud.google.com/scheduler/docs/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/scheduler/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -59,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,6 +91,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,9 +112,11 @@ job = gcp.cloudscheduler.Job("job",
     schedule="*/8 * * * *",
     time_zone="America/New_York")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -133,6 +135,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     timeZone: "America/New_York",
 });
 ```
+
 {{% /example %}}
 
 ### Scheduler Job App Engine
@@ -174,6 +177,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -215,6 +219,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -243,9 +248,11 @@ job = gcp.cloudscheduler.Job("job",
     schedule="*/4 * * * *",
     time_zone="Europe/London")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -272,6 +279,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     timeZone: "Europe/London",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

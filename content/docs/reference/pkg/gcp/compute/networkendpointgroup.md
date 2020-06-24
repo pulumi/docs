@@ -21,13 +21,11 @@ backend with internal load balancers. Because NEG backends allow you to
 specify IP addresses and ports, you can distribute traffic in a granular
 fashion among applications or containers running within VM instances.
 
-
 To get more information about NetworkEndpointGroup, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -64,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -104,6 +103,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -122,9 +122,11 @@ neg = gcp.compute.NetworkEndpointGroup("neg",
     default_port="90",
     zone="us-central1-a")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -142,6 +144,7 @@ const neg = new gcp.compute.NetworkEndpointGroup("neg", {
     zone: "us-central1-a",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

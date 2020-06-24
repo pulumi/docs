@@ -25,7 +25,6 @@ Allows management of the entire IAM policy for an existing Google Cloud Platform
    `gcp.organizations.IAMMember` or `gcp.organizations.IAMBinding`
    or they will fight over what your policy should be.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -63,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,6 +100,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -115,9 +116,11 @@ policy = gcp.organizations.IAMPolicy("policy",
     org_id="123456789",
     policy_data=admin.policy_data)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -133,6 +136,7 @@ const policy = new gcp.organizations.IAMPolicy("policy", {
     policyData: admin.then(admin => admin.policyData),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

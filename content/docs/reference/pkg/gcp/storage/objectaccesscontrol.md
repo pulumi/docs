@@ -23,16 +23,12 @@ object is always an OWNER.
 For more information, see Access Control, with the caveat that this API
 uses READER and OWNER instead of READ and FULL_CONTROL.
 
-
 To get more information about ObjectAccessControl, see:
 
 * [API documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a ObjectAccessControl Resource {#create}

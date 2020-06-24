@@ -27,9 +27,6 @@ To get more information about ProjectLocation, see:
 * How-to Guides
     * [Official Documentation](https://firebase.google.com/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a ProjectLocation Resource {#create}

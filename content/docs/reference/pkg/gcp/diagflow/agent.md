@@ -15,13 +15,11 @@ understanding module that understands the nuances of human language. Dialogflow 
 during a conversation to structured data that your apps and services can understand. You design and build a Dialogflow
 agent to handle the types of conversations required for your system.
 
-
 To get more information about Agent, see:
 
 * [API documentation](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects/agent)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -60,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -121,9 +121,11 @@ full_agent = gcp.diagflow.Agent("fullAgent",
     tier="TIER_STANDARD",
     time_zone="America/New_York")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -146,6 +148,7 @@ const fullAgent = new gcp.diagflow.Agent("full_agent", {
     timeZone: "America/New_York",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

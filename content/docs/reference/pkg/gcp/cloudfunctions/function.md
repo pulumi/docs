@@ -21,9 +21,6 @@ to be invoked. See below examples for how to set up the appropriate permissions,
 or view the [Cloud Functions IAM resources](https://www.terraform.io/docs/providers/google/r/cloudfunctions_cloud_function_iam.html)
 for Cloud Functions.
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a Function Resource {#create}

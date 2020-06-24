@@ -14,13 +14,11 @@ Represents a NodeTemplate resource. Node templates specify properties
 for creating sole-tenant nodes, such as node type, vCPU and memory
 requirements, node affinity labels, and region.
 
-
 To get more information about NodeTemplate, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTemplates)
 * How-to Guides
     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -36,19 +34,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
-        {
-            Zone = "us-central1-a",
-        }));
         var template = new Gcp.Compute.NodeTemplate("template", new Gcp.Compute.NodeTemplateArgs
         {
+            NodeType = "n1-node-96-624",
             Region = "us-central1",
-            NodeType = central1a.Apply(central1a => central1a.Names[0]),
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,15 +57,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		central1a, err := compute.LookupNodeTypes(ctx, &compute.LookupNodeTypesArgs{
-			Zone: "us-central1-a",
-		}, nil)
-		if err != nil {
-			return err
-		}
 		template, err := compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
+			NodeType: pulumi.String("n1-node-96-624"),
 			Region:   pulumi.String("us-central1"),
-			NodeType: pulumi.String(central1a.Names[0]),
 		})
 		if err != nil {
 			return err
@@ -79,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,26 +76,25 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-central1a = gcp.compute.get_node_types(zone="us-central1-a")
 template = gcp.compute.NodeTemplate("template",
-    region="us-central1",
-    node_type=central1a.names[0])
+    node_type="n1-node-96-624",
+    region="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const central1a = gcp.compute.getNodeTypes({
-    zone: "us-central1-a",
-});
 const template = new gcp.compute.NodeTemplate("template", {
+    nodeType: "n1-node-96-624",
     region: "us-central1",
-    nodeType: central1a.then(central1a => central1a.names[0]),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -120,7 +109,7 @@ const template = new gcp.compute.NodeTemplate("template", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NodeTemplate">NodeTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_affinity_labels=None<span class="p">, </span>node_type=None<span class="p">, </span>node_type_flexibility=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>server_binding=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NodeTemplate">NodeTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cpu_overcommit_type=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_affinity_labels=None<span class="p">, </span>node_type=None<span class="p">, </span>node_type_flexibility=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>server_binding=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -294,6 +283,17 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cpuovercommittype_csharp">
+<a href="#cpuovercommittype_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Overcommit<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -394,6 +394,17 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuovercommittype_go">
+<a href="#cpuovercommittype_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Overcommit<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -500,6 +511,17 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cpuovercommittype_nodejs">
+<a href="#cpuovercommittype_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Overcommit<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
@@ -600,6 +622,17 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_overcommit_type_python">
+<a href="#cpu_overcommit_type_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>overcommit_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -883,7 +916,7 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_affinity_labels=None<span class="p">, </span>node_type=None<span class="p">, </span>node_type_flexibility=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>server_binding=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cpu_overcommit_type=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_affinity_labels=None<span class="p">, </span>node_type=None<span class="p">, </span>node_type_flexibility=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>server_binding=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -996,6 +1029,17 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cpuovercommittype_csharp">
+<a href="#state_cpuovercommittype_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Overcommit<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1124,6 +1168,17 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cpuovercommittype_go">
+<a href="#state_cpuovercommittype_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Overcommit<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
 </span> 
@@ -1249,6 +1304,17 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cpuovercommittype_nodejs">
+<a href="#state_cpuovercommittype_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Overcommit<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span> 
@@ -1371,6 +1437,17 @@ where the nodes should restart following a maintenance event.  Structure is docu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cpu_overcommit_type_python">
+<a href="#state_cpu_overcommit_type_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>overcommit_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

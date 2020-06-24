@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRouter function of the compute module, including exam
 
 Get a router within GCE from its name and VPC.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +50,11 @@ import pulumi_gcp as gcp
 my_router = gcp.compute.get_router(name="myrouter-us-east1",
     network="my-network")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -62,6 +64,7 @@ const my_router = pulumi.output(gcp.compute.getRouter({
     network: "my-network",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

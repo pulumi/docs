@@ -13,11 +13,9 @@ meta_desc: "Explore the Cluster resource of the dataproc module, including examp
 Manages a Cloud Dataproc cluster resource within GCP. For more information see
 [the official dataproc documentation](https://cloud.google.com/dataproc/).
 
-
 !> **Warning:** Due to limitations of the API, all arguments except
 `labels`,`cluster_config.worker_config.num_instances` and `cluster_config.preemptible_worker_config.num_instances` are non-updatable. Changing others will cause recreation of the
 whole cluster!
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -73,9 +73,11 @@ import pulumi_gcp as gcp
 
 simplecluster = gcp.dataproc.Cluster("simplecluster", region="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -84,6 +86,7 @@ const simplecluster = new gcp.dataproc.Cluster("simplecluster", {
     region: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 ### Advanced
@@ -168,6 +171,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -241,6 +245,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -299,9 +304,11 @@ mycluster = gcp.dataproc.Cluster("mycluster",
     },
     region="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -360,6 +367,7 @@ const mycluster = new gcp.dataproc.Cluster("mycluster", {
     region: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 ### Using A GPU Accelerator
@@ -398,6 +406,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -434,6 +443,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -455,9 +465,11 @@ accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
     },
     region="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -477,6 +489,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     region: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

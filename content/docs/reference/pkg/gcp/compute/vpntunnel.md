@@ -12,7 +12,6 @@ meta_desc: "Explore the VPNTunnel resource of the compute module, including exam
 
 VPN tunnel resource.
 
-
 To get more information about VpnTunnel, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/vpnTunnels)
@@ -22,7 +21,6 @@ To get more information about VpnTunnel, see:
 
 > **Warning:** All arguments including `shared_secret` will be stored in the raw
 state as plain-text.
-
 
 {{% examples %}}
 ## Example Usage
@@ -85,6 +83,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -159,6 +158,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -193,9 +193,11 @@ route1 = gcp.compute.Route("route1",
     priority=1000,
     next_hop_vpn_tunnel=tunnel1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -232,6 +234,7 @@ const route1 = new gcp.compute.Route("route1", {
     nextHopVpnTunnel: tunnel1.id,
 });
 ```
+
 {{% /example %}}
 
 ### Vpn Tunnel Beta
@@ -295,6 +298,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -372,6 +376,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -409,9 +414,11 @@ route1 = gcp.compute.Route("route1",
     priority=1000,
     next_hop_vpn_tunnel=tunnel1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -451,6 +458,7 @@ const route1 = new gcp.compute.Route("route1", {
     nextHopVpnTunnel: tunnel1.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

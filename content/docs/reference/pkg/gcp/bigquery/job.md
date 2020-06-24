@@ -13,9 +13,6 @@ meta_desc: "Explore the Job resource of the bigquery module, including examples,
 Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.
 Once a BigQuery job is created, it cannot be changed or deleted.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,6 +123,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -159,9 +158,11 @@ job = gcp.bigquery.Job("job",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -196,6 +197,7 @@ const job = new gcp.bigquery.Job("job", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Bigquery Job Query Table Reference
@@ -250,6 +252,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -306,6 +309,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -341,9 +345,11 @@ job = gcp.bigquery.Job("job",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -379,6 +385,7 @@ const job = new gcp.bigquery.Job("job", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Bigquery Job Load
@@ -436,6 +443,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -495,6 +503,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -531,9 +540,11 @@ job = gcp.bigquery.Job("job",
         "autodetect": True,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -570,6 +581,7 @@ const job = new gcp.bigquery.Job("job", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Bigquery Job Extract
@@ -639,6 +651,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -690,9 +703,11 @@ job = gcp.bigquery.Job("job",
         "compression": "GZIP",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -740,6 +755,7 @@ const job = new gcp.bigquery.Job("job", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

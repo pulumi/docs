@@ -12,7 +12,6 @@ meta_desc: "Explore the GetNetblockIPRanges function of the compute module, incl
 
 Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
     public Output<string> CidrBlocksIpv6 { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +57,11 @@ pulumi.export("cidrBlocks", netblock.cidr_blocks)
 pulumi.export("cidrBlocksIpv4", netblock.cidr_blocks_ipv4s)
 pulumi.export("cidrBlocksIpv6", netblock.cidr_blocks_ipv6s)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -69,6 +71,7 @@ export const cidrBlocks = netblock.then(netblock => netblock.cidrBlocks);
 export const cidrBlocksIpv4 = netblock.then(netblock => netblock.cidrBlocksIpv4s);
 export const cidrBlocksIpv6 = netblock.then(netblock => netblock.cidrBlocksIpv6s);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

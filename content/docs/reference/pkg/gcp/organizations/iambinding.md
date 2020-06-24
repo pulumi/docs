@@ -21,7 +21,6 @@ an existing Google Cloud Platform Organization.
     Use `pulumi import` and inspect the `output to ensure
     your existing members are preserved.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -76,6 +76,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ binding = gcp.organizations.IAMBinding("binding",
     org_id="123456789",
     role="roles/browser")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -101,6 +104,7 @@ const binding = new gcp.organizations.IAMBinding("binding", {
     role: "roles/browser",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ This data source fetches the project name, and provides the appropriate URLs to 
 
 The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
     public Output<string> GcrLocation { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +51,11 @@ import pulumi_gcp as gcp
 foo = gcp.container.get_registry_repository()
 pulumi.export("gcrLocation", foo.repository_url)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -61,6 +63,7 @@ import * as gcp from "@pulumi/gcp";
 const foo = gcp.container.getRegistryRepository({});
 export const gcrLocation = foo.then(foo => foo.repositoryUrl);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

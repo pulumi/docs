@@ -14,7 +14,6 @@ Allows management of Organization policies for a Google Folder. For more informa
 [the official
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
     public Output<string> Version { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -76,9 +77,11 @@ policy = gcp.folder.get_organization_policy(folder="folders/folderid",
     constraint="constraints/compute.trustedImageProjects")
 pulumi.export("version", policy.version)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -89,6 +92,7 @@ const policy = gcp.folder.getOrganizationPolicy({
 });
 export const version = policy.then(policy => policy.version);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

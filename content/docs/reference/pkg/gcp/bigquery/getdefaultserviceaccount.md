@@ -20,7 +20,6 @@ this account needs to be granted the
 For more information see
 [the API reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +63,11 @@ key_sa_user = gcp.kms.CryptoKeyIAMMember("keySaUser",
     role="roles/cloudkms.cryptoKeyEncrypterDecrypter",
     member=f"serviceAccount:{bq_sa.email}")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -77,6 +79,7 @@ const keySaUser = new gcp.kms.CryptoKeyIAMMember("keySaUser", {
     member: bqSa.then(bqSa => `serviceAccount:${bqSa.email}`),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

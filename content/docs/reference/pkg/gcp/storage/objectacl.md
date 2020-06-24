@@ -15,13 +15,12 @@ Cloud Storage (GCS) bucket. Removing a `gcp.storage.ObjectACL` sets the
 acl to the `private` [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl).
 
 For more information see
-[the official documentation](https://cloud.google.com/storage/docs/access-control/lists) 
-and 
+[the official documentation](https://cloud.google.com/storage/docs/access-control/lists)
+and
 [API](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls).
 
 > Want fine-grained control over object ACLs? Use `gcp.storage.ObjectAccessControl` to control individual
 role entity pairs.
-
 
 {{% examples %}}
 ## Example Usage
@@ -60,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,9 +83,11 @@ image_store_acl = gcp.storage.ObjectACL("image-store-acl",
         "READER:group-mygroup",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -104,6 +106,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

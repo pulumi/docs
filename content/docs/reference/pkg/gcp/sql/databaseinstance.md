@@ -19,27 +19,26 @@ for more details.
 To upgrade your First-generation instance, update your config that the instance has
 * `settings.ip_configuration.ipv4_enabled=true`
 * `settings.backup_configuration.enabled=true`
-* `settings.backup_configuration.binary_log_enabled=true`.  
-Apply the config, then upgrade the instance in the console as described in the documentation.
-Once upgraded, update the following attributes in your config to the correct value according to
-the above documentation:
+* `settings.backup_configuration.binary_log_enabled=true`.\
+  Apply the config, then upgrade the instance in the console as described in the documentation.
+  Once upgraded, update the following attributes in your config to the correct value according to
+  the above documentation:
 * `region`
 * `database_version` (if applicable)
-* `tier`  
-Remove any fields that are not applicable to Second-generation instances:
+* `tier`\
+  Remove any fields that are not applicable to Second-generation instances:
 * `settings.crash_safe_replication`
 * `settings.replication_type`
 * `settings.authorized_gae_applications`
-And change values to appropriate values for Second-generation instances for:
+  And change values to appropriate values for Second-generation instances for:
 * `activation_policy` ("ON_DEMAND" is no longer an option)
 * `pricing_plan` ("PER_USE" is now the only valid option)
-Change `settings.backup_configuration.enabled` attribute back to its desired value and apply as necessary.
+  Change `settings.backup_configuration.enabled` attribute back to its desired value and apply as necessary.
 
 > **NOTE on `gcp.sql.DatabaseInstance`:** - Second-generation instances include a
 default 'root'@'%' user with no password. This user will be deleted by the provider on
 instance creation. You should use `gcp.sql.User` to define a custom user with
 a restricted host and strong password.
-
 
 {{% examples %}}
 ## Example Usage
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,9 +110,11 @@ master = gcp.sql.DatabaseInstance("master",
         "tier": "db-f1-micro",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -126,6 +129,7 @@ const master = new gcp.sql.DatabaseInstance("master", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Private IP Instance
@@ -179,6 +183,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -212,9 +217,11 @@ instance = gcp.sql.DatabaseInstance("instance",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -244,6 +251,7 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -3422,7 +3430,10 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The availability type of the Cloud SQL instance, high availability (`REGIONAL`) or single zone (`ZONAL`).'
+    <dd>{{% md %}}The availability type of the Cloud SQL
+instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
+instances, ensure that `settings.backup_configuration.enabled` and
+`settings.backup_configuration.binary_log_enabled` are both set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3623,7 +3634,10 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The availability type of the Cloud SQL instance, high availability (`REGIONAL`) or single zone (`ZONAL`).'
+    <dd>{{% md %}}The availability type of the Cloud SQL
+instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
+instances, ensure that `settings.backup_configuration.enabled` and
+`settings.backup_configuration.binary_log_enabled` are both set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3824,7 +3838,10 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The availability type of the Cloud SQL instance, high availability (`REGIONAL`) or single zone (`ZONAL`).'
+    <dd>{{% md %}}The availability type of the Cloud SQL
+instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
+instances, ensure that `settings.backup_configuration.enabled` and
+`settings.backup_configuration.binary_log_enabled` are both set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4025,7 +4042,10 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The availability type of the Cloud SQL instance, high availability (`REGIONAL`) or single zone (`ZONAL`).'
+    <dd>{{% md %}}The availability type of the Cloud SQL
+instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
+instances, ensure that `settings.backup_configuration.enabled` and
+`settings.backup_configuration.binary_log_enabled` are both set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

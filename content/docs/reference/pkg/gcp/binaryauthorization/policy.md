@@ -12,16 +12,12 @@ meta_desc: "Explore the Policy resource of the binaryauthorization module, inclu
 
 A policy for container image binary authorization.
 
-
 To get more information about Policy, see:
 
 * [API documentation](https://cloud.google.com/binary-authorization/docs/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}

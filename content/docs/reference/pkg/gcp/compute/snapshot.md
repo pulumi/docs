@@ -23,7 +23,6 @@ Snapshots are incremental, so you can create regular snapshots on a
 persistent disk faster and at a much lower cost than if you regularly
 created a full image of the disk.
 
-
 To get more information about Snapshot, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/snapshots)
@@ -32,7 +31,6 @@ To get more information about Snapshot, see:
 
 > **Warning:** All arguments including `snapshot_encryption_key.raw_key` and `source_disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
-
 
 {{% examples %}}
 ## Example Usage
@@ -73,6 +71,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -116,6 +115,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -137,9 +137,11 @@ snapshot = gcp.compute.Snapshot("snapshot",
         "my_label": "value",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -162,6 +164,7 @@ const snapshot = new gcp.compute.Snapshot("snapshot", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

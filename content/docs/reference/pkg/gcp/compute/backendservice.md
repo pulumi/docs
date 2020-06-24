@@ -17,13 +17,11 @@ For managed internal load balancing, use a regional backend service instead.
 
 Currently self-managed internal load balancing is only available in beta.
 
-
 To get more information about BackendService, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/backendServices)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
-
 
 {{% examples %}}
 ## Example Usage
@@ -56,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +88,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -102,9 +102,11 @@ default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck"
     timeout_sec=1)
 default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.id])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -116,6 +118,7 @@ const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealt
 });
 const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.id]});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

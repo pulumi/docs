@@ -13,7 +13,6 @@ meta_desc: "Explore the GetAccount function of the serviceAccount module, includ
 Get the service account from a project. For more information see
 the official [API](https://cloud.google.com/compute/docs/access/service-accounts) documentation.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_gcp as gcp
 
 object_viewer = gcp.serviceAccount.get_account(account_id="object-viewer")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -78,6 +81,7 @@ const objectViewer = pulumi.output(gcp.serviceAccount.getAccount({
     accountId: "object-viewer",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

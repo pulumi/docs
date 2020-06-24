@@ -12,16 +12,12 @@ meta_desc: "Explore the Attestor resource of the binaryauthorization module, inc
 
 An attestor that attests to container image artifacts.
 
-
 To get more information about Attestor, see:
 
 * [API documentation](https://cloud.google.com/binary-authorization/docs/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a Attestor Resource {#create}

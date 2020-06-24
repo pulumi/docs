@@ -12,13 +12,11 @@ meta_desc: "Explore the Network resource of the compute module, including exampl
 
 Manages a VPC network or legacy network resource on GCP.
 
-
 To get more information about Network, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/networks)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc)
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,15 +71,18 @@ import pulumi_gcp as gcp
 
 vpc_network = gcp.compute.Network("vpcNetwork")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const vpcNetwork = new gcp.compute.Network("vpc_network", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

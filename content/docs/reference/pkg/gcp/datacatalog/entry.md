@@ -17,13 +17,11 @@ the linkedResource field in the Entry resource to refer to the original resource
 An Entry resource contains resource details, such as its schema. An Entry can also be used to attach
 flexible metadata, such as a Tag.
 
-
 To get more information about Entry, see:
 
 * [API documentation](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
-
 
 {{% examples %}}
 ## Example Usage
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -100,9 +100,11 @@ basic_entry = gcp.datacatalog.Entry("basicEntry",
     user_specified_type="my_custom_type",
     user_specified_system="SomethingExternal")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -115,6 +117,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     userSpecifiedSystem: "SomethingExternal",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

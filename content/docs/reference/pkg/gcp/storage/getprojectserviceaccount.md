@@ -18,7 +18,6 @@ special service account can be used to set up `gcp.storage.Notification` resourc
 For more information see
 [the API reference](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +64,11 @@ binding = gcp.pubsub.TopicIAMBinding("binding",
     role="roles/pubsub.publisher",
     members=[f"serviceAccount:{gcs_account.email_address}"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -78,6 +80,7 @@ const binding = new gcp.pubsub.TopicIAMBinding("binding", {
     members: [gcsAccount.then(gcsAccount => `serviceAccount:${gcsAccount.emailAddress}`)],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -21,7 +21,6 @@ an existing Google Cloud Platform folder.
     Use `pulumi import` and inspect the output to ensure
     your existing members are preserved.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,9 +105,11 @@ admin = gcp.folder.IAMBinding("admin",
     role="roles/editor",
     members=["user:alice@gmail.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -121,6 +124,7 @@ const admin = new gcp.folder.IAMBinding("admin", {
     members: ["user:alice@gmail.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

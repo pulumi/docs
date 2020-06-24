@@ -15,7 +15,6 @@ Manages a Cloud Router interface. For more information see
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/routers).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ foobar = gcp.compute.RouterInterface("foobar",
     router="router-1",
     vpn_tunnel="tunnel-1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -94,6 +97,7 @@ const foobar = new gcp.compute.RouterInterface("foobar", {
     vpnTunnel: "tunnel-1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

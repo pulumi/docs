@@ -19,9 +19,6 @@ To get more information about RegionTargetHttpsProxy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a RegionTargetHttpsProxy Resource {#create}

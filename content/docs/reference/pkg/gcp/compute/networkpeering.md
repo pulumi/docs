@@ -20,7 +20,6 @@ to be functional.
 
 > Subnets IP ranges across peered VPC networks cannot overlap.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,9 +77,11 @@ peering2 = gcp.compute.NetworkPeering("peering2",
     network=other.id,
     peer_network=default.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -95,6 +97,7 @@ const peering2 = new gcp.compute.NetworkPeering("peering2", {
     peerNetwork: _default.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -109,7 +112,7 @@ const peering2 = new gcp.compute.NetworkPeering("peering2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NetworkPeering">NetworkPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>export_custom_routes=None<span class="p">, </span>import_custom_routes=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>peer_network=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NetworkPeering">NetworkPeering</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>export_custom_routes=None<span class="p">, </span>export_subnet_routes_with_public_ip=None<span class="p">, </span>import_custom_routes=None<span class="p">, </span>import_subnet_routes_with_public_ip=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>peer_network=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -317,6 +320,17 @@ may belong to a different project.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="exportsubnetrouteswithpublicip_csharp">
+<a href="#exportsubnetrouteswithpublicip_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="importcustomroutes_csharp">
 <a href="#importcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
 </span> 
@@ -324,6 +338,17 @@ may belong to a different project.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="importsubnetrouteswithpublicip_csharp">
+<a href="#importsubnetrouteswithpublicip_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -380,6 +405,17 @@ may belong to a different project.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="exportsubnetrouteswithpublicip_go">
+<a href="#exportsubnetrouteswithpublicip_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="importcustomroutes_go">
 <a href="#importcustomroutes_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
 </span> 
@@ -387,6 +423,17 @@ may belong to a different project.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="importsubnetrouteswithpublicip_go">
+<a href="#importsubnetrouteswithpublicip_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -443,6 +490,17 @@ may belong to a different project.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="exportsubnetrouteswithpublicip_nodejs">
+<a href="#exportsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="importcustomroutes_nodejs">
 <a href="#importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
 </span> 
@@ -450,6 +508,17 @@ may belong to a different project.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="importsubnetrouteswithpublicip_nodejs">
+<a href="#importsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -506,6 +575,17 @@ may belong to a different project.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="export_subnet_routes_with_public_ip_python">
+<a href="#export_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">export_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="import_custom_routes_python">
 <a href="#import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
 </span> 
@@ -513,6 +593,17 @@ may belong to a different project.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="import_subnet_routes_with_public_ip_python">
+<a href="#import_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">import_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,7 +807,7 @@ Get an existing NetworkPeering resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>export_custom_routes=None<span class="p">, </span>import_custom_routes=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>peer_network=None<span class="p">, </span>state=None<span class="p">, </span>state_details=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>export_custom_routes=None<span class="p">, </span>export_subnet_routes_with_public_ip=None<span class="p">, </span>import_custom_routes=None<span class="p">, </span>import_subnet_routes_with_public_ip=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>peer_network=None<span class="p">, </span>state=None<span class="p">, </span>state_details=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -843,6 +934,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_exportsubnetrouteswithpublicip_csharp">
+<a href="#state_exportsubnetrouteswithpublicip_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_importcustomroutes_csharp">
 <a href="#state_importcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
 </span> 
@@ -850,6 +952,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_importsubnetrouteswithpublicip_csharp">
+<a href="#state_importsubnetrouteswithpublicip_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -929,6 +1042,17 @@ may belong to a different project.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_exportsubnetrouteswithpublicip_go">
+<a href="#state_exportsubnetrouteswithpublicip_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_importcustomroutes_go">
 <a href="#state_importcustomroutes_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
 </span> 
@@ -936,6 +1060,17 @@ may belong to a different project.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_importsubnetrouteswithpublicip_go">
+<a href="#state_importsubnetrouteswithpublicip_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1015,6 +1150,17 @@ may belong to a different project.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_exportsubnetrouteswithpublicip_nodejs">
+<a href="#state_exportsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_importcustomroutes_nodejs">
 <a href="#state_importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
 </span> 
@@ -1022,6 +1168,17 @@ may belong to a different project.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_importsubnetrouteswithpublicip_nodejs">
+<a href="#state_importsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1101,6 +1258,17 @@ may belong to a different project.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_export_subnet_routes_with_public_ip_python">
+<a href="#state_export_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">export_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_import_custom_routes_python">
 <a href="#state_import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
 </span> 
@@ -1108,6 +1276,17 @@ may belong to a different project.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes from the peer network. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_import_subnet_routes_with_public_ip_python">
+<a href="#state_import_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">import_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

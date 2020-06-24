@@ -14,11 +14,6 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 
 
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
-
-
 ## Create a AutoscalingPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

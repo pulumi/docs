@@ -14,7 +14,6 @@ The Google Cloud storage signed URL data source generates a signed URL for a giv
 
 For more info about signed URL's is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ artifact = gcp.storage.get_object_signed_url(bucket="install_binaries",
     path="path/to/install_file.bin")
 vm = gcp.compute.Instance("vm")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -93,6 +96,7 @@ const artifact = pulumi.output(gcp.storage.getObjectSignedUrl({
 }, { async: true }));
 const vm = new gcp.compute.Instance("vm", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

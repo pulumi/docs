@@ -23,8 +23,6 @@ and
 **Note**: If the project id is not set on the resource or in the provider block it will be dynamically
 determined which will require enabling the compute api.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -77,6 +75,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -109,9 +108,11 @@ static_site = gcp.storage.Bucket("static-site",
         "notFoundPage": "404.html",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -138,6 +139,7 @@ const static_site = new gcp.storage.Bucket("static-site", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Life Cycle Settings For Storage Bucket Objects
@@ -173,6 +175,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -196,9 +199,11 @@ auto_expire = gcp.storage.Bucket("auto-expire",
     }],
     location="US")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -216,6 +221,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     location: "US",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -3277,7 +3283,7 @@ by default GCS sets this to this bucket's name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.
+    <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3306,7 +3312,7 @@ by default GCS sets this to this bucket's name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.
+    <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3335,7 +3341,7 @@ by default GCS sets this to this bucket's name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.
+    <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3364,7 +3370,7 @@ by default GCS sets this to this bucket's name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.
+    <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -16,17 +16,15 @@ ServicePerimeter. If a request with a source within this ServicePerimeter
 has a target outside of the ServicePerimeter, the request will be blocked.
 Otherwise the request is allowed. There are two types of Service Perimeter
 - Regular and Bridge. Regular Service Perimeters cannot overlap, a single
-GCP project can only belong to a single regular Service Perimeter. Service
-Perimeter Bridges can contain only GCP projects as members, a single GCP
-project may belong to multiple Service Perimeter Bridges.
-
+  GCP project can only belong to a single regular Service Perimeter. Service
+  Perimeter Bridges can contain only GCP projects as members, a single GCP
+  project may belong to multiple Service Perimeter Bridges.
 
 To get more information about ServicePerimeter, see:
 
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.servicePerimeters)
 * How-to Guides
     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
-
 
 {{% examples %}}
 ## Example Usage
@@ -94,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -133,9 +132,11 @@ access_level = gcp.accesscontextmanager.AccessLevel("access-level",
     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
     title="chromeos_no_lock")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -171,6 +172,7 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
     title: "chromeos_no_lock",
 });
 ```
+
 {{% /example %}}
 
 ### Access Context Manager Service Perimeter Dry Run
@@ -212,6 +214,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -237,9 +240,11 @@ service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter
     title="restrict_bigquery_dryrun_storage",
     use_explicit_dry_run_spec=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -262,6 +267,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     useExplicitDryRunSpec: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

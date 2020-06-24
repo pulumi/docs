@@ -21,7 +21,6 @@ To get more information about HaVpnGateway, see:
     * [Choosing a VPN](https://cloud.google.com/vpn/docs/how-to/choosing-a-vpn)
     * [Cloud VPN Overview](https://cloud.google.com/vpn/docs/concepts/overview)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -91,9 +92,11 @@ ha_gateway1 = gcp.compute.HaVpnGateway("haGateway1",
     region="us-central1",
     network=network1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -104,6 +107,7 @@ const haGateway1 = new gcp.compute.HaVpnGateway("haGateway1", {
     network: network1.id,
 });
 ```
+
 {{% /example %}}
 
 ### Ha Vpn Gateway Gcp To Gcp
@@ -280,6 +284,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -499,6 +504,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -621,9 +627,11 @@ router2_peer2 = gcp.compute.RouterPeer("router2Peer2",
     advertised_route_priority=100,
     interface=router2_interface2.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -765,6 +773,7 @@ const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
     "interface": router2Interface2.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

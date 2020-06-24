@@ -24,14 +24,12 @@ the instance is assigned a new internal IP address, either by Compute
 Engine or by you. External IP addresses can be either ephemeral or
 static.
 
-
 To get more information about Address, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/beta/addresses)
 * How-to Guides
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/instances-and-network)
     * [Reserving a Static Internal IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
-
 
 {{% examples %}}
 ## Example Usage
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +74,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,15 +84,18 @@ import pulumi_gcp as gcp
 
 ip_address = gcp.compute.Address("ipAddress")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const ipAddress = new gcp.compute.Address("ip_address", {});
 ```
+
 {{% /example %}}
 
 ### Address With Subnetwork
@@ -125,6 +128,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -163,6 +167,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -181,9 +186,11 @@ internal_with_subnet_and_address = gcp.compute.Address("internalWithSubnetAndAdd
     address="10.0.42.42",
     region="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -201,6 +208,7 @@ const internalWithSubnetAndAddress = new gcp.compute.Address("internalWithSubnet
     region: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 ### Address With Gce Endpoint
@@ -222,6 +230,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -246,6 +255,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -257,9 +267,11 @@ internal_with_gce_endpoint = gcp.compute.Address("internalWithGceEndpoint",
     address_type="INTERNAL",
     purpose="GCE_ENDPOINT")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -269,6 +281,7 @@ const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpo
     purpose: "GCE_ENDPOINT",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

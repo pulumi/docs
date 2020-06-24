@@ -1288,12 +1288,12 @@ standard for Healthcare information exchange</p>
     <span class="p">},</span>
     <span class="n">stream_configs</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;resourceTypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Observation&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;bigquery_destination&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;bigquery_destination&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;datasetUri&quot;</span><span class="p">:</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">bq_dataset</span><span class="o">.</span><span class="n">project</span><span class="p">,</span> <span class="n">bq_dataset</span><span class="o">.</span><span class="n">dataset_id</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project</span><span class="p">,</span> <span class="n">dataset_id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;bq://</span><span class="si">{</span><span class="n">project</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">dataset_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
-            <span class="s2">&quot;schema_config&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;schema_config&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;recursiveStructureDepth&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="p">}],</span>
-        <span class="p">}],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
     <span class="p">}])</span>
 <span class="n">topic</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;topic&quot;</span><span class="p">)</span>
 </pre></div>

@@ -19,7 +19,6 @@ Manages a billing account logging sink. For more information see
 the credentials used with this provider. [IAM roles granted on a billing account](https://cloud.google.com/billing/docs/how-to/billing-access) are separate from the
 typical IAM roles granted on a project.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +73,11 @@ log_writer = gcp.projects.IAMBinding("log-writer",
     role="roles/storage.objectCreator",
     members=[my_sink.writer_identity])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -90,6 +92,7 @@ const log_writer = new gcp.projects.IAMBinding("log-writer", {
     members: [my_sink.writerIdentity],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

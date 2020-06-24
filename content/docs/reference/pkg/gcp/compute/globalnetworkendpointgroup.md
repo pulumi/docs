@@ -13,13 +13,11 @@ meta_desc: "Explore the GlobalNetworkEndpointGroup resource of the compute modul
 A global network endpoint group contains endpoints that reside outside of Google Cloud.
 Currently a global network endpoint group can only support a single endpoint.
 
-
 To get more information about GlobalNetworkEndpointGroup, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/internet-neg-concepts)
-
 
 {{% examples %}}
 ## Example Usage
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +79,11 @@ neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
     default_port="90",
     network_endpoint_type="INTERNET_FQDN_PORT")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -91,6 +93,7 @@ const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
     networkEndpointType: "INTERNET_FQDN_PORT",
 });
 ```
+
 {{% /example %}}
 
 ### Global Network Endpoint Group Ip Address
@@ -112,6 +115,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -136,6 +140,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -147,9 +152,11 @@ neg = gcp.compute.GlobalNetworkEndpointGroup("neg",
     default_port=90,
     network_endpoint_type="INTERNET_IP_PORT")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -159,6 +166,7 @@ const neg = new gcp.compute.GlobalNetworkEndpointGroup("neg", {
     networkEndpointType: "INTERNET_IP_PORT",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

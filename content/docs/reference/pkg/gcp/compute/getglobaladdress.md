@@ -13,7 +13,6 @@ meta_desc: "Explore the GetGlobalAddress function of the compute module, includi
 Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ frontend = gcp.dns.RecordSet("frontend",
     managed_zone=prod.name,
     rrdatas=[my_address.address])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -123,6 +126,7 @@ const frontend = new gcp.dns.RecordSet("frontend", {
     rrdatas: [myAddress.then(myAddress => myAddress.address)],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

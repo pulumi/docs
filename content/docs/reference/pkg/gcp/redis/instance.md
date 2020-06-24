@@ -12,13 +12,11 @@ meta_desc: "Explore the Instance resource of the redis module, including example
 
 A Google Cloud Redis instance.
 
-
 To get more information about Instance, see:
 
 * [API documentation](https://cloud.google.com/memorystore/docs/redis/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/memorystore/docs/redis/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +74,11 @@ import pulumi_gcp as gcp
 
 cache = gcp.redis.Instance("cache", memory_size_gb=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -85,6 +87,7 @@ const cache = new gcp.redis.Instance("cache", {
     memorySizeGb: 1,
 });
 ```
+
 {{% /example %}}
 
 ### Redis Instance Full
@@ -121,6 +124,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -147,9 +151,11 @@ cache = gcp.redis.Instance("cache",
         "other_key": "other_val",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -172,6 +178,7 @@ const cache = new gcp.redis.Instance("cache", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

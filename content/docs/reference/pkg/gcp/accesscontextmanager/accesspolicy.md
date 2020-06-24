@@ -16,13 +16,11 @@ regions of services able to freely pass data within a perimeter). An
 access policy is globally visible within an organization, and the
 restrictions it specifies apply to all projects within an organization.
 
-
 To get more information about AccessPolicy, see:
 
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies)
 * How-to Guides
     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
-
 
 {{% examples %}}
 ## Example Usage
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
     parent="organizations/123456789",
     title="my policy")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -74,6 +75,7 @@ const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy",
     title: "my policy",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

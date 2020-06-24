@@ -12,8 +12,6 @@ meta_desc: "Explore the GetAccountKey function of the serviceAccount module, inc
 
 Get service account public key. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +86,11 @@ mykey_key = gcp.service_account.Key("mykeyKey", service_account_id=myaccount.nam
 mykey_account_key = mykey_key.name.apply(lambda name: gcp.serviceAccount.get_account_key(name=name,
     public_key_type="TYPE_X509_PEM_FILE"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -100,6 +102,7 @@ const mykeyAccountKey = mykeyKey.name.apply(name => gcp.serviceAccount.getAccoun
     publicKeyType: "TYPE_X509_PEM_FILE",
 }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

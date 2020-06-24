@@ -19,9 +19,6 @@ To get more information about FhirStore, see:
 * How-to Guides
     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a FhirStore Resource {#create}

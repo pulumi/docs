@@ -16,16 +16,12 @@ Autoscalers allow you to automatically scale virtual machine instances in
 managed instance groups according to an autoscaling policy that you
 define.
 
-
 To get more information about Autoscaler, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/autoscalers)
 * How-to Guides
     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}gcp.compute.Autoscalar has been deprecated in favor of gcp.compute.Autoscaler{{% /md %}}</p>
 
 

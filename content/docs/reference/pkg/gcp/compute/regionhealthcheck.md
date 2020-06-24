@@ -22,13 +22,11 @@ continue to poll unhealthy instances. If an instance later responds
 successfully to some number of consecutive probes, it is marked
 healthy again and can receive new connections.
 
-
 To get more information about RegionHealthCheck, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/regionHealthChecks)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/health-checks)
-
 
 {{% examples %}}
 ## Example Usage
@@ -57,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,9 +74,11 @@ tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check
     },
     timeout_sec=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -90,6 +91,7 @@ const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-he
     timeoutSec: 1,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Tcp Full
@@ -122,6 +124,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -147,9 +150,11 @@ tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -169,6 +174,7 @@ const tcp_region_health_check = new gcp.compute.RegionHealthCheck("tcp-region-he
     unhealthyThreshold: 5,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Ssl
@@ -194,6 +200,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -212,9 +219,11 @@ ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check
     },
     timeout_sec=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -227,6 +236,7 @@ const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-he
     timeoutSec: 1,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Ssl Full
@@ -259,6 +269,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -284,9 +295,11 @@ ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -306,6 +319,7 @@ const ssl_region_health_check = new gcp.compute.RegionHealthCheck("ssl-region-he
     unhealthyThreshold: 5,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Http
@@ -331,6 +345,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -349,9 +364,11 @@ http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-che
     },
     timeout_sec=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -364,6 +381,7 @@ const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-
     timeoutSec: 1,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Http Full
@@ -397,6 +415,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -423,9 +442,11 @@ http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-che
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -446,6 +467,7 @@ const http_region_health_check = new gcp.compute.RegionHealthCheck("http-region-
     unhealthyThreshold: 5,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Https
@@ -471,6 +493,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -489,9 +512,11 @@ https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-c
     },
     timeout_sec=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -504,6 +529,7 @@ const https_region_health_check = new gcp.compute.RegionHealthCheck("https-regio
     timeoutSec: 1,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Https Full
@@ -537,6 +563,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -563,9 +590,11 @@ https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-c
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -586,6 +615,7 @@ const https_region_health_check = new gcp.compute.RegionHealthCheck("https-regio
     unhealthyThreshold: 5,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Http2
@@ -611,6 +641,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -629,9 +660,11 @@ http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-c
     },
     timeout_sec=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -644,6 +677,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
     timeoutSec: 1,
 });
 ```
+
 {{% /example %}}
 
 ### Region Health Check Http2 Full
@@ -677,6 +711,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -703,9 +738,11 @@ http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-c
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -726,6 +763,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
     unhealthyThreshold: 5,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

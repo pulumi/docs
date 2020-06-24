@@ -20,8 +20,6 @@ Three different resources help you manage your IAM policy for Identity-Aware Pro
 
 > **Note:** `gcp.iap.WebBackendServiceIamBinding` resources **can be** used in conjunction with `gcp.iap.WebBackendServiceIamMember` resources **only if** they do not grant privilege to the same role.
 
-
-
 ## google\_iap\_web\_backend\_service\_iam\_policy
 
 ```typescript

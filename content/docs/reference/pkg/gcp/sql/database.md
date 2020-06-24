@@ -13,9 +13,6 @@ meta_desc: "Explore the Database resource of the sql module, including examples,
 Represents a SQL database inside the Cloud SQL instance, hosted in
 Google's cloud.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +76,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +91,11 @@ instance = gcp.sql.DatabaseInstance("instance",
     })
 database = gcp.sql.Database("database", instance=instance.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -107,6 +108,7 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
 });
 const database = new gcp.sql.Database("database", {instance: instance.name});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

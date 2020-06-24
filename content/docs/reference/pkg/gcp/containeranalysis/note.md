@@ -13,14 +13,12 @@ meta_desc: "Explore the Note resource of the containeranalysis module, including
 A Container Analysis note is a high-level piece of metadata that
 describes a type of analysis that can be done for a resource.
 
-
 To get more information about Note, see:
 
 * [API documentation](https://cloud.google.com/container-analysis/api/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/container-analysis/)
     * [Creating Attestations (Occurrences)](https://cloud.google.com/binary-authorization/docs/making-attestations)
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,6 +76,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,9 +90,11 @@ note = gcp.containeranalysis.Note("note", attestation_authority={
     },
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -105,6 +107,7 @@ const note = new gcp.containeranalysis.Note("note", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Container Analysis Note Attestation Full
@@ -146,6 +149,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -185,6 +189,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -211,9 +216,11 @@ note = gcp.containeranalysis.Note("note",
     ],
     short_description="test note")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -238,6 +245,7 @@ const note = new gcp.containeranalysis.Note("note", {
     shortDescription: "test note",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

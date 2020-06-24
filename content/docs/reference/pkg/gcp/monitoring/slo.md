@@ -18,7 +18,6 @@ Typical SLOs might include "99% of requests in each rolling week have
 latency below 200 milliseconds" or "99.5% of requests in each calendar
 month return successfully."
 
-
 To get more information about Slo, see:
 
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services.serviceLevelObjectives)
@@ -26,9 +25,6 @@ To get more information about Slo, see:
     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a Slo Resource {#create}

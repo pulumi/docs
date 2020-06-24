@@ -17,16 +17,12 @@ non-NAT'ed target instance. Each target instance contains a single
 virtual machine instance that receives and handles traffic from the
 corresponding forwarding rules.
 
-
 To get more information about TargetInstance, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/targetInstances)
 * How-to Guides
     * [Using Protocol Forwarding](https://cloud.google.com/compute/docs/protocol-forwarding)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a TargetInstance Resource {#create}

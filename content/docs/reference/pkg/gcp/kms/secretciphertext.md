@@ -12,12 +12,10 @@ meta_desc: "Explore the SecretCiphertext resource of the kms module, including e
 
 Encrypts secret data with Google Cloud KMS and provides access to the ciphertext.
 
-
 > **NOTE**: Using this resource will allow you to conceal secret data within your
 resource definitions, but it does not take care of protecting that data in the
 logging output, plan output, or state output.  Please take care to secure your secret
 data outside of resource definitions.
-
 
 To get more information about SecretCiphertext, see:
 
@@ -28,9 +26,6 @@ To get more information about SecretCiphertext, see:
 > **Warning:** All arguments including `plaintext` and `additional_authenticated_data` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a SecretCiphertext Resource {#create}

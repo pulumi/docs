@@ -13,7 +13,6 @@ meta_desc: "Explore the GetSSLPolicy function of the compute module, including e
 Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.
     For more information see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +49,11 @@ import pulumi_gcp as gcp
 
 my_ssl_policy = gcp.compute.get_ssl_policy(name="production-ssl-policy")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -60,6 +62,7 @@ const my_ssl_policy = pulumi.output(gcp.compute.getSSLPolicy({
     name: "production-ssl-policy",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

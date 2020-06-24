@@ -18,7 +18,6 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 passwords as well as certificate outputs will be stored in the raw state as
 plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,6 +71,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -119,6 +119,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -153,9 +154,11 @@ primary = gcp.container.Cluster("primary",
         ],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -191,6 +194,7 @@ const primary = new gcp.container.Cluster("primary", {
     update: "40m",
 } });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -13910,6 +13914,16 @@ endpoint via private networking.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="masterglobalaccessconfig_csharp">
+<a href="#masterglobalaccessconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Global<wbr>Access<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="masteripv4cidrblock_csharp">
 <a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
 </span> 
@@ -13992,6 +14006,16 @@ creating a private endpoint on the cluster. In a private cluster, nodes only
 have RFC 1918 private addresses and communicate with the master's private
 endpoint via private networking.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masterglobalaccessconfig_go">
+<a href="#masterglobalaccessconfig_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Global<wbr>Access<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -14080,6 +14104,16 @@ endpoint via private networking.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="masterglobalaccessconfig_nodejs">
+<a href="#masterglobalaccessconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Global<wbr>Access<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="masteripv4cidrblock_nodejs">
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
 </span> 
@@ -14165,6 +14199,16 @@ endpoint via private networking.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="masterglobalaccessconfig_python">
+<a href="#masterglobalaccessconfig_python" style="color: inherit; text-decoration: inherit;">master<wbr>Global<wbr>Access<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Dict[Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="masteripv4cidrblock_python">
 <a href="#masteripv4cidrblock_python" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
 </span> 
@@ -14211,6 +14255,100 @@ for more details. This field only applies to private clusters, when
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The external IP address of this cluster's master endpoint.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPrivateClusterConfigMasterGlobalAccessConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPrivateClusterConfigMasterGlobalAccessConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#ClusterPrivateClusterConfigMasterGlobalAccessConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.ClusterPrivateClusterConfigMasterGlobalAccessConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.
 {{% /md %}}</dd>
 
 </dl>

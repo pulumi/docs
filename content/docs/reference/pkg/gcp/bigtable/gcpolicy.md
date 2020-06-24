@@ -16,7 +16,6 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
 
 
 
-
 ## Create a GCPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

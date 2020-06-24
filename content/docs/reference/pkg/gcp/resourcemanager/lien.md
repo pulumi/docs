@@ -14,11 +14,6 @@ A Lien represents an encumbrance on the actions that can be performed on a resou
 
 
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
-
-
 ## Create a Lien Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

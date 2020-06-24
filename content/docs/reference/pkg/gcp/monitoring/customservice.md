@@ -15,14 +15,12 @@ designed to solve an individual concern (Wikipedia). In Cloud Monitoring,
 a Service acts as the root resource under which operational aspects of
 the service are accessible
 
-
 To get more information about Service, see:
 
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
 * How-to Guides
     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +92,11 @@ custom = gcp.monitoring.CustomService("custom",
         "resourceName": "//product.googleapis.com/foo/foo/services/test",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -107,6 +109,7 @@ const custom = new gcp.monitoring.CustomService("custom", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

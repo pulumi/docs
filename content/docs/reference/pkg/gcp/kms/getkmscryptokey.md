@@ -18,7 +18,6 @@ and
 A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
 Google Cloud KMS KeyRing.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ my_key_ring = gcp.kms.get_kms_key_ring(name="my-key-ring",
 my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
     key_ring=my_key_ring.self_link)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -105,6 +108,7 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
     keyRing: myKeyRing.selfLink,
 }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

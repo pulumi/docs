@@ -16,9 +16,6 @@ You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -82,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +96,11 @@ idp_config = gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpConfig",
     client_id="my-client-id",
     client_secret="secret")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -113,6 +114,7 @@ const idpConfig = new gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpC
     clientSecret: "secret",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetTestablePermissions function of the iam module, inclu
 
 Retrieve a list of testable permissions for a resource. Testable permissions mean the permissions that user can add or remove in a role at a given resource. The resource can be referenced either via the full resource name or via a URI.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ perms = gcp.iam.get_testable_permissions(full_resource_name="//cloudresourcemana
         "BETA",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -94,6 +97,7 @@ const perms = pulumi.output(gcp.iam.getTestablePermissions({
     ],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,7 +16,6 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 
 
 
-
 ## Create a Table Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

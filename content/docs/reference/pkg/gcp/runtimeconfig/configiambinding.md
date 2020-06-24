@@ -20,8 +20,6 @@ Three different resources help you manage your IAM policy for Runtime Configurat
 
 > **Note:** `gcp.runtimeconfig.ConfigIamBinding` resources **can be** used in conjunction with `gcp.runtimeconfig.ConfigIamMember` resources **only if** they do not grant privilege to the same role.
 
-
-
 ## google\_runtimeconfig\_config\_iam\_policy
 
 ```typescript

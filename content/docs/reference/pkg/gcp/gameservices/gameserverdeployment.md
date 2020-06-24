@@ -18,7 +18,6 @@ To get more information about GameServerDeployment, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +57,11 @@ default = gcp.gameservices.GameServerDeployment("default",
     deployment_id="tf-test-deployment",
     description="a deployment description")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -69,6 +71,7 @@ const _default = new gcp.gameservices.GameServerDeployment("default", {
     description: "a deployment description",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

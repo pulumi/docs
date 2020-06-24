@@ -19,7 +19,6 @@ For more information, see,
 [the Project API documentation](https://cloud.google.com/compute/docs/reference/latest/projects),
 where the Shared VPC feature is referred to by its former name "XPN".
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ service1 = gcp.compute.SharedVPCServiceProject("service1",
     host_project="host-project-id",
     service_project="service-project-id-1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -90,6 +93,7 @@ const service1 = new gcp.compute.SharedVPCServiceProject("service1", {
     serviceProject: "service-project-id-1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

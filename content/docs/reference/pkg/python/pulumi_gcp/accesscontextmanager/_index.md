@@ -18,7 +18,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.accesscontextmanager"></span><dl class="py class">
 <dt id="pulumi_gcp.accesscontextmanager.AccessLevel">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.accesscontextmanager.</code><code class="sig-name descname">AccessLevel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.accesscontextmanager.</code><code class="sig-name descname">AccessLevel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>An AccessLevel is a label that can be applied to requests to GCP services,
 along with a list of requirements necessary for the label to be applied.</p>
 <p>To get more information about AccessLevel, see:</p>
@@ -62,13 +62,15 @@ along with a list of requirements necessary for the label to be applied.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>basic</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of predefined conditions for the access level and a combining function.  Structure is documented below.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the AccessLevel and its use. Does not affect behavior.</p></li>
+<li><p><strong>custom</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: <a class="reference external" href="https://github.com/google/cel-spec">https://github.com/google/cel-spec</a>.  Structure is documented below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the expression</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the Access Level. The short<em>name component must begin
 with a letter and only include alphanumeric and ‘</em>’.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
 <li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this AccessLevel lives in.
 Format: accessPolicies/{policy_id}</p></li>
-<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd>
 </dl>
@@ -132,6 +134,19 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>custom</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+This page details the objects and attributes that are used to the build the CEL expressions for
+custom access levels - <a class="reference external" href="https://cloud.google.com/access-context-manager/docs/custom-access-level-spec">https://cloud.google.com/access-context-manager/docs/custom-access-level-spec</a>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of the expression</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String indicating the location of the expression for error reporting, e.g. a file name and a position in the file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </li>
 </ul>
@@ -204,9 +219,28 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.accesscontextmanager.AccessLevel.custom">
+<code class="sig-name descname">custom</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.custom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: <a class="reference external" href="https://github.com/google/cel-spec">https://github.com/google/cel-spec</a>.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+This page details the objects and attributes that are used to the build the CEL expressions for
+custom access levels - <a class="reference external" href="https://cloud.google.com/access-context-manager/docs/custom-access-level-spec">https://cloud.google.com/access-context-manager/docs/custom-access-level-spec</a>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Description of the expression</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - String indicating the location of the expression for error reporting, e.g. a file name and a position in the file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Title for the expression, i.e. a short string describing its purpose.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.accesscontextmanager.AccessLevel.description">
 <code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>Description of the AccessLevel and its use. Does not affect behavior.</p>
+<dd><p>Description of the expression</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -227,12 +261,12 @@ Format: accessPolicies/{policy_id}</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.accesscontextmanager.AccessLevel.title">
 <code class="sig-name descname">title</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.title" title="Permalink to this definition">¶</a></dt>
-<dd><p>Human readable title. Must be unique within the Policy.</p>
+<dd><p>Title for the expression, i.e. a short string describing its purpose.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_gcp.accesscontextmanager.AccessLevel.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">basic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AccessLevel resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -242,13 +276,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>basic</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of predefined conditions for the access level and a combining function.  Structure is documented below.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the AccessLevel and its use. Does not affect behavior.</p></li>
+<li><p><strong>custom</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: <a class="reference external" href="https://github.com/google/cel-spec">https://github.com/google/cel-spec</a>.  Structure is documented below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the expression</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the Access Level. The short<em>name component must begin
 with a letter and only include alphanumeric and ‘</em>’.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
 <li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this AccessLevel lives in.
 Format: accessPolicies/{policy_id}</p></li>
-<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </dd>
 </dl>
@@ -312,6 +348,19 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>custom</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+This page details the objects and attributes that are used to the build the CEL expressions for
+custom access levels - <a class="reference external" href="https://cloud.google.com/access-context-manager/docs/custom-access-level-spec">https://cloud.google.com/access-context-manager/docs/custom-access-level-spec</a>.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of the expression</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Textual representation of an expression in Common Expression Language syntax.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String indicating the location of the expression for error reporting, e.g. a file name and a position in the file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Title for the expression, i.e. a short string describing its purpose.</p></li>
 </ul>
 </li>
 </ul>

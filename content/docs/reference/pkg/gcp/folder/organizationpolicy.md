@@ -15,7 +15,6 @@ Allows management of Organization policies for a Google Folder. For more informa
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/folders/setOrgPolicy).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,6 +70,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,9 +85,11 @@ serial_port_policy = gcp.folder.OrganizationPolicy("serialPortPolicy",
     constraint="compute.disableSerialPortAccess",
     folder="folders/123456789")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -99,6 +102,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
     folder: "folders/123456789",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

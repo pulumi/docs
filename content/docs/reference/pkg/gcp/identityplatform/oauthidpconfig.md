@@ -16,9 +16,6 @@ You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +70,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +85,11 @@ oauth_idp_config = gcp.identityplatform.OauthIdpConfig("oauthIdpConfig",
     enabled=True,
     issuer="issuer")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -101,6 +102,7 @@ const oauthIdpConfig = new gcp.identityplatform.OauthIdpConfig("oauth_idp_config
     issuer: "issuer",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

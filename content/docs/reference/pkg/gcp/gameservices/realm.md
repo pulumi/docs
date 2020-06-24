@@ -18,7 +18,6 @@ To get more information about Realm, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +61,11 @@ default = gcp.gameservices.Realm("default",
     location="global",
     description="one of the nine")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -75,6 +77,7 @@ const _default = new gcp.gameservices.Realm("default", {
     description: "one of the nine",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

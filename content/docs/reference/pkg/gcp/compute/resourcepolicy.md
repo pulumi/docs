@@ -12,9 +12,6 @@ meta_desc: "Explore the ResourcePolicy resource of the compute module, including
 
 A policy that can be attached to a resource to specify or schedule actions on that resource.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +77,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +96,11 @@ foo = gcp.compute.ResourcePolicy("foo",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -116,6 +117,7 @@ const foo = new gcp.compute.ResourcePolicy("foo", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Resource Policy Full
@@ -161,6 +163,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -203,6 +206,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -232,9 +236,11 @@ bar = gcp.compute.ResourcePolicy("bar",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -262,6 +268,7 @@ const bar = new gcp.compute.ResourcePolicy("bar", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Resource Policy Placement Policy
@@ -287,6 +294,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -314,6 +322,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -328,9 +337,11 @@ baz = gcp.compute.ResourcePolicy("baz",
     },
     region="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -343,6 +354,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
     region: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
