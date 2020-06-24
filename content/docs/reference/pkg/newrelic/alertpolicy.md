@@ -12,65 +12,38 @@ meta_desc: "Explore the AlertPolicy resource of the New Relic package, including
 
 Use this resource to create and manage New Relic alert policies.
 
+{{% examples %}}
+## Example Usage
 
-## Additional Examples
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic Usage
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-##### Provision multiple notification channels and add those channels to a policy
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-// Provision a Slack notification channel.
-const slackChannel = new newrelic.AlertChannel("slackChannel", {
-    type: "slack",
-    config: {
-        url: "https://hooks.slack.com/services/<*****>/<*****>",
-        channel: "example-alerts-channel",
-    },
-});
-// Provision an email notification channel.
-const emailChannel = new newrelic.AlertChannel("emailChannel", {
-    type: "email",
-    config: {
-        recipients: "example@testing.com",
-        includeJsonAttachment: "1",
-    },
-});
-// Provision the alert policy.
-const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
-    incidentPreference: "PER_CONDITION",
-    channelIds: [
-        slackChannel.id,
-        emailChannel.id,
-    ],
+const foo = new newrelic.AlertPolicy("foo", {
+    incidentPreference: "PER_POLICY", // PER_POLICY is default
 });
 ```
-```python
-import pulumi
-import pulumi_newrelic as newrelic
 
-# Provision a Slack notification channel.
-slack_channel = newrelic.AlertChannel("slackChannel",
-    type="slack",
-    config={
-        "url": "https://hooks.slack.com/services/<*****>/<*****>",
-        "channel": "example-alerts-channel",
-    })
-# Provision an email notification channel.
-email_channel = newrelic.AlertChannel("emailChannel",
-    type="email",
-    config={
-        "recipients": "example@testing.com",
-        "includeJsonAttachment": "1",
-    })
-# Provision the alert policy.
-policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
-    incident_preference="PER_CONDITION",
-    channel_ids=[
-        slack_channel.id,
-        email_channel.id,
-    ])
-```
+{{% /example %}}
+
+### Provision multiple notification channels and add those channels to a policy
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using NewRelic = Pulumi.NewRelic;
@@ -113,34 +86,32 @@ class MyStack : Stack
 
 }
 ```
-<br>
 
-##### Reference existing notification channels and add those channel to a policy
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
+{{% /example %}}
 
-const slackChannel = newrelic.getAlertChannel({
-    name: "slack-channel-notification",
-});
-const emailChannel = newrelic.getAlertChannel({
-    name: "test@example.com",
-});
-// Provision the alert policy.
-const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
-    incidentPreference: "PER_CONDITION",
-    channelIds: [
-        slackChannel.then(slackChannel => slackChannel.id),
-        emailChannel.then(emailChannel => emailChannel.id),
-    ],
-});
-```
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_newrelic as newrelic
 
-slack_channel = newrelic.get_alert_channel(name="slack-channel-notification")
-email_channel = newrelic.get_alert_channel(name="test@example.com")
+# Provision a Slack notification channel.
+slack_channel = newrelic.AlertChannel("slackChannel",
+    type="slack",
+    config={
+        "url": "https://hooks.slack.com/services/<*****>/<*****>",
+        "channel": "example-alerts-channel",
+    })
+# Provision an email notification channel.
+email_channel = newrelic.AlertChannel("emailChannel",
+    type="email",
+    config={
+        "recipients": "example@testing.com",
+        "includeJsonAttachment": "1",
+    })
 # Provision the alert policy.
 policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
     incident_preference="PER_CONDITION",
@@ -149,6 +120,45 @@ policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
         email_channel.id,
     ])
 ```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+// Provision a Slack notification channel.
+const slackChannel = new newrelic.AlertChannel("slackChannel", {
+    type: "slack",
+    config: {
+        url: "https://hooks.slack.com/services/<*****>/<*****>",
+        channel: "example-alerts-channel",
+    },
+});
+// Provision an email notification channel.
+const emailChannel = new newrelic.AlertChannel("emailChannel", {
+    type: "email",
+    config: {
+        recipients: "example@testing.com",
+        includeJsonAttachment: "1",
+    },
+});
+// Provision the alert policy.
+const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
+    incidentPreference: "PER_CONDITION",
+    channelIds: [
+        slackChannel.id,
+        emailChannel.id,
+    ],
+});
+```
+
+{{% /example %}}
+
+### Reference existing notification channels and add those channel to a policy
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using NewRelic = Pulumi.NewRelic;
@@ -180,13 +190,6 @@ class MyStack : Stack
 }
 ```
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
 {{% /example %}}
 
 {{% example go %}}
@@ -194,7 +197,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+slack_channel = newrelic.get_alert_channel(name="slack-channel-notification")
+email_channel = newrelic.get_alert_channel(name="test@example.com")
+# Provision the alert policy.
+policy_with_channels = newrelic.AlertPolicy("policyWithChannels",
+    incident_preference="PER_CONDITION",
+    channel_ids=[
+        slack_channel.id,
+        email_channel.id,
+    ])
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -202,10 +219,22 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const foo = new newrelic.AlertPolicy("foo", {
-    incidentPreference: "PER_POLICY", // PER_POLICY is default
+const slackChannel = newrelic.getAlertChannel({
+    name: "slack-channel-notification",
+});
+const emailChannel = newrelic.getAlertChannel({
+    name: "test@example.com",
+});
+// Provision the alert policy.
+const policyWithChannels = new newrelic.AlertPolicy("policyWithChannels", {
+    incidentPreference: "PER_CONDITION",
+    channelIds: [
+        slackChannel.then(slackChannel => slackChannel.id),
+        emailChannel.then(emailChannel => emailChannel.id),
+    ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -220,11 +249,11 @@ const foo = new newrelic.AlertPolicy("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertPolicy">AlertPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertPolicy">AlertPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicy">NewAlertPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicy">NewAlertPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -298,7 +327,7 @@ const foo = new newrelic.AlertPolicy("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -318,7 +347,7 @@ const foo = new newrelic.AlertPolicy("foo", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -328,7 +357,7 @@ const foo = new newrelic.AlertPolicy("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -394,15 +423,24 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountid_csharp">
+<a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The New Relic account ID to operate on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="channelids_csharp">
 <a href="#channelids_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -436,15 +474,24 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountid_go">
+<a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The New Relic account ID to operate on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="channelids_go">
 <a href="#channelids_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -478,15 +525,24 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountid_nodejs">
+<a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The New Relic account ID to operate on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="channelids_nodejs">
 <a href="#channelids_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -520,15 +576,24 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="account_id_python">
+<a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The New Relic account ID to operate on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="channel_ids_python">
 <a href="#channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -571,17 +636,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -592,34 +646,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="updatedat_csharp">
-<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -631,34 +663,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="updatedat_go">
-<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -670,34 +680,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="updatedat_nodejs">
-<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -708,17 +696,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="updated_at_python">
-<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -739,11 +716,11 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>channel_ids=None<span class="p">, </span>created_at=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, </span>updated_at=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -855,27 +832,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountid_csharp">
+<a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The New Relic account ID to operate on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_channelids_csharp">
 <a href="#state_channelids_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_createdat_csharp">
-<a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -899,17 +874,6 @@ imported via terraform import.
     <dd>{{% md %}}The name of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_updatedat_csharp">
-<a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -919,27 +883,25 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountid_go">
+<a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The New Relic account ID to operate on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_channelids_go">
 <a href="#state_channelids_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_createdat_go">
-<a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -963,17 +925,6 @@ imported via terraform import.
     <dd>{{% md %}}The name of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_updatedat_go">
-<a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -983,27 +934,25 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountid_nodejs">
+<a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The New Relic account ID to operate on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_channelids_nodejs">
 <a href="#state_channelids_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_createdat_nodejs">
-<a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1027,17 +976,6 @@ imported via terraform import.
     <dd>{{% md %}}The name of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_updatedat_nodejs">
-<a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1047,27 +985,25 @@ imported via terraform import.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_account_id_python">
+<a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The New Relic account ID to operate on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_channel_ids_python">
 <a href="#state_channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_created_at_python">
-<a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1091,17 +1027,6 @@ imported via terraform import.
     <dd>{{% md %}}The name of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_updated_at_python">
-<a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1122,6 +1047,6 @@ imported via terraform import.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
+	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 </dl>
 

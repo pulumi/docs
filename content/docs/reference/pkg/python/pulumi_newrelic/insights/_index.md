@@ -3,6 +3,7 @@ title: Module insights
 title_tag: Module insights | Package pulumi_newrelic | Python SDK
 linktitle: insights
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "newrelic" >}}
@@ -18,10 +19,53 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_newrelic.insights"></span><dl class="py class">
 <dt id="pulumi_newrelic.insights.Event">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.insights.</code><code class="sig-name descname">Event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.insights.Event" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Event resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] events: An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.</p>
+<dd><p>Use this resource to create one or more Insights events.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">insights</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">events</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;attribute&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;a_string_attribute&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;a string&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;an_integer_attribute&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;int&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;a_float_attribute&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mf">101.1</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1232471100</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MyEvent&quot;</span><span class="p">,</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">event</span></code> mapping supports the following arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) The event’s name. Can be a combination of alphanumeric characters, underscores, and colons.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> - (Optional) Must be a Unix epoch timestamp. You can define timestamps either in seconds or in milliseconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attribute</span></code> - (Required) An attribute to include in your event payload. Multiple attribute blocks can be defined for an event. See Attributes below for details.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">attribute</span></code> mapping supports the following arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> - (Required) The name of the attribute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The value of the attribute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) Specify the type for the attribute value. This is useful when passing integer or float values to Insights. Allowed values are <code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, or <code class="docutils literal notranslate"><span class="pre">float</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>events</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>

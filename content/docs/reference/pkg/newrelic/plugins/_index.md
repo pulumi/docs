@@ -29,9 +29,9 @@ Explore the resources and functions of the plugins module in the New Relic packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
+	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -42,7 +42,7 @@ Explore the resources and functions of the plugins module in the New Relic packa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Plugins.html" title="Pulumi.NewRelic.Plugins">Pulumi.NewRelic.Plugins</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/plugins?tab=doc#" title="newrelic/plugins">newrelic/plugins</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/plugins?tab=doc#" title="newrelic/plugins">newrelic/plugins</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/plugins/#" title="@pulumi/newrelic/plugins">@pulumi/newrelic/plugins</a></dd>

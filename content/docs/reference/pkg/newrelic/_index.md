@@ -26,6 +26,8 @@ A Pulumi package for creating and managing New Relic resources.
     <li><a href="alertpolicy" title="AlertPolicy"><span class="symbol resource"></span>AlertPolicy</a></li>
     <li><a href="alertpolicychannel" title="AlertPolicyChannel"><span class="symbol resource"></span>AlertPolicyChannel</a></li>
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
+    <li><a href="entitytags" title="EntityTags"><span class="symbol resource"></span>EntityTags</a></li>
+    <li><a href="eventstometricsrule" title="EventsToMetricsRule"><span class="symbol resource"></span>EventsToMetricsRule</a></li>
     <li><a href="infraalertcondition" title="InfraAlertCondition"><span class="symbol resource"></span>InfraAlertCondition</a></li>
     <li><a href="nrqlalertcondition" title="NrqlAlertCondition"><span class="symbol resource"></span>NrqlAlertCondition</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
@@ -36,6 +38,7 @@ A Pulumi package for creating and managing New Relic resources.
     <li><a href="getalertchannel" title="GetAlertChannel"><span class="symbol function"></span>GetAlertChannel</a></li>
     <li><a href="getalertpolicy" title="GetAlertPolicy"><span class="symbol function"></span>GetAlertPolicy</a></li>
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
+    <li><a href="getentity" title="GetEntity"><span class="symbol function"></span>GetEntity</a></li>
     <li><a href="getkeytransaction" title="GetKeyTransaction"><span class="symbol function"></span>GetKeyTransaction</a></li>
 </ul>
 
@@ -46,9 +49,9 @@ A Pulumi package for creating and managing New Relic resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
+	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -59,7 +62,7 @@ A Pulumi package for creating and managing New Relic resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.html" title="Pulumi.NewRelic">Pulumi.NewRelic</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#" title="newrelic">newrelic</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#" title="newrelic">newrelic</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#" title="@pulumi/newrelic">@pulumi/newrelic</a></dd>

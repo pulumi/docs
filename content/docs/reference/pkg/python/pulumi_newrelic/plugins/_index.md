@@ -3,6 +3,7 @@ title: Module plugins
 title_tag: Module plugins | Package pulumi_newrelic | Python SDK
 linktitle: plugins
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "newrelic" >}}
@@ -384,9 +385,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.plugins.Workload">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">Workload</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity_guids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity_search_queries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope_account_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.Workload" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create, update, and delete a New Relic One workload.</p>
-<p>A New Relic Personal API key is required to provision this resource.  Set the <code class="docutils literal notranslate"><span class="pre">provider_api_key</span></code>
-attribute in the <code class="docutils literal notranslate"><span class="pre">provider</span></code> block or the <code class="docutils literal notranslate"><span class="pre">NEWRELIC_PERSONAL_API_KEY</span></code> environment
-variable with your Personal API key,</p>
+<p>A New Relic Personal API key is required to provision this resource.  Set the <code class="docutils literal notranslate"><span class="pre">api_key</span></code>
+attribute in the <code class="docutils literal notranslate"><span class="pre">provider</span></code> block or the <code class="docutils literal notranslate"><span class="pre">NEW_RELIC_API_KEY</span></code> environment
+variable with your Personal API key.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
 
@@ -543,7 +544,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_newrelic.plugins.get_plugin">
 <code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">guid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Use this data source to get information about a specific installed plugin in New Relic.</p>
+<p>Each plugin published to New Relic’s Plugin Central is assigned a <a class="reference external" href="https://docs.newrelic.com/docs/plugins/plugin-developer-resources/planning-your-plugin/parts-plugin#guid">GUID</a>. Once you have installed a plugin into your account it is assigned an ID. This account-specific ID is required when creating Plugins alert conditions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo_plugin</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">guid</span><span class="o">=</span><span class="s2">&quot;com.example.my-plugin&quot;</span><span class="p">)</span>
+<span class="n">foo_alert_policy</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">AlertPolicy</span><span class="p">(</span><span class="s2">&quot;fooAlertPolicy&quot;</span><span class="p">)</span>
+<span class="n">foo_alert_condition</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AlertCondition</span><span class="p">(</span><span class="s2">&quot;fooAlertCondition&quot;</span><span class="p">,</span>
+    <span class="n">policy_id</span><span class="o">=</span><span class="n">foo_alert_policy</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;Component/Summary/Consumers[consumers]&quot;</span><span class="p">,</span>
+    <span class="n">plugin_id</span><span class="o">=</span><span class="n">foo_plugin</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">plugin_guid</span><span class="o">=</span><span class="n">foo_plugin</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span>
+    <span class="n">value_function</span><span class="o">=</span><span class="s2">&quot;average&quot;</span><span class="p">,</span>
+    <span class="n">metric_description</span><span class="o">=</span><span class="s2">&quot;Queue consumers&quot;</span><span class="p">,</span>
+    <span class="n">term</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;below&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="s2">&quot;0.75&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeFunction&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>guid</strong> (<em>str</em>) – The GUID of the plugin in New Relic.</p>
@@ -554,7 +577,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_newrelic.plugins.get_plugin_component">
 <code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin_component" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Use this data source to get information about a single plugin component in New Relic that already exists.</p>
+<p>Each plugin component reporting into to New Relic is assigned a unique ID. Once you have a plugin component reporting data into your account, its component ID can be used to create Plugins alert conditions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
+
+<span class="n">foo_plugin</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">guid</span><span class="o">=</span><span class="s2">&quot;com.example.my-plugin&quot;</span><span class="p">)</span>
+<span class="n">foo_plugin_component</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">get_plugin_component</span><span class="p">(</span><span class="n">plugin_id</span><span class="o">=</span><span class="n">foo_plugin</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My Plugin Component&quot;</span><span class="p">)</span>
+<span class="n">foo_alert_policy</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">AlertPolicy</span><span class="p">(</span><span class="s2">&quot;fooAlertPolicy&quot;</span><span class="p">)</span>
+<span class="n">foo_alert_condition</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AlertCondition</span><span class="p">(</span><span class="s2">&quot;fooAlertCondition&quot;</span><span class="p">,</span>
+    <span class="n">policy_id</span><span class="o">=</span><span class="n">foo_alert_policy</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;Component/Summary/Consumers[consumers]&quot;</span><span class="p">,</span>
+    <span class="n">plugin_id</span><span class="o">=</span><span class="n">foo_plugin</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">plugin_guid</span><span class="o">=</span><span class="n">foo_plugin</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span>
+    <span class="n">entities</span><span class="o">=</span><span class="p">[</span><span class="n">foo_plugin_component</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">value_function</span><span class="o">=</span><span class="s2">&quot;average&quot;</span><span class="p">,</span>
+    <span class="n">metric_description</span><span class="o">=</span><span class="s2">&quot;Queue consumers&quot;</span><span class="p">,</span>
+    <span class="n">term</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;below&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="s2">&quot;0.75&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timeFunction&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

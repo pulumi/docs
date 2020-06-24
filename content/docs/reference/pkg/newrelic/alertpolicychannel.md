@@ -12,8 +12,6 @@ meta_desc: "Explore the AlertPolicyChannel resource of the New Relic package, in
 
 Use this resource to map alert policies to alert channels in New Relic.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -102,9 +101,11 @@ foo = newrelic.AlertPolicyChannel("foo",
         slack_channel.id,
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
@@ -138,6 +139,7 @@ const foo = new newrelic.AlertPolicyChannel("foo", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -152,11 +154,11 @@ const foo = new newrelic.AlertPolicyChannel("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertPolicyChannel">AlertPolicyChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>channel_id=None<span class="p">, </span>channel_ids=None<span class="p">, </span>policy_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertPolicyChannel">AlertPolicyChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>channel_ids=None<span class="p">, </span>policy_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyChannel">NewAlertPolicyChannel</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyChannelArgs">AlertPolicyChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyChannel">AlertPolicyChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyChannel">NewAlertPolicyChannel</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyChannelArgs">AlertPolicyChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyChannel">AlertPolicyChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -230,7 +232,7 @@ const foo = new newrelic.AlertPolicyChannel("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -250,7 +252,7 @@ const foo = new newrelic.AlertPolicyChannel("foo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyChannelArgs">AlertPolicyChannelArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyChannelArgs">AlertPolicyChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -260,7 +262,7 @@ const foo = new newrelic.AlertPolicyChannel("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -326,28 +328,6 @@ The AlertPolicyChannel resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span id="policyid_csharp">
-<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="channelid_csharp">
-<a href="#channelid_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated. The ID of the channel. Please use the channel_ids argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `channel_ids` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="channelids_csharp">
 <a href="#channelids_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
 </span> 
@@ -358,12 +338,35 @@ The AlertPolicyChannel resource accepts the following [input]({{< relref "/docs/
 drift your Terraform state.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="channelids_go">
+<a href="#channelids_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
+drift your Terraform state.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -376,35 +379,24 @@ drift your Terraform state.
     <dd>{{% md %}}The ID of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="channelid_go">
-<a href="#channelid_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated. The ID of the channel. Please use the channel_ids argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `channel_ids` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="channelids_go">
-<a href="#channelids_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
-    </dt>
-    <dd>{{% md %}}Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
-drift your Terraform state.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="channelids_nodejs">
+<a href="#channelids_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
+drift your Terraform state.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -417,35 +409,24 @@ drift your Terraform state.
     <dd>{{% md %}}The ID of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="channelid_nodejs">
-<a href="#channelid_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated. The ID of the channel. Please use the channel_ids argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `channel_ids` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="channelids_nodejs">
-<a href="#channelids_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
-drift your Terraform state.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="channel_ids_python">
+<a href="#channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
+drift your Terraform state.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -456,29 +437,6 @@ drift your Terraform state.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The ID of the policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="channel_id_python">
-<a href="#channel_id_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated. The ID of the channel. Please use the channel_ids argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `channel_ids` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="channel_ids_python">
-<a href="#channel_ids_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of channel IDs to apply to the specified policy. We recommended sorting channel IDs in ascending order to avoid
-drift your Terraform state.
 {{% /md %}}</dd>
 
 </dl>
@@ -579,11 +537,11 @@ Get an existing AlertPolicyChannel resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>channel_id=None<span class="p">, </span>channel_ids=None<span class="p">, </span>policy_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>channel_ids=None<span class="p">, </span>policy_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicyChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyChannelState">AlertPolicyChannelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertPolicyChannel">AlertPolicyChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicyChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyChannelState">AlertPolicyChannelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertPolicyChannel">AlertPolicyChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -693,17 +651,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_channelid_csharp">
-<a href="#state_channelid_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated. The ID of the channel. Please use the channel_ids argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `channel_ids` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_channelids_csharp">
@@ -733,17 +680,6 @@ drift your Terraform state.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_channelid_go">
-<a href="#state_channelid_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated. The ID of the channel. Please use the channel_ids argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `channel_ids` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -775,17 +711,6 @@ drift your Terraform state.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_channelid_nodejs">
-<a href="#state_channelid_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated. The ID of the channel. Please use the channel_ids argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `channel_ids` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_channelids_nodejs">
@@ -815,17 +740,6 @@ drift your Terraform state.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_channel_id_python">
-<a href="#state_channel_id_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated. The ID of the channel. Please use the channel_ids argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `channel_ids` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -870,6 +784,6 @@ drift your Terraform state.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
+	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 </dl>
 

@@ -11,8 +11,6 @@ meta_desc: "Explore the AlertChannel resource of the New Relic package, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage New Relic alert policies.
-
-
 ## Additional Examples
 
 ##### Slack
@@ -347,7 +345,7 @@ class MyStack : Stack
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Email
+
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -370,6 +368,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -388,6 +387,7 @@ foo = newrelic.AlertChannel("foo",
     },
     type="email")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -403,6 +403,7 @@ const foo = new newrelic.AlertChannel("foo", {
     type: "email",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -417,11 +418,11 @@ const foo = new newrelic.AlertChannel("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertChannel">AlertChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>configuration=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/newrelic/#AlertChannel">AlertChannel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertChannel">NewAlertChannel</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertChannelArgs">AlertChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertChannel">AlertChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertChannel">NewAlertChannel</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertChannelArgs">AlertChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertChannel">AlertChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -495,7 +496,7 @@ const foo = new newrelic.AlertChannel("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -515,7 +516,7 @@ const foo = new newrelic.AlertChannel("foo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertChannelArgs">AlertChannelArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertChannelArgs">AlertChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -525,7 +526,7 @@ const foo = new newrelic.AlertChannel("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -611,17 +612,6 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="configuration_csharp">
-<a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** (Optional) A map of key/value pairs with channel type specific values. This argument is deprecated.  Use the `config` argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `config` block instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -661,17 +651,6 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="configuration_go">
-<a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** (Optional) A map of key/value pairs with channel type specific values. This argument is deprecated.  Use the `config` argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `config` block instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -713,17 +692,6 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="configuration_nodejs">
-<a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** (Optional) A map of key/value pairs with channel type specific values. This argument is deprecated.  Use the `config` argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `config` block instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -763,17 +731,6 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="configuration_python">
-<a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** (Optional) A map of key/value pairs with channel type specific values. This argument is deprecated.  Use the `config` argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `config` block instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -884,11 +841,11 @@ Get an existing AlertChannel resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>configuration=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertChannelState">AlertChannelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertChannel">AlertChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertChannelState">AlertChannelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertChannel">AlertChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1009,17 +966,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_configuration_csharp">
-<a href="#state_configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** (Optional) A map of key/value pairs with channel type specific values. This argument is deprecated.  Use the `config` argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `config` block instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1059,17 +1005,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_configuration_go">
-<a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** (Optional) A map of key/value pairs with channel type specific values. This argument is deprecated.  Use the `config` argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `config` block instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1111,17 +1046,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_configuration_nodejs">
-<a href="#state_configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** (Optional) A map of key/value pairs with channel type specific values. This argument is deprecated.  Use the `config` argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `config` block instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1161,17 +1085,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A nested block that describes an alert channel configuration.  Only one config block is permitted per alert channel definition.  See Nested config blocks below for details.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_configuration_python">
-<a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** (Optional) A map of key/value pairs with channel type specific values. This argument is deprecated.  Use the `config` argument instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `config` block instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1216,7 +1129,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertChannelConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertChannelConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertChannelConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertChannelConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.AlertChannelConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.AlertChannelConfig.html">output</a> API doc for this type.
@@ -2207,6 +2120,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
+	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 </dl>
 
