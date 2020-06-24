@@ -14,8 +14,6 @@ Provides a ESS notification resource. More about Ess notification, see [Autoscal
 
 > **NOTE:** Available in 1.55.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -90,6 +88,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -132,6 +131,7 @@ default_notification = alicloud.ess.Notification("defaultNotification",
     ],
     scaling_group_id=default_scaling_group.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -178,6 +178,7 @@ const defaultNotification = new alicloud.ess.Notification("default", {
     scalingGroupId: defaultScalingGroup.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

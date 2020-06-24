@@ -14,8 +14,6 @@ Create an alias for the master key (CMK).
 
 > **NOTE:** Available in v1.77.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ this_alias = alicloud.kms.Alias("thisAlias",
     alias_name="alias/test_kms_alias",
     key_id=this_key.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -71,6 +72,7 @@ const thisAlias = new alicloud.kms.Alias("thisAlias", {
     keyId: thisKey.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

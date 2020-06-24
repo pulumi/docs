@@ -12,8 +12,6 @@ meta_desc: "Explore the GetServices function of the fc module, including example
 
 This data source provides the Function Compute services of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstFcServiceName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 fc_services_ds = alicloud.fc.get_services(name_regex="sample_fc_service")
 pulumi.export("firstFcServiceName", fc_services_ds.services[0]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const fcServicesDs = pulumi.output(alicloud.fc.getServices({
 
 export const firstFcServiceName = fcServicesDs.services[0].name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

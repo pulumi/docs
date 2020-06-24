@@ -14,8 +14,6 @@ This data source provides the KVStore instance engines resource available info o
 
 > **NOTE:** Available in v1.51.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
     public Output<string> FirstKvstoreInstanceClass { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ resources_instance_engines = alicloud.kvstore.get_instance_engines(engine="Redis
     zone_id=resources_zones.zones[0]["id"])
 pulumi.export("firstKvstoreInstanceClass", resources_instance_engines.instance_engines[0]["engine"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -88,6 +89,7 @@ const resourcesInstanceEngines = resourcesZones.apply(resourcesZones => alicloud
 
 export const firstKvstoreInstanceClass = resourcesInstanceEngines.instanceEngines[0].engine;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

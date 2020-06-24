@@ -14,8 +14,6 @@ This data source provides a list Container Registry Enterprise Edition instances
 
 > **NOTE:** Available in v1.86.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> Output { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ my_instances = alicloud.cs.get_registry_enterprise_instances(name_regex="my-inst
     output_file="my-instances-json")
 pulumi.export("output", my_instances.instances)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const myInstances = pulumi.output(alicloud.cs.getRegistryEnterpriseInstances({
 
 export const output = myInstances.instances;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

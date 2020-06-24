@@ -12,11 +12,9 @@ meta_desc: "Explore the Topic resource of the rocketmq module, including example
 
 Provides an ONS topic resource.
 
-For more information about how to use it, see [RocketMQ Topic Management API](https://www.alibabacloud.com/help/doc-detail/29591.html). 
+For more information about how to use it, see [RocketMQ Topic Management API](https://www.alibabacloud.com/help/doc-detail/29591.html).
 
 > **NOTE:** Available in 1.53.0+
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,9 +74,11 @@ default_topic = alicloud.rocketmq.Topic("defaultTopic",
     remark="dafault_ons_topic_remark",
     topic=topic)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -96,6 +97,7 @@ const defaultTopic = new alicloud.rocketmq.Topic("default", {
     topic: topic,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

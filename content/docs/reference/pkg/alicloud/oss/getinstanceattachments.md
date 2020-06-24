@@ -12,8 +12,6 @@ meta_desc: "Explore the GetInstanceAttachments function of the oss module, inclu
 
 This data source provides the ots instance attachments of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> FirstOtsAttachmentId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ attachments_ds = alicloud.oss.get_instance_attachments(instance_name="sample-ins
     output_file="attachments.txt")
 pulumi.export("firstOtsAttachmentId", attachments_ds.attachments[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const attachmentsDs = pulumi.output(alicloud.oss.getInstanceAttachments({
 
 export const firstOtsAttachmentId = attachmentsDs.attachments[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

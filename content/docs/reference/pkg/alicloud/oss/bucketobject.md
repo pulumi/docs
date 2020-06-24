@@ -12,8 +12,6 @@ meta_desc: "Explore the BucketObject resource of the oss module, including examp
 
 Provides a resource to put a object(content or file) to a oss bucket.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ object_source = alicloud.oss.BucketObject("object-source",
     key="new_object_key",
     source="path/to/file")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -67,6 +68,7 @@ const object_source = new alicloud.oss.BucketObject("object-source", {
     source: "path/to/file",
 });
 ```
+
 {{% /example %}}
 
 ### Uploading a content to a bucket
@@ -94,6 +96,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,9 +116,11 @@ object_content = alicloud.oss.BucketObject("object-content",
     content="the content that you want to upload.",
     key="new_object_key")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -130,6 +135,7 @@ const object_content = new alicloud.oss.BucketObject("object-content", {
     key: "new_object_key",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

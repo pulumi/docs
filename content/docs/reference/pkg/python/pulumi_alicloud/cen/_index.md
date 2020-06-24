@@ -37,6 +37,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.cen.AwaitableGetPrivateZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">AwaitableGetPrivateZonesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.AwaitableGetPrivateZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.cen.AwaitableGetRegionRouteEntriesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">AwaitableGetRegionRouteEntriesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.AwaitableGetRegionRouteEntriesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -44,6 +49,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py class">
 <dt id="pulumi_alicloud.cen.AwaitableGetRouteEntriesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">AwaitableGetRouteEntriesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_table_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.AwaitableGetRouteEntriesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.cen.AwaitableGetRouteMapsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">AwaitableGetRouteMapsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cen_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maps</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transmit_direction</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.AwaitableGetRouteMapsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -656,6 +666,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.cen.GetPrivateZonesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">GetPrivateZonesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.GetPrivateZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPrivateZones.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetPrivateZonesResult.cen_id">
+<code class="sig-name descname">cen_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetPrivateZonesResult.cen_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the CEN instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetPrivateZonesResult.host_region_id">
+<code class="sig-name descname">host_region_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetPrivateZonesResult.host_region_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service region. The service region is the target region of the PrivateZone service accessed through CEN.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetPrivateZonesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetPrivateZonesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetPrivateZonesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetPrivateZonesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of CEN private zone IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetPrivateZonesResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetPrivateZonesResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the PrivateZone service.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetPrivateZonesResult.zones">
+<code class="sig-name descname">zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetPrivateZonesResult.zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of CEN private zones. Each element contains the following attributes:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.cen.GetRegionRouteEntriesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">GetRegionRouteEntriesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.GetRegionRouteEntriesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegionRouteEntries.</p>
@@ -705,6 +757,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.cen.GetRouteEntriesResult.route_table_id">
 <code class="sig-name descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteEntriesResult.route_table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the route table.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.cen.GetRouteMapsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">GetRouteMapsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cen_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maps</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transmit_direction</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteMapsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRouteMaps.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetRouteMapsResult.cen_id">
+<code class="sig-name descname">cen_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteMapsResult.cen_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the CEN instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetRouteMapsResult.cen_region_id">
+<code class="sig-name descname">cen_region_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteMapsResult.cen_region_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the region to which the CEN instance belongs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetRouteMapsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteMapsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetRouteMapsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteMapsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of CEN route map IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetRouteMapsResult.maps">
+<code class="sig-name descname">maps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteMapsResult.maps" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of CEN instances. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetRouteMapsResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteMapsResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the route map.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.GetRouteMapsResult.transmit_direction">
+<code class="sig-name descname">transmit_direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.GetRouteMapsResult.transmit_direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>The direction in which the route map is applied.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1644,6 +1744,141 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="py class">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">VbrHealthCheck</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_source_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_target_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">healthy_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vbr_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vbr_instance_owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vbr_instance_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>This topic describes how to configure the health check feature for a Cloud Enterprise Network (CEN) instance. 
+After you attach a Virtual Border Router (VBR) to the CEN instance and configure the health check feature, you can monitor the network conditions of the on-premises data center connected to the VBR.</p>
+<p>For information about CEN VBR HealthCheck and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/en/doc-detail/71141.htm">Manage CEN VBR HealthCheck</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.88.0+</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cen_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the CEN instance.</p></li>
+<li><p><strong>health_check_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.</p></li>
+<li><p><strong>health_check_source_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source IP address of health checks.</p></li>
+<li><p><strong>health_check_target_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination IP address of health checks.</p></li>
+<li><p><strong>healthy_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.</p></li>
+<li><p><strong>vbr_instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VBR.</p></li>
+<li><p><strong>vbr_instance_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the account to which the VBR belongs.</p></li>
+<li><p><strong>vbr_instance_region_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the region to which the VBR belongs.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.cen_id">
+<code class="sig-name descname">cen_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.cen_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the CEN instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.health_check_interval">
+<code class="sig-name descname">health_check_interval</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.health_check_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.health_check_source_ip">
+<code class="sig-name descname">health_check_source_ip</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.health_check_source_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source IP address of health checks.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.health_check_target_ip">
+<code class="sig-name descname">health_check_target_ip</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.health_check_target_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>The destination IP address of health checks.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.healthy_threshold">
+<code class="sig-name descname">healthy_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.healthy_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.vbr_instance_id">
+<code class="sig-name descname">vbr_instance_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.vbr_instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VBR.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.vbr_instance_owner_id">
+<code class="sig-name descname">vbr_instance_owner_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.vbr_instance_owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the account to which the VBR belongs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.vbr_instance_region_id">
+<code class="sig-name descname">vbr_instance_region_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.vbr_instance_region_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the region to which the VBR belongs.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_source_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_target_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">healthy_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vbr_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vbr_instance_owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vbr_instance_region_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VbrHealthCheck resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cen_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the CEN instance.</p></li>
+<li><p><strong>health_check_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.</p></li>
+<li><p><strong>health_check_source_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source IP address of health checks.</p></li>
+<li><p><strong>health_check_target_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination IP address of health checks.</p></li>
+<li><p><strong>healthy_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.</p></li>
+<li><p><strong>vbr_instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VBR.</p></li>
+<li><p><strong>vbr_instance_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the account to which the VBR belongs.</p></li>
+<li><p><strong>vbr_instance_region_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the region to which the VBR belongs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cen.VbrHealthCheck.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.VbrHealthCheck.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt id="pulumi_alicloud.cen.get_bandwidth_limits">
 <code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">get_bandwidth_limits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">instance_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.get_bandwidth_limits" title="Permalink to this definition">¶</a></dt>
@@ -1739,6 +1974,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_alicloud.cen.get_private_zones">
+<code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">get_private_zones</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.get_private_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides CEN Private Zones available to the user.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.88.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cen_id</strong> (<em>str</em>) – The ID of the CEN instance.</p></li>
+<li><p><strong>host_region_id</strong> (<em>str</em>) – The service region. The service region is the target region of the PrivateZone service accessed through CEN.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of CEN private zone IDs.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `host_region_id ` - (Optional) The service region is the target region of the PrivateZone service accessed through CEN.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>status</strong> (<em>str</em>) – The status of the PrivateZone service, including <code class="docutils literal notranslate"><span class="pre">Creating</span></code>, <code class="docutils literal notranslate"><span class="pre">Active</span></code> and <code class="docutils literal notranslate"><span class="pre">Deleting</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_alicloud.cen.get_region_route_entries">
 <code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">get_region_route_entries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.get_region_route_entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides CEN Regional Route Entries available to the user.</p>
@@ -1778,6 +2039,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>cidr_block</strong> (<em>str</em>) – The destination CIDR block of the route entry to query.</p></li>
 <li><p><strong>instance_id</strong> (<em>str</em>) – ID of the CEN instance.</p></li>
 <li><p><strong>route_table_id</strong> (<em>str</em>) – ID of the route table of the VPC or VBR.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.cen.get_route_maps">
+<code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">get_route_maps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cen_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transmit_direction</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.get_route_maps" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides CEN Route Maps available to the user.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.87.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">this</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cen</span><span class="o">.</span><span class="n">get_route_maps</span><span class="p">(</span><span class="n">cen_id</span><span class="o">=</span><span class="s2">&quot;cen-ihdlgo87ai********&quot;</span><span class="p">,</span>
+    <span class="n">cen_region_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou&quot;</span><span class="p">,</span>
+    <span class="n">description_regex</span><span class="o">=</span><span class="s2">&quot;datasource_test&quot;</span><span class="p">,</span>
+    <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cenrmap-bnh97kb3mn********&quot;</span><span class="p">],</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;Active&quot;</span><span class="p">,</span>
+    <span class="n">transmit_direction</span><span class="o">=</span><span class="s2">&quot;RegionIn&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstCenRouteMapId&quot;</span><span class="p">,</span> <span class="n">this</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cen_id</strong> (<em>str</em>) – The ID of the CEN instance.</p></li>
+<li><p><strong>cen_region_id</strong> (<em>str</em>) – The ID of the region to which the CEN instance belongs.</p></li>
+<li><p><strong>description_regex</strong> (<em>str</em>) – A regex string to filter CEN route map by description.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of CEN route map IDs.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the route map, including <code class="docutils literal notranslate"><span class="pre">Creating</span></code>, <code class="docutils literal notranslate"><span class="pre">Active</span></code> and <code class="docutils literal notranslate"><span class="pre">Deleting</span></code>.</p></li>
+<li><p><strong>transmit_direction</strong> (<em>str</em>) – The direction in which the route map is applied, including <code class="docutils literal notranslate"><span class="pre">RegionIn</span></code> and <code class="docutils literal notranslate"><span class="pre">RegionOut</span></code>.</p></li>
 </ul>
 </dd>
 </dl>

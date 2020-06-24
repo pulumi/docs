@@ -12,8 +12,6 @@ meta_desc: "Explore the GetLoadBalancers function of the slb module, including e
 
 This data source provides the server load balancers of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstSlbId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 slbs_ds = alicloud.slb.get_load_balancers(name_regex="sample_slb")
 pulumi.export("firstSlbId", slbs_ds.slbs[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const slbsDs = pulumi.output(alicloud.slb.getLoadBalancers({
 
 export const firstSlbId = slbsDs.slbs[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

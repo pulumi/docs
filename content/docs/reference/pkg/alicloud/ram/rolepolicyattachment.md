@@ -12,8 +12,6 @@ meta_desc: "Explore the RolePolicyAttachment resource of the ram module, includi
 
 Provides a RAM Role attachment resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -84,6 +82,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -142,9 +141,11 @@ attach = alicloud.ram.RolePolicyAttachment("attach",
     policy_type=policy.type,
     role_name=role.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -197,6 +198,7 @@ const attach = new alicloud.ram.RolePolicyAttachment("attach", {
     roleName: role.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

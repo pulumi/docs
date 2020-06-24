@@ -14,8 +14,6 @@ Provides an Reserved Instance resource.
 
 > **NOTE:** Available in 1.65.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ default = alicloud.ecs.ReservedInstance("default",
     scope="Zone",
     period="1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -84,6 +85,7 @@ const _default = new alicloud.ecs.ReservedInstance("default", {
     period: "1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

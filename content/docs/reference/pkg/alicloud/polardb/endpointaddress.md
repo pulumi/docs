@@ -15,8 +15,6 @@ Provides a PolarDB endpoint address resource to allocate an Internet endpoint ad
 > **NOTE:** Available in v1.68.0+. Each PolarDB instance will allocate a intranet connection string automatically and its prefix is Cluster ID.
  To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,6 +70,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -110,9 +109,11 @@ endpoint = alicloud.polardb.EndpointAddress("endpoint",
     connection_prefix="testpolardbconn",
     net_type="Public")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -147,6 +148,7 @@ const endpoint = new alicloud.polardb.EndpointAddress("endpoint", {
     netType: "Public",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

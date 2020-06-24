@@ -136,6 +136,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.kms.AwaitableGetSecretVersionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetSecretVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_deprecated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetSecretVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.kms.AwaitableGetSecretsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetSecretsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fetch_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secrets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetSecretsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -375,6 +380,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.kms.GetPlaintextResult.plaintext">
 <code class="sig-name descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetPlaintextResult.plaintext" title="Permalink to this definition">¶</a></dt>
 <dd><p>The decrypted plaintext.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.kms.GetSecretVersionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetSecretVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_deprecated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSecretVersions.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretVersionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretVersionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretVersionsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretVersionsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Kms Secret Version ids.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretVersionsResult.secret_name">
+<code class="sig-name descname">secret_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretVersionsResult.secret_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the secret.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetSecretVersionsResult.versions">
+<code class="sig-name descname">versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetSecretVersionsResult.versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KMS Secret Versions. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
@@ -989,6 +1024,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>(Optional) The Encryption context. If you specify this parameter in the Encrypt or GenerateDataKey API operation, it is also required when you call the Decrypt API operation. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>.</p>
 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.kms.get_secret_versions">
+<code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">get_secret_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable_details</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_deprecated</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.get_secret_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of KMS Secret Versions in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.88.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enable_details</strong> (<em>bool</em>) – Default to false and only output <code class="docutils literal notranslate"><span class="pre">secret_name</span></code>, <code class="docutils literal notranslate"><span class="pre">version_id</span></code>, <code class="docutils literal notranslate"><span class="pre">version_stages</span></code>. Set it to true can output more details.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of KMS Secret Version ids.</p></li>
+<li><p><strong>include_deprecated</strong> (<em>str</em>) – Specifies whether to return deprecated secret versions. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>secret_name</strong> (<em>str</em>) – The name of the secret.</p></li>
 </ul>
 </dd>
 </dl>

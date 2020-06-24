@@ -15,9 +15,6 @@ The dashboard is a real-time data analysis platform provided by the log service.
 
 > **NOTE:** Available in 1.86.0
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Dashboard Resource {#create}

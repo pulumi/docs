@@ -12,8 +12,6 @@ meta_desc: "Explore the GetPolicies function of the ram module, including exampl
 
 This data source provides a list of RAM policies in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> FirstPolicyName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ policies_ds = alicloud.ram.get_policies(group_name="group1",
     user_name="user1")
 pulumi.export("firstPolicyName", policies_ds.policies[0]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,6 +76,7 @@ const policiesDs = pulumi.output(alicloud.ram.getPolicies({
 
 export const firstPolicyName = policiesDs.policies[0].name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

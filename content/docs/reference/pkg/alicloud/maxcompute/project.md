@@ -14,8 +14,6 @@ The project is the basic unit of operation in maxcompute. It is similar to the c
 
 ->**NOTE:** Available in 1.77.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ example = alicloud.maxcompute.Project("example",
     order_type="PayAsYouGo",
     specification_type="OdpsStandard")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const example = new alicloud.maxcompute.Project("example", {
     specificationType: "OdpsStandard",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

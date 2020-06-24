@@ -12,8 +12,6 @@ meta_desc: "Explore the GetGroups function of the ram module, including examples
 
 This data source provides a list of RAM Groups in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> FirstGroupName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ groups_ds = alicloud.ram.get_groups(name_regex="^group[0-9]*",
     user_name="user1")
 pulumi.export("firstGroupName", groups_ds.groups[0]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const groupsDs = pulumi.output(alicloud.ram.getGroups({
 
 export const firstGroupName = groupsDs.groups[0].name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

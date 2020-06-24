@@ -14,8 +14,6 @@ This data source provides the Resource Manager Handshakes of the current Alibaba
 
 > **NOTE:**  Available in 1.86.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
     public Output<string> FirstHandshakeId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_alicloud as alicloud
 example = alicloud.resourcemanager.get_handshakes()
 pulumi.export("firstHandshakeId", example.handshakes[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -63,6 +64,7 @@ const example = pulumi.output(alicloud.resourcemanager.getHandshakes({ async: tr
 
 export const firstHandshakeId = example.handshakes[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

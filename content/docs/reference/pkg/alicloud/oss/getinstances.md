@@ -12,8 +12,6 @@ meta_desc: "Explore the GetInstances function of the oss module, including examp
 
 This data source provides the ots instances of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstInstanceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ instances_ds = alicloud.oss.get_instances(name_regex="sample-instance",
     output_file="instances.txt")
 pulumi.export("firstInstanceId", instances_ds.instances[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 
 export const firstInstanceId = instancesDs.instances[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

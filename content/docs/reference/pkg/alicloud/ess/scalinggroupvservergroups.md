@@ -15,7 +15,7 @@ Attaches/Detaches vserver groups to a specified scaling group.
 > **NOTE:** The load balancer of which vserver groups belongs to must be in `active` status.
 
 > **NOTE:** If scaling group's network type is `VPC`, the vserver groups must be in the same `VPC`.
- 
+
 > **NOTE:** A scaling group can have at most 5 vserver groups attached by default.
 
 > **NOTE:** Vserver groups and the default group of loadbalancer share the same backend server quota.
@@ -29,8 +29,6 @@ Attaches/Detaches vserver groups to a specified scaling group.
 > **NOTE:** Modifing `weight` attribute means detach vserver group first and then, attach with new weight parameter.
 
 > **NOTE:** Resource `alicloud.ess.ScalingGroupVServerGroups` is available in 1.53.0+.
-
-
 ## Block vserver_group
 
 the vserver_group supports the following:
@@ -136,6 +134,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -185,9 +184,11 @@ default_scaling_group_v_server_groups = alicloud.ess.ScalingGroupVServerGroups("
         }],
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -242,6 +243,7 @@ const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGro
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

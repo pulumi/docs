@@ -12,13 +12,11 @@ meta_desc: "Explore the RouteMap resource of the cen module, including examples,
 
 This topic provides an overview of the route map function of Cloud Enterprise Networks (CENs).
 You can use the route map function to filter routes and modify route attributes.
-By doing so, you can manage the communication between networks attached to a CEN. 
+By doing so, you can manage the communication between networks attached to a CEN.
 
 For information about CEN Route Map and how to use it, see [Manage CEN Route Map](https://www.alibabacloud.com/help/doc-detail/124157.htm).
 
 > **NOTE:** Available in 1.82.0+
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -138,6 +136,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -192,9 +191,11 @@ default_route_map = alicloud.cen.RouteMap("defaultRouteMap",
     source_route_table_ids=[vpc00.route_table_id],
     transmit_direction="RegionIn")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -252,6 +253,7 @@ const defaultRouteMap = new alicloud.cen.RouteMap("default", {
     transmitDirection: "RegionIn",
 }, { dependsOn: [default00, default01] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

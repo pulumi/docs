@@ -18,8 +18,6 @@ For information about NAS file system and how to use it, see [Manage file system
 
 > **NOTE:** Available in v1.33.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ foo = alicloud.nas.FileSystem("foo",
     protocol_type="NFS",
     storage_type="Performance")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -73,6 +74,7 @@ const foo = new alicloud.nas.FileSystem("foo", {
     storageType: "Performance",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

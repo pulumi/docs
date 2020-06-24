@@ -18,8 +18,6 @@ BGP-Line Anti-DDoS instance resource. "Ddoscoo" is the short term of this produc
 
 > **NOTE:** Available in 1.37.0+ .
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ new_instance = alicloud.ddos.DdosCooInstance("newInstance",
     port_count="50",
     service_bandwidth="100")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -82,6 +83,7 @@ const newInstance = new alicloud.ddos.DdosCooInstance("newInstance", {
     serviceBandwidth: "100",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

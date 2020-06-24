@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRegions function of the AliCloud package, including e
 
 This data source provides Alibaba Cloud regions.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> CurrentRegionId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 current_region_ds = alicloud.get_regions(current=True)
 pulumi.export("currentRegionId", current_region_ds.regions[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const currentRegionDs = pulumi.output(alicloud.getRegions({
 
 export const currentRegionId = currentRegionDs.regions[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

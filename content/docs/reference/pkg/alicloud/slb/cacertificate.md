@@ -16,9 +16,6 @@ For information about slb and how to use it, see [What is Server Load Balancer](
 
 For information about CA Certificate and how to use it, see [Configure CA Certificate](https://www.alibabacloud.com/help/doc-detail/85968.htm).
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +42,7 @@ MIIDRjCCAq+gAwIBAgIJAJnI******90EAxEG/bJJyOm5LqoiA=
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +60,11 @@ MIIDRjCCAq+gAwIBAgIJAJnI******90EAxEG/bJJyOm5LqoiA=
 -----END CERTIFICATE-----
 """)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +76,7 @@ MIIDRjCCAq+gAwIBAgIJAJnI******90EAxEG/bJJyOm5LqoiA=
 -----END CERTIFICATE-----`,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

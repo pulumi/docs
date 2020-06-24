@@ -14,8 +14,6 @@ This data source provides availability zones for SLB that can be accessed by an 
 
 > **NOTE:** Available in v1.73.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +47,11 @@ import pulumi_alicloud as alicloud
 
 zones_ids = alicloud.slb.get_zones()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -58,6 +59,7 @@ import * as alicloud from "@pulumi/alicloud";
 // Declare the data source
 const zonesIds = pulumi.output(alicloud.slb.getZones({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

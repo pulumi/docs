@@ -16,8 +16,6 @@ Provides a Elasticsearch instance resource. It contains data nodes, dedicated ma
 
 > **NOTE:** At present, `version` can not be modified once instance has been created.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,9 +80,11 @@ instance = alicloud.elasticsearch.Instance("instance",
         "key2": "value2",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -105,6 +106,7 @@ const instance = new alicloud.elasticsearch.Instance("instance", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -119,7 +121,7 @@ const instance = new alicloud.elasticsearch.Instance("instance", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/elasticsearch/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_node_amount=None<span class="p">, </span>data_node_disk_encrypted=None<span class="p">, </span>data_node_disk_size=None<span class="p">, </span>data_node_disk_type=None<span class="p">, </span>data_node_spec=None<span class="p">, </span>description=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kibana_whitelists=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>master_node_spec=None<span class="p">, </span>password=None<span class="p">, </span>period=None<span class="p">, </span>private_whitelists=None<span class="p">, </span>public_whitelists=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_count=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/elasticsearch/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_node_amount=None<span class="p">, </span>data_node_disk_encrypted=None<span class="p">, </span>data_node_disk_size=None<span class="p">, </span>data_node_disk_type=None<span class="p">, </span>data_node_spec=None<span class="p">, </span>description=None<span class="p">, </span>enable_kibana_private_network=None<span class="p">, </span>enable_kibana_public_network=None<span class="p">, </span>enable_public=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kibana_private_whitelists=None<span class="p">, </span>kibana_whitelists=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>master_node_spec=None<span class="p">, </span>password=None<span class="p">, </span>period=None<span class="p">, </span>private_whitelists=None<span class="p">, </span>public_whitelists=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_count=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -383,6 +385,39 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablekibanaprivatenetwork_csharp">
+<a href="#enablekibanaprivatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kibana<wbr>Private<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can close kibana private network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablekibanapublicnetwork_csharp">
+<a href="#enablekibanapublicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kibana<wbr>Public<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to true. When it set to false, the instance can enable kibana public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablepublic_csharp">
+<a href="#enablepublic_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can enable public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span> 
@@ -390,6 +425,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`. Default to `PostPaid`. From version 1.69.0, the Elasticsearch cluster allows you to update your instance_charge_ype from `PostPaid` to `PrePaid`, the following attributes are required: `period`. But, updating from `PostPaid` to `PrePaid` is not supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibanaprivatewhitelists_csharp">
+<a href="#kibanaprivatewhitelists_csharp" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Private<wbr>Whitelists</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set the Kibana's IP whitelist in private network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -477,7 +523,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set the instance's IP whitelist in internet network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -613,6 +660,39 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablekibanaprivatenetwork_go">
+<a href="#enablekibanaprivatenetwork_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kibana<wbr>Private<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can close kibana private network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablekibanapublicnetwork_go">
+<a href="#enablekibanapublicnetwork_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kibana<wbr>Public<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to true. When it set to false, the instance can enable kibana public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablepublic_go">
+<a href="#enablepublic_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can enable public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span> 
@@ -620,6 +700,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`. Default to `PostPaid`. From version 1.69.0, the Elasticsearch cluster allows you to update your instance_charge_ype from `PostPaid` to `PrePaid`, the following attributes are required: `period`. But, updating from `PostPaid` to `PrePaid` is not supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibanaprivatewhitelists_go">
+<a href="#kibanaprivatewhitelists_go" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Private<wbr>Whitelists</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Set the Kibana's IP whitelist in private network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -707,7 +798,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set the instance's IP whitelist in internet network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -843,6 +935,39 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablekibanaprivatenetwork_nodejs">
+<a href="#enablekibanaprivatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kibana<wbr>Private<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can close kibana private network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablekibanapublicnetwork_nodejs">
+<a href="#enablekibanapublicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kibana<wbr>Public<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to true. When it set to false, the instance can enable kibana public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablepublic_nodejs">
+<a href="#enablepublic_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can enable public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span> 
@@ -850,6 +975,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`. Default to `PostPaid`. From version 1.69.0, the Elasticsearch cluster allows you to update your instance_charge_ype from `PostPaid` to `PrePaid`, the following attributes are required: `period`. But, updating from `PostPaid` to `PrePaid` is not supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibanaprivatewhitelists_nodejs">
+<a href="#kibanaprivatewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">kibana<wbr>Private<wbr>Whitelists</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set the Kibana's IP whitelist in private network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,7 +1073,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set the instance's IP whitelist in internet network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1073,6 +1210,39 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_kibana_private_network_python">
+<a href="#enable_kibana_private_network_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kibana_<wbr>private_<wbr>network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can close kibana private network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_kibana_public_network_python">
+<a href="#enable_kibana_public_network_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kibana_<wbr>public_<wbr>network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to true. When it set to false, the instance can enable kibana public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_public_python">
+<a href="#enable_public_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can enable public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span> 
@@ -1080,6 +1250,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`. Default to `PostPaid`. From version 1.69.0, the Elasticsearch cluster allows you to update your instance_charge_ype from `PostPaid` to `PrePaid`, the following attributes are required: `period`. But, updating from `PostPaid` to `PrePaid` is not supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_private_whitelists_python">
+<a href="#kibana_private_whitelists_python" style="color: inherit; text-decoration: inherit;">kibana_<wbr>private_<wbr>whitelists</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Set the Kibana's IP whitelist in private network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,7 +1348,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set the instance's IP whitelist in internet network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1522,7 +1704,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>data_node_amount=None<span class="p">, </span>data_node_disk_encrypted=None<span class="p">, </span>data_node_disk_size=None<span class="p">, </span>data_node_disk_type=None<span class="p">, </span>data_node_spec=None<span class="p">, </span>description=None<span class="p">, </span>domain=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kibana_domain=None<span class="p">, </span>kibana_port=None<span class="p">, </span>kibana_whitelists=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>master_node_spec=None<span class="p">, </span>password=None<span class="p">, </span>period=None<span class="p">, </span>port=None<span class="p">, </span>private_whitelists=None<span class="p">, </span>public_whitelists=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_count=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>data_node_amount=None<span class="p">, </span>data_node_disk_encrypted=None<span class="p">, </span>data_node_disk_size=None<span class="p">, </span>data_node_disk_type=None<span class="p">, </span>data_node_spec=None<span class="p">, </span>description=None<span class="p">, </span>domain=None<span class="p">, </span>enable_kibana_private_network=None<span class="p">, </span>enable_kibana_public_network=None<span class="p">, </span>enable_public=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kibana_domain=None<span class="p">, </span>kibana_port=None<span class="p">, </span>kibana_private_whitelists=None<span class="p">, </span>kibana_whitelists=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>master_node_spec=None<span class="p">, </span>password=None<span class="p">, </span>period=None<span class="p">, </span>port=None<span class="p">, </span>private_whitelists=None<span class="p">, </span>public_whitelists=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_count=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1717,6 +1899,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablekibanaprivatenetwork_csharp">
+<a href="#state_enablekibanaprivatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kibana<wbr>Private<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can close kibana private network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablekibanapublicnetwork_csharp">
+<a href="#state_enablekibanapublicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kibana<wbr>Public<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to true. When it set to false, the instance can enable kibana public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablepublic_csharp">
+<a href="#state_enablepublic_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can enable public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_instancechargetype_csharp">
 <a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span> 
@@ -1746,6 +1961,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Kibana console port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kibanaprivatewhitelists_csharp">
+<a href="#state_kibanaprivatewhitelists_csharp" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Private<wbr>Whitelists</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set the Kibana's IP whitelist in private network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1844,7 +2070,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set the instance's IP whitelist in internet network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2002,6 +2229,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablekibanaprivatenetwork_go">
+<a href="#state_enablekibanaprivatenetwork_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kibana<wbr>Private<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can close kibana private network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablekibanapublicnetwork_go">
+<a href="#state_enablekibanapublicnetwork_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kibana<wbr>Public<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to true. When it set to false, the instance can enable kibana public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablepublic_go">
+<a href="#state_enablepublic_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can enable public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_instancechargetype_go">
 <a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span> 
@@ -2031,6 +2291,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Kibana console port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kibanaprivatewhitelists_go">
+<a href="#state_kibanaprivatewhitelists_go" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Private<wbr>Whitelists</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Set the Kibana's IP whitelist in private network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2129,7 +2400,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set the instance's IP whitelist in internet network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2287,6 +2559,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablekibanaprivatenetwork_nodejs">
+<a href="#state_enablekibanaprivatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kibana<wbr>Private<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can close kibana private network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablekibanapublicnetwork_nodejs">
+<a href="#state_enablekibanapublicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kibana<wbr>Public<wbr>Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to true. When it set to false, the instance can enable kibana public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablepublic_nodejs">
+<a href="#state_enablepublic_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can enable public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_instancechargetype_nodejs">
 <a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span> 
@@ -2316,6 +2621,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Kibana console port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kibanaprivatewhitelists_nodejs">
+<a href="#state_kibanaprivatewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">kibana<wbr>Private<wbr>Whitelists</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set the Kibana's IP whitelist in private network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2414,7 +2730,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set the instance's IP whitelist in internet network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2572,6 +2889,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enable_kibana_private_network_python">
+<a href="#state_enable_kibana_private_network_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kibana_<wbr>private_<wbr>network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can close kibana private network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_kibana_public_network_python">
+<a href="#state_enable_kibana_public_network_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kibana_<wbr>public_<wbr>network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to true. When it set to false, the instance can enable kibana public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_public_python">
+<a href="#state_enable_public_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>public</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Bool, default to false. When it set to true, the instance can enable public network access。
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_instance_charge_type_python">
 <a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span> 
@@ -2601,6 +2951,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Kibana console port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kibana_private_whitelists_python">
+<a href="#state_kibana_private_whitelists_python" style="color: inherit; text-decoration: inherit;">kibana_<wbr>private_<wbr>whitelists</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Set the Kibana's IP whitelist in private network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2699,7 +3060,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set the instance's IP whitelist in internet network.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

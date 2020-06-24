@@ -16,8 +16,6 @@ In addition to inheriting all SLS functions, it also enhances the real-time auto
 
 > **NOTE:** Available in 1.81.0
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ example = alicloud.log.Audit("example",
         "oss_access_ttl": "180",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -87,6 +88,7 @@ const example = new alicloud.log.Audit("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

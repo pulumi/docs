@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRecords function of the dns module, including example
 
 This data source provides a list of DNS Domain Records in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstRecordId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ records_ds = alicloud.dns.get_records(domain_name="xiaozhu.top",
     type="A")
 pulumi.export("firstRecordId", records_ds.records[0]["record_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -78,6 +79,7 @@ const recordsDs = pulumi.output(alicloud.dns.getRecords({
 
 export const firstRecordId = recordsDs.records[0].recordId;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSslVpnClientCerts function of the vpc module, includi
 
 The SSL-VPN client certificates data source lists lots of SSL-VPN client certificates resource information owned by an Alicloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ foo = alicloud.vpc.get_ssl_vpn_client_certs(ids=["fake-cert-id"],
     output_file="/tmp/clientcert",
     ssl_vpn_server_id="fake-server-id")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const foo = pulumi.output(alicloud.vpc.getSslVpnClientCerts({
     sslVpnServerId: "fake-server-id",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

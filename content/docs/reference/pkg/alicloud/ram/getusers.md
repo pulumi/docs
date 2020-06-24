@@ -12,8 +12,6 @@ meta_desc: "Explore the GetUsers function of the ram module, including examples,
 
 This data source provides a list of RAM users in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstUserId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ users_ds = alicloud.ram.get_users(group_name="group1",
     policy_type="Custom")
 pulumi.export("firstUserId", users_ds.users[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -78,6 +79,7 @@ const usersDs = pulumi.output(alicloud.ram.getUsers({
 
 export const firstUserId = usersDs.users[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

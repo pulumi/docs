@@ -14,8 +14,6 @@ This data source provides a list of cloud Bastionhost instances in an Alibaba Cl
 
 > **NOTE:** Available in 1.63.0+ .
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> Instance { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ import pulumi_alicloud as alicloud
 instance_bastion_host_instances = alicloud.yundun.get_bastion_host_instances(name_regex="^bastionhost")
 pulumi.export("instance", [__item["id"] for __item in alicloud_yundun_bastionhost_instances["instance"]])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const instanceBastionHostInstances = pulumi.output(alicloud.yundun.getBastionHos
 
 export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => v.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

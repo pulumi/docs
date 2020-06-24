@@ -15,8 +15,6 @@ For information about Resource Manager role and how to use it, see [What is Reso
 
 > **NOTE:** Available in v1.82.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,9 +82,11 @@ example = alicloud.resourcemanager.Role("example",
 """,
     role_name="testrd")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -108,6 +109,7 @@ const example = new alicloud.resourcemanager.Role("example", {
     roleName: "testrd",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRegionRouteEntries function of the cen module, includ
 
 This data source provides CEN Regional Route Entries available to the user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstRegionRouteEntriesRouteEntryCidrBlock { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ entry = alicloud.cen.get_region_route_entries(instance_id="cen-id1",
     region_id="cn-beijing")
 pulumi.export("firstRegionRouteEntriesRouteEntryCidrBlock", entry.entries[0]["cidr_block"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const entry = pulumi.output(alicloud.cen.getRegionRouteEntries({
 
 export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

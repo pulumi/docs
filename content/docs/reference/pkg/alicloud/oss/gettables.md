@@ -14,8 +14,6 @@ This data source provides the ots tables of the current Alibaba Cloud user.
 
 > **NOTE:** Available in v1.40.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstTableId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ tables_ds = alicloud.oss.get_tables(instance_name="sample-instance",
     output_file="tables.txt")
 pulumi.export("firstTableId", tables_ds.tables[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const tablesDs = pulumi.output(alicloud.oss.getTables({
 
 export const firstTableId = tablesDs.tables[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

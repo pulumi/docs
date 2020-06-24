@@ -17,8 +17,6 @@ Provides a connection resource to allocate an Internet connection string for ins
 > **NOTE:** Each instance will allocate a intranet connection string automatically and its prefix is instance ID.
  To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,9 +102,11 @@ default_connection = alicloud.gpdb.Connection("defaultConnection",
     connection_prefix="testAbc",
     instance_id=default_instance.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -138,6 +139,7 @@ const defaultConnection = new alicloud.gpdb.Connection("default", {
     instanceId: defaultInstance.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

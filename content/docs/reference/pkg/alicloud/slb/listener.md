@@ -20,35 +20,33 @@ For information about listener and how to use it, to see the following:
 * [Configure a HTTPS Listener](https://www.alibabacloud.com/help/doc-detail/27593.htm).
 * [Configure a TCP Listener](https://www.alibabacloud.com/help/doc-detail/27594.htm).
 * [Configure a UDP Listener](https://www.alibabacloud.com/help/doc-detail/27595.htm).
-
-
 ## Listener fields and protocol mapping
 
 load balance support 4 protocal to listen on, they are `http`,`https`,`tcp`,`udp`, the every listener support which portocal following:
 
 listener parameter | support protocol | value range |
-------------- | ------------- | ------------- | 
-backend_port | http & https & tcp & udp | 1-65535 | 
+------------- | ------------- | ------------- |
+backend_port | http & https & tcp & udp | 1-65535 |
 frontend_port | http & https & tcp & udp | 1-65535 |
 protocol | http & https & tcp & udp |
 bandwidth | http & https & tcp & udp | -1 / 1-1000 |
 scheduler | http & https & tcp & udp | wrr rr or wlc |
 sticky_session | http & https | on or off |
-sticky_session_type | http & https | insert or server | 
-cookie_timeout | http & https | 1-86400  | 
-cookie | http & https |   | 
-persistence_timeout | tcp & udp | 0-3600 | 
-health_check | http & https | on or off | 
-health_check_type | tcp | tcp or http | 
-health_check_domain | http & https & tcp | 
-health_check_method | http & https & tcp | 
-health_check_uri | http & https & tcp |  | 
-health_check_connect_port | http & https & tcp & udp | 1-65535 or -520 | 
-healthy_threshold | http & https & tcp & udp | 1-10 | 
-unhealthy_threshold | http & https & tcp & udp | 1-10 | 
+sticky_session_type | http & https | insert or server |
+cookie_timeout | http & https | 1-86400  |
+cookie | http & https |   |
+persistence_timeout | tcp & udp | 0-3600 |
+health_check | http & https | on or off |
+health_check_type | tcp | tcp or http |
+health_check_domain | http & https & tcp |
+health_check_method | http & https & tcp |
+health_check_uri | http & https & tcp |  |
+health_check_connect_port | http & https & tcp & udp | 1-65535 or -520 |
+healthy_threshold | http & https & tcp & udp | 1-10 |
+unhealthy_threshold | http & https & tcp & udp | 1-10 |
 health_check_timeout | http & https & tcp & udp | 1-300 |
 health_check_interval | http & https & tcp & udp | 1-50 |
-health_check_http_code | http & https & tcp | http_2xx,http_3xx,http_4xx,http_5xx | 
+health_check_http_code | http & https & tcp | http_2xx,http_3xx,http_4xx,http_5xx |
 server_certificate_id | https |  |
 gzip | http & https | true or false  |
 x_forwarded_for | http & https |  |
@@ -138,6 +136,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -200,9 +199,11 @@ default_listener = alicloud.slb.Listener("defaultListener",
         "retriveSlbIp": True,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -258,6 +259,7 @@ const defaultListener = new alicloud.slb.Listener("default", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

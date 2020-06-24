@@ -12,8 +12,6 @@ meta_desc: "Explore the GetTriggers function of the fc module, including example
 
 This data source provides the Function Compute triggers of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> FirstFcTriggerName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ fc_triggers_ds = alicloud.fc.get_triggers(function_name="sample_function",
     service_name="sample_service")
 pulumi.export("firstFcTriggerName", fc_triggers_ds.triggers[0]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const fcTriggersDs = pulumi.output(alicloud.fc.getTriggers({
 
 export const firstFcTriggerName = fcTriggersDs.triggers[0].name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRouteEntries function of the cen module, including ex
 
 This data source provides CEN Route Entries available to the user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstRouteEntriesRouteEntryCidrBlock { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ entry = alicloud.cen.get_route_entries(instance_id="cen-id1",
     route_table_id="vtb-id1")
 pulumi.export("firstRouteEntriesRouteEntryCidrBlock", entry.entries[0]["cidr_block"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const entry = pulumi.output(alicloud.cen.getRouteEntries({
 
 export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

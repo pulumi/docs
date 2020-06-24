@@ -13,9 +13,6 @@ meta_desc: "Explore the AutoProvisioningGroup resource of the ecs module, includ
 Provides a ECS auto provisioning group resource which is a solution that uses preemptive instances and pay_as_you_go instances to rapidly deploy clusters.
 
 > **NOTE:** Available in 1.79.0+
-
-
-
 ## Block config
 
 The config mapping supports the following:
@@ -91,6 +88,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -131,9 +129,11 @@ default_auto_provisioning_group = alicloud.ecs.AutoProvisioningGroup("defaultAut
     spot_target_capacity="2",
     total_target_capacity="4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -177,6 +177,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     totalTargetCapacity: "4",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

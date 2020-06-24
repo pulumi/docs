@@ -18,8 +18,6 @@ For information about Container Registry Enterprise Edition repository and how t
 
 > **NOTE:** You need to set your registry password in Container Registry Enterprise Edition console before use this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +73,11 @@ my_repo = alicloud.cs.RegistryEnterpriseRepo("my-repo",
     repo_type="PUBLIC",
     summary="this is summary of my new repo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -94,6 +95,7 @@ const my_repo = new alicloud.cs.RegistryEnterpriseRepo("my-repo", {
     summary: "this is summary of my new repo",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

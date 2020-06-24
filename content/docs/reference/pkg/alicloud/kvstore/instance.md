@@ -12,8 +12,6 @@ meta_desc: "Explore the Instance resource of the kvstore module, including examp
 
 Provides an ApsaraDB Redis / Memcache instance resource. A DB instance is an isolated database environment in the cloud. It can be associated with IP whitelists and backup configuration which are separate resource providers.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,6 +60,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,9 +94,11 @@ default_instance = alicloud.kvstore.Instance("defaultInstance",
     security_ips=["10.0.0.1"],
     vswitch_id=default_switch.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -127,6 +128,7 @@ const defaultInstance = new alicloud.kvstore.Instance("default", {
     vswitchId: defaultSwitch.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetEips function of the ecs module, including examples, 
 
 This data source provides a list of EIPs (Elastic IP address) owned by an Alibaba Cloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
     public Output<string> FirstEipId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +49,11 @@ import pulumi_alicloud as alicloud
 eips_ds = alicloud.ecs.get_eips()
 pulumi.export("firstEipId", eips_ds.eips[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -61,6 +62,7 @@ const eipsDs = pulumi.output(alicloud.ecs.getEips({ async: true }));
 
 export const firstEipId = eipsDs.eips[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

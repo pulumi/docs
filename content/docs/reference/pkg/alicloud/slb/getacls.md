@@ -11,8 +11,6 @@ meta_desc: "Explore the GetAcls function of the slb module, including examples, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This data source provides the acls in the region.
-
-
 ## Entry Block
 
 The entry mapping supports the following:
@@ -51,6 +49,7 @@ class MyStack : Stack
     public Output<string> FirstSlbAclId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,9 +64,11 @@ import pulumi_alicloud as alicloud
 sample_ds = alicloud.slb.get_acls()
 pulumi.export("firstSlbAclId", sample_ds.acls[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +77,7 @@ const sampleDs = pulumi.output(alicloud.slb.getAcls({ async: true }));
 
 export const firstSlbAclId = sampleDs.acls[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

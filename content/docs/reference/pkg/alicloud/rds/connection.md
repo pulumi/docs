@@ -15,8 +15,6 @@ Provides an RDS connection resource to allocate an Internet connection string fo
 > **NOTE:** Each RDS instance will allocate a intranet connnection string automatically and its prifix is RDS instance ID.
  To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -66,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,9 +100,11 @@ foo = alicloud.rds.Connection("foo",
     connection_prefix="testabc",
     instance_id=instance.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -136,6 +137,7 @@ const foo = new alicloud.rds.Connection("foo", {
     instanceId: instance.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,8 +16,6 @@ For example, a CEN instance is bound to a bandwidth package of 20 Mbps and  the 
 
 For information about CEN and how to use it, see [Cross-region interconnection bandwidth](https://www.alibabacloud.com/help/doc-detail/65983.htm)
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -94,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -140,9 +139,11 @@ foo = alicloud.cen.BandwidthLimit("foo",
         "cn-shanghai",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -195,6 +196,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
     ],
 }, { dependsOn: [bwpAttach, vpcAttach1, vpcAttach2] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

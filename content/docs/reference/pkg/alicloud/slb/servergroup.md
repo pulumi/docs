@@ -22,8 +22,6 @@ and to meet the personalized requirements of domain name and URL forwarding.
 > **NOTE:** One Classic and Intranet load balancer, its virtual server group can only add Classic ECS instances.
 
 > **NOTE:** One VPC load balancer, its virtual server group can only add the same VPC ECS instances.
-
-
 ## Block servers
 
 The servers mapping supports the following:
@@ -134,6 +132,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -195,9 +194,11 @@ default_server_group = alicloud.slb.ServerGroup("defaultServerGroup",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -267,6 +268,7 @@ const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

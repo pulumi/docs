@@ -14,8 +14,6 @@ Provides an RDS database resource. A DB database deployed in a DB instance. A DB
 
 > **NOTE:** This resource does not support creating 'PPAS' database. You have to login RDS instance to create manually.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,9 +96,11 @@ instance = alicloud.rds.Instance("instance",
     vswitch_id=default_switch.id)
 default_database = alicloud.rds.Database("defaultDatabase", instance_id=instance.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -131,6 +132,7 @@ const defaultDatabase = new alicloud.rds.Database("default", {
     instanceId: instance.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

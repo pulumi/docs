@@ -14,8 +14,6 @@ This data source provides the ECS instance type families of Alibaba Cloud.
 
 > **NOTE:** Available in 1.54.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
     public Output<string> InstanceIds { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ default = alicloud.ecs.get_instance_type_families(instance_charge_type="PrePaid"
 pulumi.export("firstInstanceTypeFamilyId", default.families[0]["id"])
 pulumi.export("instanceIds", default.ids)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -73,6 +74,7 @@ const defaultInstanceTypeFamilies = pulumi.output(alicloud.ecs.getInstanceTypeFa
 export const firstInstanceTypeFamilyId = defaultInstanceTypeFamilies.families[0].id;
 export const instanceIds = defaultInstanceTypeFamilies.ids;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

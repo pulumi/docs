@@ -12,8 +12,6 @@ meta_desc: "Explore the GetNetworks function of the vpc module, including exampl
 
 This data source provides VPCs available to the user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> FirstVpcId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ vpcs_ds = alicloud.vpc.get_networks(cidr_block="172.16.0.0/12",
     status="Available")
 pulumi.export("firstVpcId", vpcs_ds.vpcs[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const vpcsDs = pulumi.output(alicloud.vpc.getNetworks({
 
 export const firstVpcId = vpcsDs.vpcs[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

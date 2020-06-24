@@ -236,6 +236,28 @@ You can see detail product introduction <a class="reference external" href="http
 [<code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">me-east-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">eu-west-1</span></code>,<code class="docutils literal notranslate"><span class="pre">us-east-1</span></code>,<code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen-finance-1</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hangzhou-finance</span></code>]</p>
 <p><strong>NOTE:</strong>  Create instance or change instance would cost 10~15 minutes. Please make full preparation.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_zones</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">get_zones</span><span class="p">(</span><span class="n">available_resource_creation</span><span class="o">=</span><span class="s2">&quot;Gpdb&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">default_switch</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Switch</span><span class="p">(</span><span class="s2">&quot;defaultSwitch&quot;</span><span class="p">,</span>
+    <span class="n">availability_zone</span><span class="o">=</span><span class="n">default_zones</span><span class="o">.</span><span class="n">zones</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/24&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">gpdb</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-gpdb-test&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;gpdb&quot;</span><span class="p">,</span>
+    <span class="n">engine_version</span><span class="o">=</span><span class="s2">&quot;4.3&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;gpdb.group.segsdx2&quot;</span><span class="p">,</span>
+    <span class="n">instance_group_count</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="n">security_ip_lists</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;10.168.1.12&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;100.69.7.112&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">vswitch_id</span><span class="o">=</span><span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

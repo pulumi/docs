@@ -16,8 +16,6 @@ When NAS is activated, the Default VPC Permission Group is automatically generat
 
 > **NOTE:** Available in v1.34.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ foo_access_rule = alicloud.nas.AccessRule("fooAccessRule",
     source_cidr_ip="168.1.1.0/16",
     user_access_type="no_squash")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -89,6 +90,7 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
     userAccessType: "no_squash",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

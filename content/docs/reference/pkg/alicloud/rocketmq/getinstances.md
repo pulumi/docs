@@ -14,8 +14,6 @@ This data source provides a list of ONS Instances in an Alibaba Cloud account ac
 
 > **NOTE:** Available in 1.52.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +55,7 @@ class MyStack : Stack
     public Output<string> FirstInstanceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,9 +77,11 @@ instances_ds = pulumi.Output.all(default.id, default.name).apply(lambda id, name
     output_file="instances.txt"))
 pulumi.export("firstInstanceId", instances_ds.instances[0]["instance_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -99,6 +100,7 @@ const instancesDs = pulumi.all([defaultInstance.id, defaultInstance.name]).apply
 
 export const firstInstanceId = instancesDs.instances[0].instanceId;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -18,8 +18,6 @@ For information about Sag SnatEntry and how to use it, see [What is Sag SnatEntr
 
 > **NOTE:** Only the following regions support. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ default = alicloud.rocketmq.SnatEntry("default",
     sag_id="sag-3rb1t3iagy3w0zgwy9",
     snat_ip="192.0.0.2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -73,6 +74,7 @@ const defaultSnatEntry = new alicloud.rocketmq.SnatEntry("default", {
     snatIp: "192.0.0.2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

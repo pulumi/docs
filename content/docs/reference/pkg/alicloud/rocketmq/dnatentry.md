@@ -18,8 +18,6 @@ For information about Sag DnatEntry and how to use it, see [What is Sag DnatEntr
 
 > **NOTE:** Only the following regions suppor. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ default = alicloud.rocketmq.DnatEntry("default",
     sag_id="sag-3rb1t3iagy3w0zgwy9",
     type="Intranet")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -85,6 +86,7 @@ const defaultDnatEntry = new alicloud.rocketmq.DnatEntry("default", {
     type: "Intranet",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

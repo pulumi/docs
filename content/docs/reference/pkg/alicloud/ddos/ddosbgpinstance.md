@@ -16,8 +16,6 @@ Anti-DDoS Advanced instance resource. "Ddosbgp" is the short term of this produc
 
 > **NOTE:** Available in 1.57.0+ .
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ instance = alicloud.ddos.DdosBgpInstance("instance",
     ip_count="100",
     ip_type="IPv4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const instance = new alicloud.ddos.DdosBgpInstance("instance", {
     ipType: "IPv4",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

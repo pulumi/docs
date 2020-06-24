@@ -12,8 +12,6 @@ meta_desc: "Explore the GetBucketObjects function of the oss module, including e
 
 This data source provides the objects of an OSS bucket.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstObjectKey { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ bucket_objects_ds = alicloud.oss.get_bucket_objects(bucket_name="sample_bucket",
     key_regex="sample/sample_object.txt")
 pulumi.export("firstObjectKey", bucket_objects_ds.objects[0]["key"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const bucketObjectsDs = pulumi.output(alicloud.oss.getBucketObjects({
 
 export const firstObjectKey = bucketObjectsDs.objects[0].key;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ This data source provides a list of ALIKAFKA Consumer Groups in an Alibaba Cloud
 
 > **NOTE:** Available in 1.56.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstGroupName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ consumer_groups_ds = alicloud.actiontrail.get_consumer_groups(consumer_id_regex=
     output_file="consumerGroups.txt")
 pulumi.export("firstGroupName", consumer_groups_ds.consumer_ids[0])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const consumerGroupsDs = pulumi.output(alicloud.actiontrail.getConsumerGroups({
 
 export const firstGroupName = consumerGroupsDs.consumerIds[0];
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

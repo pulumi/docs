@@ -14,8 +14,6 @@ This data source provides a list of ALIKAFKA Topics in an Alibaba Cloud account 
 
 > **NOTE:** Available in 1.56.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstTopicName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ topics_ds = alicloud.actiontrail.get_topics(instance_id="xxx",
     output_file="topics.txt")
 pulumi.export("firstTopicName", topics_ds.topics[0]["topic"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const topicsDs = pulumi.output(alicloud.actiontrail.getTopics({
 
 export const firstTopicName = topicsDs.topics[0].topic;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

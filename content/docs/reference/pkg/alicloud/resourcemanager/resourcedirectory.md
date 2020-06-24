@@ -19,10 +19,8 @@ For information about Resource Manager Resource Directory and how to use it, see
 > **NOTE:** An account can only be used to enable a resource directory after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.
 
 > **NOTE:** Before you destroy the resource, make sure that the following requirements are met:
-  - All member accounts must be removed from the resource directory. 
+  - All member accounts must be removed from the resource directory.
   - All folders except the root folder must be deleted from the resource directory.
-  
-
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,15 +57,18 @@ import pulumi_alicloud as alicloud
 
 example = alicloud.resourcemanager.ResourceDirectory("example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.resourcemanager.ResourceDirectory("example", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

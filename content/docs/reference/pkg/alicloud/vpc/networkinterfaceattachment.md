@@ -14,8 +14,6 @@ Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to a
 
 For information about Elastic Network Interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -110,6 +108,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -162,9 +161,11 @@ for range in [{"value": i} for i in range(0, number)]:
         instance_id=[__item.id for __item in instance][range["index"]],
         network_interface_id=[__item.id for __item in interface][range["index"]]))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -224,6 +225,7 @@ for (let i = 0; i < number; i++) {
     }));
 }
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

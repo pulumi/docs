@@ -14,8 +14,6 @@ Provides a Alikms Key Version resource. For information about Alikms Key Version
 
 > **NOTE:** Available in v1.85.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_alicloud as alicloud
 this = alicloud.kms.Key("this")
 keyversion = alicloud.kms.KeyVersion("keyversion", key_id=this.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -65,6 +66,7 @@ import * as alicloud from "@pulumi/alicloud";
 const _this = new alicloud.kms.Key("this", {});
 const keyversion = new alicloud.kms.KeyVersion("keyversion", {keyId: _this.id});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

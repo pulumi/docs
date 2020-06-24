@@ -14,8 +14,6 @@ This data source provides the PolarDB node classes resource available info of Al
 
 > **NOTE:** Available in v1.81.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
     public Output<string> FirstPolardbNodeClass { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ resources_node_classes = alicloud.polardb.get_node_classes(db_type="MySQL",
     zone_id=resources_zones.zones[0]["id"])
 pulumi.export("firstPolardbNodeClass", resources_node_classes.classes)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -85,6 +86,7 @@ const resourcesNodeClasses = resourcesZones.apply(resourcesZones => alicloud.pol
 
 export const firstPolardbNodeClass = resourcesNodeClasses.classes;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

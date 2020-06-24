@@ -14,8 +14,6 @@ This data source provides the Resource Manager Policy Versions of the current Al
 
 > **NOTE:**  Available in 1.85.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> FirstPolicyVersionId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ default = alicloud.resourcemanager.get_policy_versions(policy_name="tftest",
     policy_type="Custom")
 pulumi.export("firstPolicyVersionId", default.versions[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -71,6 +72,7 @@ const defaultPolicyVersions = pulumi.output(alicloud.resourcemanager.getPolicyVe
 
 export const firstPolicyVersionId = defaultPolicyVersions.versions[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

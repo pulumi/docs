@@ -15,9 +15,7 @@ Use this data source to get a list of snapshot according to the specified filter
 For information about snapshot and how to use it, see [Snapshot](https://www.alibabacloud.com/help/doc-detail/25460.html).
 
 > **NOTE:**  Available in 1.40.0+.
-
-
-##  Argument Reference
+## Argument Reference
 
 The following arguments are supported:
 
@@ -48,7 +46,7 @@ The following arguments are supported:
 * `source_disk_type` - (Optional) The type of source disk:
   * System: The snapshots are created for system disks.
   * Data: The snapshots are created for data disks.
-  
+
 * `usage` - (Optional) The usage of the snapshot:
   * image: The snapshots are used to create custom images.
   * disk: The snapshots are used to CreateDisk.
@@ -83,6 +81,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,9 +96,11 @@ import pulumi_alicloud as alicloud
 snapshots = alicloud.ecs.get_snapshots(ids=["s-123456890abcdef"],
     name_regex="tf-testAcc-snapshot")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -109,6 +110,7 @@ const snapshots = pulumi.output(alicloud.ecs.getSnapshots({
     nameRegex: "tf-testAcc-snapshot",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

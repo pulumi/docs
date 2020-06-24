@@ -14,9 +14,6 @@ Creates an EDAS ecs application on EDAS. The application will be deployed when `
 
 > **NOTE:** Available in 1.82.0+
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Application Resource {#create}

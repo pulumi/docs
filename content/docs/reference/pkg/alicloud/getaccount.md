@@ -12,8 +12,6 @@ meta_desc: "Explore the GetAccount function of the AliCloud package, including e
 
 This data source provides information about the current account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
     public Output<string> CurrentAccountId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +49,11 @@ import pulumi_alicloud as alicloud
 current = alicloud.get_account()
 pulumi.export("currentAccountId", current.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -61,6 +62,7 @@ const current = pulumi.output(alicloud.getAccount({ async: true }));
 
 export const currentAccountId = current.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -16,8 +16,6 @@ For information about WAF and how to use it, see [What is Alibaba Cloud WAF](htt
 
 > **NOTE:** Available in 1.86.0+ .
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 
 default = alicloud.waf.get_domains(instance_id="waf-cf-xxxxx")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -64,6 +65,7 @@ const defaultDomains = pulumi.output(alicloud.waf.getDomains({
     instanceId: "waf-cf-xxxxx",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

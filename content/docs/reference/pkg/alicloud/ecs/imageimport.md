@@ -17,8 +17,11 @@ Import a copy of your local on-premise file to ECS, and appear as a custom repla
 > **NOTE:** The region where the image is imported must be the same region as the OSS bucket where the image file is uploaded.
 
 > **NOTE:** Available in 1.69.0+.
+## Attributes Reference0
 
+ The following attributes are exported:
 
+* `id` - ID of the image.
 
 {{% examples %}}
 ## Example Usage
@@ -56,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +84,11 @@ this = alicloud.ecs.ImageImport("this",
     os_type="linux",
     platform="Ubuntu")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -101,6 +107,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
     platform: "Ubuntu",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

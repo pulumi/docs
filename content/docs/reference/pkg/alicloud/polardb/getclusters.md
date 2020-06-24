@@ -15,8 +15,6 @@ Filters support regular expression for the cluster description, searches by tags
 
 > **NOTE:** Available in v1.66.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstPolardbClusterId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ polardb_clusters_ds = alicloud.polardb.get_clusters(description_regex="pc-\\w+",
     status="Running")
 pulumi.export("firstPolardbClusterId", polardb_clusters_ds.clusters[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const polardbClustersDs = pulumi.output(alicloud.polardb.getClusters({
 
 export const firstPolardbClusterId = polardbClustersDs.clusters[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -20,8 +20,6 @@ For information about DRDS and how to use it, see [What is DRDS](https://www.ali
 
 > **NOTE:** Currently, this resource only support `Domestic Site Account`.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ default = alicloud.drds.Instance("default",
     vswitch_id="vsw-bp1jlu3swk8rq2yoi40ey",
     zone_id="cn-hangzhou-e")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -84,6 +85,7 @@ const defaultInstance = new alicloud.drds.Instance("default", {
     zoneId: "cn-hangzhou-e",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

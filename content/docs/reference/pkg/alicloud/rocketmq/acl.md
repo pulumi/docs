@@ -18,8 +18,6 @@ For information about Sag Acl and how to use it, see [What is access control lis
 
 > **NOTE:** Only the following regions support create Cloud Connect Network. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,15 +53,18 @@ import pulumi_alicloud as alicloud
 
 default = alicloud.rocketmq.Acl("default")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ Provides bind the domain name to the DNS instance resource.
 
 > **NOTE:** Available in v1.80.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ dns = alicloud.dns.DomainAttachment("dns",
     ],
     instance_id="dns-cn-mp91lyq9xxxx")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +77,7 @@ const dns = new alicloud.dns.DomainAttachment("dns", {
     instanceId: "dns-cn-mp91lyq9xxxx",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

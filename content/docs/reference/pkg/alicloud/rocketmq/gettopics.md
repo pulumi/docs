@@ -14,8 +14,6 @@ This data source provides a list of ONS Topics in an Alibaba Cloud account accor
 
 > **NOTE:** Available in 1.53.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +55,7 @@ class MyStack : Stack
     public Output<string> FirstTopicName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,9 +85,11 @@ topics_ds = default_topic.instance_id.apply(lambda instance_id: alicloud.rocketm
     output_file="topics.txt"))
 pulumi.export("firstTopicName", topics_ds.topics[0]["topic"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -114,6 +115,7 @@ const topicsDs = defaultTopic.instanceId.apply(instanceId => alicloud.rocketmq.g
 
 export const firstTopicName = topicsDs.topics[0].topic;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

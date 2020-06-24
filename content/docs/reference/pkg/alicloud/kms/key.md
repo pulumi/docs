@@ -14,8 +14,6 @@ A kms key can help user to protect data security in the transmission process. Fo
 
 > **NOTE:** Available in v1.85.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ key = alicloud.kms.Key("key",
     key_state="Enabled",
     pending_window_in_days="7")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const key = new alicloud.kms.Key("key", {
     pendingWindowInDays: 7,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetConnections function of the vpn module, including exa
 
 The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ foo = alicloud.vpn.get_connections(customer_gateway_id="fake-cgw-id",
     output_file="/tmp/vpnconn",
     vpn_gateway_id="fake-vpn-id")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -72,6 +73,7 @@ const foo = pulumi.output(alicloud.vpn.getConnections({
     vpnGatewayId: "fake-vpn-id",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

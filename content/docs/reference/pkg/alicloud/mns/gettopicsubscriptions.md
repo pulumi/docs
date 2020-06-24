@@ -12,8 +12,6 @@ meta_desc: "Explore the GetTopicSubscriptions function of the mns module, includ
 
 This data source provides a list of MNS topic subscriptions in an Alibaba Cloud account according to the specified parameters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstTopicSubscriptionId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ subscriptions = alicloud.mns.get_topic_subscriptions(name_prefix="tf-",
     topic_name="topic_name")
 pulumi.export("firstTopicSubscriptionId", subscriptions.subscriptions[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const subscriptions = pulumi.output(alicloud.mns.getTopicSubscriptions({
 
 export const firstTopicSubscriptionId = subscriptions.subscriptions[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

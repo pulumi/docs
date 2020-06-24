@@ -13,9 +13,6 @@ meta_desc: "Explore the GetInstances function of the kvstore module, including e
 The `alicloud.kvstore.getInstances` data source provides a collection of kvstore instances available in Alicloud account.
 Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetInstances {#using}

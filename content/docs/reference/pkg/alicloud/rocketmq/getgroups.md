@@ -14,9 +14,6 @@ This data source provides a list of ONS Groups in an Alibaba Cloud account accor
 
 > **NOTE:** Available in 1.53.0+
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetGroups {#using}

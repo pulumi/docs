@@ -12,13 +12,11 @@ meta_desc: "Explore the Instance resource of the rocketmq module, including exam
 
 Provides an ONS instance resource.
 
-For more information about how to use it, see [RocketMQ Instance Management API](https://www.alibabacloud.com/help/doc-detail/106354.html). 
+For more information about how to use it, see [RocketMQ Instance Management API](https://www.alibabacloud.com/help/doc-detail/106354.html).
 
-> **NOTE:** The number of instances in the same region cannot exceed 8. At present, the resource does not support region "mq-internet-access" and "ap-southeast-5". 
+> **NOTE:** The number of instances in the same region cannot exceed 8. At present, the resource does not support region "mq-internet-access" and "ap-southeast-5".
 
 > **NOTE:** Available in 1.51.0+
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_alicloud as alicloud
 
 example = alicloud.rocketmq.Instance("example", remark="tf-example-ons-instance-remark")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const example = new alicloud.rocketmq.Instance("example", {
     remark: "tf-example-ons-instance-remark",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

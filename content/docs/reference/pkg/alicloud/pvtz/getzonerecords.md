@@ -12,8 +12,6 @@ meta_desc: "Explore the GetZoneRecords function of the pvtz module, including ex
 
 This data source provides Private Zone Records resource information owned by an Alibaba Cloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstRecordId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ records_ds = alicloud.pvtz.get_zone_records(keyword=alicloud_pvtz_zone_record["f
     zone_id=alicloud_pvtz_zone["basic"]["id"])
 pulumi.export("firstRecordId", records_ds.records[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const recordsDs = pulumi.all([alicloud_pvtz_zone_record_foo.value, alicloud_pvtz
 
 export const firstRecordId = recordsDs.records[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

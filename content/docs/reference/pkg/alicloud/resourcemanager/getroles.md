@@ -14,8 +14,6 @@ This data source provides the Resource Manager Roles of the current Alibaba Clou
 
 > **NOTE:**  Available in 1.86.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> FirstRoleId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_alicloud as alicloud
 example = alicloud.resourcemanager.get_roles(name_regex="tftest")
 pulumi.export("firstRoleId", example.roles[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -68,6 +69,7 @@ const example = pulumi.output(alicloud.resourcemanager.getRoles({
 
 export const firstRoleId = example.roles[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

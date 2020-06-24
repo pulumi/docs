@@ -12,8 +12,6 @@ meta_desc: "Explore the GetZones function of the pvtz module, including examples
 
 This data source lists a number of Private Zones resource information owned by an Alibaba Cloud account.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstZoneId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 pvtz_zones_ds = alicloud.pvtz.get_zones(keyword=alicloud_pvtz_zone["basic"]["zone_name"])
 pulumi.export("firstZoneId", pvtz_zones_ds.zones[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const pvtzZonesDs = alicloud_pvtz_zone_basic.zoneName.apply(zoneName => alicloud
 
 export const firstZoneId = pvtzZonesDs.zones[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

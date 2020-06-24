@@ -14,8 +14,6 @@ Provides a Alidns Domain Group resource. For information about Alidns Domain Gro
 
 > **NOTE:** Available in v1.84.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_alicloud as alicloud
 # Add a new Alinds Domain Group.
 example = alicloud.dns.DomainGroup("example", group_name="tf-testDG")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -65,6 +66,7 @@ const example = new alicloud.dns.DomainGroup("example", {
     groupName: "tf-testDG",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

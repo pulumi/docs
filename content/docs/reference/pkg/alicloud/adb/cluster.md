@@ -16,8 +16,6 @@ databases.
 
 > **NOTE:** Available in v1.71.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,9 +97,11 @@ default_cluster = alicloud.adb.Cluster("defaultCluster",
     pay_type="PostPaid",
     vswitch_id=default_switch.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -131,6 +132,7 @@ const defaultCluster = new alicloud.adb.Cluster("default", {
     vswitchId: defaultSwitch.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ This data source provides a list of Alidns Domain Groups in an Alibaba Cloud acc
 
 > **NOTE:**  Available in 1.85.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +42,7 @@ class MyStack : Stack
     public Output<string> FirstDomainGroupId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ import pulumi_alicloud as alicloud
 example = alicloud.dns.get_alidns_domain_groups(ids=["c5ef2bc43064445787adf182af2****"])
 pulumi.export("firstDomainGroupId", example.groups[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -71,6 +72,7 @@ const example = pulumi.output(alicloud.dns.getAlidnsDomainGroups({
 
 export const firstDomainGroupId = example.groups[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

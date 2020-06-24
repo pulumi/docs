@@ -12,10 +12,7 @@ meta_desc: "Explore the GetZones function of the AliCloud package, including exa
 
 This data source provides availability zones that can be accessed by an Alibaba Cloud account within the region configured in the provider.
 
-
 > **NOTE:** If one zone is sold out, it will not be exported.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +59,11 @@ zones_ds = alicloud.get_zones(available_disk_category="cloud_ssd",
 # Create an ECS instance with the first matched zone
 instance = alicloud.ecs.Instance("instance", availability_zone=zones_ds.zones[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -78,6 +78,7 @@ const instance = new alicloud.ecs.Instance("instance", {
     availabilityZone: zonesDs.zones[0].id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

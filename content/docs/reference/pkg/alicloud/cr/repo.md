@@ -16,8 +16,6 @@ This resource will help you to manager Container Registry repositories.
 
 > **NOTE:** You need to set your registry password in Container Registry console before use this resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ my_repo = alicloud.cr.Repo("my-repo",
     repo_type="PUBLIC",
     summary="this is summary of my new repo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -86,6 +87,7 @@ const my_repo = new alicloud.cr.Repo("my-repo", {
     summary: "this is summary of my new repo",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

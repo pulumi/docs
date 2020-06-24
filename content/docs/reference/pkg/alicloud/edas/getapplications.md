@@ -14,8 +14,6 @@ This data source provides a list of EDAS application in an Alibaba Cloud account
 
 > **NOTE:** Available in 1.82.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
     public Output<string> FirstApplicationName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ applications = alicloud.edas.get_applications(ids=["xxx"],
     output_file="application.txt")
 pulumi.export("firstApplicationName", applications.applications[0]["appName"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -73,6 +74,7 @@ const applications = alicloud.edas.getApplications({
 });
 export const firstApplicationName = applications.then(applications => applications.applications[0].appName);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

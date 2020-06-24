@@ -14,8 +14,6 @@ Provides the generation of txt records to realize the retrieval and verification
 
 > **NOTE:** Available in v1.80.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
     public Output<string> Value { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,9 +60,11 @@ this = alicloud.dns.get_domain_txt_guid(domain_name="test111.abc",
 pulumi.export("rr", this.rr)
 pulumi.export("value", this.value)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -76,6 +77,7 @@ const thisDomainTxtGuid = pulumi.output(alicloud.dns.getDomainTxtGuid({
 export const rr = thisDomainTxtGuid.rr;
 export const value = thisDomainTxtGuid.value;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

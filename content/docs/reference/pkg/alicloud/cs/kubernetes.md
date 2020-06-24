@@ -22,7 +22,7 @@ meta_desc: "Explore the Kubernetes resource of the cs module, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#Kubernetes">Kubernetes</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#Kubernetes">Kubernetes</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>exclude_autoscaler_nodes=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>node_name_mode=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -325,6 +325,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="excludeautoscalernodes_csharp">
+<a href="#excludeautoscalernodes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Autoscaler<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
 </span> 
@@ -511,6 +522,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nodenamemode_csharp">
+<a href="#nodenamemode_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -551,6 +573,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroupid_csharp">
+<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -843,6 +876,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="excludeautoscalernodes_go">
+<a href="#excludeautoscalernodes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Autoscaler<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
 </span> 
@@ -1029,6 +1073,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nodenamemode_go">
+<a href="#nodenamemode_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span> 
@@ -1069,6 +1124,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroupid_go">
+<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1361,6 +1427,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="excludeautoscalernodes_nodejs">
+<a href="#excludeautoscalernodes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Autoscaler<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span> 
@@ -1547,6 +1624,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nodenamemode_nodejs">
+<a href="#nodenamemode_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
@@ -1587,6 +1675,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitygroupid_nodejs">
+<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1879,6 +1978,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="exclude_autoscaler_nodes_python">
+<a href="#exclude_autoscaler_nodes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>autoscaler_<wbr>nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span> 
@@ -2065,6 +2175,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="node_name_mode_python">
+<a href="#node_name_mode_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span> 
@@ -2105,6 +2226,17 @@ The Kubernetes resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_group_id_python">
+<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2320,17 +2452,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="securitygroupid_csharp">
-<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
-{{% /md %}}</dd>
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="slbid_csharp">
@@ -2384,6 +2505,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="workerramrolename_csharp">
+<a href="#workerramrolename_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Ram<wbr>Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RamRole Name attached to worker node.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2432,17 +2564,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="securitygroupid_go">
-<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -2498,6 +2619,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="workerramrolename_go">
+<a href="#workerramrolename_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Ram<wbr>Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RamRole Name attached to worker node.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2546,17 +2678,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="securitygroupid_nodejs">
-<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -2612,6 +2733,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="workerramrolename_nodejs">
+<a href="#workerramrolename_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Ram<wbr>Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RamRole Name attached to worker node.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2660,17 +2792,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="security_group_id_python">
-<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
@@ -2726,6 +2847,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="worker_ram_role_name_python">
+<a href="#worker_ram_role_name_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>ram_<wbr>role_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The RamRole Name attached to worker node.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2745,7 +2877,7 @@ Get an existing Kubernetes resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>connections=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_nodes=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>nat_gateway_id=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_id=None<span class="p">, </span>slb_internet=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>slb_intranet=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>vpc_id=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_nodes=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons=None<span class="p">, </span>availability_zone=None<span class="p">, </span>client_cert=None<span class="p">, </span>client_key=None<span class="p">, </span>cluster_ca_cert=None<span class="p">, </span>connections=None<span class="p">, </span>cpu_policy=None<span class="p">, </span>enable_ssh=None<span class="p">, </span>exclude_autoscaler_nodes=None<span class="p">, </span>image_id=None<span class="p">, </span>install_cloud_monitor=None<span class="p">, </span>key_name=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>kube_config=None<span class="p">, </span>master_auto_renew=None<span class="p">, </span>master_auto_renew_period=None<span class="p">, </span>master_disk_category=None<span class="p">, </span>master_disk_size=None<span class="p">, </span>master_instance_charge_type=None<span class="p">, </span>master_instance_types=None<span class="p">, </span>master_nodes=None<span class="p">, </span>master_period=None<span class="p">, </span>master_period_unit=None<span class="p">, </span>master_vswitch_ids=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>nat_gateway_id=None<span class="p">, </span>new_nat_gateway=None<span class="p">, </span>node_cidr_mask=None<span class="p">, </span>node_name_mode=None<span class="p">, </span>password=None<span class="p">, </span>pod_cidr=None<span class="p">, </span>pod_vswitch_ids=None<span class="p">, </span>proxy_mode=None<span class="p">, </span>security_group_id=None<span class="p">, </span>service_cidr=None<span class="p">, </span>slb_id=None<span class="p">, </span>slb_internet=None<span class="p">, </span>slb_internet_enabled=None<span class="p">, </span>slb_intranet=None<span class="p">, </span>user_ca=None<span class="p">, </span>user_data=None<span class="p">, </span>version=None<span class="p">, </span>vpc_id=None<span class="p">, </span>worker_auto_renew=None<span class="p">, </span>worker_auto_renew_period=None<span class="p">, </span>worker_data_disk_category=None<span class="p">, </span>worker_data_disk_size=None<span class="p">, </span>worker_disk_category=None<span class="p">, </span>worker_disk_size=None<span class="p">, </span>worker_instance_charge_type=None<span class="p">, </span>worker_instance_types=None<span class="p">, </span>worker_nodes=None<span class="p">, </span>worker_number=None<span class="p">, </span>worker_period=None<span class="p">, </span>worker_period_unit=None<span class="p">, </span>worker_ram_role_name=None<span class="p">, </span>worker_vswitch_ids=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2944,6 +3076,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable login to the node through SSH. default: false 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_excludeautoscalernodes_csharp">
+<a href="#state_excludeautoscalernodes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Autoscaler<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3173,6 +3316,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodenamemode_csharp">
+<a href="#state_nodenamemode_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3459,6 +3613,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_workerramrolename_csharp">
+<a href="#state_workerramrolename_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Ram<wbr>Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RamRole Name attached to worker node.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_workervswitchids_csharp">
 <a href="#state_workervswitchids_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Vswitch<wbr>Ids</a>
 </span> 
@@ -3559,6 +3724,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable login to the node through SSH. default: false 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_excludeautoscalernodes_go">
+<a href="#state_excludeautoscalernodes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Autoscaler<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3788,6 +3964,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodenamemode_go">
+<a href="#state_nodenamemode_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4074,6 +4261,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_workerramrolename_go">
+<a href="#state_workerramrolename_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Ram<wbr>Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RamRole Name attached to worker node.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_workervswitchids_go">
 <a href="#state_workervswitchids_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Vswitch<wbr>Ids</a>
 </span> 
@@ -4174,6 +4372,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable login to the node through SSH. default: false 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_excludeautoscalernodes_nodejs">
+<a href="#state_excludeautoscalernodes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Autoscaler<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4403,6 +4612,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodenamemode_nodejs">
+<a href="#state_nodenamemode_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4689,6 +4909,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_workerramrolename_nodejs">
+<a href="#state_workerramrolename_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Ram<wbr>Role<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RamRole Name attached to worker node.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_workervswitchids_nodejs">
 <a href="#state_workervswitchids_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Vswitch<wbr>Ids</a>
 </span> 
@@ -4789,6 +5020,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable login to the node through SSH. default: false 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_exclude_autoscaler_nodes_python">
+<a href="#state_exclude_autoscaler_nodes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>autoscaler_<wbr>nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Exclude autoscaler nodes from `worker_nodes`. default: false 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5018,6 +5260,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_node_name_mode_python">
+<a href="#state_node_name_mode_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5300,6 +5553,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Worker payment period unit. `Month` or `Week`, defaults to `Month`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_worker_ram_role_name_python">
+<a href="#state_worker_ram_role_name_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>ram_<wbr>role_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The RamRole Name attached to worker node.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

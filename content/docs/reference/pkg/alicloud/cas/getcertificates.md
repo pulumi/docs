@@ -12,8 +12,6 @@ meta_desc: "Explore the GetCertificates function of the cas module, including ex
 
 This data source provides a list of CAS Certificates in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> Cert { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ certs = alicloud.cas.get_certificates(name_regex="^cas",
     output_file=f"{path['module']}/cas_certificates.json")
 pulumi.export("cert", certs.certificates[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const certs = pulumi.output(alicloud.cas.getCertificates({
 
 export const cert = certs.certificates[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

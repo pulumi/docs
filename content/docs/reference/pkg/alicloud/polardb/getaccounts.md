@@ -15,8 +15,6 @@ Filters support regular expression for the account name, searches by clusterId.
 
 > **NOTE:** Available in v1.70.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
     public Output<string> Ends { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ polardb_clusters_ds = alicloud.polardb.get_clusters(description_regex="pc-\\w+",
 default = alicloud.polardb.get_accounts(db_cluster_id=polardb_clusters_ds.clusters[0]["id"])
 pulumi.export("ends", default.accounts[0]["account_name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -79,6 +80,7 @@ const default = polardbClustersDs.then(polardbClustersDs => alicloud.polardb.get
 }));
 export const ends = _default.then(_default => _default.accounts[0].accountName);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

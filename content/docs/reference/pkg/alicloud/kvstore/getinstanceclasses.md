@@ -14,8 +14,6 @@ This data source provides the KVStore instance classes resource available info o
 
 > **NOTE:** Available in v1.49.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
     public Output<string> FirstKvstoreInstanceClass { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ resources_instance_classes = alicloud.kvstore.get_instance_classes(engine="Redis
     zone_id=resources_zones.zones[0]["id"])
 pulumi.export("firstKvstoreInstanceClass", resources_instance_classes.instance_classes)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -88,6 +89,7 @@ const resourcesInstanceClasses = resourcesZones.apply(resourcesZones => alicloud
 
 export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasses;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

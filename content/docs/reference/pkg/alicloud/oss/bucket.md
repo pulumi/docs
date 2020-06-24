@@ -14,9 +14,6 @@ Provides a resource to create a oss bucket and set its attribution.
 
 > **NOTE:** The bucket namespace is shared by all users of the OSS system. Please set bucket name as unique as possible.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +53,11 @@ bucket_acl = alicloud.oss.Bucket("bucket-acl",
     acl="private",
     bucket="bucket-170309-acl")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -67,6 +67,7 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
     bucket: "bucket-170309-acl",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

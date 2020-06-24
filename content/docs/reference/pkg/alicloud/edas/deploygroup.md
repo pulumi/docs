@@ -14,9 +14,6 @@ Provides an EDAS deploy group resource.
 
 > **NOTE:** Available in 1.82.0+
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +53,11 @@ default = alicloud.edas.DeployGroup("default",
     app_id=var["app_id"],
     group_name=var["group_name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -67,6 +67,7 @@ const _default = new alicloud.edas.DeployGroup("default", {
     groupName: _var.group_name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

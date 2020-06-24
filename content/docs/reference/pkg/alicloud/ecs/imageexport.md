@@ -19,8 +19,11 @@ Export a custom image to the OSS bucket in the same region as the custom image.
 > **NOTE:** Before exporting the image, you must authorize the cloud server ECS official service account to write OSS permissions through RAM.
 
 > **NOTE:** Available in 1.68.0+.
+## Attributes Reference0
 
+ The following attributes are exported:
 
+* `id` - ID of the image.
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +66,11 @@ default = alicloud.ecs.ImageExport("default",
     oss_bucket="ecsimageexportconfig",
     oss_prefix="ecsExport")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,6 +81,7 @@ const defaultImageExport = new alicloud.ecs.ImageExport("default", {
     ossPrefix: "ecsExport",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

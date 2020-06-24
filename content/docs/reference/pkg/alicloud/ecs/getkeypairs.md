@@ -12,8 +12,6 @@ meta_desc: "Explore the GetKeyPairs function of the ecs module, including exampl
 
 This data source provides a list of key pairs in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ import pulumi_alicloud as alicloud
 default_key_pair = alicloud.ecs.KeyPair("defaultKeyPair", key_name="keyPairDatasource")
 default_key_pairs = default_key_pair.key_name.apply(lambda key_name: alicloud.ecs.get_key_pairs(name_regex=key_name))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -71,6 +72,7 @@ const defaultKeyPairs = defaultKeyPair.keyName.apply(keyName => alicloud.ecs.get
     nameRegex: keyName,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

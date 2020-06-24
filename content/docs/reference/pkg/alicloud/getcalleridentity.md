@@ -14,8 +14,6 @@ This data source provides the identity of the current user.
 
 > **NOTE:** Available in 1.65.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
     public Output<string> CurrentUserArn { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_alicloud as alicloud
 current = alicloud.get_caller_identity()
 pulumi.export("currentUserArn", current.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -63,6 +64,7 @@ const current = pulumi.output(alicloud.getCallerIdentity({ async: true }));
 
 export const currentUserArn = current.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

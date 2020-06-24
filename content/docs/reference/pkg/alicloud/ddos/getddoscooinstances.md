@@ -12,8 +12,6 @@ meta_desc: "Explore the GetDdosCooInstances function of the ddos module, includi
 
 This data source provides a list of BGP-Line Anti-DDoS Pro instances in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> Instance { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ import pulumi_alicloud as alicloud
 instance_ddos_coo_instances = alicloud.ddos.get_ddos_coo_instances(name_regex="^ddoscoo")
 pulumi.export("instance", [__item["id"] for __item in alicloud_ddoscoo_instances["instance"]])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -67,6 +68,7 @@ const instanceDdosCooInstances = pulumi.output(alicloud.ddos.getDdosCooInstances
 
 export const instance = alicloud_ddoscoo_instances_instance.map(v => v.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

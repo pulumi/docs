@@ -11,10 +11,8 @@ meta_desc: "Explore the GetAliases function of the kms module, including example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 This data source provides a list of KMS aliases in an Alibaba Cloud account according to the specified filters.
- 
+
 > **NOTE:** Available in v1.79.0+.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +43,7 @@ class MyStack : Stack
     public Output<string> FirstKeyId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ kms_aliases = alicloud.kms.get_aliases(ids=["d89e8a53-b708-41aa-8c67-6873axxx"],
     name_regex="alias/tf-testKmsAlias_123")
 pulumi.export("firstKeyId", data["alicloud.kms.getKeys"]["kms_keys_ds"]["keys"][0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,6 +76,7 @@ const kmsAliases = pulumi.output(alicloud.kms.getAliases({
 
 export const firstKeyId = alicloud_kms_keys_kms_keys_ds.keys.0.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

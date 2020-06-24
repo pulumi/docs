@@ -20,8 +20,6 @@ Provides a Nas Mount Target resource.
 and it only can be achieved by creating a classic mount target mannually.
 See [Add a mount point](https://www.alibabacloud.com/help/doc-detail/60431.htm) and [Why do I need RAM permissions to create a mount point in a classic network](https://www.alibabacloud.com/help/faq-detail/42176.htm).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -61,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,9 +85,11 @@ foo_mount_target = alicloud.nas.MountTarget("fooMountTarget",
     access_group_name=foo_access_group.id,
     file_system_id=foo_file_system.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -111,6 +112,7 @@ const fooMountTarget = new alicloud.nas.MountTarget("foo", {
     fileSystemId: fooFileSystem.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ Provide  a data source to retrieve the type of protocol used to create NAS file 
 
 > **NOTE:** Available in 1.42.0
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> NasProtocolsProtocol { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ default = alicloud.nas.get_protocols(output_file="protocols.txt",
     zone_id="cn-beijing-e")
 pulumi.export("nasProtocolsProtocol", default.protocols[0])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const defaultProtocols = pulumi.output(alicloud.nas.getProtocols({
 
 export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

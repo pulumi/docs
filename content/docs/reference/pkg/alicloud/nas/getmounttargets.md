@@ -14,8 +14,6 @@ This data source provides MountTargets available to the user.
 
 > NOTE: Available in 1.35.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
     public Output<string> AlicloudNasMountTargetsId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ mt = alicloud.nas.get_mount_targets(access_group_name="tf-testAccNasConfig",
     file_system_id="1a2sc4d")
 pulumi.export("alicloudNasMountTargetsId", mt.targets[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -71,6 +72,7 @@ const mt = pulumi.output(alicloud.nas.getMountTargets({
 
 export const alicloudNasMountTargetsId = mt.targets[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

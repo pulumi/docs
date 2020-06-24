@@ -20,8 +20,6 @@ Creates a custom image. You can then use a custom image to create ECS instances 
 
 > **NOTE:**  Available in 1.64.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,9 +74,11 @@ default = alicloud.ecs.Image("default",
         "FinanceDept": "FinanceDeptJoshua",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -94,6 +95,7 @@ const defaultImage = new alicloud.ecs.Image("default", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

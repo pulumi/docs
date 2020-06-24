@@ -17,8 +17,6 @@ Provides an ALIKAFKA sasl acl resource.
 > **NOTE:**  Only the following regions support create alikafka sasl user.
 [`cn-hangzhou`,`cn-beijing`,`cn-shenzhen`,`cn-shanghai`,`cn-qingdao`,`cn-hongkong`,`cn-huhehaote`,`cn-zhangjiakou`,`ap-southeast-1`,`ap-south-1`,`ap-southeast-5`]
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -84,6 +82,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -131,9 +130,11 @@ default_sasl_acl = alicloud.alikafka.SaslAcl("defaultSaslAcl",
     instance_id=default_instance.id,
     username=default_sasl_user.username)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -180,6 +181,7 @@ const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
     username: defaultSaslUser.username,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

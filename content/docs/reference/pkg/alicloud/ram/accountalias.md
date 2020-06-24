@@ -12,9 +12,6 @@ meta_desc: "Explore the AccountAlias resource of the ram module, including examp
 
 Provides a RAM cloud account alias.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +50,11 @@ import pulumi_alicloud as alicloud
 # Create a alias for cloud account.
 alias = alicloud.ram.AccountAlias("alias", account_alias="hallo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -64,6 +64,7 @@ const alias = new alicloud.ram.AccountAlias("alias", {
     accountAlias: "hallo",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

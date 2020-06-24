@@ -14,9 +14,6 @@ Provides a PolarDB account privilege resource and used to grant several database
 
 > **NOTE:** Available in v1.67.0+.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a AccountPrivilege Resource {#create}

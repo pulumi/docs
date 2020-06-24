@@ -12,8 +12,6 @@ meta_desc: "Explore the GetGroups function of the dns module, including examples
 
 This data source provides a list of DNS Domain Groups in an Alibaba Cloud account according to the specified filters.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstGroupName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ groups_ds = alicloud.dns.get_groups(name_regex="^y[A-Za-z]+",
     output_file="groups.txt")
 pulumi.export("firstGroupName", groups_ds.groups[0]["group_name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const groupsDs = pulumi.output(alicloud.dns.getGroups({
 
 export const firstGroupName = groupsDs.groups[0].groupName;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

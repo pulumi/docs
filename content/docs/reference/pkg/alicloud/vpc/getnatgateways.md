@@ -14,8 +14,6 @@ This data source provides a list of Nat Gateways owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.37.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,9 +87,11 @@ foo_nat_gateways = pulumi.Output.all(foo_nat_gateway.id, foo_nat_gateway.name, f
     name_regex=name,
     vpc_id=foo_network_id))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -114,6 +115,7 @@ const fooNatGateways = pulumi.all([fooNatGateway.id, fooNatGateway.name, fooNetw
     vpcId: fooNetworkId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

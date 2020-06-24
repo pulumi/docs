@@ -14,8 +14,6 @@ This data source provides a list of Route Entries owned by an Alibaba Cloud acco
 
 > **NOTE:** Available in 1.37.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -105,6 +103,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -162,9 +161,11 @@ ingress = alicloud.ecs.SecurityGroupRule("ingress",
     type="ingress")
 foo_route_entries = foo_route_entry.route_table_id.apply(lambda route_table_id: alicloud.vpc.get_route_entries(route_table_id=route_table_id))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -231,6 +232,7 @@ const fooRouteEntries = fooRouteEntry.routeTableId.apply(routeTableId => aliclou
     routeTableId: routeTableId,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

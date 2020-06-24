@@ -14,8 +14,6 @@ This data source provides the master slave server groups related to a server loa
 
 > **NOTE:** Available in 1.54.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> FirstSlbServerGroupId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_alicloud as alicloud
 sample_ds = alicloud.slb.get_master_slave_server_groups(load_balancer_id=alicloud_slb["sample_slb"]["id"])
 pulumi.export("firstSlbServerGroupId", sample_ds.groups[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -68,6 +69,7 @@ const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getMasterSl
 
 export const firstSlbServerGroupId = sampleDs.groups[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

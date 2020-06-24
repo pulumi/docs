@@ -15,8 +15,6 @@ instance types available in Alibaba Cloud account when create a emr cluster.
 
 > **NOTE:** Available in 1.59.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
     public Output<string> FirstInstanceType { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ default = alicloud.emr.get_instance_types(cluster_type="HADOOP",
     ])
 pulumi.export("firstInstanceType", default.types[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -94,6 +95,7 @@ const defaultInstanceTypes = pulumi.output(alicloud.emr.getInstanceTypes({
 
 export const firstInstanceType = defaultInstanceTypes.types[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

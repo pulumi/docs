@@ -16,8 +16,6 @@ Attaches several ECS instances to a specified scaling group or remove them from 
 
 > **NOTE:** There are two types ECS instances in a scaling group: "AutoCreated" and "Attached". The total number of them can not larger than the scaling group "MaxSize".
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -136,6 +134,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -211,9 +210,11 @@ default_attachment = alicloud.ess.Attachment("defaultAttachment",
     ],
     scaling_group_id=default_scaling_group.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -298,6 +299,7 @@ const defaultAttachment = new alicloud.ess.Attachment("default", {
     scalingGroupId: defaultScalingGroup.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

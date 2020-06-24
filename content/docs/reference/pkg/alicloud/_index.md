@@ -19,6 +19,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="alikafka/" title="alikafka"><span class="symbol module"></span>alikafka</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="cas/" title="cas"><span class="symbol module"></span>cas</a></li>
+    <li><a href="cassandra/" title="cassandra"><span class="symbol module"></span>cassandra</a></li>
     <li><a href="cdn/" title="cdn"><span class="symbol module"></span>cdn</a></li>
     <li><a href="cen/" title="cen"><span class="symbol module"></span>cen</a></li>
     <li><a href="cloudconnect/" title="cloudconnect"><span class="symbol module"></span>cloudconnect</a></li>
@@ -86,7 +87,7 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.8.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

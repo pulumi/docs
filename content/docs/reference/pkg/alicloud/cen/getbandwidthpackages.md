@@ -12,8 +12,6 @@ meta_desc: "Explore the GetBandwidthPackages function of the cen module, includi
 
 This data source provides CEN Bandwidth Packages available to the user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstCenBandwidthPackageId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ bwp = alicloud.cen.get_bandwidth_packages(instance_id="cen-id1",
     name_regex="^foo")
 pulumi.export("firstCenBandwidthPackageId", bwp.packages[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const bwp = pulumi.output(alicloud.cen.getBandwidthPackages({
 
 export const firstCenBandwidthPackageId = bwp.packages[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

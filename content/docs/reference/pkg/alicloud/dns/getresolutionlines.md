@@ -14,8 +14,6 @@ This data source provides a list of DNS Resolution Lines in an Alibaba Cloud acc
 
 > **NOTE:** Available in 1.60.0.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
     public Output<string> FirstLineCode { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ resolution_lines_ds = alicloud.dns.get_resolution_lines(line_codes=["cn_unicom_s
     output_file="support_lines.txt")
 pulumi.export("firstLineCode", resolution_lines_ds.lines[0]["lineCode"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const resolutionLinesDs = pulumi.output(alicloud.dns.getResolutionLines({
 
 export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

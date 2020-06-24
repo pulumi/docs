@@ -12,9 +12,7 @@ meta_desc: "Explore the InstanceGrant resource of the cen module, including exam
 
 Provides a CEN child instance grant resource, which allow you to authorize a VPC or VBR to a CEN of a different account.
 
-For more information about how to use it, see [Attach a network in a different account](https://www.alibabacloud.com/help/doc-detail/73645.htm). 
-
-
+For more information about how to use it, see [Attach a network in a different account](https://www.alibabacloud.com/help/doc-detail/73645.htm).
 
 {{% examples %}}
 ## Example Usage
@@ -67,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -102,9 +101,11 @@ foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment
     child_instance_region_id="cn-qingdao",
     instance_id=cen.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -137,6 +138,7 @@ const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
     instanceId: cen.id,
 }, { provider: account2, dependsOn: [fooInstanceGrant] });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ Create an DNS Instance resource.
 
 > **NOTE:** Available in v1.80.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ this = alicloud.dns.Instance("this",
     renewal_status="ManualRenewal",
     version_code="version_personal")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -78,6 +79,7 @@ const thisInstance = new alicloud.dns.Instance("this", {
     versionCode: "version_personal",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

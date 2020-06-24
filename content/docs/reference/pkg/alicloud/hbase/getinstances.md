@@ -15,8 +15,6 @@ Filters support regular expression for the instance name, ids or availability_zo
 
 > **NOTE:**  Available in 1.67.0+
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ import pulumi_alicloud as alicloud
 hbase = alicloud.hbase.get_instances(availability_zone="cn-shenzhen-b",
     name_regex="tf_testAccHBase")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -66,6 +67,7 @@ const hbase = pulumi.output(alicloud.hbase.getInstances({
     nameRegex: "tf_testAccHBase",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

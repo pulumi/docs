@@ -14,8 +14,6 @@ Provides an ECS Launch Template resource.
 
 For information about Launch Template and how to use it, see [Launch Template](https://www.alibabacloud.com/help/doc-detail/73916.html).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -94,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -156,9 +155,11 @@ template = alicloud.ecs.LaunchTemplate("template",
     vswitch_id="sw-ljkngaksdjfj0nnasdf",
     zone_id="beijing-a")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -217,6 +218,7 @@ const template = new alicloud.ecs.LaunchTemplate("template", {
     zoneId: "beijing-a",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,10 +12,7 @@ meta_desc: "Explore the Account resource of the polardb module, including exampl
 
 Provides a PolarDB account resource and used to manage databases.
 
-> **NOTE:** Available in v1.67.0+. 
-
-{{% examples %}}
-{{% /examples %}}
+> **NOTE:** Available in v1.67.0+.
 
 
 

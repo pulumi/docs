@@ -12,8 +12,6 @@ meta_desc: "Explore the GetFunctions function of the fc module, including exampl
 
 This data source provides the Function Compute functions of the current Alibaba Cloud user.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> FirstFcFunctionName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ functions_ds = alicloud.fc.get_functions(name_regex="sample_fc_function",
     service_name="sample_service")
 pulumi.export("firstFcFunctionName", functions_ds.functions[0]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -69,6 +70,7 @@ const functionsDs = pulumi.output(alicloud.fc.getFunctions({
 
 export const firstFcFunctionName = functionsDs.functions[0].name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

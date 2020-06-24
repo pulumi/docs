@@ -14,8 +14,6 @@ This data source provides the Resource Manager Policies of the current Alibaba C
 
 > **NOTE:**  Available in 1.86.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
     public Output<string> FirstPolicyId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ example = alicloud.resourcemanager.get_policies(description_regex="tftest_policy
     policy_type="Custom")
 pulumi.export("firstPolicyId", example.policies[0]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -74,6 +75,7 @@ const example = pulumi.output(alicloud.resourcemanager.getPolicies({
 
 export const firstPolicyId = example.policies[0].id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
