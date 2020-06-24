@@ -11,19 +11,10 @@ jobs:
     name: Install deps and build site
     runs-on: ubuntu-latest
     steps:
-      # Turnstyle is used to prevent multiple push jobs from
-      # running at the same time.
-      - name: Turnstyle
-        uses: softprops/turnstyle@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: actions/checkout@v2
-
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-
       - name: Check links
         run: make ci_schedule
         env:
