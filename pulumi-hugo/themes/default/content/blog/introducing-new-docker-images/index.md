@@ -142,6 +142,7 @@ chart = helm.Chart(
 )
 
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,18 +218,19 @@ func main() {
 		return nil
 	})
 }
-
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
 
 To achieve this level of interoperability, however, we need to have some dependencies installed locally. These are:
- - the Pulumi binary
- - the Pulumi language runtime for our chosen language
- - the language binary (e.g., node, python, DotNet or Go)
- - the languages' dependency management tool (e.g., npm, yarn, PipEnv, etc.)
- - the Helm CLI for rendering the Helm chart to a template that Pulumi can then install
+
+- the Pulumi binary
+- the Pulumi language runtime for our chosen language
+- the language binary (e.g., node, python, DotNet or Go)
+- the languages' dependency management tool (e.g., npm, yarn, PipEnv, etc.)
+- the Helm CLI for rendering the Helm chart to a template that Pulumi can then install
 
 This list of requirements is already getting lengthy, and we're only provisioning one piece of infrastructure. Alongside this, if you're using this container in your CI/CD pipeline, you might _also_ need to acquire credentials during the pulumi up process. When you consider that Pulumi's users could be using _any_ of our featured programming languages as well as one or many of our supported cloud providers, you'll begin to imagine how many dependencies are needed.
 
@@ -283,7 +285,7 @@ The default operating system for these new images is [Debian Buster](https://www
 ## A Note about Alpine Linux
 
 Many users are fans of [Alpine Linux's](https://alpinelinux.org/) small, lightweight footprint and its Docker focused design; however, we've made the decision not to publish Alpine based images at this moment.
-Alpine's usage of [musl libc](https://alpinelinux.org/posts/Alpine-Linux-has-switched-to-musl-libc.html) rather than [glibc](https://www.gnu.org/software/libc/) means that Pulumi doesn't run without adding additional dependencies, which made it hard to justify introducing this extra source of potential bugs into our already broad surface area. 
+Alpine's usage of [musl libc](https://alpinelinux.org/posts/Alpine-Linux-has-switched-to-musl-libc.html) rather than [glibc](https://www.gnu.org/software/libc/) means that Pulumi doesn't run without adding additional dependencies, which made it hard to justify introducing this extra source of potential bugs into our already broad surface area.
 If you're interested in building and maintaining an Alpine based Pulumi image, we have skeleton Docker files available in the [Pulumi GitHub repo](https://github.com/pulumi/pulumi/tree/master/docker).
 
 ## Give them a spin!
