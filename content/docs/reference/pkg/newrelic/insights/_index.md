@@ -21,9 +21,9 @@ Explore the resources and functions of the insights module in the New Relic pack
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
+	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -34,7 +34,7 @@ Explore the resources and functions of the insights module in the New Relic pack
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Insights.html" title="Pulumi.NewRelic.Insights">Pulumi.NewRelic.Insights</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/insights?tab=doc#" title="newrelic/insights">newrelic/insights</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/insights?tab=doc#" title="newrelic/insights">newrelic/insights</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/insights/#" title="@pulumi/newrelic/insights">@pulumi/newrelic/insights</a></dd>

@@ -3,6 +3,7 @@ title: Package pulumi_newrelic
 title_tag: Package pulumi_newrelic | Python SDK
 linktitle: pulumi_newrelic
 notitle: true
+block_external_search_index: true
 ---
 
 {{< resource-docs-alert "newrelic" >}}

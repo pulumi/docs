@@ -31,9 +31,9 @@ Explore the resources and functions of the synthetics module in the New Relic pa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
+	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -44,7 +44,7 @@ Explore the resources and functions of the synthetics module in the New Relic pa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Synthetics.html" title="Pulumi.NewRelic.Synthetics">Pulumi.NewRelic.Synthetics</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/synthetics?tab=doc#" title="newrelic/synthetics">newrelic/synthetics</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/synthetics?tab=doc#" title="newrelic/synthetics">newrelic/synthetics</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/synthetics/#" title="@pulumi/newrelic/synthetics">@pulumi/newrelic/synthetics</a></dd>
