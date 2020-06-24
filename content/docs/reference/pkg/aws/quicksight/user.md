@@ -12,7 +12,6 @@ meta_desc: "Explore the User resource of the quicksight module, including exampl
 
 Resource for managing QuickSight User
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = aws.quicksight.User("example",
     user_name="an-author",
     user_role="AUTHOR")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const example = new aws.quicksight.User("example", {
     userRole: "AUTHOR",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

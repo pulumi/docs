@@ -11,8 +11,6 @@ meta_desc: "Explore the MetricAlarm resource of the cloudwatch module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a CloudWatch Metric Alarm resource.
-
-
 ## Example in Conjunction with Scaling Policies
 
 ```typescript
@@ -99,49 +97,6 @@ class MyStack : Stack
         });
     }
 
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		batPolicy, err := autoscaling.NewPolicy(ctx, "batPolicy", &autoscaling.PolicyArgs{
-			AdjustmentType:       pulumi.String("ChangeInCapacity"),
-			AutoscalingGroupName: pulumi.String(aws_autoscaling_group.Bar.Name),
-			Cooldown:             pulumi.Int(300),
-			ScalingAdjustment:    pulumi.Int(4),
-		})
-		if err != nil {
-			return err
-		}
-		batMetricAlarm, err := cloudwatch.NewMetricAlarm(ctx, "batMetricAlarm", &cloudwatch.MetricAlarmArgs{
-			AlarmActions: pulumi.StringArray{
-				batPolicy.Arn,
-			},
-			AlarmDescription:   pulumi.String("This metric monitors ec2 cpu utilization"),
-			ComparisonOperator: pulumi.String("GreaterThanOrEqualToThreshold"),
-			Dimensions: map[string]interface{}{
-				"AutoScalingGroupName": aws_autoscaling_group.Bar.Name,
-			},
-			EvaluationPeriods: pulumi.Int(2),
-			MetricName:        pulumi.String("CPUUtilization"),
-			Namespace:         pulumi.String("AWS/EC2"),
-			Period:            pulumi.Int(120),
-			Statistic:         pulumi.String("Average"),
-			Threshold:         pulumi.Float64(80),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
 }
 ```
 
@@ -261,6 +216,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -292,6 +248,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -310,9 +267,11 @@ foobar = aws.cloudwatch.MetricAlarm("foobar",
     statistic="Average",
     threshold="80")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -329,6 +288,7 @@ const foobar = new aws.cloudwatch.MetricAlarm("foobar", {
     threshold: 80,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -587,7 +547,7 @@ The MetricAlarm resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -716,7 +676,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -844,7 +804,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -973,7 +933,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1101,7 +1061,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -1230,7 +1190,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1358,7 +1318,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -1487,7 +1447,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1864,7 +1824,7 @@ The following state arguments are supported:
 <a href="#state_dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -2004,7 +1964,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2132,7 +2092,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -2272,7 +2232,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2400,7 +2360,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -2540,7 +2500,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2668,7 +2628,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -2808,7 +2768,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3197,7 +3157,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -3273,7 +3233,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -3349,7 +3309,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -3425,7 +3385,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>

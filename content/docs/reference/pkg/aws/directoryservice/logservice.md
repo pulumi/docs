@@ -12,7 +12,6 @@ meta_desc: "Explore the LogService resource of the directoryservice module, incl
 
 Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -75,6 +74,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -106,9 +106,11 @@ example_log_service = aws.directoryservice.LogService("exampleLogService",
     directory_id=aws_directory_service_directory["example"]["id"],
     log_group_name=example_log_group.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -139,6 +141,7 @@ const exampleLogService = new aws.directoryservice.LogService("example", {
     logGroupName: exampleLogGroup.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

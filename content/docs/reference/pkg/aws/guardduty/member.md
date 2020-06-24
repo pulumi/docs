@@ -12,7 +12,6 @@ meta_desc: "Explore the Member resource of the guardduty module, including examp
 
 Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the `aws.guardduty.InviteAccepter` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,6 +86,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -102,9 +103,11 @@ member_member = aws.guardduty.Member("memberMember",
     invite=True,
     invitation_message="please accept guardduty invitation")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -119,6 +122,7 @@ const memberMember = new aws.guardduty.Member("memberMember", {
     invitationMessage: "please accept guardduty invitation",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

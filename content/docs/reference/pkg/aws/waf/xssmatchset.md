@@ -12,7 +12,6 @@ meta_desc: "Explore the XssMatchSet resource of the waf module, including exampl
 
 Provides a WAF XSS Match Set Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -111,9 +112,11 @@ xss_match_set = aws.waf.XssMatchSet("xssMatchSet", xss_match_tuples=[
     },
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -135,6 +138,7 @@ const xssMatchSet = new aws.waf.XssMatchSet("xss_match_set", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

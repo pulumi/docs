@@ -12,9 +12,6 @@ meta_desc: "Explore the BucketPolicy resource of the s3 module, including exampl
 
 Attaches a policy to an S3 bucket resource.
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a BucketPolicy Resource {#create}

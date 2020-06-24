@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityPool resource of the cognito module, including e
 
 Provides an AWS Cognito Identity Pool.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,9 +103,11 @@ main = aws.cognito.IdentityPool("main",
         "graph.facebook.com": "7346241598935552",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -137,6 +139,7 @@ const main = new aws.cognito.IdentityPool("main", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -407,7 +410,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -503,7 +506,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -599,7 +602,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -695,7 +698,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -1051,7 +1054,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -1158,7 +1161,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -1265,7 +1268,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
@@ -1372,7 +1375,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>

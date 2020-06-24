@@ -270,7 +270,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ Conflicts w/ `policy_body`.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
 {{% /md %}}</dd>
@@ -425,7 +425,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
 {{% /md %}}</dd>
@@ -460,7 +460,7 @@ Conflicts w/ `policy_body`.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
 {{% /md %}}</dd>
@@ -580,7 +580,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ Conflicts w/ `policy_body`.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
 {{% /md %}}</dd>
@@ -735,7 +735,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
 {{% /md %}}</dd>
@@ -770,7 +770,7 @@ Conflicts w/ `policy_body`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
 {{% /md %}}</dd>
@@ -842,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
 {{% /md %}}</dd>
@@ -870,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
 {{% /md %}}</dd>
@@ -898,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
 {{% /md %}}</dd>
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
 {{% /md %}}</dd>
@@ -1139,7 +1139,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#state_outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
 {{% /md %}}</dd>
@@ -1150,7 +1150,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
 {{% /md %}}</dd>
@@ -1185,7 +1185,7 @@ Conflicts w/ `policy_body`.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
 {{% /md %}}</dd>
@@ -1305,7 +1305,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#state_outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
 {{% /md %}}</dd>
@@ -1316,7 +1316,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
 {{% /md %}}</dd>
@@ -1351,7 +1351,7 @@ Conflicts w/ `policy_body`.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
 {{% /md %}}</dd>
@@ -1471,7 +1471,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#state_outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
 {{% /md %}}</dd>
@@ -1482,7 +1482,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
 {{% /md %}}</dd>
@@ -1517,7 +1517,7 @@ Conflicts w/ `policy_body`.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
 {{% /md %}}</dd>
@@ -1637,7 +1637,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#state_outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
 {{% /md %}}</dd>
@@ -1648,7 +1648,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
 {{% /md %}}</dd>
@@ -1683,7 +1683,7 @@ Conflicts w/ `policy_body`.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
 {{% /md %}}</dd>

@@ -19,7 +19,6 @@ which provides some details about a specific availability zone.
 
 > When [Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) are enabled in a region, by default the API and this data source include both Local Zones and Availability Zones. To return only Availability Zones, see the example section below.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +69,11 @@ primary = aws.ec2.Subnet("primary", availability_zone=available.names[0])
 secondary = aws.ec2.Subnet("secondary", availability_zone=available.names[1])
 # ...
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -84,6 +86,7 @@ const primary = new aws.ec2.Subnet("primary", {availabilityZone: available.then(
 const secondary = new aws.ec2.Subnet("secondary", {availabilityZone: available.then(available => available.names[1])});
 // ...
 ```
+
 {{% /example %}}
 
 ### By Filter
@@ -116,6 +119,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -136,9 +140,11 @@ example = aws.get_availability_zones(all_availability_zones=True,
         ],
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -154,6 +160,7 @@ const example = pulumi.output(aws.getAvailabilityZones({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

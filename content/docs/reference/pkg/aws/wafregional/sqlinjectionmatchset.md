@@ -12,7 +12,6 @@ meta_desc: "Explore the SqlInjectionMatchSet resource of the wafregional module,
 
 Provides a WAF Regional SQL Injection Match Set Resource for use with Application Load Balancer.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ sql_injection_match_set = aws.wafregional.SqlInjectionMatchSet("sqlInjectionMatc
     "textTransformation": "URL_DECODE",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -105,6 +108,7 @@ const sqlInjectionMatchSet = new aws.wafregional.SqlInjectionMatchSet("sql_injec
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

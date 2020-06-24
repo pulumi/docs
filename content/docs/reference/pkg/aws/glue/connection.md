@@ -12,7 +12,6 @@ meta_desc: "Explore the Connection resource of the glue module, including exampl
 
 Provides a Glue Connection resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ example = aws.glue.Connection("example", connection_properties={
     "USERNAME": "exampleusername",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -95,6 +98,7 @@ const example = new aws.glue.Connection("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -287,7 +291,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connectionproperties_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -371,7 +375,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connectionproperties_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -455,7 +459,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connectionproperties_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -539,7 +543,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -894,7 +898,7 @@ The following state arguments are supported:
 <a href="#state_connectionproperties_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -989,7 +993,7 @@ The following state arguments are supported:
 <a href="#state_connectionproperties_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -1084,7 +1088,7 @@ The following state arguments are supported:
 <a href="#state_connectionproperties_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>
@@ -1179,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_connection_properties_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs used as parameters for this connection.
 {{% /md %}}</dd>

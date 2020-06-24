@@ -12,7 +12,6 @@ meta_desc: "Explore the ReceiptRuleSet resource of the ses module, including exa
 
 Provides an SES receipt rule set resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_aws as aws
 
 main = aws.ses.ReceiptRuleSet("main", rule_set_name="primary-rules")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +81,7 @@ const main = new aws.ses.ReceiptRuleSet("main", {
     ruleSetName: "primary-rules",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

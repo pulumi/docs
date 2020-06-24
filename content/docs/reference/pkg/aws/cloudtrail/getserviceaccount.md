@@ -13,7 +13,6 @@ meta_desc: "Explore the GetServiceAccount function of the cloudtrail module, inc
 Use this data source to get the Account ID of the [AWS CloudTrail Service Account](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html)
 in a given region for the purpose of allowing CloudTrail to store trail data in S3.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,9 +107,11 @@ bucket = aws.s3.Bucket("bucket",
 
 """)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -143,6 +145,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 `,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

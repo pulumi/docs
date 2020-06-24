@@ -12,7 +12,6 @@ meta_desc: "Explore the InviteAccepter resource of the guardduty module, includi
 
 Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,9 +109,11 @@ member_invite_accepter = aws.guardduty.InviteAccepter("memberInviteAccepter",
     detector_id=member_detector.id,
     master_account_id=master.account_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -128,6 +131,7 @@ const memberInviteAccepter = new aws.guardduty.InviteAccepter("memberInviteAccep
     masterAccountId: master.accountId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

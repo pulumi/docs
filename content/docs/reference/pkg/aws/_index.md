@@ -94,6 +94,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="neptune/" title="neptune"><span class="symbol module"></span>neptune</a></li>
     <li><a href="opsworks/" title="opsworks"><span class="symbol module"></span>opsworks</a></li>
     <li><a href="organizations/" title="organizations"><span class="symbol module"></span>organizations</a></li>
+    <li><a href="outposts/" title="outposts"><span class="symbol module"></span>outposts</a></li>
     <li><a href="pinpoint/" title="pinpoint"><span class="symbol module"></span>pinpoint</a></li>
     <li><a href="pricing/" title="pricing"><span class="symbol module"></span>pricing</a></li>
     <li><a href="qldb/" title="qldb"><span class="symbol module"></span>qldb</a></li>
@@ -161,7 +162,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.9.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

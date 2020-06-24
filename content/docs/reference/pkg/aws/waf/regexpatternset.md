@@ -12,7 +12,6 @@ meta_desc: "Explore the RegexPatternSet resource of the waf module, including ex
 
 Provides a WAF Regex Pattern Set Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = aws.waf.RegexPatternSet("example", regex_pattern_strings=[
     "two",
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const example = new aws.waf.RegexPatternSet("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Task resource of the datasync module, including examples
 
 Manages an AWS DataSync Task, which represents a configuration for synchronization. Starting an execution of these DataSync Tasks (actually synchronizing files) is performed outside of this resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +82,11 @@ example = aws.datasync.Task("example",
     },
     source_location_arn=aws_datasync_location_nfs["source"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const example = new aws.datasync.Task("example", {
     sourceLocationArn: aws_datasync_location_nfs_source.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -343,7 +347,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Task.
 {{% /md %}}</dd>
@@ -416,7 +420,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Task.
 {{% /md %}}</dd>
@@ -489,7 +493,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Task.
 {{% /md %}}</dd>
@@ -562,7 +566,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Task.
 {{% /md %}}</dd>
@@ -895,7 +899,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Task.
 {{% /md %}}</dd>
@@ -979,7 +983,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Task.
 {{% /md %}}</dd>
@@ -1063,7 +1067,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Task.
 {{% /md %}}</dd>
@@ -1147,7 +1151,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Task.
 {{% /md %}}</dd>

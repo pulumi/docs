@@ -12,7 +12,6 @@ meta_desc: "Explore the Bucket resource of the s3 module, including examples, in
 
 Provides a S3 bucket resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +82,11 @@ bucket = aws.s3.Bucket("bucket",
         "Name": "My bucket",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,6 +99,7 @@ const bucket = new aws.s3.Bucket("b", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Using CORS
@@ -140,6 +144,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -181,6 +186,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -201,9 +207,11 @@ bucket = aws.s3.Bucket("bucket",
         "maxAgeSeconds": 3000,
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -222,6 +230,7 @@ const bucket = new aws.s3.Bucket("b", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Using versioning
@@ -246,6 +255,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -272,6 +282,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -285,9 +296,11 @@ bucket = aws.s3.Bucket("bucket",
         "enabled": True,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -299,6 +312,7 @@ const bucket = new aws.s3.Bucket("b", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Enable Logging
@@ -331,6 +345,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -366,6 +381,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -381,9 +397,11 @@ bucket = aws.s3.Bucket("bucket",
         "targetPrefix": "log/",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -399,6 +417,7 @@ const bucket = new aws.s3.Bucket("b", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Using object lifecycle
@@ -493,6 +512,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -576,6 +596,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -640,9 +661,11 @@ versioning_bucket = aws.s3.Bucket("versioningBucket",
         "enabled": True,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -706,6 +729,7 @@ const versioningBucket = new aws.s3.Bucket("versioning_bucket", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Using replication configuration
@@ -828,6 +852,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -918,9 +943,11 @@ replication_role_policy_attachment = aws.iam.RolePolicyAttachment("replicationRo
     policy_arn=replication_policy.arn,
     role=replication_role.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -1010,6 +1037,7 @@ const replicationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("replic
     role: replicationRole.name,
 });
 ```
+
 {{% /example %}}
 
 ### Enable Default Server Side Encryption
@@ -1045,6 +1073,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -1083,6 +1112,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -1102,9 +1132,11 @@ mybucket = aws.s3.Bucket("mybucket", server_side_encryption_configuration={
     },
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -1124,6 +1156,7 @@ const mybucket = new aws.s3.Bucket("mybucket", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Using ACL policy grants
@@ -1166,6 +1199,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -1194,9 +1228,11 @@ bucket = aws.s3.Bucket("bucket", grants=[
     },
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -1220,6 +1256,7 @@ const bucket = new aws.s3.Bucket("bucket", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -1602,7 +1639,7 @@ developer guide for more information.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -1854,7 +1891,7 @@ developer guide for more information.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -2106,7 +2143,7 @@ developer guide for more information.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -2358,7 +2395,7 @@ developer guide for more information.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -2925,7 +2962,7 @@ developer guide for more information.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -3199,7 +3236,7 @@ developer guide for more information.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -3473,7 +3510,7 @@ developer guide for more information.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -3747,7 +3784,7 @@ developer guide for more information.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -4400,7 +4437,7 @@ developer guide for more information.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
@@ -4506,7 +4543,7 @@ developer guide for more information.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
@@ -4612,7 +4649,7 @@ developer guide for more information.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
@@ -4718,7 +4755,7 @@ developer guide for more information.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
@@ -6740,7 +6777,7 @@ developer guide for more information.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
@@ -6770,7 +6807,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
@@ -6800,7 +6837,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
@@ -6830,7 +6867,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.

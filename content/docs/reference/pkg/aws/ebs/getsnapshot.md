@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSnapshot function of the ebs module, including exampl
 
 Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +97,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -117,9 +118,11 @@ ebs_volume = aws.ebs.get_snapshot(filters=[
     most_recent=True,
     owners=["self"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -139,6 +142,7 @@ const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
     owners: ["self"],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -245,7 +249,7 @@ several valid keys, for a full reference, check out
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -320,7 +324,7 @@ several valid keys, for a full reference, check out
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -395,7 +399,7 @@ several valid keys, for a full reference, check out
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -470,7 +474,7 @@ several valid keys, for a full reference, check out
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -600,7 +604,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -789,7 +793,7 @@ The following output properties are available:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -978,7 +982,7 @@ The following output properties are available:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -1167,7 +1171,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>

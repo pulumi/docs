@@ -18,7 +18,6 @@ To configure [Instance Groups](https://docs.aws.amazon.com/emr/latest/Management
 
 > Support for [Instance Fleets](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-fleets) will be made available in an upcoming release.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +80,11 @@ example_cluster = aws.emr.Cluster("exampleCluster",
     release_label="emr-5.24.1",
     termination_protection=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -108,6 +110,7 @@ const exampleCluster = new aws.emr.Cluster("example", {
     terminationProtection: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -575,7 +578,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -890,7 +893,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -1205,7 +1208,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -1520,7 +1523,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -2200,7 +2203,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -2547,7 +2550,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -2894,7 +2897,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -3241,7 +3244,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -6088,7 +6091,7 @@ The following state arguments are supported:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
 {{% /md %}}</dd>
@@ -6139,7 +6142,7 @@ The following state arguments are supported:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
 {{% /md %}}</dd>
@@ -6190,7 +6193,7 @@ The following state arguments are supported:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
 {{% /md %}}</dd>
@@ -6241,7 +6244,7 @@ The following state arguments are supported:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
 {{% /md %}}</dd>

@@ -12,7 +12,6 @@ meta_desc: "Explore the ResolverRuleAssociation resource of the route53 module, 
 
 Provides a Route53 Resolver rule association.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ example = aws.route53.ResolverRuleAssociation("example",
     resolver_rule_id=aws_route53_resolver_rule["sys"]["id"],
     vpc_id=aws_vpc["foo"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const example = new aws.route53.ResolverRuleAssociation("example", {
     vpcId: aws_vpc_foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

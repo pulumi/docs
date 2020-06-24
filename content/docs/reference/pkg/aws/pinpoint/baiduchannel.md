@@ -14,8 +14,6 @@ Provides a Pinpoint Baidu Channel resource.
 
 > **Note:** All arguments including the Api Key and Secret Key will be stored in the raw state as plain-text.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +85,11 @@ channel = aws.pinpoint.BaiduChannel("channel",
     application_id=app.application_id,
     secret_key="")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -99,6 +101,7 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
     secretKey: "",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

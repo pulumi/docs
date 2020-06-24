@@ -12,7 +12,7 @@ meta_desc: "Explore the GetClusterSnapshot function of the rds module, including
 
 Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters.
 
-> **NOTE:** This data source does not apply to snapshots created on DB Instances. 
+> **NOTE:** This data source does not apply to snapshots created on DB Instances.
 See the `aws.rds.Snapshot` data source for DB Instance snapshots.
 
 
@@ -132,7 +132,7 @@ included in the returned results by default. Possible values are, `automated`, `
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ included in the returned results by default. Possible values are, `automated`, `
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ included in the returned results by default. Possible values are, `automated`, `
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ included in the returned results by default. Possible values are, `automated`, `
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -804,7 +804,7 @@ The following output properties are available:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -1036,7 +1036,7 @@ The following output properties are available:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -1268,7 +1268,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>

@@ -23,8 +23,6 @@ one or the other.
 
 [1]: https://www.terraform.io/docs/providers/aws/d/instance.html
 [2]: https://www.terraform.io/docs/providers/aws/r/network_interface.html
-
-
 ## Output Reference
 
 There are no outputs for this resource.
@@ -87,6 +85,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -125,6 +124,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -151,9 +151,11 @@ sg_attachment = aws.ec2.NetworkInterfaceSecurityGroupAttachment("sgAttachment",
     network_interface_id=instance.primary_network_interface_id,
     security_group_id=sg.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -183,6 +185,7 @@ const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_att
     securityGroupId: sg.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

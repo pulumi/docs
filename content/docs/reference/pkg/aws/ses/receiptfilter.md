@@ -12,7 +12,6 @@ meta_desc: "Explore the ReceiptFilter resource of the ses module, including exam
 
 Provides an SES receipt filter resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ filter = aws.ses.ReceiptFilter("filter",
     cidr="10.10.10.10",
     policy="Block")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,6 +86,7 @@ const filter = new aws.ses.ReceiptFilter("filter", {
     policy: "Block",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

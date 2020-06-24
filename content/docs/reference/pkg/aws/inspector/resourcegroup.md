@@ -12,7 +12,6 @@ meta_desc: "Explore the ResourceGroup resource of the inspector module, includin
 
 Provides an Amazon Inspector resource group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = aws.inspector.ResourceGroup("example", tags={
     "Name": "foo",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,6 +94,7 @@ const example = new aws.inspector.ResourceGroup("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -283,7 +287,7 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
@@ -301,7 +305,7 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
@@ -319,7 +323,7 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
@@ -337,7 +341,7 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
@@ -615,7 +619,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
@@ -644,7 +648,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
@@ -673,7 +677,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>
@@ -702,7 +706,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
 {{% /md %}}</dd>

@@ -19,7 +19,6 @@ a VPC Endpoint resource with `route_table_ids` and `subnet_ids` attributes.
 Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
 Doing so will cause a conflict of associations and will overwrite the association.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +79,11 @@ s3 = aws.ec2.VpcEndpoint("s3",
     service_name="com.amazonaws.us-west-2.s3",
     vpc_id=aws_vpc["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -90,6 +93,7 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
     vpcId: aws_vpc_main.id,
 });
 ```
+
 {{% /example %}}
 
 ### Basic w/ Tags
@@ -115,6 +119,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -142,6 +147,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -156,9 +162,11 @@ s3 = aws.ec2.VpcEndpoint("s3",
     },
     vpc_id=aws_vpc["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -171,6 +179,7 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
     vpcId: aws_vpc_main.id,
 });
 ```
+
 {{% /example %}}
 
 ### Interface Endpoint Type
@@ -198,6 +207,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -216,9 +226,11 @@ ec2 = aws.ec2.VpcEndpoint("ec2",
     vpc_endpoint_type="Interface",
     vpc_id=aws_vpc["main"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -231,6 +243,7 @@ const ec2 = new aws.ec2.VpcEndpoint("ec2", {
     vpcId: aws_vpc_main.id,
 });
 ```
+
 {{% /example %}}
 
 ### Non-AWS Service
@@ -279,6 +292,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -307,9 +321,11 @@ ptfe_service_record = aws.route53.Record("ptfeServiceRecord",
     type="CNAME",
     zone_id=internal.zone_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -335,6 +351,7 @@ const ptfeServiceRecord = new aws.route53.Record("ptfe_service", {
     zoneId: internal.zoneId!,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -616,7 +633,7 @@ Defaults to `false`.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -734,7 +751,7 @@ Defaults to `false`.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -852,7 +869,7 @@ Defaults to `false`.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -970,7 +987,7 @@ Defaults to `false`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1667,7 +1684,7 @@ Defaults to `false`.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1862,7 +1879,7 @@ Defaults to `false`.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2057,7 +2074,7 @@ Defaults to `false`.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2252,7 +2269,7 @@ Defaults to `false`.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>

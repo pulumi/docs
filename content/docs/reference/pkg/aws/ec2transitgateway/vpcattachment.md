@@ -12,7 +12,6 @@ meta_desc: "Explore the VpcAttachment resource of the ec2transitgateway module, 
 
 Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ example = aws.ec2transitgateway.VpcAttachment("example",
     transit_gateway_id=aws_ec2_transit_gateway["example"]["id"],
     vpc_id=aws_vpc["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const example = new aws.ec2transitgateway.VpcAttachment("example", {
     vpcId: aws_vpc_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -339,7 +343,7 @@ The VpcAttachment resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -434,7 +438,7 @@ The VpcAttachment resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -529,7 +533,7 @@ The VpcAttachment resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -624,7 +628,7 @@ The VpcAttachment resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -946,7 +950,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -1052,7 +1056,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -1158,7 +1162,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -1264,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>

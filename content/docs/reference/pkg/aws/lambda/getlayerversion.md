@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLayerVersion function of the lambda module, including
 
 Provides information about a Lambda Layer Version.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,9 +71,11 @@ config = pulumi.Config()
 layer_name = config.require_object("layerName")
 existing = aws.lambda.get_layer_version(layer_name=layer_name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -84,6 +87,7 @@ const existing = pulumi.output(aws.lambda.getLayerVersion({
     layerName: layerName,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

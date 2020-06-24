@@ -12,7 +12,6 @@ meta_desc: "Explore the AnalyticsConfiguration resource of the s3 module, includ
 
 Provides a S3 bucket [analytics configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +69,11 @@ example_filtered = aws.s3.AnalyticsConfiguration("example-filtered",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +90,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -930,7 +933,7 @@ The following state arguments are supported:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
 {{% /md %}}</dd>
@@ -959,7 +962,7 @@ The following state arguments are supported:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
 {{% /md %}}</dd>
@@ -988,7 +991,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
 {{% /md %}}</dd>
@@ -1017,7 +1020,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
 {{% /md %}}</dd>

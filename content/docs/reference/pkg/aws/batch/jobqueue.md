@@ -12,7 +12,6 @@ meta_desc: "Explore the JobQueue resource of the batch module, including example
 
 Provides a Batch Job Queue resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,9 +85,11 @@ test_queue = aws.batch.JobQueue("testQueue",
     priority=1,
     state="ENABLED")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -100,6 +103,7 @@ const testQueue = new aws.batch.JobQueue("test_queue", {
     state: "ENABLED",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

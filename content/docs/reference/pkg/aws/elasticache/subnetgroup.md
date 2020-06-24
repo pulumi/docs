@@ -16,7 +16,6 @@ Provides an ElastiCache Subnet Group resource.
 ElastiCache cluster **inside** of a VPC. If you are on EC2 Classic, see the
 ElastiCache Security Group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -106,6 +106,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -127,9 +128,11 @@ foo_subnet = aws.ec2.Subnet("fooSubnet",
     vpc_id=foo_vpc.id)
 bar = aws.elasticache.SubnetGroup("bar", subnet_ids=[foo_subnet.id])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -152,6 +155,7 @@ const bar = new aws.elasticache.SubnetGroup("bar", {
     subnetIds: [fooSubnet.id],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

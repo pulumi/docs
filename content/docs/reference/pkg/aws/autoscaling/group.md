@@ -13,8 +13,6 @@ meta_desc: "Explore the Group resource of the autoscaling module, including exam
 Provides an AutoScaling Group resource.
 
 > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
-
-
 ## Waiting for Capacity
 
 A newly-created ASG is initially empty and begins to scale to `min_size` (or
@@ -147,6 +145,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -198,9 +197,11 @@ bar = aws.autoscaling.Group("bar",
         aws_subnet["example2"]["id"],
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -249,6 +250,7 @@ const bar = new aws.autoscaling.Group("bar", {
     delete: "15m",
 } });
 ```
+
 {{% /example %}}
 
 ### Mixed Instances Policy
@@ -304,6 +306,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -358,6 +361,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -392,9 +396,11 @@ example_group = aws.autoscaling.Group("exampleGroup",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -428,6 +434,7 @@ const exampleGroup = new aws.autoscaling.Group("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -905,7 +912,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#tagscollection_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -1271,7 +1278,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#tagscollection_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type">[]map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -1637,7 +1644,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#tagscollection_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -2003,7 +2010,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#tags_collection_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type">List[Map<String>]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -2629,7 +2636,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#state_tagscollection_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -3006,7 +3013,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#state_tagscollection_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]interface{}</span>
+        <span class="property-type">[]map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -3383,7 +3390,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#state_tagscollection_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]</span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>
@@ -3760,7 +3767,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#state_tags_collection_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any>]</span>
+        <span class="property-type">List[Map<String>]</span>
     </dt>
     <dd>{{% md %}}Set of maps containing resource tags. Conflicts with `tag`. Documented below.
 {{% /md %}}</dd>

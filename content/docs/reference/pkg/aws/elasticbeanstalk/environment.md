@@ -16,8 +16,6 @@ the infrastructure that runs those applications.
 
 Environments are often things such as `development`, `integration`, or
 `production`.
-
-
 ## Option Settings
 
 Some options can be stack-specific, check [AWS Docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html)
@@ -180,6 +178,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -210,6 +209,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -222,9 +222,11 @@ tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
     application=tftest.name,
     solution_stack_name="64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -237,6 +239,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -527,7 +530,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -693,7 +696,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -859,7 +862,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -1025,7 +1028,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -1940,7 +1943,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -2217,7 +2220,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -2494,7 +2497,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -2771,7 +2774,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>

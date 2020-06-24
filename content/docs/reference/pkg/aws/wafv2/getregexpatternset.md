@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRegexPatternSet function of the wafv2 module, includi
 
 Retrieves the summary of a WAFv2 Regex Pattern Set.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_aws as aws
 example = aws.wafv2.get_regex_pattern_set(name="some-regex-pattern-set",
     scope="REGIONAL")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,6 +84,7 @@ const example = pulumi.output(aws.wafv2.getRegexPatternSet({
     scope: "REGIONAL",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

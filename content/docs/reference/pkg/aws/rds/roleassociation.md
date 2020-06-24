@@ -17,7 +17,6 @@ Manages an RDS DB Instance association with an IAM Role. Example use cases:
 
 > To manage the RDS DB Instance IAM Role for [Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html), see the `aws.rds.Instance` resource `monitoring_role_arn` argument instead.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ example = aws.rds.RoleAssociation("example",
     feature_name="S3_INTEGRATION",
     role_arn=aws_iam_role["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,6 +95,7 @@ const example = new aws.rds.RoleAssociation("example", {
     roleArn: aws_iam_role_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

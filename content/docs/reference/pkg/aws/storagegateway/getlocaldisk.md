@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLocalDisk function of the storagegateway module, incl
 
 Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_aws as aws
 test = aws.storagegateway.get_local_disk(disk_path=aws_volume_attachment["test"]["device_name"],
     gateway_arn=aws_storagegateway_gateway["test"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,6 +84,7 @@ const test = pulumi.all([aws_volume_attachment_test.deviceName, aws_storagegatew
     gatewayArn: arn,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

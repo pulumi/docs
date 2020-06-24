@@ -14,8 +14,6 @@ Provides a AWS Transfer User SSH Key resource.
 
 
 
-
-
 ## Create a SshKey Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

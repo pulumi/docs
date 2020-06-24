@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLaunchTemplate function of the ec2 module, including 
 
 Provides information about a Launch Template.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_aws as aws
 
 default = aws.ec2.get_launch_template(name="my-launch-template")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,6 +61,7 @@ const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
     name: "my-launch-template",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 ### Filter
@@ -89,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -118,6 +122,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -130,9 +135,11 @@ test = aws.ec2.get_launch_template(filters=[{
     "values": ["some-template"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -144,6 +151,7 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -215,7 +223,7 @@ The following arguments are supported:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
@@ -255,7 +263,7 @@ The following arguments are supported:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
@@ -295,7 +303,7 @@ The following arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
@@ -335,7 +343,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
@@ -649,7 +657,7 @@ Interfaces below for more details.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -992,7 +1000,7 @@ Interfaces below for more details.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -1335,7 +1343,7 @@ Interfaces below for more details.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -1678,7 +1686,7 @@ Interfaces below for more details.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -4322,7 +4330,7 @@ Interfaces below for more details.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
@@ -4350,7 +4358,7 @@ Interfaces below for more details.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
@@ -4378,7 +4386,7 @@ Interfaces below for more details.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
@@ -4406,7 +4414,7 @@ Interfaces below for more details.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>

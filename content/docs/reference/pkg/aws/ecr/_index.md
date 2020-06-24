@@ -18,6 +18,7 @@ Explore the resources and functions of the ecr module in the AWS package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getauthorizationtoken" title="GetAuthorizationToken"><span class="symbol function"></span>GetAuthorizationToken</a></li>
     <li><a href="getcredentials" title="GetCredentials"><span class="symbol function"></span>GetCredentials</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getrepository" title="GetRepository"><span class="symbol function"></span>GetRepository</a></li>
@@ -32,7 +33,7 @@ Explore the resources and functions of the ecr module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.9.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

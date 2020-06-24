@@ -11,8 +11,6 @@ meta_desc: "Explore the LaunchConfiguration resource of the ec2 module, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a resource to create a new launch configuration, used for autoscaling groups.
-
-
 ## Using with AutoScaling Groups
 
 Launch Configurations cannot be updated after creation with the Amazon
@@ -347,6 +345,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -374,9 +373,11 @@ as_conf = aws.ec2.LaunchConfiguration("asConf",
     image_id=ubuntu.id,
     instance_type="t2.micro")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -400,6 +401,7 @@ const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
     instanceType: "t2.micro",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

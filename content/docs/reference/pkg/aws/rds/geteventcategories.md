@@ -33,6 +33,7 @@ class MyStack : Stack
     public Output<string> Example { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +68,11 @@ import pulumi_aws as aws
 example_event_categories = aws.rds.get_event_categories()
 pulumi.export("example", example_event_categories.event_categories)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +81,7 @@ const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({ async:
 
 export const example = exampleEventCategories.eventCategories;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

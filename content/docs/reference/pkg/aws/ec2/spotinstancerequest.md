@@ -33,8 +33,6 @@ point in time. See the [AWS Spot Instance
 documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 for more information.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,6 +91,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,9 +108,11 @@ cheap_worker = aws.ec2.SpotInstanceRequest("cheapWorker",
         "Name": "CheapWorker",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -125,6 +127,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -700,7 +703,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -766,7 +769,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#volumetags_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -1191,7 +1194,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1257,7 +1260,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#volumetags_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -1682,7 +1685,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1748,7 +1751,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#volumetags_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -2173,7 +2176,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2239,7 +2242,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#volume_tags_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -3489,7 +3492,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3555,7 +3558,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_volumetags_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -4104,7 +4107,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -4170,7 +4173,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_volumetags_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -4719,7 +4722,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -4785,7 +4788,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_volumetags_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -5334,7 +5337,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -5400,7 +5403,7 @@ the instance is terminated, the spot request will be closed.
 <a href="#state_volume_tags_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>

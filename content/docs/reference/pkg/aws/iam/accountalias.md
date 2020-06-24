@@ -14,7 +14,6 @@ meta_desc: "Explore the AccountAlias resource of the iam module, including examp
 
 Manages the account alias for the AWS Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,6 +60,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_aws as aws
 
 alias = aws.iam.AccountAlias("alias", account_alias="my-account-alias")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -80,6 +83,7 @@ const alias = new aws.iam.AccountAlias("alias", {
     accountAlias: "my-account-alias",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

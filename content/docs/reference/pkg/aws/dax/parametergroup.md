@@ -12,7 +12,6 @@ meta_desc: "Explore the ParameterGroup resource of the dax module, including exa
 
 Provides a DAX Parameter Group resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ example = aws.dax.ParameterGroup("example", parameters=[
     },
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -117,6 +120,7 @@ const example = new aws.dax.ParameterGroup("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

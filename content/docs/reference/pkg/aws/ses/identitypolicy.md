@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityPolicy resource of the ses module, including exa
 
 Manages a SES Identity Policy. More information about SES Sending Authorization Policies can be found in the [SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-policies.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,6 +101,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -124,9 +125,11 @@ example_identity_policy = aws.ses.IdentityPolicy("exampleIdentityPolicy",
     identity=example_domain_identity.arn,
     policy=example_policy_document.json)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -152,6 +155,7 @@ const exampleIdentityPolicy = new aws.ses.IdentityPolicy("example", {
     policy: examplePolicyDocument.json,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

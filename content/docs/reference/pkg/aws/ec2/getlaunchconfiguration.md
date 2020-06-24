@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLaunchConfiguration function of the ec2 module, inclu
 
 Provides information about a Launch Configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 ubuntu = aws.ec2.get_launch_configuration(name="test-launch-config")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const ubuntu = pulumi.output(aws.ec2.getLaunchConfiguration({
     name: "test-launch-config",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

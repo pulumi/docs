@@ -18,7 +18,6 @@ or to make it easier for an operator to connect through bastion host(s).
 instances (e.g. managed via autoscaling group), as the output may change at any time
 and you'd need to re-run `apply` every time an instance comes up or dies.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -80,6 +79,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -106,9 +106,11 @@ test_eip = []
 for range in [{"value": i} for i in range(0, len(test_instances.ids))]:
     test_eip.append(aws.ec2.Eip(f"testEip-{range['value']}", instance=test_instances.ids[range["value"]]))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -133,6 +135,7 @@ for (let i = 0; i < testInstances.apply(testInstances => testInstances.ids.lengt
     }));
 }
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -204,7 +207,7 @@ several valid keys, for a full reference, check out
 <a href="#instancetags_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on desired instances.
@@ -247,7 +250,7 @@ several valid keys, for a full reference, check out
 <a href="#instancetags_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on desired instances.
@@ -290,7 +293,7 @@ several valid keys, for a full reference, check out
 <a href="#instancetags_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on desired instances.
@@ -333,7 +336,7 @@ several valid keys, for a full reference, check out
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on desired instances.
@@ -387,7 +390,7 @@ The following output properties are available:
 <a href="#instancetags_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -468,7 +471,7 @@ The following output properties are available:
 <a href="#instancetags_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -549,7 +552,7 @@ The following output properties are available:
 <a href="#instancetags_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -630,7 +633,7 @@ The following output properties are available:
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

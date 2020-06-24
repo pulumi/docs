@@ -17,7 +17,6 @@ groups.
 To exclusively manage the users in a group, see the
 [`aws.iam.GroupMembership` resource][3].
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -65,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -117,6 +117,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -138,9 +139,11 @@ example2 = aws.iam.UserGroupMembership("example2",
     groups=[group3.name],
     user=user1.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -161,6 +164,7 @@ const example2 = new aws.iam.UserGroupMembership("example2", {
     user: user1.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Provides an OpsWorks RDS DB Instance resource.
 
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ my_instance = aws.opsworks.RdsDbInstance("myInstance",
     rds_db_instance_arn=aws_db_instance["my_instance"]["arn"],
     stack_id=aws_opsworks_stack["my_stack"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -93,6 +96,7 @@ const myInstance = new aws.opsworks.RdsDbInstance("my_instance", {
     stackId: aws_opsworks_stack_my_stack.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

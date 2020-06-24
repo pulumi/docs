@@ -14,7 +14,6 @@ Provides a Glue Classifier resource.
 
 > **NOTE:** It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -82,6 +82,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ example = aws.glue.Classifier("example", csv_classifier={
     "quoteSymbol": "'",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -122,6 +125,7 @@ const example = new aws.glue.Classifier("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Grok Classifier
@@ -146,6 +150,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -172,6 +177,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -184,9 +190,11 @@ example = aws.glue.Classifier("example", grok_classifier={
     "grokPattern": "example",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -198,6 +206,7 @@ const example = new aws.glue.Classifier("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### JSON Classifier
@@ -221,6 +230,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -246,6 +256,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -257,9 +268,11 @@ example = aws.glue.Classifier("example", json_classifier={
     "jsonPath": "example",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -270,6 +283,7 @@ const example = new aws.glue.Classifier("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### XML Classifier
@@ -294,6 +308,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -320,6 +335,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -332,9 +348,11 @@ example = aws.glue.Classifier("example", xml_classifier={
     "rowTag": "example",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -346,6 +364,7 @@ const example = new aws.glue.Classifier("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

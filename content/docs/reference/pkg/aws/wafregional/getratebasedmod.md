@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRateBasedMod function of the wafregional module, incl
 
 `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 example = aws.wafregional.get_rate_based_mod(name="tfWAFRegionalRateBasedRule")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const example = pulumi.output(aws.wafregional.getRateBasedMod({
     name: "tfWAFRegionalRateBasedRule",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

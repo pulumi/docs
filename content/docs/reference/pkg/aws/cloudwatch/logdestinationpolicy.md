@@ -12,7 +12,6 @@ meta_desc: "Explore the LogDestinationPolicy resource of the cloudwatch module, 
 
 Provides a CloudWatch Logs destination policy resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,6 +69,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,6 +103,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -126,9 +127,11 @@ test_destination_policy_log_destination_policy = aws.cloudwatch.LogDestinationPo
     access_policy=test_destination_policy_policy_document.json,
     destination_name=test_destination.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -153,6 +156,7 @@ const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinat
     destinationName: testDestination.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

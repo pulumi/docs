@@ -18,7 +18,6 @@ and a VPC Endpoint Service resource with an `allowed_principals` attribute. Do n
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
 and will overwrite the association.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +59,11 @@ allow_me_to_foo = aws.ec2.VpcEndpointServiceAllowedPrinciple("allowMeToFoo",
     principal_arn=current.arn,
     vpc_endpoint_service_id=aws_vpc_endpoint_service["foo"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,6 +74,7 @@ const allowMeToFoo = new aws.ec2.VpcEndpointServiceAllowedPrinciple("allow_me_to
     vpcEndpointServiceId: aws_vpc_endpoint_service_foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -1622,6 +1622,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="codeartifact_csharp">
+<a href="#codeartifact_csharp" style="color: inherit; text-decoration: inherit;">Codeartifact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="codebuild_csharp">
 <a href="#codebuild_csharp" style="color: inherit; text-decoration: inherit;">Codebuild</a>
 </span> 
@@ -2342,6 +2352,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="outposts_csharp">
+<a href="#outposts_csharp" style="color: inherit; text-decoration: inherit;">Outposts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="personalize_csharp">
 <a href="#personalize_csharp" style="color: inherit; text-decoration: inherit;">Personalize</a>
 </span> 
@@ -3001,6 +3021,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cloudwatchlogs_go">
 <a href="#cloudwatchlogs_go" style="color: inherit; text-decoration: inherit;">Cloudwatchlogs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="codeartifact_go">
+<a href="#codeartifact_go" style="color: inherit; text-decoration: inherit;">Codeartifact</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -3729,6 +3759,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="outposts_go">
+<a href="#outposts_go" style="color: inherit; text-decoration: inherit;">Outposts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="personalize_go">
 <a href="#personalize_go" style="color: inherit; text-decoration: inherit;">Personalize</a>
 </span> 
@@ -4388,6 +4428,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cloudwatchlogs_nodejs">
 <a href="#cloudwatchlogs_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatchlogs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="codeartifact_nodejs">
+<a href="#codeartifact_nodejs" style="color: inherit; text-decoration: inherit;">codeartifact</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -5116,6 +5166,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="outposts_nodejs">
+<a href="#outposts_nodejs" style="color: inherit; text-decoration: inherit;">outposts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="personalize_nodejs">
 <a href="#personalize_nodejs" style="color: inherit; text-decoration: inherit;">personalize</a>
 </span> 
@@ -5775,6 +5835,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cloudwatchlogs_python">
 <a href="#cloudwatchlogs_python" style="color: inherit; text-decoration: inherit;">cloudwatchlogs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="codeartifact_python">
+<a href="#codeartifact_python" style="color: inherit; text-decoration: inherit;">codeartifact</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6495,6 +6565,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="organizations_python">
 <a href="#organizations_python" style="color: inherit; text-decoration: inherit;">organizations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outposts_python">
+<a href="#outposts_python" style="color: inherit; text-decoration: inherit;">outposts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

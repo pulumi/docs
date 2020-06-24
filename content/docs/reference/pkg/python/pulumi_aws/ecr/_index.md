@@ -17,6 +17,11 @@ block_external_search_index: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.ecr"></span><dl class="py class">
+<dt id="pulumi_aws.ecr.AwaitableGetAuthorizationTokenResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetAuthorizationTokenResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">authorization_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetAuthorizationTokenResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aws.ecr.AwaitableGetCredentialsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">authorization_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -30,6 +35,48 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ecr.AwaitableGetRepositoryResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">AwaitableGetRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.AwaitableGetRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ecr.GetAuthorizationTokenResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">GetAuthorizationTokenResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">authorization_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetAuthorizationTokenResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAuthorizationToken.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ecr.GetAuthorizationTokenResult.authorization_token">
+<code class="sig-name descname">authorization_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetAuthorizationTokenResult.authorization_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of <code class="docutils literal notranslate"><span class="pre">user_name:password</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ecr.GetAuthorizationTokenResult.expires_at">
+<code class="sig-name descname">expires_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetAuthorizationTokenResult.expires_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time in UTC RFC3339 format when the authorization token expires.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ecr.GetAuthorizationTokenResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetAuthorizationTokenResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ecr.GetAuthorizationTokenResult.password">
+<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetAuthorizationTokenResult.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password decoded from the authorization token.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ecr.GetAuthorizationTokenResult.proxy_endpoint">
+<code class="sig-name descname">proxy_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetAuthorizationTokenResult.proxy_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The registry URL to use in the docker login command.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ecr.GetAuthorizationTokenResult.user_name">
+<code class="sig-name descname">user_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetAuthorizationTokenResult.user_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>User name decoded from the authorization token.</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_aws.ecr.GetCredentialsResult">
@@ -522,6 +569,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ecr.get_authorization_token">
+<code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">get_authorization_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">registry_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_authorization_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ECR Authorization Token data source allows the authorization token, proxy endpoint, token expiration date, user name and password to be retrieved for an ECR repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">token</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ecr</span><span class="o">.</span><span class="n">get_authorization_token</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>registry_id</strong> (<em>str</em>) – AWS account ID of the ECR Repository. If not specified the default account is assumed.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">

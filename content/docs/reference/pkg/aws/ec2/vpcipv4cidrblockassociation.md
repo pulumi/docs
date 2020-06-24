@@ -15,7 +15,6 @@ Provides a resource to associate additional IPv4 CIDR blocks with a VPC.
 When a VPC is created, a primary IPv4 CIDR block for the VPC must be specified.
 The `aws.ec2.VpcIpv4CidrBlockAssociation` resource allows further IPv4 CIDR blocks to be added to the VPC.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +86,11 @@ secondary_cidr = aws.ec2.VpcIpv4CidrBlockAssociation("secondaryCidr",
     cidr_block="172.2.0.0/16",
     vpc_id=main.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -100,6 +103,7 @@ const secondaryCidr = new aws.ec2.VpcIpv4CidrBlockAssociation("secondary_cidr", 
     vpcId: main.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

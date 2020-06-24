@@ -12,7 +12,6 @@ meta_desc: "Explore the EndpointGroup resource of the globalaccelerator module, 
 
 Provides a Global Accelerator endpoint group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +72,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +87,11 @@ example = aws.globalaccelerator.EndpointGroup("example",
     }],
     listener_arn=aws_globalaccelerator_listener["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -101,6 +104,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
     listenerArn: aws_globalaccelerator_listener_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

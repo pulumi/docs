@@ -51,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +118,11 @@ default_snapshot_schedule_association = aws.redshift.SnapshotScheduleAssociation
     cluster_identifier=default_cluster.id,
     schedule_identifier=default_snapshot_schedule.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -140,6 +144,7 @@ const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAsso
     scheduleIdentifier: defaultSnapshotSchedule.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

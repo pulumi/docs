@@ -21,6 +21,7 @@ Explore the resources and functions of the ebs module in the AWS package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdefaultkmskey" title="GetDefaultKmsKey"><span class="symbol function"></span>GetDefaultKmsKey</a></li>
+    <li><a href="getebsvolumes" title="GetEbsVolumes"><span class="symbol function"></span>GetEbsVolumes</a></li>
     <li><a href="getencryptionbydefault" title="GetEncryptionByDefault"><span class="symbol function"></span>GetEncryptionByDefault</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
     <li><a href="getsnapshotids" title="GetSnapshotIds"><span class="symbol function"></span>GetSnapshotIds</a></li>
@@ -36,7 +37,7 @@ Explore the resources and functions of the ebs module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.9.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

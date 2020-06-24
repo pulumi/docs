@@ -34,6 +34,8 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="keypair" title="KeyPair"><span class="symbol resource"></span>KeyPair</a></li>
     <li><a href="launchconfiguration" title="LaunchConfiguration"><span class="symbol resource"></span>LaunchConfiguration</a></li>
     <li><a href="launchtemplate" title="LaunchTemplate"><span class="symbol resource"></span>LaunchTemplate</a></li>
+    <li><a href="localgatewayroute" title="LocalGatewayRoute"><span class="symbol resource"></span>LocalGatewayRoute</a></li>
+    <li><a href="localgatewayroutetablevpcassociation" title="LocalGatewayRouteTableVpcAssociation"><span class="symbol resource"></span>LocalGatewayRouteTableVpcAssociation</a></li>
     <li><a href="mainroutetableassociation" title="MainRouteTableAssociation"><span class="symbol resource"></span>MainRouteTableAssociation</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
     <li><a href="networkacl" title="NetworkAcl"><span class="symbol resource"></span>NetworkAcl</a></li>
@@ -54,6 +56,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="spotfleetrequest" title="SpotFleetRequest"><span class="symbol resource"></span>SpotFleetRequest</a></li>
     <li><a href="spotinstancerequest" title="SpotInstanceRequest"><span class="symbol resource"></span>SpotInstanceRequest</a></li>
     <li><a href="subnet" title="Subnet"><span class="symbol resource"></span>Subnet</a></li>
+    <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
     <li><a href="trafficmirrorfilter" title="TrafficMirrorFilter"><span class="symbol resource"></span>TrafficMirrorFilter</a></li>
     <li><a href="trafficmirrorfilterrule" title="TrafficMirrorFilterRule"><span class="symbol resource"></span>TrafficMirrorFilterRule</a></li>
     <li><a href="trafficmirrorsession" title="TrafficMirrorSession"><span class="symbol resource"></span>TrafficMirrorSession</a></li>
@@ -94,6 +97,9 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getlocalgateway" title="GetLocalGateway"><span class="symbol function"></span>GetLocalGateway</a></li>
     <li><a href="getlocalgatewayroutetable" title="GetLocalGatewayRouteTable"><span class="symbol function"></span>GetLocalGatewayRouteTable</a></li>
     <li><a href="getlocalgatewayroutetables" title="GetLocalGatewayRouteTables"><span class="symbol function"></span>GetLocalGatewayRouteTables</a></li>
+    <li><a href="getlocalgatewayvirtualinterface" title="GetLocalGatewayVirtualInterface"><span class="symbol function"></span>GetLocalGatewayVirtualInterface</a></li>
+    <li><a href="getlocalgatewayvirtualinterfacegroup" title="GetLocalGatewayVirtualInterfaceGroup"><span class="symbol function"></span>GetLocalGatewayVirtualInterfaceGroup</a></li>
+    <li><a href="getlocalgatewayvirtualinterfacegroups" title="GetLocalGatewayVirtualInterfaceGroups"><span class="symbol function"></span>GetLocalGatewayVirtualInterfaceGroups</a></li>
     <li><a href="getlocalgateways" title="GetLocalGateways"><span class="symbol function"></span>GetLocalGateways</a></li>
     <li><a href="getnatgateway" title="GetNatGateway"><span class="symbol function"></span>GetNatGateway</a></li>
     <li><a href="getnetworkacls" title="GetNetworkAcls"><span class="symbol function"></span>GetNetworkAcls</a></li>
@@ -124,7 +130,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.9.1</dd>
+	<dd>2.10.0</dd>
 </dl>
 
 

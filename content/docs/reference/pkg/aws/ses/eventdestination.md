@@ -12,7 +12,6 @@ meta_desc: "Explore the EventDestination resource of the ses module, including e
 
 Provides an SES event destination
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ cloudwatch = aws.ses.EventDestination("cloudwatch",
         "send",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -126,6 +129,7 @@ const cloudwatch = new aws.ses.EventDestination("cloudwatch", {
     ],
 });
 ```
+
 {{% /example %}}
 
 ### Kinesis Destination
@@ -157,6 +161,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -189,6 +194,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -208,9 +214,11 @@ kinesis = aws.ses.EventDestination("kinesis",
         "send",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -228,6 +236,7 @@ const kinesis = new aws.ses.EventDestination("kinesis", {
     ],
 });
 ```
+
 {{% /example %}}
 
 ### SNS Destination
@@ -258,6 +267,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -289,6 +299,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -307,9 +318,11 @@ sns = aws.ses.EventDestination("sns",
         "topic_arn": aws_sns_topic["example"]["arn"],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -326,6 +339,7 @@ const sns = new aws.ses.EventDestination("sns", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

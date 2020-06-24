@@ -15,8 +15,6 @@ Provides a Lambda Function resource. Lambda allows you to trigger execution of c
 For information about Lambda and how to use it, see [What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
 
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
-
-
 ## Specifying the Deployment Package
 
 AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which `runtime` is in use.
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +86,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +97,11 @@ import pulumi_aws as aws
 example_layer_version = aws.lambda_.LayerVersion("exampleLayerVersion")
 example_function = aws.lambda_.Function("exampleFunction", layers=[example_layer_version.arn])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,6 +112,7 @@ const exampleFunction = new aws.lambda.Function("example", {
     layers: [exampleLayerVersion.arn],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -124,7 +127,7 @@ const exampleFunction = new aws.lambda.Function("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#Function">Function</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>code=None<span class="p">, </span>dead_letter_config=None<span class="p">, </span>description=None<span class="p">, </span>environment=None<span class="p">, </span>file_system_configs=None<span class="p">, </span>handler=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>layers=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>publish=None<span class="p">, </span>reserved_concurrent_executions=None<span class="p">, </span>role=None<span class="p">, </span>runtime=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>tracing_config=None<span class="p">, </span>vpc_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#Function">Function</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>code=None<span class="p">, </span>dead_letter_config=None<span class="p">, </span>description=None<span class="p">, </span>environment=None<span class="p">, </span>file_system_config=None<span class="p">, </span>handler=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>layers=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>publish=None<span class="p">, </span>reserved_concurrent_executions=None<span class="p">, </span>role=None<span class="p">, </span>runtime=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>tracing_config=None<span class="p">, </span>vpc_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -375,13 +378,13 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filesystemconfigs_csharp">
-<a href="#filesystemconfigs_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+        <span id="filesystemconfig_csharp">
+<a href="#filesystemconfig_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">List&lt;Function<wbr>File<wbr>System<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -500,7 +503,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -623,13 +626,13 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filesystemconfigs_go">
-<a href="#filesystemconfigs_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+        <span id="filesystemconfig_go">
+<a href="#filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">[]Function<wbr>File<wbr>System<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -748,7 +751,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -871,13 +874,13 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filesystemconfigs_nodejs">
-<a href="#filesystemconfigs_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Configs</a>
+        <span id="filesystemconfig_nodejs">
+<a href="#filesystemconfig_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -996,7 +999,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -1119,13 +1122,13 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span id="file_system_configs_python">
-<a href="#file_system_configs_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>configs</a>
+        <span id="file_system_config_python">
+<a href="#file_system_config_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">List[Function<wbr>File<wbr>System<wbr>Config]</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Dict[Function<wbr>File<wbr>System<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1244,7 +1247,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -1307,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1391,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1475,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1559,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1647,7 +1650,7 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>code=None<span class="p">, </span>dead_letter_config=None<span class="p">, </span>description=None<span class="p">, </span>environment=None<span class="p">, </span>file_system_configs=None<span class="p">, </span>handler=None<span class="p">, </span>invoke_arn=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>last_modified=None<span class="p">, </span>layers=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>publish=None<span class="p">, </span>qualified_arn=None<span class="p">, </span>reserved_concurrent_executions=None<span class="p">, </span>role=None<span class="p">, </span>runtime=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>source_code_size=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>tracing_config=None<span class="p">, </span>version=None<span class="p">, </span>vpc_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>code=None<span class="p">, </span>dead_letter_config=None<span class="p">, </span>description=None<span class="p">, </span>environment=None<span class="p">, </span>file_system_config=None<span class="p">, </span>handler=None<span class="p">, </span>invoke_arn=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>last_modified=None<span class="p">, </span>layers=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>publish=None<span class="p">, </span>qualified_arn=None<span class="p">, </span>reserved_concurrent_executions=None<span class="p">, </span>role=None<span class="p">, </span>runtime=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>source_code_size=None<span class="p">, </span>tags=None<span class="p">, </span>timeout=None<span class="p">, </span>tracing_config=None<span class="p">, </span>version=None<span class="p">, </span>vpc_config=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1769,7 +1772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1818,13 +1821,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_filesystemconfigs_csharp">
-<a href="#state_filesystemconfigs_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+        <span id="state_filesystemconfig_csharp">
+<a href="#state_filesystemconfig_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">List&lt;Function<wbr>File<wbr>System<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2021,7 +2024,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -2084,7 +2087,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2133,13 +2136,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_filesystemconfigs_go">
-<a href="#state_filesystemconfigs_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Configs</a>
+        <span id="state_filesystemconfig_go">
+<a href="#state_filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">[]Function<wbr>File<wbr>System<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2336,7 +2339,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -2399,7 +2402,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2448,13 +2451,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_filesystemconfigs_nodejs">
-<a href="#state_filesystemconfigs_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Configs</a>
+        <span id="state_filesystemconfig_nodejs">
+<a href="#state_filesystemconfig_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2651,7 +2654,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -2714,7 +2717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2763,13 +2766,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_file_system_configs_python">
-<a href="#state_file_system_configs_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>configs</a>
+        <span id="state_file_system_config_python">
+<a href="#state_file_system_config_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">List[Function<wbr>File<wbr>System<wbr>Config]</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Dict[Function<wbr>File<wbr>System<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *EFS config*. See details below.
+    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2966,7 +2969,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -3247,7 +3250,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3258,7 +3261,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path where the function can access the file system, starting with `/mnt/`.
+    <dd>{{% md %}}The path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd>
 
 </dl>
@@ -3276,7 +3279,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3287,7 +3290,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path where the function can access the file system, starting with `/mnt/`.
+    <dd>{{% md %}}The path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd>
 
 </dl>
@@ -3305,7 +3308,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3316,7 +3319,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path where the function can access the file system, starting with `/mnt/`.
+    <dd>{{% md %}}The path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd>
 
 </dl>
@@ -3334,7 +3337,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the EFS Access Profile that provides access to the file system.
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3345,7 +3348,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path where the function can access the file system, starting with `/mnt/`.
+    <dd>{{% md %}}The path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd>
 
 </dl>

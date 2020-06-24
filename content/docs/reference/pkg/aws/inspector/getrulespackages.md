@@ -14,7 +14,6 @@ The AWS Inspector Rules Packages data source allows access to the list of AWS
 Inspector Rules Packages which can be used by AWS Inspector within the region
 configured in the provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +74,11 @@ assessment_assessment_template = aws.inspector.AssessmentTemplate("assessmentAss
     rules_package_arns=rules.arns,
     target_arn=assessment_assessment_target.arn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -98,6 +100,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
     targetArn: assessmentAssessmentTarget.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the LogSubscriptionFilter resource of the cloudwatch module,
 
 Provides a CloudWatch Logs subscription filter resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ test_lambdafunction_logfilter = aws.cloudwatch.LogSubscriptionFilter("testLambda
     log_group="/aws/lambda/example_lambda_name",
     role_arn=aws_iam_role["iam_for_lambda"]["arn"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -95,6 +98,7 @@ const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("te
     roleArn: aws_iam_role_iam_for_lambda.arn,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

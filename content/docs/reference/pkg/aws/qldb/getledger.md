@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLedger function of the qldb module, including example
 
 Use this data source to fetch information about a Quantum Ledger Database.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,6 +57,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +67,11 @@ import pulumi_aws as aws
 
 example = aws.qldb.get_ledger(name="an_example_ledger")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,6 +80,7 @@ const example = pulumi.output(aws.qldb.getLedger({
     name: "an_example_ledger",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

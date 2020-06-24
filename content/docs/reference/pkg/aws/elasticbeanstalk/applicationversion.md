@@ -17,7 +17,7 @@ the infrastructure that runs those applications.
 This resource creates a Beanstalk Application Version that can be deployed to a Beanstalk
 Environment.
 
-> **NOTE on Application Version Resource:**  When using the Application Version resource with multiple 
+> **NOTE on Application Version Resource:**  When using the Application Version resource with multiple
 Elastic Beanstalk Environments it is possible that an error may be returned
 when attempting to delete an Application Version while it is still in use by a different environment.
 To work around this you can either create each environment in a separate AWS account or create your `aws.elasticbeanstalk.ApplicationVersion` resources with a unique names in your Elastic Beanstalk Application. For example &lt;revision&gt;-&lt;environment&gt;.
@@ -278,7 +278,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
@@ -878,7 +878,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
@@ -974,7 +974,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
@@ -1070,7 +1070,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
@@ -1166,7 +1166,7 @@ by multiple Elastic Beanstalk Environments.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>

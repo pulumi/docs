@@ -12,7 +12,6 @@ meta_desc: "Explore the Budget resource of the budgets module, including example
 
 Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,6 +100,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -125,9 +126,11 @@ ec2 = aws.budgets.Budget("ec2",
     time_period_start="2017-07-01_00:00",
     time_unit="MONTHLY")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -151,6 +154,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
     timeUnit: "MONTHLY",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -409,7 +413,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#costfilters_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -548,7 +552,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#costfilters_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -687,7 +691,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#costfilters_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -826,7 +830,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cost_filters_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -1126,7 +1130,7 @@ The following state arguments are supported:
 <a href="#state_costfilters_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -1265,7 +1269,7 @@ The following state arguments are supported:
 <a href="#state_costfilters_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -1404,7 +1408,7 @@ The following state arguments are supported:
 <a href="#state_costfilters_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>
@@ -1543,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_cost_filters_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd>

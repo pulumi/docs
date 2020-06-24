@@ -1126,7 +1126,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.AwaitableGetInternetGatewayResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInternetGatewayResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInternetGatewayResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1152,6 +1152,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.ec2.AwaitableGetLocalGatewayRouteTablesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLocalGatewayRouteTablesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLocalGatewayRouteTablesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetLocalGatewayVirtualInterfaceGroupResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLocalGatewayVirtualInterfaceGroupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_virtual_interface_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLocalGatewayVirtualInterfaceGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetLocalGatewayVirtualInterfaceGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLocalGatewayVirtualInterfaceGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_virtual_interface_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLocalGatewayVirtualInterfaceGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.AwaitableGetLocalGatewayVirtualInterfaceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetLocalGatewayVirtualInterfaceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_virtual_interface_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetLocalGatewayVirtualInterfaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1216,7 +1231,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.AwaitableGetVpcDhcpOptionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dhcp_options_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dhcp_options_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1282,6 +1297,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.CapacityReservation.arn">
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the Capacity Reservation.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.availability_zone">
 <code class="sig-name descname">availability_zone</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -1350,7 +1371,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.CapacityReservation.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_match_criteria</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_date_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_match_criteria</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CapacityReservation resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1359,6 +1380,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Capacity Reservation.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone in which to create the Capacity Reservation.</p></li>
 <li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the Capacity Reservation supports EBS-optimized instances.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</p>
@@ -2616,6 +2638,12 @@ into management.</p>
 </dd>
 </dl>
 <dl class="py attribute">
+<dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions.arn">
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the DHCP Options Set.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions.netbios_name_servers">
 <code class="sig-name descname">netbios_name_servers</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.netbios_name_servers" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of NETBIOS name servers.</p>
@@ -2641,7 +2669,7 @@ into management.</p>
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultVpcDhcpOptions resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2650,6 +2678,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the DHCP Options Set.</p></li>
 <li><p><strong>netbios_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NETBIOS name servers.</p></li>
 <li><p><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
 </p></li>
@@ -3489,6 +3518,12 @@ minutes). Default: <code class="docutils literal notranslate"><span class="pre">
 </dd>
 </dl>
 <dl class="py attribute">
+<dt id="pulumi_aws.ec2.FlowLog.arn">
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the Flow Log.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.ec2.FlowLog.eni_id">
 <code class="sig-name descname">eni_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.eni_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Elastic Network Interface ID to attach to</p>
@@ -3559,7 +3594,7 @@ minutes). Default: <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.FlowLog.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eni_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_destination_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_aggregation_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eni_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_destination_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_aggregation_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FlowLog resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3568,6 +3603,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Flow Log.</p></li>
 <li><p><strong>eni_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Elastic Network Interface ID to attach to</p></li>
 <li><p><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the IAM role that’s used to post flow logs to a CloudWatch Logs log group</p></li>
 <li><p><strong>log_destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the logging destination.</p></li>
@@ -3969,8 +4005,14 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.GetInternetGatewayResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInternetGatewayResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInternetGatewayResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInternetGateway.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetInternetGatewayResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the Internet Gateway.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetInternetGatewayResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult.id" title="Permalink to this definition">¶</a></dt>
@@ -4342,6 +4384,84 @@ Interfaces below for more details.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLocalGatewayVirtualInterfaceGroupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_virtual_interface_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getLocalGatewayVirtualInterfaceGroup.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupResult.local_gateway_virtual_interface_ids">
+<code class="sig-name descname">local_gateway_virtual_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupResult.local_gateway_virtual_interface_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of EC2 Local Gateway Virtual Interface identifiers.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLocalGatewayVirtualInterfaceGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_virtual_interface_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getLocalGatewayVirtualInterfaceGroups.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of EC2 Local Gateway Virtual Interface Group identifiers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupsResult.local_gateway_virtual_interface_ids">
+<code class="sig-name descname">local_gateway_virtual_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceGroupsResult.local_gateway_virtual_interface_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of EC2 Local Gateway Virtual Interface identifiers.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLocalGatewayVirtualInterfaceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_virtual_interface_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_bgp_asn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getLocalGatewayVirtualInterface.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.local_address">
+<code class="sig-name descname">local_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.local_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local address.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.local_bgp_asn">
+<code class="sig-name descname">local_bgp_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.local_bgp_asn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the EC2 Local Gateway.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.local_gateway_id">
+<code class="sig-name descname">local_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.local_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the EC2 Local Gateway.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.peer_address">
+<code class="sig-name descname">peer_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.peer_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Peer address.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.peer_bgp_asn">
+<code class="sig-name descname">peer_bgp_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.peer_bgp_asn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the peer.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.vlan">
+<code class="sig-name descname">vlan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewayVirtualInterfaceResult.vlan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual Local Area Network.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aws.ec2.GetLocalGatewaysResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetLocalGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLocalGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLocalGateways.</p>
@@ -4680,8 +4800,14 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dhcp_options_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dhcp_options_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcDhcpOptions.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the DHCP Options Set.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.dhcp_options_id">
 <code class="sig-name descname">dhcp_options_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.dhcp_options_id" title="Permalink to this definition">¶</a></dt>
@@ -5680,6 +5806,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <dl class="py attribute">
+<dt id="pulumi_aws.ec2.InternetGateway.arn">
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the Internet Gateway.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.ec2.InternetGateway.owner_id">
 <code class="sig-name descname">owner_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway.owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the AWS account that owns the internet gateway.</p>
@@ -5699,7 +5831,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.InternetGateway.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InternetGateway resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5708,6 +5840,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Internet Gateway.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the internet gateway.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
@@ -5784,6 +5917,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <dl class="py attribute">
+<dt id="pulumi_aws.ec2.KeyPair.arn">
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key pair ARN.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.ec2.KeyPair.fingerprint">
 <code class="sig-name descname">fingerprint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.fingerprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The MD5 public key fingerprint as specified in section 4 of RFC 4716.</p>
@@ -5821,7 +5960,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.KeyPair.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_pair_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_pair_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KeyPair resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5830,6 +5969,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key pair ARN.</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MD5 public key fingerprint as specified in section 4 of RFC 4716.</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the key pair.</p></li>
 <li><p><strong>key_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
@@ -7007,6 +7147,205 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.LaunchTemplate.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.LocalGatewayRoute">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">LocalGatewayRoute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_virtual_interface_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRoute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an EC2 Local Gateway Route. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing">Outposts User Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LocalGatewayRoute</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_ec2_local_gateway_route_table&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">local_gateway_virtual_interface_group_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_ec2_local_gateway_virtual_interface_group&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.</p></li>
+<li><p><strong>local_gateway_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Local Gateway Route Table.</p></li>
+<li><p><strong>local_gateway_virtual_interface_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Local Gateway Virtual Interface Group.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.LocalGatewayRoute.destination_cidr_block">
+<code class="sig-name descname">destination_cidr_block</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRoute.destination_cidr_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.LocalGatewayRoute.local_gateway_route_table_id">
+<code class="sig-name descname">local_gateway_route_table_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRoute.local_gateway_route_table_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 Local Gateway Route Table.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.LocalGatewayRoute.local_gateway_virtual_interface_group_id">
+<code class="sig-name descname">local_gateway_virtual_interface_group_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRoute.local_gateway_virtual_interface_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 Local Gateway Virtual Interface Group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.LocalGatewayRoute.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_virtual_interface_group_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRoute.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LocalGatewayRoute resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.</p></li>
+<li><p><strong>local_gateway_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Local Gateway Route Table.</p></li>
+<li><p><strong>local_gateway_virtual_interface_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Local Gateway Virtual Interface Group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.LocalGatewayRoute.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRoute.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.LocalGatewayRoute.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRoute.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">LocalGatewayRouteTableVpcAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an EC2 Local Gateway Route Table VPC Association. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html#vpc-associations">Outposts User Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example_local_gateway_route_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_local_gateway_route_table</span><span class="p">(</span><span class="n">outpost_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:outposts:us-west-2:123456789012:outpost/op-1234567890abcdef&quot;</span><span class="p">)</span>
+<span class="n">example_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;exampleVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">)</span>
+<span class="n">example_local_gateway_route_table_vpc_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">LocalGatewayRouteTableVpcAssociation</span><span class="p">(</span><span class="s2">&quot;exampleLocalGatewayRouteTableVpcAssociation&quot;</span><span class="p">,</span>
+    <span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="n">example_local_gateway_route_table</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>local_gateway_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Local Gateway Route Table.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 VPC.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.local_gateway_route_table_id">
+<code class="sig-name descname">local_gateway_route_table_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.local_gateway_route_table_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 Local Gateway Route Table.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of resource tags.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.vpc_id">
+<code class="sig-name descname">vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 VPC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LocalGatewayRouteTableVpcAssociation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>local_gateway_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Local Gateway Route Table.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 VPC.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LocalGatewayRouteTableVpcAssociation.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -11216,6 +11555,90 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aws.ec2.Tag">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Tag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Tag resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] key: The tag name.
+:param pulumi.Input[str] resource_id: The ID of the EC2 resource to manage the tag for.
+:param pulumi.Input[str] value: The value of the tag.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.Tag.key">
+<code class="sig-name descname">key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Tag.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tag name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.Tag.resource_id">
+<code class="sig-name descname">resource_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Tag.resource_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the EC2 resource to manage the tag for.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.Tag.value">
+<code class="sig-name descname">value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Tag.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the tag.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.Tag.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Tag.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Tag resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tag name.</p></li>
+<li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EC2 resource to manage the tag for.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the tag.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.Tag.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Tag.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2.Tag.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Tag.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aws.ec2.TrafficMirrorFilter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">TrafficMirrorFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Traffic mirror filter.<span class="raw-html-m2r"><br></span>
@@ -11713,6 +12136,12 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 </dd>
 </dl>
 <dl class="py attribute">
+<dt id="pulumi_aws.ec2.TrafficMirrorTarget.arn">
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the traffic mirror target.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.ec2.TrafficMirrorTarget.description">
 <code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the traffic mirror session.</p>
@@ -11738,7 +12167,7 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.TrafficMirrorTarget.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_load_balancer_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_load_balancer_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TrafficMirrorTarget resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -11747,6 +12176,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the traffic mirror target.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror session.</p></li>
 <li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network interface ID that is associated with the target.</p></li>
 <li><p><strong>network_load_balancer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.</p></li>
@@ -12311,6 +12741,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <dl class="py attribute">
+<dt id="pulumi_aws.ec2.VpcDhcpOptions.arn">
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the DHCP Options Set.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.domain_name">
 <code class="sig-name descname">domain_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.domain_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the <code class="docutils literal notranslate"><span class="pre">search</span></code> value in the <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code> file.</p>
@@ -12354,7 +12790,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_name_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netbios_node_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntp_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcDhcpOptions resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -12363,6 +12799,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the DHCP Options Set.</p></li>
 <li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the <code class="docutils literal notranslate"><span class="pre">search</span></code> value in the <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code> file.</p></li>
 <li><p><strong>domain_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of name servers to configure in <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code>. If you want to use the default AWS nameservers you should set this to <code class="docutils literal notranslate"><span class="pre">AmazonProvidedDNS</span></code>.</p></li>
 <li><p><strong>netbios_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NETBIOS name servers.</p></li>
@@ -15076,6 +15513,87 @@ a pair on the desired local gateway route table.</p></li>
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayRouteTables.html">the underlying AWS API</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
 A Local Gateway Route Table will be selected if any one of the given values matches.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ec2.get_local_gateway_virtual_interface">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_local_gateway_virtual_interface</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_local_gateway_virtual_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about an EC2 Local Gateway Virtual Interface. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing">Outposts User Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="p">[</span><span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_local_gateway_virtual_interface</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">__value</span><span class="p">)</span> <span class="k">for</span> <span class="n">__key</span><span class="p">,</span> <span class="n">__value</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_ec2_local_gateway_virtual_interface_group&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;local_gateway_virtual_interface_ids&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – <p>One or more configuration blocks containing name-values filters. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaces.html">EC2 API Reference</a> for supported filters. Detailed below.</p>
+</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – Identifier of EC2 Local Gateway Virtual Interface.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the filter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of one or more values for the filter.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ec2.get_local_gateway_virtual_interface_group">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_local_gateway_virtual_interface_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_local_gateway_virtual_interface_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about an EC2 Local Gateway Virtual Interface Group. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing">Outposts User Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_local_gateway_virtual_interface_group</span><span class="p">(</span><span class="n">local_gateway_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_ec2_local_gateway&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – <p>One or more configuration blocks containing name-values filters. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaceGroups.html">EC2 API Reference</a> for supported filters. Detailed below.</p>
+</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – Identifier of EC2 Local Gateway Virtual Interface Group.</p></li>
+<li><p><strong>local_gateway_id</strong> (<em>str</em>) – Identifier of EC2 Local Gateway.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the filter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of one or more values for the filter.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ec2.get_local_gateway_virtual_interface_groups">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_local_gateway_virtual_interface_groups</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_local_gateway_virtual_interface_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about multiple EC2 Local Gateway Virtual Interface Groups, such as identifiers. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing">Outposts User Guide</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+
+<span class="nb">all</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_local_gateway_virtual_interface_groups</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – <p>One or more configuration blocks containing name-values filters. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaceGroups.html">EC2 API Reference</a> for supported filters. Detailed below.</p>
+</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the filter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of one or more values for the filter.</p></li>
 </ul>
 </dd></dl>
 

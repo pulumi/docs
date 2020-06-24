@@ -12,7 +12,6 @@ meta_desc: "Explore the Resolver resource of the appsync module, including examp
 
 Provides an AppSync Resolver.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -116,6 +115,7 @@ schema {
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -200,9 +200,11 @@ mutation_pipeline_test = aws.appsync.Resolver("mutationPipelineTest",
     response_template="$util.toJson($ctx.result)",
     type="Mutation")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -281,6 +283,7 @@ const mutationPipelineTest = new aws.appsync.Resolver("Mutation_pipelineTest", {
     type: "Mutation",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

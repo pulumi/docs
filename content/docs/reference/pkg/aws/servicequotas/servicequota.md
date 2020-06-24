@@ -12,7 +12,6 @@ meta_desc: "Explore the ServiceQuota resource of the servicequotas module, inclu
 
 Manages an individual Service Quota.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = aws.servicequotas.ServiceQuota("example",
     service_code="vpc",
     value=75)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const example = new aws.servicequotas.ServiceQuota("example", {
     value: 75,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -22,7 +22,6 @@ after creation or modification. During this time, deletes to resources will be
 blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the `retain_on_delete` flag.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -200,6 +199,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -353,6 +353,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -484,9 +485,11 @@ s3_distribution = aws.cloudfront.Distribution("s3Distribution",
         "cloudfrontDefaultCertificate": True,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -619,6 +622,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -1006,7 +1010,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1247,7 +1251,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1488,7 +1492,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1729,7 +1733,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1786,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activetrustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -1912,7 +1916,7 @@ CloudFront system.
 <a href="#activetrustedsigners_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -2038,7 +2042,7 @@ CloudFront system.
 <a href="#activetrustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Trusted<wbr>Signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -2164,7 +2168,7 @@ CloudFront system.
 <a href="#active_trusted_signers_python" style="color: inherit; text-decoration: inherit;">active_<wbr>trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -2416,7 +2420,7 @@ The following state arguments are supported:
 <a href="#state_activetrustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -2707,7 +2711,7 @@ CloudFront system.
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2766,7 +2770,7 @@ region and the credentials configuring this argument must have
 <a href="#state_activetrustedsigners_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -3057,7 +3061,7 @@ CloudFront system.
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3116,7 +3120,7 @@ region and the credentials configuring this argument must have
 <a href="#state_activetrustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Trusted<wbr>Signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -3407,7 +3411,7 @@ CloudFront system.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3466,7 +3470,7 @@ region and the credentials configuring this argument must have
 <a href="#state_active_trusted_signers_python" style="color: inherit; text-decoration: inherit;">active_<wbr>trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
 each trusted signer, if the distribution is set up to serve private content
@@ -3757,7 +3761,7 @@ CloudFront system.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>

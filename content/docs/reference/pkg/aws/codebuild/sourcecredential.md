@@ -12,7 +12,6 @@ meta_desc: "Explore the SourceCredential resource of the codebuild module, inclu
 
 Provides a CodeBuild Source Credentials Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = aws.codebuild.SourceCredential("example",
     server_type="GITHUB",
     token="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,6 +90,7 @@ const example = new aws.codebuild.SourceCredential("example", {
     token: "example",
 });
 ```
+
 {{% /example %}}
 
 ### Bitbucket Server Usage
@@ -110,6 +114,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -136,6 +141,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -149,9 +155,11 @@ example = aws.codebuild.SourceCredential("example",
     token="example",
     user_name="test-user")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -163,6 +171,7 @@ const example = new aws.codebuild.SourceCredential("example", {
     userName: "test-user",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

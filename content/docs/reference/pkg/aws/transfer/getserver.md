@@ -13,7 +13,6 @@ meta_desc: "Explore the GetServer function of the transfer module, including exa
 Use this data source to get the ARN of an AWS Transfer Server for use in other
 resources.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_aws as aws
 
 example = aws.transfer.get_server(server_id="s-1234567")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +81,7 @@ const example = pulumi.output(aws.transfer.getServer({
     serverId: "s-1234567",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

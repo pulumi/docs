@@ -12,7 +12,6 @@ meta_desc: "Explore the UsagePlanKey resource of the apigateway module, includin
 
 Provides an API Gateway Usage Plan Key.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,6 +98,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +117,11 @@ main = aws.apigateway.UsagePlanKey("main",
     key_type="API_KEY",
     usage_plan_id=myusageplan.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -137,6 +140,7 @@ const main = new aws.apigateway.UsagePlanKey("main", {
     usagePlanId: myusageplan.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.
 
 > **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -82,9 +83,11 @@ example = aws.fsx.WindowsFileSystem("example",
     subnet_ids=aws_subnet["example"]["id"],
     throughput_capacity=1024)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,6 +100,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
     throughputCapacity: 1024,
 });
 ```
+
 {{% /example %}}
 
 ### Using a Self-Managed Microsoft Active Directory
@@ -131,6 +135,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -166,6 +171,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -188,9 +194,11 @@ example = aws.fsx.WindowsFileSystem("example",
     subnet_ids=aws_subnet["example"]["id"],
     throughput_capacity=1024)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -211,6 +219,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
     throughputCapacity: 1024,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -524,7 +533,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -674,7 +683,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -824,7 +833,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -974,7 +983,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -1582,7 +1591,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -1787,7 +1796,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -1992,7 +2001,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
@@ -2197,7 +2206,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>

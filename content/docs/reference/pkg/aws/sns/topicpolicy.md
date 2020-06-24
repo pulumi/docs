@@ -14,7 +14,6 @@ Provides an SNS topic policy resource
 
 > **NOTE:** If a Principal is specified as just an AWS account ID rather than an ARN, AWS silently converts it to the ARN for the root user, causing future deployments to differ. To avoid this problem, just specify the full ARN, e.g. `arn:aws:iam::123456789012:root`
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -92,6 +91,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -134,9 +134,11 @@ default = aws.sns.TopicPolicy("default",
     arn=test.arn,
     policy=sns_topic_policy.json)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -175,6 +177,7 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
     policy: snsTopicPolicy.json,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

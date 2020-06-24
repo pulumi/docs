@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPartition function of the AWS package, including exam
 
 Use this data source to lookup current AWS partition in which this provider is working
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +68,11 @@ s3_policy = aws.iam.get_policy_document(statements=[{
     "sid": "1",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -84,6 +86,7 @@ const s3Policy = current.apply(current => aws.iam.getPolicyDocument({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

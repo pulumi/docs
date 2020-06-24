@@ -12,7 +12,6 @@ meta_desc: "Explore the AccessPoint resource of the efs module, including exampl
 
 Provides an Elastic File System (EFS) access point.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +58,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -67,9 +68,11 @@ import pulumi_aws as aws
 
 test = aws.efs.AccessPoint("test", file_system_id=aws_efs_file_system["foo"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,6 +81,7 @@ const test = new aws.efs.AccessPoint("test", {
     fileSystemId: aws_efs_file_system_foo.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -303,7 +307,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -354,7 +358,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -405,7 +409,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -456,7 +460,7 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -872,7 +876,7 @@ The following state arguments are supported:
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -955,7 +959,7 @@ The following state arguments are supported:
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -1038,7 +1042,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -1121,7 +1125,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -1178,7 +1182,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}he POSIX user ID used for all file system operations using this access point.
+    <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1218,7 +1222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}he POSIX user ID used for all file system operations using this access point.
+    <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1258,7 +1262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}he POSIX user ID used for all file system operations using this access point.
+    <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1298,7 +1302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}he POSIX user ID used for all file system operations using this access point.
+    <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
