@@ -3,6 +3,7 @@ title: "Introducing New Slimmer Docker Images"
 date: 2020-06-22T17:42:22-07:00
 draft: false
 meta_image: meta.png
+meta_desc: "Introducing new language specific Docker images which are smaller and more flexible than before"
 authors:
     - lee-briggs
 tags:
@@ -15,7 +16,7 @@ Pulumi supports three operating systems, multiple programming languages and almo
 
 Nowhere are these challenges more prevalent than in the Pulumi Docker containers.
 
-The [pulumi/pulumi Docker container](https://hub.docker.com/r/pulumi/pulumi) is almost 3Gb uncompressed, which is generally considered large for a Docker image. 
+The [pulumi/pulumi Docker container](https://hub.docker.com/r/pulumi/pulumi) is almost 3Gb uncompressed, which is generally considered large for a Docker image.
 In this post, I'll examine why this container has grown to the size that it is, and talk about how we hope to solve it.
 
 <!--more-->
@@ -27,6 +28,7 @@ Pulumi has the unique ability to interact with cloud providers across many bound
 {{< chooser language "typescript,python,go" >}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as digitalocean from "@pulumi/digitalocean";
 import * as k8s from "@pulumi/kubernetes";
@@ -77,9 +79,11 @@ const nginx = new k8s.helm.v2.Chart("nginx-ingress",
     { providers: { kubernetes: provider } },
 )
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 """A DigitalOcean Python Pulumi program"""
 
@@ -136,10 +140,12 @@ chart = helm.Chart(
         }
     }), pulumi.ResourceOptions(provider=k8s_provider)
 )
+
 ```
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 package main
 
@@ -208,7 +214,6 @@ func main() {
 			},
 		}, pulumi.Provider(provider))
 
-
 		return nil
 	})
 }
@@ -255,7 +260,6 @@ As you can see below, the uncompressed images are up to six times smaller than t
 [pulumi/pulumi-python:2.4.0](https://hub.docker.com/layers/pulumi/pulumi-python/2.4.0/images/sha256-831e33017d4d9f49df846b603abe6214ce059b3141c42dfc9d53b447215eccd1?context=explore) | 106.48MB | 308MB
 [pulumi/pulumi-python:2.4.0-ubi](https://hub.docker.com/layers/pulumi/pulumi-python/2.4.0-ubi/images/sha256-d4b1ed1a441626687ed6ebed6a509c6e6d60479c3eafe6158268ae8c2e8943a3?context=explore) | 150.18MB | 385MB
 
-
 ## Using the Images
 
 Using the new Pulumi images looks very similar to how you might use the CLI locally. Here's an example of running Pulumi for a typescript project, and the Pulumi SaaS backend:
@@ -275,12 +279,12 @@ If you need to additional CLI tools like Helm as part of your workflow, we recom
 
 ## Multiple Base Images
 
-The default operating system for these new images is [Debian Buster](https://www.debian.org/releases/buster/), but we also publish Images based on [RedHat's Universal Base Image](https://access.redhat.com/articles/4238681). These images are small and lightweight but also benefit from RedHat's exceptional security focus. We scanned these images with [synk.io](https://snyk.io) and found zero vulnerabilities, which should provide peace of mind when running these Pulumi images. 
+The default operating system for these new images is [Debian Buster](https://www.debian.org/releases/buster/), but we also publish Images based on [RedHat's Universal Base Image](https://access.redhat.com/articles/4238681). These images are small and lightweight but also benefit from RedHat's exceptional security focus. We scanned these images with [synk.io](https://snyk.io) and found zero vulnerabilities, which should provide peace of mind when running these Pulumi images.
 
 ## A Note about Alpine Linux
 
 Many users are fans of [Alpine Linux's](https://alpinelinux.org/) small, lightweight footprint and its Docker focused design; however, we've made the decision not to publish Alpine based images at this moment.
-Alpine's usage of of [musl libc](https://alpinelinux.org/posts/Alpine-Linux-has-switched-to-musl-libc.html) rather than [glibc](https://www.gnu.org/software/libc/) means that Pulumi doesn't run without adding additional dependencies, which made it hard to justify introducing this extra source of potential bugs into our already broad surface area. 
+Alpine's usage of of [musl libc](https://alpinelinux.org/posts/Alpine-Linux-has-switched-to-musl-libc.html) rather than [glibc](https://www.gnu.org/software/libc/) means that Pulumi doesn't run without adding additional dependencies, which made it hard to justify introducing this extra source of potential bugs into our already broad surface area.
 If you're interested in building and maintaining an Alpine based Pulumi image, we have skeleton Docker files available in the [Pulumi GitHub repo](https://github.com/pulumi/pulumi/tree/master/docker).
 
 ## Give them a spin!
