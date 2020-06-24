@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedServicePostgresql resource of the datafactory modu
 
 Manages a Linked Service (connection) between PostgreSQL and Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ example_linked_service_postgresql = azure.datafactory.LinkedServicePostgresql("e
     data_factory_name=example_factory.name,
     connection_string="Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -119,6 +122,7 @@ const exampleLinkedServicePostgresql = new azure.datafactory.LinkedServicePostgr
     connectionString: "Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

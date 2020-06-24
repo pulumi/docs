@@ -12,7 +12,6 @@ meta_desc: "Explore the EventHubNamespaceAuthorizationRule resource of the event
 
 Manages an Authorization Rule for an Event Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,6 +100,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -123,9 +124,11 @@ example_event_hub_namespace_authorization_rule = azure.eventhub.EventHubNamespac
     send=False,
     manage=False)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -148,6 +151,7 @@ const exampleEventHubNamespaceAuthorizationRule = new azure.eventhub.EventHubNam
     manage: false,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

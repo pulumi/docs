@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualHubConnection resource of the network module, inc
 
 Manages a Connection for a Virtual Hub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -61,6 +60,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -118,6 +118,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -142,9 +143,11 @@ example_virtual_hub_connection = azure.network.VirtualHubConnection("exampleVirt
     virtual_hub_id=example_virtual_hub.id,
     remote_virtual_network_id=example_virtual_network.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -170,6 +173,7 @@ const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exam
     remoteVirtualNetworkId: exampleVirtualNetwork.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

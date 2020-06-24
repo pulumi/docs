@@ -14,7 +14,6 @@ Manages a MS Teams integration for a Bot Channel
 
 > **Note** A bot can only have a single MS Teams Channel associated with it.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +74,11 @@ example_channel_teams = azure.bot.ChannelTeams("exampleChannelTeams",
     location=example_channels_registration.location,
     resource_group_name=example_resource_group.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -95,6 +97,7 @@ const exampleChannelTeams = new azure.bot.ChannelTeams("exampleChannelTeams", {
     resourceGroupName: exampleResourceGroup.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

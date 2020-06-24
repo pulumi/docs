@@ -12,7 +12,6 @@ meta_desc: "Explore the Embedded resource of the powerbi module, including examp
 
 Manages a PowerBI Embedded.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -94,9 +95,11 @@ example_embedded = azure.powerbi.Embedded("exampleEmbedded",
     sku_name="A1",
     administrators=["azsdktest@microsoft.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -109,6 +112,7 @@ const exampleEmbedded = new azure.powerbi.Embedded("exampleEmbedded", {
     administrators: ["azsdktest@microsoft.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

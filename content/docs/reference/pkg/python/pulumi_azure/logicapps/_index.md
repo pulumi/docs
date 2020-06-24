@@ -167,7 +167,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>run_afters</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">actionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the precedent HTTP Action.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">actionResult</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionResult</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered. Possible values include <code class="docutils literal notranslate"><span class="pre">Succeeded</span></code>, <code class="docutils literal notranslate"><span class="pre">Failed</span></code>, <code class="docutils literal notranslate"><span class="pre">Skipped</span></code> and <code class="docutils literal notranslate"><span class="pre">TimedOut</span></code>.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionHttp.body">
@@ -205,7 +205,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A <code class="docutils literal notranslate"><span class="pre">run_after</span></code> block is as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">actionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the precedent HTTP Action.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">actionResult</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionResult</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered. Possible values include <code class="docutils literal notranslate"><span class="pre">Succeeded</span></code>, <code class="docutils literal notranslate"><span class="pre">Failed</span></code>, <code class="docutils literal notranslate"><span class="pre">Skipped</span></code> and <code class="docutils literal notranslate"><span class="pre">TimedOut</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -239,7 +239,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>run_afters</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">actionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the precedent HTTP Action.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">actionResult</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionResult</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered. Possible values include <code class="docutils literal notranslate"><span class="pre">Succeeded</span></code>, <code class="docutils literal notranslate"><span class="pre">Failed</span></code>, <code class="docutils literal notranslate"><span class="pre">Skipped</span></code> and <code class="docutils literal notranslate"><span class="pre">TimedOut</span></code>.</p></li>
 </ul>
 </dd></dl>
 

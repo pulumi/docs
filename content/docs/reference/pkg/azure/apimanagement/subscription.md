@@ -12,8 +12,6 @@ meta_desc: "Explore the Subscription resource of the apimanagement module, inclu
 
 Manages a Subscription within a API Management Service.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -117,6 +116,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -139,9 +139,11 @@ example_subscription = azure.apimanagement.Subscription("exampleSubscription",
     product_id=example_product.id,
     display_name="Parser API")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -168,6 +170,7 @@ const exampleSubscription = new azure.apimanagement.Subscription("exampleSubscri
     displayName: "Parser API",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

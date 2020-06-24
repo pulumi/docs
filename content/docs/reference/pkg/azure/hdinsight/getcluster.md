@@ -12,7 +12,6 @@ meta_desc: "Explore the GetCluster function of the hdinsight module, including e
 
 Use this data source to access information about an existing HDInsight Cluster.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> HttpsEndpoint { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.hdinsight.get_cluster(name="example",
     resource_group_name="example-resources")
 pulumi.export("httpsEndpoint", example.https_endpoint)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.hdinsight.getCluster({
 });
 export const httpsEndpoint = example.then(example => example.httpsEndpoint);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the LocalNetworkGateway resource of the network module, incl
 
 Manages a local network gateway connection over which specific connections can be configured.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -94,9 +95,11 @@ home = azure.network.LocalNetworkGateway("home",
     gateway_address="12.13.14.15",
     address_spaces=["10.0.0.0/16"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -109,6 +112,7 @@ const home = new azure.network.LocalNetworkGateway("home", {
     addressSpaces: ["10.0.0.0/16"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetNetworkDdosProtectionPlan function of the network mod
 
 Use this data source to access information about an existing Azure Network DDoS Protection Plan.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> DdosProtectionPlanId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.network.get_network_ddos_protection_plan(name=azurerm_network_dd
     resource_group_name=azurerm_network_ddos_protection_plan["example"]["resource_group_name"])
 pulumi.export("ddosProtectionPlanId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.network.getNetworkDdosProtectionPlan({
 });
 export const ddosProtectionPlanId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

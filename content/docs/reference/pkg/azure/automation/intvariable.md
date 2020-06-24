@@ -14,7 +14,6 @@ Manages a integer variable in Azure Automation
 
 
 
-
 ## Create a IntVariable Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

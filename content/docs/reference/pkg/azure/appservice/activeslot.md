@@ -14,7 +14,6 @@ Promotes an App Service Slot to Production within an App Service.
 
 > **Note:** When using Slots - the `app_settings`, `connection_string` and `site_config` blocks on the `azure.appservice.AppService` resource will be overwritten when promoting a Slot using the `azure.appservice.ActiveSlot` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,9 +87,11 @@ example_active_slot = azure.appservice.ActiveSlot("exampleActiveSlot",
     app_service_name=example_app_service.name,
     app_service_slot_name=example_slot.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -111,6 +113,7 @@ const exampleActiveSlot = new azure.appservice.ActiveSlot("exampleActiveSlot", {
     appServiceSlotName: exampleSlot.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

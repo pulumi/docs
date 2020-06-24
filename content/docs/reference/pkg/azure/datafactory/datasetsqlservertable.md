@@ -12,7 +12,6 @@ meta_desc: "Explore the DatasetSqlServerTable resource of the datafactory module
 
 Manages a SQL Server Table Dataset inside a Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,9 +120,11 @@ example_dataset_sql_server_table = azure.datafactory.DatasetSqlServerTable("exam
     data_factory_name=example_factory.name,
     linked_service_name=example_linked_service_sql_server.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -142,6 +145,7 @@ const exampleDatasetSqlServerTable = new azure.datafactory.DatasetSqlServerTable
     linkedServiceName: exampleLinkedServiceSqlServer.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetGroup function of the apimanagement module, including
 
 Use this data source to access information about an existing API Management Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> GroupType { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.apimanagement.get_group(name="my-group",
     resource_group_name="search-service")
 pulumi.export("groupType", example.type)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.apimanagement.getGroup({
 });
 export const groupType = example.then(example => example.type);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Account resource of the storage module, including exampl
 
 Manages an Azure Storage Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -82,6 +82,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ example_account = azure.storage.Account("exampleAccount",
         "environment": "staging",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -117,6 +120,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

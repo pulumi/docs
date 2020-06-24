@@ -12,7 +12,6 @@ meta_desc: "Explore the AnalyticsAccount resource of the datalake module, includ
 
 Manages an Azure Data Lake Analytics Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ example_analytics_account = azure.datalake.AnalyticsAccount("exampleAnalyticsAcc
     location=example_resource_group.location,
     default_store_account_name=example_store.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -119,6 +122,7 @@ const exampleAnalyticsAccount = new azure.datalake.AnalyticsAccount("exampleAnal
     defaultStoreAccountName: exampleStore.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

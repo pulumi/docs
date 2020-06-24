@@ -12,7 +12,6 @@ meta_desc: "Explore the NatGatewayPublicIpAssociation resource of the network mo
 
 Manages the association between a Nat Gateway and a Public IP.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,6 +101,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -122,9 +123,11 @@ example_nat_gateway_public_ip_association = azure.network.NatGatewayPublicIpAsso
     nat_gateway_id=example_nat_gateway.id,
     public_ip_address_id=example_public_ip.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -146,6 +149,7 @@ const exampleNatGatewayPublicIpAssociation = new azure.network.NatGatewayPublicI
     publicIpAddressId: examplePublicIp.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

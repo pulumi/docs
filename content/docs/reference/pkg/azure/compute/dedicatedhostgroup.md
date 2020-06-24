@@ -12,7 +12,6 @@ meta_desc: "Explore the DedicatedHostGroup resource of the compute module, inclu
 
 Manage a Dedicated Host Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +87,11 @@ example_dedicated_host_group = azure.compute.DedicatedHostGroup("exampleDedicate
     location=example_resource_group.location,
     platform_fault_domain_count=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -100,6 +103,7 @@ const exampleDedicatedHostGroup = new azure.compute.DedicatedHostGroup("exampleD
     platformFaultDomainCount: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

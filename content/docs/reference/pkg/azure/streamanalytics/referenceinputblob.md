@@ -12,7 +12,6 @@ meta_desc: "Explore the ReferenceInputBlob resource of the streamanalytics modul
 
 Manages a Stream Analytics Reference Input Blob. Reference data (also known as a lookup table) is a finite data set that is static or slowly changing in nature, used to perform a lookup or to correlate with your data stream. Learn more [here](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-use-reference-data#azure-blob-storage).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -132,6 +132,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -164,9 +165,11 @@ test = azure.streamanalytics.ReferenceInputBlob("test",
         "encoding": "UTF8",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -203,6 +206,7 @@ const test = new azure.streamanalytics.ReferenceInputBlob("test", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

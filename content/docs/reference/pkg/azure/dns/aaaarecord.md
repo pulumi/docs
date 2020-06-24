@@ -12,7 +12,6 @@ meta_desc: "Explore the AaaaRecord resource of the dns module, including example
 
 Enables you to manage DNS AAAA Records within Azure DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ example_aaaa_record = azure.dns.AaaaRecord("exampleAaaaRecord",
     resource_group_name=example_resource_group.name,
     ttl=300)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -112,6 +115,7 @@ const exampleAaaaRecord = new azure.dns.AaaaRecord("exampleAaaaRecord", {
     ttl: 300,
 });
 ```
+
 {{% /example %}}
 
 ### Alias Record)
@@ -150,6 +154,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -199,6 +204,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -219,9 +225,11 @@ example_aaaa_record = azure.dns.AaaaRecord("exampleAaaaRecord",
     ttl=300,
     target_resource_id=example_public_ip.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -241,6 +249,7 @@ const exampleAaaaRecord = new azure.dns.AaaaRecord("exampleAaaaRecord", {
     targetResourceId: examplePublicIp.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

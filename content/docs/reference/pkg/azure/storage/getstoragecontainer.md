@@ -12,7 +12,6 @@ meta_desc: "Explore the GetStorageContainer function of the storage module, incl
 
 Use this data source to access information about an existing Storage Container.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_azure as azure
 example = azure.storage.get_storage_container(name="example-container-name",
     storage_account_name="example-storage-account-name")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -81,6 +84,7 @@ const example = pulumi.output(azure.storage.getStorageContainer({
     storageAccountName: "example-storage-account-name",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

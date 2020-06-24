@@ -14,7 +14,6 @@ Manages an IotHub ServiceBus Topic Endpoint
 
 > **NOTE:** Endpoints can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azurerm_iothub_endpoint_*` resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a `azurerm_iothub_endpoint_*` resource and another endpoint of a different type directly on the `azure.iot.IoTHub` resource is not supported.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -78,6 +77,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -152,6 +152,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -190,9 +191,11 @@ example_endpoint_servicebus_topic = azure.iot.EndpointServicebusTopic("exampleEn
     iothub_name=example_io_t_hub.name,
     connection_string=example_topic_authorization_rule.primary_connection_string)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -233,6 +236,7 @@ const exampleEndpointServicebusTopic = new azure.iot.EndpointServicebusTopic("ex
     connectionString: exampleTopicAuthorizationRule.primaryConnectionString,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

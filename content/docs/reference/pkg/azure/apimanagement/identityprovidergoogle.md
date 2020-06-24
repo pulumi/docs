@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityProviderGoogle resource of the apimanagement mod
 
 Manages an API Management Google Identity Provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_identity_provider_google = azure.apimanagement.IdentityProviderGoogle("e
     client_id="00000000.apps.googleusercontent.com",
     client_secret="00000000000000000000000000000000")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -135,6 +138,7 @@ const exampleIdentityProviderGoogle = new azure.apimanagement.IdentityProviderGo
     clientSecret: "00000000000000000000000000000000",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

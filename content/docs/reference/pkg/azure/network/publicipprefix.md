@@ -12,7 +12,6 @@ meta_desc: "Explore the PublicIpPrefix resource of the network module, including
 
 Manages a Public IP Prefix.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_public_ip_prefix = azure.network.PublicIpPrefix("examplePublicIpPrefix",
         "environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -113,6 +116,7 @@ const examplePublicIpPrefix = new azure.network.PublicIpPrefix("examplePublicIpP
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

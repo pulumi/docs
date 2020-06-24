@@ -12,7 +12,6 @@ meta_desc: "Explore the Assignment resource of the role module, including exampl
 
 Assigns a given Principal (User or Group) to a given Role.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +57,11 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     role_definition_name="Reader",
     principal_id=example_client_config.object_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -72,6 +74,7 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
     principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.objectId),
 });
 ```
+
 {{% /example %}}
 
 ### Custom Role &amp; Service Principal)
@@ -117,6 +120,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -144,9 +148,11 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     role_definition_id=example_role_definition.id,
     principal_id=example_client_config.object_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -169,6 +175,7 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
     principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.objectId),
 });
 ```
+
 {{% /example %}}
 
 ### Custom Role &amp; User)
@@ -214,6 +221,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -241,9 +249,11 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     role_definition_id=example_role_definition.id,
     principal_id=example_client_config.client_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -266,6 +276,7 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
     principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.clientId),
 });
 ```
+
 {{% /example %}}
 
 ### Custom Role &amp; Management Group)
@@ -312,6 +323,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -340,9 +352,11 @@ example_assignment = azure.authorization.Assignment("exampleAssignment",
     role_definition_id=example_role_definition.id,
     principal_id=example_client_config.client_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -366,6 +380,7 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
     principalId: exampleClientConfig.then(exampleClientConfig => exampleClientConfig.clientId),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

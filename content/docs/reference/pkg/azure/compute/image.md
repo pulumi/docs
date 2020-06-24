@@ -12,7 +12,6 @@ meta_desc: "Explore the Image resource of the compute module, including examples
 
 Manages a custom virtual machine image that can be used to create virtual machines.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +87,11 @@ example_image = azure.compute.Image("exampleImage",
     resource_group_name=example_resource_group.name,
     source_virtual_machine_id="{vm_id}")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -100,6 +103,7 @@ const exampleImage = new azure.compute.Image("exampleImage", {
     sourceVirtualMachineId: "{vm_id}",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

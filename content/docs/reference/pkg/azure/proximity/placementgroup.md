@@ -12,7 +12,6 @@ meta_desc: "Explore the PlacementGroup resource of the proximity module, includi
 
 Manages a proximity placement group for virtual machines, virtual machine scale sets and availability sets.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +94,11 @@ example_placement_group = azure.proximity.PlacementGroup("examplePlacementGroup"
         "environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -109,6 +112,7 @@ const examplePlacementGroup = new azure.proximity.PlacementGroup("examplePlaceme
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the EventhubDataConnection resource of the kusto module, inc
 
 Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -85,6 +84,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -170,6 +170,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -216,9 +217,11 @@ eventhub_connection = azure.kusto.EventhubDataConnection("eventhubConnection",
     data_format="JSON")
 #(Optional)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -268,6 +271,7 @@ const eventhubConnection = new azure.kusto.EventhubDataConnection("eventhubConne
 });
 //(Optional)
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

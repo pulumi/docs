@@ -12,8 +12,6 @@ meta_desc: "Explore the NamedValue resource of the apimanagement module, includi
 
 Manages an API Management Named Value.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +114,11 @@ example_named_value = azure.apimanagement.NamedValue("exampleNamedValue",
     display_name="ExampleProperty",
     value="Example Value")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +138,7 @@ const exampleNamedValue = new azure.apimanagement.NamedValue("exampleNamedValue"
     value: "Example Value",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

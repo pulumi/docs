@@ -12,8 +12,6 @@ meta_desc: "Explore the GetService function of the databasemigration module, inc
 
 Use this data source to access information about an existing Database Migration Service.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
     public Output<string> AzurermDmsId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +75,11 @@ example = azure.databasemigration.get_service(name="example-dms",
     resource_group_name="example-rg")
 pulumi.export("azurermDmsId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -89,6 +91,7 @@ const example = pulumi.output(azure.databasemigration.getService({
 
 export const azurermDmsId = example.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

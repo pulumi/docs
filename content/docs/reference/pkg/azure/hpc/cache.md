@@ -14,7 +14,6 @@ Manages a HPC Cache.
 
 > **Note**: During the first several months of the GA release, a request must be made to the Azure HPC Cache team to add your subscription to the access list before it can be used to create a cache instance. Fill out [this form](https://aka.ms/onboard-hpc-cache) to request access.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,6 +113,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -136,9 +137,11 @@ example_cache = azure.hpc.Cache("exampleCache",
     subnet_id=example_subnet.id,
     sku_name="Standard_2G")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -162,6 +165,7 @@ const exampleCache = new azure.hpc.Cache("exampleCache", {
     skuName: "Standard_2G",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

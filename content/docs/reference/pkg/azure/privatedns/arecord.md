@@ -12,7 +12,6 @@ meta_desc: "Explore the ARecord resource of the privatedns module, including exa
 
 Enables you to manage DNS A Records within Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ example_a_record = azure.privatedns.ARecord("exampleARecord",
     ttl=300,
     records=["10.0.180.17"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -121,6 +124,7 @@ const exampleARecord = new azure.privatedns.ARecord("exampleARecord", {
     records: ["10.0.180.17"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

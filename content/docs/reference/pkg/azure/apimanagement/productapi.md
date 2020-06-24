@@ -12,7 +12,6 @@ meta_desc: "Explore the ProductApi resource of the apimanagement module, includi
 
 Manages an API Management API Assignment to a Product.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -66,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -116,6 +116,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -138,9 +139,11 @@ example_product_api = azure.apimanagement.ProductApi("exampleProductApi",
     api_management_name=example_service.name,
     resource_group_name=example_service.resource_group_name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -167,6 +170,7 @@ const exampleProductApi = new azure.apimanagement.ProductApi("exampleProductApi"
     resourceGroupName: exampleService.then(exampleService => exampleService.resourceGroupName),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

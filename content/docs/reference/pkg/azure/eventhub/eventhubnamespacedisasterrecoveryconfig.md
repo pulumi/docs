@@ -12,7 +12,6 @@ meta_desc: "Explore the EventhubNamespaceDisasterRecoveryConfig resource of the 
 
 Manages an Disaster Recovery Config for an Event Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,6 +101,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -122,9 +123,11 @@ example_eventhub_namespace_disaster_recovery_config = azure.eventhub.EventhubNam
     namespace_name=primary.name,
     partner_namespace_id=secondary.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -146,6 +149,7 @@ const exampleEventhubNamespaceDisasterRecoveryConfig = new azure.eventhub.Eventh
     partnerNamespaceId: secondary.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

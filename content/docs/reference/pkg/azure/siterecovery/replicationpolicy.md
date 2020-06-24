@@ -12,7 +12,6 @@ meta_desc: "Explore the ReplicationPolicy resource of the siterecovery module, i
 
 Manages a Azure Site Recovery replication policy within a recovery vault. Replication policies define the frequency at which recovery points are created and how long they are stored.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,9 +109,11 @@ policy = azure.siterecovery.ReplicationPolicy("policy",
     recovery_point_retention_in_minutes=24 * 60,
     application_consistent_snapshot_frequency_in_minutes=4 * 60)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -128,6 +131,7 @@ const policy = new azure.siterecovery.ReplicationPolicy("policy", {
     applicationConsistentSnapshotFrequencyInMinutes: 4 * 60,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Manages a Data Lake Gen2 File System within an Azure Storage Account.
 
 > **NOTE:** This Resource requires using Azure Active Directory to connect to Azure Storage, which in turn requires the `Storage` specific roles - which are not granted by default.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,6 +98,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,9 +120,11 @@ example_data_lake_gen2_filesystem = azure.storage.DataLakeGen2Filesystem("exampl
         "hello": "aGVsbG8=",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -142,6 +145,7 @@ const exampleDataLakeGen2Filesystem = new azure.storage.DataLakeGen2Filesystem("
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

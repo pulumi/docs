@@ -12,7 +12,6 @@ meta_desc: "Explore the DataSourceWindowsPerformanceCounter resource of the loga
 
 Manages a Log Analytics (formally Operational Insights) Windows Performance Counter DataSource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,6 +94,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +115,11 @@ example_data_source_windows_performance_counter = azure.loganalytics.DataSourceW
     counter_name="CPU",
     interval_seconds=10)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +139,7 @@ const exampleDataSourceWindowsPerformanceCounter = new azure.loganalytics.DataSo
     intervalSeconds: 10,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

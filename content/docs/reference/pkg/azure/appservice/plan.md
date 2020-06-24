@@ -12,7 +12,6 @@ meta_desc: "Explore the Plan resource of the appservice module, including exampl
 
 Manages an App Service Plan component.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_plan = azure.appservice.Plan("examplePlan",
         "size": "S1",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -113,6 +116,7 @@ const examplePlan = new azure.appservice.Plan("examplePlan", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Shared / Consumption Plan)
@@ -144,6 +148,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -180,6 +185,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -197,9 +203,11 @@ example_plan = azure.appservice.Plan("examplePlan",
         "size": "Y1",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -215,6 +223,7 @@ const examplePlan = new azure.appservice.Plan("examplePlan", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Linux)
@@ -247,6 +256,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -284,6 +294,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -302,9 +313,11 @@ example_plan = azure.appservice.Plan("examplePlan",
         "size": "S1",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -321,6 +334,7 @@ const examplePlan = new azure.appservice.Plan("examplePlan", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Windows Container)
@@ -353,6 +367,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -390,6 +405,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -408,9 +424,11 @@ example_plan = azure.appservice.Plan("examplePlan",
         "size": "PC2",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -427,6 +445,7 @@ const examplePlan = new azure.appservice.Plan("examplePlan", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

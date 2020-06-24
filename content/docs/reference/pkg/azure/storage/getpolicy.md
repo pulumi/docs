@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPolicy function of the storage module, including exam
 
 Use this data source to access information about an existing Storage Management Policy.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ example_account = azure.storage.get_account(name="storageaccountname",
     resource_group_name="resourcegroupname")
 example_policy = azure.storage.get_policy(storage_account_id=azurerm_storage_account["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -95,6 +98,7 @@ const examplePolicy = azure.storage.getPolicy({
     storageAccountId: azurerm_storage_account.example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

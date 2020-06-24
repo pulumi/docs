@@ -12,7 +12,6 @@ meta_desc: "Explore the FunctionAppSlot resource of the appservice module, inclu
 
 Manages a Function App deployment Slot.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -135,6 +135,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -169,9 +170,11 @@ example_function_app_slot = azure.appservice.FunctionAppSlot("exampleFunctionApp
     storage_account_name=example_account.name,
     storage_account_access_key=example_account.primary_access_key)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -207,6 +210,7 @@ const exampleFunctionAppSlot = new azure.appservice.FunctionAppSlot("exampleFunc
     storageAccountAccessKey: exampleAccount.primaryAccessKey,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

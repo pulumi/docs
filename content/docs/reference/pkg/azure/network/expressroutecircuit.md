@@ -12,7 +12,6 @@ meta_desc: "Explore the ExpressRouteCircuit resource of the network module, incl
 
 Manages an ExpressRoute circuit.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -115,9 +116,11 @@ example_express_route_circuit = azure.network.ExpressRouteCircuit("exampleExpres
         "environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -138,6 +141,7 @@ const exampleExpressRouteCircuit = new azure.network.ExpressRouteCircuit("exampl
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetAccount function of the automation module, including 
 
 Use this data source to access information about an existing Automation Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> AutomationAccountId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.automation.get_account(name="example-account",
     resource_group_name="example-resources")
 pulumi.export("automationAccountId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.automation.getAccount({
 });
 export const automationAccountId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

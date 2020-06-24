@@ -14,7 +14,6 @@ Manages an AzureNetwork DDoS Protection Plan.
 
 > **NOTE** Azure only allows `one` DDoS Protection Plan per region.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +86,11 @@ example_ddos_protection_plan = azure.network.DdosProtectionPlan("exampleDdosProt
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -98,6 +101,7 @@ const exampleDdosProtectionPlan = new azure.network.DdosProtectionPlan("exampleD
     resourceGroupName: exampleResourceGroup.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

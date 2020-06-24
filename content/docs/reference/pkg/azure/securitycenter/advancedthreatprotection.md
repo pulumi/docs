@@ -12,7 +12,6 @@ meta_desc: "Explore the AdvancedThreatProtection resource of the securitycenter 
 
 Manages a resources Advanced Threat Protection setting.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -115,9 +116,11 @@ example_advanced_threat_protection = azure.securitycenter.AdvancedThreatProtecti
     target_resource_id=example_account.id,
     enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -137,6 +140,7 @@ const exampleAdvancedThreatProtection = new azure.securitycenter.AdvancedThreatP
     enabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

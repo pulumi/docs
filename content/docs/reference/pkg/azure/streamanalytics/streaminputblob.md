@@ -12,7 +12,6 @@ meta_desc: "Explore the StreamInputBlob resource of the streamanalytics module, 
 
 Manages a Stream Analytics Stream Input Blob.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -132,6 +132,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -164,9 +165,11 @@ example_stream_input_blob = azure.streamanalytics.StreamInputBlob("exampleStream
         "encoding": "UTF8",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -203,6 +206,7 @@ const exampleStreamInputBlob = new azure.streamanalytics.StreamInputBlob("exampl
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the SubnetNatGatewayAssociation resource of the network modu
 
 Associates a NAT Gateway with a Subnet within a Virtual Network.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -63,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -121,6 +121,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -144,9 +145,11 @@ example_subnet_nat_gateway_association = azure.network.SubnetNatGatewayAssociati
     subnet_id=example_subnet.id,
     nat_gateway_id=example_nat_gateway.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -171,6 +174,7 @@ const exampleSubnetNatGatewayAssociation = new azure.network.SubnetNatGatewayAss
     natGatewayId: exampleNatGateway.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

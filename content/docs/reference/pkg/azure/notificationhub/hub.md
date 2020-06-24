@@ -12,7 +12,6 @@ meta_desc: "Explore the Hub resource of the notificationhub module, including ex
 
 Manages a Notification Hub within a Notification Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -107,9 +108,11 @@ example_hub = azure.notificationhub.Hub("exampleHub",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -127,6 +130,7 @@ const exampleHub = new azure.notificationhub.Hub("exampleHub", {
     location: exampleResourceGroup.location,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

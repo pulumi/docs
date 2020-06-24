@@ -12,7 +12,6 @@ meta_desc: "Explore the OutputMssql resource of the streamanalytics module, incl
 
 Manages a Stream Analytics Output to Microsoft SQL Server Database.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -133,6 +133,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -166,9 +167,11 @@ example_output_mssql = azure.streamanalytics.OutputMssql("exampleOutputMssql",
     database=example_database.name,
     table="ExampleTable")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -206,6 +209,7 @@ const exampleOutputMssql = new azure.streamanalytics.OutputMssql("exampleOutputM
     table: "ExampleTable",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

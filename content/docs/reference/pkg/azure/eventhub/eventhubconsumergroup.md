@@ -12,7 +12,6 @@ meta_desc: "Explore the EventHubConsumerGroup resource of the eventhub module, i
 
 Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -114,6 +114,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -141,9 +142,11 @@ example_consumer_group = azure.eventhub.ConsumerGroup("exampleConsumerGroup",
     resource_group_name=example_resource_group.name,
     user_metadata="some-meta-data")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -171,6 +174,7 @@ const exampleConsumerGroup = new azure.eventhub.ConsumerGroup("exampleConsumerGr
     userMetadata: "some-meta-data",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

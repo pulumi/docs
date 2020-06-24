@@ -12,7 +12,6 @@ meta_desc: "Explore the ProtectionContainerMapping resource of the siterecovery 
 
 Manages a Azure recovery vault protection container mapping. A protection container mapping decides how to translate the protection container when a VM is migrated from one region to another.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -85,6 +84,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -131,9 +131,11 @@ container_mapping = azure.siterecovery.ProtectionContainerMapping("container-map
     recovery_target_protection_container_id=secondary_protection_container.id,
     recovery_replication_policy_id=policy.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -180,6 +182,7 @@ const container_mapping = new azure.siterecovery.ProtectionContainerMapping("con
     recoveryReplicationPolicyId: policy.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

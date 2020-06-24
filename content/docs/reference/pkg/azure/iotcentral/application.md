@@ -12,7 +12,6 @@ meta_desc: "Explore the Application resource of the iotcentral module, including
 
 Manages an IoT Central Application
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,6 +86,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ example_application = azure.iotcentral.Application("exampleApplication",
         "Foo": "Bar",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -125,6 +128,7 @@ const exampleApplication = new azure.iotcentral.Application("exampleApplication"
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

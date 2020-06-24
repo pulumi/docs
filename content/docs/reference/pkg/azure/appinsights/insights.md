@@ -12,7 +12,6 @@ meta_desc: "Explore the Insights resource of the appinsights module, including e
 
 Manages an Application Insights component.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
     public Output<string> AppId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,6 +81,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_insights = azure.appinsights.Insights("exampleInsights",
 pulumi.export("instrumentationKey", example_insights.instrumentation_key)
 pulumi.export("appId", example_insights.app_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -112,6 +115,7 @@ const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
 export const instrumentationKey = exampleInsights.instrumentationKey;
 export const appId = exampleInsights.appId;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

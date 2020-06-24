@@ -12,7 +12,6 @@ meta_desc: "Explore the ManagementGroup resource of the managementgroups module,
 
 Manages a Management Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +71,11 @@ example_child = azure.management.Group("exampleChild",
     subscription_ids=[current.subscription_id])
 # other subscription IDs can go here
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -90,6 +92,7 @@ const exampleChild = new azure.management.Group("exampleChild", {
 });
 // other subscription IDs can go here
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

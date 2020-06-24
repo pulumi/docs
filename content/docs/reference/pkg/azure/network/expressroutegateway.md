@@ -12,7 +12,6 @@ meta_desc: "Explore the ExpressRouteGateway resource of the network module, incl
 
 Manages an ExpressRoute gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -110,6 +110,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -135,9 +136,11 @@ example_express_route_gateway = azure.network.ExpressRouteGateway("exampleExpres
         "environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -163,6 +166,7 @@ const exampleExpressRouteGateway = new azure.network.ExpressRouteGateway("exampl
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedServiceMysql resource of the datafactory module, i
 
 Manages a Linked Service (connection) between MySQL and Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ example_linked_service_mysql = azure.datafactory.LinkedServiceMysql("exampleLink
     data_factory_name=example_factory.name,
     connection_string="Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -119,6 +122,7 @@ const exampleLinkedServiceMysql = new azure.datafactory.LinkedServiceMysql("exam
     connectionString: "Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

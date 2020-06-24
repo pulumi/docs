@@ -12,7 +12,6 @@ meta_desc: "Explore the AAAARecord resource of the privatedns module, including 
 
 Enables you to manage DNS AAAA Records within Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,6 +92,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -110,9 +111,11 @@ test_aaaa_record = azure.privatedns.AAAARecord("testAAAARecord",
         "fd5d:70bc:930e:d008::7335",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -129,6 +132,7 @@ const testAAAARecord = new azure.privatedns.AAAARecord("testAAAARecord", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

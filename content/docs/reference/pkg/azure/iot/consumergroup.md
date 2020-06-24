@@ -12,7 +12,6 @@ meta_desc: "Explore the ConsumerGroup resource of the iot module, including exam
 
 Manages a Consumer Group within an IotHub
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,6 +101,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -124,9 +125,11 @@ example_consumer_group = azure.iot.ConsumerGroup("exampleConsumerGroup",
     eventhub_endpoint_name="events",
     resource_group_name=example_resource_group.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -149,6 +152,7 @@ const exampleConsumerGroup = new azure.iot.ConsumerGroup("exampleConsumerGroup",
     resourceGroupName: exampleResourceGroup.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

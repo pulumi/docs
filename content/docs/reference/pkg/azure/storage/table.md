@@ -12,7 +12,6 @@ meta_desc: "Explore the Table resource of the storage module, including examples
 
 Manages a Table within an Azure Storage Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -100,9 +101,11 @@ example_account = azure.storage.Account("exampleAccount",
     account_replication_type="LRS")
 example_table = azure.storage.Table("exampleTable", storage_account_name=example_account.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -116,6 +119,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 });
 const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName: exampleAccount.name});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

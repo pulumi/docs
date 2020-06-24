@@ -12,7 +12,6 @@ meta_desc: "Explore the ARecord resource of the dns module, including examples, 
 
 Enables you to manage DNS A Records within Azure DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ example_a_record = azure.dns.ARecord("exampleARecord",
     ttl=300,
     records=["10.0.180.17"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -121,6 +124,7 @@ const exampleARecord = new azure.dns.ARecord("exampleARecord", {
     records: ["10.0.180.17"],
 });
 ```
+
 {{% /example %}}
 
 ### Alias Record)
@@ -159,6 +163,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -208,6 +213,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -228,9 +234,11 @@ example_a_record = azure.dns.ARecord("exampleARecord",
     ttl=300,
     target_resource_id=example_public_ip.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -250,6 +258,7 @@ const exampleARecord = new azure.dns.ARecord("exampleARecord", {
     targetResourceId: examplePublicIp.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

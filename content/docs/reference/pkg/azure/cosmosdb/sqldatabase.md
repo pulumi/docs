@@ -12,7 +12,6 @@ meta_desc: "Explore the SqlDatabase resource of the cosmosdb module, including e
 
 Manages a SQL Database within a Cosmos DB Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,6 +74,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ example_sql_database = azure.cosmosdb.SqlDatabase("exampleSqlDatabase",
     account_name=example_account.name,
     throughput=400)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -105,6 +108,7 @@ const exampleSqlDatabase = new azure.cosmosdb.SqlDatabase("exampleSqlDatabase", 
     throughput: 400,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

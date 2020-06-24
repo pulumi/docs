@@ -12,7 +12,6 @@ meta_desc: "Explore the GetService function of the healthcare module, including 
 
 Use this data source to access information about an existing Healthcare Service
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> HealthcareServiceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.healthcare.get_service(name="example-healthcare_service",
     location="westus2")
 pulumi.export("healthcareServiceId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.healthcare.getService({
 });
 export const healthcareServiceId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

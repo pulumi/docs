@@ -12,8 +12,6 @@ meta_desc: "Explore the VirtualNetworkPeering resource of the network module, in
 
 Manages a virtual network peering which allows resources to access other
 resources in the linked virtual network.
-
-
 ## Note
 
 Virtual Network peerings cannot be created, updated or deleted concurrently.
@@ -70,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,9 +98,11 @@ example_2_virtual_network_peering = azure.network.VirtualNetworkPeering("example
     virtual_network_name=example_2_virtual_network.name,
     remote_virtual_network_id=example_1_virtual_network.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -128,6 +129,7 @@ const example_2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("
     remoteVirtualNetworkId: example_1VirtualNetwork.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -335,7 +337,7 @@ remote virtual network.  Changing this forces a new resource to be created.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.
 {{% /md %}}</dd>
 
@@ -444,7 +446,7 @@ remote virtual network.  Changing this forces a new resource to be created.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.
 {{% /md %}}</dd>
 
@@ -553,7 +555,7 @@ remote virtual network.  Changing this forces a new resource to be created.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.
 {{% /md %}}</dd>
 
@@ -662,7 +664,7 @@ remote virtual network.  Changing this forces a new resource to be created.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.
 {{% /md %}}</dd>
 
@@ -1025,7 +1027,7 @@ remote virtual network.  Changing this forces a new resource to be created.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.
 {{% /md %}}</dd>
 
@@ -1134,7 +1136,7 @@ remote virtual network.  Changing this forces a new resource to be created.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.
 {{% /md %}}</dd>
 
@@ -1243,7 +1245,7 @@ remote virtual network.  Changing this forces a new resource to be created.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.
 {{% /md %}}</dd>
 
@@ -1352,7 +1354,7 @@ remote virtual network.  Changing this forces a new resource to be created.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.
 {{% /md %}}</dd>
 

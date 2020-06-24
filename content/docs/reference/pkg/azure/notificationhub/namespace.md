@@ -12,7 +12,6 @@ meta_desc: "Explore the Namespace resource of the notificationhub module, includ
 
 Manages a Notification Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ example_namespace = azure.notificationhub.Namespace("exampleNamespace",
     namespace_type="NotificationHub",
     sku_name="Free")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -104,6 +107,7 @@ const exampleNamespace = new azure.notificationhub.Namespace("exampleNamespace",
     skuName: "Free",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

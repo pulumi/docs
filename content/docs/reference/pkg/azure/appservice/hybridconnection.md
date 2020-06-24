@@ -12,7 +12,6 @@ meta_desc: "Explore the HybridConnection resource of the appservice module, incl
 
 Manages an App Service Hybrid Connection for an existing App Service, Relay and Service Bus.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,6 +71,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -111,9 +111,11 @@ example_appservice_hybrid_connection_hybrid_connection = azure.appservice.Hybrid
     port=8080,
     send_key_name="exampleSharedAccessKey")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -151,6 +153,7 @@ const exampleAppservice_hybridConnectionHybridConnection = new azure.appservice.
     sendKeyName: "exampleSharedAccessKey",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

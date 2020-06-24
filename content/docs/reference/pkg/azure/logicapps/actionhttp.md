@@ -12,7 +12,6 @@ meta_desc: "Explore the ActionHttp resource of the logicapps module, including e
 
 Manages an HTTP Action within a Logic App Workflow
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ example_action_http = azure.logicapps.ActionHttp("exampleActionHttp",
     method="GET",
     uri="http://example.com/some-webhook")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -119,6 +122,7 @@ const exampleActionHttp = new azure.logicapps.ActionHttp("exampleActionHttp", {
     uri: "http://example.com/some-webhook",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -1227,7 +1231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.
+    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered. Possible values include `Succeeded`, `Failed`, `Skipped` and `TimedOut`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1256,7 +1260,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.
+    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered. Possible values include `Succeeded`, `Failed`, `Skipped` and `TimedOut`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1285,7 +1289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.
+    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered. Possible values include `Succeeded`, `Failed`, `Skipped` and `TimedOut`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1314,7 +1318,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.
+    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered. Possible values include `Succeeded`, `Failed`, `Skipped` and `TimedOut`.
 {{% /md %}}</dd>
 
 </dl>

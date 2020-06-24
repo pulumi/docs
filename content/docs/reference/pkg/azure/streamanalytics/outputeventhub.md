@@ -12,7 +12,6 @@ meta_desc: "Explore the OutputEventHub resource of the streamanalytics module, i
 
 Manages a Stream Analytics Output to an EventHub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -130,6 +130,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -161,9 +162,11 @@ example_output_event_hub = azure.streamanalytics.OutputEventHub("exampleOutputEv
         "type": "Avro",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -199,6 +202,7 @@ const exampleOutputEventHub = new azure.streamanalytics.OutputEventHub("exampleO
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the EventHub resource of the eventhub module, including exam
 
 Manages a Event Hubs as a nested resource within a Event Hubs namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,6 +98,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -120,9 +121,11 @@ example_event_hub = azure.eventhub.EventHub("exampleEventHub",
     partition_count=2,
     message_retention=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -144,6 +147,7 @@ const exampleEventHub = new azure.eventhub.EventHub("exampleEventHub", {
     messageRetention: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

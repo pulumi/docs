@@ -12,7 +12,6 @@ meta_desc: "Explore the Application resource of the batch module, including exam
 
 Manages Azure Batch Application instance.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +80,11 @@ example_application = azure.batch.Application("exampleApplication",
     resource_group_name=example_resource_group.name,
     account_name=example_batch / account_account["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -105,6 +107,7 @@ const exampleApplication = new azure.batch.Application("exampleApplication", {
     accountName: exampleBatch / accountAccount.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

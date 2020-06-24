@@ -12,7 +12,6 @@ meta_desc: "Explore the FunctionApp resource of the appservice module, including
 
 Manages a Function App.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,6 +113,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -139,9 +140,11 @@ example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     app_service_plan_id=example_plan.id,
     storage_connection_string=example_account.primary_connection_string)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -168,6 +171,7 @@ const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp"
     storageConnectionString: exampleAccount.primaryConnectionString,
 });
 ```
+
 {{% /example %}}
 
 ### In A Consumption Plan)
@@ -213,6 +217,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -268,6 +273,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -295,9 +301,11 @@ example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     app_service_plan_id=example_plan.id,
     storage_connection_string=example_account.primary_connection_string)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -325,6 +333,7 @@ const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp"
     storageConnectionString: exampleAccount.primaryConnectionString,
 });
 ```
+
 {{% /example %}}
 
 ### Linux)
@@ -372,6 +381,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -429,6 +439,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -458,9 +469,11 @@ example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     storage_connection_string=example_account.primary_connection_string,
     os_type="linux")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -490,6 +503,7 @@ const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp"
     osType: "linux",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -706,7 +720,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A key-value pair of App Settings.
+    <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -933,7 +947,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A key-value pair of App Settings.
+    <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1160,7 +1174,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A key-value pair of App Settings.
+    <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1387,7 +1401,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A key-value pair of App Settings.
+    <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2028,7 +2042,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A key-value pair of App Settings.
+    <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2310,7 +2324,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A key-value pair of App Settings.
+    <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2592,7 +2606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A key-value pair of App Settings.
+    <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2874,7 +2888,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}A key-value pair of App Settings.
+    <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

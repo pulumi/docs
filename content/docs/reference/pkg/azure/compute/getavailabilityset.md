@@ -12,7 +12,6 @@ meta_desc: "Explore the GetAvailabilitySet function of the compute module, inclu
 
 Use this data source to access information about an existing Availability Set.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> AvailabilitySetId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.compute.get_availability_set(name="tf-appsecuritygroup",
     resource_group_name="my-resource-group")
 pulumi.export("availabilitySetId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.compute.getAvailabilitySet({
 });
 export const availabilitySetId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

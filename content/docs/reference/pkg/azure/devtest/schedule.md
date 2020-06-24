@@ -14,7 +14,6 @@ Manages automated startup and shutdown schedules for Azure Dev Test Lab.
 
 
 
-
 ## Create a Schedule Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

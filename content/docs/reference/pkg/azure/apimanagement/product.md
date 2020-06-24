@@ -12,7 +12,6 @@ meta_desc: "Explore the Product resource of the apimanagement module, including 
 
 Manages an API Management Product.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -122,9 +123,11 @@ example_product = azure.apimanagement.Product("exampleProduct",
     approval_required=True,
     published=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -147,6 +150,7 @@ const exampleProduct = new azure.apimanagement.Product("exampleProduct", {
     published: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

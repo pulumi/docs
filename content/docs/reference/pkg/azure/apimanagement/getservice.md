@@ -12,7 +12,6 @@ meta_desc: "Explore the GetService function of the apimanagement module, includi
 
 Use this data source to access information about an existing API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> ApiManagementId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.apimanagement.get_service(name="search-api",
     resource_group_name="search-service")
 pulumi.export("apiManagementId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.apimanagement.getService({
 });
 export const apiManagementId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -268,6 +272,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getserviceadditionallocation">List&lt;Get<wbr>Service<wbr>Additional<wbr>Location&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="developerportalurl_csharp">
+<a href="#developerportalurl_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -475,6 +490,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="developerportalurl_go">
+<a href="#developerportalurl_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="gatewayregionalurl_go">
 <a href="#gatewayregionalurl_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
 </span> 
@@ -678,6 +704,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="developerportalurl_nodejs">
+<a href="#developerportalurl_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="gatewayregionalurl_nodejs">
 <a href="#gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
 </span> 
@@ -877,6 +914,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getserviceadditionallocation">List[Get<wbr>Service<wbr>Additional<wbr>Location]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="developer_portal_url_python">
+<a href="#developer_portal_url_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portal_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"

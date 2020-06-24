@@ -12,7 +12,6 @@ meta_desc: "Explore the JobSchedule resource of the automation module, including
 
 Links an Automation Runbook and Schedule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,9 +91,11 @@ example = azure.automation.JobSchedule("example",
     runbook_name="Get-VirtualMachine",
     schedule_name="hour")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -108,6 +111,7 @@ const example = new azure.automation.JobSchedule("example", {
     scheduleName: "hour",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

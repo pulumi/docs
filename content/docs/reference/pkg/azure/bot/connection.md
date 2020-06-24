@@ -12,7 +12,6 @@ meta_desc: "Explore the Connection resource of the bot module, including example
 
 Manages a Bot Connection.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,9 +78,11 @@ example_connection = azure.bot.Connection("exampleConnection",
     client_id="exampleId",
     client_secret="exampleSecret")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -102,6 +104,7 @@ const exampleConnection = new azure.bot.Connection("exampleConnection", {
     clientSecret: "exampleSecret",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

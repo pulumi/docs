@@ -12,7 +12,6 @@ meta_desc: "Explore the TriggerRecurrence resource of the logicapps module, incl
 
 Manages a Recurrence Trigger within a Logic App Workflow
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ example_trigger_recurrence = azure.logicapps.TriggerRecurrence("exampleTriggerRe
     frequency="Day",
     interval=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -119,6 +122,7 @@ const exampleTriggerRecurrence = new azure.logicapps.TriggerRecurrence("exampleT
     interval: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

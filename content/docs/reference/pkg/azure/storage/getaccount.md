@@ -12,7 +12,6 @@ meta_desc: "Explore the GetAccount function of the storage module, including exa
 
 Use this data source to access information about an existing Storage Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> StorageAccountTier { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.storage.get_account(name="packerimages",
     resource_group_name="packer-storage")
 pulumi.export("storageAccountTier", example.account_tier)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.storage.getAccount({
 });
 export const storageAccountTier = example.then(example => example.accountTier);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

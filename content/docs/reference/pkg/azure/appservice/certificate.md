@@ -23,7 +23,7 @@ Manages an App Service certificate.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#Certificate">Certificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_vault_secret_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>pfx_blob=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#Certificate">Certificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hosting_environment_profile_id=None<span class="p">, </span>key_vault_secret_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>pfx_blob=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -208,6 +208,17 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hostingenvironmentprofileid_csharp">
+<a href="#hostingenvironmentprofileid_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyvaultsecretid_csharp">
 <a href="#keyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
 </span> 
@@ -287,6 +298,17 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostingenvironmentprofileid_go">
+<a href="#hostingenvironmentprofileid_go" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,6 +396,17 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hostingenvironmentprofileid_nodejs">
+<a href="#hostingenvironmentprofileid_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyvaultsecretid_nodejs">
 <a href="#keyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Id</a>
 </span> 
@@ -453,6 +486,17 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hosting_environment_profile_id_python">
+<a href="#hosting_environment_profile_id_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -926,7 +970,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>expiration_date=None<span class="p">, </span>friendly_name=None<span class="p">, </span>host_names=None<span class="p">, </span>issue_date=None<span class="p">, </span>issuer=None<span class="p">, </span>key_vault_secret_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>pfx_blob=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>subject_name=None<span class="p">, </span>tags=None<span class="p">, </span>thumbprint=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>expiration_date=None<span class="p">, </span>friendly_name=None<span class="p">, </span>host_names=None<span class="p">, </span>hosting_environment_profile_id=None<span class="p">, </span>issue_date=None<span class="p">, </span>issuer=None<span class="p">, </span>key_vault_secret_id=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>pfx_blob=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>subject_name=None<span class="p">, </span>tags=None<span class="p">, </span>thumbprint=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1071,6 +1115,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of host names the certificate applies to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_hostingenvironmentprofileid_csharp">
+<a href="#state_hostingenvironmentprofileid_csharp" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1235,6 +1290,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hostingenvironmentprofileid_go">
+<a href="#state_hostingenvironmentprofileid_go" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuedate_go">
 <a href="#state_issuedate_go" style="color: inherit; text-decoration: inherit;">Issue<wbr>Date</a>
 </span> 
@@ -1395,6 +1461,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hostingenvironmentprofileid_nodejs">
+<a href="#state_hostingenvironmentprofileid_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuedate_nodejs">
 <a href="#state_issuedate_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Date</a>
 </span> 
@@ -1551,6 +1628,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of host names the certificate applies to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_hosting_environment_profile_id_python">
+<a href="#state_hosting_environment_profile_id_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified when the certificate is for an App Service Environment hosted App Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -12,7 +12,6 @@ meta_desc: "Explore the MongoCollection resource of the cosmosdb module, includi
 
 Manages a Mongo Collection within a Cosmos DB Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,6 +92,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,9 +113,11 @@ example_mongo_collection = azure.cosmosdb.MongoCollection("exampleMongoCollectio
     shard_key="uniqueKey",
     throughput=400)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +139,7 @@ const exampleMongoCollection = new azure.cosmosdb.MongoCollection("exampleMongoC
     throughput: 400,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

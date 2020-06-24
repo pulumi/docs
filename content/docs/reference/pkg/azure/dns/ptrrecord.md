@@ -12,7 +12,6 @@ meta_desc: "Explore the PtrRecord resource of the dns module, including examples
 
 Enables you to manage DNS PTR Records within Azure DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ example_ptr_record = azure.dns.PtrRecord("examplePtrRecord",
     ttl=300,
     records=["yourdomain.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -121,6 +124,7 @@ const examplePtrRecord = new azure.dns.PtrRecord("examplePtrRecord", {
     records: ["yourdomain.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

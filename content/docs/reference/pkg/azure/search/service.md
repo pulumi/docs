@@ -12,7 +12,6 @@ meta_desc: "Explore the Service resource of the search module, including example
 
 Manages a Search Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,6 +73,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -86,9 +87,11 @@ example_service = azure.search.Service("exampleService",
     location=example_resource_group.location,
     sku="standard")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -100,6 +103,7 @@ const exampleService = new azure.search.Service("exampleService", {
     sku: "standard",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

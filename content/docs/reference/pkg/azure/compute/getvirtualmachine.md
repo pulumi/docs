@@ -12,7 +12,6 @@ meta_desc: "Explore the GetVirtualMachine function of the compute module, includ
 
 Use this data source to access information about an existing Virtual Machine.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> VirtualMachineId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.compute.get_virtual_machine(name="production",
     resource_group_name="networking")
 pulumi.export("virtualMachineId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.compute.getVirtualMachine({
 });
 export const virtualMachineId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

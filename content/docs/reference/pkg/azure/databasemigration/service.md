@@ -14,7 +14,6 @@ Manages a Azure Database Migration Service.
 
 > **NOTE:** Destroying a Database Migration Service will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provide.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -111,6 +111,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -133,9 +134,11 @@ example_service = azure.databasemigration.Service("exampleService",
     subnet_id=example_subnet.id,
     sku_name="Standard_1vCores")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -158,6 +161,7 @@ const exampleService = new azure.databasemigration.Service("exampleService", {
     skuName: "Standard_1vCores",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

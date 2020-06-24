@@ -12,7 +12,6 @@ meta_desc: "Explore the ProductGroup resource of the apimanagement module, inclu
 
 Manages an API Management Product Assignment to a Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -65,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -114,6 +114,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -135,9 +136,11 @@ example_product_group = azure.apimanagement.ProductGroup("exampleProductGroup",
     api_management_name=example_service.name,
     resource_group_name=example_service.resource_group_name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -163,6 +166,7 @@ const exampleProductGroup = new azure.apimanagement.ProductGroup("exampleProduct
     resourceGroupName: exampleService.then(exampleService => exampleService.resourceGroupName),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

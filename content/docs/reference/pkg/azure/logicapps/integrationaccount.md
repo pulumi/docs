@@ -12,7 +12,6 @@ meta_desc: "Explore the IntegrationAccount resource of the logicapps module, inc
 
 Manages a Logic App Integration Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_integration_account = azure.logicapps.IntegrationAccount("exampleIntegra
         "foo": "bar",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -113,6 +116,7 @@ const exampleIntegrationAccount = new azure.logicapps.IntegrationAccount("exampl
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

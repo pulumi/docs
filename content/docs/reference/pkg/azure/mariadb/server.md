@@ -12,7 +12,6 @@ meta_desc: "Explore the Server resource of the mariadb module, including example
 
 Manages a MariaDB Server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,6 +91,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_server = azure.mariadb.Server("exampleServer",
     public_network_access_enabled=False,
     ssl_enforcement_enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +139,7 @@ const exampleServer = new azure.mariadb.Server("exampleServer", {
     sslEnforcementEnabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

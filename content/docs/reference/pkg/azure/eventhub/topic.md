@@ -14,7 +14,6 @@ Manages a ServiceBus Topic.
 
 **Note** Topics can only be created in Namespaces with an SKU of `standard` or higher.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +117,11 @@ example_topic = azure.servicebus.Topic("exampleTopic",
     namespace_name=example_namespace.name,
     enable_partitioning=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -138,6 +141,7 @@ const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
     enablePartitioning: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

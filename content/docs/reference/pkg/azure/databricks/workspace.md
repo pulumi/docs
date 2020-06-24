@@ -12,7 +12,6 @@ meta_desc: "Explore the Workspace resource of the databricks module, including e
 
 Manages a Databricks Workspace
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_workspace = azure.databricks.Workspace("exampleWorkspace",
         "Environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -113,6 +116,7 @@ const exampleWorkspace = new azure.databricks.Workspace("exampleWorkspace", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

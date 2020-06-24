@@ -12,7 +12,6 @@ meta_desc: "Explore the GetServiceTags function of the network module, including
 
 Use this data source to access information about Service Tags.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> AddressPrefixes { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.network.get_service_tags(location="West Europe",
     location_filter="northeurope")
 pulumi.export("addressPrefixes", data["azurerm_service_tags"]["example"]["address_prefixes"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.network.getServiceTags({
 });
 export const addressPrefixes = data.azurerm_service_tags.example.address_prefixes;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

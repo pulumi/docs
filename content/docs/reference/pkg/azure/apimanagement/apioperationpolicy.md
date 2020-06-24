@@ -14,7 +14,6 @@ Manages an API Management API Operation Policy
 
 
 
-
 ## Create a ApiOperationPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

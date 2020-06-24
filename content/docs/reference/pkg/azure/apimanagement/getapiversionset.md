@@ -12,7 +12,6 @@ meta_desc: "Explore the GetApiVersionSet function of the apimanagement module, i
 
 Uses this data source to access information about an API Version Set within an API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> ApiManagementApiVersionSetId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.apimanagement.get_api_version_set(resource_group_name="example-r
     name="example-api-version-set")
 pulumi.export("apiManagementApiVersionSetId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.apimanagement.getApiVersionSet({
 });
 export const apiManagementApiVersionSetId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

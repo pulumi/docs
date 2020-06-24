@@ -12,7 +12,6 @@ meta_desc: "Explore the GetVirtualNetwork function of the network module, includ
 
 Use this data source to access information about an existing Virtual Network.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> VirtualNetworkId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.network.get_virtual_network(name="production",
     resource_group_name="networking")
 pulumi.export("virtualNetworkId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.network.getVirtualNetwork({
 });
 export const virtualNetworkId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

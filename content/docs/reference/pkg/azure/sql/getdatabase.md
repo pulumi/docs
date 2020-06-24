@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDatabase function of the sql module, including exampl
 
 Use this data source to access information about an existing SQL Azure Database.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> SqlDatabaseId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.sql.get_database(name="example_db",
     resource_group_name="example-resources")
 pulumi.export("sqlDatabaseId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.sql.getDatabase({
 });
 export const sqlDatabaseId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

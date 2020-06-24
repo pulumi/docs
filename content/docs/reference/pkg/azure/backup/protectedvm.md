@@ -12,7 +12,6 @@ meta_desc: "Explore the ProtectedVM resource of the backup module, including exa
 
 Manages Azure Backup for an Azure VM
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -111,6 +111,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -136,9 +137,11 @@ vm1 = azure.backup.ProtectedVM("vm1",
     source_vm_id=azurerm_virtual_machine["example"]["id"],
     backup_policy_id=example_policy_vm.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -164,6 +167,7 @@ const vm1 = new azure.backup.ProtectedVM("vm1", {
     backupPolicyId: examplePolicyVM.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

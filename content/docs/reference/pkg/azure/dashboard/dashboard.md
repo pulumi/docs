@@ -12,7 +12,6 @@ meta_desc: "Explore the Dashboard resource of the dashboard module, including ex
 
 Manages a shared dashboard in the Azure Portal.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -157,6 +156,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -293,9 +293,11 @@ my_board = azure.dashboard.Dashboard("my-board",
 }}
 """)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -422,6 +424,7 @@ const my_board = new azure.dashboard.Dashboard("my-board", {
 `),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

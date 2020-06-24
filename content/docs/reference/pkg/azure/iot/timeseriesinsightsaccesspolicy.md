@@ -12,7 +12,6 @@ meta_desc: "Explore the TimeSeriesInsightsAccessPolicy resource of the iot modul
 
 Manages an Azure IoT Time Series Insights Access Policy.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,6 +94,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,9 +113,11 @@ example_time_series_insights_access_policy = azure.iot.TimeSeriesInsightsAccessP
     principal_object_id="aGUID",
     roles=["Reader"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -132,6 +135,7 @@ const exampleTimeSeriesInsightsAccessPolicy = new azure.iot.TimeSeriesInsightsAc
     roles: ["Reader"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedServiceSqlServer resource of the datafactory modul
 
 Manages a Linked Service (connection) between a SQL Server and Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +102,11 @@ example_linked_service_sql_server = azure.datafactory.LinkedServiceSqlServer("ex
     data_factory_name=example_factory.name,
     connection_string="Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -119,6 +122,7 @@ const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServ
     connectionString: "Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

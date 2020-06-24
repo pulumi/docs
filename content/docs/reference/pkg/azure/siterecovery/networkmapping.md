@@ -12,7 +12,6 @@ meta_desc: "Explore the NetworkMapping resource of the siterecovery module, incl
 
 Manages a site recovery network mapping on Azure. A network mapping decides how to translate connected netwroks when a VM is migrated from one region to another.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -85,6 +84,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -127,9 +127,11 @@ recovery_mapping = azure.siterecovery.NetworkMapping("recovery-mapping",
     source_network_id=primary_virtual_network.id,
     target_network_id=secondary_virtual_network.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -171,6 +173,7 @@ const recovery_mapping = new azure.siterecovery.NetworkMapping("recovery-mapping
     targetNetworkId: secondaryVirtualNetwork.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

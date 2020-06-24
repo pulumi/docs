@@ -12,7 +12,6 @@ meta_desc: "Explore the Policy resource of the devtest module, including example
 
 Manages a Policy within a Dev Test Policy Set.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -105,6 +105,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -130,9 +131,11 @@ example_policy = azure.devtest.Policy("examplePolicy",
         "Acceptance": "Test",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -157,6 +160,7 @@ const examplePolicy = new azure.devtest.Policy("examplePolicy", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

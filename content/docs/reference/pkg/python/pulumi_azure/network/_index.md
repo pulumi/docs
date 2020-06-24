@@ -5371,7 +5371,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>storage_location</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id3"><span class="problematic" id="id4">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id3"><span class="problematic" id="id4">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
@@ -5429,7 +5429,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_location</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkPacketCapture.storage_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_location</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id5"><span class="problematic" id="id6">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id5"><span class="problematic" id="id6">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
@@ -5474,7 +5474,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>storage_location</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id7"><span class="problematic" id="id8">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id7"><span class="problematic" id="id8">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
@@ -6361,7 +6361,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>storage_location</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id25"><span class="problematic" id="id26">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id25"><span class="problematic" id="id26">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
@@ -6419,7 +6419,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_location</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.storage_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_location</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id27"><span class="problematic" id="id28">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id27"><span class="problematic" id="id28">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
@@ -6464,7 +6464,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>storage_location</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id29"><span class="problematic" id="id30">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id29"><span class="problematic" id="id30">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
@@ -10045,7 +10045,7 @@ forces a new resource to be created.</p></li>
 <li><p><strong>remote_virtual_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.</p></li>
 <li><p><strong>use_remote_gateways</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls if remote gateways can be used on
 the local virtual network. If the flag is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, and
@@ -10098,7 +10098,7 @@ remote virtual network.  Changing this forces a new resource to be created.</p>
 <dt id="pulumi_azure.network.VirtualNetworkPeering.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkPeering.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.</p>
 </dd></dl>
 
@@ -10143,7 +10143,7 @@ forces a new resource to be created.</p></li>
 <li><p><strong>remote_virtual_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full Azure resource ID of the
 remote virtual network.  Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the virtual network. Changing this forces a new resource to be
+create the virtual network peering. Changing this forces a new resource to be
 created.</p></li>
 <li><p><strong>use_remote_gateways</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls if remote gateways can be used on
 the local virtual network. If the flag is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, and

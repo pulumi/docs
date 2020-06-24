@@ -12,7 +12,6 @@ meta_desc: "Explore the ChannelsRegistration resource of the bot module, includi
 
 Manages a Bot Channels Registration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +62,11 @@ example_channels_registration = azure.bot.ChannelsRegistration("exampleChannelsR
     sku="F0",
     microsoft_app_id=current.client_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -78,6 +80,7 @@ const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleC
     microsoftAppId: current.then(current => current.clientId),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

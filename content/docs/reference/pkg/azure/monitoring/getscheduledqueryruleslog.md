@@ -12,7 +12,6 @@ meta_desc: "Explore the GetScheduledQueryRulesLog function of the monitoring mod
 
 Use this data source to access the properties of a LogToMetricAction scheduled query rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> QueryRuleId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.monitoring.get_scheduled_query_rules_log(name="tfex-queryrule",
     resource_group_name="example-rg")
 pulumi.export("queryRuleId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -88,6 +91,7 @@ const example = pulumi.output(azure.monitoring.getScheduledQueryRulesLog({
 
 export const queryRuleId = example.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

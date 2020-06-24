@@ -12,7 +12,6 @@ meta_desc: "Explore the AnalyticsItem resource of the appinsights module, includ
 
 Manages an Application Insights Analytics Item component.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,6 +89,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -107,9 +108,11 @@ example_analytics_item = azure.appinsights.AnalyticsItem("exampleAnalyticsItem",
     scope="shared",
     type="query")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -127,6 +130,7 @@ const exampleAnalyticsItem = new azure.appinsights.AnalyticsItem("exampleAnalyti
     type: "query",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

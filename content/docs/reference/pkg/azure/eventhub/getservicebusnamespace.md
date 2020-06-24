@@ -12,7 +12,6 @@ meta_desc: "Explore the GetServiceBusNamespace function of the eventhub module, 
 
 Use this data source to access information about an existing ServiceBus Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> Location { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.servicebus.get_namespace(name="examplenamespace",
     resource_group_name="example-resources")
 pulumi.export("location", example.location)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.servicebus.getNamespace({
 });
 export const location = example.then(example => example.location);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

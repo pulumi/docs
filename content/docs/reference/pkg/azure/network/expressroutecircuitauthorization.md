@@ -12,7 +12,6 @@ meta_desc: "Explore the ExpressRouteCircuitAuthorization resource of the network
 
 Manages an ExpressRoute Circuit Authorization.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,6 +107,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -133,9 +134,11 @@ example_express_route_circuit_authorization = azure.network.ExpressRouteCircuitA
     express_route_circuit_name=example_express_route_circuit.name,
     resource_group_name=example_resource_group.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -161,6 +164,7 @@ const exampleExpressRouteCircuitAuthorization = new azure.network.ExpressRouteCi
     resourceGroupName: exampleResourceGroup.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -15,7 +15,6 @@ Use this data source to access information about an existing Key Vault Certifica
 > **Note:** All arguments including the secret value will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
     public Output<string> CertificateThumbprint { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -91,9 +92,11 @@ example_certificate = azure.keyvault.get_certificate(name="secret-sauce",
     key_vault_id=example_key_vault.id)
 pulumi.export("certificateThumbprint", example_certificate.thumbprint)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -108,6 +111,7 @@ const exampleCertificate = exampleKeyVault.then(exampleKeyVault => azure.keyvaul
 }));
 export const certificateThumbprint = exampleCertificate.then(exampleCertificate => exampleCertificate.thumbprint);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

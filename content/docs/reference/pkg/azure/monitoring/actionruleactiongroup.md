@@ -12,7 +12,6 @@ meta_desc: "Explore the ActionRuleActionGroup resource of the monitoring module,
 
 Manages an Monitor Action Rule which type is action group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -104,6 +104,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -126,9 +127,11 @@ example_action_rule_action_group = azure.monitoring.ActionRuleActionGroup("examp
         "foo": "bar",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -150,6 +153,7 @@ const exampleActionRuleActionGroup = new azure.monitoring.ActionRuleActionGroup(
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

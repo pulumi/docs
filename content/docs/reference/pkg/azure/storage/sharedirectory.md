@@ -12,7 +12,6 @@ meta_desc: "Explore the ShareDirectory resource of the storage module, including
 
 Manages a Directory within an Azure Storage File Share.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,9 +120,11 @@ example_share_directory = azure.storage.ShareDirectory("exampleShareDirectory",
     share_name=example_share.name,
     storage_account_name=example_account.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -142,6 +145,7 @@ const exampleShareDirectory = new azure.storage.ShareDirectory("exampleShareDire
     storageAccountName: exampleAccount.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

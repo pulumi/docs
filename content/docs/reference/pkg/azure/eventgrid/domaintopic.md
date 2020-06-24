@@ -12,7 +12,6 @@ meta_desc: "Explore the DomainTopic resource of the eventgrid module, including 
 
 Manages an EventGrid Domain Topic
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,9 +109,11 @@ example_domain_topic = azure.eventgrid.DomainTopic("exampleDomainTopic",
     domain_name=example_domain.name,
     resource_group_name=example_resource_group.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -128,6 +131,7 @@ const exampleDomainTopic = new azure.eventgrid.DomainTopic("exampleDomainTopic",
     resourceGroupName: exampleResourceGroup.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

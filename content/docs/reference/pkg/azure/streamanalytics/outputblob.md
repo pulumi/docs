@@ -12,7 +12,6 @@ meta_desc: "Explore the OutputBlob resource of the streamanalytics module, inclu
 
 Manages a Stream Analytics Output to Blob Storage.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -134,6 +134,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -167,9 +168,11 @@ example_output_blob = azure.streamanalytics.OutputBlob("exampleOutputBlob",
         "fieldDelimiter": ",",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -207,6 +210,7 @@ const exampleOutputBlob = new azure.streamanalytics.OutputBlob("exampleOutputBlo
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Definition resource of the role module, including exampl
 
 Manages a custom Role Definition, used to assign Roles to Users/Principals. See ['Understand role definitions'](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions) in the Azure documentation for more details.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +73,11 @@ example = azure.authorization.RoleDefinition("example",
     }],
     assignable_scopes=[primary.id])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +93,7 @@ const example = new azure.authorization.RoleDefinition("example", {
     assignableScopes: [primary.then(primary => primary.id)],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

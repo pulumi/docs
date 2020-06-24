@@ -12,7 +12,6 @@ meta_desc: "Explore the GetNetworkWatcher function of the network module, includ
 
 Use this data source to access information about an existing Network Watcher.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> NetworkWatcherId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.network.get_network_watcher(name=azurerm_network_watcher["exampl
     resource_group_name=azurerm_resource_group["example"]["name"])
 pulumi.export("networkWatcherId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.network.getNetworkWatcher({
 });
 export const networkWatcherId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

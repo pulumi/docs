@@ -12,7 +12,6 @@ meta_desc: "Explore the CNameRecord resource of the dns module, including exampl
 
 Enables you to manage DNS CNAME Records within Azure DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -100,9 +101,11 @@ example_c_name_record = azure.dns.CNameRecord("exampleCNameRecord",
     ttl=300,
     record="contoso.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -116,6 +119,7 @@ const exampleCNameRecord = new azure.dns.CNameRecord("exampleCNameRecord", {
     record: "contoso.com",
 });
 ```
+
 {{% /example %}}
 
 ### Alias Record)
@@ -154,6 +158,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -202,6 +207,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -222,9 +228,11 @@ example_c_name_record = azure.dns.CNameRecord("exampleCNameRecord",
     ttl=300,
     target_resource_id=target.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -244,6 +252,7 @@ const exampleCNameRecord = new azure.dns.CNameRecord("exampleCNameRecord", {
     targetResourceId: target.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

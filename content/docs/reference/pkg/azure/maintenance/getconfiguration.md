@@ -12,7 +12,6 @@ meta_desc: "Explore the GetConfiguration function of the maintenance module, inc
 
 Use this data source to access information about an existing Maintenance Configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> Id { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ existing = azure.maintenance.get_configuration(name="example-mc",
     resource_group_name="example-resources")
 pulumi.export("id", azurerm_maintenance_configuration["existing"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const existing = azure.maintenance.getConfiguration({
 });
 export const id = azurerm_maintenance_configuration.existing.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

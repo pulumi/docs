@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityProviderAad resource of the apimanagement module
 
 Manages an API Management AAD Identity Provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,6 +100,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -121,9 +122,11 @@ example_identity_provider_aad = azure.apimanagement.IdentityProviderAad("example
     client_secret="00000000000000000000000000000000",
     allowed_tenants=["00000000-0000-0000-0000-000000000000"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -144,6 +147,7 @@ const exampleIdentityProviderAad = new azure.apimanagement.IdentityProviderAad("
     allowedTenants: ["00000000-0000-0000-0000-000000000000"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

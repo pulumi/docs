@@ -12,7 +12,6 @@ meta_desc: "Explore the Server resource of the mysql module, including examples,
 
 Manages a MySQL Server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,9 +120,11 @@ example_server = azure.mysql.Server("exampleServer",
     ssl_enforcement_enabled=True,
     ssl_minimal_tls_version_enforced="TLS1_2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -144,6 +147,7 @@ const exampleServer = new azure.mysql.Server("exampleServer", {
     sslMinimalTlsVersionEnforced: "TLS1_2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the CacheBlobTarget resource of the hpc module, including ex
 
 Manages a Blob Target within a HPC Cache.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -93,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -141,9 +141,11 @@ example_cache_blob_target = azure.hpc.CacheBlobTarget("exampleCacheBlobTarget",
     storage_container_id=example_container.resource_manager_id,
     namespace_path="/blob_storage")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -194,6 +196,7 @@ const exampleCacheBlobTarget = new azure.hpc.CacheBlobTarget("exampleCacheBlobTa
     namespacePath: "/blob_storage",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

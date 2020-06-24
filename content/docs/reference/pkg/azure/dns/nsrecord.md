@@ -12,7 +12,6 @@ meta_desc: "Explore the NsRecord resource of the dns module, including examples,
 
 Enables you to manage DNS NS Records within Azure DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -120,9 +121,11 @@ example_ns_record = azure.dns.NsRecord("exampleNsRecord",
         "Environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -142,6 +145,7 @@ const exampleNsRecord = new azure.dns.NsRecord("exampleNsRecord", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

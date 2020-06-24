@@ -14,7 +14,6 @@ Manages an API Management Product Policy
 
 
 
-
 ## Create a ProductPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

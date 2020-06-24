@@ -12,7 +12,6 @@ meta_desc: "Explore the Namespace resource of the eventhub module, including exa
 
 Manages a ServiceBus Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_namespace = azure.servicebus.Namespace("exampleNamespace",
         "source": "example",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -113,6 +116,7 @@ const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

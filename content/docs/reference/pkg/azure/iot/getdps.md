@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDps function of the iot module, including examples, i
 
 Use this data source to access information about an existing IotHub Device Provisioning Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_azure as azure
 example = azure.iot.get_dps(name="iot_hub_dps_test",
     resource_group_name="iothub_dps_rg")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -81,6 +84,7 @@ const example = pulumi.output(azure.iot.getDps({
     resourceGroupName: "iothub_dps_rg",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

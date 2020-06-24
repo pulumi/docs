@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedServiceDataLakeStorageGen2 resource of the datafac
 
 Manages a Linked Service (connection) between Data Lake Storage Gen2 and Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +74,11 @@ example_linked_service_data_lake_storage_gen2 = azure.datafactory.LinkedServiceD
     tenant="11111111-1111-1111-1111-111111111111",
     url="https://datalakestoragegen2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -96,6 +98,7 @@ const exampleLinkedServiceDataLakeStorageGen2 = new azure.datafactory.LinkedServ
     url: "https://datalakestoragegen2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

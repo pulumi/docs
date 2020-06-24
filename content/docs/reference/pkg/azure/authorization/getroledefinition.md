@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRoleDefinition function of the authorization module, 
 
 Use this data source to access information about an existing Role Definition.
 
-
 {{% examples %}}
 ## Example Usage
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Agreement resource of the marketplace module, including 
 
 Allows accepting the Legal Terms for a Marketplace Image.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ barracuda = azure.marketplace.Agreement("barracuda",
     plan="hourly",
     publisher="barracudanetworks")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const barracuda = new azure.marketplace.Agreement("barracuda", {
     publisher: "barracudanetworks",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

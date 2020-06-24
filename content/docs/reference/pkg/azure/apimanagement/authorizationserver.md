@@ -12,8 +12,6 @@ meta_desc: "Explore the AuthorizationServer resource of the apimanagement module
 
 Manages an Authorization Server within an API Management Service.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,6 +91,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,9 +112,11 @@ example_authorization_server = azure.apimanagement.AuthorizationServer("exampleA
     client_registration_endpoint="https://example.mydomain.com/client/register",
     grant_types=["authorizationCode"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -135,6 +137,7 @@ const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("
     grantTypes: ["authorizationCode"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

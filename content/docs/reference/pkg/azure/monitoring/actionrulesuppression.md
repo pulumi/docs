@@ -12,7 +12,6 @@ meta_desc: "Explore the ActionRuleSuppression resource of the monitoring module,
 
 Manages an Monitor Action Rule which type is suppression.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -119,6 +119,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -150,9 +151,11 @@ example_action_rule_suppression = azure.monitoring.ActionRuleSuppression("exampl
         "foo": "bar",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -182,6 +185,7 @@ const exampleActionRuleSuppression = new azure.monitoring.ActionRuleSuppression(
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

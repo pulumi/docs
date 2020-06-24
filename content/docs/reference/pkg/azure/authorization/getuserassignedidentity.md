@@ -12,7 +12,6 @@ meta_desc: "Explore the GetUserAssignedIdentity function of the authorization mo
 
 Use this data source to access information about an existing User Assigned Identity.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
     public Output<string> UaiPrincipalId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ example = azure.authorization.get_user_assigned_identity(name="name_of_user_assi
 pulumi.export("uaiClientId", example.client_id)
 pulumi.export("uaiPrincipalId", example.principal_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -93,6 +96,7 @@ const example = azure.authorization.getUserAssignedIdentity({
 export const uaiClientId = example.then(example => example.clientId);
 export const uaiPrincipalId = example.then(example => example.principalId);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

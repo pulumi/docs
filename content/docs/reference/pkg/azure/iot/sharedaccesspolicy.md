@@ -12,7 +12,6 @@ meta_desc: "Explore the SharedAccessPolicy resource of the iot module, including
 
 Manages an IotHub Shared Access Policy
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -117,9 +118,11 @@ example_shared_access_policy = azure.iot.SharedAccessPolicy("exampleSharedAccess
     registry_read=True,
     registry_write=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -140,6 +143,7 @@ const exampleSharedAccessPolicy = new azure.iot.SharedAccessPolicy("exampleShare
     registryWrite: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

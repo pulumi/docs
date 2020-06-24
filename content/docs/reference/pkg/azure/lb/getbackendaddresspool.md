@@ -12,7 +12,6 @@ meta_desc: "Explore the GetBackendAddressPool function of the lb module, includi
 
 Use this data source to access information about an existing Load Balancer's Backend Address Pool.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
     public Output<string> BackendIpConfigurationIds { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -94,9 +95,11 @@ example_backend_address_pool = azure.lb.get_backend_address_pool(name="first",
 pulumi.export("backendAddressPoolId", example_backend_address_pool.id)
 pulumi.export("backendIpConfigurationIds", [__item["id"] for __item in data["azurerm_lb_backend_address_pool"]["beap"]["backend_ip_configurations"]])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -112,6 +115,7 @@ const exampleBackendAddressPool = exampleLB.then(exampleLB => azure.lb.getBacken
 export const backendAddressPoolId = exampleBackendAddressPool.then(exampleBackendAddressPool => exampleBackendAddressPool.id);
 export const backendIpConfigurationIds = data.azurerm_lb_backend_address_pool.beap.backend_ip_configurations.map(__item => __item.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the PublicIp resource of the network module, including examp
 
 Manages a Public IP Address.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_public_ip = azure.network.PublicIp("examplePublicIp",
         "environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -113,6 +116,7 @@ const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

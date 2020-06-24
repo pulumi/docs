@@ -12,8 +12,6 @@ meta_desc: "Explore the GroupUser resource of the apimanagement module, includin
 
 Manages an API Management User Assignment to a Group.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -95,9 +95,11 @@ example_group_user = azure.apimanagement.GroupUser("exampleGroupUser",
     resource_group_name=example_user.resource_group_name,
     api_management_name=example_user.api_management_name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -114,6 +116,7 @@ const exampleGroupUser = new azure.apimanagement.GroupUser("exampleGroupUser", {
     apiManagementName: exampleUser.then(exampleUser => exampleUser.apiManagementName),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

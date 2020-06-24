@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPublicIP function of the network module, including ex
 
 Use this data source to access information about an existing Public IP Address.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
     public Output<string> PublicIpAddress { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ example = azure.network.get_public_ip(name="name_of_public_ip",
 pulumi.export("domainNameLabel", example.domain_name_label)
 pulumi.export("publicIpAddress", example.ip_address)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -93,6 +96,7 @@ const example = azure.network.getPublicIP({
 export const domainNameLabel = example.then(example => example.domainNameLabel);
 export const publicIpAddress = example.then(example => example.ipAddress);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

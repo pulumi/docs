@@ -14,7 +14,6 @@ Manages an EventGrid Topic
 
 > **Note:** at this time EventGrid Topic's are only available in a limited number of regions.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -95,9 +96,11 @@ example_topic = azure.eventgrid.Topic("exampleTopic",
         "environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -111,6 +114,7 @@ const exampleTopic = new azure.eventgrid.Topic("exampleTopic", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetDateTimeVariable function of the automation module, i
 
 Use this data source to access information about an existing Automation Datetime Variable.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> VariableId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -78,9 +78,11 @@ example = azure.automation.get_date_time_variable(name="tfex-example-var",
     automation_account_name="tfex-example-account")
 pulumi.export("variableId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -92,6 +94,7 @@ const example = azure.automation.getDateTimeVariable({
 });
 export const variableId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the RegistryWebhook resource of the containerservice module,
 
 Manages an Azure Container Registry Webhook.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -109,6 +109,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -134,9 +135,11 @@ webhook = azure.containerservice.RegistryWebhook("webhook",
         "Content-Type": "application/json",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -161,6 +164,7 @@ const webhook = new azure.containerservice.RegistryWebhook("webhook", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

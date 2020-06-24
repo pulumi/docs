@@ -12,7 +12,6 @@ meta_desc: "Explore the ConfigurationStore resource of the appconfiguration modu
 
 Manages an Azure App Configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +84,11 @@ appconf = azure.appconfiguration.ConfigurationStore("appconf",
     resource_group_name=rg.name,
     location=rg.location)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -96,6 +99,7 @@ const appconf = new azure.appconfiguration.ConfigurationStore("appconf", {
     location: rg.location,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetShare function of the datashare module, including exa
 
 Use this data source to access information about an existing Data Share.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
     public Output<string> Id { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ example_share = azure.datashare.get_share(name="existing",
     account_id=data["azurerm_data_share_account"]["exmaple"]["id"])
 pulumi.export("id", example_share.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -105,6 +108,7 @@ const exampleShare = azure.datashare.getShare({
 });
 export const id = exampleShare.then(exampleShare => exampleShare.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

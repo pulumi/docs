@@ -12,7 +12,6 @@ meta_desc: "Explore the Database resource of the postgresql module, including ex
 
 Manages a PostgreSQL Database within a PostgreSQL Server
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -105,6 +105,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -131,9 +132,11 @@ example_database = azure.postgresql.Database("exampleDatabase",
     charset="UTF8",
     collation="English_United States.1252")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -159,6 +162,7 @@ const exampleDatabase = new azure.postgresql.Database("exampleDatabase", {
     collation: "English_United States.1252",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

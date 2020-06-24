@@ -12,7 +12,6 @@ meta_desc: "Explore the TopicAuthorizationRule resource of the servicebus module
 
 Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -112,6 +112,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -138,9 +139,11 @@ example_topic_authorization_rule = azure.servicebus.TopicAuthorizationRule("exam
     send=False,
     manage=False)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -167,6 +170,7 @@ const exampleTopicAuthorizationRule = new azure.servicebus.TopicAuthorizationRul
     manage: false,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

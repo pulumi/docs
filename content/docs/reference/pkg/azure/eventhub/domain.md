@@ -12,7 +12,6 @@ meta_desc: "Explore the Domain resource of the eventhub module, including exampl
 
 Manages an EventGrid Domain
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +94,11 @@ example_domain = azure.eventgrid.Domain("exampleDomain",
         "environment": "Production",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -109,6 +112,7 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

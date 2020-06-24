@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDiagnosticCategories function of the monitoring modul
 
 Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ example_key_vault = azure.keyvault.get_key_vault(name=azurerm_key_vault["example
     resource_group_name=azurerm_key_vault["example"]["resource_group_name"])
 example_diagnostic_categories = azure.monitoring.get_diagnostic_categories(resource_id=example_key_vault.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -95,6 +98,7 @@ const exampleDiagnosticCategories = exampleKeyVault.then(exampleKeyVault => azur
     resourceId: exampleKeyVault.id,
 }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Profile resource of the cdn module, including examples, 
 
 Manages a CDN Profile to create a collection of CDN Endpoints.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -82,6 +82,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ example_profile = azure.cdn.Profile("exampleProfile",
         "cost_center": "MSFT",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -117,6 +120,7 @@ const exampleProfile = new azure.cdn.Profile("exampleProfile", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the PTRRecord resource of the privatedns module, including e
 
 Enables you to manage DNS PTR Records within Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ example_ptr_record = azure.privatedns.PTRRecord("examplePTRRecord",
     ttl=300,
     records=["test.example.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -121,6 +124,7 @@ const examplePTRRecord = new azure.privatedns.PTRRecord("examplePTRRecord", {
     records: ["test.example.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

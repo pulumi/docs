@@ -12,7 +12,6 @@ meta_desc: "Explore the Account resource of the automation module, including exa
 
 Manages a Automation Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_account = azure.automation.Account("exampleAccount",
         "environment": "development",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -113,6 +116,7 @@ const exampleAccount = new azure.automation.Account("exampleAccount", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetNetworkInterface function of the network module, incl
 
 Use this data source to access information about an existing Network Interface.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> NetworkInterfaceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.network.get_network_interface(name="acctest-nic",
     resource_group_name="networking")
 pulumi.export("networkInterfaceId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.network.getNetworkInterface({
 });
 export const networkInterfaceId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

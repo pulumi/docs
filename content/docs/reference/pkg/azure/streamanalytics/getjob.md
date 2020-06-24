@@ -12,7 +12,6 @@ meta_desc: "Explore the GetJob function of the streamanalytics module, including
 
 Use this data source to access information about an existing Stream Analytics Job.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> JobId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.streamanalytics.get_job(name="example-job",
     resource_group_name="example-resources")
 pulumi.export("jobId", example.job_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.streamanalytics.getJob({
 });
 export const jobId = example.then(example => example.jobId);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

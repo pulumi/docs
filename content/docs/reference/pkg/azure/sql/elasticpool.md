@@ -14,7 +14,6 @@ Allows you to manage an Azure SQL Elastic Pool.
 
 > **NOTE:** -  This version of the `Elasticpool` resource is being **deprecated** and should no longer be used. Please use the azure.mssql.ElasticPool version instead.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,6 +103,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -127,9 +128,11 @@ example_elastic_pool = azure.sql.ElasticPool("exampleElasticPool",
     db_dtu_max=5,
     pool_size=5000)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -153,6 +156,7 @@ const exampleElasticPool = new azure.sql.ElasticPool("exampleElasticPool", {
     poolSize: 5000,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

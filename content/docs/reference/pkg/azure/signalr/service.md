@@ -12,7 +12,6 @@ meta_desc: "Explore the Service resource of the signalr module, including exampl
 
 Manages an Azure SignalR service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -63,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -111,6 +111,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -134,9 +135,11 @@ example_service = azure.signalr.Service("exampleService",
         "value": "Default",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -158,6 +161,7 @@ const exampleService = new azure.signalr.Service("exampleService", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

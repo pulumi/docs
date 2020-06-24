@@ -14,7 +14,6 @@ Manages a string variable in Azure Automation
 
 
 
-
 ## Create a StringVariable Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

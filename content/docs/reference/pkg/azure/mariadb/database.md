@@ -12,7 +12,6 @@ meta_desc: "Explore the Database resource of the mariadb module, including examp
 
 Manages a MariaDB Database within a MariaDB Server
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,6 +103,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -128,9 +129,11 @@ example_database = azure.mariadb.Database("exampleDatabase",
     charset="utf8",
     collation="utf8_general_ci")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -155,6 +158,7 @@ const exampleDatabase = new azure.mariadb.Database("exampleDatabase", {
     collation: "utf8_general_ci",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
