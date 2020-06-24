@@ -16,7 +16,6 @@ Manages a organization-level logging bucket config. For more information see
 
 > **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are "_Default" and "_Required".
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +64,11 @@ basic = gcp.logging.OrganizationBucketConfig("basic",
     retention_days=30,
     bucket_id="_Default")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -81,6 +83,7 @@ const basic = new gcp.logging.OrganizationBucketConfig("basic", {
     bucketId: "_Default",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

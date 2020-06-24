@@ -15,9 +15,6 @@ Represents a machine learning solution.
 A model can have multiple versions, each of which is a deployed, trained model
 ready to receive prediction requests. The model itself is just a container.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +54,11 @@ default = gcp.ml.EngineModel("default",
     description="My model",
     regions="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -68,6 +68,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
     regions: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 ### Ml Model Full
@@ -95,6 +96,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -115,9 +117,11 @@ default = gcp.ml.EngineModel("default",
     online_prediction_logging=True,
     regions="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -132,6 +136,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
     regions: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

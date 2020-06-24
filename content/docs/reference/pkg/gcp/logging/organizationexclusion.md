@@ -17,7 +17,6 @@ Manages an organization-level logging exclusion. For more information see
 Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
 granted to the credentials used with this provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +58,11 @@ my_exclusion = gcp.logging.OrganizationExclusion("my-exclusion",
     filter="resource.type = gce_instance AND severity <= DEBUG",
     org_id="123456789")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -72,6 +74,7 @@ const my_exclusion = new gcp.logging.OrganizationExclusion("my-exclusion", {
     orgId: "123456789",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

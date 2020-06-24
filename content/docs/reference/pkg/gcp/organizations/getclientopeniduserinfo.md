@@ -22,7 +22,6 @@ authentication with GKE and configure an RBAC role for the email used.
 use the `https://www.googleapis.com/auth/userinfo.email` scope! You will
 receive an error otherwise.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
     public Output<string> My_email { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +59,11 @@ import pulumi_gcp as gcp
 me = gcp.organizations.get_client_open_id_user_info()
 pulumi.export("my-email", me.email)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -69,6 +71,7 @@ import * as gcp from "@pulumi/gcp";
 const me = gcp.organizations.getClientOpenIdUserInfo({});
 export const my_email = me.then(me => me.email);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

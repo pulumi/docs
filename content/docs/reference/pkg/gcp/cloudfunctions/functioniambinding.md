@@ -20,8 +20,6 @@ Three different resources help you manage your IAM policy for Cloud Functions Cl
 
 > **Note:** `gcp.cloudfunctions.FunctionIamBinding` resources **can be** used in conjunction with `gcp.cloudfunctions.FunctionIamMember` resources **only if** they do not grant privilege to the same role.
 
-
-
 ## google\_cloudfunctions\_function\_iam\_policy
 
 ```typescript

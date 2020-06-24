@@ -18,13 +18,11 @@ backend bucket rather than a backend service. It can send requests for
 static content to a Cloud Storage bucket and requests for dynamic content
 to a virtual machine instance.
 
-
 To get more information about BackendBucket, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/backendBuckets)
 * How-to Guides
     * [Using a Cloud Storage bucket as a load balancer backend](https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket)
-
 
 {{% examples %}}
 ## Example Usage
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +99,11 @@ image_backend = gcp.compute.BackendBucket("imageBackend",
     bucket_name=image_bucket.name,
     enable_cdn=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -113,6 +115,7 @@ const imageBackend = new gcp.compute.BackendBucket("imageBackend", {
     enableCdn: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

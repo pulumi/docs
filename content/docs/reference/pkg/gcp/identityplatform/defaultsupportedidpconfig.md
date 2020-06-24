@@ -16,9 +16,6 @@ You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +82,11 @@ idp_config = gcp.identityplatform.DefaultSupportedIdpConfig("idpConfig",
     enabled=True,
     idp_id="playgames.google.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -97,6 +98,7 @@ const idpConfig = new gcp.identityplatform.DefaultSupportedIdpConfig("idp_config
     idpId: "playgames.google.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

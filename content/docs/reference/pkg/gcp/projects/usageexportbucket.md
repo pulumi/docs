@@ -20,8 +20,6 @@ resource must have `roles/resourcemanager.projectCreator`. See the
 [Access Control for Organizations Using IAM](https://cloud.google.com/resource-manager/docs/access-control-org)
 doc for more information.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +80,11 @@ my_project = gcp.organizations.Project("myProject",
     org_id="1234567",
     project_id="your-project-id")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -92,6 +94,7 @@ const myProject = new gcp.organizations.Project("my_project", {
     projectId: "your-project-id",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

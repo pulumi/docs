@@ -14,7 +14,6 @@ Retrieve information about a set of projects based on a filter. See the
 [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list)
 for more details.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +55,11 @@ import pulumi_gcp as gcp
 my_org_projects = gcp.projects.get_project(filter="parent.id:012345678910 lifecycleState:DELETE_REQUESTED")
 deletion_candidate = gcp.organizations.get_project(project_id=my_org_projects.projects[0]["project_id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -69,6 +71,7 @@ const deletion-candidate = my_org_projects.then(my_org_projects => gcp.organizat
     projectId: my_org_projects.projects[0].projectId,
 }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,13 +12,11 @@ meta_desc: "Explore the DomainMapping resource of the cloudrun module, including
 
 Resource to hold the state and status of a user's domain mapping.
 
-
 To get more information about DomainMapping, see:
 
 * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1alpha1/projects.locations.domainmappings)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/mapping-custom-domains)
-
 
 {{% examples %}}
 ## Example Usage
@@ -71,6 +69,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -118,6 +117,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -146,9 +146,11 @@ default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
         "routeName": default_service.name,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -176,6 +178,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

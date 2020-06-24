@@ -17,7 +17,6 @@ and
 
 A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,6 +86,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
     key_ring=my_key_ring.self_link)
 my_crypto_key_version = gcp.kms.get_kms_crypto_key_version(crypto_key=data["google_kms_key"]["my_key"]["self_link"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -118,6 +121,7 @@ const myCryptoKeyVersion = gcp.kms.getKMSCryptoKeyVersion({
     cryptoKey: data.google_kms_key.my_key.self_link,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

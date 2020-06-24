@@ -325,7 +325,10 @@ active. Can be either <code class="docutils literal notranslate"><span class="pr
 First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability type of the Cloud SQL instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability type of the Cloud SQL
+instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’ For MySQL
+instances, ensure that <code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.enabled</span></code> and
+<code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.binary_log_enabled</span></code> are both set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if binary logging is enabled. If
@@ -546,7 +549,10 @@ active. Can be either <code class="docutils literal notranslate"><span class="pr
 First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The availability type of the Cloud SQL instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The availability type of the Cloud SQL
+instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’ For MySQL
+instances, ensure that <code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.enabled</span></code> and
+<code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.binary_log_enabled</span></code> are both set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - True if binary logging is enabled. If
@@ -731,7 +737,10 @@ active. Can be either <code class="docutils literal notranslate"><span class="pr
 First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability type of the Cloud SQL instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability type of the Cloud SQL
+instance, high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).’ For MySQL
+instances, ensure that <code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.enabled</span></code> and
+<code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.binary_log_enabled</span></code> are both set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if binary logging is enabled. If

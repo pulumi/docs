@@ -20,11 +20,6 @@ https://cloud.google.com/compute/docs/load-balancing/http/
 
 
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
-
-
 ## Create a GlobalForwardingRule Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

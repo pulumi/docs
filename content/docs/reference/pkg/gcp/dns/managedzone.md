@@ -14,13 +14,11 @@ A zone is a subtree of the DNS namespace under one administrative
 responsibility. A ManagedZone is a resource that represents a DNS zone
 hosted by the Cloud DNS service.
 
-
 To get more information about ManagedZone, see:
 
 * [API documentation](https://cloud.google.com/dns/api/v1/managedZones)
 * How-to Guides
     * [Managing Zones](https://cloud.google.com/dns/zones/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,9 +66,11 @@ example_zone = gcp.dns.ManagedZone("example-zone",
         "foo": "bar",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -82,6 +83,7 @@ const example_zone = new gcp.dns.ManagedZone("example-zone", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

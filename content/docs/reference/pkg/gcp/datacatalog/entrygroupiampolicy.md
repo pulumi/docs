@@ -20,8 +20,6 @@ Three different resources help you manage your IAM policy for Data catalog Entry
 
 > **Note:** `gcp.datacatalog.EntryGroupIamBinding` resources **can be** used in conjunction with `gcp.datacatalog.EntryGroupIamMember` resources **only if** they do not grant privilege to the same role.
 
-
-
 ## google\_data\_catalog\_entry\_group\_iam\_policy
 
 ```typescript

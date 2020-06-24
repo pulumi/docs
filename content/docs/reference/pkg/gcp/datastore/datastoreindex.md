@@ -12,13 +12,11 @@ meta_desc: "Explore the DataStoreIndex resource of the datastore module, includi
 
 Describes a composite index for Cloud Datastore.
 
-
 To get more information about Index, see:
 
 * [API documentation](https://cloud.google.com/datastore/docs/reference/admin/rest/v1/projects.indexes)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/datastore/docs/concepts/indexes)
-
 
 {{% examples %}}
 ## Example Usage
@@ -55,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,9 +78,11 @@ default = gcp.datastore.DataStoreIndex("default",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -100,6 +101,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

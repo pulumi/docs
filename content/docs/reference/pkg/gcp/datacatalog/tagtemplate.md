@@ -13,13 +13,11 @@ meta_desc: "Explore the TagTemplate resource of the datacatalog module, includin
 A tag template defines a tag, which can have one or more typed fields.
 The template is used to create and attach the tag to GCP resources.
 
-
 To get more information about TagTemplate, see:
 
 * [API documentation](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
-
 
 {{% examples %}}
 ## Example Usage
@@ -94,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -156,6 +155,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -205,9 +205,11 @@ basic_tag_template = gcp.datacatalog.TagTemplate("basicTagTemplate",
     region="us-central1",
     tag_template_id="my_template")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -255,6 +257,7 @@ const basicTagTemplate = new gcp.datacatalog.TagTemplate("basic_tag_template", {
     tagTemplateId: "my_template",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

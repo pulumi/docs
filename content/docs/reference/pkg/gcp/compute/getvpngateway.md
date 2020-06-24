@@ -12,7 +12,6 @@ meta_desc: "Explore the GetVPNGateway function of the compute module, including 
 
 Get a VPN gateway within GCE from its name.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_gcp as gcp
 
 my_vpn_gateway = gcp.compute.get_vpn_gateway(name="vpn-gateway-us-east1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -59,6 +61,7 @@ const my_vpn_gateway = pulumi.output(gcp.compute.getVPNGateway({
     name: "vpn-gateway-us-east1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

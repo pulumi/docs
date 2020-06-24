@@ -16,8 +16,6 @@ To get more information about Secret, see:
 
 * [API documentation](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets)
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -61,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,9 +89,11 @@ secret_basic = gcp.secretmanager.Secret("secret-basic",
     },
     secret_id="secret")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -116,6 +117,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
     secretId: "secret",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,13 +14,11 @@ A description of the conditions under which some aspect of your system is
 considered to be "unhealthy" and the ways to notify people or services
 about this state.
 
-
 To get more information about AlertPolicy, see:
 
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.alertPolicies)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/alerts/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -70,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,6 +112,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -139,9 +139,11 @@ alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
         "foo": "bar",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -166,6 +168,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

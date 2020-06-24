@@ -17,7 +17,6 @@ the IAM policy for an existing Google Cloud Platform Billing Account.
    `gcp.billing.AccountIamBinding` for the __same role__ or they will fight over
    what your policy should be.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ binding = gcp.billing.AccountIamMember("binding",
     member="user:alice@gmail.com",
     role="roles/billing.viewer")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -92,6 +95,7 @@ const binding = new gcp.billing.AccountIamMember("binding", {
     role: "roles/billing.viewer",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

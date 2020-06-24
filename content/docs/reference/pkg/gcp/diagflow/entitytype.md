@@ -12,13 +12,11 @@ meta_desc: "Explore the EntityType resource of the diagflow module, including ex
 
 Represents an entity type. Entity types serve as a tool for extracting parameter values from natural language queries.
 
-
 To get more information about EntityType, see:
 
 * [API documentation](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.entityTypes)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -70,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -118,6 +117,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -149,9 +149,11 @@ basic_entity_type = gcp.diagflow.EntityType("basicEntityType",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -182,6 +184,7 @@ const basicEntityType = new gcp.diagflow.EntityType("basicEntityType", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

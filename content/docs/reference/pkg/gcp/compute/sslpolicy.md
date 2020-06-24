@@ -13,13 +13,11 @@ meta_desc: "Explore the SSLPolicy resource of the compute module, including exam
 Represents a SSL policy. SSL policies give you the ability to control the
 features of SSL that your SSL proxy or HTTPS load balancer negotiates.
 
-
 To get more information about SslPolicy, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/sslPolicies)
 * How-to Guides
     * [Using SSL Policies](https://cloud.google.com/compute/docs/load-balancing/ssl-policies)
-
 
 {{% examples %}}
 ## Example Usage
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,9 +80,11 @@ custom_ssl_policy = gcp.compute.SSLPolicy("custom-ssl-policy",
     min_tls_version="TLS_1_2",
     profile="CUSTOM")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -104,6 +105,7 @@ const custom_ssl_policy = new gcp.compute.SSLPolicy("custom-ssl-policy", {
     profile: "CUSTOM",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

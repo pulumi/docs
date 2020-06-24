@@ -18,11 +18,6 @@ the marketplace prior to using this resource.
 
 
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
-
-
 ## Create a InboundSamlConfig Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,16 +13,12 @@ meta_desc: "Explore the Occurence resource of the containeranalysis module, incl
 An occurrence is an instance of a Note, or type of analysis that
 can be done for a resource.
 
-
 To get more information about Occurrence, see:
 
 * [API documentation](https://cloud.google.com/container-analysis/api/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/container-analysis/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a Occurence Resource {#create}

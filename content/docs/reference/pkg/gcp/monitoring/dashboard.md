@@ -18,9 +18,6 @@ To get more information about Dashboards, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/dashboards)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a Dashboard Resource {#create}

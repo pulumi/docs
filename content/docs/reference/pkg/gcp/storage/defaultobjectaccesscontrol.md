@@ -24,13 +24,11 @@ object is always an OWNER.
 For more information, see Access Control, with the caveat that this API
 uses READER and OWNER instead of READ and FULL_CONTROL.
 
-
 To get more information about DefaultObjectAccessControl, see:
 
 * [API documentation](https://cloud.google.com/storage/docs/json_api/v1/defaultObjectAccessControls)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
-
 
 {{% examples %}}
 ## Example Usage
@@ -59,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -101,9 +101,11 @@ public_rule = gcp.storage.DefaultObjectAccessControl("publicRule",
     role="READER",
     entity="allUsers")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -115,6 +117,7 @@ const publicRule = new gcp.storage.DefaultObjectAccessControl("publicRule", {
     entity: "allUsers",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

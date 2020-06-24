@@ -22,7 +22,6 @@ by use of this resource. The safest alternative is to use multiple `gcp.billing.
    `gcp.billing.AccountIamMember` or `gcp.billing.AccountIamBinding`
    or they will fight over what your policy should be.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +97,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,9 +113,11 @@ policy = gcp.billing.AccountIamPolicy("policy",
     billing_account_id="00AA00-000AAA-00AA0A",
     policy_data=admin.policy_data)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -130,6 +133,7 @@ const policy = new gcp.billing.AccountIamPolicy("policy", {
     policyData: admin.then(admin => admin.policyData),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

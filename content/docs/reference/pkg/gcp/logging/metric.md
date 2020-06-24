@@ -14,13 +14,11 @@ Logs-based metric can also be used to extract values from logs and create a a di
 of the values. The distribution records the statistics of the extracted values along with
 an optional histogram of the values as specified by the bucket options.
 
-
 To get more information about Metric, see:
 
 * [API documentation](https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics/create)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/logging/docs/apis)
-
 
 {{% examples %}}
 ## Example Usage
@@ -81,6 +79,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -134,6 +133,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -174,9 +174,11 @@ logging_metric = gcp.logging.Metric("loggingMetric",
     },
     value_extractor="EXTRACT(jsonPayload.request)")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -215,6 +217,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     valueExtractor: "EXTRACT(jsonPayload.request)",
 });
 ```
+
 {{% /example %}}
 
 ### Logging Metric Counter Basic
@@ -240,6 +243,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -267,6 +271,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -281,9 +286,11 @@ logging_metric = gcp.logging.Metric("loggingMetric",
         "valueType": "INT64",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -296,6 +303,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Logging Metric Counter Labels
@@ -334,6 +342,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -371,6 +380,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -393,9 +403,11 @@ logging_metric = gcp.logging.Metric("loggingMetric",
         "valueType": "INT64",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -416,6 +428,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

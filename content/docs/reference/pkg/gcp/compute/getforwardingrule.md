@@ -12,7 +12,6 @@ meta_desc: "Explore the GetForwardingRule function of the compute module, includ
 
 Get a forwarding rule within GCE from its name.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_gcp as gcp
 
 my_forwarding_rule = gcp.compute.get_forwarding_rule(name="forwarding-rule-us-east1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -59,6 +61,7 @@ const my_forwarding_rule = pulumi.output(gcp.compute.getForwardingRule({
     name: "forwarding-rule-us-east1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

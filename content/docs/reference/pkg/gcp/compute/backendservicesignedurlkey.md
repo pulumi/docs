@@ -12,7 +12,6 @@ meta_desc: "Explore the BackendServiceSignedUrlKey resource of the compute modul
 
 A key for signing Cloud CDN signed URLs for Backend Services.
 
-
 To get more information about BackendServiceSignedUrlKey, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices)
@@ -22,9 +21,6 @@ To get more information about BackendServiceSignedUrlKey, see:
 > **Warning:** All arguments including `key_value` will be stored in the raw
 state as plain-text.
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a BackendServiceSignedUrlKey Resource {#create}

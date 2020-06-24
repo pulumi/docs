@@ -13,7 +13,6 @@ meta_desc: "Explore the GetNodeTypes function of the compute module, including e
 Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +84,11 @@ tmpl = gcp.compute.NodeTemplate("tmpl",
     region="us-central1",
     node_type=data["google_compute_node_types"]["types"]["names"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -98,6 +101,7 @@ const tmpl = new gcp.compute.NodeTemplate("tmpl", {
     nodeType: data.google_compute_node_types.types.names[0],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

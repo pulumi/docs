@@ -12,13 +12,11 @@ meta_desc: "Explore the DomainMapping resource of the appengine module, includin
 
 A domain serving an App Engine application.
 
-
 To get more information about DomainMapping, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.domainMappings)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains)
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,9 +85,11 @@ domain_mapping = gcp.appengine.DomainMapping("domainMapping",
         "sslManagementType": "AUTOMATIC",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -99,6 +101,7 @@ const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the SslCert resource of the sql module, including examples, 
 
 Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +68,11 @@ client_cert = gcp.sql.SslCert("clientCert",
     common_name="client-name",
     instance=master.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -85,6 +87,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     instance: master.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

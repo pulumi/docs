@@ -14,7 +14,6 @@ A RegionSslCertificate resource, used for HTTPS load balancing. This resource
 provides a mechanism to upload an SSL key and certificate to
 the load balancer to serve secure connections from the user.
 
-
 To get more information about RegionSslCertificate, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/regionSslCertificates)
@@ -23,7 +22,6 @@ To get more information about RegionSslCertificate, see:
 
 > **Warning:** All arguments including `certificate` and `private_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
-
 
 {{% examples %}}
 ## Example Usage
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ default = gcp.compute.RegionSslCertificate("default",
     private_key=(lambda path: open(path).read())("path/to/private.key"),
     certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -86,6 +87,7 @@ const _default = new gcp.compute.RegionSslCertificate("default", {
     certificate: fs.readFileSync("path/to/certificate.crt"),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

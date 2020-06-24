@@ -21,7 +21,6 @@ Permissions can be granted either by ACLs or Cloud IAM policies. In general, per
 
 **NOTE** This resource will not remove the `project-owners-<project_id>` entity from the `OWNER` role.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,9 +72,11 @@ image_store_acl = gcp.storage.BucketACL("image-store-acl",
         "READER:group-mygroup",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -88,6 +90,7 @@ const image_store_acl = new gcp.storage.BucketACL("image-store-acl", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

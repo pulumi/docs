@@ -14,13 +14,11 @@ A ForwardingRule resource. A ForwardingRule resource specifies which pool
 of target virtual machines to forward a packet to if it matches the given
 [IPAddress, IPProtocol, portRange] tuple.
 
-
 To get more information about ForwardingRule, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/forwardingRules)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules)
-
 
 {{% examples %}}
 ## Example Usage
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -76,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +88,11 @@ default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
     target=default_target_pool.id,
     port_range="80")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -101,6 +103,7 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
     portRange: "80",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

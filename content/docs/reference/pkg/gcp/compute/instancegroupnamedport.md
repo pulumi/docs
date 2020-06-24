@@ -15,16 +15,12 @@ managing the group as whole. This resource is primarily intended for use
 with GKE-generated groups that shouldn't otherwise be managed by other
 tools.
 
-
 To get more information about InstanceGroupNamedPort, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroup)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/instance-groups/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a InstanceGroupNamedPort Resource {#create}

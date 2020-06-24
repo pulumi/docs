@@ -18,9 +18,6 @@ To get more information about GameServerCluster, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a GameServerCluster Resource {#create}

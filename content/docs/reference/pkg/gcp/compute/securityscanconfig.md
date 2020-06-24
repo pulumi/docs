@@ -21,7 +21,6 @@ To get more information about ScanConfig, see:
 > **Warning:** All arguments including `authentication.google_account.password` and `authentication.custom_account.password` will be stored in the raw
 state as plain-text.[Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -55,6 +54,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,9 +72,11 @@ scan_config = gcp.compute.SecurityScanConfig("scan-config",
     starting_urls=[scanner_static_ip.address.apply(lambda address: f"http://{address}")],
     target_platforms=["COMPUTE"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -86,6 +88,7 @@ const scan_config = new gcp.compute.SecurityScanConfig("scan-config", {
     targetPlatforms: ["COMPUTE"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

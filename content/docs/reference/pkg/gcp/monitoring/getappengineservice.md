@@ -17,14 +17,12 @@ network-accessible unit, designed to solve an individual concern
 An App Engine monitoring service is automatically created by GCP to monitor
 App Engine services.
 
-
 To get more information about Service, see:
 
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services)
 * How-to Guides
     * [Service Monitoring](https://cloud.google.com/monitoring/service-monitoring)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -83,6 +81,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -116,9 +115,11 @@ myapp = gcp.appengine.StandardAppVersion("myapp",
     delete_service_on_destroy=False)
 srv = myapp.service.apply(lambda service: gcp.monitoring.get_app_engine_service(module_id=service))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -149,6 +150,7 @@ const srv = myapp.service.apply(service => gcp.monitoring.getAppEngineService({
     moduleId: service,
 }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -1142,6 +1142,7 @@ ServingState holds a value describing the state the resources
 are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - TimeoutSeconds holds the max duration the instance is allowed for responding to a request.</p></li>
 </ul>
 </li>
 </ul>
@@ -1393,6 +1394,7 @@ ServingState holds a value describing the state the resources
 are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - TimeoutSeconds holds the max duration the instance is allowed for responding to a request.</p></li>
 </ul>
 </li>
 </ul>
@@ -1638,6 +1640,7 @@ ServingState holds a value describing the state the resources
 are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - TimeoutSeconds holds the max duration the instance is allowed for responding to a request.</p></li>
 </ul>
 </li>
 </ul>

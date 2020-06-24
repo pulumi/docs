@@ -18,7 +18,6 @@ the IAM policy for an existing Google Cloud Platform folder.
    should be. Similarly, roles controlled by `gcp.folder.IAMBinding`
    should not be assigned to using `gcp.folder.IAMMember`.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,6 +81,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ admin = gcp.folder.IAMMember("admin",
     role="roles/editor",
     member="user:alice@gmail.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -113,6 +116,7 @@ const admin = new gcp.folder.IAMMember("admin", {
     member: "user:alice@gmail.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

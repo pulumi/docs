@@ -12,11 +12,9 @@ meta_desc: "Explore the EngineSplitTraffic resource of the appengine module, inc
 
 Traffic routing configuration for versions within a single service. Traffic splits define how traffic directed to the service is assigned to versions.
 
-
 To get more information about ServiceSplitTraffic, see:
 
 * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services)
-
 
 {{% examples %}}
 ## Example Usage
@@ -117,6 +115,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -175,9 +174,11 @@ liveapp = gcp.appengine.EngineSplitTraffic("liveapp",
         }),
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -233,6 +234,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

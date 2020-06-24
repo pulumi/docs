@@ -1062,6 +1062,250 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">entry_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">EntryGroup</span><span class="p">(</span><span class="s2">&quot;entryGroup&quot;</span><span class="p">,</span> <span class="n">entry_group_id</span><span class="o">=</span><span class="s2">&quot;my_entry_group&quot;</span><span class="p">)</span>
+<span class="n">entry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="s2">&quot;entry&quot;</span><span class="p">,</span>
+    <span class="n">entry_group</span><span class="o">=</span><span class="n">entry_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">entry_id</span><span class="o">=</span><span class="s2">&quot;my_entry&quot;</span><span class="p">,</span>
+    <span class="n">user_specified_type</span><span class="o">=</span><span class="s2">&quot;my_custom_type&quot;</span><span class="p">,</span>
+    <span class="n">user_specified_system</span><span class="o">=</span><span class="s2">&quot;SomethingExternal&quot;</span><span class="p">)</span>
+<span class="n">tag_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">TagTemplate</span><span class="p">(</span><span class="s2">&quot;tagTemplate&quot;</span><span class="p">,</span>
+    <span class="n">tag_template_id</span><span class="o">=</span><span class="s2">&quot;my_template&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Demo Tag Template&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Source of data asset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;primitiveType&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;num_rows&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of rows in the data asset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;primitiveType&quot;</span><span class="p">:</span> <span class="s2">&quot;DOUBLE&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;pii_type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;PII type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enum_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;allowed_values&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SOCIAL SECURITY NUMBER&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                    <span class="p">],</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">force_delete</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
+<span class="n">basic_tag</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">Tag</span><span class="p">(</span><span class="s2">&quot;basicTag&quot;</span><span class="p">,</span>
+    <span class="n">parent</span><span class="o">=</span><span class="n">entry</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="n">tag_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stringValue&quot;</span><span class="p">:</span> <span class="s2">&quot;my-string&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">entry_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">EntryGroup</span><span class="p">(</span><span class="s2">&quot;entryGroup&quot;</span><span class="p">,</span> <span class="n">entry_group_id</span><span class="o">=</span><span class="s2">&quot;my_entry_group&quot;</span><span class="p">)</span>
+<span class="n">first_entry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="s2">&quot;firstEntry&quot;</span><span class="p">,</span>
+    <span class="n">entry_group</span><span class="o">=</span><span class="n">entry_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">entry_id</span><span class="o">=</span><span class="s2">&quot;first_entry&quot;</span><span class="p">,</span>
+    <span class="n">user_specified_type</span><span class="o">=</span><span class="s2">&quot;my_custom_type&quot;</span><span class="p">,</span>
+    <span class="n">user_specified_system</span><span class="o">=</span><span class="s2">&quot;SomethingExternal&quot;</span><span class="p">)</span>
+<span class="n">second_entry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="s2">&quot;secondEntry&quot;</span><span class="p">,</span>
+    <span class="n">entry_group</span><span class="o">=</span><span class="n">entry_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">entry_id</span><span class="o">=</span><span class="s2">&quot;second_entry&quot;</span><span class="p">,</span>
+    <span class="n">user_specified_type</span><span class="o">=</span><span class="s2">&quot;another_custom_type&quot;</span><span class="p">,</span>
+    <span class="n">user_specified_system</span><span class="o">=</span><span class="s2">&quot;SomethingElseExternal&quot;</span><span class="p">)</span>
+<span class="n">tag_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">TagTemplate</span><span class="p">(</span><span class="s2">&quot;tagTemplate&quot;</span><span class="p">,</span>
+    <span class="n">tag_template_id</span><span class="o">=</span><span class="s2">&quot;my_template&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Demo Tag Template&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Source of data asset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;primitiveType&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;num_rows&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of rows in the data asset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;primitiveType&quot;</span><span class="p">:</span> <span class="s2">&quot;DOUBLE&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;pii_type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;PII type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enum_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;allowed_values&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SOCIAL SECURITY NUMBER&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                    <span class="p">],</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">force_delete</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
+<span class="n">entry_group_tag</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">Tag</span><span class="p">(</span><span class="s2">&quot;entryGroupTag&quot;</span><span class="p">,</span>
+    <span class="n">parent</span><span class="o">=</span><span class="n">entry_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="n">tag_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stringValue&quot;</span><span class="p">:</span> <span class="s2">&quot;my-string&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gcp</span> <span class="k">as</span> <span class="nn">gcp</span>
+
+<span class="n">entry_group</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">EntryGroup</span><span class="p">(</span><span class="s2">&quot;entryGroup&quot;</span><span class="p">,</span> <span class="n">entry_group_id</span><span class="o">=</span><span class="s2">&quot;my_entry_group&quot;</span><span class="p">)</span>
+<span class="n">entry</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="s2">&quot;entry&quot;</span><span class="p">,</span>
+    <span class="n">entry_group</span><span class="o">=</span><span class="n">entry_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">entry_id</span><span class="o">=</span><span class="s2">&quot;my_entry&quot;</span><span class="p">,</span>
+    <span class="n">user_specified_type</span><span class="o">=</span><span class="s2">&quot;my_custom_type&quot;</span><span class="p">,</span>
+    <span class="n">user_specified_system</span><span class="o">=</span><span class="s2">&quot;SomethingExternal&quot;</span><span class="p">,</span>
+    <span class="n">schema</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;columns&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;column&quot;: &quot;first_name&quot;,</span>
+<span class="s2">      &quot;description&quot;: &quot;First name&quot;,</span>
+<span class="s2">      &quot;mode&quot;: &quot;REQUIRED&quot;,</span>
+<span class="s2">      &quot;type&quot;: &quot;STRING&quot;</span>
+<span class="s2">    },</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;column&quot;: &quot;last_name&quot;,</span>
+<span class="s2">      &quot;description&quot;: &quot;Last name&quot;,</span>
+<span class="s2">      &quot;mode&quot;: &quot;REQUIRED&quot;,</span>
+<span class="s2">      &quot;type&quot;: &quot;STRING&quot;</span>
+<span class="s2">    },</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;column&quot;: &quot;address&quot;,</span>
+<span class="s2">      &quot;description&quot;: &quot;Address&quot;,</span>
+<span class="s2">      &quot;mode&quot;: &quot;REPEATED&quot;,</span>
+<span class="s2">      &quot;subcolumns&quot;: [</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;column&quot;: &quot;city&quot;,</span>
+<span class="s2">          &quot;description&quot;: &quot;City&quot;,</span>
+<span class="s2">          &quot;mode&quot;: &quot;NULLABLE&quot;,</span>
+<span class="s2">          &quot;type&quot;: &quot;STRING&quot;</span>
+<span class="s2">        },</span>
+<span class="s2">        {</span>
+<span class="s2">          &quot;column&quot;: &quot;state&quot;,</span>
+<span class="s2">          &quot;description&quot;: &quot;State&quot;,</span>
+<span class="s2">          &quot;mode&quot;: &quot;NULLABLE&quot;,</span>
+<span class="s2">          &quot;type&quot;: &quot;STRING&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;type&quot;: &quot;RECORD&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">tag_template</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">TagTemplate</span><span class="p">(</span><span class="s2">&quot;tagTemplate&quot;</span><span class="p">,</span>
+    <span class="n">tag_template_id</span><span class="o">=</span><span class="s2">&quot;my_template&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Demo Tag Template&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Source of data asset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;primitiveType&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;isRequired&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;num_rows&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of rows in the data asset&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;primitiveType&quot;</span><span class="p">:</span> <span class="s2">&quot;DOUBLE&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldId&quot;</span><span class="p">:</span> <span class="s2">&quot;pii_type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;PII type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;enum_type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;allowed_values&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SOCIAL SECURITY NUMBER&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                    <span class="p">],</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">force_delete</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
+<span class="n">basic_tag</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">Tag</span><span class="p">(</span><span class="s2">&quot;basicTag&quot;</span><span class="p">,</span>
+    <span class="n">parent</span><span class="o">=</span><span class="n">entry</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="n">tag_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stringValue&quot;</span><span class="p">:</span> <span class="s2">&quot;my-string&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;num_rows&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doubleValue&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;pii_type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;enumValue&quot;</span><span class="p">:</span> <span class="s2">&quot;EMAIL&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;address&quot;</span><span class="p">)</span>
+<span class="n">second_tag</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">datacatalog</span><span class="o">.</span><span class="n">Tag</span><span class="p">(</span><span class="s2">&quot;second-tag&quot;</span><span class="p">,</span>
+    <span class="n">parent</span><span class="o">=</span><span class="n">entry</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="n">tag_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stringValue&quot;</span><span class="p">:</span> <span class="s2">&quot;my-string&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;fieldName&quot;</span><span class="p">:</span> <span class="s2">&quot;pii_type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;enumValue&quot;</span><span class="p">:</span> <span class="s2">&quot;NONE&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;first_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

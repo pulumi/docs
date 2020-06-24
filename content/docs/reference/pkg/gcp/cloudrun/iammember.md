@@ -20,8 +20,6 @@ Three different resources help you manage your IAM policy for Cloud Run Service.
 
 > **Note:** `gcp.cloudrun.IamBinding` resources **can be** used in conjunction with `gcp.cloudrun.IamMember` resources **only if** they do not grant privilege to the same role.
 
-
-
 ## google\_cloud\_run\_service\_iam\_policy
 
 ```typescript

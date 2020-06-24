@@ -18,7 +18,6 @@ To get more information about Dataset, see:
 * How-to Guides
     * [Creating a dataset](https://cloud.google.com/healthcare/docs/how-tos/datasets)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +57,11 @@ default = gcp.healthcare.Dataset("default",
     location="us-central1",
     time_zone="UTC")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -69,6 +71,7 @@ const defaultDataset = new gcp.healthcare.Dataset("default", {
     timeZone: "UTC",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

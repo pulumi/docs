@@ -33,14 +33,12 @@ instances in all other subnets of the same VPC network, regardless of
 region, using their RFC1918 private IP addresses. You can isolate portions
 of the network, even entire subnets, using firewall rules.
 
-
 To get more information about Subnetwork, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/subnetworks)
 * How-to Guides
     * [Private Google Access](https://cloud.google.com/vpc/docs/configure-private-google-access)
     * [Cloud Networking](https://cloud.google.com/vpc/docs/using-vpc)
-
 
 {{% examples %}}
 ## Example Usage
@@ -72,6 +70,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,9 +90,11 @@ network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
     role="ACTIVE",
     network=custom_test.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -107,6 +108,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
     network: custom_test.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

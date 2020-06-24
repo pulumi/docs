@@ -20,8 +20,6 @@ Three different resources help you manage your IAM policy for Cloud Pub/Sub Topi
 
 > **Note:** `gcp.pubsub.TopicIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.TopicIAMMember` resources **only if** they do not grant privilege to the same role.
 
-
-
 ## google\_pubsub\_topic\_iam\_policy
 
 ```typescript

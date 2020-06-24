@@ -12,13 +12,11 @@ meta_desc: "Explore the Connector resource of the vpcaccess module, including ex
 
 Serverless VPC Access connector resource.
 
-
 To get more information about Connector, see:
 
 * [API documentation](https://cloud.google.com/vpc/docs/reference/vpcaccess/rest/v1/projects.locations.connectors)
 * How-to Guides
     * [Configuring Serverless VPC Access](https://cloud.google.com/vpc/docs/configure-serverless-vpc-access)
-
 
 {{% examples %}}
 ## Example Usage
@@ -44,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +81,11 @@ connector = gcp.vpcaccess.Connector("connector",
     network="default",
     region="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -94,6 +96,7 @@ const connector = new gcp.vpcaccess.Connector("connector", {
     region: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

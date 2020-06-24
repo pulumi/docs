@@ -13,13 +13,11 @@ meta_desc: "Explore the Intent resource of the diagflow module, including exampl
 Represents a Dialogflow intent. Intents convert a number of user expressions or patterns into an action. An action
 is an extraction of a user command or sentence semantics.
 
-
 To get more information about Intent, see:
 
 * [API documentation](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.intents)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +93,11 @@ basic_agent = gcp.diagflow.Agent("basicAgent",
     time_zone="America/New_York")
 basic_intent = gcp.diagflow.Intent("basicIntent", display_name="basic-intent")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -107,6 +109,7 @@ const basicAgent = new gcp.diagflow.Agent("basicAgent", {
 });
 const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-intent"});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

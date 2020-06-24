@@ -14,7 +14,6 @@ A Security Policy defines an IP blacklist or whitelist that protects load balanc
 see the [official documentation](https://cloud.google.com/armor/docs/configure-security-policies)
 and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -73,6 +72,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -123,6 +123,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -155,9 +156,11 @@ policy = gcp.compute.SecurityPolicy("policy", rules=[
     },
 ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -189,6 +192,7 @@ const policy = new gcp.compute.SecurityPolicy("policy", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

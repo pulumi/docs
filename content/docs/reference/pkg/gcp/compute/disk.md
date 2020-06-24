@@ -26,7 +26,6 @@ storage space requirements.
 Add a persistent disk to your instance when you need reliable and
 affordable storage with consistent performance characteristics.
 
-
 To get more information about Disk, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/disks)
@@ -35,7 +34,6 @@ To get more information about Disk, see:
 
 > **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
-
 
 {{% examples %}}
 ## Example Usage
@@ -66,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,9 +85,11 @@ default = gcp.compute.Disk("default",
     type="pd-ssd",
     zone="us-central1-a")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -103,6 +104,7 @@ const defaultDisk = new gcp.compute.Disk("default", {
     zone: "us-central1-a",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -402,7 +404,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -608,7 +613,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -814,7 +822,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1020,7 +1031,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1843,7 +1857,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2141,7 +2158,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2439,7 +2459,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2737,7 +2760,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
+the resource policy, as resource policies can not be updated more than one at a time. Use
+['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

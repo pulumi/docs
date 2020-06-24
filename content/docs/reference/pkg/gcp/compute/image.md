@@ -27,13 +27,11 @@ images are available only to your project. You can create a custom image
 from root persistent disks and other images. Then, use the custom image
 to create an instance.
 
-
 To get more information about Image, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/images)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/images)
-
 
 {{% examples %}}
 ## Example Usage
@@ -60,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +84,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +96,11 @@ example = gcp.compute.Image("example", raw_disk={
     "source": "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -109,6 +111,7 @@ const example = new gcp.compute.Image("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### Image Guest Os
@@ -143,6 +146,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -176,6 +180,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -196,9 +201,11 @@ example = gcp.compute.Image("example",
         "source": "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -217,6 +224,7 @@ const example = new gcp.compute.Image("example", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

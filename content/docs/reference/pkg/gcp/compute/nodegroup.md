@@ -12,7 +12,6 @@ meta_desc: "Explore the NodeGroup resource of the compute module, including exam
 
 Represents a NodeGroup resource to manage a group of sole-tenant nodes.
 
-
 To get more information about NodeGroup, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups)
@@ -23,7 +22,6 @@ To get more information about NodeGroup, see:
 number of nodes in a node group and changes to node group size either
 through provider config or through external changes will cause
 the provider to delete and recreate the node group.
-
 
 {{% examples %}}
 ## Example Usage
@@ -39,14 +37,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
-        {
-            Zone = "us-central1-a",
-        }));
         var soletenant_tmpl = new Gcp.Compute.NodeTemplate("soletenant-tmpl", new Gcp.Compute.NodeTemplateArgs
         {
             Region = "us-central1",
-            NodeType = central1a.Apply(central1a => central1a.Names[0]),
+            NodeType = "n1-node-96-624",
         });
         var nodes = new Gcp.Compute.NodeGroup("nodes", new Gcp.Compute.NodeGroupArgs
         {
@@ -59,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,29 +65,27 @@ Coming soon!
 import pulumi
 import pulumi_gcp as gcp
 
-central1a = gcp.compute.get_node_types(zone="us-central1-a")
 soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
     region="us-central1",
-    node_type=central1a.names[0])
+    node_type="n1-node-96-624")
 nodes = gcp.compute.NodeGroup("nodes",
     zone="us-central1-a",
     description="example google_compute_node_group for the Google Provider",
     size=1,
     node_template=soletenant_tmpl.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const central1a = gcp.compute.getNodeTypes({
-    zone: "us-central1-a",
-});
 const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
     region: "us-central1",
-    nodeType: central1a.then(central1a => central1a.names[0]),
+    nodeType: "n1-node-96-624",
 });
 const nodes = new gcp.compute.NodeGroup("nodes", {
     zone: "us-central1-a",
@@ -101,6 +94,7 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
     nodeTemplate: soletenant_tmpl.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

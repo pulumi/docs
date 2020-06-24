@@ -20,9 +20,6 @@ To get more information about ConsumerQuotaOverride, see:
     * [Getting Started](https://cloud.google.com/service-usage/docs/getting-started)
     * [REST API documentation](https://cloud.google.com/service-usage/docs/reference/rest/v1beta1/services.consumerQuotaMetrics.limits.consumerOverrides)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a ConsumerQuotaOverride Resource {#create}

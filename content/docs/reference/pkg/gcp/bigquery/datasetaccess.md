@@ -18,13 +18,11 @@ it is not possible to compile a full list of access blocks to include in a
 dataset resource must either have no defined `access` blocks or a `lifecycle` block with
 `ignore_changes = [access]` so they don't fight over which accesses should be on the dataset.
 
-
 To get more information about DatasetAccess, see:
 
 * [API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets)
 * How-to Guides
     * [Controlling access to datasets](https://cloud.google.com/bigquery/docs/dataset-access-controls)
-
 
 {{% examples %}}
 ## Example Usage
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -110,9 +110,11 @@ access = gcp.bigquery.DatasetAccess("access",
     role="OWNER",
     user_by_email=bqowner.email)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -125,6 +127,7 @@ const access = new gcp.bigquery.DatasetAccess("access", {
     userByEmail: bqowner.email,
 });
 ```
+
 {{% /example %}}
 
 ### Bigquery Dataset Access View
@@ -169,6 +172,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -220,6 +224,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -244,9 +249,11 @@ access = gcp.bigquery.DatasetAccess("access",
         "table_id": public_table.table_id,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -270,6 +277,7 @@ const access = new gcp.bigquery.DatasetAccess("access", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

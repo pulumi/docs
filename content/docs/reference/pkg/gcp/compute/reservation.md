@@ -19,13 +19,11 @@ Kubernetes Engine VM usage.Reservations do not apply to `f1-micro` or
 services not listed above
 like Cloud SQL and Dataflow.
 
-
 To get more information about Reservation, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/reservations)
 * How-to Guides
     * [Reserving zonal resources](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
-
 
 {{% examples %}}
 ## Example Usage
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -88,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +105,11 @@ gce_reservation = gcp.compute.Reservation("gceReservation",
     },
     zone="us-central1-a")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -123,6 +125,7 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
     zone: "us-central1-a",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

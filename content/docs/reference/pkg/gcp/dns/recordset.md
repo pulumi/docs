@@ -13,11 +13,10 @@ meta_desc: "Explore the RecordSet resource of the dns module, including examples
 Manages a set of DNS records within Google Cloud DNS. For more information see [the official documentation](https://cloud.google.com/dns/records/) and
 [API](https://cloud.google.com/dns/api/v1/resourceRecordSets).
 
-> **Note:** The provider treats this resource as an authoritative record set. This means existing records (including 
-the default records) for the given type will be overwritten when you create this resource in the provider. 
-In addition, the Google Cloud DNS API requires NS records to be present at all times, so the provider 
+> **Note:** The provider treats this resource as an authoritative record set. This means existing records (including
+the default records) for the given type will be overwritten when you create this resource in the provider.
+In addition, the Google Cloud DNS API requires NS records to be present at all times, so the provider
 will not actually remove NS records during destroy but will report that it did.
-
 
 {{% examples %}}
 ## Example Usage
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ record_set = gcp.dns.RecordSet("recordSet",
     ttl=300,
     rrdatas=["8.8.8.8"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -114,6 +117,7 @@ const recordSet = new gcp.dns.RecordSet("recordSet", {
     rrdatas: ["8.8.8.8"],
 });
 ```
+
 {{% /example %}}
 
 ### Adding an MX record
@@ -148,6 +152,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -186,6 +191,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -206,9 +212,11 @@ mx = gcp.dns.RecordSet("mx",
         "10 alt4.aspmx.l.google.com.",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -227,6 +235,7 @@ const mx = new gcp.dns.RecordSet("mx", {
     ],
 });
 ```
+
 {{% /example %}}
 
 ### Adding an SPF record
@@ -257,6 +266,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -291,6 +301,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -305,9 +316,11 @@ spf = gcp.dns.RecordSet("spf",
     ttl=300,
     rrdatas=["\"v=spf1 ip4:111.111.111.111 include:backoff.email-example.com -all\""])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -320,6 +333,7 @@ const spf = new gcp.dns.RecordSet("spf", {
     rrdatas: ["\"v=spf1 ip4:111.111.111.111 include:backoff.email-example.com -all\""],
 });
 ```
+
 {{% /example %}}
 
 ### Adding a CNAME record
@@ -350,6 +364,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -384,6 +399,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -398,9 +414,11 @@ cname = gcp.dns.RecordSet("cname",
     ttl=300,
     rrdatas=["frontend.mydomain.com."])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -413,6 +431,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     rrdatas: ["frontend.mydomain.com."],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

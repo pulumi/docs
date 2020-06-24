@@ -15,8 +15,6 @@ Get information about a VM instance resource within GCE. For more information se
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -73,9 +73,11 @@ import pulumi_gcp as gcp
 appserver = gcp.compute.get_instance(name="primary-application-server",
     zone="us-central1-a")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -85,6 +87,7 @@ const appserver = pulumi.output(gcp.compute.getInstance({
     zone: "us-central1-a",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -3573,6 +3576,16 @@ restarted if it was terminated by Compute Engine (not a user).
 
     <dt class="property-required"
             title="Required">
+        <span id="minnodecpus_csharp">
+<a href="#minnodecpus_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="nodeaffinities_csharp">
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
 </span> 
@@ -3623,6 +3636,16 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minnodecpus_go">
+<a href="#minnodecpus_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3679,6 +3702,16 @@ restarted if it was terminated by Compute Engine (not a user).
 
     <dt class="property-required"
             title="Required">
+        <span id="minnodecpus_nodejs">
+<a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="nodeaffinities_nodejs">
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span> 
@@ -3729,6 +3762,16 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minnodecpus_python">
+<a href="#minnodecpus_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

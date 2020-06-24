@@ -12,13 +12,11 @@ meta_desc: "Explore the Trigger resource of the cloudbuild module, including exa
 
 Configuration for an automated build in response to source repository changes.
 
-
 To get more information about Trigger, see:
 
 * [API documentation](https://cloud.google.com/cloud-build/docs/api/reference/rest/)
 * How-to Guides
     * [Automating builds using build triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds)
-
 
 {{% examples %}}
 ## Example Usage
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +73,11 @@ filename_trigger = gcp.cloudbuild.Trigger("filename-trigger",
         "repoName": "my-repo",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -93,6 +94,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -3212,6 +3214,17 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_csharp">
+<a href="#invertregex_csharp" style="color: inherit; text-decoration: inherit;">Invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3239,6 +3252,17 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_go">
+<a href="#invertregex_go" style="color: inherit; text-decoration: inherit;">Invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
 {{% /md %}}</dd>
 
 </dl>
@@ -3270,6 +3294,17 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_nodejs">
+<a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3297,6 +3332,17 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_python">
+<a href="#invertregex_python" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
 {{% /md %}}</dd>
 
 </dl>
@@ -3337,6 +3383,17 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 
     <dt class="property-optional"
             title="Optional">
+        <span id="invertregex_csharp">
+<a href="#invertregex_csharp" style="color: inherit; text-decoration: inherit;">Invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span> 
@@ -3362,6 +3419,17 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_go">
+<a href="#invertregex_go" style="color: inherit; text-decoration: inherit;">Invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3395,6 +3463,17 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 
     <dt class="property-optional"
             title="Optional">
+        <span id="invertregex_nodejs">
+<a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span> 
@@ -3420,6 +3499,17 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_python">
+<a href="#invertregex_python" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3498,6 +3588,17 @@ If the build specifies a `RepoSource` with `dir` and a step with a
 `dir`,
 which specifies an absolute path, the `RepoSource` `dir` is ignored
 for the step's execution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_csharp">
+<a href="#invertregex_csharp" style="color: inherit; text-decoration: inherit;">Invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3586,6 +3687,17 @@ for the step's execution.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="invertregex_go">
+<a href="#invertregex_go" style="color: inherit; text-decoration: inherit;">Invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span> 
@@ -3670,6 +3782,17 @@ for the step's execution.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="invertregex_nodejs">
+<a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span> 
@@ -3750,6 +3873,17 @@ If the build specifies a `RepoSource` with `dir` and a step with a
 `dir`,
 which specifies an absolute path, the `RepoSource` `dir` is ignored
 for the step's execution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_python">
+<a href="#invertregex_python" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -18,7 +18,6 @@ To get more information about Service, see:
 * How-to Guides
     * [Configuring a service](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_service)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -105,9 +106,11 @@ example_service = gcp.servicedirectory.Service("exampleService",
         "region": "us-central1",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -125,6 +128,7 @@ const exampleService = new gcp.servicedirectory.Service("exampleService", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,8 +14,6 @@ Creates a group of dissimilar Compute Engine virtual machine instances.
 For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
 and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +77,11 @@ test = gcp.compute.InstanceGroup("test",
     zone="us-central1-a",
     network=google_compute_network["default"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -90,6 +92,7 @@ const test = new gcp.compute.InstanceGroup("test", {
     network: google_compute_network["default"].id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -297,7 +300,7 @@ group.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.
 {{% /md %}}</dd>
 
@@ -389,7 +392,7 @@ group.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.
 {{% /md %}}</dd>
 
@@ -481,7 +484,7 @@ group.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.
 {{% /md %}}</dd>
 
@@ -573,7 +576,7 @@ group.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.
 {{% /md %}}</dd>
 
@@ -958,7 +961,7 @@ group.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.
 {{% /md %}}</dd>
 
@@ -1072,7 +1075,7 @@ group.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.
 {{% /md %}}</dd>
 
@@ -1186,7 +1189,7 @@ group.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.
 {{% /md %}}</dd>
 
@@ -1300,7 +1303,7 @@ group.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
-as self_link URLs. When adding instances they must all be in the same
+as either self_link or id. When adding instances they must all be in the same
 network and zone as the instance group.
 {{% /md %}}</dd>
 

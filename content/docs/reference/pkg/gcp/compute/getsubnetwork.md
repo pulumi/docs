@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSubnetwork function of the compute module, including 
 
 Get a subnetwork within GCE from its name and region.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +50,11 @@ import pulumi_gcp as gcp
 my_subnetwork = gcp.compute.get_subnetwork(name="default-us-east1",
     region="us-east1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -62,6 +64,7 @@ const my_subnetwork = pulumi.output(gcp.compute.getSubnetwork({
     region: "us-east1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

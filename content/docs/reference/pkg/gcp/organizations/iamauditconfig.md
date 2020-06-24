@@ -12,7 +12,6 @@ meta_desc: "Explore the IamAuditConfig resource of the organizations module, inc
 
 Allows management of audit logging config for a given service for a Google Cloud Platform Organization.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,6 +79,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -94,9 +95,11 @@ config = gcp.organizations.IamAuditConfig("config",
     org_id="your-organization-id",
     service="allServices")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -110,6 +113,7 @@ const config = new gcp.organizations.IamAuditConfig("config", {
     service: "allServices",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

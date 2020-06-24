@@ -14,7 +14,6 @@ Creates a Google Bigtable instance. For more information see
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,9 +65,11 @@ development_instance = gcp.bigtable.Instance("development-instance",
     }],
     instance_type="DEVELOPMENT")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -81,6 +83,7 @@ const development_instance = new gcp.bigtable.Instance("development-instance", {
     instanceType: "DEVELOPMENT",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

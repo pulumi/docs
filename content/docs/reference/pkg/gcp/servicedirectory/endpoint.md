@@ -18,7 +18,6 @@ To get more information about Endpoint, see:
 * How-to Guides
     * [Configuring an endpoint](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_an_endpoint)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -103,6 +103,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -126,9 +127,11 @@ example_endpoint = gcp.servicedirectory.Endpoint("exampleEndpoint",
     address="1.2.3.4",
     port=5353)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -152,6 +155,7 @@ const exampleEndpoint = new gcp.servicedirectory.Endpoint("exampleEndpoint", {
     port: 5353,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,13 +12,11 @@ meta_desc: "Explore the Router resource of the compute module, including example
 
 Represents a Router resource.
 
-
 To get more information about Router, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/routers)
 * How-to Guides
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -66,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -110,6 +109,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -134,9 +134,11 @@ foobar_router = gcp.compute.Router("foobarRouter",
         ],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -159,6 +161,7 @@ const foobarRouter = new gcp.compute.Router("foobarRouter", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the UptimeCheckConfig resource of the monitoring module, inc
 
 This message configures which resources and services to monitor for availability.
 
-
 To get more information about UptimeCheckConfig, see:
 
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.uptimeCheckConfigs)
@@ -21,7 +20,6 @@ To get more information about UptimeCheckConfig, see:
 
 > **Warning:** All arguments including `http_check.auth_info.password` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
-
 
 {{% examples %}}
 ## Example Usage
@@ -67,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,6 +106,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -132,9 +132,11 @@ http = gcp.monitoring.UptimeCheckConfig("http",
     },
     timeout="60s")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -158,6 +160,7 @@ const http = new gcp.monitoring.UptimeCheckConfig("http", {
     timeout: "60s",
 });
 ```
+
 {{% /example %}}
 
 ### Uptime Check Config Https
@@ -202,6 +205,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -244,6 +248,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -271,9 +276,11 @@ https = gcp.monitoring.UptimeCheckConfig("https",
     },
     timeout="60s")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -299,6 +306,7 @@ const https = new gcp.monitoring.UptimeCheckConfig("https", {
     timeout: "60s",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

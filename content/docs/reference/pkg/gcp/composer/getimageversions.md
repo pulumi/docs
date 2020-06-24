@@ -12,7 +12,6 @@ meta_desc: "Explore the GetImageVersions function of the composer module, includ
 
 Provides access to available Cloud Composer versions in a region for a given project.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +63,11 @@ test = gcp.composer.Environment("test",
         },
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -80,6 +82,7 @@ const test = new gcp.composer.Environment("test", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

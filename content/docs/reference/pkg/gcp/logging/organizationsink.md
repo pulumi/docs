@@ -17,7 +17,6 @@ Manages a organization-level logging sink. For more information see
 Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
 granted to the credentials used with this provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +70,11 @@ log_writer = gcp.projects.IAMMember("log-writer",
     role="roles/storage.objectCreator",
     member=my_sink.writer_identity)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -88,6 +90,7 @@ const log_writer = new gcp.projects.IAMMember("log-writer", {
     member: my_sink.writerIdentity,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

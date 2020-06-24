@@ -15,8 +15,6 @@ A secret version resource.
 > **Warning:** All arguments including `payload.secret_data` will be stored in the raw
 state as plain-text.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,9 +74,11 @@ secret_version_basic = gcp.secretmanager.SecretVersion("secret-version-basic",
     secret=secret_basic.id,
     secret_data="secret-data")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -96,6 +97,7 @@ const secret_version_basic = new gcp.secretmanager.SecretVersion("secret-version
     secretData: "secret-data",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

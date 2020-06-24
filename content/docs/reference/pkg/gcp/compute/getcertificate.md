@@ -12,7 +12,6 @@ meta_desc: "Explore the GetCertificate function of the compute module, including
 
 Get info about a Google Compute SSL Certificate from its name.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
     public Output<string> SelfLink { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +82,11 @@ pulumi.export("certificate", my_cert.certificate)
 pulumi.export("certificateId", my_cert.certificate_id)
 pulumi.export("selfLink", my_cert.self_link)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -95,6 +98,7 @@ export const certificate = myCert.then(myCert => myCert.certificate);
 export const certificateId = myCert.then(myCert => myCert.certificateId);
 export const selfLink = myCert.then(myCert => myCert.selfLink);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

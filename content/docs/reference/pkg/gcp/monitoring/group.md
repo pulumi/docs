@@ -15,13 +15,11 @@ has a filter that is matched against monitored resources and their
 associated metadata. If a group's filter matches an available monitored
 resource, then that resource is a member of that group.
 
-
 To get more information about Group, see:
 
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.groups)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/groups/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,6 +69,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,9 +81,11 @@ basic = gcp.monitoring.Group("basic",
     display_name="tf-test MonitoringGroup",
     filter="resource.metadata.region=\"europe-west2\"")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -93,6 +95,7 @@ const basic = new gcp.monitoring.Group("basic", {
     filter: "resource.metadata.region=\"europe-west2\"",
 });
 ```
+
 {{% /example %}}
 
 ### Monitoring Group Subgroup
@@ -120,6 +123,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -152,6 +156,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -167,9 +172,11 @@ subgroup = gcp.monitoring.Group("subgroup",
     filter="resource.metadata.region=\"europe-west2\"",
     parent_name=parent.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -184,6 +191,7 @@ const subgroup = new gcp.monitoring.Group("subgroup", {
     parentName: parent.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

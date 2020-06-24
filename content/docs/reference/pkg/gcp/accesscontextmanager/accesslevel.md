@@ -13,13 +13,11 @@ meta_desc: "Explore the AccessLevel resource of the accesscontextmanager module,
 An AccessLevel is a label that can be applied to requests to GCP services,
 along with a list of requirements necessary for the label to be applied.
 
-
 To get more information about AccessLevel, see:
 
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels)
 * How-to Guides
     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
-
 
 {{% examples %}}
 ## Example Usage
@@ -75,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,9 +107,11 @@ access_level = gcp.accesscontextmanager.AccessLevel("access-level",
     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
     title="chromeos_no_lock")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -139,6 +140,7 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
     title: "chromeos_no_lock",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -153,7 +155,7 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#AccessLevel">AccessLevel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#AccessLevel">AccessLevel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic=None<span class="p">, </span>custom=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -345,7 +347,7 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Human readable title. Must be unique within the Policy.
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,13 +363,25 @@ Format: accessPolicies/{policy_id}
 
     <dt class="property-optional"
             title="Optional">
+        <span id="custom_csharp">
+<a href="#custom_csharp" style="color: inherit; text-decoration: inherit;">Custom</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the AccessLevel and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the expression
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -410,7 +424,7 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Human readable title. Must be unique within the Policy.
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,13 +440,25 @@ Format: accessPolicies/{policy_id}
 
     <dt class="property-optional"
             title="Optional">
+        <span id="custom_go">
+<a href="#custom_go" style="color: inherit; text-decoration: inherit;">Custom</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom</a></span>
+    </dt>
+    <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the AccessLevel and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the expression
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -475,7 +501,7 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Human readable title. Must be unique within the Policy.
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,13 +517,25 @@ Format: accessPolicies/{policy_id}
 
     <dt class="property-optional"
             title="Optional">
+        <span id="custom_nodejs">
+<a href="#custom_nodejs" style="color: inherit; text-decoration: inherit;">custom</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom</a></span>
+    </dt>
+    <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the AccessLevel and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the expression
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,7 +578,7 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Human readable title. Must be unique within the Policy.
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -556,13 +594,25 @@ Format: accessPolicies/{policy_id}
 
     <dt class="property-optional"
             title="Optional">
+        <span id="custom_python">
+<a href="#custom_python" style="color: inherit; text-decoration: inherit;">custom</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustom">Dict[Access<wbr>Level<wbr>Custom]</a></span>
+    </dt>
+    <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Description of the AccessLevel and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the expression
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -676,7 +726,7 @@ Get an existing AccessLevel resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic=None<span class="p">, </span>custom=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -803,13 +853,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_custom_csharp">
+<a href="#state_custom_csharp" style="color: inherit; text-decoration: inherit;">Custom</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the AccessLevel and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the expression
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,7 +907,7 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Human readable title. Must be unique within the Policy.
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
 </dl>
@@ -868,13 +930,25 @@ Format: accessPolicies/{policy_id}
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_custom_go">
+<a href="#state_custom_go" style="color: inherit; text-decoration: inherit;">Custom</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom</a></span>
+    </dt>
+    <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the AccessLevel and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the expression
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -910,7 +984,7 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Human readable title. Must be unique within the Policy.
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
 </dl>
@@ -933,13 +1007,25 @@ Format: accessPolicies/{policy_id}
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_custom_nodejs">
+<a href="#state_custom_nodejs" style="color: inherit; text-decoration: inherit;">custom</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom</a></span>
+    </dt>
+    <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the AccessLevel and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the expression
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -975,7 +1061,7 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Human readable title. Must be unique within the Policy.
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
 </dl>
@@ -998,13 +1084,25 @@ Format: accessPolicies/{policy_id}
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_custom_python">
+<a href="#state_custom_python" style="color: inherit; text-decoration: inherit;">custom</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustom">Dict[Access<wbr>Level<wbr>Custom]</a></span>
+    </dt>
+    <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Description of the AccessLevel and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the expression
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1040,7 +1138,7 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Human readable title. Must be unique within the Policy.
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
 </dl>
@@ -2077,6 +2175,326 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version
 of this OS satisfies the constraint.
 Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accesslevelcustom">Access<wbr>Level<wbr>Custom</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccessLevelCustom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccessLevelCustom">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelCustomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelCustomOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelCustomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelCustom.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expr_csharp">
+<a href="#expr_csharp" style="color: inherit; text-decoration: inherit;">Expr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustomexpr">Access<wbr>Level<wbr>Custom<wbr>Expr<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+This page details the objects and attributes that are used to the build the CEL expressions for
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expr_go">
+<a href="#expr_go" style="color: inherit; text-decoration: inherit;">Expr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustomexpr">Access<wbr>Level<wbr>Custom<wbr>Expr</a></span>
+    </dt>
+    <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+This page details the objects and attributes that are used to the build the CEL expressions for
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expr_nodejs">
+<a href="#expr_nodejs" style="color: inherit; text-decoration: inherit;">expr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustomexpr">Access<wbr>Level<wbr>Custom<wbr>Expr</a></span>
+    </dt>
+    <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+This page details the objects and attributes that are used to the build the CEL expressions for
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expr_python">
+<a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesslevelcustomexpr">Dict[Access<wbr>Level<wbr>Custom<wbr>Expr]</a></span>
+    </dt>
+    <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+This page details the objects and attributes that are used to the build the CEL expressions for
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.  Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accesslevelcustomexpr">Access<wbr>Level<wbr>Custom<wbr>Expr</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccessLevelCustomExpr">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccessLevelCustomExpr">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelCustomExprArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelCustomExprOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelCustomExprArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelCustomExpr.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the expression
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the expression
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the expression
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the expression
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 {{% /md %}}</dd>
 
 </dl>

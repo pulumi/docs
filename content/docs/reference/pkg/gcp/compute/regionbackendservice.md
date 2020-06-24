@@ -13,16 +13,12 @@ meta_desc: "Explore the RegionBackendService resource of the compute module, inc
 A Region Backend Service defines a regionally-scoped group of virtual
 machines that will serve traffic for load balancing.
 
-
 To get more information about RegionBackendService, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/latest/regionBackendServices)
 * How-to Guides
     * [Internal TCP/UDP Load Balancing](https://cloud.google.com/compute/docs/load-balancing/internal/)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a RegionBackendService Resource {#create}

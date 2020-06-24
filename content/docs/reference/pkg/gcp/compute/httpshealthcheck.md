@@ -13,20 +13,17 @@ meta_desc: "Explore the HttpsHealthCheck resource of the compute module, includi
 An HttpsHealthCheck resource. This resource defines a template for how
 individual VMs should be checked for health, via HTTPS.
 
-
 > **Note:** gcp.compute.HttpsHealthCheck is a legacy health check.
 The newer [gcp.compute.HealthCheck](https://www.terraform.io/docs/providers/google/r/compute_health_check.html)
 should be preferred for all uses except
 [Network Load Balancers](https://cloud.google.com/compute/docs/load-balancing/network/)
 which still require the legacy version.
 
-
 To get more information about HttpsHealthCheck, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/httpsHealthChecks)
 * How-to Guides
     * [Adding Health Checks](https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks)
-
 
 {{% examples %}}
 ## Example Usage
@@ -52,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +66,11 @@ default = gcp.compute.HttpsHealthCheck("default",
     request_path="/health_check",
     timeout_sec=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -81,6 +81,7 @@ const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
     timeoutSec: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

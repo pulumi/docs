@@ -26,6 +26,230 @@ Three different resources help you manage your IAM policy for BigQuery dataset. 
 
 > **Note:** `gcp.bigquery.DatasetIamBinding` resources **can be** used in conjunction with `gcp.bigquery.DatasetIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\bigquery\_dataset\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const owner = gcp.organizations.getIAMPolicy({
+    binding: [{
+        role: "roles/dataOwner",
+        members: ["user:jane@example.com"],
+    }],
+});
+const dataset = new gcp.bigquery.DatasetIamPolicy("dataset", {
+    datasetId: "your-dataset-id",
+    policyData: owner.then(owner => owner.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+owner = gcp.organizations.get_iam_policy(binding=[{
+    "role": "roles/dataOwner",
+    "members": ["user:jane@example.com"],
+}])
+dataset = gcp.bigquery.DatasetIamPolicy("dataset",
+    dataset_id="your-dataset-id",
+    policy_data=owner.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var owner = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/dataOwner" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var dataset = new Gcp.BigQuery.DatasetIamPolicy("dataset", new Gcp.BigQuery.DatasetIamPolicyArgs
+        {
+            DatasetId = "your-dataset-id",
+            PolicyData = owner.Apply(owner => owner.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		owner, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Binding: []map[string]interface{}{
+				map[string]interface{}{
+					"role": "roles/dataOwner",
+					"members": []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		dataset, err := bigquery.NewDatasetIamPolicy(ctx, "dataset", &bigquery.DatasetIamPolicyArgs{
+			DatasetId:  pulumi.String("your-dataset-id"),
+			PolicyData: pulumi.String(owner.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_bigquery\_dataset\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const reader = new gcp.bigquery.DatasetIamBinding("reader", {
+    datasetId: "your-dataset-id",
+    members: ["user:jane@example.com"],
+    role: "roles/bigquery.dataViewer",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+reader = gcp.bigquery.DatasetIamBinding("reader",
+    dataset_id="your-dataset-id",
+    members=["user:jane@example.com"],
+    role="roles/bigquery.dataViewer")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var reader = new Gcp.BigQuery.DatasetIamBinding("reader", new Gcp.BigQuery.DatasetIamBindingArgs
+        {
+            DatasetId = "your-dataset-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/bigquery.dataViewer",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		reader, err := bigquery.NewDatasetIamBinding(ctx, "reader", &bigquery.DatasetIamBindingArgs{
+			DatasetId: pulumi.String("your-dataset-id"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/bigquery.dataViewer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_bigquery\_dataset\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.bigquery.DatasetIamMember("editor", {
+    datasetId: "your-dataset-id",
+    member: "user:jane@example.com",
+    role: "roles/bigquery.dataEditor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+editor = gcp.bigquery.DatasetIamMember("editor",
+    dataset_id="your-dataset-id",
+    member="user:jane@example.com",
+    role="roles/bigquery.dataEditor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.BigQuery.DatasetIamMember("editor", new Gcp.BigQuery.DatasetIamMemberArgs
+        {
+            DatasetId = "your-dataset-id",
+            Member = "user:jane@example.com",
+            Role = "roles/bigquery.dataEditor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		editor, err := bigquery.NewDatasetIamMember(ctx, "editor", &bigquery.DatasetIamMemberArgs{
+			DatasetId: pulumi.String("your-dataset-id"),
+			Member:    pulumi.String("user:jane@example.com"),
+			Role:      pulumi.String("roles/bigquery.dataEditor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a DatasetIamBinding Resource {#create}

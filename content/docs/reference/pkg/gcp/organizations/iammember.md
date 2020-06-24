@@ -17,7 +17,6 @@ the IAM policy for an existing Google Cloud Platform Organization.
    `gcp.organizations.IAMBinding` for the __same role__ or they will fight over
    what your policy should be.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ binding = gcp.organizations.IAMMember("binding",
     org_id="0123456789",
     role="roles/editor")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -92,6 +95,7 @@ const binding = new gcp.organizations.IAMMember("binding", {
     role: "roles/editor",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,13 +12,11 @@ meta_desc: "Explore the EntryGroup resource of the datacatalog module, including
 
 An EntryGroup resource represents a logical grouping of zero or more Data Catalog Entry resources.
 
-
 To get more information about EntryGroup, see:
 
 * [API documentation](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
-
 
 {{% examples %}}
 ## Example Usage
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +74,11 @@ import pulumi_gcp as gcp
 
 basic_entry_group = gcp.datacatalog.EntryGroup("basicEntryGroup", entry_group_id="my_group")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -85,6 +87,7 @@ const basicEntryGroup = new gcp.datacatalog.EntryGroup("basic_entry_group", {
     entryGroupId: "my_group",
 });
 ```
+
 {{% /example %}}
 
 ### Data Catalog Entry Group Full
@@ -107,6 +110,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -132,6 +136,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -144,9 +149,11 @@ basic_entry_group = gcp.datacatalog.EntryGroup("basicEntryGroup",
     display_name="terraform entry group",
     entry_group_id="my_group")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -157,6 +164,7 @@ const basicEntryGroup = new gcp.datacatalog.EntryGroup("basic_entry_group", {
     entryGroupId: "my_group",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

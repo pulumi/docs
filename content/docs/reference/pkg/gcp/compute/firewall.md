@@ -23,16 +23,12 @@ outgoing traffic and a default "deny" for incoming traffic. For all
 networks except the default network, you must create any firewall rules
 you need.
 
-
 To get more information about Firewall, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/firewalls)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/firewalls)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a Firewall Resource {#create}

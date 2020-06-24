@@ -20,8 +20,6 @@ Three different resources help you manage your IAM policy for Cloud Endpoints Se
 
 > **Note:** `gcp.endpoints.ServiceIamBinding` resources **can be** used in conjunction with `gcp.endpoints.ServiceIamMember` resources **only if** they do not grant privilege to the same role.
 
-
-
 ## google\_endpoints\_service\_iam\_policy
 
 ```typescript

@@ -17,7 +17,6 @@ Manages a folder-level logging exclusion. For more information see
 Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
 granted to the credentials used with this provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +66,11 @@ my_exclusion = gcp.logging.FolderExclusion("my-exclusion",
     description="Exclude GCE instance debug logs",
     filter="resource.type = gce_instance AND severity <= DEBUG")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -83,6 +85,7 @@ const my_exclusion = new gcp.logging.FolderExclusion("my-exclusion", {
     filter: "resource.type = gce_instance AND severity <= DEBUG",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

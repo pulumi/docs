@@ -12,13 +12,11 @@ meta_desc: "Explore the Database resource of the spanner module, including examp
 
 A Cloud Spanner Database which is hosted on a Spanner instance.
 
-
 To get more information about Database, see:
 
 * [API documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/spanner/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -86,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -103,9 +103,11 @@ database = gcp.spanner.Database("database",
         "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -122,6 +124,7 @@ const database = new gcp.spanner.Database("database", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

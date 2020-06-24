@@ -15,13 +15,11 @@ a whole. This resource is primarily intended for use with GCP-generated
 peerings that shouldn't otherwise be managed by other tools. Deleting this
 resource is a no-op and the peering will not be modified.
 
-
 To get more information about NetworkPeeringRoutesConfig, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/networks/updatePeering)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc-peering)
-
 
 {{% examples %}}
 ## Example Usage
@@ -68,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -122,6 +121,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -145,9 +145,11 @@ peering_secondary = gcp.compute.NetworkPeering("peeringSecondary",
     network=network_secondary.id,
     peer_network=network_primary.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -171,6 +173,7 @@ const peeringSecondary = new gcp.compute.NetworkPeering("peeringSecondary", {
     peerNetwork: networkPrimary.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

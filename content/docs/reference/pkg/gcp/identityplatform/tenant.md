@@ -19,9 +19,6 @@ the marketplace prior to using this resource.
 You must [enable multi-tenancy](https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart) via
 the Cloud Console prior to creating tenants.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +79,11 @@ tenant = gcp.identityplatform.Tenant("tenant",
     allow_password_signup=True,
     display_name="tenant")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -92,6 +93,7 @@ const tenant = new gcp.identityplatform.Tenant("tenant", {
     displayName: "tenant",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

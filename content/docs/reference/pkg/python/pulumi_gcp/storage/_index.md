@@ -154,7 +154,7 @@ by default GCS sets this to this bucket’s name.</p></li>
 <p>The <strong>retention_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will be <a class="reference external" href="https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket">locked</a> and permanently restrict edits to the bucket’s retention policy.  Caution: Locking a bucket is an irreversible action.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.</p></li>
 </ul>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
@@ -273,7 +273,7 @@ is not provided, the provider project is used.</p>
 <dd><p>Configuration of the bucket’s data retention policy for how long objects in the bucket should be retained. Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will be <a class="reference external" href="https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket">locked</a> and permanently restrict edits to the bucket’s retention policy.  Caution: Locking a bucket is an irreversible action.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.</p></li>
 </ul>
 </dd></dl>
 
@@ -396,7 +396,7 @@ by default GCS sets this to this bucket’s name.</p></li>
 <p>The <strong>retention_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">isLocked</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will be <a class="reference external" href="https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket">locked</a> and permanently restrict edits to the bucket’s retention policy.  Caution: Locking a bucket is an irreversible action.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.</p></li>
 </ul>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">

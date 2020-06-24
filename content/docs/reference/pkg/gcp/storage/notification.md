@@ -11,9 +11,9 @@ meta_desc: "Explore the Notification resource of the storage module, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Creates a new notification configuration on a specified bucket, establishing a flow of event notifications from GCS to a Cloud Pub/Sub topic.
- For more information see 
-[the official documentation](https://cloud.google.com/storage/docs/pubsub-notifications) 
-and 
+ For more information see
+[the official documentation](https://cloud.google.com/storage/docs/pubsub-notifications)
+and
 [API](https://cloud.google.com/storage/docs/json_api/v1/notifications).
 
 In order to enable notifications, a special Google Cloud Storage service account unique to the project
@@ -22,9 +22,8 @@ account's email address, use the `gcp.storage.getProjectServiceAccount` datasour
 for an example of enabling notifications by granting the correct IAM permission. See
 [the notifications documentation](https://cloud.google.com/storage/docs/gsutil/commands/notification) for more details.
 
->**NOTE**: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
+> **NOTE**: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
 making this resource dependent on those IAM resources via `depends_on`. This will safeguard against errors due to IAM race conditions.
-
 
 {{% examples %}}
 ## Example Usage
@@ -77,6 +76,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -109,9 +109,11 @@ notification = gcp.storage.Notification("notification",
     })
 # Enable notifications by giving the correct IAM permission to the unique service account.
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -139,6 +141,7 @@ const notification = new gcp.storage.Notification("notification", {
 });
 // Enable notifications by giving the correct IAM permission to the unique service account.
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,13 +13,11 @@ meta_desc: "Explore the Instance resource of the spanner module, including examp
 An isolated set of Cloud Spanner resources on which databases can be
 hosted.
 
-
 To get more information about Instance, see:
 
 * [API documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/spanner/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,6 +76,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -92,9 +92,11 @@ example = gcp.spanner.Instance("example",
     },
     num_nodes=2)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -108,6 +110,7 @@ const example = new gcp.spanner.Instance("example", {
     numNodes: 2,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

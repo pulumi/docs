@@ -16,9 +16,6 @@ Cloud Console and appears the same as a regular Cloud SQL instance, but it
 contains no data, requires no configuration or maintenance, and does not
 affect billing. You cannot update the source representation instance.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,6 +68,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +82,11 @@ instance = gcp.sql.SourceRepresentationInstance("instance",
     port=3306,
     region="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -97,6 +98,7 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
     region: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

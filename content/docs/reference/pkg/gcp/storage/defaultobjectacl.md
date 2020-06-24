@@ -17,13 +17,12 @@ without managing the bucket itself.
 to the default ACL that has been defined.
 
 For more information see
-[the official documentation](https://cloud.google.com/storage/docs/access-control/lists) 
-and 
+[the official documentation](https://cloud.google.com/storage/docs/access-control/lists)
+and
 [API](https://cloud.google.com/storage/docs/json_api/v1/defaultObjectAccessControls).
 
 > Want fine-grained control over default object ACLs? Use `gcp.storage.DefaultObjectAccessControl`
 to control individual role entity pairs.
-
 
 {{% examples %}}
 ## Example Usage
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,9 +75,11 @@ image_store_default_acl = gcp.storage.DefaultObjectACL("image-store-default-acl"
         "READER:group-mygroup",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -91,6 +93,7 @@ const image_store_default_acl = new gcp.storage.DefaultObjectACL("image-store-de
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

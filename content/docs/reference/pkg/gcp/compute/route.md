@@ -33,13 +33,11 @@ A Route resource must have exactly one specification of either
 nextHopGateway, nextHopInstance, nextHopIp, nextHopVpnTunnel, or
 nextHopIlb.
 
-
 To get more information about Route, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/routes)
 * How-to Guides
     * [Using Routes](https://cloud.google.com/vpc/docs/using-routes)
-
 
 {{% examples %}}
 ## Example Usage
@@ -69,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +98,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +113,11 @@ default_route = gcp.compute.Route("defaultRoute",
     next_hop_ip="10.132.1.5",
     priority=100)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -128,6 +130,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
     priority: 100,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

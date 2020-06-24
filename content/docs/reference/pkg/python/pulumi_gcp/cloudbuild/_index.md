@@ -168,11 +168,13 @@ Docker volumes. Each named volume must be used by at least two build steps.</p><
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">branch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Regex of branches to match.  Specify only one of branch or tag.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">commentControl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether to block builds on a “/gcbrun” comment from a repository owner or collaborator.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">push</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">branch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Regex of branches to match.  Specify only one of branch or tag.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Regex of tags to match.  Specify only one of branch or tag.</p></li>
 </ul>
 </li>
@@ -191,6 +193,7 @@ If the build specifies a <code class="docutils literal notranslate"><span class=
 <code class="docutils literal notranslate"><span class="pre">dir</span></code>,
 which specifies an absolute path, the <code class="docutils literal notranslate"><span class="pre">RepoSource</span></code> <code class="docutils literal notranslate"><span class="pre">dir</span></code> is ignored
 for the step’s execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the project that owns the Cloud Source Repository. If
 omitted, the project ID requesting the build is assumed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">repoName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Cloud Source Repository. If omitted, the name “default” is assumed.</p></li>
@@ -313,11 +316,13 @@ Docker volumes. Each named volume must be used by at least two build steps.</p><
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">branch</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Regex of branches to match.  Specify only one of branch or tag.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">commentControl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether to block builds on a “/gcbrun” comment from a repository owner or collaborator.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">push</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">branch</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Regex of branches to match.  Specify only one of branch or tag.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Regex of tags to match.  Specify only one of branch or tag.</p></li>
 </ul>
 </li>
@@ -398,6 +403,7 @@ If the build specifies a <code class="docutils literal notranslate"><span class=
 <code class="docutils literal notranslate"><span class="pre">dir</span></code>,
 which specifies an absolute path, the <code class="docutils literal notranslate"><span class="pre">RepoSource</span></code> <code class="docutils literal notranslate"><span class="pre">dir</span></code> is ignored
 for the step’s execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the project that owns the Cloud Source Repository. If
 omitted, the project ID requesting the build is assumed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">repoName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the Cloud Source Repository. If omitted, the name “default” is assumed.</p></li>
@@ -538,11 +544,13 @@ Docker volumes. Each named volume must be used by at least two build steps.</p><
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">branch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Regex of branches to match.  Specify only one of branch or tag.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">commentControl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether to block builds on a “/gcbrun” comment from a repository owner or collaborator.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">push</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">branch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Regex of branches to match.  Specify only one of branch or tag.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Regex of tags to match.  Specify only one of branch or tag.</p></li>
 </ul>
 </li>
@@ -561,6 +569,7 @@ If the build specifies a <code class="docutils literal notranslate"><span class=
 <code class="docutils literal notranslate"><span class="pre">dir</span></code>,
 which specifies an absolute path, the <code class="docutils literal notranslate"><span class="pre">RepoSource</span></code> <code class="docutils literal notranslate"><span class="pre">dir</span></code> is ignored
 for the step’s execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invertRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When true, only trigger a build if the revision regex does NOT match the git_ref regex.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the project that owns the Cloud Source Repository. If
 omitted, the project ID requesting the build is assumed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">repoName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Cloud Source Repository. If omitted, the name “default” is assumed.</p></li>

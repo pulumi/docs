@@ -24,14 +24,11 @@ and Route, reflecting their statuses and conditions as its own.
 See also:
 https://github.com/knative/serving/blob/master/docs/spec/overview.md#service
 
-
 To get more information about Service, see:
 
 * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations.services)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/)
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -76,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,9 +99,11 @@ default = gcp.cloudrun.Service("default",
         "percent": 100,
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -123,123 +123,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
     }],
 });
 ```
-{{% /example %}}
 
-### Cloud Run Service Sql
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
-        {
-            Region = "us-east1",
-            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
-            {
-                Tier = "db-f1-micro",
-            },
-        });
-        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
-        {
-            AutogenerateRevisionName = true,
-            Location = "us-central1",
-            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
-            {
-                Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
-                {
-                    Annotations = 
-                    {
-                        { "autoscaling.knative.dev/maxScale", "1000" },
-                        { "run.googleapis.com/client-name", "demo" },
-                        { "run.googleapis.com/cloudsql-instances", instance.Name.Apply(name => $"my-project-name:us-central1:{name}") },
-                    },
-                },
-                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
-                {
-                    Containers = 
-                    {
-                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
-                        {
-                            Image = "gcr.io/cloudrun/hello",
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-instance = gcp.sql.DatabaseInstance("instance",
-    region="us-east1",
-    settings={
-        "tier": "db-f1-micro",
-    })
-default = gcp.cloudrun.Service("default",
-    autogenerate_revision_name=True,
-    location="us-central1",
-    template={
-        "metadata": {
-            "annotations": {
-                "autoscaling.knative.dev/maxScale": "1000",
-                "run.googleapis.com/client-name": "demo",
-                "run.googleapis.com/cloudsql-instances": instance.name.apply(lambda name: f"my-project-name:us-central1:{name}"),
-            },
-        },
-        "spec": {
-            "containers": [{
-                "image": "gcr.io/cloudrun/hello",
-            }],
-        },
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.sql.DatabaseInstance("instance", {
-    region: "us-east1",
-    settings: {
-        tier: "db-f1-micro",
-    },
-});
-const defaultService = new gcp.cloudrun.Service("default", {
-    autogenerateRevisionName: true,
-    location: "us-central1",
-    template: {
-        metadata: {
-            annotations: {
-                "autoscaling.knative.dev/maxScale": "1000",
-                "run.googleapis.com/client-name": "demo",
-                "run.googleapis.com/cloudsql-instances": pulumi.interpolate`my-project-name:us-central1:${instance.name}`,
-            },
-        },
-        spec: {
-            containers: [{
-                image: "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
-});
-```
 {{% /example %}}
 
 ### Cloud Run Service Multiple Environment Variables
@@ -295,6 +179,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -331,9 +216,11 @@ default = gcp.cloudrun.Service("default",
         "percent": 100,
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -364,6 +251,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
     }],
 });
 ```
+
 {{% /example %}}
 
 ### Cloud Run Service Traffic Split
@@ -414,6 +302,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -448,9 +337,11 @@ default = gcp.cloudrun.Service("default",
         },
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -480,6 +371,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -3323,6 +3215,17 @@ It is expected
 that the system will manipulate this based on routability and load.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutseconds_csharp">
+<a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3389,6 +3292,17 @@ are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutseconds_go">
+<a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3457,6 +3371,17 @@ It is expected
 that the system will manipulate this based on routability and load.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutseconds_nodejs">
+<a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3523,6 +3448,17 @@ are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutseconds_python">
+<a href="#timeoutseconds_python" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

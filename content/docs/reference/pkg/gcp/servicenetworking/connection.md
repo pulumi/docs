@@ -15,7 +15,6 @@ Manages a private VPC connection with a GCP service provider. For more informati
 and
 [API](https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,6 +94,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,9 +113,11 @@ foobar = gcp.servicenetworking.Connection("foobar",
     service="servicenetworking.googleapis.com",
     reserved_peering_ranges=[private_ip_alloc.name])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -132,6 +135,7 @@ const foobar = new gcp.servicenetworking.Connection("foobar", {
     reservedPeeringRanges: [privateIpAlloc.name],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

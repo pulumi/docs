@@ -14,13 +14,11 @@ Cloud Firestore indexes enable simple and complex queries against documents in a
  This resource manages composite indexes and not single
 field indexes.
 
-
 To get more information about Index, see:
 
 * [API documentation](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/firestore/docs/query-data/indexing)
-
 
 {{% examples %}}
 ## Example Usage
@@ -63,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -92,9 +91,11 @@ my_index = gcp.firestore.Index("my-index",
     ],
     project="my-project-name")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -118,6 +119,7 @@ const my_index = new gcp.firestore.Index("my-index", {
     project: "my-project-name",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

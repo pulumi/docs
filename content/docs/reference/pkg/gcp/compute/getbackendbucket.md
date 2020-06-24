@@ -12,7 +12,6 @@ meta_desc: "Explore the GetBackendBucket function of the compute module, includi
 
 Get information about a BackendBucket.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,9 +48,11 @@ import pulumi_gcp as gcp
 
 my_backend_bucket = gcp.compute.get_backend_bucket(name="my-backend")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -59,6 +61,7 @@ const my_backend_bucket = pulumi.output(gcp.compute.getBackendBucket({
     name: "my-backend",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

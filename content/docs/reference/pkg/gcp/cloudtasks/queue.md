@@ -12,9 +12,6 @@ meta_desc: "Explore the Queue resource of the cloudtasks module, including examp
 
 A named resource to which messages are sent by publishers.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +48,11 @@ import pulumi_gcp as gcp
 
 default = gcp.cloudtasks.Queue("default", location="us-central1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -61,6 +61,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
     location: "us-central1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

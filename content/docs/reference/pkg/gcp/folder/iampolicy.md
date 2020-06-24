@@ -13,7 +13,6 @@ meta_desc: "Explore the IAMPolicy resource of the folder module, including examp
 Allows creation and management of the IAM policy for an existing Google Cloud
 Platform folder.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,6 +101,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,9 +120,11 @@ folder_admin_policy = gcp.folder.IAMPolicy("folderAdminPolicy",
     folder=department1.name,
     policy_data=admin.policy_data)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -141,6 +144,7 @@ const folderAdminPolicy = new gcp.folder.IAMPolicy("folderAdminPolicy", {
     policyData: admin.then(admin => admin.policyData),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

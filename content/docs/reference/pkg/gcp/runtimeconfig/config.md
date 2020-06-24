@@ -15,7 +15,6 @@ Manages a RuntimeConfig resource in Google Cloud. For more information, see the
 or the
 [JSON API](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +51,11 @@ import pulumi_gcp as gcp
 
 my_runtime_config = gcp.runtimeconfig.Config("my-runtime-config", description="Runtime configuration values for my service")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -62,6 +64,7 @@ const my_runtime_config = new gcp.runtimeconfig.Config("my-runtime-config", {
     description: "Runtime configuration values for my service",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

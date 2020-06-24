@@ -19,9 +19,6 @@ To get more information about GameServerDeploymentRollout, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
-{{% examples %}}
-## Example Usage
-{{% /examples %}}
 
 
 ## Create a GameServerDeploymentRollout Resource {#create}

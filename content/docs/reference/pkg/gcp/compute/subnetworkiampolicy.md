@@ -20,8 +20,6 @@ Three different resources help you manage your IAM policy for Compute Engine Sub
 
 > **Note:** `gcp.compute.SubnetworkIAMBinding` resources **can be** used in conjunction with `gcp.compute.SubnetworkIAMMember` resources **only if** they do not grant privilege to the same role.
 
-
-
 ## google\_compute\_subnetwork\_iam\_policy
 
 ```typescript

@@ -12,13 +12,11 @@ meta_desc: "Explore the Registry resource of the iot module, including examples,
 
 A Google Cloud IoT Core device registry.
 
-
 To get more information about DeviceRegistry, see:
 
 * [API documentation](https://cloud.google.com/iot/docs/reference/cloudiot/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/iot/docs/)
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,15 +53,18 @@ import pulumi_gcp as gcp
 
 test_registry = gcp.iot.Registry("test-registry")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const test_registry = new gcp.iot.Registry("test-registry", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Instance resource of the filestore module, including exa
 
 A Google Cloud Filestore instance.
 
-
 To get more information about Instance, see:
 
 * [API documentation](https://cloud.google.com/filestore/docs/reference/rest/v1beta1/projects.locations.instances/create)
@@ -20,7 +19,6 @@ To get more information about Instance, see:
     * [Official Documentation](https://cloud.google.com/filestore/docs/creating-instances)
     * [Use with Kubernetes](https://cloud.google.com/filestore/docs/accessing-fileshares)
     * [Copying Data In/Out](https://cloud.google.com/filestore/docs/copying-data)
-
 
 {{% examples %}}
 ## Example Usage
@@ -61,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +116,11 @@ instance = gcp.filestore.Instance("instance",
     tier="PREMIUM",
     zone="us-central1-b")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -136,6 +138,7 @@ const instance = new gcp.filestore.Instance("instance", {
     zone: "us-central1-b",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
