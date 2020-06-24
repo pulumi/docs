@@ -176,6 +176,12 @@
       "terraform_provider_name": "mysql"
     },
     {
+      "name": "Pulumi NS1",
+      "package_name": "pulumi_ns1",
+      "pulumi_provider_name": "ns1",
+      "terraform_provider_name": "ns1"
+    },
+    {
       "name": "Pulumi F5BigIP",
       "package_name": "pulumi_f5bigip",
       "pulumi_provider_name": "f5bigip",

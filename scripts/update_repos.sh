@@ -39,6 +39,7 @@ TOOLS_REPOS=(
     "pulumi-mongodbatlas"
     "pulumi-mysql"
     "pulumi-newrelic"
+    "pulumi-ns1"
     "pulumi-okta"
     "pulumi-openstack"
     "pulumi-packet"
