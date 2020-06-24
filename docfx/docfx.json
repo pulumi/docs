@@ -387,6 +387,24 @@
         }
       ],
       "dest": "metadata/Pulumi.VSphere"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-ns1/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Ns1"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-azuredevops/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.AzureDevOps"
     }
   ],
   "build": {
