@@ -14,8 +14,6 @@ The `vsphere..Host` data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ datacenter = vsphere.get_datacenter(name="dc1")
 host = vsphere.get_host(datacenter_id=datacenter.id,
     name="esxi1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -73,6 +74,7 @@ const host = datacenter.apply(datacenter => vsphere.getHost({
     name: "esxi1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

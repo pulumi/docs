@@ -19,8 +19,6 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 
 [ref-vsphere-net-concepts]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,6 +68,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,9 +95,11 @@ pg = vsphere.HostPortGroup("pg",
     host_system_id=esxi_host.id,
     virtual_switch_name=switch.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -124,6 +125,7 @@ const pg = new vsphere.HostPortGroup("pg", {
     virtualSwitchName: switchHostVirtualSwitch.name,
 });
 ```
+
 {{% /example %}}
 
 ### Create a port group with VLAN set and some overrides
@@ -173,6 +175,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -201,9 +204,11 @@ pg = vsphere.HostPortGroup("pg",
     virtual_switch_name=switch.name,
     vlan_id=4095)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -231,6 +236,7 @@ const pg = new vsphere.HostPortGroup("pg", {
     vlanId: 4095,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

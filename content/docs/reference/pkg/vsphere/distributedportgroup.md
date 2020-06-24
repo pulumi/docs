@@ -29,8 +29,6 @@ portgroups, see [this page][ref-vsphere-dvportgroup].
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -77,6 +75,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -105,9 +104,11 @@ pg = vsphere.DistributedPortGroup("pg",
     standby_uplinks=[],
     vlan_id=1000)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -131,6 +132,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
     vlanId: 1000,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

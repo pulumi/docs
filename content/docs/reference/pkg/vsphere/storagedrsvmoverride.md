@@ -21,8 +21,6 @@ page][ref-vsphere-datastore-clusters].
 
 [ref-vsphere-datastore-clusters]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -94,6 +92,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -132,9 +131,11 @@ drs_vm_override = vsphere.StorageDrsVmOverride("drsVmOverride",
     sdrs_enabled=False,
     virtual_machine_id=vm.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -178,6 +179,7 @@ const drsVmOverride = new vsphere.StorageDrsVmOverride("drs_vm_override", {
     virtualMachineId: vm.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

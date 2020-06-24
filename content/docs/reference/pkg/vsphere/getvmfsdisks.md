@@ -15,9 +15,6 @@ devices available on an ESXi host. This data source can be combined with the
 `vsphere..VmfsDatastore` resource to create VMFS
 datastores based off a set of discovered disks.
 
-
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +67,11 @@ available = vsphere.get_vmfs_disks(filter="mpx.vmhba1:C0:T[12]:L0",
     host_system_id=host.id,
     rescan=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -89,6 +89,7 @@ const available = host.apply(host => vsphere.getVmfsDisks({
     rescan: true,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

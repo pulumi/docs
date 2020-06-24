@@ -32,8 +32,6 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -106,6 +104,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -143,9 +142,11 @@ cluster_vm_group = vsphere.ComputeClusterVmGroup("clusterVmGroup",
     compute_cluster_id=cluster.id,
     virtual_machine_ids=[__item.id for __item in vm])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -187,6 +188,7 @@ const clusterVmGroup = new vsphere.ComputeClusterVmGroup("cluster_vm_group", {
     virtualMachineIds: vm.map(v => v.id),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

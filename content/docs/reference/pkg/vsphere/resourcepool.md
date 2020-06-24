@@ -18,8 +18,6 @@ page][ref-vsphere-resource_pools].
 
 [ref-vsphere-resource_pools]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -77,9 +76,11 @@ compute_cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
     name=cluster)
 resource_pool = vsphere.ResourcePool("resourcePool", parent_resource_pool_id=compute_cluster.resource_pool_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -99,6 +100,7 @@ const resourcePool = new vsphere.ResourcePool("resource_pool", {
     parentResourcePoolId: computeCluster.resourcePoolId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

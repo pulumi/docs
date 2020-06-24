@@ -126,7 +126,7 @@ class MyStack : Stack
 }
 ```
 
-## Importing 
+## Importing
 
 An existing vNic can be [imported][docs-import] into this resource
 via supplying the vNic's ID. An example is below:

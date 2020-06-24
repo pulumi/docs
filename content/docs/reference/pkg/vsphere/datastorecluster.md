@@ -25,9 +25,6 @@ connections.
 
 > **NOTE:** Storage DRS requires a vSphere Enterprise Plus license.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a DatastoreCluster Resource {#create}

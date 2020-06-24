@@ -35,9 +35,6 @@ page][ref-vsphere-ha-clusters].
 connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
-
-{{% examples %}}
-{{% /examples %}}
 ## vSphere Version Requirements
 
 A large number of settings in the `vsphere..ComputeCluster` resource require a

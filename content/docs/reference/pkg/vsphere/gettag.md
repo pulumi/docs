@@ -19,8 +19,6 @@ the data found by the search.
 > **NOTE:** Tagging support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ category = vsphere.get_tag_category(name="test-category")
 tag = vsphere.get_tag(category_id=category.id,
     name="test-tag")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -78,6 +79,7 @@ const tag = category.apply(category => vsphere.getTag({
     name: "test-tag",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

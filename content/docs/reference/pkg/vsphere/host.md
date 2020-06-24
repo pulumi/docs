@@ -12,9 +12,7 @@ meta_desc: "Explore the Host resource of the vSphere package, including examples
 
 Provides a VMware vSphere host resource. This represents an ESXi host that
 can be used either as part of a Compute Cluster or Standalone.
-
-
-## Importing 
+## Importing
 
 An existing host can be [imported][docs-import] into this resource
 via supplying the host's ID. An example is below:
@@ -71,6 +69,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,9 +89,11 @@ h1 = vsphere.Host("h1",
     license="00000-00000-00000-00000i-00000",
     datacenter=dc.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -108,6 +109,7 @@ const h1 = new vsphere.Host("h1", {
     datacenter: dc.then(dc => dc.id),
 });
 ```
+
 {{% /example %}}
 
 ### Create host in a compute cluster
@@ -141,6 +143,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -162,9 +165,11 @@ h1 = vsphere.Host("h1",
     license="00000-00000-00000-00000i-00000",
     cluster=c1.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -184,6 +189,7 @@ const h1 = new vsphere.Host("h1", {
     cluster: c1.then(c1 => c1.id),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -23,8 +23,6 @@ For more information on vSphere HA, see [this page][ref-vsphere-ha-clusters].
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -91,6 +89,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -127,9 +126,11 @@ ha_vm_override = vsphere.HaVmOverride("haVmOverride",
     ha_vm_restart_priority="highest",
     virtual_machine_id=vm.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -169,6 +170,7 @@ const haVmOverride = new vsphere.HaVmOverride("ha_vm_override", {
     virtualMachineId: vm.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

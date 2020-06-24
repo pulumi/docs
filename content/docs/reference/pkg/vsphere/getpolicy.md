@@ -17,8 +17,6 @@ require a storage policy.
 > **NOTE:** Storage policy support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ import pulumi_vsphere as vsphere
 
 policy = vsphere.get_policy(name="policy1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -65,6 +66,7 @@ const policy = pulumi.output(vsphere.getPolicy({
     name: "policy1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

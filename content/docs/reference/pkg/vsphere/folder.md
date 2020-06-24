@@ -20,8 +20,6 @@ Subfolders are discovered by parsing the relative path specified in `path`, so
 `foo/bar` will create a folder named `bar` in the parent folder `foo`, as long
 as that folder exists.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ folder = vsphere.Folder("folder",
     path="test-folder",
     type="vm")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -78,6 +79,7 @@ const folder = new vsphere.Folder("folder", {
     type: "vm",
 });
 ```
+
 {{% /example %}}
 
 ### Example with subfolders
@@ -107,6 +109,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -128,9 +131,11 @@ folder = vsphere.Folder("folder",
     path=parent.path.apply(lambda path: f"{path}/test-folder"),
     type="vm")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -147,6 +152,7 @@ const folder = new vsphere.Folder("folder", {
     type: "vm",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
