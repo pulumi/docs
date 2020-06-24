@@ -23,7 +23,7 @@ Here's a brief overview of the plugin.
 
 ![Pulumi logs](./spinnaker-pulumi-preview.png)
 
-Here's a demo of the plugin from the Spinnaker.Live conference.
+Here's a demo of the plugin:
 
 {{< youtube V3FxNh6KQkE >}}
 
