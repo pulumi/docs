@@ -16,8 +16,6 @@ This resource will *not* pull new layers of the image automatically unless used 
 conjunction with [`docker..getRegistryImage`](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 data source to update the `pull_triggers` field.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ import pulumi_docker as docker
 # Find the latest Ubuntu precise image.
 ubuntu = docker.RemoteImage("ubuntu", name="ubuntu:precise")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -67,6 +68,7 @@ const ubuntu = new docker.RemoteImage("ubuntu", {
     name: "ubuntu:precise",
 });
 ```
+
 {{% /example %}}
 
 ### Dynamic image
@@ -95,6 +97,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -111,9 +114,11 @@ ubuntu_remote_image = docker.RemoteImage("ubuntuRemoteImage",
     name=ubuntu_registry_image.name,
     pull_triggers=[ubuntu_registry_image.sha256_digest])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -126,6 +131,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
     pullTriggers: [ubuntuRegistryImage.sha256Digest],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -140,7 +146,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/docker/#RemoteImage">RemoteImage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>keep_locally=None<span class="p">, </span>name=None<span class="p">, </span>pull_trigger=None<span class="p">, </span>pull_triggers=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#RemoteImage">RemoteImage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>keep_locally=None<span class="p">, </span>name=None<span class="p">, </span>pull_trigger=None<span class="p">, </span>pull_triggers=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

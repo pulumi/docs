@@ -11,9 +11,6 @@ meta_desc: "Explore the ServiceConfig resource of the Docker package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages the configuration of a Docker service in a swarm.
-
-{{% examples %}}
-{{% /examples %}}
 ## Basic
 
 ```typescript
@@ -61,7 +58,7 @@ class MyStack : Stack
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/docker/#ServiceConfig">ServiceConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#ServiceConfig">ServiceConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

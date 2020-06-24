@@ -12,8 +12,6 @@ meta_desc: "Explore the Container resource of the Docker package, including exam
 
 Manages the lifecycle of a Docker container.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ ubuntu_remote_image = docker.RemoteImage("ubuntuRemoteImage", name="ubuntu:preci
 # Start a container
 ubuntu_container = docker.Container("ubuntuContainer", image=ubuntu_remote_image.latest)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -74,6 +75,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
     image: ubuntuRemoteImage.latest,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -88,7 +90,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/docker/#Container">Container</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attach=None<span class="p">, </span>capabilities=None<span class="p">, </span>command=None<span class="p">, </span>cpu_set=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>destroy_grace_seconds=None<span class="p">, </span>devices=None<span class="p">, </span>dns=None<span class="p">, </span>dns_opts=None<span class="p">, </span>dns_searches=None<span class="p">, </span>domainname=None<span class="p">, </span>entrypoints=None<span class="p">, </span>envs=None<span class="p">, </span>group_adds=None<span class="p">, </span>healthcheck=None<span class="p">, </span>hostname=None<span class="p">, </span>hosts=None<span class="p">, </span>image=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>labels=None<span class="p">, </span>links=None<span class="p">, </span>log_driver=None<span class="p">, </span>log_opts=None<span class="p">, </span>logs=None<span class="p">, </span>max_retry_count=None<span class="p">, </span>memory=None<span class="p">, </span>memory_swap=None<span class="p">, </span>mounts=None<span class="p">, </span>must_run=None<span class="p">, </span>name=None<span class="p">, </span>network_aliases=None<span class="p">, </span>network_mode=None<span class="p">, </span>networks=None<span class="p">, </span>networks_advanced=None<span class="p">, </span>pid_mode=None<span class="p">, </span>ports=None<span class="p">, </span>privileged=None<span class="p">, </span>publish_all_ports=None<span class="p">, </span>read_only=None<span class="p">, </span>restart=None<span class="p">, </span>rm=None<span class="p">, </span>shm_size=None<span class="p">, </span>start=None<span class="p">, </span>sysctls=None<span class="p">, </span>tmpfs=None<span class="p">, </span>ulimits=None<span class="p">, </span>uploads=None<span class="p">, </span>user=None<span class="p">, </span>userns_mode=None<span class="p">, </span>volumes=None<span class="p">, </span>working_dir=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#Container">Container</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attach=None<span class="p">, </span>capabilities=None<span class="p">, </span>command=None<span class="p">, </span>cpu_set=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>destroy_grace_seconds=None<span class="p">, </span>devices=None<span class="p">, </span>dns=None<span class="p">, </span>dns_opts=None<span class="p">, </span>dns_searches=None<span class="p">, </span>domainname=None<span class="p">, </span>entrypoints=None<span class="p">, </span>envs=None<span class="p">, </span>group_adds=None<span class="p">, </span>healthcheck=None<span class="p">, </span>hostname=None<span class="p">, </span>hosts=None<span class="p">, </span>image=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>labels=None<span class="p">, </span>links=None<span class="p">, </span>log_driver=None<span class="p">, </span>log_opts=None<span class="p">, </span>logs=None<span class="p">, </span>max_retry_count=None<span class="p">, </span>memory=None<span class="p">, </span>memory_swap=None<span class="p">, </span>mounts=None<span class="p">, </span>must_run=None<span class="p">, </span>name=None<span class="p">, </span>network_aliases=None<span class="p">, </span>network_mode=None<span class="p">, </span>networks=None<span class="p">, </span>networks_advanced=None<span class="p">, </span>pid_mode=None<span class="p">, </span>ports=None<span class="p">, </span>privileged=None<span class="p">, </span>publish_all_ports=None<span class="p">, </span>read_only=None<span class="p">, </span>restart=None<span class="p">, </span>rm=None<span class="p">, </span>shm_size=None<span class="p">, </span>start=None<span class="p">, </span>sysctls=None<span class="p">, </span>tmpfs=None<span class="p">, </span>ulimits=None<span class="p">, </span>uploads=None<span class="p">, </span>user=None<span class="p">, </span>userns_mode=None<span class="p">, </span>volumes=None<span class="p">, </span>working_dir=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

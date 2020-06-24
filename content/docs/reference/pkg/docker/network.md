@@ -14,8 +14,6 @@ Manages a Docker Network. This can be used alongside
 [docker\_container](https://www.terraform.io/docs/providers/docker/r/container.html)
 to create virtual networks within the docker environment.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_docker as docker
 # Create a new docker network
 private_network = docker.Network("privateNetwork")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -62,6 +63,7 @@ import * as docker from "@pulumi/docker";
 // Create a new docker network
 const privateNetwork = new docker.Network("private_network", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -76,7 +78,7 @@ const privateNetwork = new docker.Network("private_network", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/docker/#Network">Network</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attachable=None<span class="p">, </span>check_duplicate=None<span class="p">, </span>driver=None<span class="p">, </span>ingress=None<span class="p">, </span>internal=None<span class="p">, </span>ipam_configs=None<span class="p">, </span>ipam_driver=None<span class="p">, </span>ipv6=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#Network">Network</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attachable=None<span class="p">, </span>check_duplicate=None<span class="p">, </span>driver=None<span class="p">, </span>ingress=None<span class="p">, </span>internal=None<span class="p">, </span>ipam_configs=None<span class="p">, </span>ipam_driver=None<span class="p">, </span>ipv6=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

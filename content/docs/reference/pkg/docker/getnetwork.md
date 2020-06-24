@@ -12,8 +12,6 @@ meta_desc: "Explore the GetNetwork function of the Docker package, including exa
 
 Finds a specific docker network and returns information about it.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_docker as docker
 
 main = docker.get_network(name="main")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -60,6 +61,7 @@ const main = pulumi.output(docker.getNetwork({
     name: "main",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

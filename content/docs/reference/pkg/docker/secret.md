@@ -12,8 +12,6 @@ meta_desc: "Explore the Secret resource of the Docker package, including example
 
 Manages the secrets of a Docker service in a swarm.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_docker as docker
 # Creates a secret
 foo_secret = docker.Secret("fooSecret", data="ewogICJzZXJsaasIfQo=")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -63,6 +64,7 @@ const fooSecret = new docker.Secret("foo_secret", {
     data: "ewogICJzZXJsaasIfQo=",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -77,7 +79,7 @@ const fooSecret = new docker.Secret("foo_secret", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/docker/#Secret">Secret</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#Secret">Secret</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

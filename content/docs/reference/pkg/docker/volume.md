@@ -14,8 +14,6 @@ Creates and destroys a volume in Docker. This can be used alongside
 [docker\_container](https://www.terraform.io/docs/providers/docker/r/container.html)
 to prepare volumes that can be shared across containers.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ import pulumi_docker as docker
 # Creates a docker volume "shared_volume".
 shared_volume = docker.Volume("sharedVolume")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -62,6 +63,7 @@ import * as docker from "@pulumi/docker";
 // Creates a docker volume "shared_volume".
 const sharedVolume = new docker.Volume("shared_volume", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -76,7 +78,7 @@ const sharedVolume = new docker.Volume("shared_volume", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/docker/#Volume">Volume</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>driver=None<span class="p">, </span>driver_opts=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#Volume">Volume</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>driver=None<span class="p">, </span>driver_opts=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
