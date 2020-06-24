@@ -14,7 +14,6 @@ Manages a Slack integration for a Bot Channel
 
 > **Note** A bot can only have a single Slack Channel associated with it.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +80,11 @@ example_channel_slack = azure.bot.ChannelSlack("exampleChannelSlack",
     client_secret="exampleSecret",
     verification_token="exampleVerificationToken")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -104,6 +106,7 @@ const exampleChannelSlack = new azure.bot.ChannelSlack("exampleChannelSlack", {
     verificationToken: "exampleVerificationToken",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

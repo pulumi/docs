@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualNetwork resource of the devtest module, including
 
 Manages a Virtual Network within a DevTest Lab.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -121,9 +122,11 @@ example_virtual_network = azure.devtest.VirtualNetwork("exampleVirtualNetwork",
         "useInVirtualMachineCreation": "Allow",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -145,6 +148,7 @@ const exampleVirtualNetwork = new azure.devtest.VirtualNetwork("exampleVirtualNe
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

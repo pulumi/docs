@@ -14,7 +14,6 @@ Manages a boolean variable in Azure Automation
 
 
 
-
 ## Create a BoolVariable Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

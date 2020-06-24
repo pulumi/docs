@@ -12,7 +12,6 @@ meta_desc: "Explore the CnameRecord resource of the privatedns module, including
 
 Enables you to manage DNS CNAME Records within Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,6 +85,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -100,9 +101,11 @@ example_cname_record = azure.privatedns.CnameRecord("exampleCnameRecord",
     ttl=300,
     record="contoso.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -116,6 +119,7 @@ const exampleCnameRecord = new azure.privatedns.CnameRecord("exampleCnameRecord"
     record: "contoso.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

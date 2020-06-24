@@ -12,7 +12,6 @@ meta_desc: "Explore the GetApplicationSecurityGroup function of the network modu
 
 Use this data source to access information about an existing Application Security Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> ApplicationSecurityGroupId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.network.get_application_security_group(name="tf-appsecuritygroup
     resource_group_name="my-resource-group")
 pulumi.export("applicationSecurityGroupId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.network.getApplicationSecurityGroup({
 });
 export const applicationSecurityGroupId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

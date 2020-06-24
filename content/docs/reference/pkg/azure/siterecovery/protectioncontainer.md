@@ -12,7 +12,6 @@ meta_desc: "Explore the ProtectionContainer resource of the siterecovery module,
 
 Manages a Azure Site Recovery protection container. Protection containers serve as containers for replicated VMs and belong to a single region / recovery fabric. Protection containers can contain more than one replicated VM. To replicate a VM, a container must exist in both the source and target Azure regions.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,9 +83,11 @@ protection_container = azure.siterecovery.ProtectionContainer("protection-contai
     recovery_vault_name=vault.name,
     recovery_fabric_name=fabric.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -108,6 +110,7 @@ const protection_container = new azure.siterecovery.ProtectionContainer("protect
     recoveryFabricName: fabric.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

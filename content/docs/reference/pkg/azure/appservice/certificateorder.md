@@ -12,7 +12,6 @@ meta_desc: "Explore the CertificateOrder resource of the appservice module, incl
 
 Manages an App Service Certificate Order.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ example_certificate_order = azure.appservice.CertificateOrder("exampleCertificat
     distinguished_name="CN=example.com",
     product_type="Standard")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -104,6 +107,7 @@ const exampleCertificateOrder = new azure.appservice.CertificateOrder("exampleCe
     productType: "Standard",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Use this data source to obtain a Shared Access Signature (SAS Token) for an exis
 
 Shared access signatures allow fine-grained, ephemeral access control to various aspects of an Azure Storage Account Blob Container.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -80,6 +79,7 @@ class MyStack : Stack
     public Output<string> SasUrlQueryString { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -123,6 +123,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -160,9 +161,11 @@ example = pulumi.Output.all(storage.primary_connection_string, container.name).a
     content_type="application/json"))
 pulumi.export("sasUrlQueryString", example.sas)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -201,6 +204,7 @@ const example = pulumi.all([storage.primaryConnectionString, container.name]).ap
 }));
 export const sasUrlQueryString = example.sas;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the AnalyticsWorkspace resource of the operationalinsights m
 
 Manages a Log Analytics (formally Operational Insights) Workspace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exam
     sku="PerGB2018",
     retention_in_days=30)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -104,6 +107,7 @@ const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspa
     retentionInDays: 30,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

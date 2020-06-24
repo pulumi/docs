@@ -12,7 +12,6 @@ meta_desc: "Explore the Account resource of the cognitive module, including exam
 
 Manages a Cognitive Services Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -82,6 +82,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ example_account = azure.cognitive.Account("exampleAccount",
         "Acceptance": "Test",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -117,6 +120,7 @@ const exampleAccount = new azure.cognitive.Account("exampleAccount", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

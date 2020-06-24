@@ -12,7 +12,6 @@ meta_desc: "Explore the DataSourceWindowsEvent resource of the loganalytics modu
 
 Manages a Log Analytics Windows Event DataSource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_data_source_windows_event = azure.loganalytics.DataSourceWindowsEvent("e
     event_log_name="Application",
     event_types=["error"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -133,6 +136,7 @@ const exampleDataSourceWindowsEvent = new azure.loganalytics.DataSourceWindowsEv
     eventTypes: ["error"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

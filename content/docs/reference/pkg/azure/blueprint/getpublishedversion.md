@@ -14,8 +14,6 @@ Use this data source to access information about an existing Azure Blueprint Pub
 
 > **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -57,9 +56,11 @@ test = azure.blueprint.get_published_version(scope_id=current.id,
     blueprint_name="exampleBluePrint",
     version="dev_v2.3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -71,6 +72,7 @@ const test = current.then(current => azure.blueprint.getPublishedVersion({
     version: "dev_v2.3",
 }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

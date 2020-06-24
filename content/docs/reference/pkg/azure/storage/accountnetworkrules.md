@@ -18,7 +18,6 @@ Manages network rules inside of a Azure Storage Account.
 
 > **NOTE:** Deleting this resource updates the storage account back to the default values it had when the storage account was created.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -89,6 +88,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -126,9 +126,11 @@ test = azure.storage.AccountNetworkRules("test",
     virtual_network_subnet_ids=[azurerm_subnet["test"]["id"]],
     bypasses=["Metrics"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -163,6 +165,7 @@ const test = new azure.storage.AccountNetworkRules("test", {
     bypasses: ["Metrics"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

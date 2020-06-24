@@ -12,7 +12,6 @@ meta_desc: "Explore the GetRecommendations function of the advisor module, inclu
 
 Use this data source to access information about an existing Advisor Recommendations.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
     public Output<string> Recommendations { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ example = azure.advisor.get_recommendations(filter_by_categories=[
     filter_by_resource_groups=["example-resgroups"])
 pulumi.export("recommendations", example.recommendations)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -105,6 +108,7 @@ const example = azure.advisor.getRecommendations({
 });
 export const recommendations = example.then(example => example.recommendations);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

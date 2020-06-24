@@ -12,7 +12,6 @@ meta_desc: "Explore the TimeSeriesInsightsStandardEnvironment resource of the io
 
 Manages an Azure IoT Time Series Insights Standard Environment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ example_time_series_insights_standard_environment = azure.iot.TimeSeriesInsights
     sku_name="S1_1",
     data_retention_time="P30D")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -104,6 +107,7 @@ const exampleTimeSeriesInsightsStandardEnvironment = new azure.iot.TimeSeriesIns
     dataRetentionTime: "P30D",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

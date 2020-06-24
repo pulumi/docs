@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualNetworkRule resource of the sql module, including
 
 Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -132,6 +132,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -160,9 +161,11 @@ sqlvnetrule = azure.sql.VirtualNetworkRule("sqlvnetrule",
     server_name=sqlserver.name,
     subnet_id=subnet.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -192,6 +195,7 @@ const sqlvnetrule = new azure.sql.VirtualNetworkRule("sqlvnetrule", {
     subnetId: subnet.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

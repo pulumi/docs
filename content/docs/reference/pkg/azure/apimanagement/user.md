@@ -12,7 +12,6 @@ meta_desc: "Explore the User resource of the apimanagement module, including exa
 
 Manages an API Management User.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -122,9 +123,11 @@ example_user = azure.apimanagement.User("exampleUser",
     email="user@example.com",
     state="active")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -147,6 +150,7 @@ const exampleUser = new azure.apimanagement.User("exampleUser", {
     state: "active",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

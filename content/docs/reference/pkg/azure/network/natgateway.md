@@ -12,7 +12,6 @@ meta_desc: "Explore the NatGateway resource of the network module, including exa
 
 Manages a Azure NAT Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -75,6 +74,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -140,6 +140,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -168,9 +169,11 @@ example_nat_gateway = azure.network.NatGateway("exampleNatGateway",
     idle_timeout_in_minutes=10,
     zones=["1"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -199,6 +202,7 @@ const exampleNatGateway = new azure.network.NatGateway("exampleNatGateway", {
     zones: ["1"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

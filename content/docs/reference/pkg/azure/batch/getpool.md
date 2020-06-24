@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPool function of the batch module, including examples
 
 Use this data source to access information about an existing Batch pool
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,9 +73,11 @@ example = azure.batch.get_pool(account_name="testbatchaccount",
     name="testbatchpool",
     resource_group_name="test")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -85,6 +88,7 @@ const example = pulumi.output(azure.batch.getPool({
     resourceGroupName: "test",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -3153,8 +3157,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="filepath_python">
-<a href="#filepath_python" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
+        <span id="file_path_python">
+<a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

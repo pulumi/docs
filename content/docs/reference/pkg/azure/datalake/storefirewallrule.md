@@ -12,7 +12,6 @@ meta_desc: "Explore the StoreFirewallRule resource of the datalake module, inclu
 
 Manages a Azure Data Lake Store Firewall Rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,9 +105,11 @@ example_store_firewall_rule = azure.datalake.StoreFirewallRule("exampleStoreFire
     start_ip_address="1.2.3.4",
     end_ip_address="2.3.4.5")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -123,6 +126,7 @@ const exampleStoreFirewallRule = new azure.datalake.StoreFirewallRule("exampleSt
     endIpAddress: "2.3.4.5",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

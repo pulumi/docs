@@ -17,7 +17,6 @@ At this time you cannot use a Route Table with in-line Routes in conjunction wit
 
 
 
-
 ## Create a RouteTable Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

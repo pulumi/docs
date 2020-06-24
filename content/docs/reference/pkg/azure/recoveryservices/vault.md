@@ -12,7 +12,6 @@ meta_desc: "Explore the Vault resource of the recoveryservices module, including
 
 Manages an Recovery Services Vault.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ vault = azure.recoveryservices.Vault("vault",
     sku="Standard",
     soft_delete_enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -104,6 +107,7 @@ const vault = new azure.recoveryservices.Vault("vault", {
     softDeleteEnabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

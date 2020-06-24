@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSharedImage function of the compute module, including
 
 Use this data source to access information about an existing Shared Image within a Shared Image Gallery.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,9 +73,11 @@ example = azure.compute.get_shared_image(gallery_name="my-image-gallery",
     name="my-image",
     resource_group_name="example-resources")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -85,6 +88,7 @@ const example = pulumi.output(azure.compute.getSharedImage({
     resourceGroupName: "example-resources",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the Property resource of the apimanagement module, including
 
 Manages an API Management Property.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +114,11 @@ example_property = azure.apimanagement.Property("exampleProperty",
     display_name="ExampleProperty",
     value="Example Value")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +138,7 @@ const exampleProperty = new azure.apimanagement.Property("exampleProperty", {
     value: "Example Value",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

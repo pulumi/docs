@@ -12,7 +12,6 @@ meta_desc: "Explore the Environment resource of the appservice module, including
 
 Manages an App Service Environment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -57,11 +56,17 @@ class MyStack : Stack
             SubnetId = ase.Id,
             PricingTier = "I2",
             FrontEndScaleFactor = 10,
+            UserWhitelistedIpRanges = 
+            {
+                "11.22.33.44/32",
+                "55.66.77.0/24",
+            },
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -113,6 +118,10 @@ func main() {
 			SubnetId:            ase.ID(),
 			PricingTier:         pulumi.String("I2"),
 			FrontEndScaleFactor: pulumi.Int(10),
+			UserWhitelistedIpRanges: pulumi.StringArray{
+				pulumi.String("11.22.33.44/32"),
+				pulumi.String("55.66.77.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -121,6 +130,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -144,11 +154,17 @@ gateway = azure.network.Subnet("gateway",
 example_environment = azure.appservice.Environment("exampleEnvironment",
     subnet_id=ase.id,
     pricing_tier="I2",
-    front_end_scale_factor=10)
+    front_end_scale_factor=10,
+    user_whitelisted_ip_ranges=[
+        "11.22.33.44/32",
+        "55.66.77.0/24",
+    ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -173,8 +189,13 @@ const exampleEnvironment = new azure.appservice.Environment("exampleEnvironment"
     subnetId: ase.id,
     pricingTier: "I2",
     frontEndScaleFactor: 10,
+    userWhitelistedIpRanges: [
+        "11.22.33.44/32",
+        "55.66.77.0/24",
+    ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -189,7 +210,7 @@ const exampleEnvironment = new azure.appservice.Environment("exampleEnvironment"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#Environment">Environment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>front_end_scale_factor=None<span class="p">, </span>internal_load_balancing_mode=None<span class="p">, </span>name=None<span class="p">, </span>pricing_tier=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#Environment">Environment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>front_end_scale_factor=None<span class="p">, </span>internal_load_balancing_mode=None<span class="p">, </span>name=None<span class="p">, </span>pricing_tier=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>user_whitelisted_ip_ranges=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -438,6 +459,17 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userwhitelistedipranges_csharp">
+<a href="#userwhitelistedipranges_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}User added IP ranges to whitelist on ASE db. Use the addresses you want to set as the explicit egress address ranges.  Use CIDR format.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -520,6 +552,17 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userwhitelistedipranges_go">
+<a href="#userwhitelistedipranges_go" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}User added IP ranges to whitelist on ASE db. Use the addresses you want to set as the explicit egress address ranges.  Use CIDR format.
 {{% /md %}}</dd>
 
 </dl>
@@ -606,6 +649,17 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userwhitelistedipranges_nodejs">
+<a href="#userwhitelistedipranges_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}User added IP ranges to whitelist on ASE db. Use the addresses you want to set as the explicit egress address ranges.  Use CIDR format.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -688,6 +742,17 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_whitelisted_ip_ranges_python">
+<a href="#user_whitelisted_ip_ranges_python" style="color: inherit; text-decoration: inherit;">user_<wbr>whitelisted_<wbr>ip_<wbr>ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}User added IP ranges to whitelist on ASE db. Use the addresses you want to set as the explicit egress address ranges.  Use CIDR format.
 {{% /md %}}</dd>
 
 </dl>
@@ -832,7 +897,7 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>front_end_scale_factor=None<span class="p">, </span>internal_load_balancing_mode=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>pricing_tier=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>front_end_scale_factor=None<span class="p">, </span>internal_load_balancing_mode=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>pricing_tier=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>user_whitelisted_ip_ranges=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1034,6 +1099,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_userwhitelistedipranges_csharp">
+<a href="#state_userwhitelistedipranges_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}User added IP ranges to whitelist on ASE db. Use the addresses you want to set as the explicit egress address ranges.  Use CIDR format.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1127,6 +1203,17 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_userwhitelistedipranges_go">
+<a href="#state_userwhitelistedipranges_go" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}User added IP ranges to whitelist on ASE db. Use the addresses you want to set as the explicit egress address ranges.  Use CIDR format.
 {{% /md %}}</dd>
 
 </dl>
@@ -1224,6 +1311,17 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_userwhitelistedipranges_nodejs">
+<a href="#state_userwhitelistedipranges_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Whitelisted<wbr>Ip<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}User added IP ranges to whitelist on ASE db. Use the addresses you want to set as the explicit egress address ranges.  Use CIDR format.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1317,6 +1415,17 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_user_whitelisted_ip_ranges_python">
+<a href="#state_user_whitelisted_ip_ranges_python" style="color: inherit; text-decoration: inherit;">user_<wbr>whitelisted_<wbr>ip_<wbr>ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}User added IP ranges to whitelist on ASE db. Use the addresses you want to set as the explicit egress address ranges.  Use CIDR format.
 {{% /md %}}</dd>
 
 </dl>

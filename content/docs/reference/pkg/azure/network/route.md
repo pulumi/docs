@@ -16,7 +16,6 @@ Manages a Route within a Route Table.
 provides both a standalone Route resource, and allows for Routes to be defined in-line within the Route Table resource.
 At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -91,6 +91,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,9 +109,11 @@ example_route = azure.network.Route("exampleRoute",
     address_prefix="10.1.0.0/16",
     next_hop_type="vnetlocal")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -127,6 +130,7 @@ const exampleRoute = new azure.network.Route("exampleRoute", {
     nextHopType: "vnetlocal",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

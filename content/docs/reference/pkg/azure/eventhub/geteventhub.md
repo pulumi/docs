@@ -12,7 +12,6 @@ meta_desc: "Explore the GetEventHub function of the eventhub module, including e
 
 Use this data source to access information about an existing EventHub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> EventhubId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.eventhub.get_event_hub(name="search-eventhub",
     namespace_name="search-eventhubns")
 pulumi.export("eventhubId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.eventhub.getEventHub({
 });
 export const eventhubId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

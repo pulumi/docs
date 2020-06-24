@@ -12,7 +12,6 @@ meta_desc: "Explore the DatabasePrincipal resource of the kusto module, includin
 
 Manages a Kusto (also known as Azure Data Explorer) Database Principal
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -64,6 +63,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,9 +99,11 @@ principal = azure.kusto.DatabasePrincipal("principal",
     client_id=current.tenant_id,
     object_id=current.client_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -133,6 +135,7 @@ const principal = new azure.kusto.DatabasePrincipal("principal", {
     objectId: current.then(current => current.clientId),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetProject function of the databasemigration module, inc
 
 Use this data source to access information about an existing Database Migration Project.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> Name { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.databasemigration.get_project(name="example-dbms-project",
     service_name="example-dbms")
 pulumi.export("name", example.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -92,6 +95,7 @@ const example = pulumi.output(azure.databasemigration.getProject({
 
 export const name = example.name;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

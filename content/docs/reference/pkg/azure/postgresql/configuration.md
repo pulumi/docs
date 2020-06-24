@@ -16,7 +16,6 @@ Sets a PostgreSQL Configuration value on a PostgreSQL Server.
 
 > **Note:** Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,6 +107,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -132,9 +133,11 @@ example_configuration = azure.postgresql.Configuration("exampleConfiguration",
     server_name=example_server.name,
     value="on")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -159,6 +162,7 @@ const exampleConfiguration = new azure.postgresql.Configuration("exampleConfigur
     value: "on",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

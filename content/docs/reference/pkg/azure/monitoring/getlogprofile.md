@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLogProfile function of the monitoring module, includi
 
 Use this data source to access the properties of a Log Profile.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
     public Output<string> LogProfileStorageAccountId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ import pulumi_azure as azure
 example = azure.monitoring.get_log_profile(name="test-logprofile")
 pulumi.export("logProfileStorageAccountId", example.storage_account_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -83,6 +86,7 @@ const example = azure.monitoring.getLogProfile({
 });
 export const logProfileStorageAccountId = example.then(example => example.storageAccountId);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

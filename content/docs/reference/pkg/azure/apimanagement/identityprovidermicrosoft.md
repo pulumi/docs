@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityProviderMicrosoft resource of the apimanagement 
 
 Manages an API Management Microsoft Identity Provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_identity_provider_microsoft = azure.apimanagement.IdentityProviderMicros
     client_id="00000000-0000-0000-0000-000000000000",
     client_secret="00000000000000000000000000000000")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -135,6 +138,7 @@ const exampleIdentityProviderMicrosoft = new azure.apimanagement.IdentityProvide
     clientSecret: "00000000000000000000000000000000",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

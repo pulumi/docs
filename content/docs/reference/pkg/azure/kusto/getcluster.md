@@ -12,7 +12,6 @@ meta_desc: "Explore the GetCluster function of the kusto module, including examp
 
 Use this data source to access information about an existing Kusto (also known as Azure Data Explorer) Cluster
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,6 +59,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -69,9 +70,11 @@ import pulumi_azure as azure
 example = azure.kusto.get_cluster(name="kustocluster",
     resource_group_name="test_resource_group")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -81,6 +84,7 @@ const example = pulumi.output(azure.kusto.getCluster({
     resourceGroupName: "test_resource_group",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

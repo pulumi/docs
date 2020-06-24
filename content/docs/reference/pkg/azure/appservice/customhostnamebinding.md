@@ -12,7 +12,6 @@ meta_desc: "Explore the CustomHostnameBinding resource of the appservice module,
 
 Manages a Hostname Binding within an App Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -66,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,9 +100,11 @@ example_custom_hostname_binding = azure.appservice.CustomHostnameBinding("exampl
     app_service_name=example_app_service.name,
     resource_group_name=example_resource_group.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -134,6 +136,7 @@ const exampleCustomHostnameBinding = new azure.appservice.CustomHostnameBinding(
     resourceGroupName: exampleResourceGroup.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

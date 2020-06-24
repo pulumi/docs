@@ -12,7 +12,6 @@ meta_desc: "Explore the Queue resource of the servicebus module, including examp
 
 Manages a ServiceBus Queue.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,6 +94,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +115,11 @@ example_queue = azure.servicebus.Queue("exampleQueue",
     namespace_name=example_namespace.name,
     enable_partitioning=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +139,7 @@ const exampleQueue = new azure.servicebus.Queue("exampleQueue", {
     enablePartitioning: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

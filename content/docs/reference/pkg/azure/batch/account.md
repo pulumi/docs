@@ -12,7 +12,6 @@ meta_desc: "Explore the Account resource of the batch module, including examples
 
 Manages an Azure Batch account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,9 +79,11 @@ example_batch_account_account = azure.batch.Account("exampleBatch/accountAccount
         "env": "test",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -103,6 +105,7 @@ const exampleBatch_accountAccount = new azure.batch.Account("exampleBatch/accoun
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

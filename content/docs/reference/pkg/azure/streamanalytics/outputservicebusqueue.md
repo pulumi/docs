@@ -12,7 +12,6 @@ meta_desc: "Explore the OutputServiceBusQueue resource of the streamanalytics mo
 
 Manages a Stream Analytics Output to a ServiceBus Queue.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -65,6 +64,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -126,6 +126,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -155,9 +156,11 @@ example_output_service_bus_queue = azure.streamanalytics.OutputServiceBusQueue("
         "format": "Avro",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -191,6 +194,7 @@ const exampleOutputServiceBusQueue = new azure.streamanalytics.OutputServiceBusQ
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPolicyVM function of the backup module, including exa
 
 Use this data source to access information about an existing VM Backup Policy.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -72,9 +73,11 @@ policy = azure.backup.get_policy_vm(name="policy",
     recovery_vault_name="recovery_vault",
     resource_group_name="resource_group")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -85,6 +88,7 @@ const policy = pulumi.output(azure.backup.getPolicyVM({
     resourceGroupName: "resource_group",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

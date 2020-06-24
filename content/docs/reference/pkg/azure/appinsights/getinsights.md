@@ -12,7 +12,6 @@ meta_desc: "Explore the GetInsights function of the appinsights module, includin
 
 Use this data source to access information about an existing Application Insights component.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> ApplicationInsightsInstrumentationKey { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.appinsights.get_insights(name="production",
     resource_group_name="networking")
 pulumi.export("applicationInsightsInstrumentationKey", example.instrumentation_key)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.appinsights.getInsights({
 });
 export const applicationInsightsInstrumentationKey = example.then(example => example.instrumentationKey);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

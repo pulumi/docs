@@ -12,7 +12,6 @@ meta_desc: "Explore the GetAlertRule function of the sentinel module, including 
 
 Use this data source to access information about an existing Sentinel Alert Rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
     public Output<string> Id { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,9 +89,11 @@ example_alert_rule = azure.sentinel.get_alert_rule(name="existing",
     log_analytics_workspace_id=example_analytics_workspace.id)
 pulumi.export("id", example_alert_rule.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -105,6 +108,7 @@ const exampleAlertRule = exampleAnalyticsWorkspace.then(exampleAnalyticsWorkspac
 }));
 export const id = exampleAlertRule.then(exampleAlertRule => exampleAlertRule.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

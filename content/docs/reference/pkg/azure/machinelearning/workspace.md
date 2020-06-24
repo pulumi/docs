@@ -12,7 +12,6 @@ meta_desc: "Explore the Workspace resource of the machinelearning module, includ
 
 Manages a Azure Machine Learning Workspace
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -105,9 +105,11 @@ example_workspace = azure.machinelearning.Workspace("exampleWorkspace",
         "type": "SystemAssigned",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -142,6 +144,7 @@ const exampleWorkspace = new azure.machinelearning.Workspace("exampleWorkspace",
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

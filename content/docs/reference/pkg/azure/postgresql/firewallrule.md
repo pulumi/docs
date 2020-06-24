@@ -12,7 +12,6 @@ meta_desc: "Explore the FirewallRule resource of the postgresql module, includin
 
 Manages a Firewall Rule for a PostgreSQL Server
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -99,9 +100,11 @@ example_firewall_rule = azure.postgresql.FirewallRule("exampleFirewallRule",
     start_ip_address="40.112.8.12",
     end_ip_address="40.112.8.12")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -116,6 +119,7 @@ const exampleFirewallRule = new azure.postgresql.FirewallRule("exampleFirewallRu
     endIpAddress: "40.112.8.12",
 });
 ```
+
 {{% /example %}}
 
 ### IP Range)
@@ -147,6 +151,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -184,6 +189,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -200,9 +206,11 @@ example_firewall_rule = azure.postgresql.FirewallRule("exampleFirewallRule",
     start_ip_address="40.112.0.0",
     end_ip_address="40.112.255.255")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -217,6 +225,7 @@ const exampleFirewallRule = new azure.postgresql.FirewallRule("exampleFirewallRu
     endIpAddress: "40.112.255.255",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

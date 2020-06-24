@@ -12,7 +12,6 @@ meta_desc: "Explore the GetResourceGroup function of the core module, including 
 
 Use this data source to access information about an existing Resource Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
     public Output<string> Id { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ import pulumi_azure as azure
 example = azure.core.get_resource_group(name="existing")
 pulumi.export("id", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -83,6 +86,7 @@ const example = azure.core.getResourceGroup({
 });
 export const id = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

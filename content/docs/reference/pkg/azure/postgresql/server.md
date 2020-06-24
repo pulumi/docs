@@ -12,7 +12,6 @@ meta_desc: "Explore the Server resource of the postgresql module, including exam
 
 Manages a PostgreSQL Server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +117,11 @@ example_server = azure.postgresql.Server("exampleServer",
     ssl_enforcement_enabled=True,
     ssl_minimal_tls_version_enforced="TLS1_2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -140,6 +143,7 @@ const exampleServer = new azure.postgresql.Server("exampleServer", {
     sslMinimalTlsVersionEnforced: "TLS1_2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Lab resource of the devtest module, including examples, 
 
 Manages a Dev Test Lab.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +94,11 @@ example_lab = azure.devtest.Lab("exampleLab",
         "Sydney": "Australia",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -109,6 +112,7 @@ const exampleLab = new azure.devtest.Lab("exampleLab", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Use this data source to access the connection status information about an existi
 
 > **NOTE** Private Endpoint is currently in Public Preview.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
     public Output<string> PrivateEndpointStatus { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -76,9 +77,11 @@ example = azure.privatelink.get_endpoint_connection(name="example-private-endpoi
     resource_group_name="example-rg")
 pulumi.export("privateEndpointStatus", example.private_service_connections[0]["status"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -89,6 +92,7 @@ const example = azure.privatelink.getEndpointConnection({
 });
 export const privateEndpointStatus = example.then(example => example.privateServiceConnections[0].status);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

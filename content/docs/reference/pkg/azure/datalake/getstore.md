@@ -12,7 +12,6 @@ meta_desc: "Explore the GetStore function of the datalake module, including exam
 
 Use this data source to access information about an existing Data Lake Store.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> DataLakeStoreId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.datalake.get_store(name="testdatalake",
     resource_group_name="testdatalake")
 pulumi.export("dataLakeStoreId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.datalake.getStore({
 });
 export const dataLakeStoreId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

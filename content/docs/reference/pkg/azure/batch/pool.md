@@ -3958,8 +3958,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filepath_python">
-<a href="#filepath_python" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
+        <span id="file_path_python">
+<a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

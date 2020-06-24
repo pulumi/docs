@@ -12,7 +12,6 @@ meta_desc: "Explore the NamespaceAuthorizationRule resource of the eventhub modu
 
 Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,6 +98,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -120,9 +121,11 @@ example_namespace_authorization_rule = azure.servicebus.NamespaceAuthorizationRu
     send=True,
     manage=False)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -144,6 +147,7 @@ const exampleNamespaceAuthorizationRule = new azure.servicebus.NamespaceAuthoriz
     manage: false,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

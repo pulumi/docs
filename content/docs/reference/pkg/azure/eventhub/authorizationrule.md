@@ -12,7 +12,6 @@ meta_desc: "Explore the AuthorizationRule resource of the eventhub module, inclu
 
 Manages a Event Hubs authorization Rule within an Event Hub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -118,6 +118,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -147,9 +148,11 @@ example_authorization_rule = azure.eventhub.AuthorizationRule("exampleAuthorizat
     send=False,
     manage=False)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -179,6 +182,7 @@ const exampleAuthorizationRule = new azure.eventhub.AuthorizationRule("exampleAu
     manage: false,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

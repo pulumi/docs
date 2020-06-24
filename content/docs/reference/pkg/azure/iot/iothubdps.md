@@ -12,7 +12,6 @@ meta_desc: "Explore the IotHubDps resource of the iot module, including examples
 
 Manages an IotHub Device Provisioning Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,6 +80,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -96,9 +97,11 @@ example_iot_hub_dps = azure.iot.IotHubDps("exampleIotHubDps",
         "capacity": "1",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -113,6 +116,7 @@ const exampleIotHubDps = new azure.iot.IotHubDps("exampleIotHubDps", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

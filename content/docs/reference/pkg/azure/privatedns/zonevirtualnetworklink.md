@@ -12,7 +12,6 @@ meta_desc: "Explore the ZoneVirtualNetworkLink resource of the privatedns module
 
 Enables you to manage Private DNS zone Virtual Network Links. These Links enable DNS resolution and registration inside Azure Virtual Networks using Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -97,9 +98,11 @@ example_zone_virtual_network_link = azure.privatedns.ZoneVirtualNetworkLink("exa
     private_dns_zone_name=example_zone.name,
     virtual_network_id=azurerm_virtual_network["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -112,6 +115,7 @@ const exampleZoneVirtualNetworkLink = new azure.privatedns.ZoneVirtualNetworkLin
     virtualNetworkId: azurerm_virtual_network.example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

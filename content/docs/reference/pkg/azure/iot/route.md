@@ -14,7 +14,6 @@ Manages an IotHub Route
 
 > **NOTE:** Routes can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azure.iot.Route` resourcs - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -86,6 +85,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -167,6 +167,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -210,9 +211,11 @@ example_route = azure.iot.Route("exampleRoute",
     endpoint_names=[example_endpoint_storage_container.name],
     enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -258,6 +261,7 @@ const exampleRoute = new azure.iot.Route("exampleRoute", {
     enabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

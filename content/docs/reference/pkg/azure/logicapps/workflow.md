@@ -12,7 +12,6 @@ meta_desc: "Explore the Workflow resource of the logicapps module, including exa
 
 Manages a Logic App Workflow.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,6 +71,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,9 +84,11 @@ example_workflow = azure.logicapps.Workflow("exampleWorkflow",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -96,6 +99,7 @@ const exampleWorkflow = new azure.logicapps.Workflow("exampleWorkflow", {
     resourceGroupName: exampleResourceGroup.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLB function of the lb module, including examples, inp
 
 Use this data source to access information about an existing Load Balancer
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> LoadbalancerId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.lb.get_lb(name="example-lb",
     resource_group_name="example-resources")
 pulumi.export("loadbalancerId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.lb.getLB({
 });
 export const loadbalancerId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

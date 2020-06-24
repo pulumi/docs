@@ -12,7 +12,6 @@ meta_desc: "Explore the AlertRuleMsSecurityIncident resource of the sentinel mod
 
 Manages a Sentinel MS Security Incident Alert Rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_alert_rule_ms_security_incident = azure.sentinel.AlertRuleMsSecurityInci
     display_name="example rule",
     severity_filters=["High"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -133,6 +136,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     severityFilters: ["High"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

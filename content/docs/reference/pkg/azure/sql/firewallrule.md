@@ -12,7 +12,6 @@ meta_desc: "Explore the FirewallRule resource of the sql module, including examp
 
 Allows you to manage an Azure SQL Firewall Rule
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_firewall_rule = azure.sql.FirewallRule("exampleFirewallRule",
     start_ip_address="10.0.17.62",
     end_ip_address="10.0.17.62")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -135,6 +138,7 @@ const exampleFirewallRule = new azure.sql.FirewallRule("exampleFirewallRule", {
     endIpAddress: "10.0.17.62",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

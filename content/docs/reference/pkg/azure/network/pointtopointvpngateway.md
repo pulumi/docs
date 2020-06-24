@@ -12,7 +12,6 @@ meta_desc: "Explore the PointToPointVpnGateway resource of the network module, i
 
 Manages a Point-to-Site VPN Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ example = azure.network.PointToPointVpnGateway("example",
     vpn_server_configuration_id=azurerm_vpn_server_configuration["example"]["id"],
     scale_unit=1)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -95,6 +98,7 @@ const example = new azure.network.PointToPointVpnGateway("example", {
     scaleUnit: 1,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the ApiKey resource of the appinsights module, including exa
 
 Manages an Application Insights API key.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -98,6 +97,7 @@ class MyStack : Stack
     public Output<string> FullPermissionsApiKey { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -182,6 +182,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -225,9 +226,11 @@ pulumi.export("writeAnnotationsApiKey", write_annotations.api_key)
 pulumi.export("authenticateSdkControlChannel", authenticate_sdk_control_channel_api_key.api_key)
 pulumi.export("fullPermissionsApiKey", full_permissions.api_key)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -273,6 +276,7 @@ export const writeAnnotationsApiKey = writeAnnotations.apiKey;
 export const authenticateSdkControlChannel = authenticateSdkControlChannelApiKey.apiKey;
 export const fullPermissionsApiKey = fullPermissions.apiKey;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

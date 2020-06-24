@@ -12,7 +12,6 @@ meta_desc: "Explore the GetHub function of the notificationhub module, including
 
 Use this data source to access information about an existing Notification Hub within a Notification Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> Id { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.notificationhub.get_hub(name="notification-hub",
     resource_group_name="resource-group-name")
 pulumi.export("id", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.notificationhub.getHub({
 });
 export const id = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

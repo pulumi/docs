@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPlacementGroup function of the proximity module, incl
 
 Use this data source to access information about an existing Proximity Placement Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> ProximityPlacementGroupId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.proximity.get_placement_group(name="tf-appsecuritygroup",
     resource_group_name="my-resource-group")
 pulumi.export("proximityPlacementGroupId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.proximity.getPlacementGroup({
 });
 export const proximityPlacementGroupId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

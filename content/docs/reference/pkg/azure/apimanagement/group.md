@@ -12,8 +12,6 @@ meta_desc: "Explore the Group resource of the apimanagement module, including ex
 
 Manages an API Management Group.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +114,11 @@ example_group = azure.apimanagement.Group("exampleGroup",
     display_name="Example Group",
     description="This is an example API management group.")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +138,7 @@ const exampleGroup = new azure.apimanagement.Group("exampleGroup", {
     description: "This is an example API management group.",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the StreamInputEventHub resource of the streamanalytics modu
 
 Manages a Stream Analytics Stream Input EventHub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -75,6 +74,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -148,6 +148,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -185,9 +186,11 @@ example_stream_input_event_hub = azure.streamanalytics.StreamInputEventHub("exam
         "encoding": "UTF8",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -230,6 +233,7 @@ const exampleStreamInputEventHub = new azure.streamanalytics.StreamInputEventHub
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

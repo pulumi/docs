@@ -12,7 +12,6 @@ meta_desc: "Explore the GetVirtualNetwork function of the devtest module, includ
 
 Use this data source to access information about an existing Dev Test Lab Virtual Network.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> LabSubnetName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.devtest.get_virtual_network(name="example-network",
     resource_group_name="example-resource")
 pulumi.export("labSubnetName", example.allowed_subnets[0]["lab_subnet_name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.devtest.getVirtualNetwork({
 });
 export const labSubnetName = example.then(example => example.allowedSubnets[0].labSubnetName);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Manages the subscription's Security Center Contact.
 
 > **NOTE:** Owner access permission is required.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,6 +66,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -79,9 +80,11 @@ example = azure.securitycenter.Contact("example",
     email="contact@example.com",
     phone="+1-555-555-5555")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -93,6 +96,7 @@ const example = new azure.securitycenter.Contact("example", {
     phone: "+1-555-555-5555",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

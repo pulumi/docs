@@ -12,7 +12,6 @@ meta_desc: "Explore the SharedImage resource of the compute module, including ex
 
 Manages a Shared Image within a Shared Image Gallery.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -59,6 +58,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -109,6 +109,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -136,9 +137,11 @@ example_shared_image = azure.compute.SharedImage("exampleSharedImage",
         "sku": "ExampleSku",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -165,6 +168,7 @@ const exampleSharedImage = new azure.compute.SharedImage("exampleSharedImage", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

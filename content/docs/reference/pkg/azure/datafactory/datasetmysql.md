@@ -12,7 +12,6 @@ meta_desc: "Explore the DatasetMysql resource of the datafactory module, includi
 
 Manages a MySQL Dataset inside a Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,6 +99,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,9 +120,11 @@ example_dataset_mysql = azure.datafactory.DatasetMysql("exampleDatasetMysql",
     data_factory_name=example_factory.name,
     linked_service_name=example_linked_service_mysql.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -142,6 +145,7 @@ const exampleDatasetMysql = new azure.datafactory.DatasetMysql("exampleDatasetMy
     linkedServiceName: exampleLinkedServiceMysql.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

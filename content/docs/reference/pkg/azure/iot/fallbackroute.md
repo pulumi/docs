@@ -18,7 +18,6 @@ Manages an IotHub Fallback Route
 
 > **Note:** Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -89,6 +88,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -169,6 +169,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -211,9 +212,11 @@ example_fallback_route = azure.iot.FallbackRoute("exampleFallbackRoute",
     endpoint_names=[example_endpoint_storage_container.name],
     enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -258,6 +261,7 @@ const exampleFallbackRoute = new azure.iot.FallbackRoute("exampleFallbackRoute",
     enabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

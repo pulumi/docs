@@ -16,7 +16,6 @@ Manages the subscription's Security Center Workspace.
 
 > **NOTE:** The subscription's pricing model can not be `Free` for this to have any affect.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,6 +90,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -106,9 +107,11 @@ example_workspace = azure.securitycenter.Workspace("exampleWorkspace",
     scope="/subscriptions/00000000-0000-0000-0000-000000000000",
     workspace_id=example_analytics_workspace.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -124,6 +127,7 @@ const exampleWorkspace = new azure.securitycenter.Workspace("exampleWorkspace", 
     workspaceId: exampleAnalyticsWorkspace.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

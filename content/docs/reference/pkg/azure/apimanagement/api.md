@@ -12,7 +12,6 @@ meta_desc: "Explore the Api resource of the apimanagement module, including exam
 
 Manages an API within an API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -111,6 +111,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -137,9 +138,11 @@ example_api = azure.apimanagement.Api("exampleApi",
         "contentValue": "http://conferenceapi.azurewebsites.net/?format=json",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -165,6 +168,7 @@ const exampleApi = new azure.apimanagement.Api("exampleApi", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

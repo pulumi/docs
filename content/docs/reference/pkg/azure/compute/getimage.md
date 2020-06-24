@@ -12,7 +12,6 @@ meta_desc: "Explore the GetImage function of the compute module, including examp
 
 Use this data source to access information about an existing Image.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> ImageId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ search = azure.compute.get_image(name="search-api",
     resource_group_name="packerimages")
 pulumi.export("imageId", search.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const search = azure.compute.getImage({
 });
 export const imageId = search.then(search => search.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

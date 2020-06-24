@@ -12,7 +12,6 @@ meta_desc: "Explore the GetResources function of the core module, including exam
 
 Use this data source to access information about existing resources.
 
-
 {{% examples %}}
 ## Example Usage
 

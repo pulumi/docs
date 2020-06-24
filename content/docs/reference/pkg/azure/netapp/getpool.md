@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPool function of the netapp module, including example
 
 Uses this data source to access information about an existing NetApp Pool.
 
-
 ## NetApp Pool Usage
 
 ```typescript

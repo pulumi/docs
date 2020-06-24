@@ -12,7 +12,6 @@ meta_desc: "Explore the Store resource of the datalake module, including example
 
 Manages an Azure Data Lake Store.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,6 +75,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,9 +90,11 @@ example_store = azure.datalake.Store("exampleStore",
     encryption_state="Enabled",
     encryption_type="ServiceManaged")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -104,6 +107,7 @@ const exampleStore = new azure.datalake.Store("exampleStore", {
     encryptionType: "ServiceManaged",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetIntegrationAccount function of the logicapps module, 
 
 Use this data source to access information about an existing Logic App Integration Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> Id { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.logicapps.get_integration_account(name="example-account",
     resource_group_name="example-resource-group")
 pulumi.export("id", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.logicapps.getIntegrationAccount({
 });
 export const id = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

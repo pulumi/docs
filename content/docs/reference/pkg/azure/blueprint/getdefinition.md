@@ -14,7 +14,6 @@ Use this data source to access information about an existing Azure Blueprint Def
 
 > **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +59,11 @@ root = azure.management.get_group(name=current.tenant_id)
 example = azure.blueprint.get_definition(name="exampleManagementGroupBP",
     scope_id=root.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -75,6 +77,7 @@ const example = root.then(root => azure.blueprint.getDefinition({
     scopeId: root.id,
 }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

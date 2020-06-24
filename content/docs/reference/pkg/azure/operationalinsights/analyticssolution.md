@@ -12,7 +12,6 @@ meta_desc: "Explore the AnalyticsSolution resource of the operationalinsights mo
 
 Manages a Log Analytics (formally Operational Insights) Solution.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -63,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,9 +96,11 @@ example_analytics_solution = azure.operationalinsights.AnalyticsSolution("exampl
         "product": "OMSGallery/ContainerInsights",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -128,6 +130,7 @@ const exampleAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetApi function of the apimanagement module, including e
 
 Use this data source to access information about an existing API Management API.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
     public Output<string> ApiManagementApiId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ example = azure.apimanagement.get_api(name="search-api",
     revision="2")
 pulumi.export("apiManagementApiId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -95,6 +98,7 @@ const example = azure.apimanagement.getApi({
 });
 export const apiManagementApiId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

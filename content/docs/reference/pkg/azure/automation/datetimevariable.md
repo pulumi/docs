@@ -14,7 +14,6 @@ Manages a DateTime variable in Azure Automation
 
 
 
-
 ## Create a DateTimeVariable Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

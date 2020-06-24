@@ -12,7 +12,6 @@ meta_desc: "Explore the Snapshot resource of the compute module, including examp
 
 Manages a Disk Snapshot.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_snapshot = azure.compute.Snapshot("exampleSnapshot",
     create_option="Copy",
     source_uri=example_managed_disk.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -135,6 +138,7 @@ const exampleSnapshot = new azure.compute.Snapshot("exampleSnapshot", {
     sourceUri: exampleManagedDisk.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

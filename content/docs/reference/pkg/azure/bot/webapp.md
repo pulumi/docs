@@ -12,7 +12,6 @@ meta_desc: "Explore the WebApp resource of the bot module, including examples, i
 
 Manages a Bot Web App.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +62,11 @@ example_web_app = azure.bot.WebApp("exampleWebApp",
     sku="F0",
     microsoft_app_id=current.client_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -78,6 +80,7 @@ const exampleWebApp = new azure.bot.WebApp("exampleWebApp", {
     microsoftAppId: current.then(current => current.clientId),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

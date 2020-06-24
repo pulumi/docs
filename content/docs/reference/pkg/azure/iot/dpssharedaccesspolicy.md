@@ -12,7 +12,6 @@ meta_desc: "Explore the DpsSharedAccessPolicy resource of the iot module, includ
 
 Manages an IotHub Device Provisioning Service Shared Access Policy
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -117,9 +118,11 @@ example_dps_shared_access_policy = azure.iot.DpsSharedAccessPolicy("exampleDpsSh
     enrollment_write=True,
     enrollment_read=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -140,6 +143,7 @@ const exampleDpsSharedAccessPolicy = new azure.iot.DpsSharedAccessPolicy("exampl
     enrollmentRead: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

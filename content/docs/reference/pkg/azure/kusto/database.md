@@ -12,7 +12,6 @@ meta_desc: "Explore the Database resource of the kusto module, including example
 
 Manages a Kusto (also known as Azure Data Explorer) Database
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,6 +98,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -120,9 +121,11 @@ database = azure.kusto.Database("database",
     hot_cache_period="P7D",
     soft_delete_period="P31D")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -144,6 +147,7 @@ const database = new azure.kusto.Database("database", {
     softDeletePeriod: "P31D",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

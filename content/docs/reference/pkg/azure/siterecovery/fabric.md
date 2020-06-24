@@ -12,7 +12,6 @@ meta_desc: "Explore the Fabric resource of the siterecovery module, including ex
 
 Manages a Azure Site Recovery Replication Fabric within a Recovery Services vault. Only Azure fabrics are supported at this time. Replication Fabrics serve as a container within an Azure region for other Site Recovery resources such as protection containers, protected items, network mappings.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -98,6 +98,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +117,11 @@ fabric = azure.siterecovery.Fabric("fabric",
     recovery_vault_name=vault.name,
     location=primary.location)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +139,7 @@ const fabric = new azure.siterecovery.Fabric("fabric", {
     location: primary.location,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

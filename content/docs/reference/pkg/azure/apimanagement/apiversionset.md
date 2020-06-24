@@ -12,7 +12,6 @@ meta_desc: "Explore the ApiVersionSet resource of the apimanagement module, incl
 
 Manages an API Version Set within an API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_api_version_set = azure.apimanagement.ApiVersionSet("exampleApiVersionSe
     display_name="ExampleAPIVersionSet",
     versioning_scheme="Segment")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -135,6 +138,7 @@ const exampleApiVersionSet = new azure.apimanagement.ApiVersionSet("exampleApiVe
     versioningScheme: "Segment",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

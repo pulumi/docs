@@ -12,7 +12,6 @@ meta_desc: "Explore the FirewallRule resource of the mariadb module, including e
 
 Manages a Firewall Rule for a MariaDB Server
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,6 +64,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.mariadb.FirewallRule("example",
     server_name="test-server",
     start_ip_address="40.112.8.12")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = new azure.mariadb.FirewallRule("example", {
     startIpAddress: "40.112.8.12",
 });
 ```
+
 {{% /example %}}
 
 ### IP Range)
@@ -114,6 +118,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -140,6 +145,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -153,9 +159,11 @@ example = azure.mariadb.FirewallRule("example",
     server_name="test-server",
     start_ip_address="40.112.0.0")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -167,6 +175,7 @@ const example = new azure.mariadb.FirewallRule("example", {
     startIpAddress: "40.112.0.0",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

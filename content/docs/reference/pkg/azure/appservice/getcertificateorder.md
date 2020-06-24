@@ -12,7 +12,6 @@ meta_desc: "Explore the GetCertificateOrder function of the appservice module, i
 
 Use this data source to access information about an existing App Service Certificate Order.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> CertificateOrderId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.appservice.get_certificate_order(name="example-cert-order",
     resource_group_name="example-resources")
 pulumi.export("certificateOrderId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.appservice.getCertificateOrder({
 });
 export const certificateOrderId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

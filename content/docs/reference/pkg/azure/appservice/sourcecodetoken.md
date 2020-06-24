@@ -14,7 +14,6 @@ Manages an App Service source control token.
 
 > **NOTE:** Source Control Tokens are configured at the subscription level, not on each App Service - as such this can only be configured Subscription-wide
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,6 +62,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -73,9 +74,11 @@ example = azure.appservice.SourceCodeToken("example",
     token="7e57735e77e577e57",
     type="GitHub")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -85,6 +88,7 @@ const example = new azure.appservice.SourceCodeToken("example", {
     type: "GitHub",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

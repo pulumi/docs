@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSpringCloudService function of the appplatform module
 
 Use this data source to access information about an existing Spring Cloud Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> SpringCloudServiceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.appplatform.get_spring_cloud_service(name=azurerm_spring_cloud_s
     resource_group_name=azurerm_spring_cloud_service["example"]["resource_group_name"])
 pulumi.export("springCloudServiceId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.appplatform.getSpringCloudService({
 });
 export const springCloudServiceId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

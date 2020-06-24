@@ -1072,6 +1072,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="developerportalurl_csharp">
+<a href="#developerportalurl_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="gatewayregionalurl_csharp">
 <a href="#gatewayregionalurl_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
 </span> 
@@ -1162,6 +1173,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="developerportalurl_go">
+<a href="#developerportalurl_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1258,6 +1280,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="developerportalurl_nodejs">
+<a href="#developerportalurl_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="gatewayregionalurl_nodejs">
 <a href="#gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
 </span> 
@@ -1348,6 +1381,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="developer_portal_url_python">
+<a href="#developer_portal_url_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portal_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1454,7 +1498,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_locations=None<span class="p">, </span>certificates=None<span class="p">, </span>gateway_regional_url=None<span class="p">, </span>gateway_url=None<span class="p">, </span>hostname_configuration=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>management_api_url=None<span class="p">, </span>name=None<span class="p">, </span>notification_sender_email=None<span class="p">, </span>policy=None<span class="p">, </span>portal_url=None<span class="p">, </span>private_ip_addresses=None<span class="p">, </span>protocols=None<span class="p">, </span>public_ip_addresses=None<span class="p">, </span>publisher_email=None<span class="p">, </span>publisher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scm_url=None<span class="p">, </span>security=None<span class="p">, </span>sign_in=None<span class="p">, </span>sign_up=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_configuration=None<span class="p">, </span>virtual_network_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_locations=None<span class="p">, </span>certificates=None<span class="p">, </span>developer_portal_url=None<span class="p">, </span>gateway_regional_url=None<span class="p">, </span>gateway_url=None<span class="p">, </span>hostname_configuration=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>management_api_url=None<span class="p">, </span>name=None<span class="p">, </span>notification_sender_email=None<span class="p">, </span>policy=None<span class="p">, </span>portal_url=None<span class="p">, </span>private_ip_addresses=None<span class="p">, </span>protocols=None<span class="p">, </span>public_ip_addresses=None<span class="p">, </span>publisher_email=None<span class="p">, </span>publisher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scm_url=None<span class="p">, </span>security=None<span class="p">, </span>sign_in=None<span class="p">, </span>sign_up=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_configuration=None<span class="p">, </span>virtual_network_type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1588,6 +1632,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_developerportalurl_csharp">
+<a href="#state_developerportalurl_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1884,6 +1939,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_developerportalurl_go">
+<a href="#state_developerportalurl_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_gatewayregionalurl_go">
 <a href="#state_gatewayregionalurl_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
 </span> 
@@ -2176,6 +2242,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_developerportalurl_nodejs">
+<a href="#state_developerportalurl_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portal<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_gatewayregionalurl_nodejs">
 <a href="#state_gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
 </span> 
@@ -2464,6 +2541,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecertificate">List[Service<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_developer_portal_url_python">
+<a href="#state_developer_portal_url_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portal_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetNetworkSecurityGroup function of the network module, 
 
 Use this data source to access information about an existing Network Security Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> Location { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.network.get_network_security_group(name=azurerm_network_security
     resource_group_name=azurerm_resource_group["example"]["name"])
 pulumi.export("location", example.location)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.network.getNetworkSecurityGroup({
 });
 export const location = example.then(example => example.location);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

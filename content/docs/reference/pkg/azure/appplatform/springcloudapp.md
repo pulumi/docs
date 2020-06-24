@@ -12,7 +12,6 @@ meta_desc: "Explore the SpringCloudApp resource of the appplatform module, inclu
 
 Manage an Azure Spring Cloud Application.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -98,9 +99,11 @@ example_spring_cloud_app = azure.appplatform.SpringCloudApp("exampleSpringCloudA
     resource_group_name=example_resource_group.name,
     service_name=example_spring_cloud_service.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -115,6 +118,7 @@ const exampleSpringCloudApp = new azure.appplatform.SpringCloudApp("exampleSprin
     serviceName: exampleSpringCloudService.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

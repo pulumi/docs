@@ -12,7 +12,6 @@ meta_desc: "Explore the IntegrationRuntimeManaged resource of the datafactory mo
 
 Manages an Azure Data Factory Managed Integration Runtime.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,9 +105,11 @@ example_integration_runtime_managed = azure.datafactory.IntegrationRuntimeManage
     location=example_resource_group.location,
     node_size="Standard_D8_v3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -123,6 +126,7 @@ const exampleIntegrationRuntimeManaged = new azure.datafactory.IntegrationRuntim
     nodeSize: "Standard_D8_v3",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the ActiveDirectoryAdministrator resource of the sql module,
 
 Allows you to set a user or group as the AD administrator for an Azure SQL server
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,9 +78,11 @@ example_active_directory_administrator = azure.sql.ActiveDirectoryAdministrator(
     tenant_id=current.tenant_id,
     object_id=current.object_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -102,6 +104,7 @@ const exampleActiveDirectoryAdministrator = new azure.sql.ActiveDirectoryAdminis
     objectId: current.then(current => current.objectId),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

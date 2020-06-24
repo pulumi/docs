@@ -12,7 +12,6 @@ meta_desc: "Explore the GetNamespaceAuthorizationRule function of the servicebus
 
 Use this data source to access information about an existing ServiceBus Namespace Authorization Rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> RuleId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.servicebus.get_namespace_authorization_rule(name="examplerule",
     resource_group_name="example-resources")
 pulumi.export("ruleId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.servicebus.getNamespaceAuthorizationRule({
 });
 export const ruleId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

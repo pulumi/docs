@@ -12,7 +12,6 @@ meta_desc: "Explore the TriggerSchedule resource of the datafactory module, incl
 
 Manages a Trigger Schedule inside a Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,6 +101,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -122,9 +123,11 @@ test_trigger_schedule = azure.datafactory.TriggerSchedule("testTriggerSchedule",
     interval=5,
     frequency="Day")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -146,6 +149,7 @@ const testTriggerSchedule = new azure.datafactory.TriggerSchedule("testTriggerSc
     frequency: "Day",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

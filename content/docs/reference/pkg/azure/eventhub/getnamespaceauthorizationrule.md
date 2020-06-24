@@ -12,7 +12,6 @@ meta_desc: "Explore the GetNamespaceAuthorizationRule function of the eventhub m
 
 Use this data source to access information about an Authorization Rule for an Event Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> EventhubAuthorizationRuleId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.eventhub.get_namespace_authorization_rule(name="navi",
     namespace_name="example-ns")
 pulumi.export("eventhubAuthorizationRuleId", data["azurem_eventhub_namespace_authorization_rule"]["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.eventhub.getNamespaceAuthorizationRule({
 });
 export const eventhubAuthorizationRuleId = data.azurem_eventhub_namespace_authorization_rule.example.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the AnalyticsFirewallRule resource of the datalake module, i
 
 Manages a Azure Data Lake Analytics Firewall Rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -101,6 +101,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -122,9 +123,11 @@ example_analytics_firewall_rule = azure.datalake.AnalyticsFirewallRule("exampleA
     start_ip_address="1.2.3.4",
     end_ip_address="2.3.4.5")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -146,6 +149,7 @@ const exampleAnalyticsFirewallRule = new azure.datalake.AnalyticsFirewallRule("e
     endIpAddress: "2.3.4.5",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

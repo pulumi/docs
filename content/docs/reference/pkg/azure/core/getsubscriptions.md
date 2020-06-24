@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSubscriptions function of the core module, including 
 
 Use this data source to access information about all the Subscriptions currently available.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
     public Output<string> FirstAvailableSubscriptionDisplayName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +53,11 @@ available = azure.core.get_subscriptions()
 pulumi.export("availableSubscriptions", available.subscriptions)
 pulumi.export("firstAvailableSubscriptionDisplayName", available.subscriptions[0]["display_name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -64,6 +66,7 @@ const available = azure.core.getSubscriptions({});
 export const availableSubscriptions = available.then(available => available.subscriptions);
 export const firstAvailableSubscriptionDisplayName = available.then(available => available.subscriptions[0].displayName);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

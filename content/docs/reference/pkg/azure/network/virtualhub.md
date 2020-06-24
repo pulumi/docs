@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualHub resource of the network module, including exa
 
 Manages a Virtual Hub within a Virtual WAN.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,6 +87,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,9 +105,11 @@ example_virtual_hub = azure.network.VirtualHub("exampleVirtualHub",
     virtual_wan_id=example_virtual_wan.id,
     address_prefix="10.0.1.0/24")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -123,6 +126,7 @@ const exampleVirtualHub = new azure.network.VirtualHub("exampleVirtualHub", {
     addressPrefix: "10.0.1.0/24",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetAccount function of the batch module, including examp
 
 Use this data source to access information about an existing Batch Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> PoolAllocationMode { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.batch.get_account(name="testbatchaccount",
     resource_group_name="test")
 pulumi.export("poolAllocationMode", example.pool_allocation_mode)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.batch.getAccount({
 });
 export const poolAllocationMode = example.then(example => example.poolAllocationMode);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

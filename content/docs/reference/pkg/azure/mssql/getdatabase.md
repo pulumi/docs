@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDatabase function of the mssql module, including exam
 
 Use this data source to access information about an existing SQL database.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> DatabaseId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.mssql.get_database(name="example-mssql-db",
     server_id="example-mssql-server-id")
 pulumi.export("databaseId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.mssql.getDatabase({
 });
 export const databaseId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

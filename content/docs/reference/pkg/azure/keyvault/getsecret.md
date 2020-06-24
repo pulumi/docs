@@ -12,7 +12,6 @@ meta_desc: "Explore the GetSecret function of the keyvault module, including exa
 
 Use this data source to access information about an existing Key Vault Secret.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> SecretValue { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.keyvault.get_secret(name="secret-sauce",
     key_vault_id=data["azurerm_key_vault"]["existing"]["id"])
 pulumi.export("secretValue", example.value)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.keyvault.getSecret({
 });
 export const secretValue = example.then(example => example.value);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Registry resource of the containerservice module, includ
 
 Manages an Azure Container Registry.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -84,6 +84,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -102,9 +103,11 @@ acr = azure.containerservice.Registry("acr",
         "West Europe",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -121,6 +124,7 @@ const acr = new azure.containerservice.Registry("acr", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

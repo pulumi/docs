@@ -14,7 +14,6 @@ Manages registration of a storage account with Azure Backup. Storage accounts mu
 
 > **NOTE:** Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. [Read More](https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -107,6 +107,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -129,9 +130,11 @@ container = azure.backup.ContainerStorageAccount("container",
     recovery_vault_name=vault.name,
     storage_account_id=sa.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -154,6 +157,7 @@ const container = new azure.backup.ContainerStorageAccount("container", {
     storageAccountId: sa.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

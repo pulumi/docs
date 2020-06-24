@@ -12,7 +12,6 @@ meta_desc: "Explore the ApplicationSecurityGroup resource of the network module,
 
 Manages an Application Security Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -78,6 +78,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,9 +94,11 @@ example_application_security_group = azure.network.ApplicationSecurityGroup("exa
         "Hello": "World",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -109,6 +112,7 @@ const exampleApplicationSecurityGroup = new azure.network.ApplicationSecurityGro
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

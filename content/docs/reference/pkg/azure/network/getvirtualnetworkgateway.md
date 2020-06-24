@@ -12,7 +12,6 @@ meta_desc: "Explore the GetVirtualNetworkGateway function of the network module,
 
 Use this data source to access information about an existing Virtual Network Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> VirtualNetworkGatewayId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.network.get_virtual_network_gateway(name="production",
     resource_group_name="networking")
 pulumi.export("virtualNetworkGatewayId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.network.getVirtualNetworkGateway({
 });
 export const virtualNetworkGatewayId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

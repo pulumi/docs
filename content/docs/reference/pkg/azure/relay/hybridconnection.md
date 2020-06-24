@@ -12,7 +12,6 @@ meta_desc: "Explore the HybridConnection resource of the relay module, including
 
 Manages an Azure Relay Hybrid Connection.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -52,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,6 +96,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -117,9 +118,11 @@ example_hybrid_connection = azure.relay.HybridConnection("exampleHybridConnectio
     requires_client_authorization=False,
     user_metadata="testmetadata")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -140,6 +143,7 @@ const exampleHybridConnection = new azure.relay.HybridConnection("exampleHybridC
     userMetadata: "testmetadata",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

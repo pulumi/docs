@@ -12,7 +12,6 @@ meta_desc: "Explore the GetProfile function of the cdn module, including example
 
 Use this data source to access information about an existing CDN Profile.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> CdnProfileId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.cdn.get_profile(name="myfirstcdnprofile",
     resource_group_name="example-resources")
 pulumi.export("cdnProfileId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.cdn.getProfile({
 });
 export const cdnProfileId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

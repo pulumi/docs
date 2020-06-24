@@ -12,7 +12,6 @@ meta_desc: "Explore the IdentityProviderTwitter resource of the apimanagement mo
 
 Manages an API Management Twitter Identity Provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,6 +93,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -113,9 +114,11 @@ example_identity_provider_twitter = azure.apimanagement.IdentityProviderTwitter(
     api_key="00000000000000000000000000000000",
     api_secret_key="00000000000000000000000000000000")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -135,6 +138,7 @@ const exampleIdentityProviderTwitter = new azure.apimanagement.IdentityProviderT
     apiSecretKey: "00000000000000000000000000000000",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetGeographicalLocation function of the trafficmanager m
 
 Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
     public Output<string> LocationCode { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -61,6 +61,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -71,9 +72,11 @@ import pulumi_azure as azure
 example = azure.network.get_traffic_manager(name="World")
 pulumi.export("locationCode", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -83,6 +86,7 @@ const example = azure.network.getTrafficManager({
 });
 export const locationCode = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

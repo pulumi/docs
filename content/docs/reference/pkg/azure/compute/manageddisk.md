@@ -12,7 +12,6 @@ meta_desc: "Explore the ManagedDisk resource of the compute module, including ex
 
 Manages a managed disk.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -84,6 +84,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -102,9 +103,11 @@ example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
         "environment": "staging",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -121,6 +124,7 @@ const exampleManagedDisk = new azure.compute.ManagedDisk("exampleManagedDisk", {
     },
 });
 ```
+
 {{% /example %}}
 
 ### With Create Copy
@@ -166,6 +170,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -217,6 +222,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -245,9 +251,11 @@ copy = azure.compute.ManagedDisk("copy",
         "environment": "staging",
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -275,6 +283,7 @@ const copy = new azure.compute.ManagedDisk("copy", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

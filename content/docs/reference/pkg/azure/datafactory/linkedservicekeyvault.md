@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedServiceKeyVault resource of the datafactory module
 
 Manages a Linked Service (connection) between Key Vault and Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -54,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -80,9 +80,11 @@ example_linked_service_key_vault = azure.datafactory.LinkedServiceKeyVault("exam
     data_factory_name=example_factory.name,
     key_vault_id=example_key_vault.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -105,6 +107,7 @@ const exampleLinkedServiceKeyVault = new azure.datafactory.LinkedServiceKeyVault
     keyVaultId: exampleKeyVault.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

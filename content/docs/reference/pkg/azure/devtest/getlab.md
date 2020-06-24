@@ -12,7 +12,6 @@ meta_desc: "Explore the GetLab function of the devtest module, including example
 
 Use this data source to access information about an existing Dev Test Lab.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> UniqueIdentifier { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.devtest.get_lab(name="example-lab",
     resource_group_name="example-resources")
 pulumi.export("uniqueIdentifier", example.unique_identifier)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.devtest.getLab({
 });
 export const uniqueIdentifier = example.then(example => example.uniqueIdentifier);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetDedicatedHost function of the compute module, includi
 
 Use this data source to access information about an existing Dedicated Host.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> DedicatedHostId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.compute.get_dedicated_host(name="example-host",
     resource_group_name="example-resources")
 pulumi.export("dedicatedHostId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.compute.getDedicatedHost({
 });
 export const dedicatedHostId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

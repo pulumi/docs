@@ -12,7 +12,6 @@ meta_desc: "Explore the GetTopicAuthorizationRule function of the servicebus mod
 
 Use this data source to access information about a ServiceBus Topic Authorization Rule within a ServiceBus Topic.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
     public Output<string> ServicebusAuthorizationRuleId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -67,6 +67,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,9 +81,11 @@ example = azure.servicebus.get_topic_authorization_rule(name="example-tfex_name"
     topic_name="example-servicebus_topic")
 pulumi.export("servicebusAuthorizationRuleId", data["azurem_servicebus_topic_authorization_rule"]["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -96,6 +99,7 @@ const example = pulumi.output(azure.servicebus.getTopicAuthorizationRule({
 
 export const servicebusAuthorizationRuleId = azurem_servicebus_topic_authorization_rule_example.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

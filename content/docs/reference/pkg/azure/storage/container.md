@@ -12,7 +12,6 @@ meta_desc: "Explore the Container resource of the storage module, including exam
 
 Manages a Container within an Azure Storage Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,6 +94,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -114,9 +115,11 @@ example_container = azure.storage.Container("exampleContainer",
     storage_account_name=example_account.name,
     container_access_type="private")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -136,6 +139,7 @@ const exampleContainer = new azure.storage.Container("exampleContainer", {
     containerAccessType: "private",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetProduct function of the apimanagement module, includi
 
 Use this data source to access information about an existing API Management Product.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,6 +39,7 @@ class MyStack : Stack
     public Output<string> ProductTerms { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -77,9 +78,11 @@ example = azure.apimanagement.get_product(product_id="my-product",
     resource_group_name="search-service")
 pulumi.export("productTerms", example.terms)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -91,6 +94,7 @@ const example = azure.apimanagement.getProduct({
 });
 export const productTerms = example.then(example => example.terms);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

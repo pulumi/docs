@@ -12,7 +12,6 @@ meta_desc: "Explore the GetPublicIpPrefix function of the network module, includ
 
 Use this data source to access information about an existing Public IP Prefix.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> PublicIpPrefix { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.network.get_public_ip_prefix(name="name_of_public_ip",
     resource_group_name="name_of_resource_group")
 pulumi.export("publicIpPrefix", example.ip_prefix)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.network.getPublicIpPrefix({
 });
 export const publicIpPrefix = example.then(example => example.ipPrefix);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

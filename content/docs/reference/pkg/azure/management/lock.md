@@ -12,7 +12,6 @@ meta_desc: "Explore the Lock resource of the management module, including exampl
 
 Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +55,11 @@ subscription_level = azure.management.Lock("subscription-level",
     lock_level="CanNotDelete",
     notes="Items can't be deleted in this subscription!")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -69,6 +71,7 @@ const subscription_level = new azure.management.Lock("subscription-level", {
     notes: "Items can't be deleted in this subscription!",
 });
 ```
+
 {{% /example %}}
 
 ### Resource Level Lock)
@@ -102,6 +105,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -124,9 +128,11 @@ public_ip = azure.management.Lock("public-ip",
     lock_level="CanNotDelete",
     notes="Locked because it's needed by a third-party")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -144,6 +150,7 @@ const public_ip = new azure.management.Lock("public-ip", {
     notes: "Locked because it's needed by a third-party",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

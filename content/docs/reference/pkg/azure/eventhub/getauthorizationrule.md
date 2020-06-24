@@ -12,7 +12,6 @@ meta_desc: "Explore the GetAuthorizationRule function of the eventhub module, in
 
 Use this data source to access information about an existing Event Hubs Authorization Rule within an Event Hub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -75,9 +76,11 @@ test = azure.eventhub.get_authorization_rule(eventhub_name=azurerm_eventhub["tes
     namespace_name=azurerm_eventhub_namespace["test"]["name"],
     resource_group_name=azurerm_resource_group["test"]["name"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -89,6 +92,7 @@ const test = pulumi.all([azurerm_eventhub_test.name, azurerm_eventhub_namespace_
     resourceGroupName: azurerm_resource_group_testName,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

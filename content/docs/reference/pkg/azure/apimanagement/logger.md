@@ -14,7 +14,6 @@ Manages a Logger within an API Management Service.
 
 
 
-
 ## Create a Logger Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the GetKey function of the keyvault module, including exampl
 
 Use this data source to access information about an existing Key Vault Key.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> KeyType { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.keyvault.get_key(name="secret-sauce",
     key_vault_id=data["azurerm_key_vault"]["existing"]["id"])
 pulumi.export("keyType", example.key_type)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.keyvault.getKey({
 });
 export const keyType = example.then(example => example.keyType);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -14,7 +14,6 @@ Use this data source to access information about an existing Private Link Servic
 
 > **NOTE** Private Link is currently in Public Preview.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +40,7 @@ class MyStack : Stack
     public Output<string> PrivateLinkServiceId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,6 +65,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -76,9 +77,11 @@ example = azure.privatelink.get_service(name="myPrivateLinkService",
     resource_group_name="PrivateLinkServiceRG")
 pulumi.export("privateLinkServiceId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -89,6 +92,7 @@ const example = azure.privatelink.getService({
 });
 export const privateLinkServiceId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

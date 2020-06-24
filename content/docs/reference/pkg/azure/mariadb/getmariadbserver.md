@@ -12,7 +12,6 @@ meta_desc: "Explore the GetMariaDbServer function of the mariadb module, includi
 
 Use this data source to access information about an existing MariaDB Server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> MariadbServerId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ db_server = azure.mariadb.get_maria_db_server(name="mariadb-server",
     resource_group_name=azurerm_mariadb_server["example"]["resource_group_name"])
 pulumi.export("mariadbServerId", data["azurerm_mariadb_server"]["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const dbServer = azure.mariadb.getMariaDbServer({
 });
 export const mariadbServerId = data.azurerm_mariadb_server.example.id;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

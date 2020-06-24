@@ -12,7 +12,6 @@ meta_desc: "Explore the OpenIdConnectProvider resource of the apimanagement modu
 
 Manages an OpenID Connect Provider within a API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -51,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -95,6 +95,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -116,9 +117,11 @@ example_open_id_connect_provider = azure.apimanagement.OpenIdConnectProvider("ex
     display_name="Example Provider",
     metadata_endpoint="https://example.com/example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -139,6 +142,7 @@ const exampleOpenIdConnectProvider = new azure.apimanagement.OpenIdConnectProvid
     metadataEndpoint: "https://example.com/example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

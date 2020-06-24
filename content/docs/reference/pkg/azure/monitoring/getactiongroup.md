@@ -12,7 +12,6 @@ meta_desc: "Explore the GetActionGroup function of the monitoring module, includ
 
 Use this data source to access the properties of an Action Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +38,7 @@ class MyStack : Stack
     public Output<string> ActionGroupId { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,6 +63,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -74,9 +75,11 @@ example = azure.monitoring.get_action_group(resource_group_name="example-rg",
     name="tfex-actiongroup")
 pulumi.export("actionGroupId", example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -87,6 +90,7 @@ const example = azure.monitoring.getActionGroup({
 });
 export const actionGroupId = example.then(example => example.id);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,7 +12,6 @@ meta_desc: "Explore the Zone resource of the dns module, including examples, inp
 
 Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure's name servers to which you can delegate the zone from the parent domain.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -43,6 +42,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +58,11 @@ example = azure.core.ResourceGroup("example", location="West US")
 example_public = azure.dns.Zone("example-public", resource_group_name=example.name)
 example_private = azure.privatedns.Zone("example-private", resource_group_name=example.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -69,6 +71,7 @@ const example = new azure.core.ResourceGroup("example", {location: "West US"});
 const example_public = new azure.dns.Zone("example-public", {resourceGroupName: example.name});
 const example_private = new azure.privatedns.Zone("example-private", {resourceGroupName: example.name});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

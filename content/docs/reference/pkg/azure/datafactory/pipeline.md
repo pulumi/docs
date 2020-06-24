@@ -12,7 +12,6 @@ meta_desc: "Explore the Pipeline resource of the datafactory module, including e
 
 Manages a Pipeline inside a Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,6 +83,7 @@ func main() {
 	})
 }
 ```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -98,9 +99,11 @@ example_pipeline = azure.datafactory.Pipeline("examplePipeline",
     resource_group_name=example_resource_group.name,
     data_factory_name=example_factory.name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -115,6 +118,7 @@ const examplePipeline = new azure.datafactory.Pipeline("examplePipeline", {
     dataFactoryName: exampleFactory.name,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
