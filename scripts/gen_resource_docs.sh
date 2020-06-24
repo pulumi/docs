@@ -81,6 +81,7 @@ generate_docs() {
 
     OVERLAY_SCHEMA_FILE=""
     if [ -d "./overlays/${provider}" ] && [ -f "./overlays/${provider}/overlays.json" ]; then
+        echo "Found an overlay file for ${provider}..."
         OVERLAY_SCHEMA_FILE="./overlays/${provider}/overlays.json"
     fi
 
