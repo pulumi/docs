@@ -14,8 +14,6 @@ Provides a Fastly User, representing the configuration for a user account for in
 
 The User resource requires a login and name, and optionally a role.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_fastly as fastly
 
 demo = fastly.Userv1("demo", login="demo@example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as fastly from "@pulumi/fastly";
@@ -62,6 +63,7 @@ const demo = new fastly.Userv1("demo", {
     login: "demo@example.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetFastlyIpRanges function of the Fastly package, includ
 
 Use this data source to get the [IP ranges](https://docs.fastly.com/guides/securing-communications/accessing-fastlys-ip-ranges) of Fastly edge nodes.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,10 +35,10 @@ class MyStack : Stack
                 new Aws.Ec2.Inputs.SecurityGroupIngressArgs
                 {
                     CidrBlocks = fastly.Apply(fastly => fastly.CidrBlocks),
-                    FromPort = "443",
+                    FromPort = 443,
                     Ipv6CidrBlocks = fastly.Apply(fastly => fastly.Ipv6CidrBlocks),
                     Protocol = "tcp",
-                    ToPort = "443",
+                    ToPort = 443,
                 },
             },
         });
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ from_fastly = aws.ec2.SecurityGroup("fromFastly", ingress=[{
     "to_port": "443",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,6 +89,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
