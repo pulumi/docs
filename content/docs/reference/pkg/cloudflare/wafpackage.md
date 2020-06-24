@@ -12,8 +12,6 @@ meta_desc: "Explore the WafPackage resource of the Cloudflare package, including
 
 Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ owasp = cloudflare.WafPackage("owasp",
     sensitivity="medium",
     zone_id="ae36f999674d196762efcc5abb06b345")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -70,6 +71,7 @@ const owasp = new cloudflare.WafPackage("owasp", {
     zoneId: "ae36f999674d196762efcc5abb06b345",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

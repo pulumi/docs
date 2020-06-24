@@ -31,6 +31,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
     <li><a href="loadbalancermonitor" title="LoadBalancerMonitor"><span class="symbol resource"></span>LoadBalancerMonitor</a></li>
     <li><a href="loadbalancerpool" title="LoadBalancerPool"><span class="symbol resource"></span>LoadBalancerPool</a></li>
+    <li><a href="logpushownershipchallenge" title="LogPushOwnershipChallenge"><span class="symbol resource"></span>LogPushOwnershipChallenge</a></li>
     <li><a href="logpullretention" title="LogpullRetention"><span class="symbol resource"></span>LogpullRetention</a></li>
     <li><a href="logpushjob" title="LogpushJob"><span class="symbol resource"></span>LogpushJob</a></li>
     <li><a href="origincacertificate" title="OriginCaCertificate"><span class="symbol resource"></span>OriginCaCertificate</a></li>
@@ -40,6 +41,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
     <li><a href="spectrumapplication" title="SpectrumApplication"><span class="symbol resource"></span>SpectrumApplication</a></li>
     <li><a href="wafgroup" title="WafGroup"><span class="symbol resource"></span>WafGroup</a></li>
+    <li><a href="wafoverride" title="WafOverride"><span class="symbol resource"></span>WafOverride</a></li>
     <li><a href="wafpackage" title="WafPackage"><span class="symbol resource"></span>WafPackage</a></li>
     <li><a href="wafrule" title="WafRule"><span class="symbol resource"></span>WafRule</a></li>
     <li><a href="workerroute" title="WorkerRoute"><span class="symbol resource"></span>WorkerRoute</a></li>
@@ -69,7 +71,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
 	<dt>Version</dt>
-	<dd>2.3.2</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 

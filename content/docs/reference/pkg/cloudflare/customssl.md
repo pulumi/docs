@@ -12,8 +12,6 @@ meta_desc: "Explore the CustomSsl resource of the Cloudflare package, including 
 
 Provides a Cloudflare custom ssl resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ foossl = cloudflare.CustomSsl("foossl",
     },
     zone_id=cloudflare_zone_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -95,6 +96,7 @@ const foossl = new cloudflare.CustomSsl("foossl", {
     zoneId: cloudflareZoneId,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

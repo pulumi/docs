@@ -12,8 +12,6 @@ meta_desc: "Explore the PageRule resource of the Cloudflare package, including e
 
 Provides a Cloudflare page rule resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -53,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,9 +78,11 @@ foobar = cloudflare.PageRule("foobar",
         }],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -102,6 +103,7 @@ const foobar = new cloudflare.PageRule("foobar", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -1138,6 +1140,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cachettlbystatuses_csharp">
+<a href="#cachettlbystatuses_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pageruleactionscachettlbystatus">List&lt;Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="disableapps_csharp">
 <a href="#disableapps_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Apps</a>
 </span> 
@@ -1537,6 +1550,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally cache the page.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachettlbystatuses_go">
+<a href="#cachettlbystatuses_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pageruleactionscachettlbystatus">[]Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1944,6 +1968,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cachettlbystatuses_nodejs">
+<a href="#cachettlbystatuses_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pageruleactionscachettlbystatus">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="disableapps_nodejs">
 <a href="#disableapps_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Apps</a>
 </span> 
@@ -2343,6 +2378,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally cache the page.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachettlbystatuses_python">
+<a href="#cachettlbystatuses_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pageruleactionscachettlbystatus">List[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status]</a></span>
+    </dt>
+    <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3642,6 +3688,144 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` - includes the first language code contained in the `Accept-Language` header sent by the client; defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="pageruleactionscachettlbystatus">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#PageRuleActionsCacheTtlByStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#PageRuleActionsCacheTtlByStatus">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#PageRuleActionsCacheTtlByStatusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#PageRuleActionsCacheTtlByStatusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Inputs.PageRuleActionsCacheTtlByStatusArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Outputs.PageRuleActionsCacheTtlByStatus.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="codes_csharp">
+<a href="#codes_csharp" style="color: inherit; text-decoration: inherit;">Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
+* positive number - cache for specified duration in seconds
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="codes_go">
+<a href="#codes_go" style="color: inherit; text-decoration: inherit;">Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
+* positive number - cache for specified duration in seconds
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="codes_nodejs">
+<a href="#codes_nodejs" style="color: inherit; text-decoration: inherit;">codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
+* positive number - cache for specified duration in seconds
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="codes_python">
+<a href="#codes_python" style="color: inherit; text-decoration: inherit;">codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
+* positive number - cache for specified duration in seconds
 {{% /md %}}</dd>
 
 </dl>

@@ -12,8 +12,6 @@ meta_desc: "Explore the CustomPages resource of the Cloudflare package, includin
 
 Provides a resource which manages Cloudflare custom error pages.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +37,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ basic_challenge = cloudflare.CustomPages("basicChallenge",
     url="https://example.com/challenge.html",
     zone_id="d41d8cd98f00b204e9800998ecf8427e")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -70,6 +71,7 @@ const basicChallenge = new cloudflare.CustomPages("basic_challenge", {
     zoneId: "d41d8cd98f00b204e9800998ecf8427e",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

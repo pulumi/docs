@@ -14,8 +14,6 @@ Provides a Cloudflare Access Application resource. Access Applications
 are used to restrict access to a whole application using an
 authorisation gateway managed by Cloudflare.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ staging_app = cloudflare.AccessApplication("stagingApp",
     session_duration="24h",
     zone_id="1d5fdc9e88c8a8c4518b068cd94331fe")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -72,6 +73,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     zoneId: "1d5fdc9e88c8a8c4518b068cd94331fe",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

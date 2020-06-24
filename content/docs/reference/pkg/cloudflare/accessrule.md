@@ -12,9 +12,6 @@ meta_desc: "Explore the AccessRule resource of the Cloudflare package, including
 
 Provides a Cloudflare IP Firewall Access Rule resource. Access control can be applied on basis of IP addresses, IP ranges, AS numbers or countries.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a AccessRule Resource {#create}

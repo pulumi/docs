@@ -12,8 +12,6 @@ meta_desc: "Explore the Argo resource of the Cloudflare package, including examp
 
 Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ example = cloudflare.Argo("example",
     tiered_caching="on",
     zone_id="d41d8cd98f00b204e9800998ecf8427e")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -67,6 +68,7 @@ const example = new cloudflare.Argo("example", {
     zoneId: "d41d8cd98f00b204e9800998ecf8427e",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -272,7 +274,7 @@ The Argo resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -283,7 +285,7 @@ The Argo resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
 </dl>
@@ -312,7 +314,7 @@ The Argo resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -323,7 +325,7 @@ The Argo resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
 </dl>
@@ -352,7 +354,7 @@ The Argo resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -363,7 +365,7 @@ The Argo resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
 </dl>
@@ -392,7 +394,7 @@ The Argo resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,7 +405,7 @@ The Argo resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
 </dl>
@@ -626,7 +628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -637,7 +639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -666,7 +668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -677,7 +679,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -706,7 +708,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -717,7 +719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -746,7 +748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether smart routing is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -757,7 +759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off`.
+    <dd>{{% md %}}Whether tiered caching is enabled. Valid values: `on` or `off`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

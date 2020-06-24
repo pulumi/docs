@@ -12,8 +12,6 @@ meta_desc: "Explore the RateLimit resource of the Cloudflare package, including 
 
 Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -92,6 +90,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -152,9 +151,11 @@ example = cloudflare.RateLimit("example",
         f"{var['cloudflare_zone']}/bypass2",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -209,6 +210,7 @@ const example = new cloudflare.RateLimit("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

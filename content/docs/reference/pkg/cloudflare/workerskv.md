@@ -12,8 +12,6 @@ meta_desc: "Explore the WorkersKv resource of the Cloudflare package, including 
 
 Provides a Workers KV Pair.  *NOTE:*  This resource uses the Cloudflare account APIs.  This requires setting the `CLOUDFLARE_ACCOUNT_ID` environment variable or `account_id` provider argument.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ example = cloudflare.WorkersKv("example",
     key="test-key",
     value="test value")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -73,6 +74,7 @@ const example = new cloudflare.WorkersKv("example", {
     value: "test value",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

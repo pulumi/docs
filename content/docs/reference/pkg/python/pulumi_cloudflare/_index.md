@@ -1831,8 +1831,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>smart_routing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
-<li><p><strong>tiered_caching</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><strong>smart_routing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><strong>tiered_caching</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID that you wish to manage Argo on.</p></li>
 </ul>
 </dd>
@@ -1840,13 +1840,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_cloudflare.Argo.smart_routing">
 <code class="sig-name descname">smart_routing</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Argo.smart_routing" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+<dd><p>Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_cloudflare.Argo.tiered_caching">
 <code class="sig-name descname">tiered_caching</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Argo.tiered_caching" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+<dd><p>Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1866,8 +1866,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>smart_routing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
-<li><p><strong>tiered_caching</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><strong>smart_routing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><strong>tiered_caching</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID that you wish to manage Argo on.</p></li>
 </ul>
 </dd>
@@ -3566,6 +3566,100 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_cloudflare.LogPushOwnershipChallenge">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LogPushOwnershipChallenge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_conf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogPushOwnershipChallenge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource which manages Cloudflare Logpush ownership challenges to use
+in a Logpush Job. On it’s own, doesn’t do much however this resource should
+be used in conjunction to create Logpush jobs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_conf</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination">Logpush destination documentation</a>.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID where the logpush ownership challenge should be created.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.LogPushOwnershipChallenge.destination_conf">
+<code class="sig-name descname">destination_conf</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogPushOwnershipChallenge.destination_conf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination">Logpush destination documentation</a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.LogPushOwnershipChallenge.ownership_challenge_filename">
+<code class="sig-name descname">ownership_challenge_filename</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogPushOwnershipChallenge.ownership_challenge_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>The filename of the ownership challenge which
+contains the contents required for Logpush Job creation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.LogPushOwnershipChallenge.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogPushOwnershipChallenge.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The zone ID where the logpush ownership challenge should be created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.LogPushOwnershipChallenge.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_conf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ownership_challenge_filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogPushOwnershipChallenge.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LogPushOwnershipChallenge resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_conf</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination">Logpush destination documentation</a>.</p>
+</p></li>
+<li><p><strong>ownership_challenge_filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filename of the ownership challenge which
+contains the contents required for Logpush Job creation.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID where the logpush ownership challenge should be created.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.LogPushOwnershipChallenge.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogPushOwnershipChallenge.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.LogPushOwnershipChallenge.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogPushOwnershipChallenge.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_cloudflare.LogpullRetention">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LogpullRetention</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpullRetention" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of the Logpull Retention settings used to control whether or not to retain HTTP request logs.</p>
@@ -3963,6 +4057,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether to set the cache level to <code class="docutils literal notranslate"><span class="pre">&quot;bypass&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;basic&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;simplified&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;aggressive&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;cache_everything&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String value of cookie name to conditionally cache the page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cacheTtlByStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">codes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A HTTP code (e.g. <code class="docutils literal notranslate"><span class="pre">404</span></code>) or range of codes (e.g. <code class="docutils literal notranslate"><span class="pre">400-499</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Duration a resource lives in the Cloudflare cache.</p>
+<ul>
+<li><p>positive number - cache for specified duration in seconds</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableApps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disablePerformance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableRailgun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
@@ -4051,6 +4155,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether to set the cache level to <code class="docutils literal notranslate"><span class="pre">&quot;bypass&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;basic&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;simplified&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;aggressive&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;cache_everything&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - String value of cookie name to conditionally cache the page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cacheTtlByStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">codes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A HTTP code (e.g. <code class="docutils literal notranslate"><span class="pre">404</span></code>) or range of codes (e.g. <code class="docutils literal notranslate"><span class="pre">400-499</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Duration a resource lives in the Cloudflare cache.</p>
+<ul>
+<li><p>positive number - cache for specified duration in seconds</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableApps</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disablePerformance</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableRailgun</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
@@ -4182,6 +4296,16 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether to set the cache level to <code class="docutils literal notranslate"><span class="pre">&quot;bypass&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;basic&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;simplified&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;aggressive&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;cache_everything&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String value of cookie name to conditionally cache the page.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cacheTtlByStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">codes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A HTTP code (e.g. <code class="docutils literal notranslate"><span class="pre">404</span></code>) or range of codes (e.g. <code class="docutils literal notranslate"><span class="pre">400-499</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Duration a resource lives in the Cloudflare cache.</p>
+<ul>
+<li><p>positive number - cache for specified duration in seconds</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableApps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disablePerformance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableRailgun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
@@ -4417,7 +4541,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HTTP Methods, can be a subset [‘POST’,’PUT’] or all [‘_ALL_’]. Default: [‘_ALL_’].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HTTP Schemes, can be one [‘HTTPS’], both [‘HTTP’,’HTTPS’] or all [‘_ALL_’].  Default: [‘_ALL_’].</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id24"><span class="problematic" id="id25">*</span></a>’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id27"><span class="problematic" id="id28">*</span></a>’.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.</p>
@@ -4479,7 +4603,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - HTTP Methods, can be a subset [‘POST’,’PUT’] or all [‘_ALL_’]. Default: [‘_ALL_’].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - HTTP Schemes, can be one [‘HTTPS’], both [‘HTTP’,’HTTPS’] or all [‘_ALL_’].  Default: [‘_ALL_’].</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id26"><span class="problematic" id="id27">*</span></a>’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id29"><span class="problematic" id="id30">*</span></a>’.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.</p>
@@ -4553,7 +4677,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HTTP Methods, can be a subset [‘POST’,’PUT’] or all [‘_ALL_’]. Default: [‘_ALL_’].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HTTP Schemes, can be one [‘HTTPS’], both [‘HTTP’,’HTTPS’] or all [‘_ALL_’].  Default: [‘_ALL_’].</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id28"><span class="problematic" id="id29">*</span></a>’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id31"><span class="problematic" id="id32">*</span></a>’.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.</p>
@@ -5201,6 +5325,137 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_cloudflare.WafOverride">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafOverride</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rewrite_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Cloudflare WAF override resource. This enables the ability to toggle
+WAF rules and groups on or off based on URIs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of what the WAF override does.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Similar to <code class="docutils literal notranslate"><span class="pre">rules</span></code>; which WAF groups you want to alter.</p></li>
+<li><p><strong>paused</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this package is currently paused.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Relative priority of this configuration when multiple configurations match a single URL.</p></li>
+<li><p><strong>rewrite_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When a WAF rule matches, substitute its configured action for a different action specified by this definition.</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of WAF rule ID to rule action you intend to apply.</p></li>
+<li><p><strong>urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of URLs to apply the WAF override to.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the WAF override condition should be added.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.WafOverride.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafOverride.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of what the WAF override does.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.WafOverride.groups">
+<code class="sig-name descname">groups</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafOverride.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <code class="docutils literal notranslate"><span class="pre">rules</span></code>; which WAF groups you want to alter.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.WafOverride.paused">
+<code class="sig-name descname">paused</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafOverride.paused" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this package is currently paused.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.WafOverride.priority">
+<code class="sig-name descname">priority</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafOverride.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative priority of this configuration when multiple configurations match a single URL.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.WafOverride.rewrite_action">
+<code class="sig-name descname">rewrite_action</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafOverride.rewrite_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>When a WAF rule matches, substitute its configured action for a different action specified by this definition.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.WafOverride.rules">
+<code class="sig-name descname">rules</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafOverride.rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of WAF rule ID to rule action you intend to apply.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.WafOverride.urls">
+<code class="sig-name descname">urls</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafOverride.urls" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of URLs to apply the WAF override to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.WafOverride.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafOverride.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS zone to which the WAF override condition should be added.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.WafOverride.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">override_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">paused</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rewrite_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafOverride.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing WafOverride resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of what the WAF override does.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Similar to <code class="docutils literal notranslate"><span class="pre">rules</span></code>; which WAF groups you want to alter.</p></li>
+<li><p><strong>paused</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this package is currently paused.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Relative priority of this configuration when multiple configurations match a single URL.</p></li>
+<li><p><strong>rewrite_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When a WAF rule matches, substitute its configured action for a different action specified by this definition.</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of WAF rule ID to rule action you intend to apply.</p></li>
+<li><p><strong>urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of URLs to apply the WAF override to.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the WAF override condition should be added.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.WafOverride.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.WafOverride.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_cloudflare.WafPackage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafPackage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sensitivity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafPackage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages.</p>
@@ -5527,7 +5782,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_cloudflare.WorkerScript">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerScript</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerScript</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plain_text_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_text_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">.WorkerRoute</span></code>. <em>NOTE:</em>  This resource uses the Cloudflare account APIs. This requires setting the <code class="docutils literal notranslate"><span class="pre">CLOUDFLARE_ACCOUNT_ID</span></code> environment variable or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> provider argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
@@ -5538,8 +5793,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;script_1&quot;</span><span class="p">,</span>
     <span class="n">content</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;script.js&quot;</span><span class="p">),</span>
     <span class="n">kv_namespace_binding</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_binding&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_EXAMPLE_KV_NAMESPACE&quot;</span><span class="p">,</span>
         <span class="s2">&quot;namespace_id&quot;</span><span class="p">:</span> <span class="n">my_namespace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">plain_text_binding</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_EXAMPLE_PLAIN_TEXT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">secret_text_binding</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_EXAMPLE_SECRET_TEXT&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;secret_foo_value&quot;</span><span class="p">],</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -5549,14 +5812,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The script content.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the binding.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global variable for the binding in your Worker code.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>kv_namespace_bindings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for the binding.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of KV namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The global variable for the binding in your Worker code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>plain_text_bindings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The global variable for the binding in your Worker code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret text you want to store.</p></li>
+</ul>
+<p>The <strong>secret_text_bindings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The global variable for the binding in your Worker code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret text you want to store.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_cloudflare.WorkerScript.content">
@@ -5567,12 +5840,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_cloudflare.WorkerScript.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkerScript.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name for the binding.</p>
+<dd><p>The global variable for the binding in your Worker code.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_cloudflare.WorkerScript.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plain_text_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_text_bindings</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing WorkerScript resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5582,14 +5855,24 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The script content.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the binding.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global variable for the binding in your Worker code.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>kv_namespace_bindings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for the binding.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of KV namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The global variable for the binding in your Worker code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>plain_text_bindings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The global variable for the binding in your Worker code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret text you want to store.</p></li>
+</ul>
+<p>The <strong>secret_text_bindings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The global variable for the binding in your Worker code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret text you want to store.</p></li>
 </ul>
 </dd></dl>
 

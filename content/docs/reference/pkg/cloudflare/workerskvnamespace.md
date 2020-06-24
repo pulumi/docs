@@ -12,8 +12,6 @@ meta_desc: "Explore the WorkersKvNamespace resource of the Cloudflare package, i
 
 Provides a Workers KV Namespace
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_cloudflare as cloudflare
 
 example = cloudflare.WorkersKvNamespace("example", title="test-namespace")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -60,6 +61,7 @@ const example = new cloudflare.WorkersKvNamespace("example", {
     title: "test-namespace",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,32 +13,29 @@ meta_desc: "Explore the AccessGroup resource of the Cloudflare package, includin
 Provides a Cloudflare Access Group resource. Access Groups are used
 in conjunction with Access Policies to restrict access to a
 particular resource based on group membership.
-
-{{% examples %}}
-{{% /examples %}}
 ## Conditions
 
 `require`, `exclude` and `include` arguments share the available
 conditions which can be applied. The conditions are:
 
 * `ip` - (Optional) A list of IP addresses or ranges. Example:
-  `ip = ["1.2.3.4", "10.0.0.0/2"]`
+`ip = ["1.2.3.4", "10.0.0.0/2"]`
 * `email` - (Optional) A list of email addresses. Example:
-  `email = ["test@example.com"]`
+`email = ["test@example.com"]`
 * `email_domain` - (Optional) A list of email domains. Example:
-  `email_domain = ["example.com"]`
+`email_domain = ["example.com"]`
 * `service_token` - (Optional) A list of service token ids. Example:
-  `service_token = [cloudflare_access_service_token.demo.id]`
+`service_token = [cloudflare_access_service_token.demo.id]`
 * `any_valid_service_token` - (Optional) Boolean indicating if allow
-  all tokens to be granted. Example: `any_valid_service_token = true`
+all tokens to be granted. Example: `any_valid_service_token = true`
 * `group` - (Optional) A list of access group ids. Example:
-  `group = [cloudflare_access_group.demo.id]`
+`group = [cloudflare_access_group.demo.id]`
 * `everyone` - (Optional) Boolean indicating permitting access for all
-  requests. Example: `everyone = true`
+requests. Example: `everyone = true`
 * `certificate` - (Optional) Whether to use mTLS certificate authentication.
 * `common_name` - (Optional) Use a certificate common name to authenticate with.
 * `gsuite` - (Optional) Use GSuite as the authentication mechanism. Example:
-
+  
   ```hcl
   # ... other configuration
   include {
@@ -49,7 +46,7 @@ conditions which can be applied. The conditions are:
   }
   ```
 * `github` - (Optional) Use a GitHub team as the `include` condition. Example:
-
+  
   ```hcl
   # ... other configuration
   include {
@@ -60,7 +57,7 @@ conditions which can be applied. The conditions are:
   }
   ```
 * `azure` - (Optional) Use Azure AD as the `include` condition. Example:
-
+  
   ```hcl
   # ... other configuration
   include {
@@ -71,7 +68,7 @@ conditions which can be applied. The conditions are:
   }
   ```
 * `okta` - (Optional) Use Okta as the `include` condition. Example:
-
+  
   ```hcl
   # ... other configuration
   include {
@@ -82,8 +79,8 @@ conditions which can be applied. The conditions are:
   }
   ```
 * `saml` - (Optional) Use an external SAML setup as the `include` condition.
-  Example:
-
+Example:
+  
   ```hcl
   # ... other configuration
   include {

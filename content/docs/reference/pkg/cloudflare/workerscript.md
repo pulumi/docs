@@ -12,9 +12,6 @@ meta_desc: "Explore the WorkerScript resource of the Cloudflare package, includi
 
 Provides a Cloudflare worker script resource. In order for a script to be active, you'll also need to setup a `cloudflare..WorkerRoute`. *NOTE:*  This resource uses the Cloudflare account APIs. This requires setting the `CLOUDFLARE_ACCOUNT_ID` environment variable or `account_id` provider argument.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a WorkerScript Resource {#create}
@@ -26,7 +23,7 @@ Provides a Cloudflare worker script resource. In order for a script to be active
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/cloudflare/#WorkerScript">WorkerScript</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content=None<span class="p">, </span>kv_namespace_bindings=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/cloudflare/#WorkerScript">WorkerScript</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content=None<span class="p">, </span>kv_namespace_bindings=None<span class="p">, </span>name=None<span class="p">, </span>plain_text_bindings=None<span class="p">, </span>secret_text_bindings=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,7 +214,7 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -227,6 +224,26 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerscriptkvnamespacebinding">List&lt;Worker<wbr>Script<wbr>Kv<wbr>Namespace<wbr>Binding<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plaintextbindings_csharp">
+<a href="#plaintextbindings_csharp" style="color: inherit; text-decoration: inherit;">Plain<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">List&lt;Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secrettextbindings_csharp">
+<a href="#secrettextbindings_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">List&lt;Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -256,7 +273,7 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -266,6 +283,26 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerscriptkvnamespacebinding">[]Worker<wbr>Script<wbr>Kv<wbr>Namespace<wbr>Binding</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plaintextbindings_go">
+<a href="#plaintextbindings_go" style="color: inherit; text-decoration: inherit;">Plain<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">[]Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secrettextbindings_go">
+<a href="#secrettextbindings_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">[]Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -295,7 +332,7 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -305,6 +342,26 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerscriptkvnamespacebinding">Worker<wbr>Script<wbr>Kv<wbr>Namespace<wbr>Binding[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plaintextbindings_nodejs">
+<a href="#plaintextbindings_nodejs" style="color: inherit; text-decoration: inherit;">plain<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secrettextbindings_nodejs">
+<a href="#secrettextbindings_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -334,7 +391,7 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,6 +401,26 @@ The WorkerScript resource accepts the following [input]({{< relref "/docs/intro/
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerscriptkvnamespacebinding">List[Worker<wbr>Script<wbr>Kv<wbr>Namespace<wbr>Binding]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plain_text_bindings_python">
+<a href="#plain_text_bindings_python" style="color: inherit; text-decoration: inherit;">plain_<wbr>text_<wbr>bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">List[Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_text_bindings_python">
+<a href="#secret_text_bindings_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>text_<wbr>bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">List[Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -445,7 +522,7 @@ Get an existing WorkerScript resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content=None<span class="p">, </span>kv_namespace_bindings=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content=None<span class="p">, </span>kv_namespace_bindings=None<span class="p">, </span>name=None<span class="p">, </span>plain_text_bindings=None<span class="p">, </span>secret_text_bindings=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -588,8 +665,28 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_plaintextbindings_csharp">
+<a href="#state_plaintextbindings_csharp" style="color: inherit; text-decoration: inherit;">Plain<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">List&lt;Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_secrettextbindings_csharp">
+<a href="#state_secrettextbindings_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">List&lt;Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -627,8 +724,28 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_plaintextbindings_go">
+<a href="#state_plaintextbindings_go" style="color: inherit; text-decoration: inherit;">Plain<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">[]Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_secrettextbindings_go">
+<a href="#state_secrettextbindings_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">[]Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -666,8 +783,28 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_plaintextbindings_nodejs">
+<a href="#state_plaintextbindings_nodejs" style="color: inherit; text-decoration: inherit;">plain<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_secrettextbindings_nodejs">
+<a href="#state_secrettextbindings_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Text<wbr>Bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -705,8 +842,28 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_plain_text_bindings_python">
+<a href="#state_plain_text_bindings_python" style="color: inherit; text-decoration: inherit;">plain_<wbr>text_<wbr>bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptplaintextbinding">List[Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_secret_text_bindings_python">
+<a href="#state_secret_text_bindings_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>text_<wbr>bindings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workerscriptsecrettextbinding">List[Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -749,7 +906,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -760,7 +917,137 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of KV namespace.
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="namespaceid_go">
+<a href="#namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="namespaceid_nodejs">
+<a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="namespace_id_python">
+<a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="workerscriptplaintextbinding">Worker<wbr>Script<wbr>Plain<wbr>Text<wbr>Binding</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#WorkerScriptPlainTextBinding">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#WorkerScriptPlainTextBinding">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#WorkerScriptPlainTextBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#WorkerScriptPlainTextBindingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Inputs.WorkerScriptPlainTextBindingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Outputs.WorkerScriptPlainTextBinding.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="text_csharp">
+<a href="#text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secret text you want to store.
 {{% /md %}}</dd>
 
 </dl>
@@ -778,18 +1065,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="namespaceid_go">
-<a href="#namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+        <span id="text_go">
+<a href="#text_go" style="color: inherit; text-decoration: inherit;">Text</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of KV namespace.
+    <dd>{{% md %}}The secret text you want to store.
 {{% /md %}}</dd>
 
 </dl>
@@ -807,18 +1094,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="namespaceid_nodejs">
-<a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
+        <span id="text_nodejs">
+<a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of KV namespace.
+    <dd>{{% md %}}The secret text you want to store.
 {{% /md %}}</dd>
 
 </dl>
@@ -836,18 +1123,152 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name for the binding.
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="namespace_id_python">
-<a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
+        <span id="text_python">
+<a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of KV namespace.
+    <dd>{{% md %}}The secret text you want to store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="workerscriptsecrettextbinding">Worker<wbr>Script<wbr>Secret<wbr>Text<wbr>Binding</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#WorkerScriptSecretTextBinding">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#WorkerScriptSecretTextBinding">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#WorkerScriptSecretTextBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#WorkerScriptSecretTextBindingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Inputs.WorkerScriptSecretTextBindingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Outputs.WorkerScriptSecretTextBinding.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="text_csharp">
+<a href="#text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secret text you want to store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="text_go">
+<a href="#text_go" style="color: inherit; text-decoration: inherit;">Text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secret text you want to store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="text_nodejs">
+<a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secret text you want to store.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The global variable for the binding in your Worker code.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="text_python">
+<a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The secret text you want to store.
 {{% /md %}}</dd>
 
 </dl>

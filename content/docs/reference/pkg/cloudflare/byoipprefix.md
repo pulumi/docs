@@ -12,8 +12,6 @@ meta_desc: "Explore the ByoIpPrefix resource of the Cloudflare package, includin
 
 Provides the ability to manage Bring-Your-Own-IP prefixes (BYOIP) which are used with or without Magic Transit.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ example = cloudflare.ByoIpPrefix("example",
     description="Example IP Prefix",
     prefix_id="d41d8cd98f00b204e9800998ecf8427e")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -67,6 +68,7 @@ const example = new cloudflare.ByoIpPrefix("example", {
     prefixId: "d41d8cd98f00b204e9800998ecf8427e",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,9 +12,6 @@ meta_desc: "Explore the GetWafPackages function of the Cloudflare package, inclu
 
 Use this data source to look up [WAF Rule Packages](https://api.cloudflare.com/#waf-rule-packages-properties).
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Using GetWafPackages {#using}

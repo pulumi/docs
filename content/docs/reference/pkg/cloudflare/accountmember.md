@@ -12,8 +12,6 @@ meta_desc: "Explore the AccountMember resource of the Cloudflare package, includ
 
 Provides a resource which manages Cloudflare account members.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ example_user = cloudflare.AccountMember("exampleUser",
         "d784fa8b6d98d27699781bd9a7cf19f0",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -74,6 +75,7 @@ const exampleUser = new cloudflare.AccountMember("example_user", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
