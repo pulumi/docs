@@ -113,7 +113,7 @@ cluster = do.KubernetesCluster(
 # Use the Kubeconfig output to create a k8s provider
 k8s_provider = k8s.Provider("k8s", kubeconfig=cluster.kube_configs[0]["rawConfig"])
 
-# Create a namespace using the previous retrieved kubernetes provider
+# Create a namespace using the previously retrieved kubernetes provider
 namespace = Namespace(
     "ns",
     metadata={
@@ -162,8 +162,8 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create a Kubernetes cluster in DigitalOcean
 
+		// Create a Kubernetes cluster in DigitalOcean
 		cluster, err := digitalocean.NewKubernetesCluster(ctx, "do-cluster", &digitalocean.KubernetesClusterArgs{
 			Region: pulumi.String("sfo2"),
 			Version: pulumi.String("1.16"),
@@ -177,6 +177,7 @@ func main() {
 			return fmt.Errorf("Error creating cluster: ", err)
 		}
 
+        // Instantiate a Kubernetes provider
 		provider, err := kubernetes.NewProvider(ctx, "k8s", &kubernetes.ProviderArgs{
 			Kubeconfig: cluster.KubeConfigs.Index(pulumi.Int(0)).RawConfig(),
 		})
@@ -185,6 +186,7 @@ func main() {
 			return fmt.Errorf("Error instantating Kubernetes provider: ", err)
 		}
 
+        // Create a namespace
 		ns, err := corev1.NewNamespace(ctx, "nginx-ingress", &corev1.NamespaceArgs{
 			Metadata: &metav1.ObjectMetaArgs{
 				Name: pulumi.String("nginx-ingress"),
@@ -195,6 +197,7 @@ func main() {
 			return fmt.Errorf("Error creating Kubernetes namespace: ", err)
 		}
 
+        // Deploy nginx-ingress using the helm chart
 		_, err = helm.NewChart(ctx, "nginx-ingress", helm.ChartArgs{
 			Chart: pulumi.String("nginx-ingress"),
 			Version: pulumi.String("1.33.5"),
@@ -277,6 +280,21 @@ docker run -e AWS_REGION=<AWS_REGION> -e AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY> -e A
 
 Pulumi's intelligent plugin acquisition should find and detect the required resource plugins so you can run your Pulumi program.
 If you need additional CLI tools like Helm as part of your workflow, we recommend installing these tools as part of your CI/CD pipeline or using these images as a base image to build your own Docker images. Here's an example of installing Helm in our Go-based Docker image.
+
+```dockerfile
+# Build container
+FROM debian:latest AS build
+
+RUN apt-get update && apt-get install curl -y && \
+    curl -L https://get.helm.sh/helm-v3.2.4-linux-amd64.tar.gz |tar xvz && \
+    mv linux-amd64/helm /usr/bin/helm && \
+    chmod +x /usr/bin/helm
+
+# Runtime container
+FROM pulumi/pulumi-go:latest
+
+COPY --from=build /usr/bin/helm /usr/bin/helm
+```
 
 ## Multiple Base Images
 
