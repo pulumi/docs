@@ -29,7 +29,7 @@ Each stack typically corresponds to a distinct _environment_ for that service, s
 testing and development instances. There might even be multiple environments within each of these dimensions, such as
 a production environment in each of the US east coast, west coast, Europe, and Asia.
 
-Most users will start a monolithic structure, for a few good reasons
+Most users will start a monolithic structure, for a few good reasons:
 
 * **Simplicity.** Having a single project and collection of stacks is, quite simply, the easiest thing you could
   possibly do. Pulumi diffs edits to your application and infrastructure code, and so this approach leaves the
@@ -240,7 +240,7 @@ class AppStack : Stack
 The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets
 you access the outputs of that stack.
 
-In this above example, we construct a stack reference to a specific stack in this project which has the same name
+In the above example, we construct a stack reference to a specific stack in this project which has the same name
 as our current stack (i.e. when deploying the "staging" stack of the above program, we reference the "staging" stack)
 from the infra project. Once we have that resource, we can fetch the `kubeConfig` output variable with the `getOutput`
 function.  From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
