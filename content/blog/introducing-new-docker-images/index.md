@@ -154,10 +154,10 @@ import (
 	"fmt"
 	"github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
 	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
 	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v2"
 	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
 )
 
 func main() {
@@ -165,7 +165,7 @@ func main() {
 
 		// Create a Kubernetes cluster in DigitalOcean
 		cluster, err := digitalocean.NewKubernetesCluster(ctx, "do-cluster", &digitalocean.KubernetesClusterArgs{
-			Region: pulumi.String("sfo2"),
+			Region:  pulumi.String("sfo2"),
 			Version: pulumi.String("1.16"),
 			NodePool: &digitalocean.KubernetesClusterNodePoolArgs{
 				Name: pulumi.String("default"),
@@ -177,7 +177,7 @@ func main() {
 			return fmt.Errorf("Error creating cluster: ", err)
 		}
 
-        // Instantiate a Kubernetes provider
+		// Instantiate a Kubernetes provider
 		provider, err := kubernetes.NewProvider(ctx, "k8s", &kubernetes.ProviderArgs{
 			Kubeconfig: cluster.KubeConfigs.Index(pulumi.Int(0)).RawConfig(),
 		})
@@ -186,7 +186,7 @@ func main() {
 			return fmt.Errorf("Error instantating Kubernetes provider: ", err)
 		}
 
-        // Create a namespace
+		// Create a namespace
 		ns, err := corev1.NewNamespace(ctx, "nginx-ingress", &corev1.NamespaceArgs{
 			Metadata: &metav1.ObjectMetaArgs{
 				Name: pulumi.String("nginx-ingress"),
@@ -197,10 +197,10 @@ func main() {
 			return fmt.Errorf("Error creating Kubernetes namespace: ", err)
 		}
 
-        // Deploy nginx-ingress using the helm chart
+		// Deploy nginx-ingress using the helm chart
 		_, err = helm.NewChart(ctx, "nginx-ingress", helm.ChartArgs{
-			Chart: pulumi.String("nginx-ingress"),
-			Version: pulumi.String("1.33.5"),
+			Chart:     pulumi.String("nginx-ingress"),
+			Version:   pulumi.String("1.33.5"),
 			Namespace: ns.Metadata.Name().Elem(),
 			FetchArgs: &helm.FetchArgs{
 				Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
