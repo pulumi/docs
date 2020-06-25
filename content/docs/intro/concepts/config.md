@@ -80,7 +80,7 @@ If we list the configuration for our stack, the plaintext value for `dbPassword`
 $ pulumi config
 KEY                        VALUE
 aws:region                 us-west-1
-dbPassword                 ********
+dbPassword                 [secret]
 ```
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console---either intentionally or accidentally---Pulumi will mask it out:
@@ -342,7 +342,7 @@ $ pulumi config set --path --secret endpoints[0].token accesstokenvalue
 
 ## Configuring Secrets Encryption
 
-The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State]({{< relref "state" >}}).
+The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends]({{< relref "state" >}}).
 
 The default encryption mechanism may be insufficient in the following scenarios:
 
