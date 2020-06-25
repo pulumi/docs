@@ -1,21 +1,21 @@
-name: Scheduled jobs
+name: "Scheduled jobs: Daily"
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string.
-    # Run every day at 12:00AM UTC.
-    - cron:  '0 0 * * *'
+    # Run every day at 3:00PM UTC.
+    - cron:  '0 15 * * *'
 jobs:
-  buildSite:
+  all:
     env:
       GOPATH: ${{ github.workspace }}
-    name: Install deps and build site
+    name: Run all jobs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Check links
+      - name: Run make ci_schedule
         run: make ci_schedule
         env:
             SLACK_ACCESS_TOKEN: ${{ secrets.SLACK_ACCESS_TOKEN }}
