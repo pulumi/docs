@@ -30,13 +30,13 @@ A Pulumi package for creating and managing fastly cloud resources.
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
-	<dd><a href="https://github.com/GrubhubProd/pulumi-fastly">https://github.com/GrubhubProd/pulumi-fastly</a></dd>
+	<dd><a href="https://github.com/pulumi/pulumi-fastly">https://github.com/pulumi/pulumi-fastly</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.5.1</dd>
 </dl>
 
 
