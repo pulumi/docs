@@ -11,9 +11,6 @@ meta_desc: "Explore the ManagedInstance resource of the aws module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst AWS ManagedInstance resource.
-
-{{% examples %}}
-{{% /examples %}}
 ## Network Interface - (Optional) List of network interfaces in an EC2 instance.
 
 * `device_index` - (Optional) The position of the network interface in the attachment order. A primary network interface has a device index of 0. If you specify a network interface when launching an instance, you must specify the device index.
@@ -82,25 +79,25 @@ class MyStack : Stack
             * `name` - The AWS resource name. Required for Classic Load Balancer. Optional for Application Load Balancer.
             * `arn` - The AWS resource ARN (Required only for ALB target groups).
             * `balancer_id` - The Multai load balancer ID.
-            Default: lb-123456
+                 Default: lb-123456
             * `target_set_id` - The Multai load target set ID.
-            Default: ts-123456
+                 Default: ts-123456
             * `auto_weight` - “Auto Weight” will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
             * `zone_awareness` - “AZ Awareness” will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
             * `type` - The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
 
 Usage:
 
-   ```hcl
-   load_balancers {
-       arn  = "arn"
-       type = "CLASSIC"
-       balancer_id   = "lb-123"
-       target_set_id = "ts-123"
-       auto_weight   = "true"
-       az_awareness = "true"
-     }
-   ```
+```hcl
+load_balancers {
+    arn  = "arn"
+    type = "CLASSIC"
+    balancer_id   = "lb-123"
+    target_set_id = "ts-123"
+    auto_weight   = "true"
+    az_awareness = "true"
+  }
+```
 
 <a id="route53"></a>
 

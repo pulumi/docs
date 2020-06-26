@@ -12,8 +12,6 @@ meta_desc: "Explore the OceanLaunchSpecImport resource of the gke module, includ
 
 Provides a custom Spotinst Ocean GKE Launch Spec Import resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -37,6 +35,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -52,9 +51,11 @@ example = spotinst.gke.OceanLaunchSpecImport("example",
     node_pool_name="default-pool",
     ocean_id="o-123456")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -64,6 +65,7 @@ const example = new spotinst.gke.OceanLaunchSpecImport("example", {
     oceanId: "o-123456",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the Balancer resource of the multai module, including exampl
 
 Provides a Spotinst Multai Balancer.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,6 +47,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +70,11 @@ my_balancer = spotinst.multai.Balancer("myBalancer",
         "value": "prod",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -90,6 +91,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

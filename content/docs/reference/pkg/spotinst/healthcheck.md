@@ -12,8 +12,6 @@ meta_desc: "Explore the HealthCheck resource of the Spotinst package, including 
 
 Provides a Spotinst Health Check resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ http_check = spotinst.HealthCheck("httpCheck",
     proxy_port=80,
     resource_id="sig-123")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -95,6 +96,7 @@ const httpCheck = new spotinst.HealthCheck("http_check", {
     resourceId: "sig-123",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

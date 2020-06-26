@@ -12,8 +12,6 @@ meta_desc: "Explore the Subscription resource of the Spotinst package, including
 
 Provides a Spotinst subscription resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -73,9 +72,11 @@ default_subscription = spotinst.Subscription("default-subscription",
     protocol="http",
     resource_id=spotinst_elastigroup_aws["my-eg"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -95,6 +96,7 @@ const default_subscription = new spotinst.Subscription("default-subscription", {
     resourceId: spotinst_elastigroup_aws_my_eg.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -11,8 +11,6 @@ meta_desc: "Explore the Elastigroup resource of the azure module, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst elastigroup Azure resource.
-
-
 ## Load Balancers
 
 * `load_balancers` - (Required) Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
@@ -207,13 +205,13 @@ class MyStack : Stack
 ## Update Policy
 
 * `update_policy` - (Optional)
-
+  
     * `should_roll` - (Required) Sets the enablement of the roll option.
     * `roll_config` - (Required) While used, you can control whether the group should perform a deployment after an update to the configuration.
         * `batch_size_percentage` - (Required) Sets the percentage of the instances to deploy in each batch.
         * `health_check_type` - (Optional) Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
         * `grace_period` - (Optional) Sets the grace period for new instances to become healthy.
-       
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -449,6 +447,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -568,9 +567,11 @@ test_azure_group = spotinst.azure.Elastigroup("testAzureGroup",
     },
     user_data="")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -694,6 +695,7 @@ const testAzureGroup = new spotinst.azure.Elastigroup("test_azure_group", {
     userData: "",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

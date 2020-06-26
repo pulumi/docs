@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/spotinst/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/spotinst/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account=None<span class="p">, </span>feature_flags=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -211,6 +211,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="featureflags_csharp">
+<a href="#featureflags_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Flags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Spotinst SDK Feature Flags
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
 </span> 
@@ -236,6 +247,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Spotinst Account ID
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="featureflags_go">
+<a href="#featureflags_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Flags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Spotinst SDK Feature Flags
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,6 +291,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="featureflags_nodejs">
+<a href="#featureflags_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Flags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Spotinst SDK Feature Flags
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span> 
@@ -294,6 +327,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Spotinst Account ID
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="feature_flags_python">
+<a href="#feature_flags_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>flags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Spotinst SDK Feature Flags
 {{% /md %}}</dd>
 
     <dt class="property-optional"

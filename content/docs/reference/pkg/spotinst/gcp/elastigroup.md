@@ -11,9 +11,6 @@ meta_desc: "Explore the Elastigroup resource of the gcp module, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst elastigroup GCP resource.
-
-{{% examples %}}
-{{% /examples %}}
 ## GPU
 
 * `gpu` - (Optional) Defines the GPU configuration.
@@ -78,7 +75,7 @@ class MyStack : Stack
     * `auto_delete` - (Optional) Specifies whether the disk will be auto-deleted when the instance is deleted.
     * `boot` - (Optional) Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
     * `device_name` - (Optional) Specifies a unique device name of your choice.
-    * `interface` - (Optional, Default: `SCSI`) Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. 
+    * `interface` - (Optional, Default: `SCSI`) Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
     * `mode` - (Optional, Default: `READ_WRITE`) The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
     * `source` - (Optional) Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
     * `type` - (Optional, Default: `PERSISTENT`) Specifies the type of disk, either SCRATCH or PERSISTENT.
@@ -161,7 +158,7 @@ Each `scaling_*_policy` supports the following:
 * `dimensions` - (Optional) A list of dimensions describing qualities of the metric.
     * `name` - (Required) The dimension name.
     * `value` - (Required) The dimension value.
-    
+
 Usage:
 
 ```typescript
@@ -188,7 +185,7 @@ class MyStack : Stack
 * `integration_docker_swarm` - (Optional) Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
     * `master_host` - (Required) IP or FQDN of one of your swarm managers.
     * `master_port` - (Required) Network port used by your swarm.
-            
+
 Usage:
 
 ```typescript

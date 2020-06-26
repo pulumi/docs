@@ -12,8 +12,6 @@ meta_desc: "Explore the TargetSet resource of the multai module, including examp
 
 Provides a Spotinst Multai Target Set.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -58,6 +56,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -89,9 +88,11 @@ my_target_set = spotinst.multai.TargetSet("myTargetSet",
     }],
     weight=2)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -117,6 +118,7 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
     weight: 2,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
