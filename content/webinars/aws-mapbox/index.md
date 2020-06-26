@@ -24,6 +24,7 @@ type: webinars
 # External webinars will link to an external page instead of a webinar
 # landing/registration page.
 external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.

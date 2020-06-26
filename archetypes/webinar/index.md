@@ -26,8 +26,11 @@ gated: false
 type: webinars
 
 # External webinars will link to an external page instead of a webinar
-# landing/registration page.
+# landing/registration page. If the webinar is external you will need
+# set the 'block_external_search_index' flag to true so Google does not index
+# the webinar page created.
 external: false
+block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
