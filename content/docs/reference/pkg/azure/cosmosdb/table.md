@@ -62,7 +62,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleTable, err := cosmosdb.NewTable(ctx, "exampleTable", &cosmosdb.TableArgs{
+		_, err = cosmosdb.NewTable(ctx, "exampleTable", &cosmosdb.TableArgs{
 			ResourceGroupName: pulumi.String(exampleAccount.ResourceGroupName),
 			AccountName:       pulumi.String(exampleAccount.Name),
 			Throughput:        pulumi.Int(400),

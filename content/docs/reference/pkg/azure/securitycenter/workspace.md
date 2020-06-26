@@ -79,7 +79,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleWorkspace, err := securitycenter.NewWorkspace(ctx, "exampleWorkspace", &securitycenter.WorkspaceArgs{
+		_, err = securitycenter.NewWorkspace(ctx, "exampleWorkspace", &securitycenter.WorkspaceArgs{
 			Scope:       pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000"),
 			WorkspaceId: exampleAnalyticsWorkspace.ID(),
 		})

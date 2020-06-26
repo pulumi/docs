@@ -46,12 +46,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := sql.LookupServer(ctx, &sql.LookupServerArgs{
+		example, err := sql.GetServer(ctx, &sql.GetServerArgs{
 			Name:              "examplesqlservername",
 			ResourceGroupName: "example-resources",
 		}, nil)

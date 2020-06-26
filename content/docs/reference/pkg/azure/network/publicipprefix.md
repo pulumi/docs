@@ -65,12 +65,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePublicIpPrefix, err := network.NewPublicIpPrefix(ctx, "examplePublicIpPrefix", &network.PublicIpPrefixArgs{
+		_, err = network.NewPublicIpPrefix(ctx, "examplePublicIpPrefix", &network.PublicIpPrefixArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			PrefixLength:      pulumi.Int(31),
-			Tags: map[string]interface{}{
-				"environment": "Production",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("Production"),
 			},
 		})
 		if err != nil {

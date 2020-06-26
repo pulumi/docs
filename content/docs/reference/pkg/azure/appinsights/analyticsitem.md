@@ -76,7 +76,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAnalyticsItem, err := appinsights.NewAnalyticsItem(ctx, "exampleAnalyticsItem", &appinsights.AnalyticsItemArgs{
+		_, err = appinsights.NewAnalyticsItem(ctx, "exampleAnalyticsItem", &appinsights.AnalyticsItemArgs{
 			ApplicationInsightsId: exampleInsights.ID(),
 			Content:               pulumi.String("requests //simple example query"),
 			Scope:                 pulumi.String("shared"),

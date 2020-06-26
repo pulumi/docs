@@ -77,7 +77,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleHub, err := notificationhub.NewHub(ctx, "exampleHub", &notificationhub.HubArgs{
+		_, err = notificationhub.NewHub(ctx, "exampleHub", &notificationhub.HubArgs{
 			NamespaceName:     exampleNamespace.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,

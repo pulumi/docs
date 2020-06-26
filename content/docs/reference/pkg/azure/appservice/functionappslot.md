@@ -120,7 +120,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleFunctionAppSlot, err := appservice.NewFunctionAppSlot(ctx, "exampleFunctionAppSlot", &appservice.FunctionAppSlotArgs{
+		_, err = appservice.NewFunctionAppSlot(ctx, "exampleFunctionAppSlot", &appservice.FunctionAppSlotArgs{
 			Location:                exampleResourceGroup.Location,
 			ResourceGroupName:       exampleResourceGroup.Name,
 			AppServicePlanId:        examplePlan.ID(),

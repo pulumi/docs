@@ -46,12 +46,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := appservice.LookupAppServiceEnvironment(ctx, &appservice.LookupAppServiceEnvironmentArgs{
+		_, err := appservice.GetAppServiceEnvironment(ctx, &appservice.GetAppServiceEnvironmentArgs{
 			Name:              "example-ase",
 			ResourceGroupName: "example-rg",
 		}, nil)

@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleTimeSeriesInsightsAccessPolicy, err := iot.NewTimeSeriesInsightsAccessPolicy(ctx, "exampleTimeSeriesInsightsAccessPolicy", &iot.TimeSeriesInsightsAccessPolicyArgs{
+		_, err = iot.NewTimeSeriesInsightsAccessPolicy(ctx, "exampleTimeSeriesInsightsAccessPolicy", &iot.TimeSeriesInsightsAccessPolicyArgs{
 			TimeSeriesInsightsEnvironmentId: exampleTimeSeriesInsightsStandardEnvironment.Name,
 			PrincipalObjectId:               pulumi.String("aGUID"),
 			Roles: pulumi.StringArray{

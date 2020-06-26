@@ -56,11 +56,11 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := automation.NewJobSchedule(ctx, "example", &automation.JobScheduleArgs{
+		_, err = automation.NewJobSchedule(ctx, "example", &automation.JobScheduleArgs{
 			AutomationAccountName: pulumi.String("tf-automation-account"),
-			Parameters: map[string]interface{}{
-				"resourcegroup": "tf-rgr-vm",
-				"vmname":        "TF-VM-01",
+			Parameters: pulumi.Map{
+				"resourcegroup": pulumi.String("tf-rgr-vm"),
+				"vmname":        pulumi.String("TF-VM-01"),
 			},
 			ResourceGroupName: pulumi.String("tf-rgr-automation"),
 			RunbookName:       pulumi.String("Get-VirtualMachine"),

@@ -71,7 +71,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleServer, err := postgresql.NewServer(ctx, "exampleServer", &postgresql.ServerArgs{
+		_, err = postgresql.NewServer(ctx, "exampleServer", &postgresql.ServerArgs{
 			Location:                     exampleResourceGroup.Location,
 			ResourceGroupName:            exampleResourceGroup.Name,
 			AdministratorLogin:           pulumi.String("psqladminun"),

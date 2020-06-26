@@ -43,12 +43,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := network.LookupRouteTable(ctx, &network.LookupRouteTableArgs{
+		_, err := network.LookupRouteTable(ctx, &network.LookupRouteTableArgs{
 			Name:              "myroutetable",
 			ResourceGroupName: "some-resource-group",
 		}, nil)

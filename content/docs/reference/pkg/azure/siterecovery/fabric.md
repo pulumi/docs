@@ -86,7 +86,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		fabric, err := siterecovery.NewFabric(ctx, "fabric", &siterecovery.FabricArgs{
+		_, err = siterecovery.NewFabric(ctx, "fabric", &siterecovery.FabricArgs{
 			ResourceGroupName: secondary.Name,
 			RecoveryVaultName: vault.Name,
 			Location:          primary.Location,

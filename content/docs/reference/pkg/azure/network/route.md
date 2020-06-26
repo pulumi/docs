@@ -78,7 +78,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleRoute, err := network.NewRoute(ctx, "exampleRoute", &network.RouteArgs{
+		_, err = network.NewRoute(ctx, "exampleRoute", &network.RouteArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			RouteTableName:    exampleRouteTable.Name,
 			AddressPrefix:     pulumi.String("10.1.0.0/16"),

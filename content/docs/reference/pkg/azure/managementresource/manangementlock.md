@@ -41,7 +41,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/management"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetSubscription(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = management.NewLock(ctx, "subscription-level", &management.LockArgs{
+			Scope:     pulumi.String(current.Id),
+			LockLevel: pulumi.String("CanNotDelete"),
+			Notes:     pulumi.String("Items can't be deleted in this subscription!"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,7 +136,46 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/management"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:             exampleResourceGroup.Location,
+			ResourceGroupName:    exampleResourceGroup.Name,
+			AllocationMethod:     pulumi.String("Static"),
+			IdleTimeoutInMinutes: pulumi.Int(30),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = management.NewLock(ctx, "public-ip", &management.LockArgs{
+			Scope:     examplePublicIp.ID(),
+			LockLevel: pulumi.String("CanNotDelete"),
+			Notes:     pulumi.String("Locked because it's needed by a third-party"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

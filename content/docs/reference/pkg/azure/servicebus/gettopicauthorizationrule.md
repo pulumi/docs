@@ -48,12 +48,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := servicebus.LookupTopicAuthorizationRule(ctx, &servicebus.LookupTopicAuthorizationRuleArgs{
+		_, err := servicebus.LookupTopicAuthorizationRule(ctx, &servicebus.LookupTopicAuthorizationRuleArgs{
 			Name:              "example-tfex_name",
 			NamespaceName:     "example-namespace",
 			ResourceGroupName: "example-resources",

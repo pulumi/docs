@@ -68,15 +68,15 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleApplication, err := iotcentral.NewApplication(ctx, "exampleApplication", &iotcentral.ApplicationArgs{
+		_, err = iotcentral.NewApplication(ctx, "exampleApplication", &iotcentral.ApplicationArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
 			SubDomain:         pulumi.String("example-iotcentral-app-subdomain"),
 			DisplayName:       pulumi.String("example-iotcentral-app-display-name"),
 			Sku:               pulumi.String("S1"),
 			Template:          pulumi.String("iotc-default@1.0.0"),
-			Tags: map[string]interface{}{
-				"Foo": "Bar",
+			Tags: pulumi.Map{
+				"Foo": pulumi.String("Bar"),
 			},
 		})
 		if err != nil {

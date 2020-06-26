@@ -12,6 +12,125 @@ meta_desc: "Explore the ApiOperationPolicy resource of the apimanagement module,
 
 Manages an API Management API Operation Policy
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApiOperation = new Azure.ApiManagement.ApiOperation("exampleApiOperation", new Azure.ApiManagement.ApiOperationArgs
+        {
+        });
+        //...
+        var exampleApiOperationPolicy = new Azure.ApiManagement.ApiOperationPolicy("exampleApiOperationPolicy", new Azure.ApiManagement.ApiOperationPolicyArgs
+        {
+            ApiName = exampleApiOperation.ApiName,
+            ApiManagementName = exampleApiOperation.ApiManagementName,
+            ResourceGroupName = exampleApiOperation.ResourceGroupName,
+            OperationId = exampleApiOperation.OperationId,
+            XmlContent = @"<policies>
+  <inbound>
+    <find-and-replace from=""xyz"" to=""abc"" />
+  </inbound>
+</policies>
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApiOperation, err := apimanagement.NewApiOperation(ctx, "exampleApiOperation", nil)
+		if err != nil {
+			return err
+		}
+		_, err = apimanagement.NewApiOperationPolicy(ctx, "exampleApiOperationPolicy", &apimanagement.ApiOperationPolicyArgs{
+			ApiName:           exampleApiOperation.ApiName,
+			ApiManagementName: exampleApiOperation.ApiManagementName,
+			ResourceGroupName: exampleApiOperation.ResourceGroupName,
+			OperationId:       exampleApiOperation.OperationId,
+			XmlContent:        pulumi.String(fmt.Sprintf("%v%v%v%v%v", "<policies>\n", "  <inbound>\n", "    <find-and-replace from=\"xyz\" to=\"abc\" />\n", "  </inbound>\n", "</policies>\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_api_operation = azure.apimanagement.ApiOperation("exampleApiOperation")
+#...
+example_api_operation_policy = azure.apimanagement.ApiOperationPolicy("exampleApiOperationPolicy",
+    api_name=example_api_operation.api_name,
+    api_management_name=example_api_operation.api_management_name,
+    resource_group_name=example_api_operation.resource_group_name,
+    operation_id=example_api_operation.operation_id,
+    xml_content="""<policies>
+  <inbound>
+    <find-and-replace from="xyz" to="abc" />
+  </inbound>
+</policies>
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleApiOperation = new azure.apimanagement.ApiOperation("exampleApiOperation", {});
+//...
+const exampleApiOperationPolicy = new azure.apimanagement.ApiOperationPolicy("exampleApiOperationPolicy", {
+    apiName: exampleApiOperation.apiName,
+    apiManagementName: exampleApiOperation.apiManagementName,
+    resourceGroupName: exampleApiOperation.resourceGroupName,
+    operationId: exampleApiOperation.operationId,
+    xmlContent: `<policies>
+  <inbound>
+    <find-and-replace from="xyz" to="abc" />
+  </inbound>
+</policies>
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiOperationPolicy Resource {#create}

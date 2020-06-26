@@ -76,14 +76,14 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			SkuName:           pulumi.String("Standard"),
-			Tags: map[string]interface{}{
-				"source": "managed",
+			Tags: pulumi.Map{
+				"source": pulumi.String("managed"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		exampleHybridConnection, err := relay.NewHybridConnection(ctx, "exampleHybridConnection", &relay.HybridConnectionArgs{
+		_, err = relay.NewHybridConnection(ctx, "exampleHybridConnection", &relay.HybridConnectionArgs{
 			ResourceGroupName:           exampleResourceGroup.Name,
 			RelayNamespaceName:          exampleNamespace.Name,
 			RequiresClientAuthorization: pulumi.Bool(false),

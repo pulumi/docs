@@ -64,11 +64,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAccount, err := maps.NewAccount(ctx, "exampleAccount", &maps.AccountArgs{
+		_, err = maps.NewAccount(ctx, "exampleAccount", &maps.AccountArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			SkuName:           pulumi.String("S1"),
-			Tags: map[string]interface{}{
-				"environment": "Test",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("Test"),
 			},
 		})
 		if err != nil {

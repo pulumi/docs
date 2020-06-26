@@ -44,12 +44,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		policy, err := backup.LookupPolicyVM(ctx, &backup.LookupPolicyVMArgs{
+		_, err := backup.LookupPolicyVM(ctx, &backup.LookupPolicyVMArgs{
 			Name:              "policy",
 			RecoveryVaultName: "recovery_vault",
 			ResourceGroupName: "resource_group",

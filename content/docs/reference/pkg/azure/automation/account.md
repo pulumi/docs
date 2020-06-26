@@ -65,12 +65,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAccount, err := automation.NewAccount(ctx, "exampleAccount", &automation.AccountArgs{
+		_, err = automation.NewAccount(ctx, "exampleAccount", &automation.AccountArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			SkuName:           pulumi.String("Basic"),
-			Tags: map[string]interface{}{
-				"environment": "development",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("development"),
 			},
 		})
 		if err != nil {

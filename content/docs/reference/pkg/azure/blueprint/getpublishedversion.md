@@ -43,7 +43,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/blueprint"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetSubscription(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err := blueprint.GetPublishedVersion(ctx, &blueprint.GetPublishedVersionArgs{
+			ScopeId:       current.Id,
+			BlueprintName: "exampleBluePrint",
+			Version:       "dev_v2.3",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

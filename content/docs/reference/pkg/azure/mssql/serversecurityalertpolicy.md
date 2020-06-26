@@ -107,7 +107,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleServerSecurityAlertPolicy, err := mssql.NewServerSecurityAlertPolicy(ctx, "exampleServerSecurityAlertPolicy", &mssql.ServerSecurityAlertPolicyArgs{
+		_, err = mssql.NewServerSecurityAlertPolicy(ctx, "exampleServerSecurityAlertPolicy", &mssql.ServerSecurityAlertPolicyArgs{
 			ResourceGroupName:       exampleResourceGroup.Name,
 			ServerName:              exampleSqlServer.Name,
 			State:                   pulumi.String("Enabled"),

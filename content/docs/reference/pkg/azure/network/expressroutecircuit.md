@@ -72,7 +72,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleExpressRouteCircuit, err := network.NewExpressRouteCircuit(ctx, "exampleExpressRouteCircuit", &network.ExpressRouteCircuitArgs{
+		_, err = network.NewExpressRouteCircuit(ctx, "exampleExpressRouteCircuit", &network.ExpressRouteCircuitArgs{
 			ResourceGroupName:   exampleResourceGroup.Name,
 			Location:            exampleResourceGroup.Location,
 			ServiceProviderName: pulumi.String("Equinix"),
@@ -82,8 +82,8 @@ func main() {
 				Tier:   pulumi.String("Standard"),
 				Family: pulumi.String("MeteredData"),
 			},
-			Tags: map[string]interface{}{
-				"environment": "Production",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("Production"),
 			},
 		})
 		if err != nil {

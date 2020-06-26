@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleIdentityProviderMicrosoft, err := apimanagement.NewIdentityProviderMicrosoft(ctx, "exampleIdentityProviderMicrosoft", &apimanagement.IdentityProviderMicrosoftArgs{
+		_, err = apimanagement.NewIdentityProviderMicrosoft(ctx, "exampleIdentityProviderMicrosoft", &apimanagement.IdentityProviderMicrosoftArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			ApiManagementName: exampleService.Name,
 			ClientId:          pulumi.String("00000000-0000-0000-0000-000000000000"),

@@ -88,7 +88,95 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primaryResourceGroup, err := core.NewResourceGroup(ctx, "primaryResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		secondaryResourceGroup, err := core.NewResourceGroup(ctx, "secondaryResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US"),
+		})
+		if err != nil {
+			return err
+		}
+		vault, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Location:          secondaryResourceGroup.Location,
+			ResourceGroupName: secondaryResourceGroup.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		primaryFabric, err := siterecovery.NewFabric(ctx, "primaryFabric", &siterecovery.FabricArgs{
+			ResourceGroupName: secondaryResourceGroup.Name,
+			RecoveryVaultName: vault.Name,
+			Location:          primaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		secondaryFabric, err := siterecovery.NewFabric(ctx, "secondaryFabric", &siterecovery.FabricArgs{
+			ResourceGroupName: secondaryResourceGroup.Name,
+			RecoveryVaultName: vault.Name,
+			Location:          secondaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		primaryProtectionContainer, err := siterecovery.NewProtectionContainer(ctx, "primaryProtectionContainer", &siterecovery.ProtectionContainerArgs{
+			ResourceGroupName:  secondaryResourceGroup.Name,
+			RecoveryVaultName:  vault.Name,
+			RecoveryFabricName: primaryFabric.Name,
+		})
+		if err != nil {
+			return err
+		}
+		secondaryProtectionContainer, err := siterecovery.NewProtectionContainer(ctx, "secondaryProtectionContainer", &siterecovery.ProtectionContainerArgs{
+			ResourceGroupName:  secondaryResourceGroup.Name,
+			RecoveryVaultName:  vault.Name,
+			RecoveryFabricName: secondaryFabric.Name,
+		})
+		if err != nil {
+			return err
+		}
+		policy, err := siterecovery.NewReplicationPolicy(ctx, "policy", &siterecovery.ReplicationPolicyArgs{
+			ResourceGroupName:                               secondaryResourceGroup.Name,
+			RecoveryVaultName:                               vault.Name,
+			RecoveryPointRetentionInMinutes:                 pulumi.Int(24 * 60),
+			ApplicationConsistentSnapshotFrequencyInMinutes: pulumi.Int(4 * 60),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = siterecovery.NewProtectionContainerMapping(ctx, "container-mapping", &siterecovery.ProtectionContainerMappingArgs{
+			ResourceGroupName:                     secondaryResourceGroup.Name,
+			RecoveryVaultName:                     vault.Name,
+			RecoveryFabricName:                    primaryFabric.Name,
+			RecoverySourceProtectionContainerName: primaryProtectionContainer.Name,
+			RecoveryTargetProtectionContainerId:   secondaryProtectionContainer.ID(),
+			RecoveryReplicationPolicyId:           policy.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

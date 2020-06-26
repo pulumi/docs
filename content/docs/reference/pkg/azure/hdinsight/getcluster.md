@@ -46,12 +46,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := hdinsight.LookupCluster(ctx, &hdinsight.LookupClusterArgs{
+		example, err := hdinsight.GetCluster(ctx, &hdinsight.GetClusterArgs{
 			Name:              "example",
 			ResourceGroupName: "example-resources",
 		}, nil)

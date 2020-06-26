@@ -62,7 +62,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleMongoDatabase, err := cosmosdb.NewMongoDatabase(ctx, "exampleMongoDatabase", &cosmosdb.MongoDatabaseArgs{
+		_, err = cosmosdb.NewMongoDatabase(ctx, "exampleMongoDatabase", &cosmosdb.MongoDatabaseArgs{
 			ResourceGroupName: pulumi.String(exampleAccount.ResourceGroupName),
 			AccountName:       pulumi.String(exampleAccount.Name),
 			Throughput:        pulumi.Int(400),

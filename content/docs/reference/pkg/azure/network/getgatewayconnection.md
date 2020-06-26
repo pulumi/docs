@@ -46,12 +46,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := network.LookupGatewayConnection(ctx, &network.LookupGatewayConnectionArgs{
+		example, err := network.GetGatewayConnection(ctx, &network.GetGatewayConnectionArgs{
 			Name:              "production",
 			ResourceGroupName: "networking",
 		}, nil)

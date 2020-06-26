@@ -12,6 +12,195 @@ meta_desc: "Explore the StreamInputIotHub resource of the streamanalytics module
 
 Manages a Stream Analytics Stream Input IoTHub.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = Output.Create(Azure.Core.GetResourceGroup.InvokeAsync(new Azure.Core.GetResourceGroupArgs
+        {
+            Name = "example-resources",
+        }));
+        var exampleJob = Output.Create(Azure.StreamAnalytics.GetJob.InvokeAsync(new Azure.StreamAnalytics.GetJobArgs
+        {
+            Name = "example-job",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        var exampleIoTHub = new Azure.Iot.IoTHub("exampleIoTHub", new Azure.Iot.IoTHubArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Location = azurerm_resource_group.Example.Location,
+            Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+            {
+                Name = "S1",
+                Capacity = 1,
+            },
+        });
+        var exampleStreamInputIotHub = new Azure.StreamAnalytics.StreamInputIotHub("exampleStreamInputIotHub", new Azure.StreamAnalytics.StreamInputIotHubArgs
+        {
+            StreamAnalyticsJobName = exampleJob.Apply(exampleJob => exampleJob.Name),
+            ResourceGroupName = exampleJob.Apply(exampleJob => exampleJob.ResourceGroupName),
+            Endpoint = "messages/events",
+            EventhubConsumerGroupName = "$Default",
+            IothubNamespace = exampleIoTHub.Name,
+            SharedAccessPolicyKey = exampleIoTHub.SharedAccessPolicies.Apply(sharedAccessPolicies => sharedAccessPolicies[0].PrimaryKey),
+            SharedAccessPolicyName = "iothubowner",
+            Serialization = new Azure.StreamAnalytics.Inputs.StreamInputIotHubSerializationArgs
+            {
+                Type = "Json",
+                Encoding = "UTF8",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := core.LookupResourceGroup(ctx, &core.LookupResourceGroupArgs{
+			Name: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleJob, err := streamanalytics.LookupJob(ctx, &streamanalytics.LookupJobArgs{
+			Name:              "example-job",
+			ResourceGroupName: azurerm_resource_group.Example.Name,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleIoTHub, err := iot.NewIoTHub(ctx, "exampleIoTHub", &iot.IoTHubArgs{
+			ResourceGroupName: pulumi.String(azurerm_resource_group.Example.Name),
+			Location:          pulumi.String(azurerm_resource_group.Example.Location),
+			Sku: &iot.IoTHubSkuArgs{
+				Name:     pulumi.String("S1"),
+				Capacity: pulumi.Int(1),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = streamanalytics.NewStreamInputIotHub(ctx, "exampleStreamInputIotHub", &streamanalytics.StreamInputIotHubArgs{
+			StreamAnalyticsJobName:    pulumi.String(exampleJob.Name),
+			ResourceGroupName:         pulumi.String(exampleJob.ResourceGroupName),
+			Endpoint:                  pulumi.String("messages/events"),
+			EventhubConsumerGroupName: pulumi.String(fmt.Sprintf("%v%v", "$", "Default")),
+			IothubNamespace:           exampleIoTHub.Name,
+			SharedAccessPolicyKey: pulumi.String(exampleIoTHub.SharedAccessPolicies.ApplyT(func(sharedAccessPolicies []iot.IoTHubSharedAccessPolicy) (string, error) {
+				return sharedAccessPolicies[0].PrimaryKey, nil
+			}).(pulumi.StringOutput)),
+			SharedAccessPolicyName: pulumi.String("iothubowner"),
+			Serialization: &streamanalytics.StreamInputIotHubSerializationArgs{
+				Type:     pulumi.String("Json"),
+				Encoding: pulumi.String("UTF8"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="example-resources")
+example_job = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+example_io_t_hub = azure.iot.IoTHub("exampleIoTHub",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    location=azurerm_resource_group["example"]["location"],
+    sku={
+        "name": "S1",
+        "capacity": "1",
+    })
+example_stream_input_iot_hub = azure.streamanalytics.StreamInputIotHub("exampleStreamInputIotHub",
+    stream_analytics_job_name=example_job.name,
+    resource_group_name=example_job.resource_group_name,
+    endpoint="messages/events",
+    eventhub_consumer_group_name="$Default",
+    iothub_namespace=example_io_t_hub.name,
+    shared_access_policy_key=example_io_t_hub.shared_access_policies[0]["primary_key"],
+    shared_access_policy_name="iothubowner",
+    serialization={
+        "type": "Json",
+        "encoding": "UTF8",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "example-resources",
+});
+const exampleJob = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
+    resourceGroupName: azurerm_resource_group.example.name,
+    location: azurerm_resource_group.example.location,
+    sku: {
+        name: "S1",
+        capacity: "1",
+    },
+});
+const exampleStreamInputIotHub = new azure.streamanalytics.StreamInputIotHub("exampleStreamInputIotHub", {
+    streamAnalyticsJobName: exampleJob.then(exampleJob => exampleJob.name),
+    resourceGroupName: exampleJob.then(exampleJob => exampleJob.resourceGroupName),
+    endpoint: "messages/events",
+    eventhubConsumerGroupName: `$Default`,
+    iothubNamespace: exampleIoTHub.name,
+    sharedAccessPolicyKey: exampleIoTHub.sharedAccessPolicies.apply(sharedAccessPolicies => sharedAccessPolicies[0].primaryKey),
+    sharedAccessPolicyName: "iothubowner",
+    serialization: {
+        type: "Json",
+        encoding: "UTF8",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StreamInputIotHub Resource {#create}

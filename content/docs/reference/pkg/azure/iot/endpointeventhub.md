@@ -137,14 +137,14 @@ func main() {
 				Tier:     pulumi.String("Basic"),
 				Capacity: pulumi.Int(1),
 			},
-			Tags: map[string]interface{}{
-				"purpose": "example",
+			Tags: pulumi.Map{
+				"purpose": pulumi.String("example"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		exampleEndpointEventhub, err := iot.NewEndpointEventhub(ctx, "exampleEndpointEventhub", &iot.EndpointEventhubArgs{
+		_, err = iot.NewEndpointEventhub(ctx, "exampleEndpointEventhub", &iot.EndpointEventhubArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			IothubName:        exampleIoTHub.Name,
 			ConnectionString:  exampleAuthorizationRule.PrimaryConnectionString,

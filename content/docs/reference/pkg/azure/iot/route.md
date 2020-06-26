@@ -130,8 +130,8 @@ func main() {
 				Name:     pulumi.String("S1"),
 				Capacity: pulumi.Int(1),
 			},
-			Tags: map[string]interface{}{
-				"purpose": "testing",
+			Tags: pulumi.Map{
+				"purpose": pulumi.String("testing"),
 			},
 		})
 		if err != nil {
@@ -150,7 +150,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleRoute, err := iot.NewRoute(ctx, "exampleRoute", &iot.RouteArgs{
+		_, err = iot.NewRoute(ctx, "exampleRoute", &iot.RouteArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			IothubName:        exampleIoTHub.Name,
 			Source:            pulumi.String("DeviceMessages"),

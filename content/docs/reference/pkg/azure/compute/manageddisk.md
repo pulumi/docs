@@ -67,14 +67,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleManagedDisk, err := compute.NewManagedDisk(ctx, "exampleManagedDisk", &compute.ManagedDiskArgs{
+		_, err = compute.NewManagedDisk(ctx, "exampleManagedDisk", &compute.ManagedDiskArgs{
 			Location:           pulumi.String("West US 2"),
 			ResourceGroupName:  exampleResourceGroup.Name,
 			StorageAccountType: pulumi.String("Standard_LRS"),
 			CreateOption:       pulumi.String("Empty"),
 			DiskSizeGb:         pulumi.Int(1),
-			Tags: map[string]interface{}{
-				"environment": "staging",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("staging"),
 			},
 		})
 		if err != nil {
@@ -197,22 +197,22 @@ func main() {
 			StorageAccountType: pulumi.String("Standard_LRS"),
 			CreateOption:       pulumi.String("Empty"),
 			DiskSizeGb:         pulumi.Int(1),
-			Tags: map[string]interface{}{
-				"environment": "staging",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("staging"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		copy, err := compute.NewManagedDisk(ctx, "copy", &compute.ManagedDiskArgs{
+		_, err = compute.NewManagedDisk(ctx, "copy", &compute.ManagedDiskArgs{
 			Location:           pulumi.String("West US 2"),
 			ResourceGroupName:  example.Name,
 			StorageAccountType: pulumi.String("Standard_LRS"),
 			CreateOption:       pulumi.String("Copy"),
 			SourceResourceId:   source.ID(),
 			DiskSizeGb:         pulumi.Int(1),
-			Tags: map[string]interface{}{
-				"environment": "staging",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("staging"),
 			},
 		})
 		if err != nil {

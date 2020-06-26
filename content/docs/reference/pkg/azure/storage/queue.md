@@ -75,7 +75,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleQueue, err := storage.NewQueue(ctx, "exampleQueue", &storage.QueueArgs{
+		_, err = storage.NewQueue(ctx, "exampleQueue", &storage.QueueArgs{
 			StorageAccountName: exampleAccount.Name,
 		})
 		if err != nil {

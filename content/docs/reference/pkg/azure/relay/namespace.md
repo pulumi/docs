@@ -65,12 +65,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleNamespace, err := relay.NewNamespace(ctx, "exampleNamespace", &relay.NamespaceArgs{
+		_, err = relay.NewNamespace(ctx, "exampleNamespace", &relay.NamespaceArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			SkuName:           pulumi.String("Standard"),
-			Tags: map[string]interface{}{
-				"source": "example",
+			Tags: pulumi.Map{
+				"source": pulumi.String("example"),
 			},
 		})
 		if err != nil {

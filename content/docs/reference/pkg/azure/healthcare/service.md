@@ -12,6 +12,209 @@ meta_desc: "Explore the Service resource of the healthcare module, including exa
 
 Manages a Healthcare Service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Healthcare.Service("example", new Azure.Healthcare.ServiceArgs
+        {
+            AccessPolicyObjectIds = 
+            {
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            },
+            AuthenticationConfiguration = new Azure.Healthcare.Inputs.ServiceAuthenticationConfigurationArgs
+            {
+                Audience = "https://azurehealthcareapis.com/",
+                Authority = "https://login.microsoftonline.com/$%7Bdata.azurerm_client_config.current.tenant_id%7D",
+                SmartProxyEnabled = true,
+            },
+            CorsConfiguration = new Azure.Healthcare.Inputs.ServiceCorsConfigurationArgs
+            {
+                AllowCredentials = true,
+                AllowedHeaders = 
+                {
+                    "x-tempo-*",
+                    "x-tempo2-*",
+                },
+                AllowedMethods = 
+                {
+                    "GET",
+                    "PUT",
+                },
+                AllowedOrigins = 
+                {
+                    "http://www.example.com",
+                    "http://www.example2.com",
+                },
+                MaxAgeInSeconds = 500,
+            },
+            CosmosdbThroughput = 2000,
+            Kind = "fhir-R4",
+            Location = "westus2",
+            ResourceGroupName = "sample-resource-group",
+            Tags = 
+            {
+                { "environment", "testenv" },
+                { "purpose", "AcceptanceTests" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = healthcare.NewService(ctx, "example", &healthcare.ServiceArgs{
+			AccessPolicyObjectIds: pulumi.StringArray{
+				pulumi.String("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"),
+			},
+			AuthenticationConfiguration: &healthcare.ServiceAuthenticationConfigurationArgs{
+				Audience:          pulumi.String("https://azurehealthcareapis.com/"),
+				Authority:         pulumi.String(fmt.Sprintf("%v%v%v%v%v%v", "https://login.microsoftonline.com/", "$", "%", "7Bdata.azurerm_client_config.current.tenant_id", "%", "7D")),
+				SmartProxyEnabled: pulumi.Bool(true),
+			},
+			CorsConfiguration: &healthcare.ServiceCorsConfigurationArgs{
+				AllowCredentials: pulumi.Bool(true),
+				AllowedHeaders: pulumi.StringArray{
+					pulumi.String("x-tempo-*"),
+					pulumi.String("x-tempo2-*"),
+				},
+				AllowedMethods: pulumi.StringArray{
+					pulumi.String("GET"),
+					pulumi.String("PUT"),
+				},
+				AllowedOrigins: pulumi.StringArray{
+					pulumi.String("http://www.example.com"),
+					pulumi.String("http://www.example2.com"),
+				},
+				MaxAgeInSeconds: pulumi.Int(500),
+			},
+			CosmosdbThroughput: pulumi.Int(2000),
+			Kind:               pulumi.String("fhir-R4"),
+			Location:           pulumi.String("westus2"),
+			ResourceGroupName:  pulumi.String("sample-resource-group"),
+			Tags: pulumi.Map{
+				"environment": pulumi.String("testenv"),
+				"purpose":     pulumi.String("AcceptanceTests"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.healthcare.Service("example",
+    access_policy_object_ids=["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"],
+    authentication_configuration={
+        "audience": "https://azurehealthcareapis.com/",
+        "authority": "https://login.microsoftonline.com/$%7Bdata.azurerm_client_config.current.tenant_id%7D",
+        "smartProxyEnabled": "true",
+    },
+    cors_configuration={
+        "allowCredentials": "true",
+        "allowedHeaders": [
+            "x-tempo-*",
+            "x-tempo2-*",
+        ],
+        "allowedMethods": [
+            "GET",
+            "PUT",
+        ],
+        "allowedOrigins": [
+            "http://www.example.com",
+            "http://www.example2.com",
+        ],
+        "maxAgeInSeconds": "500",
+    },
+    cosmosdb_throughput="2000",
+    kind="fhir-R4",
+    location="westus2",
+    resource_group_name="sample-resource-group",
+    tags={
+        "environment": "testenv",
+        "purpose": "AcceptanceTests",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.healthcare.Service("example", {
+    accessPolicyObjectIds: ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"],
+    authenticationConfiguration: {
+        audience: "https://azurehealthcareapis.com/",
+        authority: "https://login.microsoftonline.com/$%7Bdata.azurerm_client_config.current.tenant_id%7D",
+        smartProxyEnabled: true,
+    },
+    corsConfiguration: {
+        allowCredentials: true,
+        allowedHeaders: [
+            "x-tempo-*",
+            "x-tempo2-*",
+        ],
+        allowedMethods: [
+            "GET",
+            "PUT",
+        ],
+        allowedOrigins: [
+            "http://www.example.com",
+            "http://www.example2.com",
+        ],
+        maxAgeInSeconds: 500,
+    },
+    cosmosdbThroughput: 2000,
+    kind: "fhir-R4",
+    location: "westus2",
+    resourceGroupName: "sample-resource-group",
+    tags: {
+        environment: "testenv",
+        purpose: "AcceptanceTests",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

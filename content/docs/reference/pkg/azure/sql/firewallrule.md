@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleFirewallRule, err := sql.NewFirewallRule(ctx, "exampleFirewallRule", &sql.FirewallRuleArgs{
+		_, err = sql.NewFirewallRule(ctx, "exampleFirewallRule", &sql.FirewallRuleArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			ServerName:        exampleSqlServer.Name,
 			StartIpAddress:    pulumi.String("10.0.17.62"),

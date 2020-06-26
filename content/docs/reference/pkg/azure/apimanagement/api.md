@@ -90,7 +90,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleApi, err := apimanagement.NewApi(ctx, "exampleApi", &apimanagement.ApiArgs{
+		_, err = apimanagement.NewApi(ctx, "exampleApi", &apimanagement.ApiArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			ApiManagementName: exampleService.Name,
 			Revision:          pulumi.String("1"),
@@ -183,7 +183,7 @@ const exampleApi = new azure.apimanagement.Api("exampleApi", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#Api">Api</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>import_=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>protocols=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>revision=None<span class="p">, </span>service_url=None<span class="p">, </span>soap_pass_through=None<span class="p">, </span>subscription_key_parameter_names=None<span class="p">, </span>version=None<span class="p">, </span>version_set_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#Api">Api</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>import_=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>protocols=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>revision=None<span class="p">, </span>service_url=None<span class="p">, </span>soap_pass_through=None<span class="p">, </span>subscription_key_parameter_names=None<span class="p">, </span>subscription_required=None<span class="p">, </span>version=None<span class="p">, </span>version_set_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -489,6 +489,17 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="subscriptionrequired_csharp">
+<a href="#subscriptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
@@ -646,6 +657,17 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionrequired_go">
+<a href="#subscriptionrequired_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -811,6 +833,17 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="subscriptionrequired_nodejs">
+<a href="#subscriptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
@@ -968,6 +1001,17 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Dict[Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names]</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_required_python">
+<a href="#subscription_required_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,7 +1222,7 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_management_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>import_=None<span class="p">, </span>is_current=None<span class="p">, </span>is_online=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>protocols=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>revision=None<span class="p">, </span>service_url=None<span class="p">, </span>soap_pass_through=None<span class="p">, </span>subscription_key_parameter_names=None<span class="p">, </span>version=None<span class="p">, </span>version_set_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_management_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>import_=None<span class="p">, </span>is_current=None<span class="p">, </span>is_online=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>protocols=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>revision=None<span class="p">, </span>service_url=None<span class="p">, </span>soap_pass_through=None<span class="p">, </span>subscription_key_parameter_names=None<span class="p">, </span>subscription_required=None<span class="p">, </span>version=None<span class="p">, </span>version_set_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1448,6 +1492,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_subscriptionrequired_csharp">
+<a href="#state_subscriptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
@@ -1627,6 +1682,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_subscriptionrequired_go">
+<a href="#state_subscriptionrequired_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1814,6 +1880,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_subscriptionrequired_nodejs">
+<a href="#state_subscriptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
@@ -1993,6 +2070,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Dict[Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names]</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_subscription_required_python">
+<a href="#state_subscription_required_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -91,8 +91,8 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard"),
-			Tags: map[string]interface{}{
-				"source": "example",
+			Tags: pulumi.Map{
+				"source": pulumi.String("example"),
 			},
 		})
 		if err != nil {
@@ -115,7 +115,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleSubscriptionRule, err := servicebus.NewSubscriptionRule(ctx, "exampleSubscriptionRule", &servicebus.SubscriptionRuleArgs{
+		_, err = servicebus.NewSubscriptionRule(ctx, "exampleSubscriptionRule", &servicebus.SubscriptionRuleArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			NamespaceName:     exampleNamespace.Name,
 			TopicName:         exampleTopic.Name,

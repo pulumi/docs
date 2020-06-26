@@ -71,7 +71,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAaaaRecord, err := dns.NewAaaaRecord(ctx, "exampleAaaaRecord", &dns.AaaaRecordArgs{
+		_, err = dns.NewAaaaRecord(ctx, "exampleAaaaRecord", &dns.AaaaRecordArgs{
 			ZoneName:          exampleZone.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Ttl:               pulumi.Int(300),
@@ -191,7 +191,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAaaaRecord, err := dns.NewAaaaRecord(ctx, "exampleAaaaRecord", &dns.AaaaRecordArgs{
+		_, err = dns.NewAaaaRecord(ctx, "exampleAaaaRecord", &dns.AaaaRecordArgs{
 			ZoneName:          exampleZone.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Ttl:               pulumi.Int(300),

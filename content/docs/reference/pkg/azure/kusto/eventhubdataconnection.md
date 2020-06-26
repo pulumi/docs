@@ -152,7 +152,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		eventhubConnection, err := kusto.NewEventhubDataConnection(ctx, "eventhubConnection", &kusto.EventhubDataConnectionArgs{
+		_, err = kusto.NewEventhubDataConnection(ctx, "eventhubConnection", &kusto.EventhubDataConnectionArgs{
 			ResourceGroupName: rg.Name,
 			Location:          rg.Location,
 			ClusterName:       cluster.Name,

@@ -47,6 +47,7 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 

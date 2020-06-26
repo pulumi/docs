@@ -56,6 +56,7 @@ class MyStack : Stack
             SubnetId = ase.Id,
             PricingTier = "I2",
             FrontEndScaleFactor = 10,
+            InternalLoadBalancingMode = "Web, Publishing",
             UserWhitelistedIpRanges = 
             {
                 "11.22.33.44/32",
@@ -106,7 +107,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		gateway, err := network.NewSubnet(ctx, "gateway", &network.SubnetArgs{
+		_, err = network.NewSubnet(ctx, "gateway", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
 			AddressPrefix:      pulumi.String("10.0.2.0/24"),
@@ -114,10 +115,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleEnvironment, err := appservice.NewEnvironment(ctx, "exampleEnvironment", &appservice.EnvironmentArgs{
-			SubnetId:            ase.ID(),
-			PricingTier:         pulumi.String("I2"),
-			FrontEndScaleFactor: pulumi.Int(10),
+		_, err = appservice.NewEnvironment(ctx, "exampleEnvironment", &appservice.EnvironmentArgs{
+			SubnetId:                  ase.ID(),
+			PricingTier:               pulumi.String("I2"),
+			FrontEndScaleFactor:       pulumi.Int(10),
+			InternalLoadBalancingMode: pulumi.String("Web, Publishing"),
 			UserWhitelistedIpRanges: pulumi.StringArray{
 				pulumi.String("11.22.33.44/32"),
 				pulumi.String("55.66.77.0/24"),
@@ -155,6 +157,7 @@ example_environment = azure.appservice.Environment("exampleEnvironment",
     subnet_id=ase.id,
     pricing_tier="I2",
     front_end_scale_factor=10,
+    internal_load_balancing_mode="Web, Publishing",
     user_whitelisted_ip_ranges=[
         "11.22.33.44/32",
         "55.66.77.0/24",
@@ -189,6 +192,7 @@ const exampleEnvironment = new azure.appservice.Environment("exampleEnvironment"
     subnetId: ase.id,
     pricingTier: "I2",
     frontEndScaleFactor: 10,
+    internalLoadBalancingMode: "Web, Publishing",
     userWhitelistedIpRanges: [
         "11.22.33.44/32",
         "55.66.77.0/24",
@@ -412,7 +416,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web` and `Publishing`. Defaults to `None`.
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web`, `Publishing` and combined value `"Web, Publishing"`. Defaults to `None`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -507,7 +511,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web` and `Publishing`. Defaults to `None`.
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web`, `Publishing` and combined value `"Web, Publishing"`. Defaults to `None`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -602,7 +606,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web` and `Publishing`. Defaults to `None`.
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web`, `Publishing` and combined value `"Web, Publishing"`. Defaults to `None`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -697,7 +701,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web` and `Publishing`. Defaults to `None`.
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web`, `Publishing` and combined value `"Web, Publishing"`. Defaults to `None`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1030,7 +1034,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web` and `Publishing`. Defaults to `None`.
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web`, `Publishing` and combined value `"Web, Publishing"`. Defaults to `None`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,7 +1140,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web` and `Publishing`. Defaults to `None`.
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web`, `Publishing` and combined value `"Web, Publishing"`. Defaults to `None`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1242,7 +1246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web` and `Publishing`. Defaults to `None`.
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web`, `Publishing` and combined value `"Web, Publishing"`. Defaults to `None`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1348,7 +1352,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web` and `Publishing`. Defaults to `None`.
+    <dd>{{% md %}}Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment. Possible values are `None`, `Web`, `Publishing` and combined value `"Web, Publishing"`. Defaults to `None`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

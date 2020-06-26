@@ -65,7 +65,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		home, err := network.NewLocalNetworkGateway(ctx, "home", &network.LocalNetworkGatewayArgs{
+		_, err = network.NewLocalNetworkGateway(ctx, "home", &network.LocalNetworkGatewayArgs{
 			ResourceGroupName: example.Name,
 			Location:          example.Location,
 			GatewayAddress:    pulumi.String("12.13.14.15"),

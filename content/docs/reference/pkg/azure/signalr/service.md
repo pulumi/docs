@@ -83,7 +83,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleService, err := signalr.NewService(ctx, "exampleService", &signalr.ServiceArgs{
+		_, err = signalr.NewService(ctx, "exampleService", &signalr.ServiceArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku: &signalr.ServiceSkuArgs{

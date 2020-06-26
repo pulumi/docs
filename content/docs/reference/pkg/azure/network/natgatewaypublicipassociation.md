@@ -90,7 +90,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleNatGatewayPublicIpAssociation, err := network.NewNatGatewayPublicIpAssociation(ctx, "exampleNatGatewayPublicIpAssociation", &network.NatGatewayPublicIpAssociationArgs{
+		_, err = network.NewNatGatewayPublicIpAssociation(ctx, "exampleNatGatewayPublicIpAssociation", &network.NatGatewayPublicIpAssociationArgs{
 			NatGatewayId:      exampleNatGateway.ID(),
 			PublicIpAddressId: examplePublicIp.ID(),
 		})

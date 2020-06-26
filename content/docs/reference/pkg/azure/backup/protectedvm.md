@@ -98,7 +98,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		vm1, err := backup.NewProtectedVM(ctx, "vm1", &backup.ProtectedVMArgs{
+		_, err = backup.NewProtectedVM(ctx, "vm1", &backup.ProtectedVMArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			RecoveryVaultName: exampleVault.Name,
 			SourceVmId:        pulumi.String(azurerm_virtual_machine.Example.Id),

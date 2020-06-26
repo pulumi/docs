@@ -60,7 +60,59 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := core.NewResourceGroup(ctx, "primary", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		secondary, err := core.NewResourceGroup(ctx, "secondary", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US"),
+		})
+		if err != nil {
+			return err
+		}
+		vault, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Location:          secondary.Location,
+			ResourceGroupName: secondary.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		fabric, err := siterecovery.NewFabric(ctx, "fabric", &siterecovery.FabricArgs{
+			ResourceGroupName: secondary.Name,
+			RecoveryVaultName: vault.Name,
+			Location:          primary.Location,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = siterecovery.NewProtectionContainer(ctx, "protection-container", &siterecovery.ProtectionContainerArgs{
+			ResourceGroupName:  secondary.Name,
+			RecoveryVaultName:  vault.Name,
+			RecoveryFabricName: fabric.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

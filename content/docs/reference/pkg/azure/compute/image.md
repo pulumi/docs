@@ -61,7 +61,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleImage, err := compute.NewImage(ctx, "exampleImage", &compute.ImageArgs{
+		_, err = compute.NewImage(ctx, "exampleImage", &compute.ImageArgs{
 			Location:               pulumi.String("West US"),
 			ResourceGroupName:      exampleResourceGroup.Name,
 			SourceVirtualMachineId: pulumi.String("{vm_id}"),

@@ -83,7 +83,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleUser, err := apimanagement.NewUser(ctx, "exampleUser", &apimanagement.UserArgs{
+		_, err = apimanagement.NewUser(ctx, "exampleUser", &apimanagement.UserArgs{
 			UserId:            pulumi.String("5931a75ae4bbd512288c680b"),
 			ApiManagementName: exampleService.Name,
 			ResourceGroupName: exampleResourceGroup.Name,

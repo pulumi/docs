@@ -82,14 +82,14 @@ func main() {
 				Name:     pulumi.String("S1"),
 				Capacity: pulumi.Int(1),
 			},
-			Tags: map[string]interface{}{
-				"purpose": "testing",
+			Tags: pulumi.Map{
+				"purpose": pulumi.String("testing"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		exampleConsumerGroup, err := iot.NewConsumerGroup(ctx, "exampleConsumerGroup", &iot.ConsumerGroupArgs{
+		_, err = iot.NewConsumerGroup(ctx, "exampleConsumerGroup", &iot.ConsumerGroupArgs{
 			IothubName:           exampleIoTHub.Name,
 			EventhubEndpointName: pulumi.String("events"),
 			ResourceGroupName:    exampleResourceGroup.Name,

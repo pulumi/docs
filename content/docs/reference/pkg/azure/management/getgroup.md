@@ -45,13 +45,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/management"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "00000000-0000-0000-0000-000000000000"
 		example, err := management.LookupGroup(ctx, &management.LookupGroupArgs{
-			Name: "00000000-0000-0000-0000-000000000000",
+			Name: &opt0,
 		}, nil)
 		if err != nil {
 			return err

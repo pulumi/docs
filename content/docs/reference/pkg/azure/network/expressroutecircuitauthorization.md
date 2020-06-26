@@ -89,14 +89,14 @@ func main() {
 				Family: pulumi.String("MeteredData"),
 			},
 			AllowClassicOperations: pulumi.Bool(false),
-			Tags: map[string]interface{}{
-				"environment": "Production",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("Production"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		exampleExpressRouteCircuitAuthorization, err := network.NewExpressRouteCircuitAuthorization(ctx, "exampleExpressRouteCircuitAuthorization", &network.ExpressRouteCircuitAuthorizationArgs{
+		_, err = network.NewExpressRouteCircuitAuthorization(ctx, "exampleExpressRouteCircuitAuthorization", &network.ExpressRouteCircuitAuthorizationArgs{
 			ExpressRouteCircuitName: exampleExpressRouteCircuit.Name,
 			ResourceGroupName:       exampleResourceGroup.Name,
 		})

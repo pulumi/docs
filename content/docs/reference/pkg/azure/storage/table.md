@@ -75,7 +75,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleTable, err := storage.NewTable(ctx, "exampleTable", &storage.TableArgs{
+		_, err = storage.NewTable(ctx, "exampleTable", &storage.TableArgs{
 			StorageAccountName: exampleAccount.Name,
 		})
 		if err != nil {
