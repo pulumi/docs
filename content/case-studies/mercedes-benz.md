@@ -29,10 +29,12 @@ sections:
       anchor: developers-in-the-driver-s-seat-programming-the-cloud-with-pulumi
     - label: Conclusion
       anchor: the-road-ahead
-      
+
 aliases:
     - /case-studies/merceded-benz
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MGA_Bba2GqQ" class="mx-auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## About MBRDNA
 
