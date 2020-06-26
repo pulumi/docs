@@ -133,8 +133,8 @@ func main() {
 				Name:     pulumi.String("S1"),
 				Capacity: pulumi.Int(1),
 			},
-			Tags: map[string]interface{}{
-				"purpose": "testing",
+			Tags: pulumi.Map{
+				"purpose": pulumi.String("testing"),
 			},
 		})
 		if err != nil {
@@ -153,7 +153,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleFallbackRoute, err := iot.NewFallbackRoute(ctx, "exampleFallbackRoute", &iot.FallbackRouteArgs{
+		_, err = iot.NewFallbackRoute(ctx, "exampleFallbackRoute", &iot.FallbackRouteArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			IothubName:        exampleIoTHub.Name,
 			Condition:         pulumi.String("true"),

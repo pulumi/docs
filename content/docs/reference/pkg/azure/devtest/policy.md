@@ -80,22 +80,22 @@ func main() {
 		exampleLab, err := devtest.NewLab(ctx, "exampleLab", &devtest.LabArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
-			Tags: map[string]interface{}{
-				"Sydney": "Australia",
+			Tags: pulumi.Map{
+				"Sydney": pulumi.String("Australia"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		examplePolicy, err := devtest.NewPolicy(ctx, "examplePolicy", &devtest.PolicyArgs{
+		_, err = devtest.NewPolicy(ctx, "examplePolicy", &devtest.PolicyArgs{
 			PolicySetName:     pulumi.String("default"),
 			LabName:           exampleLab.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			FactData:          pulumi.String(""),
 			Threshold:         pulumi.String("999"),
 			EvaluatorType:     pulumi.String("MaxValuePolicy"),
-			Tags: map[string]interface{}{
-				"Acceptance": "Test",
+			Tags: pulumi.Map{
+				"Acceptance": pulumi.String("Test"),
 			},
 		})
 		if err != nil {

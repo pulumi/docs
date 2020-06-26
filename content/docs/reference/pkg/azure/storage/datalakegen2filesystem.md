@@ -85,10 +85,10 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleDataLakeGen2Filesystem, err := storage.NewDataLakeGen2Filesystem(ctx, "exampleDataLakeGen2Filesystem", &storage.DataLakeGen2FilesystemArgs{
+		_, err = storage.NewDataLakeGen2Filesystem(ctx, "exampleDataLakeGen2Filesystem", &storage.DataLakeGen2FilesystemArgs{
 			StorageAccountId: exampleAccount.ID(),
-			Properties: map[string]interface{}{
-				"hello": "aGVsbG8=",
+			Properties: pulumi.Map{
+				"hello": pulumi.String("aGVsbG8="),
 			},
 		})
 		if err != nil {

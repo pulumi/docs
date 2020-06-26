@@ -133,14 +133,14 @@ func main() {
 				Tier:     pulumi.String("Basic"),
 				Capacity: pulumi.Int(1),
 			},
-			Tags: map[string]interface{}{
-				"purpose": "example",
+			Tags: pulumi.Map{
+				"purpose": pulumi.String("example"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		exampleEndpointServicebusTopic, err := iot.NewEndpointServicebusTopic(ctx, "exampleEndpointServicebusTopic", &iot.EndpointServicebusTopicArgs{
+		_, err = iot.NewEndpointServicebusTopic(ctx, "exampleEndpointServicebusTopic", &iot.EndpointServicebusTopicArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			IothubName:        exampleIoTHub.Name,
 			ConnectionString:  exampleTopicAuthorizationRule.PrimaryConnectionString,

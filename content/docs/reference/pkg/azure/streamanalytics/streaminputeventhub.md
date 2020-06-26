@@ -82,6 +82,7 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/streamanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -128,7 +129,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleStreamInputEventHub, err := streamanalytics.NewStreamInputEventHub(ctx, "exampleStreamInputEventHub", &streamanalytics.StreamInputEventHubArgs{
+		_, err = streamanalytics.NewStreamInputEventHub(ctx, "exampleStreamInputEventHub", &streamanalytics.StreamInputEventHubArgs{
 			StreamAnalyticsJobName:    pulumi.String(exampleJob.Name),
 			ResourceGroupName:         pulumi.String(exampleJob.ResourceGroupName),
 			EventhubConsumerGroupName: exampleConsumerGroup.Name,

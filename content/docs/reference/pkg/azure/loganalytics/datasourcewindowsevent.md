@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleDataSourceWindowsEvent, err := loganalytics.NewDataSourceWindowsEvent(ctx, "exampleDataSourceWindowsEvent", &loganalytics.DataSourceWindowsEventArgs{
+		_, err = loganalytics.NewDataSourceWindowsEvent(ctx, "exampleDataSourceWindowsEvent", &loganalytics.DataSourceWindowsEventArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			WorkspaceName:     exampleAnalyticsWorkspace.Name,
 			EventLogName:      pulumi.String("Application"),

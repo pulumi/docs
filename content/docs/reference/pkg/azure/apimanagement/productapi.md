@@ -103,7 +103,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleProductApi, err := apimanagement.NewProductApi(ctx, "exampleProductApi", &apimanagement.ProductApiArgs{
+		_, err = apimanagement.NewProductApi(ctx, "exampleProductApi", &apimanagement.ProductApiArgs{
 			ApiName:           pulumi.String(exampleApi.Name),
 			ProductId:         pulumi.String(exampleProduct.ProductId),
 			ApiManagementName: pulumi.String(exampleService.Name),

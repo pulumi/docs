@@ -66,13 +66,13 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+		_, err = storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
 			ResourceGroupName:      exampleResourceGroup.Name,
 			Location:               exampleResourceGroup.Location,
 			AccountTier:            pulumi.String("Standard"),
 			AccountReplicationType: pulumi.String("GRS"),
-			Tags: map[string]interface{}{
-				"environment": "staging",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("staging"),
 			},
 		})
 		if err != nil {

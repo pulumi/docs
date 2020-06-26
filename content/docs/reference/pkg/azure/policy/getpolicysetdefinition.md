@@ -45,13 +45,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "Policy Set Definition Example"
 		example, err := policy.LookupPolicySetDefinition(ctx, &policy.LookupPolicySetDefinitionArgs{
-			DisplayName: "Policy Set Definition Example",
+			DisplayName: &opt0,
 		}, nil)
 		if err != nil {
 			return err

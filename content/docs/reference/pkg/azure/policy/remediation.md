@@ -12,6 +12,248 @@ meta_desc: "Explore the Remediation resource of the policy module, including exa
 
 Manages an Azure Policy Remediation at the specified Scope.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleDefinition = new Azure.Policy.Definition("exampleDefinition", new Azure.Policy.DefinitionArgs
+        {
+            PolicyType = "Custom",
+            Mode = "All",
+            DisplayName = "my-policy-definition",
+            PolicyRule = @"    {
+    ""if"": {
+      ""not"": {
+        ""field"": ""location"",
+        ""in"": ""[parameters('allowedLocations')]""
+      }
+    },
+    ""then"": {
+      ""effect"": ""audit""
+    }
+  }
+",
+            Parameters = @"    {
+    ""allowedLocations"": {
+      ""type"": ""Array"",
+      ""metadata"": {
+        ""description"": ""The list of allowed locations for resources."",
+        ""displayName"": ""Allowed locations"",
+        ""strongType"": ""location""
+      }
+    }
+  }
+",
+        });
+        var exampleAssignment = new Azure.Policy.Assignment("exampleAssignment", new Azure.Policy.AssignmentArgs
+        {
+            Scope = exampleResourceGroup.Id,
+            PolicyDefinitionId = exampleDefinition.Id,
+            Description = "Policy Assignment created via an Acceptance Test",
+            DisplayName = "My Example Policy Assignment",
+            Parameters = @"{
+  ""allowedLocations"": {
+    ""value"": [ ""West Europe"" ]
+  }
+}
+",
+        });
+        var exampleRemediation = new Azure.Policy.Remediation("exampleRemediation", new Azure.Policy.RemediationArgs
+        {
+            Scope = exampleAssignment.Scope,
+            PolicyAssignmentId = exampleAssignment.Id,
+            LocationFilters = 
+            {
+                "West Europe",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleDefinition, err := policy.NewDefinition(ctx, "exampleDefinition", &policy.DefinitionArgs{
+			PolicyType:  pulumi.String("Custom"),
+			Mode:        pulumi.String("All"),
+			DisplayName: pulumi.String("my-policy-definition"),
+			PolicyRule:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "    \"if\": {\n", "      \"not\": {\n", "        \"field\": \"location\",\n", "        \"in\": \"[parameters('allowedLocations')]\"\n", "      }\n", "    },\n", "    \"then\": {\n", "      \"effect\": \"audit\"\n", "    }\n", "  }\n")),
+			Parameters:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v", "    {\n", "    \"allowedLocations\": {\n", "      \"type\": \"Array\",\n", "      \"metadata\": {\n", "        \"description\": \"The list of allowed locations for resources.\",\n", "        \"displayName\": \"Allowed locations\",\n", "        \"strongType\": \"location\"\n", "      }\n", "    }\n", "  }\n")),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAssignment, err := policy.NewAssignment(ctx, "exampleAssignment", &policy.AssignmentArgs{
+			Scope:              exampleResourceGroup.ID(),
+			PolicyDefinitionId: exampleDefinition.ID(),
+			Description:        pulumi.String("Policy Assignment created via an Acceptance Test"),
+			DisplayName:        pulumi.String("My Example Policy Assignment"),
+			Parameters:         pulumi.String(fmt.Sprintf("%v%v%v%v%v", "{\n", "  \"allowedLocations\": {\n", "    \"value\": [ \"West Europe\" ]\n", "  }\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = policy.NewRemediation(ctx, "exampleRemediation", &policy.RemediationArgs{
+			Scope:              exampleAssignment.Scope,
+			PolicyAssignmentId: exampleAssignment.ID(),
+			LocationFilters: pulumi.StringArray{
+				pulumi.String("West Europe"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_definition = azure.policy.Definition("exampleDefinition",
+    policy_type="Custom",
+    mode="All",
+    display_name="my-policy-definition",
+    policy_rule="""    {
+    "if": {
+      "not": {
+        "field": "location",
+        "in": "[parameters('allowedLocations')]"
+      }
+    },
+    "then": {
+      "effect": "audit"
+    }
+  }
+""",
+    parameters="""    {
+    "allowedLocations": {
+      "type": "Array",
+      "metadata": {
+        "description": "The list of allowed locations for resources.",
+        "displayName": "Allowed locations",
+        "strongType": "location"
+      }
+    }
+  }
+""")
+example_assignment = azure.policy.Assignment("exampleAssignment",
+    scope=example_resource_group.id,
+    policy_definition_id=example_definition.id,
+    description="Policy Assignment created via an Acceptance Test",
+    display_name="My Example Policy Assignment",
+    parameters="""{
+  "allowedLocations": {
+    "value": [ "West Europe" ]
+  }
+}
+""")
+example_remediation = azure.policy.Remediation("exampleRemediation",
+    scope=example_assignment.scope,
+    policy_assignment_id=example_assignment.id,
+    location_filters=["West Europe"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleDefinition = new azure.policy.Definition("exampleDefinition", {
+    policyType: "Custom",
+    mode: "All",
+    displayName: "my-policy-definition",
+    policyRule: `    {
+    "if": {
+      "not": {
+        "field": "location",
+        "in": "[parameters('allowedLocations')]"
+      }
+    },
+    "then": {
+      "effect": "audit"
+    }
+  }
+`,
+    parameters: `    {
+    "allowedLocations": {
+      "type": "Array",
+      "metadata": {
+        "description": "The list of allowed locations for resources.",
+        "displayName": "Allowed locations",
+        "strongType": "location"
+      }
+    }
+  }
+`,
+});
+const exampleAssignment = new azure.policy.Assignment("exampleAssignment", {
+    scope: exampleResourceGroup.id,
+    policyDefinitionId: exampleDefinition.id,
+    description: "Policy Assignment created via an Acceptance Test",
+    displayName: "My Example Policy Assignment",
+    parameters: `{
+  "allowedLocations": {
+    "value": [ "West Europe" ]
+  }
+}
+`,
+});
+const exampleRemediation = new azure.policy.Remediation("exampleRemediation", {
+    scope: exampleAssignment.scope,
+    policyAssignmentId: exampleAssignment.id,
+    locationFilters: ["West Europe"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Remediation Resource {#create}

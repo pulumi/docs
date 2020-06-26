@@ -46,14 +46,16 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatedns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := privatedns.LookupDnsZone(ctx, &privatedns.LookupDnsZoneArgs{
+		opt0 := "contoso-dns"
+		example, err := privatedns.GetDnsZone(ctx, &privatedns.GetDnsZoneArgs{
 			Name:              "contoso.internal",
-			ResourceGroupName: "contoso-dns",
+			ResourceGroupName: &opt0,
 		}, nil)
 		if err != nil {
 			return err

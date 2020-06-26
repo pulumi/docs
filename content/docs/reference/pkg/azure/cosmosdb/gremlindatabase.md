@@ -62,7 +62,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleGremlinDatabase, err := cosmosdb.NewGremlinDatabase(ctx, "exampleGremlinDatabase", &cosmosdb.GremlinDatabaseArgs{
+		_, err = cosmosdb.NewGremlinDatabase(ctx, "exampleGremlinDatabase", &cosmosdb.GremlinDatabaseArgs{
 			ResourceGroupName: pulumi.String(exampleAccount.ResourceGroupName),
 			AccountName:       pulumi.String(exampleAccount.Name),
 			Throughput:        pulumi.Int(400),

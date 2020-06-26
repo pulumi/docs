@@ -65,12 +65,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		test, err := netapp.LookupSnapshot(ctx, &netapp.LookupSnapshotArgs{
+		_, err := netapp.LookupSnapshot(ctx, &netapp.LookupSnapshotArgs{
 			ResourceGroupName: "acctestRG",
 			Name:              "acctestnetappsnapshot",
 			AccountName:       "acctestnetappaccount",

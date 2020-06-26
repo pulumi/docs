@@ -83,8 +83,8 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard"),
-			Tags: map[string]interface{}{
-				"source": "example",
+			Tags: pulumi.Map{
+				"source": pulumi.String("example"),
 			},
 		})
 		if err != nil {
@@ -97,7 +97,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleTopicAuthorizationRule, err := servicebus.NewTopicAuthorizationRule(ctx, "exampleTopicAuthorizationRule", &servicebus.TopicAuthorizationRuleArgs{
+		_, err = servicebus.NewTopicAuthorizationRule(ctx, "exampleTopicAuthorizationRule", &servicebus.TopicAuthorizationRuleArgs{
 			NamespaceName:     exampleNamespace.Name,
 			TopicName:         exampleTopic.Name,
 			ResourceGroupName: exampleResourceGroup.Name,

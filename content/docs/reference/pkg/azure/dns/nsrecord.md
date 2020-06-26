@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleNsRecord, err := dns.NewNsRecord(ctx, "exampleNsRecord", &dns.NsRecordArgs{
+		_, err = dns.NewNsRecord(ctx, "exampleNsRecord", &dns.NsRecordArgs{
 			ZoneName:          exampleZone.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Ttl:               pulumi.Int(300),
@@ -88,8 +88,8 @@ func main() {
 				pulumi.String("ns1.contoso.com"),
 				pulumi.String("ns2.contoso.com"),
 			},
-			Tags: map[string]interface{}{
-				"Environment": "Production",
+			Tags: pulumi.Map{
+				"Environment": pulumi.String("Production"),
 			},
 		})
 		if err != nil {

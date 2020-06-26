@@ -46,12 +46,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := network.LookupNetworkDdosProtectionPlan(ctx, &network.LookupNetworkDdosProtectionPlanArgs{
+		example, err := network.GetNetworkDdosProtectionPlan(ctx, &network.GetNetworkDdosProtectionPlanArgs{
 			Name:              azurerm_network_ddos_protection_plan.Example.Name,
 			ResourceGroupName: azurerm_network_ddos_protection_plan.Example.Resource_group_name,
 		}, nil)

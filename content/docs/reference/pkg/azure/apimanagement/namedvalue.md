@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleNamedValue, err := apimanagement.NewNamedValue(ctx, "exampleNamedValue", &apimanagement.NamedValueArgs{
+		_, err = apimanagement.NewNamedValue(ctx, "exampleNamedValue", &apimanagement.NamedValueArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			ApiManagementName: exampleService.Name,
 			DisplayName:       pulumi.String("ExampleProperty"),

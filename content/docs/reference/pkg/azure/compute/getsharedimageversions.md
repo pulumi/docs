@@ -44,12 +44,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := compute.LookupSharedImageVersions(ctx, &compute.LookupSharedImageVersionsArgs{
+		_, err := compute.GetSharedImageVersions(ctx, &compute.GetSharedImageVersionsArgs{
 			GalleryName:       "my-image-gallery",
 			ImageName:         "my-image",
 			ResourceGroupName: "example-resources",

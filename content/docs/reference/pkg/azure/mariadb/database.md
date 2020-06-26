@@ -90,7 +90,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleDatabase, err := mariadb.NewDatabase(ctx, "exampleDatabase", &mariadb.DatabaseArgs{
+		_, err = mariadb.NewDatabase(ctx, "exampleDatabase", &mariadb.DatabaseArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			ServerName:        exampleServer.Name,
 			Charset:           pulumi.String("utf8"),

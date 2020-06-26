@@ -46,14 +46,16 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "search-service"
 		example, err := dns.LookupZone(ctx, &dns.LookupZoneArgs{
 			Name:              "search-eventhubns",
-			ResourceGroupName: "search-service",
+			ResourceGroupName: &opt0,
 		}, nil)
 		if err != nil {
 			return err

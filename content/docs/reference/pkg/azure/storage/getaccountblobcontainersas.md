@@ -116,7 +116,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ctx.Export("sasUrlQueryString", example.ApplyT(func(example storage.LookupAccountBlobContainerSASResult) (string, error) {
+		ctx.Export("sasUrlQueryString", example.ApplyT(func(example storage.GetAccountBlobContainerSASResult) (string, error) {
 			return example.Sas, nil
 		}).(pulumi.StringOutput))
 		return nil

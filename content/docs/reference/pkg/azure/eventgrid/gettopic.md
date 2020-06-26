@@ -43,12 +43,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := eventgrid.LookupTopic(ctx, &eventgrid.LookupTopicArgs{
+		_, err := eventgrid.LookupTopic(ctx, &eventgrid.LookupTopicArgs{
 			Name:              "my-eventgrid-topic",
 			ResourceGroupName: "example-resources",
 		}, nil)

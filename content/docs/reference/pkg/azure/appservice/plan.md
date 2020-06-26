@@ -65,7 +65,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+		_, err = appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku: &appservice.PlanSkuArgs{
@@ -169,7 +169,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+		_, err = appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Kind:              pulumi.String("FunctionApp"),
@@ -277,7 +277,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+		_, err = appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Kind:              pulumi.String("Linux"),
@@ -388,7 +388,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
+		_, err = appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Kind:              pulumi.String("xenon"),

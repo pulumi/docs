@@ -75,7 +75,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePTRRecord, err := privatedns.NewPTRRecord(ctx, "examplePTRRecord", &privatedns.PTRRecordArgs{
+		_, err = privatedns.NewPTRRecord(ctx, "examplePTRRecord", &privatedns.PTRRecordArgs{
 			ZoneName:          exampleZone.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Ttl:               pulumi.Int(300),

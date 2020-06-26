@@ -67,7 +67,65 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/kusto"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US"),
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := kusto.NewCluster(ctx, "cluster", &kusto.ClusterArgs{
+			Location:          rg.Location,
+			ResourceGroupName: rg.Name,
+			Sku: &kusto.ClusterSkuArgs{
+				Name:     pulumi.String("Standard_D13_v2"),
+				Capacity: pulumi.Int(2),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kusto.NewDatabase(ctx, "database", &kusto.DatabaseArgs{
+			ResourceGroupName: rg.Name,
+			Location:          rg.Location,
+			ClusterName:       cluster.Name,
+			HotCachePeriod:    pulumi.String("P7D"),
+			SoftDeletePeriod:  pulumi.String("P31D"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kusto.NewDatabasePrincipal(ctx, "principal", &kusto.DatabasePrincipalArgs{
+			ResourceGroupName: rg.Name,
+			ClusterName:       cluster.Name,
+			DatabaseName:      pulumi.String(azurerm_kusto_database.Test.Name),
+			Role:              pulumi.String("Viewer"),
+			Type:              pulumi.String("User"),
+			ClientId:          pulumi.String(current.TenantId),
+			ObjectId:          pulumi.String(current.ClientId),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

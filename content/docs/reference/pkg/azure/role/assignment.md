@@ -42,7 +42,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := core.GetSubscription(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleClientConfig, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
+			Scope:              pulumi.String(primary.Id),
+			RoleDefinitionName: pulumi.String("Reader"),
+			PrincipalId:        pulumi.String(exampleClientConfig.ObjectId),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -124,7 +155,57 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := core.GetSubscription(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleClientConfig, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleRoleDefinition, err := authorization.NewRoleDefinition(ctx, "exampleRoleDefinition", &authorization.RoleDefinitionArgs{
+			RoleDefinitionId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+			Scope:            pulumi.String(primary.Id),
+			Permissions: authorization.RoleDefinitionPermissionArray{
+				&authorization.RoleDefinitionPermissionArgs{
+					Actions: pulumi.StringArray{
+						pulumi.String("Microsoft.Resources/subscriptions/resourceGroups/read"),
+					},
+					NotActions: []interface{}{},
+				},
+			},
+			AssignableScopes: pulumi.StringArray{
+				pulumi.String(primary.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
+			Name:             pulumi.String("00000000-0000-0000-0000-000000000000"),
+			Scope:            pulumi.String(primary.Id),
+			RoleDefinitionId: exampleRoleDefinition.ID(),
+			PrincipalId:      pulumi.String(exampleClientConfig.ObjectId),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -225,7 +306,57 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := core.GetSubscription(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleClientConfig, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleRoleDefinition, err := authorization.NewRoleDefinition(ctx, "exampleRoleDefinition", &authorization.RoleDefinitionArgs{
+			RoleDefinitionId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+			Scope:            pulumi.String(primary.Id),
+			Permissions: authorization.RoleDefinitionPermissionArray{
+				&authorization.RoleDefinitionPermissionArgs{
+					Actions: pulumi.StringArray{
+						pulumi.String("Microsoft.Resources/subscriptions/resourceGroups/read"),
+					},
+					NotActions: []interface{}{},
+				},
+			},
+			AssignableScopes: pulumi.StringArray{
+				pulumi.String(primary.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
+			Name:             pulumi.String("00000000-0000-0000-0000-000000000000"),
+			Scope:            pulumi.String(primary.Id),
+			RoleDefinitionId: exampleRoleDefinition.ID(),
+			PrincipalId:      pulumi.String(exampleClientConfig.ClientId),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -327,7 +458,62 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/management"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := core.GetSubscription(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleClientConfig, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err := management.LookupGroup(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleRoleDefinition, err := authorization.NewRoleDefinition(ctx, "exampleRoleDefinition", &authorization.RoleDefinitionArgs{
+			RoleDefinitionId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+			Scope:            pulumi.String(primary.Id),
+			Permissions: authorization.RoleDefinitionPermissionArray{
+				&authorization.RoleDefinitionPermissionArgs{
+					Actions: pulumi.StringArray{
+						pulumi.String("Microsoft.Resources/subscriptions/resourceGroups/read"),
+					},
+					NotActions: []interface{}{},
+				},
+			},
+			AssignableScopes: pulumi.StringArray{
+				pulumi.String(primary.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
+			Name:             pulumi.String("00000000-0000-0000-0000-000000000000"),
+			Scope:            pulumi.String(data.Azurerm_management_group.Primary.Id),
+			RoleDefinitionId: exampleRoleDefinition.ID(),
+			PrincipalId:      pulumi.String(exampleClientConfig.ClientId),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

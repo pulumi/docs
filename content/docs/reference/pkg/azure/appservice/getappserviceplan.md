@@ -46,12 +46,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := appservice.LookupAppServicePlan(ctx, &appservice.LookupAppServicePlanArgs{
+		example, err := appservice.GetAppServicePlan(ctx, &appservice.GetAppServicePlanArgs{
 			Name:              "search-app-service-plan",
 			ResourceGroupName: "search-service",
 		}, nil)

@@ -77,14 +77,14 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard"),
-			Tags: map[string]interface{}{
-				"source": "example",
+			Tags: pulumi.Map{
+				"source": pulumi.String("example"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		exampleTopic, err := servicebus.NewTopic(ctx, "exampleTopic", &servicebus.TopicArgs{
+		_, err = servicebus.NewTopic(ctx, "exampleTopic", &servicebus.TopicArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			NamespaceName:      exampleNamespace.Name,
 			EnablePartitioning: pulumi.Bool(true),

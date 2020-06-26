@@ -14,6 +14,183 @@ Manages a policy rule definition on a management group or your provider subscrip
 
 Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policy = new Azure.Policy.Definition("policy", new Azure.Policy.DefinitionArgs
+        {
+            DisplayName = "acceptance test policy definition",
+            Metadata = @"    {
+    ""category"": ""General""
+    }
+  
+
+",
+            Mode = "Indexed",
+            Parameters = @"	{
+    ""allowedLocations"": {
+      ""type"": ""Array"",
+      ""metadata"": {
+        ""description"": ""The list of allowed locations for resources."",
+        ""displayName"": ""Allowed locations"",
+        ""strongType"": ""location""
+      }
+    }
+  }
+
+",
+            PolicyRule = @"	{
+    ""if"": {
+      ""not"": {
+        ""field"": ""location"",
+        ""in"": ""[parameters('allowedLocations')]""
+      }
+    },
+    ""then"": {
+      ""effect"": ""audit""
+    }
+  }
+
+",
+            PolicyType = "Custom",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = policy.NewDefinition(ctx, "policy", &policy.DefinitionArgs{
+			DisplayName: pulumi.String("acceptance test policy definition"),
+			Metadata:    pulumi.String(fmt.Sprintf("%v%v%v%v%v", "    {\n", "    \"category\": \"General\"\n", "    }\n", "  \n", "\n")),
+			Mode:        pulumi.String("Indexed"),
+			Parameters: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "	{\n", "    \"allowedLocations\": {\n", "      \"type\": \"Array\",\n", "      \"metadata\": {\n", "        \"description\": \"The list of allowed locations for resources.\",\n", "        \"displayName\": \"Allowed locations\",\n", "        \"strongType\": \"location\"\n", "      }\n", "    }\n", "  }\n", "\n")),
+			PolicyRule: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "	{\n", "    \"if\": {\n", "      \"not\": {\n", "        \"field\": \"location\",\n", "        \"in\": \"[parameters('allowedLocations')]\"\n", "      }\n", "    },\n", "    \"then\": {\n", "      \"effect\": \"audit\"\n", "    }\n", "  }\n", "\n")),
+			PolicyType: pulumi.String("Custom"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+policy = azure.policy.Definition("policy",
+    display_name="acceptance test policy definition",
+    metadata="""    {
+    "category": "General"
+    }
+  
+
+""",
+    mode="Indexed",
+    parameters="""	{
+    "allowedLocations": {
+      "type": "Array",
+      "metadata": {
+        "description": "The list of allowed locations for resources.",
+        "displayName": "Allowed locations",
+        "strongType": "location"
+      }
+    }
+  }
+
+""",
+    policy_rule="""	{
+    "if": {
+      "not": {
+        "field": "location",
+        "in": "[parameters('allowedLocations')]"
+      }
+    },
+    "then": {
+      "effect": "audit"
+    }
+  }
+
+""",
+    policy_type="Custom")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const policy = new azure.policy.Definition("policy", {
+    displayName: "acceptance test policy definition",
+    metadata: `    {
+    "category": "General"
+    }
+  
+`,
+    mode: "Indexed",
+    parameters: `	{
+    "allowedLocations": {
+      "type": "Array",
+      "metadata": {
+        "description": "The list of allowed locations for resources.",
+        "displayName": "Allowed locations",
+        "strongType": "location"
+      }
+    }
+  }
+`,
+    policyRule: `	{
+    "if": {
+      "not": {
+        "field": "location",
+        "in": "[parameters('allowedLocations')]"
+      }
+    },
+    "then": {
+      "effect": "audit"
+    }
+  }
+`,
+    policyType: "Custom",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Definition Resource {#create}

@@ -64,11 +64,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePlacementGroup, err := proximity.NewPlacementGroup(ctx, "examplePlacementGroup", &proximity.PlacementGroupArgs{
+		_, err = proximity.NewPlacementGroup(ctx, "examplePlacementGroup", &proximity.PlacementGroupArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
-			Tags: map[string]interface{}{
-				"environment": "Production",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("Production"),
 			},
 		})
 		if err != nil {

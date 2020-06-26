@@ -88,7 +88,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		webhook, err := containerservice.NewRegistryWebhook(ctx, "webhook", &containerservice.RegistryWebhookArgs{
+		_, err = containerservice.NewRegistryWebhook(ctx, "webhook", &containerservice.RegistryWebhookArgs{
 			ResourceGroupName: rg.Name,
 			RegistryName:      acr.Name,
 			Location:          rg.Location,
@@ -98,8 +98,8 @@ func main() {
 			Actions: pulumi.StringArray{
 				pulumi.String("push"),
 			},
-			CustomHeaders: map[string]interface{}{
-				"Content-Type": "application/json",
+			CustomHeaders: pulumi.Map{
+				"Content-Type": pulumi.String("application/json"),
 			},
 		})
 		if err != nil {

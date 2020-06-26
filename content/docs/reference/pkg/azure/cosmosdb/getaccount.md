@@ -46,12 +46,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := cosmosdb.LookupAccount(ctx, &cosmosdb.LookupAccountArgs{
+		_, err := cosmosdb.LookupAccount(ctx, &cosmosdb.LookupAccountArgs{
 			Name:              "tfex-cosmosdb-account",
 			ResourceGroupName: "tfex-cosmosdb-account-rg",
 		}, nil)

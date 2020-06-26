@@ -43,13 +43,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := network.LookupPublicIPs(ctx, &network.LookupPublicIPsArgs{
-			Attached:          false,
+		opt0 := false
+		_, err := network.GetPublicIPs(ctx, &network.GetPublicIPsArgs{
+			Attached:          &opt0,
 			ResourceGroupName: "pip-test",
 		}, nil)
 		if err != nil {

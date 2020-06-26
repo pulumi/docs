@@ -73,7 +73,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleFactory, err := datafactory.NewFactory(ctx, "exampleFactory", &datafactory.FactoryArgs{
+		_, err = datafactory.NewFactory(ctx, "exampleFactory", &datafactory.FactoryArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 		})
@@ -87,7 +87,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		testTriggerSchedule, err := datafactory.NewTriggerSchedule(ctx, "testTriggerSchedule", &datafactory.TriggerScheduleArgs{
+		_, err = datafactory.NewTriggerSchedule(ctx, "testTriggerSchedule", &datafactory.TriggerScheduleArgs{
 			DataFactoryName:   pulumi.String(azurerm_data_factory.Test.Name),
 			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
 			PipelineName:      testPipeline.Name,

@@ -15,11 +15,292 @@ Manages a template deployment of resources
 > **Note on ARM Template Deployments:** Due to the way the underlying Azure API is designed, this provider can only manage the deployment of the ARM Template - and not any resources which are created by it.
 This means that when deleting the `azure.core.TemplateDeployment` resource, this provider will only remove the reference to the deployment, whilst leaving any resources created by that ARM Template Deployment.
 One workaround for this is to use a unique Resource Group for each ARM Template Deployment, which means deleting the Resource Group would contain any resources created within it - however this isn't ideal. [More information](https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete).
-
 ## Note
 
 This provider does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. [More information](https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleTemplateDeployment = new Azure.Core.TemplateDeployment("exampleTemplateDeployment", new Azure.Core.TemplateDeploymentArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            TemplateBody = @"{
+  ""$schema"": ""https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#"",
+  ""contentVersion"": ""1.0.0.0"",
+  ""parameters"": {
+    ""storageAccountType"": {
+      ""type"": ""string"",
+      ""defaultValue"": ""Standard_LRS"",
+      ""allowedValues"": [
+        ""Standard_LRS"",
+        ""Standard_GRS"",
+        ""Standard_ZRS""
+      ],
+      ""metadata"": {
+        ""description"": ""Storage Account type""
+      }
+    }
+  },
+  ""variables"": {
+    ""location"": ""[resourceGroup().location]"",
+    ""storageAccountName"": ""[concat(uniquestring(resourceGroup().id), 'storage')]"",
+    ""publicIPAddressName"": ""[concat('myPublicIp', uniquestring(resourceGroup().id))]"",
+    ""publicIPAddressType"": ""Dynamic"",
+    ""apiVersion"": ""2015-06-15"",
+    ""dnsLabelPrefix"": ""example-acctest""
+  },
+  ""resources"": [
+    {
+      ""type"": ""Microsoft.Storage/storageAccounts"",
+      ""name"": ""[variables('storageAccountName')]"",
+      ""apiVersion"": ""[variables('apiVersion')]"",
+      ""location"": ""[variables('location')]"",
+      ""properties"": {
+        ""accountType"": ""[parameters('storageAccountType')]""
+      }
+    },
+    {
+      ""type"": ""Microsoft.Network/publicIPAddresses"",
+      ""apiVersion"": ""[variables('apiVersion')]"",
+      ""name"": ""[variables('publicIPAddressName')]"",
+      ""location"": ""[variables('location')]"",
+      ""properties"": {
+        ""publicIPAllocationMethod"": ""[variables('publicIPAddressType')]"",
+        ""dnsSettings"": {
+          ""domainNameLabel"": ""[variables('dnsLabelPrefix')]""
+        }
+      }
+    }
+  ],
+  ""outputs"": {
+    ""storageAccountName"": {
+      ""type"": ""string"",
+      ""value"": ""[variables('storageAccountName')]""
+    }
+  }
+}
+",
+            Parameters = 
+            {
+                { "storageAccountType", "Standard_GRS" },
+            },
+            DeploymentMode = "Incremental",
+        });
+        this.StorageAccountName = exampleTemplateDeployment.Outputs.Apply(outputs => outputs.StorageAccountName);
+    }
+
+    [Output("storageAccountName")]
+    public Output<string> StorageAccountName { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleTemplateDeployment, err := core.NewTemplateDeployment(ctx, "exampleTemplateDeployment", &core.TemplateDeploymentArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			TemplateBody:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"", "$", "schema\": \"https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#\",\n", "  \"contentVersion\": \"1.0.0.0\",\n", "  \"parameters\": {\n", "    \"storageAccountType\": {\n", "      \"type\": \"string\",\n", "      \"defaultValue\": \"Standard_LRS\",\n", "      \"allowedValues\": [\n", "        \"Standard_LRS\",\n", "        \"Standard_GRS\",\n", "        \"Standard_ZRS\"\n", "      ],\n", "      \"metadata\": {\n", "        \"description\": \"Storage Account type\"\n", "      }\n", "    }\n", "  },\n", "  \"variables\": {\n", "    \"location\": \"[resourceGroup().location]\",\n", "    \"storageAccountName\": \"[concat(uniquestring(resourceGroup().id), 'storage')]\",\n", "    \"publicIPAddressName\": \"[concat('myPublicIp', uniquestring(resourceGroup().id))]\",\n", "    \"publicIPAddressType\": \"Dynamic\",\n", "    \"apiVersion\": \"2015-06-15\",\n", "    \"dnsLabelPrefix\": \"example-acctest\"\n", "  },\n", "  \"resources\": [\n", "    {\n", "      \"type\": \"Microsoft.Storage/storageAccounts\",\n", "      \"name\": \"[variables('storageAccountName')]\",\n", "      \"apiVersion\": \"[variables('apiVersion')]\",\n", "      \"location\": \"[variables('location')]\",\n", "      \"properties\": {\n", "        \"accountType\": \"[parameters('storageAccountType')]\"\n", "      }\n", "    },\n", "    {\n", "      \"type\": \"Microsoft.Network/publicIPAddresses\",\n", "      \"apiVersion\": \"[variables('apiVersion')]\",\n", "      \"name\": \"[variables('publicIPAddressName')]\",\n", "      \"location\": \"[variables('location')]\",\n", "      \"properties\": {\n", "        \"publicIPAllocationMethod\": \"[variables('publicIPAddressType')]\",\n", "        \"dnsSettings\": {\n", "          \"domainNameLabel\": \"[variables('dnsLabelPrefix')]\"\n", "        }\n", "      }\n", "    }\n", "  ],\n", "  \"outputs\": {\n", "    \"storageAccountName\": {\n", "      \"type\": \"string\",\n", "      \"value\": \"[variables('storageAccountName')]\"\n", "    }\n", "  }\n", "}\n")),
+			Parameters: pulumi.Map{
+				"storageAccountType": pulumi.String("Standard_GRS"),
+			},
+			DeploymentMode: pulumi.String("Incremental"),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("storageAccountName", exampleTemplateDeployment.Outputs.ApplyT(func(outputs map[string]string) (string, error) {
+			return outputs.StorageAccountName, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_template_deployment = azure.core.TemplateDeployment("exampleTemplateDeployment",
+    resource_group_name=example_resource_group.name,
+    template_body="""{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_GRS",
+        "Standard_ZRS"
+      ],
+      "metadata": {
+        "description": "Storage Account type"
+      }
+    }
+  },
+  "variables": {
+    "location": "[resourceGroup().location]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'storage')]",
+    "publicIPAddressName": "[concat('myPublicIp', uniquestring(resourceGroup().id))]",
+    "publicIPAddressType": "Dynamic",
+    "apiVersion": "2015-06-15",
+    "dnsLabelPrefix": "example-acctest"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "name": "[variables('storageAccountName')]",
+      "apiVersion": "[variables('apiVersion')]",
+      "location": "[variables('location')]",
+      "properties": {
+        "accountType": "[parameters('storageAccountType')]"
+      }
+    },
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "[variables('apiVersion')]",
+      "name": "[variables('publicIPAddressName')]",
+      "location": "[variables('location')]",
+      "properties": {
+        "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
+        "dnsSettings": {
+          "domainNameLabel": "[variables('dnsLabelPrefix')]"
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "storageAccountName": {
+      "type": "string",
+      "value": "[variables('storageAccountName')]"
+    }
+  }
+}
+""",
+    parameters={
+        "storageAccountType": "Standard_GRS",
+    },
+    deployment_mode="Incremental")
+pulumi.export("storageAccountName", example_template_deployment.outputs["storageAccountName"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleTemplateDeployment = new azure.core.TemplateDeployment("exampleTemplateDeployment", {
+    resourceGroupName: exampleResourceGroup.name,
+    templateBody: `{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_GRS",
+        "Standard_ZRS"
+      ],
+      "metadata": {
+        "description": "Storage Account type"
+      }
+    }
+  },
+  "variables": {
+    "location": "[resourceGroup().location]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'storage')]",
+    "publicIPAddressName": "[concat('myPublicIp', uniquestring(resourceGroup().id))]",
+    "publicIPAddressType": "Dynamic",
+    "apiVersion": "2015-06-15",
+    "dnsLabelPrefix": "example-acctest"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "name": "[variables('storageAccountName')]",
+      "apiVersion": "[variables('apiVersion')]",
+      "location": "[variables('location')]",
+      "properties": {
+        "accountType": "[parameters('storageAccountType')]"
+      }
+    },
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "[variables('apiVersion')]",
+      "name": "[variables('publicIPAddressName')]",
+      "location": "[variables('location')]",
+      "properties": {
+        "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
+        "dnsSettings": {
+          "domainNameLabel": "[variables('dnsLabelPrefix')]"
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "storageAccountName": {
+      "type": "string",
+      "value": "[variables('storageAccountName')]"
+    }
+  }
+}
+`,
+    parameters: {
+        storageAccountType: "Standard_GRS",
+    },
+    deploymentMode: "Incremental",
+});
+export const storageAccountName = exampleTemplateDeployment.outputs.storageAccountName;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TemplateDeployment Resource {#create}

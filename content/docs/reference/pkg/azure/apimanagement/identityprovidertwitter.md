@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleIdentityProviderTwitter, err := apimanagement.NewIdentityProviderTwitter(ctx, "exampleIdentityProviderTwitter", &apimanagement.IdentityProviderTwitterArgs{
+		_, err = apimanagement.NewIdentityProviderTwitter(ctx, "exampleIdentityProviderTwitter", &apimanagement.IdentityProviderTwitterArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			ApiManagementName: exampleService.Name,
 			ApiKey:            pulumi.String("00000000000000000000000000000000"),

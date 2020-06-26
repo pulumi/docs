@@ -47,12 +47,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := containerservice.LookupClusterNodePool(ctx, &containerservice.LookupClusterNodePoolArgs{
+		example, err := containerservice.GetClusterNodePool(ctx, &containerservice.GetClusterNodePoolArgs{
 			Name:                  "existing",
 			KubernetesClusterName: "existing-cluster",
 			ResourceGroupName:     "existing-resource-group",

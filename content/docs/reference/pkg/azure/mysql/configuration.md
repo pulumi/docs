@@ -16,6 +16,168 @@ Sets a MySQL Configuration value on a MySQL Server.
 
 > **Note:** Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleServer = new Azure.MySql.Server("exampleServer", new Azure.MySql.ServerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AdministratorLogin = "mysqladminun",
+            AdministratorLoginPassword = "H@Sh1CoR3!",
+            SkuName = "B_Gen5_2",
+            StorageMb = 5120,
+            Version = "5.7",
+            AutoGrowEnabled = true,
+            BackupRetentionDays = 7,
+            GeoRedundantBackupEnabled = true,
+            InfrastructureEncryptionEnabled = true,
+            PublicNetworkAccessEnabled = false,
+            SslEnforcementEnabled = true,
+            SslMinimalTlsVersionEnforced = "TLS1_2",
+        });
+        var exampleConfiguration = new Azure.MySql.Configuration("exampleConfiguration", new Azure.MySql.ConfigurationArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            Value = "600",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mysql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleServer, err := mysql.NewServer(ctx, "exampleServer", &mysql.ServerArgs{
+			Location:                        exampleResourceGroup.Location,
+			ResourceGroupName:               exampleResourceGroup.Name,
+			AdministratorLogin:              pulumi.String("mysqladminun"),
+			AdministratorLoginPassword:      pulumi.String("H@Sh1CoR3!"),
+			SkuName:                         pulumi.String("B_Gen5_2"),
+			StorageMb:                       pulumi.Int(5120),
+			Version:                         pulumi.String("5.7"),
+			AutoGrowEnabled:                 pulumi.Bool(true),
+			BackupRetentionDays:             pulumi.Int(7),
+			GeoRedundantBackupEnabled:       pulumi.Bool(true),
+			InfrastructureEncryptionEnabled: pulumi.Bool(true),
+			PublicNetworkAccessEnabled:      pulumi.Bool(false),
+			SslEnforcementEnabled:           pulumi.Bool(true),
+			SslMinimalTlsVersionEnforced:    pulumi.String("TLS1_2"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = mysql.NewConfiguration(ctx, "exampleConfiguration", &mysql.ConfigurationArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			ServerName:        exampleServer.Name,
+			Value:             pulumi.String("600"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.mysql.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    administrator_login="mysqladminun",
+    administrator_login_password="H@Sh1CoR3!",
+    sku_name="B_Gen5_2",
+    storage_mb=5120,
+    version="5.7",
+    auto_grow_enabled=True,
+    backup_retention_days=7,
+    geo_redundant_backup_enabled=True,
+    infrastructure_encryption_enabled=True,
+    public_network_access_enabled=False,
+    ssl_enforcement_enabled=True,
+    ssl_minimal_tls_version_enforced="TLS1_2")
+example_configuration = azure.mysql.Configuration("exampleConfiguration",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    value="600")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.mysql.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    administratorLogin: "mysqladminun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    skuName: "B_Gen5_2",
+    storageMb: 5120,
+    version: "5.7",
+    autoGrowEnabled: true,
+    backupRetentionDays: 7,
+    geoRedundantBackupEnabled: true,
+    infrastructureEncryptionEnabled: true,
+    publicNetworkAccessEnabled: false,
+    sslEnforcementEnabled: true,
+    sslMinimalTlsVersionEnforced: "TLS1_2",
+});
+const exampleConfiguration = new azure.mysql.Configuration("exampleConfiguration", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    value: "600",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Configuration Resource {#create}

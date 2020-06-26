@@ -79,14 +79,14 @@ func main() {
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Basic"),
 			Capacity:          pulumi.Int(2),
-			Tags: map[string]interface{}{
-				"environment": "Production",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("Production"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		exampleEventHubNamespaceAuthorizationRule, err := eventhub.NewEventHubNamespaceAuthorizationRule(ctx, "exampleEventHubNamespaceAuthorizationRule", &eventhub.EventHubNamespaceAuthorizationRuleArgs{
+		_, err = eventhub.NewEventHubNamespaceAuthorizationRule(ctx, "exampleEventHubNamespaceAuthorizationRule", &eventhub.EventHubNamespaceAuthorizationRuleArgs{
 			NamespaceName:     exampleEventHubNamespace.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Listen:            pulumi.Bool(true),

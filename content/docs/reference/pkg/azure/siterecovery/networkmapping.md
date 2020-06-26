@@ -88,7 +88,91 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primaryResourceGroup, err := core.NewResourceGroup(ctx, "primaryResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West US"),
+		})
+		if err != nil {
+			return err
+		}
+		secondaryResourceGroup, err := core.NewResourceGroup(ctx, "secondaryResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US"),
+		})
+		if err != nil {
+			return err
+		}
+		vault, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Location:          secondaryResourceGroup.Location,
+			ResourceGroupName: secondaryResourceGroup.Name,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		primaryFabric, err := siterecovery.NewFabric(ctx, "primaryFabric", &siterecovery.FabricArgs{
+			ResourceGroupName: secondaryResourceGroup.Name,
+			RecoveryVaultName: vault.Name,
+			Location:          primaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = siterecovery.NewFabric(ctx, "secondaryFabric", &siterecovery.FabricArgs{
+			ResourceGroupName: secondaryResourceGroup.Name,
+			RecoveryVaultName: vault.Name,
+			Location:          secondaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		primaryVirtualNetwork, err := network.NewVirtualNetwork(ctx, "primaryVirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: primaryResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("192.168.1.0/24"),
+			},
+			Location: primaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		secondaryVirtualNetwork, err := network.NewVirtualNetwork(ctx, "secondaryVirtualNetwork", &network.VirtualNetworkArgs{
+			ResourceGroupName: secondaryResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("192.168.2.0/24"),
+			},
+			Location: secondaryResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = siterecovery.NewNetworkMapping(ctx, "recovery-mapping", &siterecovery.NetworkMappingArgs{
+			ResourceGroupName:        secondaryResourceGroup.Name,
+			RecoveryVaultName:        vault.Name,
+			SourceRecoveryFabricName: pulumi.String("primary-fabric"),
+			TargetRecoveryFabricName: pulumi.String("secondary-fabric"),
+			SourceNetworkId:          primaryVirtualNetwork.ID(),
+			TargetNetworkId:          secondaryVirtualNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

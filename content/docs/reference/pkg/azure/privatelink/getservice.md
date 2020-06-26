@@ -48,12 +48,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatelink"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := privatelink.LookupService(ctx, &privatelink.LookupServiceArgs{
+		example, err := privatelink.GetService(ctx, &privatelink.GetServiceArgs{
 			Name:              "myPrivateLinkService",
 			ResourceGroupName: "PrivateLinkServiceRG",
 		}, nil)

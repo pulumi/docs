@@ -55,7 +55,44 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		primary, err := core.GetSubscription(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = authorization.NewRoleDefinition(ctx, "example", &authorization.RoleDefinitionArgs{
+			Scope:       pulumi.String(primary.Id),
+			Description: pulumi.String("This is a custom role created"),
+			Permissions: authorization.RoleDefinitionPermissionArray{
+				&authorization.RoleDefinitionPermissionArgs{
+					Actions: pulumi.StringArray{
+						pulumi.String("*"),
+					},
+					NotActions: []interface{}{},
+				},
+			},
+			AssignableScopes: pulumi.StringArray{
+				pulumi.String(primary.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

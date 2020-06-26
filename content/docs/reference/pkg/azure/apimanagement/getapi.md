@@ -48,6 +48,7 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -511,6 +512,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="subscriptionrequired_csharp">
+<a href="#subscriptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span> 
@@ -686,6 +698,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getapisubscriptionkeyparametername">[]Get<wbr>Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="subscriptionrequired_go">
+<a href="#subscriptionrequired_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -869,6 +892,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="subscriptionrequired_nodejs">
+<a href="#subscriptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
@@ -1044,6 +1078,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getapisubscriptionkeyparametername">List[Get<wbr>Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="subscription_required_python">
+<a href="#subscription_required_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Should this API require a subscription key?
 {{% /md %}}</dd>
 
     <dt class="property-"

@@ -87,7 +87,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleDatasetSqlServerTable, err := datafactory.NewDatasetSqlServerTable(ctx, "exampleDatasetSqlServerTable", &datafactory.DatasetSqlServerTableArgs{
+		_, err = datafactory.NewDatasetSqlServerTable(ctx, "exampleDatasetSqlServerTable", &datafactory.DatasetSqlServerTableArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			DataFactoryName:   exampleFactory.Name,
 			LinkedServiceName: exampleLinkedServiceSqlServer.Name,

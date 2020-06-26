@@ -60,7 +60,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleWorkflow, err := logicapps.NewWorkflow(ctx, "exampleWorkflow", &logicapps.WorkflowArgs{
+		_, err = logicapps.NewWorkflow(ctx, "exampleWorkflow", &logicapps.WorkflowArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 		})

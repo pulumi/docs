@@ -72,7 +72,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePipeline, err := datafactory.NewPipeline(ctx, "examplePipeline", &datafactory.PipelineArgs{
+		_, err = datafactory.NewPipeline(ctx, "examplePipeline", &datafactory.PipelineArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			DataFactoryName:   exampleFactory.Name,
 		})
@@ -116,6 +116,134 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
 const examplePipeline = new azure.datafactory.Pipeline("examplePipeline", {
     resourceGroupName: exampleResourceGroup.name,
     dataFactoryName: exampleFactory.name,
+});
+```
+
+{{% /example %}}
+
+### With Activities
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Azure.DataFactory.Pipeline("test", new Azure.DataFactory.PipelineArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Test.Name,
+            DataFactoryName = azurerm_data_factory.Test.Name,
+            Variables = 
+            {
+                { "bob", "item1" },
+            },
+            ActivitiesJson = @"[
+	{
+		""name"": ""Append variable1"",
+		""type"": ""AppendVariable"",
+		""dependsOn"": [],
+		""userProperties"": [],
+		""typeProperties"": {
+			""variableName"": ""bob"",
+			""value"": ""something""
+		}
+	}
+]
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = datafactory.NewPipeline(ctx, "test", &datafactory.PipelineArgs{
+			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+			DataFactoryName:   pulumi.String(azurerm_data_factory.Test.Name),
+			Variables: pulumi.Map{
+				"bob": pulumi.String("item1"),
+			},
+			ActivitiesJson: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "[\n", "	{\n", "		\"name\": \"Append variable1\",\n", "		\"type\": \"AppendVariable\",\n", "		\"dependsOn\": [],\n", "		\"userProperties\": [],\n", "		\"typeProperties\": {\n", "			\"variableName\": \"bob\",\n", "			\"value\": \"something\"\n", "		}\n", "	}\n", "]\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+test = azure.datafactory.Pipeline("test",
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    data_factory_name=azurerm_data_factory["test"]["name"],
+    variables={
+        "bob": "item1",
+    },
+    activities_json="""[
+	{
+		"name": "Append variable1",
+		"type": "AppendVariable",
+		"dependsOn": [],
+		"userProperties": [],
+		"typeProperties": {
+			"variableName": "bob",
+			"value": "something"
+		}
+	}
+]
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const test = new azure.datafactory.Pipeline("test", {
+    resourceGroupName: azurerm_resource_group.test.name,
+    dataFactoryName: azurerm_data_factory.test.name,
+    variables: {
+        bob: "item1",
+    },
+    activitiesJson: `[
+	{
+		"name": "Append variable1",
+		"type": "AppendVariable",
+		"dependsOn": [],
+		"userProperties": [],
+		"typeProperties": {
+			"variableName": "bob",
+			"value": "something"
+		}
+	}
+]
+`,
 });
 ```
 

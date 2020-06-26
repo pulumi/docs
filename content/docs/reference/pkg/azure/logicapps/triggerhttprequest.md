@@ -12,6 +12,142 @@ meta_desc: "Explore the TriggerHttpRequest resource of the logicapps module, inc
 
 Manages a HTTP Request Trigger within a Logic App Workflow
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var exampleWorkflow = new Azure.LogicApps.Workflow("exampleWorkflow", new Azure.LogicApps.WorkflowArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleTriggerHttpRequest = new Azure.LogicApps.TriggerHttpRequest("exampleTriggerHttpRequest", new Azure.LogicApps.TriggerHttpRequestArgs
+        {
+            LogicAppId = exampleWorkflow.Id,
+            Schema = @"{
+    ""type"": ""object"",
+    ""properties"": {
+        ""hello"": {
+            ""type"": ""string""
+        }
+    }
+}
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/logicapps"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("East US"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleWorkflow, err := logicapps.NewWorkflow(ctx, "exampleWorkflow", &logicapps.WorkflowArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = logicapps.NewTriggerHttpRequest(ctx, "exampleTriggerHttpRequest", &logicapps.TriggerHttpRequestArgs{
+			LogicAppId: exampleWorkflow.ID(),
+			Schema:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "{\n", "    \"type\": \"object\",\n", "    \"properties\": {\n", "        \"hello\": {\n", "            \"type\": \"string\"\n", "        }\n", "    }\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="East US")
+example_workflow = azure.logicapps.Workflow("exampleWorkflow",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_trigger_http_request = azure.logicapps.TriggerHttpRequest("exampleTriggerHttpRequest",
+    logic_app_id=example_workflow.id,
+    schema="""{
+    "type": "object",
+    "properties": {
+        "hello": {
+            "type": "string"
+        }
+    }
+}
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "East US"});
+const exampleWorkflow = new azure.logicapps.Workflow("exampleWorkflow", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleTriggerHttpRequest = new azure.logicapps.TriggerHttpRequest("exampleTriggerHttpRequest", {
+    logicAppId: exampleWorkflow.id,
+    schema: `{
+    "type": "object",
+    "properties": {
+        "hello": {
+            "type": "string"
+        }
+    }
+}
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TriggerHttpRequest Resource {#create}

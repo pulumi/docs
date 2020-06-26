@@ -43,12 +43,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		vault, err := recoveryservices.LookupVault(ctx, &recoveryservices.LookupVaultArgs{
+		_, err := recoveryservices.LookupVault(ctx, &recoveryservices.LookupVaultArgs{
 			Name:              "tfex-recovery_vault",
 			ResourceGroupName: "tfex-resource_group",
 		}, nil)

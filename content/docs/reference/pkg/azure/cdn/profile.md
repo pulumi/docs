@@ -66,13 +66,13 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleProfile, err := cdn.NewProfile(ctx, "exampleProfile", &cdn.ProfileArgs{
+		_, err = cdn.NewProfile(ctx, "exampleProfile", &cdn.ProfileArgs{
 			Location:          pulumi.String("West US"),
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard_Verizon"),
-			Tags: map[string]interface{}{
-				"environment": "Production",
-				"cost_center": "MSFT",
+			Tags: pulumi.Map{
+				"environment": pulumi.String("Production"),
+				"cost_center": pulumi.String("MSFT"),
 			},
 		})
 		if err != nil {

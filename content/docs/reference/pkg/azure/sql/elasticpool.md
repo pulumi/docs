@@ -86,7 +86,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleElasticPool, err := sql.NewElasticPool(ctx, "exampleElasticPool", &sql.ElasticPoolArgs{
+		_, err = sql.NewElasticPool(ctx, "exampleElasticPool", &sql.ElasticPoolArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
 			ServerName:        exampleSqlServer.Name,

@@ -87,7 +87,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleActionRuleSuppression, err := monitoring.NewActionRuleSuppression(ctx, "exampleActionRuleSuppression", &monitoring.ActionRuleSuppressionArgs{
+		_, err = monitoring.NewActionRuleSuppression(ctx, "exampleActionRuleSuppression", &monitoring.ActionRuleSuppressionArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Scope: &monitoring.ActionRuleSuppressionScopeArgs{
 				Type: pulumi.String("ResourceGroup"),
@@ -108,8 +108,8 @@ func main() {
 					},
 				},
 			},
-			Tags: map[string]interface{}{
-				"foo": "bar",
+			Tags: pulumi.Map{
+				"foo": pulumi.String("bar"),
 			},
 		})
 		if err != nil {

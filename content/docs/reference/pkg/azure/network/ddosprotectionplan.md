@@ -62,7 +62,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleDdosProtectionPlan, err := network.NewDdosProtectionPlan(ctx, "exampleDdosProtectionPlan", &network.DdosProtectionPlanArgs{
+		_, err = network.NewDdosProtectionPlan(ctx, "exampleDdosProtectionPlan", &network.DdosProtectionPlanArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 		})

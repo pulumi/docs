@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAnalyticsAccount, err := datalake.NewAnalyticsAccount(ctx, "exampleAnalyticsAccount", &datalake.AnalyticsAccountArgs{
+		_, err = datalake.NewAnalyticsAccount(ctx, "exampleAnalyticsAccount", &datalake.AnalyticsAccountArgs{
 			ResourceGroupName:       exampleResourceGroup.Name,
 			Location:                exampleResourceGroup.Location,
 			DefaultStoreAccountName: exampleStore.Name,
@@ -88,7 +88,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAnalyticsFirewallRule, err := datalake.NewAnalyticsFirewallRule(ctx, "exampleAnalyticsFirewallRule", &datalake.AnalyticsFirewallRuleArgs{
+		_, err = datalake.NewAnalyticsFirewallRule(ctx, "exampleAnalyticsFirewallRule", &datalake.AnalyticsFirewallRuleArgs{
 			AccountName:       pulumi.String(azurerm_data_lake_analytics.Example.Name),
 			ResourceGroupName: exampleResourceGroup.Name,
 			StartIpAddress:    pulumi.String("1.2.3.4"),

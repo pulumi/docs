@@ -95,7 +95,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleConfiguration, err := postgresql.NewConfiguration(ctx, "exampleConfiguration", &postgresql.ConfigurationArgs{
+		_, err = postgresql.NewConfiguration(ctx, "exampleConfiguration", &postgresql.ConfigurationArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			ServerName:        exampleServer.Name,
 			Value:             pulumi.String("on"),

@@ -72,6 +72,7 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicebus"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/streamanalytics"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -108,7 +109,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleOutputServiceBusQueue, err := streamanalytics.NewOutputServiceBusQueue(ctx, "exampleOutputServiceBusQueue", &streamanalytics.OutputServiceBusQueueArgs{
+		_, err = streamanalytics.NewOutputServiceBusQueue(ctx, "exampleOutputServiceBusQueue", &streamanalytics.OutputServiceBusQueueArgs{
 			StreamAnalyticsJobName: pulumi.String(exampleJob.Name),
 			ResourceGroupName:      pulumi.String(exampleJob.ResourceGroupName),
 			QueueName:              exampleQueue.Name,

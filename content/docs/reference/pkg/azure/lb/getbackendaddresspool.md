@@ -55,12 +55,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleLB, err := lb.LookupLB(ctx, &lb.LookupLBArgs{
+		exampleLB, err := lb.GetLB(ctx, &lb.GetLBArgs{
 			Name:              "example-lb",
 			ResourceGroupName: "example-resources",
 		}, nil)
@@ -75,7 +76,11 @@ func main() {
 			return err
 		}
 		ctx.Export("backendAddressPoolId", exampleBackendAddressPool.Id)
-		ctx.Export("backendIpConfigurationIds")
+		var splat0 []string
+		for _, val0 := range data.Azurerm_lb_backend_address_pool.Beap.Backend_ip_configurations {
+			splat0 = append(splat0, val0.Id)
+		}
+		ctx.Export("backendIpConfigurationIds", splat0)
 		return nil
 	})
 }

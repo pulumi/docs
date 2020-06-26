@@ -94,7 +94,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleAuthorizationRule, err := notificationhub.NewAuthorizationRule(ctx, "exampleAuthorizationRule", &notificationhub.AuthorizationRuleArgs{
+		_, err = notificationhub.NewAuthorizationRule(ctx, "exampleAuthorizationRule", &notificationhub.AuthorizationRuleArgs{
 			NotificationHubName: exampleHub.Name,
 			NamespaceName:       exampleNamespace.Name,
 			ResourceGroupName:   exampleResourceGroup.Name,

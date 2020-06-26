@@ -84,8 +84,8 @@ func main() {
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard"),
-			Tags: map[string]interface{}{
-				"source": "example",
+			Tags: pulumi.Map{
+				"source": pulumi.String("example"),
 			},
 		})
 		if err != nil {
@@ -99,7 +99,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleQueueAuthorizationRule, err := servicebus.NewQueueAuthorizationRule(ctx, "exampleQueueAuthorizationRule", &servicebus.QueueAuthorizationRuleArgs{
+		_, err = servicebus.NewQueueAuthorizationRule(ctx, "exampleQueueAuthorizationRule", &servicebus.QueueAuthorizationRuleArgs{
 			NamespaceName:     exampleNamespace.Name,
 			QueueName:         exampleQueue.Name,
 			ResourceGroupName: exampleResourceGroup.Name,

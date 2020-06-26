@@ -45,12 +45,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		test, err := eventhub.LookupConsumeGroup(ctx, &eventhub.LookupConsumeGroupArgs{
+		_, err := eventhub.GetConsumeGroup(ctx, &eventhub.GetConsumeGroupArgs{
 			EventhubName:      azurerm_eventhub.Test.Name,
 			Name:              azurerm_eventhub_consumer_group.Test.Name,
 			NamespaceName:     azurerm_eventhub_namespace.Test.Name,

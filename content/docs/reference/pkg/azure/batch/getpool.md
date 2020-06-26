@@ -44,12 +44,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := batch.LookupPool(ctx, &batch.LookupPoolArgs{
+		_, err := batch.LookupPool(ctx, &batch.LookupPoolArgs{
 			AccountName:       "testbatchaccount",
 			Name:              "testbatchpool",
 			ResourceGroupName: "test",
