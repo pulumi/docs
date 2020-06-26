@@ -13,6 +13,7 @@ meta_desc: "Explore the MutatingWebhookConfiguration resource of the admissionre
 MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object.
 
 
+
 ## Create a MutatingWebhookConfiguration Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

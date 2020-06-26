@@ -13,6 +13,7 @@ meta_desc: "Explore the ConfigMap resource of the core/v1 module, including exam
 ConfigMap holds configuration data for pods to consume.
 
 
+
 ## Create a ConfigMap Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the LeaseList resource of the coordination.k8s.io/v1beta1 mo
 LeaseList is a list of Lease objects.
 
 
+
 ## Create a LeaseList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

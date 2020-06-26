@@ -6393,8 +6393,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambda__python">
-<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
+        <span id="lambda_python">
+<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

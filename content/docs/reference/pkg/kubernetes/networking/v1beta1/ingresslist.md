@@ -13,6 +13,7 @@ meta_desc: "Explore the IngressList resource of the networking.k8s.io/v1beta1 mo
 IngressList is a collection of Ingress.
 
 
+
 ## Create a IngressList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

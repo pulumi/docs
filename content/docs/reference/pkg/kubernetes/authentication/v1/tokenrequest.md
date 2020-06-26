@@ -13,6 +13,7 @@ meta_desc: "Explore the TokenRequest resource of the authentication.k8s.io/v1 mo
 TokenRequest requests a token for a given service account.
 
 
+
 ## Create a TokenRequest Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

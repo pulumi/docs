@@ -13,6 +13,7 @@ meta_desc: "Explore the ConfigMapList resource of the core/v1 module, including 
 ConfigMapList is a resource containing a list of ConfigMap objects.
 
 
+
 ## Create a ConfigMapList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

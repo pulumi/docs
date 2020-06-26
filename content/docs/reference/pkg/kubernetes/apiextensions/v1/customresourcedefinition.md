@@ -13,6 +13,7 @@ meta_desc: "Explore the CustomResourceDefinition resource of the apiextensions.k
 CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format <.spec.name>.<.spec.group>.
 
 
+
 ## Create a CustomResourceDefinition Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

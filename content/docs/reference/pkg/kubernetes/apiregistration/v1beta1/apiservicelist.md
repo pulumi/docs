@@ -13,6 +13,7 @@ meta_desc: "Explore the APIServiceList resource of the apiregistration.k8s.io/v1
 APIServiceList is a list of APIService objects.
 
 
+
 ## Create a APIServiceList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

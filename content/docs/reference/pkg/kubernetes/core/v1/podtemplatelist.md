@@ -13,6 +13,7 @@ meta_desc: "Explore the PodTemplateList resource of the core/v1 module, includin
 PodTemplateList is a list of PodTemplates.
 
 
+
 ## Create a PodTemplateList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

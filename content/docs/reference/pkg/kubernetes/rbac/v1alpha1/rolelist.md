@@ -13,6 +13,7 @@ meta_desc: "Explore the RoleList resource of the rbac.authorization.k8s.io/v1alp
 RoleList is a collection of Roles. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleList, and will no longer be served in v1.20.
 
 
+
 ## Create a RoleList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

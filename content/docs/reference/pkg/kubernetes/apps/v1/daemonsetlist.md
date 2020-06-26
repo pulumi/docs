@@ -13,6 +13,7 @@ meta_desc: "Explore the DaemonSetList resource of the apps/v1 module, including 
 DaemonSetList is a collection of daemon sets.
 
 
+
 ## Create a DaemonSetList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

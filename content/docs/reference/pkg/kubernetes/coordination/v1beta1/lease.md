@@ -13,6 +13,7 @@ meta_desc: "Explore the Lease resource of the coordination.k8s.io/v1beta1 module
 Lease defines a lease concept.
 
 
+
 ## Create a Lease Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

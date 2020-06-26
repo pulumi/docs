@@ -13,6 +13,7 @@ meta_desc: "Explore the ControllerRevisionList resource of the apps/v1beta2 modu
 ControllerRevisionList is a resource containing a list of ControllerRevision objects.
 
 
+
 ## Create a ControllerRevisionList Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the PersistentVolume resource of the core/v1 module, includi
 PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
 
 
+
 ## Create a PersistentVolume Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
