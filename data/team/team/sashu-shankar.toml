@@ -1,0 +1,10 @@
+id = "sashu-shankar"
+name = "Sashu Shankar"
+title = "Software Engineer Intern"
+weight = 1
+
+status = "active"
+
+[social]
+github = "sashu-shankar"
+linkedin = "sashushankar"
