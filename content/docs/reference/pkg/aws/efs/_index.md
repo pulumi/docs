@@ -20,6 +20,7 @@ Explore the resources and functions of the efs module in the AWS package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccesspoint" title="GetAccessPoint"><span class="symbol function"></span>GetAccessPoint</a></li>
+    <li><a href="getaccesspoints" title="GetAccessPoints"><span class="symbol function"></span>GetAccessPoints</a></li>
     <li><a href="getfilesystem" title="GetFileSystem"><span class="symbol function"></span>GetFileSystem</a></li>
     <li><a href="getmounttarget" title="GetMountTarget"><span class="symbol function"></span>GetMountTarget</a></li>
 </ul>
@@ -33,7 +34,7 @@ Explore the resources and functions of the efs module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.10.1</dd>
+	<dd>2.11.0</dd>
 </dl>
 
 

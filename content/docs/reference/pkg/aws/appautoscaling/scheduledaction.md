@@ -74,7 +74,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		dynamodbScheduledAction, err := appautoscaling.NewScheduledAction(ctx, "dynamodbScheduledAction", &appautoscaling.ScheduledActionArgs{
+		_, err = appautoscaling.NewScheduledAction(ctx, "dynamodbScheduledAction", &appautoscaling.ScheduledActionArgs{
 			ResourceId:        dynamodbTarget.ResourceId,
 			ScalableDimension: dynamodbTarget.ScalableDimension,
 			ScalableTargetAction: &appautoscaling.ScheduledActionScalableTargetActionArgs{
@@ -203,7 +203,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ecsScheduledAction, err := appautoscaling.NewScheduledAction(ctx, "ecsScheduledAction", &appautoscaling.ScheduledActionArgs{
+		_, err = appautoscaling.NewScheduledAction(ctx, "ecsScheduledAction", &appautoscaling.ScheduledActionArgs{
 			ResourceId:        ecsTarget.ResourceId,
 			ScalableDimension: ecsTarget.ScalableDimension,
 			ScalableTargetAction: &appautoscaling.ScheduledActionScalableTargetActionArgs{

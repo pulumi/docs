@@ -14,6 +14,120 @@ Provides an MQ Configuration Resource.
 
 For more information on Amazon MQ, see [Amazon MQ documentation](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Mq.Configuration("example", new Aws.Mq.ConfigurationArgs
+        {
+            Data = @"<?xml version=""1.0"" encoding=""UTF-8"" standalone=""yes""?>
+<broker xmlns=""http://activemq.apache.org/schema/core"">
+  <plugins>
+    <forcePersistencyModeBrokerPlugin persistenceFlag=""true""/>
+    <statisticsBrokerPlugin/>
+    <timeStampingBrokerPlugin ttlCeiling=""86400000"" zeroExpirationOverride=""86400000""/>
+  </plugins>
+</broker>
+
+",
+            Description = "Example Configuration",
+            EngineType = "ActiveMQ",
+            EngineVersion = "5.15.0",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/mq"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = mq.NewConfiguration(ctx, "example", &mq.ConfigurationArgs{
+			Data:          pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n", "<broker xmlns=\"http://activemq.apache.org/schema/core\">\n", "  <plugins>\n", "    <forcePersistencyModeBrokerPlugin persistenceFlag=\"true\"/>\n", "    <statisticsBrokerPlugin/>\n", "    <timeStampingBrokerPlugin ttlCeiling=\"86400000\" zeroExpirationOverride=\"86400000\"/>\n", "  </plugins>\n", "</broker>\n", "\n")),
+			Description:   pulumi.String("Example Configuration"),
+			EngineType:    pulumi.String("ActiveMQ"),
+			EngineVersion: pulumi.String("5.15.0"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.mq.Configuration("example",
+    data="""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<broker xmlns="http://activemq.apache.org/schema/core">
+  <plugins>
+    <forcePersistencyModeBrokerPlugin persistenceFlag="true"/>
+    <statisticsBrokerPlugin/>
+    <timeStampingBrokerPlugin ttlCeiling="86400000" zeroExpirationOverride="86400000"/>
+  </plugins>
+</broker>
+
+""",
+    description="Example Configuration",
+    engine_type="ActiveMQ",
+    engine_version="5.15.0")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.mq.Configuration("example", {
+    data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<broker xmlns="http://activemq.apache.org/schema/core">
+  <plugins>
+    <forcePersistencyModeBrokerPlugin persistenceFlag="true"/>
+    <statisticsBrokerPlugin/>
+    <timeStampingBrokerPlugin ttlCeiling="86400000" zeroExpirationOverride="86400000"/>
+  </plugins>
+</broker>
+`,
+    description: "Example Configuration",
+    engineType: "ActiveMQ",
+    engineVersion: "5.15.0",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Configuration Resource {#create}

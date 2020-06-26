@@ -57,7 +57,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		alias, err := kms.NewAlias(ctx, "alias", &kms.AliasArgs{
+		_, err = kms.NewAlias(ctx, "alias", &kms.AliasArgs{
 			TargetKeyId: key.KeyId,
 		})
 		if err != nil {

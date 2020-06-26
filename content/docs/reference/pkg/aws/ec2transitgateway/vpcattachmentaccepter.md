@@ -58,9 +58,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := ec2transitgateway.NewVpcAttachmentAccepter(ctx, "example", &ec2transitgateway.VpcAttachmentAccepterArgs{
-			Tags: map[string]interface{}{
-				"Name": "Example cross-account attachment",
+		_, err = ec2transitgateway.NewVpcAttachmentAccepter(ctx, "example", &ec2transitgateway.VpcAttachmentAccepterArgs{
+			Tags: pulumi.Map{
+				"Name": pulumi.String("Example cross-account attachment"),
 			},
 			TransitGatewayAttachmentId: pulumi.String(aws_ec2_transit_gateway_vpc_attachment.Example.Id),
 		})

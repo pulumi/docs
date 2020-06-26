@@ -62,7 +62,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		yada, err := cloudwatch.NewLogMetricFilter(ctx, "yada", &cloudwatch.LogMetricFilterArgs{
+		_, err = cloudwatch.NewLogMetricFilter(ctx, "yada", &cloudwatch.LogMetricFilterArgs{
 			LogGroupName: dada.Name,
 			MetricTransformation: &cloudwatch.LogMetricFilterMetricTransformationArgs{
 				Name:      pulumi.String("EventCount"),

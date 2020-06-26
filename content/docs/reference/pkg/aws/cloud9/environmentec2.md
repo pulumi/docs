@@ -48,7 +48,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := cloud9.NewEnvironmentEC2(ctx, "example", &cloud9.EnvironmentEC2Args{
+		_, err = cloud9.NewEnvironmentEC2(ctx, "example", &cloud9.EnvironmentEC2Args{
 			InstanceType: pulumi.String("t2.micro"),
 		})
 		if err != nil {

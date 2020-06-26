@@ -81,7 +81,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		wafrule, err := wafregional.NewRateBasedRule(ctx, "wafrule", &wafregional.RateBasedRuleArgs{
+		_, err = wafregional.NewRateBasedRule(ctx, "wafrule", &wafregional.RateBasedRuleArgs{
 			MetricName: pulumi.String("tfWAFRule"),
 			Predicates: wafregional.RateBasedRulePredicateArray{
 				&wafregional.RateBasedRulePredicateArgs{

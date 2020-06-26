@@ -51,9 +51,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := iot.NewThing(ctx, "example", &iot.ThingArgs{
-			Attributes: map[string]interface{}{
-				"First": "examplevalue",
+		_, err = iot.NewThing(ctx, "example", &iot.ThingArgs{
+			Attributes: pulumi.Map{
+				"First": pulumi.String("examplevalue"),
 			},
 		})
 		if err != nil {

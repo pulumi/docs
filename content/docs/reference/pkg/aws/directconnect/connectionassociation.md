@@ -73,7 +73,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleConnectionAssociation, err := directconnect.NewConnectionAssociation(ctx, "exampleConnectionAssociation", &directconnect.ConnectionAssociationArgs{
+		_, err = directconnect.NewConnectionAssociation(ctx, "exampleConnectionAssociation", &directconnect.ConnectionAssociationArgs{
 			ConnectionId: exampleConnection.ID(),
 			LagId:        exampleLinkAggregationGroup.ID(),
 		})

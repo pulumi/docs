@@ -74,7 +74,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		testStaticIpAttachment, err := lightsail.NewStaticIpAttachment(ctx, "testStaticIpAttachment", &lightsail.StaticIpAttachmentArgs{
+		_, err = lightsail.NewStaticIpAttachment(ctx, "testStaticIpAttachment", &lightsail.StaticIpAttachmentArgs{
 			InstanceName: testInstance.ID(),
 			StaticIpName: testStaticIp.ID(),
 		})

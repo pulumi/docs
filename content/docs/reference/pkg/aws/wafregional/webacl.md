@@ -113,7 +113,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		wafacl, err := wafregional.NewWebAcl(ctx, "wafacl", &wafregional.WebAclArgs{
+		_, err = wafregional.NewWebAcl(ctx, "wafacl", &wafregional.WebAclArgs{
 			DefaultAction: &wafregional.WebAclDefaultActionArgs{
 				Type: pulumi.String("ALLOW"),
 			},
@@ -259,7 +259,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
+		_, err = wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
 			DefaultAction: &wafregional.WebAclDefaultActionArgs{
 				Type: pulumi.String("ALLOW"),
 			},
@@ -381,17 +381,17 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
+		_, err = wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
 			LoggingConfiguration: &wafregional.WebAclLoggingConfigurationArgs{
 				LogDestination: pulumi.String(aws_kinesis_firehose_delivery_stream.Example.Arn),
 				RedactedFields: &wafregional.WebAclLoggingConfigurationRedactedFieldsArgs{
-					FieldToMatch: []interface{}{
-						map[string]interface{}{
-							"type": "URI",
+					FieldToMatch: pulumi.Array{
+						pulumi.Map{
+							"type": pulumi.String("URI"),
 						},
-						map[string]interface{}{
-							"data": "referer",
-							"type": "HEADER",
+						pulumi.Map{
+							"data": pulumi.String("referer"),
+							"type": pulumi.String("HEADER"),
 						},
 					},
 				},

@@ -12,6 +12,125 @@ meta_desc: "Explore the Response resource of the apigateway module, including ex
 
 Provides an API Gateway Gateway Response for a REST API Gateway.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Aws.ApiGateway.RestApi("main", new Aws.ApiGateway.RestApiArgs
+        {
+        });
+        var test = new Aws.ApiGateway.Response("test", new Aws.ApiGateway.ResponseArgs
+        {
+            ResponseParameters = 
+            {
+                { "gatewayresponse.header.Authorization", "'Basic'" },
+            },
+            ResponseTemplates = 
+            {
+                { "application/json", "{'message':$context.error.messageString}" },
+            },
+            ResponseType = "UNAUTHORIZED",
+            RestApiId = main.Id,
+            StatusCode = "401",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		main, err := apigateway.NewRestApi(ctx, "main", nil)
+		if err != nil {
+			return err
+		}
+		_, err = apigateway.NewResponse(ctx, "test", &apigateway.ResponseArgs{
+			ResponseParameters: pulumi.Map{
+				"gatewayresponse.header.Authorization": pulumi.String("'Basic'"),
+			},
+			ResponseTemplates: pulumi.Map{
+				"application/json": pulumi.String(fmt.Sprintf("%v%v%v", "{'message':", "$", "context.error.messageString}")),
+			},
+			ResponseType: pulumi.String("UNAUTHORIZED"),
+			RestApiId:    main.ID(),
+			StatusCode:   pulumi.String("401"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+main = aws.apigateway.RestApi("main")
+test = aws.apigateway.Response("test",
+    response_parameters={
+        "gatewayresponse.header.Authorization": "'Basic'",
+    },
+    response_templates={
+        "application/json": "{'message':$context.error.messageString}",
+    },
+    response_type="UNAUTHORIZED",
+    rest_api_id=main.id,
+    status_code="401")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const main = new aws.apigateway.RestApi("main", {});
+const test = new aws.apigateway.Response("test", {
+    responseParameters: {
+        "gatewayresponse.header.Authorization": "'Basic'",
+    },
+    responseTemplates: {
+        "application/json": "{'message':$context.error.messageString}",
+    },
+    responseType: "UNAUTHORIZED",
+    restApiId: main.id,
+    statusCode: "401",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Response Resource {#create}

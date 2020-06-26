@@ -17,6 +17,224 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### CloudWatch Logging
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+        {
+        });
+        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Sid"": """",
+      ""Effect"": ""Allow"",
+      ""Principal"": {
+        ""Service"": ""vpc-flow-logs.amazonaws.com""
+      },
+      ""Action"": ""sts:AssumeRole""
+    }
+  ]
+}
+
+",
+        });
+        var exampleFlowLog = new Aws.Ec2.FlowLog("exampleFlowLog", new Aws.Ec2.FlowLogArgs
+        {
+            IamRoleArn = exampleRole.Arn,
+            LogDestination = exampleLogGroup.Arn,
+            TrafficType = "ALL",
+            VpcId = aws_vpc.Example.Id,
+        });
+        var exampleRolePolicy = new Aws.Iam.RolePolicy("exampleRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": [
+        ""logs:CreateLogGroup"",
+        ""logs:CreateLogStream"",
+        ""logs:PutLogEvents"",
+        ""logs:DescribeLogGroups"",
+        ""logs:DescribeLogStreams""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": ""*""
+    }
+  ]
+}
+
+",
+            Role = exampleRole.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
+		if err != nil {
+			return err
+		}
+		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"vpc-flow-logs.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewFlowLog(ctx, "exampleFlowLog", &ec2.FlowLogArgs{
+			IamRoleArn:     exampleRole.Arn,
+			LogDestination: exampleLogGroup.Arn,
+			TrafficType:    pulumi.String("ALL"),
+			VpcId:          pulumi.String(aws_vpc.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"logs:CreateLogGroup\",\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\",\n", "        \"logs:DescribeLogGroups\",\n", "        \"logs:DescribeLogStreams\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			Role:   exampleRole.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
+example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "vpc-flow-logs.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+""")
+example_flow_log = aws.ec2.FlowLog("exampleFlowLog",
+    iam_role_arn=example_role.arn,
+    log_destination=example_log_group.arn,
+    traffic_type="ALL",
+    vpc_id=aws_vpc["example"]["id"])
+example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+
+""",
+    role=example_role.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {});
+const exampleRole = new aws.iam.Role("example", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "vpc-flow-logs.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`,
+});
+const exampleFlowLog = new aws.ec2.FlowLog("example", {
+    iamRoleArn: exampleRole.arn,
+    logDestination: exampleLogGroup.arn,
+    trafficType: "ALL",
+    vpcId: aws_vpc_example.id,
+});
+const exampleRolePolicy = new aws.iam.RolePolicy("example", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+`,
+    role: exampleRole.id,
+});
+```
+
+{{% /example %}}
+
 ### S3 Logging
 {{% example csharp %}}
 ```csharp
@@ -60,7 +278,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleFlowLog, err := ec2.NewFlowLog(ctx, "exampleFlowLog", &ec2.FlowLogArgs{
+		_, err = ec2.NewFlowLog(ctx, "exampleFlowLog", &ec2.FlowLogArgs{
 			LogDestination:     exampleBucket.Arn,
 			LogDestinationType: pulumi.String("s3"),
 			TrafficType:        pulumi.String("ALL"),

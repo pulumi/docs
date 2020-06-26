@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		monitor, err := opsworks.NewGangliaLayer(ctx, "monitor", &opsworks.GangliaLayerArgs{
+		_, err = opsworks.NewGangliaLayer(ctx, "monitor", &opsworks.GangliaLayerArgs{
 			Password: pulumi.String("foobarbaz"),
 			StackId:  pulumi.String(aws_opsworks_stack.Main.Id),
 		})

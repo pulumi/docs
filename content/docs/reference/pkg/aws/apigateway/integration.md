@@ -11,7 +11,6 @@ meta_desc: "Explore the Integration resource of the apigateway module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an HTTP Method Integration for an API Gateway Integration.
-
 ## VPC Link
 
 ```typescript
@@ -188,6 +187,213 @@ class MyStack : Stack
 }
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myDemoAPI = new Aws.ApiGateway.RestApi("myDemoAPI", new Aws.ApiGateway.RestApiArgs
+        {
+            Description = "This is my API for demonstration purposes",
+        });
+        var myDemoResource = new Aws.ApiGateway.Resource("myDemoResource", new Aws.ApiGateway.ResourceArgs
+        {
+            ParentId = myDemoAPI.RootResourceId,
+            PathPart = "mydemoresource",
+            RestApi = myDemoAPI.Id,
+        });
+        var myDemoMethod = new Aws.ApiGateway.Method("myDemoMethod", new Aws.ApiGateway.MethodArgs
+        {
+            Authorization = "NONE",
+            HttpMethod = "GET",
+            ResourceId = myDemoResource.Id,
+            RestApi = myDemoAPI.Id,
+        });
+        var myDemoIntegration = new Aws.ApiGateway.Integration("myDemoIntegration", new Aws.ApiGateway.IntegrationArgs
+        {
+            CacheKeyParameters = 
+            {
+                "method.request.path.param",
+            },
+            CacheNamespace = "foobar",
+            HttpMethod = myDemoMethod.HttpMethod,
+            RequestParameters = 
+            {
+                { "integration.request.header.X-Authorization", "'static'" },
+            },
+            RequestTemplates = 
+            {
+                { "application/xml", @"{
+   ""body"" : $input.json('$')
+}
+
+" },
+            },
+            ResourceId = myDemoResource.Id,
+            RestApi = myDemoAPI.Id,
+            TimeoutMilliseconds = 29000,
+            Type = "MOCK",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myDemoAPI, err := apigateway.NewRestApi(ctx, "myDemoAPI", &apigateway.RestApiArgs{
+			Description: pulumi.String("This is my API for demonstration purposes"),
+		})
+		if err != nil {
+			return err
+		}
+		myDemoResource, err := apigateway.NewResource(ctx, "myDemoResource", &apigateway.ResourceArgs{
+			ParentId: myDemoAPI.RootResourceId,
+			PathPart: pulumi.String("mydemoresource"),
+			RestApi:  myDemoAPI.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		myDemoMethod, err := apigateway.NewMethod(ctx, "myDemoMethod", &apigateway.MethodArgs{
+			Authorization: pulumi.String("NONE"),
+			HttpMethod:    pulumi.String("GET"),
+			ResourceId:    myDemoResource.ID(),
+			RestApi:       myDemoAPI.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apigateway.NewIntegration(ctx, "myDemoIntegration", &apigateway.IntegrationArgs{
+			CacheKeyParameters: pulumi.StringArray{
+				pulumi.String("method.request.path.param"),
+			},
+			CacheNamespace: pulumi.String("foobar"),
+			HttpMethod:     myDemoMethod.HttpMethod,
+			RequestParameters: pulumi.Map{
+				"integration.request.header.X-Authorization": pulumi.String("'static'"),
+			},
+			RequestTemplates: pulumi.Map{
+				"application/xml": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "{\n", "   \"body\" : ", "$", "input.json('", "$", "')\n", "}\n", "\n")),
+			},
+			ResourceId:          myDemoResource.ID(),
+			RestApi:             myDemoAPI.ID(),
+			TimeoutMilliseconds: pulumi.Int(29000),
+			Type:                pulumi.String("MOCK"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
+my_demo_resource = aws.apigateway.Resource("myDemoResource",
+    parent_id=my_demo_api.root_resource_id,
+    path_part="mydemoresource",
+    rest_api=my_demo_api.id)
+my_demo_method = aws.apigateway.Method("myDemoMethod",
+    authorization="NONE",
+    http_method="GET",
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id)
+my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
+    cache_key_parameters=["method.request.path.param"],
+    cache_namespace="foobar",
+    http_method=my_demo_method.http_method,
+    request_parameters={
+        "integration.request.header.X-Authorization": "'static'",
+    },
+    request_templates={
+        "application/xml": """{
+   "body" : $input.json('$')
+}
+
+""",
+    },
+    resource_id=my_demo_resource.id,
+    rest_api=my_demo_api.id,
+    timeout_milliseconds=29000,
+    type="MOCK")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
+    description: "This is my API for demonstration purposes",
+});
+const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
+    parentId: myDemoAPI.rootResourceId,
+    pathPart: "mydemoresource",
+    restApi: myDemoAPI.id,
+});
+const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
+    authorization: "NONE",
+    httpMethod: "GET",
+    resourceId: myDemoResource.id,
+    restApi: myDemoAPI.id,
+});
+const myDemoIntegration = new aws.apigateway.Integration("MyDemoIntegration", {
+    cacheKeyParameters: ["method.request.path.param"],
+    cacheNamespace: "foobar",
+    httpMethod: myDemoMethod.httpMethod,
+    requestParameters: {
+        "integration.request.header.X-Authorization": "'static'",
+    },
+    // Transforms the incoming XML request to JSON
+    requestTemplates: {
+        "application/xml": `{
+   "body" : $input.json('$')
+}
+`,
+    },
+    resourceId: myDemoResource.id,
+    restApi: myDemoAPI.id,
+    timeoutMilliseconds: 29000,
+    type: "MOCK",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Integration Resource {#create}

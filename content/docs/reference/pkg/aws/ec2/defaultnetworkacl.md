@@ -134,6 +134,52 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mainvpc, err := ec2.NewVpc(ctx, "mainvpc", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.1.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewDefaultNetworkAcl(ctx, "default", &ec2.DefaultNetworkAclArgs{
+			DefaultNetworkAclId: mainvpc.DefaultNetworkAclId,
+			Ingress: ec2.DefaultNetworkAclIngressArray{
+				&ec2.DefaultNetworkAclIngressArgs{
+					Protocol:  pulumi.String("-1"),
+					RuleNo:    pulumi.Int(100),
+					Action:    pulumi.String("allow"),
+					CidrBlock: mainvpc.CidrBlock,
+					FromPort:  pulumi.Int(0),
+					ToPort:    pulumi.Int(0),
+				},
+			},
+			Egress: ec2.DefaultNetworkAclEgressArray{
+				&ec2.DefaultNetworkAclEgressArgs{
+					Protocol:  pulumi.String("-1"),
+					RuleNo:    pulumi.Int(100),
+					Action:    pulumi.String("allow"),
+					CidrBlock: pulumi.String("0.0.0.0/0"),
+					FromPort:  pulumi.Int(0),
+					ToPort:    pulumi.Int(0),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## Example config to deny all Egress traffic, allowing Ingress
 
@@ -205,6 +251,42 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mainvpc, err := ec2.NewVpc(ctx, "mainvpc", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.1.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewDefaultNetworkAcl(ctx, "default", &ec2.DefaultNetworkAclArgs{
+			DefaultNetworkAclId: mainvpc.DefaultNetworkAclId,
+			Ingress: ec2.DefaultNetworkAclIngressArray{
+				&ec2.DefaultNetworkAclIngressArgs{
+					Protocol:  pulumi.String("-1"),
+					RuleNo:    pulumi.Int(100),
+					Action:    pulumi.String("allow"),
+					CidrBlock: mainvpc.CidrBlock,
+					FromPort:  pulumi.Int(0),
+					ToPort:    pulumi.Int(0),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 ## Example config to deny all traffic to any Subnet in the Default Network ACL
 
@@ -248,6 +330,32 @@ class MyStack : Stack
         });
     }
 
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mainvpc, err := ec2.NewVpc(ctx, "mainvpc", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.1.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewDefaultNetworkAcl(ctx, "default", &ec2.DefaultNetworkAclArgs{
+			DefaultNetworkAclId: mainvpc.DefaultNetworkAclId,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 
@@ -703,6 +811,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Default Network ACL
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -739,6 +858,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Default Network ACL
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -781,6 +911,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Default Network ACL
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -817,6 +958,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Default Network ACL
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -869,7 +1021,7 @@ Get an existing DefaultNetworkAcl resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>default_network_acl_id=None<span class="p">, </span>egress=None<span class="p">, </span>ingress=None<span class="p">, </span>owner_id=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>default_network_acl_id=None<span class="p">, </span>egress=None<span class="p">, </span>ingress=None<span class="p">, </span>owner_id=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -985,6 +1137,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Default Network ACL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultnetworkaclid_csharp">
 <a href="#state_defaultnetworkaclid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Network<wbr>Acl<wbr>Id</a>
 </span> 
@@ -1068,6 +1231,17 @@ notes below on managing Subnets in the Default Network ACL
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Default Network ACL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1157,6 +1331,17 @@ notes below on managing Subnets in the Default Network ACL
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Default Network ACL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultnetworkaclid_nodejs">
 <a href="#state_defaultnetworkaclid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Network<wbr>Acl<wbr>Id</a>
 </span> 
@@ -1240,6 +1425,17 @@ notes below on managing Subnets in the Default Network ACL
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Default Network ACL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

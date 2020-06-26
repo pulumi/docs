@@ -69,14 +69,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		tagFilter, err := ram.LookupResourceShare(ctx, &ram.LookupResourceShareArgs{
-			Filters: ram.getResourceShareFilterArray{
-				&ram.LookupResourceShareFilter{
+		_, err := ram.LookupResourceShare(ctx, &ram.LookupResourceShareArgs{
+			Filters: []ram.GetResourceShareFilter{
+				ram.GetResourceShareFilter{
 					Name: "NameOfTag",
 					Values: []string{
 						"exampleNameTagValue",
@@ -125,12 +126,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := ram.LookupResourceShare(ctx, &ram.LookupResourceShareArgs{
+		_, err := ram.LookupResourceShare(ctx, &ram.LookupResourceShareArgs{
 			Name:          "example",
 			ResourceOwner: "SELF",
 		}, nil)

@@ -57,8 +57,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleLocalGatewayRouteTable, err := ec2.LookupLocalGatewayRouteTable(ctx, &ec2.LookupLocalGatewayRouteTableArgs{
-			OutpostArn: "arn:aws:outposts:us-west-2:123456789012:outpost/op-1234567890abcdef",
+		opt0 := "arn:aws:outposts:us-west-2:123456789012:outpost/op-1234567890abcdef"
+		exampleLocalGatewayRouteTable, err := ec2.GetLocalGatewayRouteTable(ctx, &ec2.GetLocalGatewayRouteTableArgs{
+			OutpostArn: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -69,7 +70,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleLocalGatewayRouteTableVpcAssociation, err := ec2.NewLocalGatewayRouteTableVpcAssociation(ctx, "exampleLocalGatewayRouteTableVpcAssociation", &ec2.LocalGatewayRouteTableVpcAssociationArgs{
+		_, err = ec2.NewLocalGatewayRouteTableVpcAssociation(ctx, "exampleLocalGatewayRouteTableVpcAssociation", &ec2.LocalGatewayRouteTableVpcAssociationArgs{
 			LocalGatewayRouteTableId: pulumi.String(exampleLocalGatewayRouteTable.Id),
 			VpcId:                    exampleVpc.ID(),
 		})

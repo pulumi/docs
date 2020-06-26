@@ -16,6 +16,285 @@ Manages an ECR repository lifecycle policy.
 
 > **NOTE:** The AWS ECR API seems to reorder rules based on `rulePriority`. If you define multiple rules that are not sorted in ascending `rulePriority` order in the this provider code, the resource will be flagged for recreation every deployment.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Policy on untagged image
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Aws.Ecr.Repository("foo", new Aws.Ecr.RepositoryArgs
+        {
+        });
+        var foopolicy = new Aws.Ecr.LifecyclePolicy("foopolicy", new Aws.Ecr.LifecyclePolicyArgs
+        {
+            Policy = @"{
+    ""rules"": [
+        {
+            ""rulePriority"": 1,
+            ""description"": ""Expire images older than 14 days"",
+            ""selection"": {
+                ""tagStatus"": ""untagged"",
+                ""countType"": ""sinceImagePushed"",
+                ""countUnit"": ""days"",
+                ""countNumber"": 14
+            },
+            ""action"": {
+                ""type"": ""expire""
+            }
+        }
+    ]
+}
+
+",
+            Repository = foo.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := ecr.NewRepository(ctx, "foo", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecr.NewLifecyclePolicy(ctx, "foopolicy", &ecr.LifecyclePolicyArgs{
+			Policy:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"rules\": [\n", "        {\n", "            \"rulePriority\": 1,\n", "            \"description\": \"Expire images older than 14 days\",\n", "            \"selection\": {\n", "                \"tagStatus\": \"untagged\",\n", "                \"countType\": \"sinceImagePushed\",\n", "                \"countUnit\": \"days\",\n", "                \"countNumber\": 14\n", "            },\n", "            \"action\": {\n", "                \"type\": \"expire\"\n", "            }\n", "        }\n", "    ]\n", "}\n", "\n")),
+			Repository: foo.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo = aws.ecr.Repository("foo")
+foopolicy = aws.ecr.LifecyclePolicy("foopolicy",
+    policy="""{
+    "rules": [
+        {
+            "rulePriority": 1,
+            "description": "Expire images older than 14 days",
+            "selection": {
+                "tagStatus": "untagged",
+                "countType": "sinceImagePushed",
+                "countUnit": "days",
+                "countNumber": 14
+            },
+            "action": {
+                "type": "expire"
+            }
+        }
+    ]
+}
+
+""",
+    repository=foo.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foo = new aws.ecr.Repository("foo", {});
+const foopolicy = new aws.ecr.LifecyclePolicy("foopolicy", {
+    policy: `{
+    "rules": [
+        {
+            "rulePriority": 1,
+            "description": "Expire images older than 14 days",
+            "selection": {
+                "tagStatus": "untagged",
+                "countType": "sinceImagePushed",
+                "countUnit": "days",
+                "countNumber": 14
+            },
+            "action": {
+                "type": "expire"
+            }
+        }
+    ]
+}
+`,
+    repository: foo.name,
+});
+```
+
+{{% /example %}}
+
+### Policy on tagged image
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Aws.Ecr.Repository("foo", new Aws.Ecr.RepositoryArgs
+        {
+        });
+        var foopolicy = new Aws.Ecr.LifecyclePolicy("foopolicy", new Aws.Ecr.LifecyclePolicyArgs
+        {
+            Policy = @"{
+    ""rules"": [
+        {
+            ""rulePriority"": 1,
+            ""description"": ""Keep last 30 images"",
+            ""selection"": {
+                ""tagStatus"": ""tagged"",
+                ""tagPrefixList"": [""v""],
+                ""countType"": ""imageCountMoreThan"",
+                ""countNumber"": 30
+            },
+            ""action"": {
+                ""type"": ""expire""
+            }
+        }
+    ]
+}
+
+",
+            Repository = foo.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := ecr.NewRepository(ctx, "foo", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecr.NewLifecyclePolicy(ctx, "foopolicy", &ecr.LifecyclePolicyArgs{
+			Policy:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"rules\": [\n", "        {\n", "            \"rulePriority\": 1,\n", "            \"description\": \"Keep last 30 images\",\n", "            \"selection\": {\n", "                \"tagStatus\": \"tagged\",\n", "                \"tagPrefixList\": [\"v\"],\n", "                \"countType\": \"imageCountMoreThan\",\n", "                \"countNumber\": 30\n", "            },\n", "            \"action\": {\n", "                \"type\": \"expire\"\n", "            }\n", "        }\n", "    ]\n", "}\n", "\n")),
+			Repository: foo.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo = aws.ecr.Repository("foo")
+foopolicy = aws.ecr.LifecyclePolicy("foopolicy",
+    policy="""{
+    "rules": [
+        {
+            "rulePriority": 1,
+            "description": "Keep last 30 images",
+            "selection": {
+                "tagStatus": "tagged",
+                "tagPrefixList": ["v"],
+                "countType": "imageCountMoreThan",
+                "countNumber": 30
+            },
+            "action": {
+                "type": "expire"
+            }
+        }
+    ]
+}
+
+""",
+    repository=foo.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foo = new aws.ecr.Repository("foo", {});
+const foopolicy = new aws.ecr.LifecyclePolicy("foopolicy", {
+    policy: `{
+    "rules": [
+        {
+            "rulePriority": 1,
+            "description": "Keep last 30 images",
+            "selection": {
+                "tagStatus": "tagged",
+                "tagPrefixList": ["v"],
+                "countType": "imageCountMoreThan",
+                "countNumber": 30
+            },
+            "action": {
+                "type": "expire"
+            }
+        }
+    ]
+}
+`,
+    repository: foo.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LifecyclePolicy Resource {#create}

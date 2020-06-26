@@ -48,7 +48,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+		_, err = ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
 			CidrBlock: pulumi.String("10.0.0.0/16"),
 		})
 		if err != nil {

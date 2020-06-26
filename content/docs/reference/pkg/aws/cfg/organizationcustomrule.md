@@ -72,7 +72,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		examplePermission, err := lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
+		_, err = lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
 			Action:    pulumi.String("lambda:InvokeFunction"),
 			Function:  pulumi.String(aws_lambda_function.Example.Arn),
 			Principal: pulumi.String("config.amazonaws.com"),
@@ -80,7 +80,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+		_, err = organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
 			AwsServiceAccessPrincipals: pulumi.StringArray{
 				pulumi.String("config-multiaccountsetup.amazonaws.com"),
 			},
@@ -89,7 +89,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleOrganizationCustomRule, err := cfg.NewOrganizationCustomRule(ctx, "exampleOrganizationCustomRule", &cfg.OrganizationCustomRuleArgs{
+		_, err = cfg.NewOrganizationCustomRule(ctx, "exampleOrganizationCustomRule", &cfg.OrganizationCustomRuleArgs{
 			LambdaFunctionArn: pulumi.String(aws_lambda_function.Example.Arn),
 			TriggerTypes: pulumi.StringArray{
 				pulumi.String("ConfigurationItemChangeNotification"),

@@ -138,7 +138,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		fooPeeringConnectionOptions, err := ec2.NewPeeringConnectionOptions(ctx, "fooPeeringConnectionOptions", &ec2.PeeringConnectionOptionsArgs{
+		_, err = ec2.NewPeeringConnectionOptions(ctx, "fooPeeringConnectionOptions", &ec2.PeeringConnectionOptionsArgs{
 			Accepter: &ec2.PeeringConnectionOptionsAccepterArgs{
 				AllowRemoteVpcDnsResolution: pulumi.Bool(true),
 			},

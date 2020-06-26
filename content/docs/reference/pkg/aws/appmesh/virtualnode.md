@@ -87,13 +87,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceb1, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
+		_, err = appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualNodeSpecArgs{
-				Backend: []map[string]interface{}{
-					map[string]interface{}{
-						"virtualService": map[string]interface{}{
-							"virtualServiceName": "servicea.simpleapp.local",
+				Backend: pulumi.MapArray{
+					pulumi.Map{
+						"virtualService": pulumi.Map{
+							"virtualServiceName": pulumi.String("servicea.simpleapp.local"),
 						},
 					},
 				},
@@ -253,13 +253,13 @@ func main() {
 		if err != nil {
 			return err
 		}
-		serviceb1, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
+		_, err = appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualNodeSpecArgs{
-				Backend: []map[string]interface{}{
-					map[string]interface{}{
-						"virtualService": map[string]interface{}{
-							"virtualServiceName": "servicea.simpleapp.local",
+				Backend: pulumi.MapArray{
+					pulumi.Map{
+						"virtualService": pulumi.Map{
+							"virtualServiceName": pulumi.String("servicea.simpleapp.local"),
 						},
 					},
 				},
@@ -271,8 +271,8 @@ func main() {
 				},
 				ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
 					AwsCloudMap: &appmesh.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs{
-						Attributes: map[string]interface{}{
-							"stack": "blue",
+						Attributes: pulumi.Map{
+							"stack": pulumi.String("blue"),
 						},
 						NamespaceName: example.Name,
 						ServiceName:   pulumi.String("serviceb1"),
@@ -429,13 +429,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceb1, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
+		_, err = appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualNodeSpecArgs{
-				Backend: []map[string]interface{}{
-					map[string]interface{}{
-						"virtualService": map[string]interface{}{
-							"virtualServiceName": "servicea.simpleapp.local",
+				Backend: pulumi.MapArray{
+					pulumi.Map{
+						"virtualService": pulumi.Map{
+							"virtualServiceName": pulumi.String("servicea.simpleapp.local"),
 						},
 					},
 				},
@@ -616,13 +616,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceb1, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
+		_, err = appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.VirtualNodeSpecArgs{
-				Backend: []map[string]interface{}{
-					map[string]interface{}{
-						"virtualService": map[string]interface{}{
-							"virtualServiceName": "servicea.simpleapp.local",
+				Backend: pulumi.MapArray{
+					pulumi.Map{
+						"virtualService": pulumi.Map{
+							"virtualServiceName": pulumi.String("servicea.simpleapp.local"),
 						},
 					},
 				},

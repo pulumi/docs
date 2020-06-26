@@ -12,6 +12,245 @@ meta_desc: "Explore the SshKey resource of the transfer module, including exampl
 
 Provides a AWS Transfer User SSH Key resource.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooServer = new aws.transfer.Server("foo", {
+    identityProviderType: "SERVICE_MANAGED",
+    tags: {
+        NAME: "tf-acc-test-transfer-server",
+    },
+});
+const fooRole = new aws.iam.Role("foo", {
+    assumeRolePolicy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+`,
+});
+const fooRolePolicy = new aws.iam.RolePolicy("foo", {
+    policy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowFullAccesstoS3",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": "*"
+		}
+	]
+}
+`,
+    role: fooRole.id,
+});
+const fooUser = new aws.transfer.User("foo", {
+    role: fooRole.arn,
+    serverId: fooServer.id,
+    tags: {
+        NAME: "tftestuser",
+    },
+    userName: "tftestuser",
+});
+const fooSshKey = new aws.transfer.SshKey("foo", {
+    body: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 example@example.com",
+    serverId: fooServer.id,
+    userName: fooUser.userName,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_server = aws.transfer.Server("fooServer",
+    identity_provider_type="SERVICE_MANAGED",
+    tags={
+        "NAME": "tf-acc-test-transfer-server",
+    })
+foo_role = aws.iam.Role("fooRole", assume_role_policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+
+""")
+foo_role_policy = aws.iam.RolePolicy("fooRolePolicy",
+    policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowFullAccesstoS3",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": "*"
+		}
+	]
+}
+
+""",
+    role=foo_role.id)
+foo_user = aws.transfer.User("fooUser",
+    role=foo_role.arn,
+    server_id=foo_server.id,
+    tags={
+        "NAME": "tftestuser",
+    },
+    user_name="tftestuser")
+foo_ssh_key = aws.transfer.SshKey("fooSshKey",
+    body="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 example@example.com",
+    server_id=foo_server.id,
+    user_name=foo_user.user_name)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooServer = new Aws.Transfer.Server("fooServer", new Aws.Transfer.ServerArgs
+        {
+            IdentityProviderType = "SERVICE_MANAGED",
+            Tags = 
+            {
+                { "NAME", "tf-acc-test-transfer-server" },
+            },
+        });
+        var fooRole = new Aws.Iam.Role("fooRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+	""Version"": ""2012-10-17"",
+	""Statement"": [
+		{
+		""Effect"": ""Allow"",
+		""Principal"": {
+			""Service"": ""transfer.amazonaws.com""
+		},
+		""Action"": ""sts:AssumeRole""
+		}
+	]
+}
+
+",
+        });
+        var fooRolePolicy = new Aws.Iam.RolePolicy("fooRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = @"{
+	""Version"": ""2012-10-17"",
+	""Statement"": [
+		{
+			""Sid"": ""AllowFullAccesstoS3"",
+			""Effect"": ""Allow"",
+			""Action"": [
+				""s3:*""
+			],
+			""Resource"": ""*""
+		}
+	]
+}
+
+",
+            Role = fooRole.Id,
+        });
+        var fooUser = new Aws.Transfer.User("fooUser", new Aws.Transfer.UserArgs
+        {
+            Role = fooRole.Arn,
+            ServerId = fooServer.Id,
+            Tags = 
+            {
+                { "NAME", "tftestuser" },
+            },
+            UserName = "tftestuser",
+        });
+        var fooSshKey = new Aws.Transfer.SshKey("fooSshKey", new Aws.Transfer.SshKeyArgs
+        {
+            Body = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 example@example.com",
+            ServerId = fooServer.Id,
+            UserName = fooUser.UserName,
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/transfer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooServer, err := transfer.NewServer(ctx, "fooServer", &transfer.ServerArgs{
+			IdentityProviderType: pulumi.String("SERVICE_MANAGED"),
+			Tags: pulumi.Map{
+				"NAME": pulumi.String("tf-acc-test-transfer-server"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		fooRole, err := iam.NewRole(ctx, "fooRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "		\"Effect\": \"Allow\",\n", "		\"Principal\": {\n", "			\"Service\": \"transfer.amazonaws.com\"\n", "		},\n", "		\"Action\": \"sts:AssumeRole\"\n", "		}\n", "	]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "fooRolePolicy", &iam.RolePolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "			\"Sid\": \"AllowFullAccesstoS3\",\n", "			\"Effect\": \"Allow\",\n", "			\"Action\": [\n", "				\"s3:*\"\n", "			],\n", "			\"Resource\": \"*\"\n", "		}\n", "	]\n", "}\n", "\n")),
+			Role: fooRole.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		fooUser, err := transfer.NewUser(ctx, "fooUser", &transfer.UserArgs{
+			Role:     fooRole.Arn,
+			ServerId: fooServer.ID(),
+			Tags: pulumi.Map{
+				"NAME": pulumi.String("tftestuser"),
+			},
+			UserName: pulumi.String("tftestuser"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = transfer.NewSshKey(ctx, "fooSshKey", &transfer.SshKeyArgs{
+			Body:     pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 example@example.com"),
+			ServerId: fooServer.ID(),
+			UserName: fooUser.UserName,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a SshKey Resource {#create}

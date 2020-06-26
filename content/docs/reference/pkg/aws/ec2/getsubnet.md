@@ -71,13 +71,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := subnetId
 		selected, err := ec2.LookupSubnet(ctx, &ec2.LookupSubnetArgs{
-			Id: subnetId,
+			Id: &opt0,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		subnet, err := ec2.NewSecurityGroup(ctx, "subnet", &ec2.SecurityGroupArgs{
+		_, err = ec2.NewSecurityGroup(ctx, "subnet", &ec2.SecurityGroupArgs{
 			Ingress: ec2.SecurityGroupIngressArray{
 				&ec2.SecurityGroupIngressArgs{
 					CidrBlocks: pulumi.StringArray{

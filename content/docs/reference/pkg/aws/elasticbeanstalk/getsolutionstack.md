@@ -12,6 +12,86 @@ meta_desc: "Explore the GetSolutionStack function of the elasticbeanstalk module
 
 Use this data source to get the name of a elastic beanstalk solution stack.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var multiDocker = Output.Create(Aws.ElasticBeanstalk.GetSolutionStack.InvokeAsync(new Aws.ElasticBeanstalk.GetSolutionStackArgs
+        {
+            MostRecent = true,
+            NameRegex = "^64bit Amazon Linux (.*) Multi-container Docker (.*)$",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		_, err := elasticbeanstalk.GetSolutionStack(ctx, &elasticbeanstalk.GetSolutionStackArgs{
+			MostRecent: &opt0,
+			NameRegex:  fmt.Sprintf("%v%v", "^64bit Amazon Linux (.*) Multi-container Docker (.*)", "$"),
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+multi_docker = aws.elasticbeanstalk.get_solution_stack(most_recent=True,
+    name_regex="^64bit Amazon Linux (.*) Multi-container Docker (.*)$")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const multiDocker = pulumi.output(aws.elasticbeanstalk.getSolutionStack({
+    mostRecent: true,
+    nameRegex: "^64bit Amazon Linux (.*) Multi-container Docker (.*)$",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSolutionStack {#using}

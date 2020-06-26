@@ -77,7 +77,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleRegexMatchSet, err := waf.NewRegexMatchSet(ctx, "exampleRegexMatchSet", &waf.RegexMatchSetArgs{
+		_, err = waf.NewRegexMatchSet(ctx, "exampleRegexMatchSet", &waf.RegexMatchSetArgs{
 			RegexMatchTuples: waf.RegexMatchSetRegexMatchTupleArray{
 				&waf.RegexMatchSetRegexMatchTupleArgs{
 					FieldToMatch: &waf.RegexMatchSetRegexMatchTupleFieldToMatchArgs{

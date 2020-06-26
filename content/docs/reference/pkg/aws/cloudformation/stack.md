@@ -12,6 +12,157 @@ meta_desc: "Explore the Stack resource of the cloudformation module, including e
 
 Provides a CloudFormation Stack resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new Aws.CloudFormation.Stack("network", new Aws.CloudFormation.StackArgs
+        {
+            Parameters = 
+            {
+                { "VPCCidr", "10.0.0.0/16" },
+            },
+            TemplateBody = @"{
+  ""Parameters"" : {
+    ""VPCCidr"" : {
+      ""Type"" : ""String"",
+      ""Default"" : ""10.0.0.0/16"",
+      ""Description"" : ""Enter the CIDR block for the VPC. Default is 10.0.0.0/16.""
+    }
+  },
+  ""Resources"" : {
+    ""myVpc"": {
+      ""Type"" : ""AWS::EC2::VPC"",
+      ""Properties"" : {
+        ""CidrBlock"" : { ""Ref"" : ""VPCCidr"" },
+        ""Tags"" : [
+          {""Key"": ""Name"", ""Value"": ""Primary_CF_VPC""}
+        ]
+      }
+    }
+  }
+}
+
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudformation"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = cloudformation.NewStack(ctx, "network", &cloudformation.StackArgs{
+			Parameters: pulumi.Map{
+				"VPCCidr": pulumi.String("10.0.0.0/16"),
+			},
+			TemplateBody: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Parameters\" : {\n", "    \"VPCCidr\" : {\n", "      \"Type\" : \"String\",\n", "      \"Default\" : \"10.0.0.0/16\",\n", "      \"Description\" : \"Enter the CIDR block for the VPC. Default is 10.0.0.0/16.\"\n", "    }\n", "  },\n", "  \"Resources\" : {\n", "    \"myVpc\": {\n", "      \"Type\" : \"AWS::EC2::VPC\",\n", "      \"Properties\" : {\n", "        \"CidrBlock\" : { \"Ref\" : \"VPCCidr\" },\n", "        \"Tags\" : [\n", "          {\"Key\": \"Name\", \"Value\": \"Primary_CF_VPC\"}\n", "        ]\n", "      }\n", "    }\n", "  }\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+network = aws.cloudformation.Stack("network",
+    parameters={
+        "VPCCidr": "10.0.0.0/16",
+    },
+    template_body="""{
+  "Parameters" : {
+    "VPCCidr" : {
+      "Type" : "String",
+      "Default" : "10.0.0.0/16",
+      "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
+    }
+  },
+  "Resources" : {
+    "myVpc": {
+      "Type" : "AWS::EC2::VPC",
+      "Properties" : {
+        "CidrBlock" : { "Ref" : "VPCCidr" },
+        "Tags" : [
+          {"Key": "Name", "Value": "Primary_CF_VPC"}
+        ]
+      }
+    }
+  }
+}
+
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const network = new aws.cloudformation.Stack("network", {
+    parameters: {
+        VPCCidr: "10.0.0.0/16",
+    },
+    templateBody: `{
+  "Parameters" : {
+    "VPCCidr" : {
+      "Type" : "String",
+      "Default" : "10.0.0.0/16",
+      "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
+    }
+  },
+  "Resources" : {
+    "myVpc": {
+      "Type" : "AWS::EC2::VPC",
+      "Properties" : {
+        "CidrBlock" : { "Ref" : "VPCCidr" },
+        "Tags" : [
+          {"Key": "Name", "Value": "Primary_CF_VPC"}
+        ]
+      }
+    }
+  }
+}
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Stack Resource {#create}

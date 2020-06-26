@@ -68,6 +68,7 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -87,8 +88,8 @@ func main() {
 		if err != nil {
 			return err
 		}
-		privateS3NetworkAclRule, err := ec2.NewNetworkAclRule(ctx, "privateS3NetworkAclRule", &ec2.NetworkAclRuleArgs{
-			CidrBlock: privateS3PrefixList.ApplyT(func(privateS3PrefixList index.LookupPrefixListResult) (string, error) {
+		_, err = ec2.NewNetworkAclRule(ctx, "privateS3NetworkAclRule", &ec2.NetworkAclRuleArgs{
+			CidrBlock: privateS3PrefixList.ApplyT(func(privateS3PrefixList aws.GetPrefixListResult) (string, error) {
 				return privateS3PrefixList.CidrBlocks[0], nil
 			}).(pulumi.StringOutput),
 			Egress:       pulumi.Bool(false),
@@ -194,7 +195,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aws.GetPrefixList(ctx, &aws.GetPrefixListArgs{
+			Filters: []aws.GetPrefixListFilter{
+				aws.GetPrefixListFilter{
+					Name: "prefix-list-id",
+					Values: []string{
+						"pl-68a54001",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

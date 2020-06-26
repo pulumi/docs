@@ -52,7 +52,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		foo, err := ecr.NewRepository(ctx, "foo", &ecr.RepositoryArgs{
+		_, err = ecr.NewRepository(ctx, "foo", &ecr.RepositoryArgs{
 			ImageScanningConfiguration: &ecr.RepositoryImageScanningConfigurationArgs{
 				ScanOnPush: pulumi.Bool(true),
 			},

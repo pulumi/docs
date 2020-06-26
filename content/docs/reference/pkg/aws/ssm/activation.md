@@ -12,6 +12,150 @@ meta_desc: "Explore the Activation resource of the ssm module, including example
 
 Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"  {
+    ""Version"": ""2012-10-17"",
+    ""Statement"": {
+      ""Effect"": ""Allow"",
+      ""Principal"": {""Service"": ""ssm.amazonaws.com""},
+      ""Action"": ""sts:AssumeRole""
+    }
+  }
+
+",
+        });
+        var testAttach = new Aws.Iam.RolePolicyAttachment("testAttach", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+            Role = testRole.Name,
+        });
+        var foo = new Aws.Ssm.Activation("foo", new Aws.Ssm.ActivationArgs
+        {
+            Description = "Test",
+            IamRole = testRole.Id,
+            RegistrationLimit = 5,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "  {\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\"Service\": \"ssm.amazonaws.com\"},\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  }\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicyAttachment(ctx, "testAttach", &iam.RolePolicyAttachmentArgs{
+			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"),
+			Role:      testRole.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ssm.NewActivation(ctx, "foo", &ssm.ActivationArgs{
+			Description:       pulumi.String("Test"),
+			IamRole:           testRole.ID(),
+			RegistrationLimit: pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_role = aws.iam.Role("testRole", assume_role_policy="""  {
+    "Version": "2012-10-17",
+    "Statement": {
+      "Effect": "Allow",
+      "Principal": {"Service": "ssm.amazonaws.com"},
+      "Action": "sts:AssumeRole"
+    }
+  }
+
+""")
+test_attach = aws.iam.RolePolicyAttachment("testAttach",
+    policy_arn="arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+    role=test_role.name)
+foo = aws.ssm.Activation("foo",
+    description="Test",
+    iam_role=test_role.id,
+    registration_limit="5")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testRole = new aws.iam.Role("test_role", {
+    assumeRolePolicy: `  {
+    "Version": "2012-10-17",
+    "Statement": {
+      "Effect": "Allow",
+      "Principal": {"Service": "ssm.amazonaws.com"},
+      "Action": "sts:AssumeRole"
+    }
+  }
+`,
+});
+const testAttach = new aws.iam.RolePolicyAttachment("test_attach", {
+    policyArn: "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+    role: testRole.name,
+});
+const foo = new aws.ssm.Activation("foo", {
+    description: "Test",
+    iamRole: testRole.id,
+    registrationLimit: 5,
+}, { dependsOn: [testAttach] });
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Activation Resource {#create}

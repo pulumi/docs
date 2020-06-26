@@ -55,7 +55,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := globalaccelerator.NewAccelerator(ctx, "example", &globalaccelerator.AcceleratorArgs{
+		_, err = globalaccelerator.NewAccelerator(ctx, "example", &globalaccelerator.AcceleratorArgs{
 			Attributes: &globalaccelerator.AcceleratorAttributesArgs{
 				FlowLogsEnabled:  pulumi.Bool(true),
 				FlowLogsS3Bucket: pulumi.String("example-bucket"),

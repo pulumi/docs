@@ -50,7 +50,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := apigatewayv2.NewIntegration(ctx, "example", &apigatewayv2.IntegrationArgs{
+		_, err = apigatewayv2.NewIntegration(ctx, "example", &apigatewayv2.IntegrationArgs{
 			ApiId:           pulumi.String(aws_apigatewayv2_api.Example.Id),
 			IntegrationType: pulumi.String("MOCK"),
 		})

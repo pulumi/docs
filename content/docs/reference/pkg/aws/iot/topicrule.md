@@ -2,7 +2,7 @@
 ---
 title: "TopicRule"
 title_tag: "Resource TopicRule | Module iot | Package AWS"
-meta_desc: "Explore the TopicRule resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. "
+meta_desc: "Explore the TopicRule resource of the iot module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 
 
@@ -11,6 +11,276 @@ meta_desc: "Explore the TopicRule resource of the iot module, including examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mytopic = new Aws.Sns.Topic("mytopic", new Aws.Sns.TopicArgs
+        {
+        });
+        var myerrortopic = new Aws.Sns.Topic("myerrortopic", new Aws.Sns.TopicArgs
+        {
+        });
+        var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Effect"": ""Allow"",
+      ""Principal"": {
+        ""Service"": ""iot.amazonaws.com""
+      },
+      ""Action"": ""sts:AssumeRole""
+    }
+  ]
+}
+
+",
+        });
+        var rule = new Aws.Iot.TopicRule("rule", new Aws.Iot.TopicRuleArgs
+        {
+            Description = "Example rule",
+            Enabled = true,
+            ErrorAction = new Aws.Iot.Inputs.TopicRuleErrorActionArgs
+            {
+                Sns = new Aws.Iot.Inputs.TopicRuleErrorActionSnsArgs
+                {
+                    MessageFormat = "RAW",
+                    RoleArn = role.Arn,
+                    TargetArn = myerrortopic.Arn,
+                },
+            },
+            Sns = new Aws.Iot.Inputs.TopicRuleSnsArgs
+            {
+                Sns = "RAW",
+                Sns = role.Arn,
+                Sns = mytopic.Arn,
+            },
+            Sql = "SELECT * FROM 'topic/test'",
+            SqlVersion = "2016-03-23",
+        });
+        var iamPolicyForLambda = new Aws.Iam.RolePolicy("iamPolicyForLambda", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = mytopic.Arn.Apply(arn => @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+        ""Effect"": ""Allow"",
+        ""Action"": [
+            ""sns:Publish""
+        ],
+        ""Resource"": ""{arn}""
+    }}
+  ]
+}}
+
+"),
+            Role = role.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mytopic, err := sns.NewTopic(ctx, "mytopic", nil)
+		if err != nil {
+			return err
+		}
+		myerrortopic, err := sns.NewTopic(ctx, "myerrortopic", nil)
+		if err != nil {
+			return err
+		}
+		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"iot.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iot.NewTopicRule(ctx, "rule", &iot.TopicRuleArgs{
+			Description: pulumi.String("Example rule"),
+			Enabled:     pulumi.Bool(true),
+			ErrorAction: &iot.TopicRuleErrorActionArgs{
+				Sns: &iot.TopicRuleErrorActionSnsArgs{
+					MessageFormat: pulumi.String("RAW"),
+					RoleArn:       role.Arn,
+					TargetArn:     myerrortopic.Arn,
+				},
+			},
+			Sns: &iot.TopicRuleSnsArgs{
+				Sns: pulumi.String("RAW"),
+				Sns: role.Arn,
+				Sns: mytopic.Arn,
+			},
+			Sql:        pulumi.String("SELECT * FROM 'topic/test'"),
+			SqlVersion: pulumi.String("2016-03-23"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "iamPolicyForLambda", &iam.RolePolicyArgs{
+			Policy: mytopic.Arn.ApplyT(func(arn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "        \"Effect\": \"Allow\",\n", "        \"Action\": [\n", "            \"sns:Publish\"\n", "        ],\n", "        \"Resource\": \"", arn, "\"\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+			}).(pulumi.StringOutput),
+			Role: role.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+mytopic = aws.sns.Topic("mytopic")
+myerrortopic = aws.sns.Topic("myerrortopic")
+role = aws.iam.Role("role", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "iot.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+""")
+rule = aws.iot.TopicRule("rule",
+    description="Example rule",
+    enabled=True,
+    error_action={
+        "sns": {
+            "messageFormat": "RAW",
+            "role_arn": role.arn,
+            "target_arn": myerrortopic.arn,
+        },
+    },
+    sns={
+        "sns": "RAW",
+        "sns": role.arn,
+        "sns": mytopic.arn,
+    },
+    sql="SELECT * FROM 'topic/test'",
+    sql_version="2016-03-23")
+iam_policy_for_lambda = aws.iam.RolePolicy("iamPolicyForLambda",
+    policy=mytopic.arn.apply(lambda arn: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+        "Effect": "Allow",
+        "Action": [
+            "sns:Publish"
+        ],
+        "Resource": "{arn}"
+    }}
+  ]
+}}
+
+"""),
+    role=role.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mytopic = new aws.sns.Topic("mytopic", {});
+const myerrortopic = new aws.sns.Topic("myerrortopic", {});
+const role = new aws.iam.Role("role", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "iot.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`,
+});
+const rule = new aws.iot.TopicRule("rule", {
+    description: "Example rule",
+    enabled: true,
+    errorAction: {
+        sns: {
+            messageFormat: "RAW",
+            roleArn: role.arn,
+            targetArn: myerrortopic.arn,
+        },
+    },
+    sns: {
+        messageFormat: "RAW",
+        roleArn: role.arn,
+        targetArn: mytopic.arn,
+    },
+    sql: "SELECT * FROM 'topic/test'",
+    sqlVersion: "2016-03-23",
+});
+const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+        "Effect": "Allow",
+        "Action": [
+            "sns:Publish"
+        ],
+        "Resource": "${mytopic.arn}"
+    }
+  ]
+}
+`,
+    role: role.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TopicRule Resource {#create}
@@ -22,7 +292,7 @@ meta_desc: "Explore the TopicRule resource of the iot module, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#TopicRule">TopicRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>step_functions=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#TopicRule">TopicRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>error_action=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>step_functions=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,6 +560,17 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="erroraction_csharp">
+<a href="#erroraction_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="firehose_csharp">
 <a href="#firehose_csharp" style="color: inherit; text-decoration: inherit;">Firehose</a>
 </span> 
@@ -510,6 +791,17 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="erroraction_go">
+<a href="#erroraction_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -736,6 +1028,17 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="erroraction_nodejs">
+<a href="#erroraction_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="firehose_nodejs">
 <a href="#firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span> 
@@ -956,6 +1259,17 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#topicruleelasticsearch">Dict[Topic<wbr>Rule<wbr>Elasticsearch]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_action_python">
+<a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroraction">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1221,7 +1535,7 @@ Get an existing TopicRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>step_functions=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>error_action=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>step_functions=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1416,6 +1730,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_erroraction_csharp">
+<a href="#state_erroraction_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1654,6 +1979,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_erroraction_go">
+<a href="#state_erroraction_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_firehose_go">
 <a href="#state_firehose_go" style="color: inherit; text-decoration: inherit;">Firehose</a>
 </span> 
@@ -1888,6 +2224,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_erroraction_nodejs">
+<a href="#state_erroraction_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_firehose_nodejs">
 <a href="#state_firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span> 
@@ -2118,6 +2465,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_error_action_python">
+<a href="#state_error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroraction">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3778,6 +4136,3808 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of document you are storing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorAction">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorAction.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchalarm_csharp">
+<a href="#cloudwatchalarm_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchmetric_csharp">
+<a href="#cloudwatchmetric_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Metric</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamodb_csharp">
+<a href="#dynamodb_csharp" style="color: inherit; text-decoration: inherit;">Dynamodb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamodbv2_csharp">
+<a href="#dynamodbv2_csharp" style="color: inherit; text-decoration: inherit;">Dynamodbv2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_csharp">
+<a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firehose_csharp">
+<a href="#firehose_csharp" style="color: inherit; text-decoration: inherit;">Firehose</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iotanalytics_csharp">
+<a href="#iotanalytics_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Analytics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iotevents_csharp">
+<a href="#iotevents_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kinesis_csharp">
+<a href="#kinesis_csharp" style="color: inherit; text-decoration: inherit;">Kinesis</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lambda_csharp">
+<a href="#lambda_csharp" style="color: inherit; text-decoration: inherit;">Lambda</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="republish_csharp">
+<a href="#republish_csharp" style="color: inherit; text-decoration: inherit;">Republish</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3_csharp">
+<a href="#s3_csharp" style="color: inherit; text-decoration: inherit;">S3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sns_csharp">
+<a href="#sns_csharp" style="color: inherit; text-decoration: inherit;">Sns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqs_csharp">
+<a href="#sqs_csharp" style="color: inherit; text-decoration: inherit;">Sqs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stepfunctions_csharp">
+<a href="#stepfunctions_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchalarm_go">
+<a href="#cloudwatchalarm_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchmetric_go">
+<a href="#cloudwatchmetric_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Metric</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamodb_go">
+<a href="#dynamodb_go" style="color: inherit; text-decoration: inherit;">Dynamodb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamodbv2_go">
+<a href="#dynamodbv2_go" style="color: inherit; text-decoration: inherit;">Dynamodbv2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_go">
+<a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firehose_go">
+<a href="#firehose_go" style="color: inherit; text-decoration: inherit;">Firehose</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iotanalytics_go">
+<a href="#iotanalytics_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Analytics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iotevents_go">
+<a href="#iotevents_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kinesis_go">
+<a href="#kinesis_go" style="color: inherit; text-decoration: inherit;">Kinesis</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lambda_go">
+<a href="#lambda_go" style="color: inherit; text-decoration: inherit;">Lambda</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="republish_go">
+<a href="#republish_go" style="color: inherit; text-decoration: inherit;">Republish</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3_go">
+<a href="#s3_go" style="color: inherit; text-decoration: inherit;">S3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sns_go">
+<a href="#sns_go" style="color: inherit; text-decoration: inherit;">Sns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqs_go">
+<a href="#sqs_go" style="color: inherit; text-decoration: inherit;">Sqs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stepfunctions_go">
+<a href="#stepfunctions_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchalarm_nodejs">
+<a href="#cloudwatchalarm_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatchmetric_nodejs">
+<a href="#cloudwatchmetric_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Metric</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamodb_nodejs">
+<a href="#dynamodb_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamodbv2_nodejs">
+<a href="#dynamodbv2_nodejs" style="color: inherit; text-decoration: inherit;">dynamodbv2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_nodejs">
+<a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firehose_nodejs">
+<a href="#firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iotanalytics_nodejs">
+<a href="#iotanalytics_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Analytics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iotevents_nodejs">
+<a href="#iotevents_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kinesis_nodejs">
+<a href="#kinesis_nodejs" style="color: inherit; text-decoration: inherit;">kinesis</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lambda_nodejs">
+<a href="#lambda_nodejs" style="color: inherit; text-decoration: inherit;">lambda</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="republish_nodejs">
+<a href="#republish_nodejs" style="color: inherit; text-decoration: inherit;">republish</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3_nodejs">
+<a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sns_nodejs">
+<a href="#sns_nodejs" style="color: inherit; text-decoration: inherit;">sns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqs_nodejs">
+<a href="#sqs_nodejs" style="color: inherit; text-decoration: inherit;">sqs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stepfunctions_nodejs">
+<a href="#stepfunctions_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatch_alarm_python">
+<a href="#cloudwatch_alarm_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cloudwatch_metric_python">
+<a href="#cloudwatch_metric_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>metric</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamodb_python">
+<a href="#dynamodb_python" style="color: inherit; text-decoration: inherit;">dynamodb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamodbv2_python">
+<a href="#dynamodbv2_python" style="color: inherit; text-decoration: inherit;">dynamodbv2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_python">
+<a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firehose_python">
+<a href="#firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iot_analytics_python">
+<a href="#iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iot_events_python">
+<a href="#iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kinesis_python">
+<a href="#kinesis_python" style="color: inherit; text-decoration: inherit;">kinesis</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lambda_python">
+<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="republish_python">
+<a href="#republish_python" style="color: inherit; text-decoration: inherit;">republish</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="s3_python">
+<a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sns_python">
+<a href="#sns_python" style="color: inherit; text-decoration: inherit;">sns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqs_python">
+<a href="#sqs_python" style="color: inherit; text-decoration: inherit;">sqs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_functions_python">
+<a href="#step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionCloudwatchAlarm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionCloudwatchAlarm">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchAlarmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchAlarmOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionCloudwatchAlarmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionCloudwatchAlarm.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alarmname_csharp">
+<a href="#alarmname_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch alarm name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statereason_csharp">
+<a href="#statereason_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reason for the alarm change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statevalue_csharp">
+<a href="#statevalue_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alarmname_go">
+<a href="#alarmname_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch alarm name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statereason_go">
+<a href="#statereason_go" style="color: inherit; text-decoration: inherit;">State<wbr>Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reason for the alarm change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statevalue_go">
+<a href="#statevalue_go" style="color: inherit; text-decoration: inherit;">State<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alarmname_nodejs">
+<a href="#alarmname_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch alarm name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statereason_nodejs">
+<a href="#statereason_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reason for the alarm change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statevalue_nodejs">
+<a href="#statevalue_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alarmname_python">
+<a href="#alarmname_python" style="color: inherit; text-decoration: inherit;">alarm<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch alarm name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statereason_python">
+<a href="#statereason_python" style="color: inherit; text-decoration: inherit;">state<wbr>Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The reason for the alarm change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statevalue_python">
+<a href="#statevalue_python" style="color: inherit; text-decoration: inherit;">state<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionCloudwatchMetric">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionCloudwatchMetric">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchMetricOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionCloudwatchMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionCloudwatchMetric.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricname_csharp">
+<a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricnamespace_csharp">
+<a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric namespace name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricunit_csharp">
+<a href="#metricunit_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricvalue_csharp">
+<a href="#metricvalue_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metrictimestamp_csharp">
+<a href="#metrictimestamp_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricname_go">
+<a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricnamespace_go">
+<a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric namespace name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricunit_go">
+<a href="#metricunit_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricvalue_go">
+<a href="#metricvalue_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metrictimestamp_go">
+<a href="#metrictimestamp_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricname_nodejs">
+<a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricnamespace_nodejs">
+<a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric namespace name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricunit_nodejs">
+<a href="#metricunit_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricvalue_nodejs">
+<a href="#metricvalue_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metrictimestamp_nodejs">
+<a href="#metrictimestamp_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricnamespace_python">
+<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric namespace name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricunit_python">
+<a href="#metricunit_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metricvalue_python">
+<a href="#metricvalue_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metrictimestamp_python">
+<a href="#metrictimestamp_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionDynamodb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionDynamodb">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionDynamodbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionDynamodb.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hashkeyfield_csharp">
+<a href="#hashkeyfield_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hashkeyvalue_csharp">
+<a href="#hashkeyvalue_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tablename_csharp">
+<a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hashkeytype_csharp">
+<a href="#hashkeytype_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_csharp">
+<a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="payloadfield_csharp">
+<a href="#payloadfield_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action payload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeyfield_csharp">
+<a href="#rangekeyfield_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Key<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeytype_csharp">
+<a href="#rangekeytype_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeyvalue_csharp">
+<a href="#rangekeyvalue_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Key<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hashkeyfield_go">
+<a href="#hashkeyfield_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hashkeyvalue_go">
+<a href="#hashkeyvalue_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tablename_go">
+<a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hashkeytype_go">
+<a href="#hashkeytype_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_go">
+<a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="payloadfield_go">
+<a href="#payloadfield_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action payload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeyfield_go">
+<a href="#rangekeyfield_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Key<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeytype_go">
+<a href="#rangekeytype_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeyvalue_go">
+<a href="#rangekeyvalue_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Key<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hashkeyfield_nodejs">
+<a href="#hashkeyfield_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hashkeyvalue_nodejs">
+<a href="#hashkeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tablename_nodejs">
+<a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hashkeytype_nodejs">
+<a href="#hashkeytype_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_nodejs">
+<a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="payloadfield_nodejs">
+<a href="#payloadfield_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action payload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeyfield_nodejs">
+<a href="#rangekeyfield_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeytype_nodejs">
+<a href="#rangekeytype_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeyvalue_nodejs">
+<a href="#rangekeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range key value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hashkeyfield_python">
+<a href="#hashkeyfield_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hashkeyvalue_python">
+<a href="#hashkeyvalue_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_name_python">
+<a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hashkeytype_python">
+<a href="#hashkeytype_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_python">
+<a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="payloadfield_python">
+<a href="#payloadfield_python" style="color: inherit; text-decoration: inherit;">payload<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The action payload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeyfield_python">
+<a href="#rangekeyfield_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The range key name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeytype_python">
+<a href="#rangekeytype_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rangekeyvalue_python">
+<a href="#rangekeyvalue_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The range key value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionDynamodbv2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionDynamodbv2">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionDynamodbv2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionDynamodbv2.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="putitem_csharp">
+<a href="#putitem_csharp" style="color: inherit; text-decoration: inherit;">Put<wbr>Item</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="putitem_go">
+<a href="#putitem_go" style="color: inherit; text-decoration: inherit;">Put<wbr>Item</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="putitem_nodejs">
+<a href="#putitem_nodejs" style="color: inherit; text-decoration: inherit;">put<wbr>Item</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="putitem_python">
+<a href="#putitem_python" style="color: inherit; text-decoration: inherit;">put<wbr>Item</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionDynamodbv2PutItem">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionDynamodbv2PutItem">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2PutItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2PutItemOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionDynamodbv2PutItemArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionDynamodbv2PutItem.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tablename_csharp">
+<a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tablename_go">
+<a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tablename_nodejs">
+<a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_name_python">
+<a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the DynamoDB table.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionElasticsearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionElasticsearch">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionElasticsearchOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionElasticsearch.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_csharp">
+<a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint of your Elasticsearch domain.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the document you are storing.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="index_csharp">
+<a href="#index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Elasticsearch index where you want to store your data.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that has access to Elasticsearch.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of document you are storing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_go">
+<a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint of your Elasticsearch domain.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the document you are storing.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="index_go">
+<a href="#index_go" style="color: inherit; text-decoration: inherit;">Index</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Elasticsearch index where you want to store your data.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that has access to Elasticsearch.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of document you are storing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_nodejs">
+<a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint of your Elasticsearch domain.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the document you are storing.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="index_nodejs">
+<a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Elasticsearch index where you want to store your data.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that has access to Elasticsearch.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of document you are storing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_python">
+<a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint of your Elasticsearch domain.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the document you are storing.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="index_python">
+<a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Elasticsearch index where you want to store your data.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that has access to Elasticsearch.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of document you are storing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionFirehose">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionFirehose">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionFirehoseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionFirehose.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deliverystreamname_csharp">
+<a href="#deliverystreamname_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The delivery stream name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="separator_csharp">
+<a href="#separator_csharp" style="color: inherit; text-decoration: inherit;">Separator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deliverystreamname_go">
+<a href="#deliverystreamname_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The delivery stream name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="separator_go">
+<a href="#separator_go" style="color: inherit; text-decoration: inherit;">Separator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deliverystreamname_nodejs">
+<a href="#deliverystreamname_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The delivery stream name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="separator_nodejs">
+<a href="#separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deliverystreamname_python">
+<a href="#deliverystreamname_python" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The delivery stream name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="separator_python">
+<a href="#separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionIotAnalytics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionIotAnalytics">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionIotAnalyticsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionIotAnalyticsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionIotAnalyticsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionIotAnalytics.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="channelname_csharp">
+<a href="#channelname_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of AWS IOT Analytics channel.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="channelname_go">
+<a href="#channelname_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of AWS IOT Analytics channel.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="channelname_nodejs">
+<a href="#channelname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of AWS IOT Analytics channel.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="channelname_python">
+<a href="#channelname_python" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of AWS IOT Analytics channel.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionIotEvents">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionIotEvents">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionIotEventsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionIotEventsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionIotEventsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionIotEvents.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputname_csharp">
+<a href="#inputname_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS IoT Events input.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageid_csharp">
+<a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputname_go">
+<a href="#inputname_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS IoT Events input.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageid_go">
+<a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputname_nodejs">
+<a href="#inputname_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS IoT Events input.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageid_nodejs">
+<a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputname_python">
+<a href="#inputname_python" style="color: inherit; text-decoration: inherit;">input<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS IoT Events input.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageid_python">
+<a href="#messageid_python" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionKinesis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionKinesis">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionKinesisArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionKinesisOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionKinesisArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionKinesis.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="streamname_csharp">
+<a href="#streamname_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partitionkey_csharp">
+<a href="#partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The partition key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="streamname_go">
+<a href="#streamname_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partitionkey_go">
+<a href="#partitionkey_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The partition key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="streamname_nodejs">
+<a href="#streamname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partitionkey_nodejs">
+<a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The partition key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="streamname_python">
+<a href="#streamname_python" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Amazon Kinesis stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partitionkey_python">
+<a href="#partitionkey_python" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The partition key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionLambda">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionLambda">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionLambdaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionLambdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionLambda.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="functionarn_csharp">
+<a href="#functionarn_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="functionarn_go">
+<a href="#functionarn_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="functionarn_nodejs">
+<a href="#functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="function_arn_python">
+<a href="#function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionRepublish">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionRepublish">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionRepublishArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionRepublishOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionRepublishArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionRepublish.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="topic_csharp">
+<a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="qos_csharp">
+<a href="#qos_csharp" style="color: inherit; text-decoration: inherit;">Qos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="topic_go">
+<a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="qos_go">
+<a href="#qos_go" style="color: inherit; text-decoration: inherit;">Qos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="topic_nodejs">
+<a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="qos_nodejs">
+<a href="#qos_nodejs" style="color: inherit; text-decoration: inherit;">qos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="topic_python">
+<a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="qos_python">
+<a href="#qos_python" style="color: inherit; text-decoration: inherit;">qos</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionS3">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionS3">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionS3Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionS3Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionS3.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 bucket name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The object key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 bucket name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The object key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 bucket name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The object key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 bucket name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The object key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionSns">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionSns">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionSnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionSnsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionSnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionSns.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetarn_csharp">
+<a href="#targetarn_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the SNS topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageformat_csharp">
+<a href="#messageformat_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetarn_go">
+<a href="#targetarn_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the SNS topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageformat_go">
+<a href="#messageformat_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetarn_nodejs">
+<a href="#targetarn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the SNS topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageformat_nodejs">
+<a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_arn_python">
+<a href="#target_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the SNS topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messageformat_python">
+<a href="#messageformat_python" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionSqs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionSqs">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionSqsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionSqsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionSqsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionSqs.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queueurl_csharp">
+<a href="#queueurl_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Amazon SQS queue.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usebase64_csharp">
+<a href="#usebase64_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Base64</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use Base64 encoding.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queueurl_go">
+<a href="#queueurl_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Amazon SQS queue.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usebase64_go">
+<a href="#usebase64_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Base64</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use Base64 encoding.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queueurl_nodejs">
+<a href="#queueurl_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Amazon SQS queue.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usebase64_nodejs">
+<a href="#usebase64_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Base64</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use Base64 encoding.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_url_python">
+<a href="#queue_url_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Amazon SQS queue.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usebase64_python">
+<a href="#usebase64_python" style="color: inherit; text-decoration: inherit;">use<wbr>Base64</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use Base64 encoding.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleErrorActionStepFunctions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleErrorActionStepFunctions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionStepFunctionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionStepFunctionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionStepFunctionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionStepFunctions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statemachinename_csharp">
+<a href="#statemachinename_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="executionnameprefix_csharp">
+<a href="#executionnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Name<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statemachinename_go">
+<a href="#statemachinename_go" style="color: inherit; text-decoration: inherit;">State<wbr>Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="executionnameprefix_go">
+<a href="#executionnameprefix_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Name<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statemachinename_nodejs">
+<a href="#statemachinename_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="executionnameprefix_nodejs">
+<a href="#executionnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Name<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statemachinename_python">
+<a href="#statemachinename_python" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="executionnameprefix_python">
+<a href="#executionnameprefix_python" style="color: inherit; text-decoration: inherit;">execution<wbr>Name<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
 {{% /md %}}</dd>
 
 </dl>

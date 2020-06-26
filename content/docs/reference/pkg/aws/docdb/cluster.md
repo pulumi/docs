@@ -64,7 +64,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		docdb, err := docdb.NewCluster(ctx, "docdb", &docdb.ClusterArgs{
+		_, err = docdb.NewCluster(ctx, "docdb", &docdb.ClusterArgs{
 			BackupRetentionPeriod: pulumi.Int(5),
 			ClusterIdentifier:     pulumi.String("my-docdb-cluster"),
 			Engine:                pulumi.String("docdb"),

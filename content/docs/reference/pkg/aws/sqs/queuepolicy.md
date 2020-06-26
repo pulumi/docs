@@ -13,6 +13,153 @@ meta_desc: "Explore the QueuePolicy resource of the sqs module, including exampl
 Allows you to set a policy of an SQS Queue
 while referencing ARN of the queue within the policy.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+        {
+        });
+        var test = new Aws.Sqs.QueuePolicy("test", new Aws.Sqs.QueuePolicyArgs
+        {
+            Policy = queue.Arn.Apply(arn => @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Id"": ""sqspolicy"",
+  ""Statement"": [
+    {{
+      ""Sid"": ""First"",
+      ""Effect"": ""Allow"",
+      ""Principal"": ""*"",
+      ""Action"": ""sqs:SendMessage"",
+      ""Resource"": ""{arn}"",
+      ""Condition"": {{
+        ""ArnEquals"": {{
+          ""aws:SourceArn"": ""{aws_sns_topic.Example.Arn}""
+        }}
+      }}
+    }}
+  ]
+}}
+
+"),
+            QueueUrl = queue.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sqs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		queue, err := sqs.NewQueue(ctx, "queue", nil)
+		if err != nil {
+			return err
+		}
+		_, err = sqs.NewQueuePolicy(ctx, "test", &sqs.QueuePolicyArgs{
+			Policy: queue.Arn.ApplyT(func(arn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Id\": \"sqspolicy\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"First\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"sqs:SendMessage\",\n", "      \"Resource\": \"", arn, "\",\n", "      \"Condition\": {\n", "        \"ArnEquals\": {\n", "          \"aws:SourceArn\": \"", aws_sns_topic.Example.Arn, "\"\n", "        }\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+			}).(pulumi.StringOutput),
+			QueueUrl: queue.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+queue = aws.sqs.Queue("queue")
+test = aws.sqs.QueuePolicy("test",
+    policy=queue.arn.apply(lambda arn: f"""{{
+  "Version": "2012-10-17",
+  "Id": "sqspolicy",
+  "Statement": [
+    {{
+      "Sid": "First",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+      "Resource": "{arn}",
+      "Condition": {{
+        "ArnEquals": {{
+          "aws:SourceArn": "{aws_sns_topic["example"]["arn"]}"
+        }}
+      }}
+    }}
+  ]
+}}
+
+"""),
+    queue_url=queue.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const queue = new aws.sqs.Queue("q", {});
+const test = new aws.sqs.QueuePolicy("test", {
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Id": "sqspolicy",
+  "Statement": [
+    {
+      "Sid": "First",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+      "Resource": "${queue.arn}",
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": "${aws_sns_topic_example.arn}"
+        }
+      }
+    }
+  ]
+}
+`,
+    queueUrl: queue.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a QueuePolicy Resource {#create}

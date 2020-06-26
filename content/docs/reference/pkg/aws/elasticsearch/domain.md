@@ -60,7 +60,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
+		_, err = elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
 			ClusterConfig: &elasticsearch.DomainClusterConfigArgs{
 				ClusterConfig: pulumi.String("r4.large.elasticsearch"),
 			},
@@ -68,8 +68,8 @@ func main() {
 			SnapshotOptions: &elasticsearch.DomainSnapshotOptionsArgs{
 				SnapshotOptions: pulumi.Float64(23),
 			},
-			Tags: map[string]interface{}{
-				"Domain": "TestDomain",
+			Tags: pulumi.Map{
+				"Domain": pulumi.String("TestDomain"),
 			},
 		})
 		if err != nil {
@@ -170,7 +170,38 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = elasticsearch.NewDomain(ctx, "example", &elasticsearch.DomainArgs{
+			AccessPolicies: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"es:*\",\n", "      \"Principal\": \"*\",\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"arn:aws:es:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":domain/", domain, "/*\",\n", "      \"Condition\": {\n", "        \"IpAddress\": {\"aws:SourceIp\": [\"66.193.100.22/32\"]}\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -231,6 +262,176 @@ const example = new aws.elasticsearch.Domain("example", {
   ]
 }
 `,
+});
+```
+
+{{% /example %}}
+
+### Log Publishing to CloudWatch Logs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+        {
+        });
+        var exampleLogResourcePolicy = new Aws.CloudWatch.LogResourcePolicy("exampleLogResourcePolicy", new Aws.CloudWatch.LogResourcePolicyArgs
+        {
+            PolicyDocument = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Effect"": ""Allow"",
+      ""Principal"": {
+        ""Service"": ""es.amazonaws.com""
+      },
+      ""Action"": [
+        ""logs:PutLogEvents"",
+        ""logs:PutLogEventsBatch"",
+        ""logs:CreateLogStream""
+      ],
+      ""Resource"": ""arn:aws:logs:*""
+    }
+  ]
+}
+
+",
+            PolicyName = "example",
+        });
+        var exampleDomain = new Aws.ElasticSearch.Domain("exampleDomain", new Aws.ElasticSearch.DomainArgs
+        {
+            LogPublishingOptions = 
+            {
+                new Aws.ElasticSearch.Inputs.DomainLogPublishingOptionArgs
+                {
+                    CloudwatchLogGroupArn = exampleLogGroup.Arn,
+                    LogType = "INDEX_SLOW_LOGS",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudwatch.NewLogResourcePolicy(ctx, "exampleLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
+			PolicyDocument: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"es.amazonaws.com\"\n", "      },\n", "      \"Action\": [\n", "        \"logs:PutLogEvents\",\n", "        \"logs:PutLogEventsBatch\",\n", "        \"logs:CreateLogStream\"\n", "      ],\n", "      \"Resource\": \"arn:aws:logs:*\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			PolicyName:     pulumi.String("example"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = elasticsearch.NewDomain(ctx, "exampleDomain", &elasticsearch.DomainArgs{
+			LogPublishingOptions: elasticsearch.DomainLogPublishingOptionArray{
+				&elasticsearch.DomainLogPublishingOptionArgs{
+					CloudwatchLogGroupArn: exampleLogGroup.Arn,
+					LogType:               pulumi.String("INDEX_SLOW_LOGS"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
+example_log_resource_policy = aws.cloudwatch.LogResourcePolicy("exampleLogResourcePolicy",
+    policy_document="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "es.amazonaws.com"
+      },
+      "Action": [
+        "logs:PutLogEvents",
+        "logs:PutLogEventsBatch",
+        "logs:CreateLogStream"
+      ],
+      "Resource": "arn:aws:logs:*"
+    }
+  ]
+}
+
+""",
+    policy_name="example")
+example_domain = aws.elasticsearch.Domain("exampleDomain", log_publishing_options=[{
+    "cloudwatch_log_group_arn": example_log_group.arn,
+    "logType": "INDEX_SLOW_LOGS",
+}])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {});
+const exampleLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("example", {
+    policyDocument: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "es.amazonaws.com"
+      },
+      "Action": [
+        "logs:PutLogEvents",
+        "logs:PutLogEventsBatch",
+        "logs:CreateLogStream"
+      ],
+      "Resource": "arn:aws:logs:*"
+    }
+  ]
+}
+`,
+    policyName: "example",
+});
+const exampleDomain = new aws.elasticsearch.Domain("example", {
+    logPublishingOptions: [{
+        cloudwatchLogGroupArn: exampleLogGroup.arn,
+        logType: "INDEX_SLOW_LOGS",
+    }],
 });
 ```
 

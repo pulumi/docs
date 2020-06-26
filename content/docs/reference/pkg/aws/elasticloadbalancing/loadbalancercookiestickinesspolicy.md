@@ -83,7 +83,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		foo, err := elb.NewLoadBalancerCookieStickinessPolicy(ctx, "foo", &elb.LoadBalancerCookieStickinessPolicyArgs{
+		_, err = elb.NewLoadBalancerCookieStickinessPolicy(ctx, "foo", &elb.LoadBalancerCookieStickinessPolicyArgs{
 			CookieExpirationPeriod: pulumi.Int(600),
 			LbPort:                 pulumi.Int(80),
 			LoadBalancer:           lb.ID(),

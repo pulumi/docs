@@ -98,7 +98,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = opsworks.NewInstance(ctx, "my-instance", &opsworks.InstanceArgs{
+			InstanceType: pulumi.String("t2.micro"),
+			LayerIds: pulumi.StringArray{
+				pulumi.String(aws_opsworks_custom_layer.My - layer.Id),
+			},
+			Os:      pulumi.String("Amazon Linux 2015.09"),
+			StackId: pulumi.String(aws_opsworks_stack.Main.Id),
+			State:   pulumi.String("stopped"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}

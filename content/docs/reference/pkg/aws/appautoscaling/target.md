@@ -14,6 +14,333 @@ Provides an Application AutoScaling ScalableTarget resource. To manage policies 
 
 > **NOTE:** The [Application Auto Scaling service automatically attempts to manage IAM Service-Linked Roles](https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-roles) when registering certain service namespaces for the first time. To manually manage this role, see the `aws.iam.ServiceLinkedRole` resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DynamoDB Table Autoscaling
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dynamodbTableReadTarget = new Aws.AppAutoScaling.Target("dynamodbTableReadTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 100,
+            MinCapacity = 5,
+            ResourceId = $"table/{aws_dynamodb_table.Example.Name}",
+            ScalableDimension = "dynamodb:table:ReadCapacityUnits",
+            ServiceNamespace = "dynamodb",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = appautoscaling.NewTarget(ctx, "dynamodbTableReadTarget", &appautoscaling.TargetArgs{
+			MaxCapacity:       pulumi.Int(100),
+			MinCapacity:       pulumi.Int(5),
+			ResourceId:        pulumi.String(fmt.Sprintf("%v%v", "table/", aws_dynamodb_table.Example.Name)),
+			ScalableDimension: pulumi.String("dynamodb:table:ReadCapacityUnits"),
+			ServiceNamespace:  pulumi.String("dynamodb"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+dynamodb_table_read_target = aws.appautoscaling.Target("dynamodbTableReadTarget",
+    max_capacity=100,
+    min_capacity=5,
+    resource_id=f"table/{aws_dynamodb_table['example']['name']}",
+    scalable_dimension="dynamodb:table:ReadCapacityUnits",
+    service_namespace="dynamodb")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const dynamodbTableReadTarget = new aws.appautoscaling.Target("dynamodb_table_read_target", {
+    maxCapacity: 100,
+    minCapacity: 5,
+    resourceId: pulumi.interpolate`table/${aws_dynamodb_table_example.name}`,
+    scalableDimension: "dynamodb:table:ReadCapacityUnits",
+    serviceNamespace: "dynamodb",
+});
+```
+
+{{% /example %}}
+
+### DynamoDB Index Autoscaling
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dynamodbIndexReadTarget = new Aws.AppAutoScaling.Target("dynamodbIndexReadTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 100,
+            MinCapacity = 5,
+            ResourceId = $"table/{aws_dynamodb_table.Example.Name}/index/{@var.Index_name}",
+            ScalableDimension = "dynamodb:index:ReadCapacityUnits",
+            ServiceNamespace = "dynamodb",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+dynamodb_index_read_target = aws.appautoscaling.Target("dynamodbIndexReadTarget",
+    max_capacity=100,
+    min_capacity=5,
+    resource_id=f"table/{aws_dynamodb_table['example']['name']}/index/{var['index_name']}",
+    scalable_dimension="dynamodb:index:ReadCapacityUnits",
+    service_namespace="dynamodb")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const dynamodbIndexReadTarget = new aws.appautoscaling.Target("dynamodb_index_read_target", {
+    maxCapacity: 100,
+    minCapacity: 5,
+    resourceId: pulumi.interpolate`table/${aws_dynamodb_table_example.name}/index/${var_index_name}`,
+    scalableDimension: "dynamodb:index:ReadCapacityUnits",
+    serviceNamespace: "dynamodb",
+});
+```
+
+{{% /example %}}
+
+### ECS Service Autoscaling
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ecsTarget = new Aws.AppAutoScaling.Target("ecsTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 4,
+            MinCapacity = 1,
+            ResourceId = $"service/{aws_ecs_cluster.Example.Name}/{aws_ecs_service.Example.Name}",
+            ScalableDimension = "ecs:service:DesiredCount",
+            ServiceNamespace = "ecs",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = appautoscaling.NewTarget(ctx, "ecsTarget", &appautoscaling.TargetArgs{
+			MaxCapacity:       pulumi.Int(4),
+			MinCapacity:       pulumi.Int(1),
+			ResourceId:        pulumi.String(fmt.Sprintf("%v%v%v%v", "service/", aws_ecs_cluster.Example.Name, "/", aws_ecs_service.Example.Name)),
+			ScalableDimension: pulumi.String("ecs:service:DesiredCount"),
+			ServiceNamespace:  pulumi.String("ecs"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+ecs_target = aws.appautoscaling.Target("ecsTarget",
+    max_capacity=4,
+    min_capacity=1,
+    resource_id=f"service/{aws_ecs_cluster['example']['name']}/{aws_ecs_service['example']['name']}",
+    scalable_dimension="ecs:service:DesiredCount",
+    service_namespace="ecs")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ecsTarget = new aws.appautoscaling.Target("ecs_target", {
+    maxCapacity: 4,
+    minCapacity: 1,
+    resourceId: pulumi.interpolate`service/${aws_ecs_cluster_example.name}/${aws_ecs_service_example.name}`,
+    scalableDimension: "ecs:service:DesiredCount",
+    serviceNamespace: "ecs",
+});
+```
+
+{{% /example %}}
+
+### Aurora Read Replica Autoscaling
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicas = new Aws.AppAutoScaling.Target("replicas", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 15,
+            MinCapacity = 1,
+            ResourceId = $"cluster:{aws_rds_cluster.Example.Id}",
+            ScalableDimension = "rds:cluster:ReadReplicaCount",
+            ServiceNamespace = "rds",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = appautoscaling.NewTarget(ctx, "replicas", &appautoscaling.TargetArgs{
+			MaxCapacity:       pulumi.Int(15),
+			MinCapacity:       pulumi.Int(1),
+			ResourceId:        pulumi.String(fmt.Sprintf("%v%v", "cluster:", aws_rds_cluster.Example.Id)),
+			ScalableDimension: pulumi.String("rds:cluster:ReadReplicaCount"),
+			ServiceNamespace:  pulumi.String("rds"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+replicas = aws.appautoscaling.Target("replicas",
+    max_capacity=15,
+    min_capacity=1,
+    resource_id=f"cluster:{aws_rds_cluster['example']['id']}",
+    scalable_dimension="rds:cluster:ReadReplicaCount",
+    service_namespace="rds")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const replicas = new aws.appautoscaling.Target("replicas", {
+    maxCapacity: 15,
+    minCapacity: 1,
+    resourceId: pulumi.interpolate`cluster:${aws_rds_cluster_example.id}`,
+    scalableDimension: "rds:cluster:ReadReplicaCount",
+    serviceNamespace: "rds",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Target Resource {#create}

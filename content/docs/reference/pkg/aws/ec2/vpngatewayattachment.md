@@ -72,14 +72,14 @@ func main() {
 			return err
 		}
 		vpn, err := ec2.NewVpnGateway(ctx, "vpn", &ec2.VpnGatewayArgs{
-			Tags: map[string]interface{}{
-				"Name": "example-vpn-gateway",
+			Tags: pulumi.Map{
+				"Name": pulumi.String("example-vpn-gateway"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		vpnAttachment, err := ec2.NewVpnGatewayAttachment(ctx, "vpnAttachment", &ec2.VpnGatewayAttachmentArgs{
+		_, err = ec2.NewVpnGatewayAttachment(ctx, "vpnAttachment", &ec2.VpnGatewayAttachmentArgs{
 			VpcId:        network.ID(),
 			VpnGatewayId: vpn.ID(),
 		})

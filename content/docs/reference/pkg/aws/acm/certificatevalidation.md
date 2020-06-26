@@ -371,7 +371,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		certCertificateValidation, err := acm.NewCertificateValidation(ctx, "certCertificateValidation", &acm.CertificateValidationArgs{
+		_, err = acm.NewCertificateValidation(ctx, "certCertificateValidation", &acm.CertificateValidationArgs{
 			CertificateArn: certCertificate.Arn,
 		})
 		if err != nil {

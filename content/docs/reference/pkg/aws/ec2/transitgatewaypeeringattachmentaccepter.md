@@ -52,9 +52,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := ec2.NewTransitGatewayPeeringAttachmentAccepter(ctx, "example", &ec2.TransitGatewayPeeringAttachmentAccepterArgs{
-			Tags: map[string]interface{}{
-				"Name": "Example cross-account attachment",
+		_, err = ec2.NewTransitGatewayPeeringAttachmentAccepter(ctx, "example", &ec2.TransitGatewayPeeringAttachmentAccepterArgs{
+			Tags: pulumi.Map{
+				"Name": pulumi.String("Example cross-account attachment"),
 			},
 			TransitGatewayAttachmentId: pulumi.String(aws_ec2_transit_gateway_peering_attachment.Example.Id),
 		})

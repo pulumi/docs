@@ -67,17 +67,17 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := codebuild.NewWebhook(ctx, "example", &codebuild.WebhookArgs{
+		_, err = codebuild.NewWebhook(ctx, "example", &codebuild.WebhookArgs{
 			FilterGroups: codebuild.WebhookFilterGroupArray{
 				&codebuild.WebhookFilterGroupArgs{
-					Filter: []map[string]interface{}{
-						map[string]interface{}{
-							"pattern": "PUSH",
-							"type":    "EVENT",
+					Filter: pulumi.MapArray{
+						pulumi.Map{
+							"pattern": pulumi.String("PUSH"),
+							"type":    pulumi.String("EVENT"),
 						},
-						map[string]interface{}{
-							"pattern": "master",
-							"type":    "HEAD_REF",
+						pulumi.Map{
+							"pattern": pulumi.String("master"),
+							"type":    pulumi.String("HEAD_REF"),
 						},
 					},
 				},

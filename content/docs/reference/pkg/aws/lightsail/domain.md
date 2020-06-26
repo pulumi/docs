@@ -54,7 +54,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		domainTest, err := lightsail.NewDomain(ctx, "domainTest", &lightsail.DomainArgs{
+		_, err = lightsail.NewDomain(ctx, "domainTest", &lightsail.DomainArgs{
 			DomainName: pulumi.String("mydomain.com"),
 		})
 		if err != nil {

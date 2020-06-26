@@ -216,15 +216,15 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		bucket, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{
 			Acl: pulumi.String("private"),
-			Tags: map[string]interface{}{
-				"Name": "My bucket",
+			Tags: pulumi.Map{
+				"Name": pulumi.String("My bucket"),
 			},
 		})
 		if err != nil {
 			return err
 		}
 		s3OriginId := "myS3Origin"
-		s3Distribution, err := cloudfront.NewDistribution(ctx, "s3Distribution", &cloudfront.DistributionArgs{
+		_, err = cloudfront.NewDistribution(ctx, "s3Distribution", &cloudfront.DistributionArgs{
 			Aliases: pulumi.StringArray{
 				pulumi.String("mysite.example.com"),
 				pulumi.String("yoursite.example.com"),
@@ -339,8 +339,8 @@ func main() {
 					RestrictionType: pulumi.String("whitelist"),
 				},
 			},
-			Tags: map[string]interface{}{
-				"Environment": "production",
+			Tags: pulumi.Map{
+				"Environment": pulumi.String("production"),
 			},
 			ViewerCertificate: &cloudfront.DistributionViewerCertificateArgs{
 				CloudfrontDefaultCertificate: pulumi.Bool(true),
@@ -1040,7 +1040,7 @@ this to`false` will skip the process. Default: `true`.
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 {{% /md %}}</dd>
 
 </dl>
@@ -1281,7 +1281,7 @@ this to`false` will skip the process. Default: `true`.
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 {{% /md %}}</dd>
 
 </dl>
@@ -1522,7 +1522,7 @@ this to`false` will skip the process. Default: `true`.
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 {{% /md %}}</dd>
 
 </dl>
@@ -1763,7 +1763,7 @@ this to`false` will skip the process. Default: `true`.
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 {{% /md %}}</dd>
 
 </dl>
@@ -2754,7 +2754,7 @@ this to`false` will skip the process. Default: `true`.
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 {{% /md %}}</dd>
 
 </dl>
@@ -3104,7 +3104,7 @@ this to`false` will skip the process. Default: `true`.
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 {{% /md %}}</dd>
 
 </dl>
@@ -3454,7 +3454,7 @@ this to`false` will skip the process. Default: `true`.
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 {{% /md %}}</dd>
 
 </dl>
@@ -3804,7 +3804,7 @@ this to`false` will skip the process. Default: `true`.
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 {{% /md %}}</dd>
 
 </dl>

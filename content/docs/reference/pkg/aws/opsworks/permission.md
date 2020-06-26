@@ -52,7 +52,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		myStackPermission, err := opsworks.NewPermission(ctx, "myStackPermission", &opsworks.PermissionArgs{
+		_, err = opsworks.NewPermission(ctx, "myStackPermission", &opsworks.PermissionArgs{
 			AllowSsh:  pulumi.Bool(true),
 			AllowSudo: pulumi.Bool(true),
 			Level:     pulumi.String("iam_only"),

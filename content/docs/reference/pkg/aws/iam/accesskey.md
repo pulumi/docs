@@ -12,6 +12,164 @@ meta_desc: "Explore the AccessKey resource of the iam module, including examples
 
 Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lbUser = new Aws.Iam.User("lbUser", new Aws.Iam.UserArgs
+        {
+            Path = "/system/",
+        });
+        var lbAccessKey = new Aws.Iam.AccessKey("lbAccessKey", new Aws.Iam.AccessKeyArgs
+        {
+            PgpKey = "keybase:some_person_that_exists",
+            User = lbUser.Name,
+        });
+        var lbRo = new Aws.Iam.UserPolicy("lbRo", new Aws.Iam.UserPolicyArgs
+        {
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": [
+        ""ec2:Describe*""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": ""*""
+    }
+  ]
+}
+
+",
+            User = lbUser.Name,
+        });
+        this.Secret = lbAccessKey.EncryptedSecret;
+    }
+
+    [Output("secret")]
+    public Output<string> Secret { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		lbUser, err := iam.NewUser(ctx, "lbUser", &iam.UserArgs{
+			Path: pulumi.String("/system/"),
+		})
+		if err != nil {
+			return err
+		}
+		lbAccessKey, err := iam.NewAccessKey(ctx, "lbAccessKey", &iam.AccessKeyArgs{
+			PgpKey: pulumi.String("keybase:some_person_that_exists"),
+			User:   lbUser.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			User:   lbUser.Name,
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("secret", lbAccessKey.EncryptedSecret)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+lb_user = aws.iam.User("lbUser", path="/system/")
+lb_access_key = aws.iam.AccessKey("lbAccessKey",
+    pgp_key="keybase:some_person_that_exists",
+    user=lb_user.name)
+lb_ro = aws.iam.UserPolicy("lbRo",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+
+""",
+    user=lb_user.name)
+pulumi.export("secret", lb_access_key.encrypted_secret)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const lbUser = new aws.iam.User("lb", {
+    path: "/system/",
+});
+const lbAccessKey = new aws.iam.AccessKey("lb", {
+    pgpKey: "keybase:some_person_that_exists",
+    user: lbUser.name,
+});
+const lbRo = new aws.iam.UserPolicy("lb_ro", {
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+`,
+    user: lbUser.name,
+});
+
+export const secret = lbAccessKey.encryptedSecret;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessKey Resource {#create}

@@ -52,14 +52,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := ec2transitgateway.LookupPeeringAttachment(ctx, &ec2transitgateway.LookupPeeringAttachmentArgs{
-			Filters: ec2transitgateway.getPeeringAttachmentFilterArray{
-				&ec2transitgateway.LookupPeeringAttachmentFilter{
+		_, err := ec2transitgateway.LookupPeeringAttachment(ctx, &ec2transitgateway.LookupPeeringAttachmentArgs{
+			Filters: []ec2transitgateway.GetPeeringAttachmentFilter{
+				ec2transitgateway.GetPeeringAttachmentFilter{
 					Name: "transit-gateway-attachment-id",
 					Values: []string{
 						"tgw-attach-12345678",
@@ -132,13 +133,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		attachment, err := ec2transitgateway.LookupPeeringAttachment(ctx, &ec2transitgateway.LookupPeeringAttachmentArgs{
-			Id: "tgw-attach-12345678",
+		opt0 := "tgw-attach-12345678"
+		_, err := ec2transitgateway.LookupPeeringAttachment(ctx, &ec2transitgateway.LookupPeeringAttachmentArgs{
+			Id: &opt0,
 		}, nil)
 		if err != nil {
 			return err

@@ -59,7 +59,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		tftest, err := elasticbeanstalk.NewApplication(ctx, "tftest", &elasticbeanstalk.ApplicationArgs{
+		_, err = elasticbeanstalk.NewApplication(ctx, "tftest", &elasticbeanstalk.ApplicationArgs{
 			AppversionLifecycle: &elasticbeanstalk.ApplicationAppversionLifecycleArgs{
 				DeleteSourceFromS3: pulumi.Bool(true),
 				MaxCount:           pulumi.Int(128),

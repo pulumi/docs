@@ -48,12 +48,13 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		selected, err := ec2.LookupCoipPool(ctx, &ec2.LookupCoipPoolArgs{
+		_, err := ec2.GetCoipPool(ctx, &ec2.GetCoipPoolArgs{
 			Id: coipPoolId,
 		}, nil)
 		if err != nil {

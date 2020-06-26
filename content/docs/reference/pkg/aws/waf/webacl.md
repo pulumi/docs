@@ -113,7 +113,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		wafAcl, err := waf.NewWebAcl(ctx, "wafAcl", &waf.WebAclArgs{
+		_, err = waf.NewWebAcl(ctx, "wafAcl", &waf.WebAclArgs{
 			DefaultAction: &waf.WebAclDefaultActionArgs{
 				Type: pulumi.String("ALLOW"),
 			},
@@ -260,17 +260,17 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := waf.NewWebAcl(ctx, "example", &waf.WebAclArgs{
+		_, err = waf.NewWebAcl(ctx, "example", &waf.WebAclArgs{
 			LoggingConfiguration: &waf.WebAclLoggingConfigurationArgs{
 				LogDestination: pulumi.String(aws_kinesis_firehose_delivery_stream.Example.Arn),
 				RedactedFields: &waf.WebAclLoggingConfigurationRedactedFieldsArgs{
-					FieldToMatch: []interface{}{
-						map[string]interface{}{
-							"type": "URI",
+					FieldToMatch: pulumi.Array{
+						pulumi.Map{
+							"type": pulumi.String("URI"),
 						},
-						map[string]interface{}{
-							"data": "referer",
-							"type": "HEADER",
+						pulumi.Map{
+							"data": pulumi.String("referer"),
+							"type": pulumi.String("HEADER"),
 						},
 					},
 				},

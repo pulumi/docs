@@ -52,14 +52,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := ec2transitgateway.LookupTransitGateway(ctx, &ec2transitgateway.LookupTransitGatewayArgs{
-			Filters: ec2transitgateway.getTransitGatewayFilterArray{
-				&ec2transitgateway.LookupTransitGatewayFilter{
+		_, err := ec2transitgateway.LookupTransitGateway(ctx, &ec2transitgateway.LookupTransitGatewayArgs{
+			Filters: []ec2transitgateway.GetTransitGatewayFilter{
+				ec2transitgateway.GetTransitGatewayFilter{
 					Name: "options.amazon-side-asn",
 					Values: []string{
 						"64512",
@@ -132,13 +133,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := ec2transitgateway.LookupTransitGateway(ctx, &ec2transitgateway.LookupTransitGatewayArgs{
-			Id: "tgw-12345678",
+		opt0 := "tgw-12345678"
+		_, err := ec2transitgateway.LookupTransitGateway(ctx, &ec2transitgateway.LookupTransitGatewayArgs{
+			Id: &opt0,
 		}, nil)
 		if err != nil {
 			return err

@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		lb, err := opsworks.NewHaproxyLayer(ctx, "lb", &opsworks.HaproxyLayerArgs{
+		_, err = opsworks.NewHaproxyLayer(ctx, "lb", &opsworks.HaproxyLayerArgs{
 			StackId:       pulumi.String(aws_opsworks_stack.Main.Id),
 			StatsPassword: pulumi.String("foobarbaz"),
 		})

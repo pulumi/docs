@@ -12,6 +12,125 @@ meta_desc: "Explore the Group resource of the resourcegroups module, including e
 
 Provides a Resource Group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.ResourceGroups.Group("test", new Aws.ResourceGroups.GroupArgs
+        {
+            ResourceQuery = new Aws.ResourceGroups.Inputs.GroupResourceQueryArgs
+            {
+                Query = @"{
+  ""ResourceTypeFilters"": [
+    ""AWS::EC2::Instance""
+  ],
+  ""TagFilters"": [
+    {
+      ""Key"": ""Stage"",
+      ""Values"": [""Test""]
+    }
+  ]
+}
+
+",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/resourcegroups"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = resourcegroups.NewGroup(ctx, "test", &resourcegroups.GroupArgs{
+			ResourceQuery: &resourcegroups.GroupResourceQueryArgs{
+				Query: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"ResourceTypeFilters\": [\n", "    \"AWS::EC2::Instance\"\n", "  ],\n", "  \"TagFilters\": [\n", "    {\n", "      \"Key\": \"Stage\",\n", "      \"Values\": [\"Test\"]\n", "    }\n", "  ]\n", "}\n", "\n")),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.resourcegroups.Group("test", resource_query={
+    "query": """{
+  "ResourceTypeFilters": [
+    "AWS::EC2::Instance"
+  ],
+  "TagFilters": [
+    {
+      "Key": "Stage",
+      "Values": ["Test"]
+    }
+  ]
+}
+
+""",
+})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.resourcegroups.Group("test", {
+    resourceQuery: {
+        query: `{
+  "ResourceTypeFilters": [
+    "AWS::EC2::Instance"
+  ],
+  "TagFilters": [
+    {
+      "Key": "Stage",
+      "Values": ["Test"]
+    }
+  ]
+}
+`,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Group Resource {#create}

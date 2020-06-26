@@ -12,6 +12,124 @@ meta_desc: "Explore the Stack resource of the opsworks module, including example
 
 Provides an OpsWorks stack resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Aws.OpsWorks.Stack("main", new Aws.OpsWorks.StackArgs
+        {
+            CustomJson = @"{
+ ""foobar"": {
+    ""version"": ""1.0.0""
+  }
+}
+
+",
+            DefaultInstanceProfileArn = aws_iam_instance_profile.Opsworks.Arn,
+            Region = "us-west-1",
+            ServiceRoleArn = aws_iam_role.Opsworks.Arn,
+            Tags = 
+            {
+                { "Name", "foobar-stack" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = opsworks.NewStack(ctx, "main", &opsworks.StackArgs{
+			CustomJson:                pulumi.String(fmt.Sprintf("%v%v%v%v%v%v", "{\n", " \"foobar\": {\n", "    \"version\": \"1.0.0\"\n", "  }\n", "}\n", "\n")),
+			DefaultInstanceProfileArn: pulumi.String(aws_iam_instance_profile.Opsworks.Arn),
+			Region:                    pulumi.String("us-west-1"),
+			ServiceRoleArn:            pulumi.String(aws_iam_role.Opsworks.Arn),
+			Tags: pulumi.Map{
+				"Name": pulumi.String("foobar-stack"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+main = aws.opsworks.Stack("main",
+    custom_json="""{
+ "foobar": {
+    "version": "1.0.0"
+  }
+}
+
+""",
+    default_instance_profile_arn=aws_iam_instance_profile["opsworks"]["arn"],
+    region="us-west-1",
+    service_role_arn=aws_iam_role["opsworks"]["arn"],
+    tags={
+        "Name": "foobar-stack",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const main = new aws.opsworks.Stack("main", {
+    customJson: `{
+ "foobar": {
+    "version": "1.0.0"
+  }
+}
+`,
+    defaultInstanceProfileArn: aws_iam_instance_profile_opsworks.arn,
+    region: "us-west-1",
+    serviceRoleArn: aws_iam_role_opsworks.arn,
+    tags: {
+        Name: "foobar-stack",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Stack Resource {#create}

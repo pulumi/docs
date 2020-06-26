@@ -72,7 +72,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		examplePerm, err := ec2.NewSnapshotCreateVolumePermission(ctx, "examplePerm", &ec2.SnapshotCreateVolumePermissionArgs{
+		_, err = ec2.NewSnapshotCreateVolumePermission(ctx, "examplePerm", &ec2.SnapshotCreateVolumePermissionArgs{
 			AccountId:  pulumi.String("12345678"),
 			SnapshotId: exampleSnapshot.ID(),
 		})

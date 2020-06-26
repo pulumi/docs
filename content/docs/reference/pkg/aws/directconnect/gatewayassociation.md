@@ -84,7 +84,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleGatewayAssociation, err := directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
+		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
 			AssociatedGatewayId: exampleVpnGateway.ID(),
 			DxGatewayId:         exampleGateway.ID(),
 		})
@@ -192,7 +192,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleGatewayAssociation, err := directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
+		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
 			AllowedPrefixes: pulumi.StringArray{
 				pulumi.String("10.255.255.0/30"),
 				pulumi.String("10.255.255.8/30"),
@@ -319,7 +319,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleGatewayAssociation, err := directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
+		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
 			AllowedPrefixes: pulumi.StringArray{
 				pulumi.String("210.52.109.0/24"),
 				pulumi.String("175.45.176.0/22"),

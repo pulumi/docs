@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		sys, err := route53.NewResolverRule(ctx, "sys", &route53.ResolverRuleArgs{
+		_, err = route53.NewResolverRule(ctx, "sys", &route53.ResolverRuleArgs{
 			DomainName: pulumi.String("subdomain.example.com"),
 			RuleType:   pulumi.String("SYSTEM"),
 		})
@@ -134,12 +134,12 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		fwd, err := route53.NewResolverRule(ctx, "fwd", &route53.ResolverRuleArgs{
+		_, err = route53.NewResolverRule(ctx, "fwd", &route53.ResolverRuleArgs{
 			DomainName:         pulumi.String("example.com"),
 			ResolverEndpointId: pulumi.String(aws_route53_resolver_endpoint.Foo.Id),
 			RuleType:           pulumi.String("FORWARD"),
-			Tags: map[string]interface{}{
-				"Environment": "Prod",
+			Tags: pulumi.Map{
+				"Environment": pulumi.String("Prod"),
 			},
 			TargetIps: route53.ResolverRuleTargetIpArray{
 				&route53.ResolverRuleTargetIpArgs{

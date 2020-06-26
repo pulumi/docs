@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := securityhub.NewAccount(ctx, "example", nil)
+		_, err = securityhub.NewAccount(ctx, "example", nil)
 		if err != nil {
 			return err
 		}

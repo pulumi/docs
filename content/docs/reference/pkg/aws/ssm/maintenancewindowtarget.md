@@ -103,7 +103,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		target1, err := ssm.NewMaintenanceWindowTarget(ctx, "target1", &ssm.MaintenanceWindowTargetArgs{
+		_, err = ssm.NewMaintenanceWindowTarget(ctx, "target1", &ssm.MaintenanceWindowTargetArgs{
 			Description:  pulumi.String("This is a maintenance window target"),
 			ResourceType: pulumi.String("INSTANCE"),
 			Targets: ssm.MaintenanceWindowTargetTargetArray{
@@ -222,7 +222,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		target1, err := ssm.NewMaintenanceWindowTarget(ctx, "target1", &ssm.MaintenanceWindowTargetArgs{
+		_, err = ssm.NewMaintenanceWindowTarget(ctx, "target1", &ssm.MaintenanceWindowTargetArgs{
 			Description:  pulumi.String("This is a maintenance window target"),
 			ResourceType: pulumi.String("RESOURCE_GROUP"),
 			Targets: ssm.MaintenanceWindowTargetTargetArray{

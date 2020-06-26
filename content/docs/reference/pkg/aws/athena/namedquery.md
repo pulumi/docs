@@ -12,6 +12,186 @@ meta_desc: "Explore the NamedQuery resource of the athena module, including exam
 
 Provides an Athena Named Query resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hogeBucket = new Aws.S3.Bucket("hogeBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var testKey = new Aws.Kms.Key("testKey", new Aws.Kms.KeyArgs
+        {
+            DeletionWindowInDays = 7,
+            Description = "Athena KMS Key",
+        });
+        var testWorkgroup = new Aws.Athena.Workgroup("testWorkgroup", new Aws.Athena.WorkgroupArgs
+        {
+            Configuration = new Aws.Athena.Inputs.WorkgroupConfigurationArgs
+            {
+                ResultConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationArgs
+                {
+                    EncryptionConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs
+                    {
+                        EncryptionOption = "SSE_KMS",
+                        KmsKeyArn = testKey.Arn,
+                    },
+                },
+            },
+        });
+        var hogeDatabase = new Aws.Athena.Database("hogeDatabase", new Aws.Athena.DatabaseArgs
+        {
+            Bucket = hogeBucket.Id,
+            Name = "users",
+        });
+        var foo = new Aws.Athena.NamedQuery("foo", new Aws.Athena.NamedQueryArgs
+        {
+            Database = hogeDatabase.Name,
+            Query = hogeDatabase.Name.Apply(name => $"SELECT * FROM {name} limit 10;"),
+            Workgroup = testWorkgroup.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		hogeBucket, err := s3.NewBucket(ctx, "hogeBucket", nil)
+		if err != nil {
+			return err
+		}
+		testKey, err := kms.NewKey(ctx, "testKey", &kms.KeyArgs{
+			DeletionWindowInDays: pulumi.Int(7),
+			Description:          pulumi.String("Athena KMS Key"),
+		})
+		if err != nil {
+			return err
+		}
+		testWorkgroup, err := athena.NewWorkgroup(ctx, "testWorkgroup", &athena.WorkgroupArgs{
+			Configuration: &athena.WorkgroupConfigurationArgs{
+				ResultConfiguration: &athena.WorkgroupConfigurationResultConfigurationArgs{
+					EncryptionConfiguration: &athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs{
+						EncryptionOption: pulumi.String("SSE_KMS"),
+						KmsKeyArn:        testKey.Arn,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		hogeDatabase, err := athena.NewDatabase(ctx, "hogeDatabase", &athena.DatabaseArgs{
+			Bucket: hogeBucket.ID(),
+			Name:   pulumi.String("users"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = athena.NewNamedQuery(ctx, "foo", &athena.NamedQueryArgs{
+			Database: hogeDatabase.Name,
+			Query: hogeDatabase.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v%v", "SELECT * FROM ", name, " limit 10;"), nil
+			}).(pulumi.StringOutput),
+			Workgroup: testWorkgroup.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+hoge_bucket = aws.s3.Bucket("hogeBucket")
+test_key = aws.kms.Key("testKey",
+    deletion_window_in_days=7,
+    description="Athena KMS Key")
+test_workgroup = aws.athena.Workgroup("testWorkgroup", configuration={
+    "resultConfiguration": {
+        "encryption_configuration": {
+            "encryptionOption": "SSE_KMS",
+            "kms_key_arn": test_key.arn,
+        },
+    },
+})
+hoge_database = aws.athena.Database("hogeDatabase",
+    bucket=hoge_bucket.id,
+    name="users")
+foo = aws.athena.NamedQuery("foo",
+    database=hoge_database.name,
+    query=hoge_database.name.apply(lambda name: f"SELECT * FROM {name} limit 10;"),
+    workgroup=test_workgroup.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const hogeBucket = new aws.s3.Bucket("hoge", {});
+const testKey = new aws.kms.Key("test", {
+    deletionWindowInDays: 7,
+    description: "Athena KMS Key",
+});
+const testWorkgroup = new aws.athena.Workgroup("test", {
+    configuration: {
+        resultConfiguration: {
+            encryptionConfiguration: {
+                encryptionOption: "SSE_KMS",
+                kmsKeyArn: testKey.arn,
+            },
+        },
+    },
+});
+const hogeDatabase = new aws.athena.Database("hoge", {
+    bucket: hogeBucket.id,
+    name: "users",
+});
+const foo = new aws.athena.NamedQuery("foo", {
+    database: hogeDatabase.name,
+    query: pulumi.interpolate`SELECT * FROM ${hogeDatabase.name} limit 10;`,
+    workgroup: testWorkgroup.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NamedQuery Resource {#create}

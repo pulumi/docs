@@ -49,7 +49,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		foo, err := ssm.NewParameter(ctx, "foo", &ssm.ParameterArgs{
+		_, err = ssm.NewParameter(ctx, "foo", &ssm.ParameterArgs{
 			Type:  pulumi.String("String"),
 			Value: pulumi.String("bar"),
 		})

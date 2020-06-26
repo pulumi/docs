@@ -52,10 +52,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := inspector.NewResourceGroup(ctx, "example", &inspector.ResourceGroupArgs{
-			Tags: map[string]interface{}{
-				"Env":  "bar",
-				"Name": "foo",
+		_, err = inspector.NewResourceGroup(ctx, "example", &inspector.ResourceGroupArgs{
+			Tags: pulumi.Map{
+				"Env":  pulumi.String("bar"),
+				"Name": pulumi.String("foo"),
 			},
 		})
 		if err != nil {

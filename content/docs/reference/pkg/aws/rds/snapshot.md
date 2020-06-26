@@ -77,7 +77,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		test, err := rds.NewSnapshot(ctx, "test", &rds.SnapshotArgs{
+		_, err = rds.NewSnapshot(ctx, "test", &rds.SnapshotArgs{
 			DbInstanceIdentifier: bar.ID(),
 			DbSnapshotIdentifier: pulumi.String("testsnapshot1234"),
 		})

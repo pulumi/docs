@@ -22,6 +22,139 @@ Elastic Beanstalk Environments it is possible that an error may be returned
 when attempting to delete an Application Version while it is still in use by a different environment.
 To work around this you can either create each environment in a separate AWS account or create your `aws.elasticbeanstalk.ApplicationVersion` resources with a unique names in your Elastic Beanstalk Application. For example &lt;revision&gt;-&lt;environment&gt;.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultBucket = new Aws.S3.Bucket("defaultBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var defaultBucketObject = new Aws.S3.BucketObject("defaultBucketObject", new Aws.S3.BucketObjectArgs
+        {
+            Bucket = defaultBucket.Id,
+            Key = "beanstalk/go-v1.zip",
+            Source = new FileAsset("go-v1.zip"),
+        });
+        var defaultApplication = new Aws.ElasticBeanstalk.Application("defaultApplication", new Aws.ElasticBeanstalk.ApplicationArgs
+        {
+            Description = "tf-test-desc",
+        });
+        var defaultApplicationVersion = new Aws.ElasticBeanstalk.ApplicationVersion("defaultApplicationVersion", new Aws.ElasticBeanstalk.ApplicationVersionArgs
+        {
+            Application = "tf-test-name",
+            Bucket = defaultBucket.Id,
+            Description = "application version",
+            Key = defaultBucketObject.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultBucket, err := s3.NewBucket(ctx, "defaultBucket", nil)
+		if err != nil {
+			return err
+		}
+		defaultBucketObject, err := s3.NewBucketObject(ctx, "defaultBucketObject", &s3.BucketObjectArgs{
+			Bucket: defaultBucket.ID(),
+			Key:    pulumi.String("beanstalk/go-v1.zip"),
+			Source: pulumi.NewFileAsset("go-v1.zip"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = elasticbeanstalk.NewApplication(ctx, "defaultApplication", &elasticbeanstalk.ApplicationArgs{
+			Description: pulumi.String("tf-test-desc"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = elasticbeanstalk.NewApplicationVersion(ctx, "defaultApplicationVersion", &elasticbeanstalk.ApplicationVersionArgs{
+			Application: pulumi.String("tf-test-name"),
+			Bucket:      defaultBucket.ID(),
+			Description: pulumi.String("application version"),
+			Key:         defaultBucketObject.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+default_bucket = aws.s3.Bucket("defaultBucket")
+default_bucket_object = aws.s3.BucketObject("defaultBucketObject",
+    bucket=default_bucket.id,
+    key="beanstalk/go-v1.zip",
+    source=pulumi.FileAsset("go-v1.zip"))
+default_application = aws.elasticbeanstalk.Application("defaultApplication", description="tf-test-desc")
+default_application_version = aws.elasticbeanstalk.ApplicationVersion("defaultApplicationVersion",
+    application="tf-test-name",
+    bucket=default_bucket.id,
+    description="application version",
+    key=default_bucket_object.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const defaultBucket = new aws.s3.Bucket("default", {});
+const defaultBucketObject = new aws.s3.BucketObject("default", {
+    bucket: defaultBucket.id,
+    key: "beanstalk/go-v1.zip",
+    source: new pulumi.asset.FileAsset("go-v1.zip"),
+});
+const defaultApplication = new aws.elasticbeanstalk.Application("default", {
+    description: "tf-test-desc",
+});
+const defaultApplicationVersion = new aws.elasticbeanstalk.ApplicationVersion("default", {
+    application: "tf-test-name",
+    bucket: defaultBucket.id,
+    description: "application version",
+    key: defaultBucketObject.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationVersion Resource {#create}

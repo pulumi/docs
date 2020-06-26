@@ -122,7 +122,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		foo, err := elb.NewSslNegotiationPolicy(ctx, "foo", &elb.SslNegotiationPolicyArgs{
+		_, err = elb.NewSslNegotiationPolicy(ctx, "foo", &elb.SslNegotiationPolicyArgs{
 			Attributes: elb.SslNegotiationPolicyAttributeArray{
 				&elb.SslNegotiationPolicyAttributeArgs{
 					Name:  pulumi.String("Protocol-TLSv1"),

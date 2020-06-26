@@ -53,7 +53,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		myInstance, err := opsworks.NewRdsDbInstance(ctx, "myInstance", &opsworks.RdsDbInstanceArgs{
+		_, err = opsworks.NewRdsDbInstance(ctx, "myInstance", &opsworks.RdsDbInstanceArgs{
 			DbPassword:       pulumi.String("somePass"),
 			DbUser:           pulumi.String("someUser"),
 			RdsDbInstanceArn: pulumi.String(aws_db_instance.My_instance.Arn),

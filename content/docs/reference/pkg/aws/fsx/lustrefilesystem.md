@@ -12,6 +12,90 @@ meta_desc: "Explore the LustreFileSystem resource of the fsx module, including e
 
 Manages a FSx Lustre File System. See the [FSx Lustre Guide](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html) for more information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Fsx.LustreFileSystem("example", new Aws.Fsx.LustreFileSystemArgs
+        {
+            ImportPath = $"s3://{aws_s3_bucket.Example.Bucket}",
+            StorageCapacity = 1200,
+            SubnetIds = aws_subnet.Example.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/fsx"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = fsx.NewLustreFileSystem(ctx, "example", &fsx.LustreFileSystemArgs{
+			ImportPath:      pulumi.String(fmt.Sprintf("%v%v", "s3://", aws_s3_bucket.Example.Bucket)),
+			StorageCapacity: pulumi.Int(1200),
+			SubnetIds:       pulumi.String(aws_subnet.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.fsx.LustreFileSystem("example",
+    import_path=f"s3://{aws_s3_bucket['example']['bucket']}",
+    storage_capacity=1200,
+    subnet_ids=aws_subnet["example"]["id"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.fsx.LustreFileSystem("example", {
+    importPath: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}`,
+    storageCapacity: 1200,
+    subnetIds: aws_subnet_example.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LustreFileSystem Resource {#create}

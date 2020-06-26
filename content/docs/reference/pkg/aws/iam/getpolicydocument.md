@@ -16,6 +16,159 @@ This is a data source which can be used to construct a JSON representation of
 an IAM policy document, for use with resources which expect policy documents,
 such as the `aws.iam.Policy` resource.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+    statements: [
+        {
+            actions: [
+                "s3:ListAllMyBuckets",
+                "s3:GetBucketLocation",
+            ],
+            resources: ["arn:aws:s3:::*"],
+            sid: "1",
+        },
+        {
+            actions: ["s3:ListBucket"],
+            conditions: [{
+                test: "StringLike",
+                values: [
+                    "",
+                    "home/",
+                    "home/&{aws:username}/",
+                ],
+                variable: "s3:prefix",
+            }],
+            resources: [`arn:aws:s3:::${var_s3_bucket_name}`],
+        },
+        {
+            actions: ["s3:*"],
+            resources: [
+                `arn:aws:s3:::${var_s3_bucket_name}/home/&{aws:username}`,
+                `arn:aws:s3:::${var_s3_bucket_name}/home/&{aws:username}/*`,
+            ],
+        },
+    ],
+}, { async: true }));
+const examplePolicy = new aws.iam.Policy("example", {
+    path: "/",
+    policy: examplePolicyDocument.json,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_policy_document = aws.iam.get_policy_document(statements=[
+    {
+        "actions": [
+            "s3:ListAllMyBuckets",
+            "s3:GetBucketLocation",
+        ],
+        "resources": ["arn:aws:s3:::*"],
+        "sid": "1",
+    },
+    {
+        "actions": ["s3:ListBucket"],
+        "condition": [{
+            "test": "StringLike",
+            "values": [
+                "",
+                "home/",
+                "home/&{aws:username}/",
+            ],
+            "variable": "s3:prefix",
+        }],
+        "resources": [f"arn:aws:s3:::{var['s3_bucket_name']}"],
+    },
+    {
+        "actions": ["s3:*"],
+        "resources": [
+            f"arn:aws:s3:::{var['s3_bucket_name']}/home/&{{aws:username}}",
+            f"arn:aws:s3:::{var['s3_bucket_name']}/home/&{{aws:username}}/*",
+        ],
+    },
+])
+example_policy = aws.iam.Policy("examplePolicy",
+    path="/",
+    policy=example_policy_document.json)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var examplePolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:ListAllMyBuckets",
+                        "s3:GetBucketLocation",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:s3:::*",
+                    },
+                    Sid = "1",
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:ListBucket",
+                    },
+                    Condition = 
+                    {
+                        
+                        {
+                            { "test", "StringLike" },
+                            { "values", 
+                            {
+                                "",
+                                "home/",
+                                "home/&{aws:username}/",
+                            } },
+                            { "variable", "s3:prefix" },
+                        },
+                    },
+                    Resources = 
+                    {
+                        $"arn:aws:s3:::{@var.S3_bucket_name}",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:*",
+                    },
+                    Resources = 
+                    {
+                        $"arn:aws:s3:::{@var.S3_bucket_name}/home/&{{aws:username}}",
+                        $"arn:aws:s3:::{@var.S3_bucket_name}/home/&{{aws:username}}/*",
+                    },
+                },
+            },
+        }));
+        var examplePolicy = new Aws.Iam.Policy("examplePolicy", new Aws.Iam.PolicyArgs
+        {
+            Path = "/",
+            Policy = examplePolicyDocument.Apply(examplePolicyDocument => examplePolicyDocument.Json),
+        });
+    }
+
+}
+```
+
 Using this data source to generate policy documents is *optional*. It is also
 valid to use literal JSON strings within your configuration, or to use the
 `file` interpolation function to read a raw JSON policy document from a file.
@@ -364,14 +517,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		source, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
-			Statements: iam.getPolicyDocumentStatementArray{
-				&iam.LookupPolicyDocumentStatement{
+		source, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"ec2:*",
 					},
@@ -379,7 +533,7 @@ func main() {
 						"*",
 					},
 				},
-				&iam.LookupPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"s3:*",
 					},
@@ -393,10 +547,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-		sourceJsonExample, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
-			SourceJson: source.Json,
-			Statements: iam.getPolicyDocumentStatementArray{
-				&iam.LookupPolicyDocumentStatement{
+		opt0 := source.Json
+		_, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			SourceJson: &opt0,
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"s3:*",
 					},
@@ -411,9 +566,9 @@ func main() {
 		if err != nil {
 			return err
 		}
-		override, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
-			Statements: iam.getPolicyDocumentStatementArray{
-				&iam.LookupPolicyDocumentStatement{
+		override, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"s3:*",
 					},
@@ -427,10 +582,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-		overrideJsonExample, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
-			OverrideJson: override.Json,
-			Statements: iam.getPolicyDocumentStatementArray{
-				&iam.LookupPolicyDocumentStatement{
+		opt1 := override.Json
+		_, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			OverrideJson: &opt1,
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"ec2:*",
 					},
@@ -438,7 +594,7 @@ func main() {
 						"*",
 					},
 				},
-				&iam.LookupPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"s3:*",
 					},
@@ -632,14 +788,15 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		source, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
-			Statements: iam.getPolicyDocumentStatementArray{
-				&iam.LookupPolicyDocumentStatement{
+		source, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"ec2:DescribeAccountAttributes",
 					},
@@ -653,9 +810,9 @@ func main() {
 		if err != nil {
 			return err
 		}
-		override, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
-			Statements: iam.getPolicyDocumentStatementArray{
-				&iam.LookupPolicyDocumentStatement{
+		override, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
 					Actions: []string{
 						"s3:GetObject",
 					},
@@ -669,9 +826,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-		politik, err := iam.LookupPolicyDocument(ctx, &iam.LookupPolicyDocumentArgs{
-			OverrideJson: override.Json,
-			SourceJson:   source.Json,
+		opt0 := override.Json
+		opt1 := source.Json
+		_, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			OverrideJson: &opt0,
+			SourceJson:   &opt1,
 		}, nil)
 		if err != nil {
 			return err

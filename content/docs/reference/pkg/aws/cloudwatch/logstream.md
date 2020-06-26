@@ -55,7 +55,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		foo, err := cloudwatch.NewLogStream(ctx, "foo", &cloudwatch.LogStreamArgs{
+		_, err = cloudwatch.NewLogStream(ctx, "foo", &cloudwatch.LogStreamArgs{
 			LogGroupName: yada.Name,
 		})
 		if err != nil {

@@ -57,7 +57,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		lgKeyPair, err := lightsail.NewKeyPair(ctx, "lgKeyPair", &lightsail.KeyPairArgs{
+		_, err = lightsail.NewKeyPair(ctx, "lgKeyPair", &lightsail.KeyPairArgs{
 			PgpKey: pulumi.String("keybase:keybaseusername"),
 		})
 		if err != nil {
@@ -104,7 +104,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		lgKeyPair, err := lightsail.NewKeyPair(ctx, "lgKeyPair", nil)
+		_, err = lightsail.NewKeyPair(ctx, "lgKeyPair", nil)
 		if err != nil {
 			return err
 		}

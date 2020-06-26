@@ -61,7 +61,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		byteSet, err := wafregional.NewByteMatchSet(ctx, "byteSet", &wafregional.ByteMatchSetArgs{
+		_, err = wafregional.NewByteMatchSet(ctx, "byteSet", &wafregional.ByteMatchSetArgs{
 			ByteMatchTuples: wafregional.ByteMatchSetByteMatchTupleArray{
 				&wafregional.ByteMatchSetByteMatchTupleArgs{
 					FieldToMatch: &wafregional.ByteMatchSetByteMatchTupleFieldToMatchArgs{

@@ -69,11 +69,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleDetector, err := guardduty.NewDetector(ctx, "exampleDetector", nil)
+		_, err = guardduty.NewDetector(ctx, "exampleDetector", nil)
 		if err != nil {
 			return err
 		}
-		exampleOrganizationAdminAccount, err := guardduty.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &guardduty.OrganizationAdminAccountArgs{
+		_, err = guardduty.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &guardduty.OrganizationAdminAccountArgs{
 			AdminAccountId: pulumi.String("123456789012"),
 		})
 		if err != nil {

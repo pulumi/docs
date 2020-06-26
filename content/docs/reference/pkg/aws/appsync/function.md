@@ -12,6 +12,245 @@ meta_desc: "Explore the Function resource of the appsync module, including examp
 
 Provides an AppSync Function.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testGraphQLApi = new Aws.AppSync.GraphQLApi("testGraphQLApi", new Aws.AppSync.GraphQLApiArgs
+        {
+            AuthenticationType = "API_KEY",
+            Schema = @"type Mutation {
+    putPost(id: ID!, title: String!): Post
+}
+
+type Post {
+    id: ID!
+    title: String!
+}
+
+type Query {
+    singlePost(id: ID!): Post
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+",
+        });
+        var testDataSource = new Aws.AppSync.DataSource("testDataSource", new Aws.AppSync.DataSourceArgs
+        {
+            ApiId = testGraphQLApi.Id,
+            HttpConfig = new Aws.AppSync.Inputs.DataSourceHttpConfigArgs
+            {
+                Endpoint = "http://example.com",
+            },
+            Type = "HTTP",
+        });
+        var testFunction = new Aws.AppSync.Function("testFunction", new Aws.AppSync.FunctionArgs
+        {
+            ApiId = testGraphQLApi.Id,
+            DataSource = testDataSource.Name,
+            Name = "tf_example",
+            RequestMappingTemplate = @"{
+    ""version"": ""2018-05-29"",
+    ""method"": ""GET"",
+    ""resourcePath"": ""/"",
+    ""params"":{
+        ""headers"": $utils.http.copyheaders($ctx.request.headers)
+    }
+}
+
+",
+            ResponseMappingTemplate = @"#if($ctx.result.statusCode == 200)
+    $ctx.result.body
+#else
+    $utils.appendError($ctx.result.body, $ctx.result.statusCode)
+#end
+
+",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testGraphQLApi, err := appsync.NewGraphQLApi(ctx, "testGraphQLApi", &appsync.GraphQLApiArgs{
+			AuthenticationType: pulumi.String("API_KEY"),
+			Schema:             pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "type Mutation {\n", "    putPost(id: ID!, title: String!): Post\n", "}\n", "\n", "type Post {\n", "    id: ID!\n", "    title: String!\n", "}\n", "\n", "type Query {\n", "    singlePost(id: ID!): Post\n", "}\n", "\n", "schema {\n", "    query: Query\n", "    mutation: Mutation\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		testDataSource, err := appsync.NewDataSource(ctx, "testDataSource", &appsync.DataSourceArgs{
+			ApiId: testGraphQLApi.ID(),
+			HttpConfig: &appsync.DataSourceHttpConfigArgs{
+				Endpoint: pulumi.String("http://example.com"),
+			},
+			Type: pulumi.String("HTTP"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appsync.NewFunction(ctx, "testFunction", &appsync.FunctionArgs{
+			ApiId:                   testGraphQLApi.ID(),
+			DataSource:              testDataSource.Name,
+			Name:                    pulumi.String("tf_example"),
+			RequestMappingTemplate:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"version\": \"2018-05-29\",\n", "    \"method\": \"GET\",\n", "    \"resourcePath\": \"/\",\n", "    \"params\":{\n", "        \"headers\": ", "$", "utils.http.copyheaders(", "$", "ctx.request.headers)\n", "    }\n", "}\n", "\n")),
+			ResponseMappingTemplate: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "#if(", "$", "ctx.result.statusCode == 200)\n", "    ", "$", "ctx.result.body\n", "#else\n", "    ", "$", "utils.appendError(", "$", "ctx.result.body, ", "$", "ctx.result.statusCode)\n", "#end\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_graph_ql_api = aws.appsync.GraphQLApi("testGraphQLApi",
+    authentication_type="API_KEY",
+    schema="""type Mutation {
+    putPost(id: ID!, title: String!): Post
+}
+
+type Post {
+    id: ID!
+    title: String!
+}
+
+type Query {
+    singlePost(id: ID!): Post
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+""")
+test_data_source = aws.appsync.DataSource("testDataSource",
+    api_id=test_graph_ql_api.id,
+    http_config={
+        "endpoint": "http://example.com",
+    },
+    type="HTTP")
+test_function = aws.appsync.Function("testFunction",
+    api_id=test_graph_ql_api.id,
+    data_source=test_data_source.name,
+    name="tf_example",
+    request_mapping_template="""{
+    "version": "2018-05-29",
+    "method": "GET",
+    "resourcePath": "/",
+    "params":{
+        "headers": $utils.http.copyheaders($ctx.request.headers)
+    }
+}
+
+""",
+    response_mapping_template="""#if($ctx.result.statusCode == 200)
+    $ctx.result.body
+#else
+    $utils.appendError($ctx.result.body, $ctx.result.statusCode)
+#end
+
+""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testGraphQLApi = new aws.appsync.GraphQLApi("test", {
+    authenticationType: "API_KEY",
+    schema: `type Mutation {
+    putPost(id: ID!, title: String!): Post
+}
+
+type Post {
+    id: ID!
+    title: String!
+}
+
+type Query {
+    singlePost(id: ID!): Post
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+`,
+});
+const testDataSource = new aws.appsync.DataSource("test", {
+    apiId: testGraphQLApi.id,
+    httpConfig: {
+        endpoint: "http://example.com",
+    },
+    type: "HTTP",
+});
+const testFunction = new aws.appsync.Function("test", {
+    apiId: testGraphQLApi.id,
+    dataSource: testDataSource.name,
+    name: "tf_example",
+    requestMappingTemplate: `{
+    "version": "2018-05-29",
+    "method": "GET",
+    "resourcePath": "/",
+    "params":{
+        "headers": $utils.http.copyheaders($ctx.request.headers)
+    }
+}
+`,
+    responseMappingTemplate: `#if($ctx.result.statusCode == 200)
+    $ctx.result.body
+#else
+    $utils.appendError($ctx.result.body, $ctx.result.statusCode)
+#end
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Function Resource {#create}

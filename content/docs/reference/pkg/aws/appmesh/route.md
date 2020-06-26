@@ -75,19 +75,19 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceb, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+		_, err = appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
 					Action: &appmesh.RouteSpecHttpRouteActionArgs{
-						WeightedTarget: []map[string]interface{}{
-							map[string]interface{}{
-								"virtualNode": aws_appmesh_virtual_node.Serviceb1.Name,
-								"weight":      90,
+						WeightedTarget: pulumi.MapArray{
+							pulumi.Map{
+								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb1.Name),
+								"weight":      pulumi.Float64(90),
 							},
-							map[string]interface{}{
-								"virtualNode": aws_appmesh_virtual_node.Serviceb2.Name,
-								"weight":      10,
+							pulumi.Map{
+								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb2.Name),
+								"weight":      pulumi.Float64(10),
 							},
 						},
 					},
@@ -239,25 +239,25 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceb, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+		_, err = appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
 					Action: &appmesh.RouteSpecHttpRouteActionArgs{
-						WeightedTarget: []map[string]interface{}{
-							map[string]interface{}{
-								"virtualNode": aws_appmesh_virtual_node.Serviceb.Name,
-								"weight":      100,
+						WeightedTarget: pulumi.MapArray{
+							pulumi.Map{
+								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb.Name),
+								"weight":      pulumi.Float64(100),
 							},
 						},
 					},
 					Match: &appmesh.RouteSpecHttpRouteMatchArgs{
-						Header: []map[string]interface{}{
-							map[string]interface{}{
-								"match": map[string]interface{}{
-									"prefix": "123",
+						Header: pulumi.MapArray{
+							pulumi.Map{
+								"match": pulumi.Map{
+									"prefix": pulumi.String("123"),
 								},
-								"name": "clientRequestId",
+								"name": pulumi.String("clientRequestId"),
 							},
 						},
 						Method: pulumi.String("POST"),
@@ -396,15 +396,15 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		serviceb, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+		_, err = appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
 			MeshName: pulumi.String(aws_appmesh_mesh.Simple.Id),
 			Spec: &appmesh.RouteSpecArgs{
 				TcpRoute: &appmesh.RouteSpecTcpRouteArgs{
 					Action: &appmesh.RouteSpecTcpRouteActionArgs{
-						WeightedTarget: []map[string]interface{}{
-							map[string]interface{}{
-								"virtualNode": aws_appmesh_virtual_node.Serviceb1.Name,
-								"weight":      100,
+						WeightedTarget: pulumi.MapArray{
+							pulumi.Map{
+								"virtualNode": pulumi.String(aws_appmesh_virtual_node.Serviceb1.Name),
+								"weight":      pulumi.Float64(100),
 							},
 						},
 					},

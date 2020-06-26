@@ -70,7 +70,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		testTrigger, err := codecommit.NewTrigger(ctx, "testTrigger", &codecommit.TriggerArgs{
+		_, err = codecommit.NewTrigger(ctx, "testTrigger", &codecommit.TriggerArgs{
 			RepositoryName: testRepository.RepositoryName,
 			Triggers: codecommit.TriggerTriggerArray{
 				&codecommit.TriggerTriggerArgs{

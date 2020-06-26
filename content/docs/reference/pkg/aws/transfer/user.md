@@ -12,6 +12,209 @@ meta_desc: "Explore the User resource of the transfer module, including examples
 
 Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the `aws.transfer.SshKey` resource.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const fooServer = new aws.transfer.Server("foo", {
+    identityProviderType: "SERVICE_MANAGED",
+    tags: {
+        NAME: "tf-acc-test-transfer-server",
+    },
+});
+const fooRole = new aws.iam.Role("foo", {
+    assumeRolePolicy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+`,
+});
+const fooRolePolicy = new aws.iam.RolePolicy("foo", {
+    policy: `{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowFullAccesstoS3",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": "*"
+		}
+	]
+}
+`,
+    role: fooRole.id,
+});
+const fooUser = new aws.transfer.User("foo", {
+    role: fooRole.arn,
+    serverId: fooServer.id,
+    userName: "tftestuser",
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo_server = aws.transfer.Server("fooServer",
+    identity_provider_type="SERVICE_MANAGED",
+    tags={
+        "NAME": "tf-acc-test-transfer-server",
+    })
+foo_role = aws.iam.Role("fooRole", assume_role_policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+		"Effect": "Allow",
+		"Principal": {
+			"Service": "transfer.amazonaws.com"
+		},
+		"Action": "sts:AssumeRole"
+		}
+	]
+}
+
+""")
+foo_role_policy = aws.iam.RolePolicy("fooRolePolicy",
+    policy="""{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowFullAccesstoS3",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": "*"
+		}
+	]
+}
+
+""",
+    role=foo_role.id)
+foo_user = aws.transfer.User("fooUser",
+    role=foo_role.arn,
+    server_id=foo_server.id,
+    user_name="tftestuser")
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooServer = new Aws.Transfer.Server("fooServer", new Aws.Transfer.ServerArgs
+        {
+            IdentityProviderType = "SERVICE_MANAGED",
+            Tags = 
+            {
+                { "NAME", "tf-acc-test-transfer-server" },
+            },
+        });
+        var fooRole = new Aws.Iam.Role("fooRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+	""Version"": ""2012-10-17"",
+	""Statement"": [
+		{
+		""Effect"": ""Allow"",
+		""Principal"": {
+			""Service"": ""transfer.amazonaws.com""
+		},
+		""Action"": ""sts:AssumeRole""
+		}
+	]
+}
+
+",
+        });
+        var fooRolePolicy = new Aws.Iam.RolePolicy("fooRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = @"{
+	""Version"": ""2012-10-17"",
+	""Statement"": [
+		{
+			""Sid"": ""AllowFullAccesstoS3"",
+			""Effect"": ""Allow"",
+			""Action"": [
+				""s3:*""
+			],
+			""Resource"": ""*""
+		}
+	]
+}
+
+",
+            Role = fooRole.Id,
+        });
+        var fooUser = new Aws.Transfer.User("fooUser", new Aws.Transfer.UserArgs
+        {
+            Role = fooRole.Arn,
+            ServerId = fooServer.Id,
+            UserName = "tftestuser",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/transfer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooServer, err := transfer.NewServer(ctx, "fooServer", &transfer.ServerArgs{
+			IdentityProviderType: pulumi.String("SERVICE_MANAGED"),
+			Tags: pulumi.Map{
+				"NAME": pulumi.String("tf-acc-test-transfer-server"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		fooRole, err := iam.NewRole(ctx, "fooRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "		\"Effect\": \"Allow\",\n", "		\"Principal\": {\n", "			\"Service\": \"transfer.amazonaws.com\"\n", "		},\n", "		\"Action\": \"sts:AssumeRole\"\n", "		}\n", "	]\n", "}\n", "\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "fooRolePolicy", &iam.RolePolicyArgs{
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "			\"Sid\": \"AllowFullAccesstoS3\",\n", "			\"Effect\": \"Allow\",\n", "			\"Action\": [\n", "				\"s3:*\"\n", "			],\n", "			\"Resource\": \"*\"\n", "		}\n", "	]\n", "}\n", "\n")),
+			Role: fooRole.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = transfer.NewUser(ctx, "fooUser", &transfer.UserArgs{
+			Role:     fooRole.Arn,
+			ServerId: fooServer.ID(),
+			UserName: pulumi.String("tftestuser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a User Resource {#create}

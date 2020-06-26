@@ -18,6 +18,187 @@ Provides a Glue Job resource.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Python Job
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Job("example", new Aws.Glue.JobArgs
+        {
+            Command = new Aws.Glue.Inputs.JobCommandArgs
+            {
+                ScriptLocation = $"s3://{aws_s3_bucket.Example.Bucket}/example.py",
+            },
+            RoleArn = aws_iam_role.Example.Arn,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = glue.NewJob(ctx, "example", &glue.JobArgs{
+			Command: &glue.JobCommandArgs{
+				ScriptLocation: pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Example.Bucket, "/example.py")),
+			},
+			RoleArn: pulumi.String(aws_iam_role.Example.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Job("example",
+    command={
+        "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.py",
+    },
+    role_arn=aws_iam_role["example"]["arn"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.glue.Job("example", {
+    command: {
+        scriptLocation: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}/example.py`,
+    },
+    roleArn: aws_iam_role_example.arn,
+});
+```
+
+{{% /example %}}
+
+### Scala Job
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Job("example", new Aws.Glue.JobArgs
+        {
+            Command = new Aws.Glue.Inputs.JobCommandArgs
+            {
+                ScriptLocation = $"s3://{aws_s3_bucket.Example.Bucket}/example.scala",
+            },
+            DefaultArguments = 
+            {
+                { "--job-language", "scala" },
+            },
+            RoleArn = aws_iam_role.Example.Arn,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err = glue.NewJob(ctx, "example", &glue.JobArgs{
+			Command: &glue.JobCommandArgs{
+				ScriptLocation: pulumi.String(fmt.Sprintf("%v%v%v", "s3://", aws_s3_bucket.Example.Bucket, "/example.scala")),
+			},
+			DefaultArguments: pulumi.Map{
+				"--job-language": pulumi.String("scala"),
+			},
+			RoleArn: pulumi.String(aws_iam_role.Example.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.glue.Job("example",
+    command={
+        "scriptLocation": f"s3://{aws_s3_bucket['example']['bucket']}/example.scala",
+    },
+    default_arguments={
+        "--job-language": "scala",
+    },
+    role_arn=aws_iam_role["example"]["arn"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.glue.Job("example", {
+    command: {
+        scriptLocation: pulumi.interpolate`s3://${aws_s3_bucket_example.bucket}/example.scala`,
+    },
+    defaultArguments: {
+        "--job-language": "scala",
+    },
+    roleArn: aws_iam_role_example.arn,
+});
+```
+
+{{% /example %}}
+
 ### Enabling CloudWatch Logs and Metrics
 {{% example csharp %}}
 ```csharp
@@ -67,12 +248,12 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleJob, err := glue.NewJob(ctx, "exampleJob", &glue.JobArgs{
-			DefaultArguments: map[string]interface{}{
+		_, err = glue.NewJob(ctx, "exampleJob", &glue.JobArgs{
+			DefaultArguments: pulumi.Map{
 				"--continuous-log-logGroup":          exampleLogGroup.Name,
-				"--enable-continuous-cloudwatch-log": "true",
-				"--enable-continuous-log-filter":     "true",
-				"--enable-metrics":                   "",
+				"--enable-continuous-cloudwatch-log": pulumi.String("true"),
+				"--enable-continuous-log-filter":     pulumi.String("true"),
+				"--enable-metrics":                   pulumi.String(""),
 			},
 		})
 		if err != nil {

@@ -67,9 +67,9 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleEgressOnlyInternetGateway, err := ec2.NewEgressOnlyInternetGateway(ctx, "exampleEgressOnlyInternetGateway", &ec2.EgressOnlyInternetGatewayArgs{
-			Tags: map[string]interface{}{
-				"Name": "main",
+		_, err = ec2.NewEgressOnlyInternetGateway(ctx, "exampleEgressOnlyInternetGateway", &ec2.EgressOnlyInternetGatewayArgs{
+			Tags: pulumi.Map{
+				"Name": pulumi.String("main"),
 			},
 			VpcId: exampleVpc.ID(),
 		})

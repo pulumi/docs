@@ -41,20 +41,17 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := ec2.LookupNetworkInterfaces(ctx, &ec2.LookupNetworkInterfacesArgs{
-			Tags: map[string]interface{}{
-				"Name": "test",
-			},
-		}, nil)
+		exampleNetworkInterfaces, err := ec2.GetNetworkInterfaces(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("example1", example.Ids)
+		ctx.Export("example", exampleNetworkInterfaces.Ids)
 		return nil
 	})
 }
