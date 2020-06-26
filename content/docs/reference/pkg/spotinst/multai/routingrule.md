@@ -12,8 +12,6 @@ meta_desc: "Explore the RoutingRule resource of the multai module, including exa
 
 Provides a Spotinst Multai Routing Rule.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ my_routing_rule = spotinst.multai.RoutingRule("myRoutingRule",
         "value": "prod",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -86,6 +87,7 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

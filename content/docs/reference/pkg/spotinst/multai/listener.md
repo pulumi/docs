@@ -12,9 +12,6 @@ meta_desc: "Explore the Listener resource of the multai module, including exampl
 
 Provides a Spotinst Multai Listener.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Listener Resource {#create}

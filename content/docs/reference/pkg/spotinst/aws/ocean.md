@@ -11,8 +11,6 @@ meta_desc: "Explore the Ocean resource of the aws module, including examples, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst Ocean AWS resource.
-
-
 ## Auto Scaler
 
 * `autoscaler` - (Optional) Describes the Ocean Kubernetes autoscaler.
@@ -90,7 +88,7 @@ class MyStack : Stack
                                          Example: 0 1 * * *
         * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
                                    Example: clusterRoll
-             
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -181,6 +179,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -231,9 +230,11 @@ example = spotinst.aws.Ocean("example",
         "m1.small",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -280,6 +281,7 @@ const example = new spotinst.aws.Ocean("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

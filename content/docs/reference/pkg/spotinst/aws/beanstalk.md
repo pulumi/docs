@@ -11,8 +11,6 @@ meta_desc: "Explore the Beanstalk resource of the aws module, including examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst AWS group resource using Elastic Beanstalk.
-
-
 ## Scheduled Tasks
 
 Each `scheduled_task` supports the following:
@@ -110,6 +108,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -151,9 +150,11 @@ elastigoup_aws_beanstalk = spotinst.aws.Beanstalk("elastigoup-aws-beanstalk",
     product="Linux/UNIX",
     region="us-west-2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -189,6 +190,7 @@ const elastigoup_aws_beanstalk = new spotinst.aws.Beanstalk("elastigoup-aws-bean
     region: "us-west-2",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

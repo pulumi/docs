@@ -12,8 +12,6 @@ meta_desc: "Explore the OceanLaunchSpec resource of the ecs module, including ex
 
 Provides a custom Spotinst Ocean ECS Launch Spec resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,9 +98,11 @@ example = spotinst.ecs.OceanLaunchSpec("example",
     }],
     user_data="echo hello world")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -127,6 +128,7 @@ const example = new spotinst.ecs.OceanLaunchSpec("example", {
     userData: "echo hello world",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

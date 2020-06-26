@@ -11,8 +11,6 @@ meta_desc: "Explore the OceanImport resource of the gke module, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst Ocean GKE import resource.
-
-
 ## scheduled task
 
 * `scheduled_task` - (Optional) Set scheduling object.
@@ -28,8 +26,7 @@ Provides a Spotinst Ocean GKE import resource.
         * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
         * `batch_size_percentage` - (Optional)  Value in % to set size of batch in roll. Valid values are 0-100
                                                 Example: 20.
-                          
-             
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
@@ -138,6 +135,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -172,9 +170,11 @@ example = spotinst.gke.OceanImport("example",
         "n1-standard-2",
     ])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -203,6 +203,7 @@ const example = new spotinst.gke.OceanImport("example", {
     ],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

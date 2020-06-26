@@ -12,8 +12,6 @@ meta_desc: "Explore the OceanLaunchSpec resource of the gke module, including ex
 
 Provides a custom Spotinst Ocean GKE Launch Spec resource.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,6 +70,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -106,9 +105,11 @@ example = spotinst.gke.OceanLaunchSpec("example",
         "value": "taintVal",
     }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -137,6 +138,7 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
     }],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

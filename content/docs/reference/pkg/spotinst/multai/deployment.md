@@ -12,8 +12,6 @@ meta_desc: "Explore the Deployment resource of the multai module, including exam
 
 Provides a Spotinst Multai Deployment.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,6 +33,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -48,15 +47,18 @@ import pulumi_spotinst as spotinst
 
 my_deployment = spotinst.multai.Deployment("myDeployment")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
 
 const myDeployment = new spotinst.multai.Deployment("my_deployment", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
