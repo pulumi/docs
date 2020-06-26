@@ -34,6 +34,7 @@ These stack permissions allow users to perform the following actions:
 | Export stack checkpoint | | ✅ | ✅ | ✅ |
 | Import stack checkpoint |  | | ✅ | ✅ |
 | Delete stack (`pulumi stack rm`) | | | | ✅ |
+| Transfer to another organization | | | | ✅ |
 
 ## Assigning Stack Permissions
 
